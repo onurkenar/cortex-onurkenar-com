@@ -1,0 +1,1228 @@
+{
+  "dokuman": {
+    "baslik": "Rasyo Holding — Kurullar Organizasyon ve Yönetişim Modeli",
+    "surum": "1.0.0",
+    "olusturma_tarihi": "2026-10-29",
+    "dil": "tr-TR",
+    "kapsam": "Rasyo Holding ve bağlı şirketler",
+    "nitelik": "Kurumsal taslak; hukuki kuruluş, atama, temsil veya yetki devri kararı değildir",
+    "komite_referans_dosyasi": "Rasyo_Holding_24_Komite_Organizasyon_Modeli.json",
+    "toplam_kurul": 9,
+    "referans_komite_sayisi": 24
+  },
+  "yonetisim": {
+    "ilke": "Genel Kurul (pay sahipleri) → ilgili şirket Yönetim Kurulu → hukuken geçerli devredilmiş yetki dahilinde İcra Kurulu → departmanlar",
+    "hukuki_ayrim": "Her şirket ayrı tüzel kişiliktir. Holding koordinasyon kararları, bağlı şirketin Yönetim Kurulunun veya diğer yetkili organının kanuni yetkilerini ikame etmez.",
+    "temsil": "Kurulda yer almak tek başına şirketi temsil veya ilzam yetkisi vermez.",
+    "yonetim_devri": "TTK 367 ve ilgili esas sözleşme/iç yönerge hükümleri çerçevesinde; TTK 375 kapsamındaki devredilemez yetkiler saklıdır.",
+    "komite_farki": "Kurullar yönetsel karar, denetim veya koordinasyon organlarıdır; komiteler uzmanlık alanında inceleme, öneri, izleme ve yetki dahilinde koordinasyon yapar.",
+    "uyari": "Halka açık şirketlerde SPK düzenlemeleri; özel sektörlerde sektör mevzuatı; İSG ve denetimde özel kurallar ayrıca değerlendirilmelidir.",
+    "toplanti_kurali": "Hukuki yönetim organlarında esas sözleşme ve mevzuat önceliklidir; diğer kurullarda aşağıdaki oranlar sadece iç politika önerisidir."
+  },
+  "karar_akis_kodlari": [
+    {
+      "kod": "TALEP",
+      "ad": "Karar konusunun kaydı"
+    },
+    {
+      "kod": "YETKI_KONTROL",
+      "ad": "Hukuki yetki, imza, temsil, çıkar çatışması kontrolü"
+    },
+    {
+      "kod": "GUNDEM",
+      "ad": "Gündemin ve eklerin paylaşılması"
+    },
+    {
+      "kod": "MUZAKERE",
+      "ad": "Fayda-risk-uyum değerlendirmesi"
+    },
+    {
+      "kod": "KARAR",
+      "ad": "Yetkili organda usulüne uygun karar veya tavsiye"
+    },
+    {
+      "kod": "TESCIL_VE_UYGULAMA",
+      "ad": "Gerektiğinde tescil, ilan ve uygulama"
+    },
+    {
+      "kod": "IZLEME",
+      "ad": "Sorumlu, termin, kanıt ve kapanış"
+    }
+  ],
+  "kurullar": [
+    {
+      "kod": "KRL-01",
+      "ad": "Holding Yönetim Kurulu",
+      "kategori": "hukuki_yonetim_organi",
+      "seviye": "holding",
+      "bagli_organ": "Genel Kurul",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Grubun kendi tüzel kişiliğinin üst yönetimini ve iştirak gözetimini sağlamak",
+      "organizasyon": {
+        "baskan_unvani": "Yönetim Kurulu Başkanı",
+        "baskan_yardimcisi_unvani": "Yönetim Kurulu Başkan Vekili",
+        "daimi_uyeler_unvanlari": [
+          "Esas sözleşme ve Genel Kurul seçimiyle belirlenen üyeler"
+        ],
+        "sekreterya": "Yönetim Kurulu Sekreteryası",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "02",
+          "03",
+          "05",
+          "06",
+          "07",
+          "21",
+          "23"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Üst düzey strateji ve yönetsel yapı hakkında karar almak",
+        "Finansal kontrol ve gözetim sistemini kurmak",
+        "İştiraklere ilişkin hakların kullanımını değerlendirmek",
+        "Yöneticiler ve önemli riskler üzerinde üst gözetim sağlamak",
+        "Kanuni raporlama, kayıt ve Genel Kurul hazırlıklarını denetlemek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Kanun/esas sözleşme kapsamındaki yönetim organı kararları",
+        "kapsam": "Grubun kendi tüzel kişiliğinin üst yönetimini ve iştirak gözetimini sağlamak",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "TTK 367/375, şirket esas sözleşmesi ve yürürlükteki mevzuat önceliklidir"
+      },
+      "toplanti": {
+        "periyot": "Üç ayda bir ve gerektikçe",
+        "gundem_paylasim_is_gunu_once": 3,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "İlgili mevzuat ve esas sözleşme hükmü uygulanır",
+        "karar_yeter_sayisi": "İlgili mevzuat ve esas sözleşme hükmü uygulanır",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Stratejik karar takip oranı",
+          "hesaplama": "Karar izleme raporu tamamlanan / planlanan",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-01",
+        "KMT-02",
+        "KMT-03",
+        "KMT-05",
+        "KMT-06"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-02",
+      "ad": "Grup Şirketi Yönetim Kurulu",
+      "kategori": "hukuki_yonetim_organi",
+      "seviye": "sirket",
+      "bagli_organ": "İlgili Şirket Genel Kurulu",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Her grup şirketinin kendi tüzel kişilik yönetimini ve gözetimini yürütmek",
+      "organizasyon": {
+        "baskan_unvani": "Şirket Yönetim Kurulu Başkanı",
+        "baskan_yardimcisi_unvani": "Yönetim Kurulu Başkan Vekili",
+        "daimi_uyeler_unvanlari": [
+          "İlgili şirketin seçilmiş Yönetim Kurulu üyeleri"
+        ],
+        "sekreterya": "İlgili Şirket Yönetim Kurulu Sekreteryası",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "12",
+          "21",
+          "23"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Şirket stratejisini ve üst düzey yönetimini belirlemek",
+        "Şirket bütçe ve finansal raporlamasını gözetmek",
+        "Yönetim teşkilatı ve yöneticileriyle ilgili saklı yetkileri kullanmak",
+        "Mevzuata uyumu ve riskleri gözetmek",
+        "Holding ile ilişkili işlemleri hukuki yetki sınırları içinde karara bağlamak"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Kanun/esas sözleşme kapsamındaki yönetim organı kararları",
+        "kapsam": "Her grup şirketinin kendi tüzel kişilik yönetimini ve gözetimini yürütmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "TTK 367/375, şirket esas sözleşmesi ve yürürlükteki mevzuat önceliklidir"
+      },
+      "toplanti": {
+        "periyot": "En az üç ayda bir öneri; kanuni / esas sözleşmesel ihtiyaç oldukça",
+        "gundem_paylasim_is_gunu_once": 3,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "İlgili mevzuat ve esas sözleşme hükmü uygulanır",
+        "karar_yeter_sayisi": "İlgili mevzuat ve esas sözleşme hükmü uygulanır",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Yasal yükümlülük takibi",
+          "hesaplama": "Zamanında tamamlanan yükümlülük / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-03",
+        "KMT-05",
+        "KMT-06",
+        "KMT-09",
+        "KMT-13"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-03",
+      "ad": "Holding İcra Kurulu",
+      "kategori": "icra",
+      "seviye": "holding_koordinasyon",
+      "bagli_organ": "Holding Yönetim Kurulu / Devredilmiş Yönetim Yetkisi",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Grup genelindeki operasyon ve hedeflerin uygulanmasını koordine etmek",
+      "organizasyon": {
+        "baskan_unvani": "Holding CEO",
+        "baskan_yardimcisi_unvani": "COO / CEO Yardımcısı",
+        "daimi_uyeler_unvanlari": [
+          "CFO",
+          "CMO",
+          "CHRO",
+          "CTO/CIO",
+          "CCO",
+          "CPO",
+          "İlgili grup şirketleri genel müdürleri"
+        ],
+        "sekreterya": "CEO Ofisi",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "03",
+          "04",
+          "08",
+          "09",
+          "12",
+          "15",
+          "18",
+          "23"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Onaylı strateji ve bütçenin uygulanmasını izlemek",
+        "Komitelerden gelen karar önerilerini birleştirmek",
+        "Üst yönetim düzeyindeki çapraz fonksiyon sorunlarını çözmek",
+        "İş performansı ve risk eşiklerini izlemek",
+        "Yetki sınırını aşan konuları ilgili şirket organına sevk etmek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Yazılı devredilmiş yönetim yetkisi sınırları içinde karar",
+        "kapsam": "Grup genelindeki operasyon ve hedeflerin uygulanmasını koordine etmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Haftalık 90 dk; aylık kapsamlı değerlendirme",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Grup hedef gerçekleşmesi",
+          "hesaplama": "Gerçekleşen ağırlıklı hedef / plan",
+          "baslangic_hedefi": "Şirket planı",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-01",
+        "KMT-06",
+        "KMT-09",
+        "KMT-13",
+        "KMT-17",
+        "KMT-18",
+        "KMT-20",
+        "KMT-21"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-04",
+      "ad": "Şirket İcra Kurulu",
+      "kategori": "icra",
+      "seviye": "sirket",
+      "bagli_organ": "İlgili Şirket Yönetim Kurulu / Yetkili Yönetici",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "İlgili şirketin günlük ve dönemsel iş planlarını yürütmek",
+      "organizasyon": {
+        "baskan_unvani": "Şirket Genel Müdürü",
+        "baskan_yardimcisi_unvani": "Şirket Operasyon Direktörü / GM Yardımcısı",
+        "daimi_uyeler_unvanlari": [
+          "Şirket finans lideri",
+          "Satış lideri",
+          "Pazarlama lideri",
+          "İK lideri",
+          "Operasyon lideri",
+          "Teknoloji temsilcisi"
+        ],
+        "sekreterya": "Şirket Genel Müdürlük Ofisi",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "08",
+          "09",
+          "12",
+          "15",
+          "23"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Şirket KPI ve bütçe performansını değerlendirmek",
+        "Departmanlar arası teslimat ve kapasite sorunlarını çözmek",
+        "Müşteri, personel ve operasyon önceliklerini belirlemek",
+        "Riskli konuları erken eskale etmek",
+        "Holding ortak uygulamalarını kendi şirketine uyarlamak"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Yazılı devredilmiş yönetim yetkisi sınırları içinde karar",
+        "kapsam": "İlgili şirketin günlük ve dönemsel iş planlarını yürütmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Haftalık 60 dk",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Şirket SLA/iş hedefi gerçekleşmesi",
+          "hesaplama": "Gerçekleşen / hedef",
+          "baslangic_hedefi": "Şirket planı",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-06",
+        "KMT-09",
+        "KMT-13",
+        "KMT-17",
+        "KMT-18"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-05",
+      "ad": "Grup Şirketleri Koordinasyon Kurulu",
+      "kategori": "koordinasyon",
+      "seviye": "holding_ortak",
+      "bagli_organ": "Holding İcra Kurulu",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Şirketler arasındaki ortak fırsat ve darboğazları yönetmek",
+      "organizasyon": {
+        "baskan_unvani": "Holding CEO / Grup Operasyon Lideri",
+        "baskan_yardimcisi_unvani": "Strateji ve İş Geliştirme Direktörü",
+        "daimi_uyeler_unvanlari": [
+          "Tüm grup şirketlerinin genel müdürleri",
+          "Holding CFO",
+          "Holding İK yöneticisi",
+          "Kurumsal Teknoloji yöneticisi"
+        ],
+        "sekreterya": "Strateji / CEO Ofisi",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "03",
+          "04",
+          "08",
+          "12",
+          "15"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Şirketler arası paylaşılabilir kaynakları belirlemek",
+        "Ortak müşteri ve tedarik fırsatlarını koordine etmek",
+        "Ortak standartlar ve merkezi hizmet ihtiyaçlarını değerlendirmek",
+        "Karar çakışmalarını görünür kılmak",
+        "Ölçeklenebilir ortak girişimleri icraya önermek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Koordinasyon/öneri; sadece belgelenmiş delege sınırları içinde bağlayıcı karar",
+        "kapsam": "Şirketler arasındaki ortak fırsat ve darboğazları yönetmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Aylık 120 dk",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Çapraz şirket girişim faydası",
+          "hesaplama": "Finansça doğrulanan ortak fayda tutarı",
+          "baslangic_hedefi": "Yıllık hedef",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-01",
+        "KMT-07",
+        "KMT-08",
+        "KMT-13",
+        "KMT-17"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-06",
+      "ad": "Stratejik Projeler Yönlendirme Kurulu",
+      "kategori": "yonlendirme",
+      "seviye": "holding_ortak",
+      "bagli_organ": "Holding İcra Kurulu",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Çok şirketli veya yüksek etkili stratejik programların ilerleyişini gözetmek",
+      "organizasyon": {
+        "baskan_unvani": "COO / Stratejik Program Sponsoru",
+        "baskan_yardimcisi_unvani": "Proje ve Program Yönetimi Direktörü",
+        "daimi_uyeler_unvanlari": [
+          "İlgili proje sponsorları",
+          "CFO temsilcisi",
+          "CTO/CIO temsilcisi",
+          "İş birimi sahipleri",
+          "Risk/Uyum danışmanı"
+        ],
+        "sekreterya": "Proje Yönetim Ofisi (PMO)",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "03",
+          "06",
+          "12",
+          "15",
+          "17",
+          "18"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Proje kapıları ve kilometre taşlarını değerlendirmek",
+        "Kaynak ve bağımlılık uyuşmazlıklarını çözmek",
+        "Kapsam ve iş gerekçesi değişikliklerini önermek",
+        "Proje risklerini ve fayda gerçekleşmesini izlemek",
+        "Yetki aşan yatırımları icra/YK gündemine taşımak"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Koordinasyon/öneri; sadece belgelenmiş delege sınırları içinde bağlayıcı karar",
+        "kapsam": "Çok şirketli veya yüksek etkili stratejik programların ilerleyişini gözetmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Aylık; kritik projeler için iki haftada bir",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Program kilometre taşı uyumu",
+          "hesaplama": "Zamanında tamamlanan / toplam kilometre taşı",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-01",
+        "KMT-02",
+        "KMT-13",
+        "KMT-20",
+        "KMT-21"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-07",
+      "ad": "Kriz ve İş Sürekliliği Yönetim Kurulu",
+      "kategori": "olay_bazli_icra",
+      "seviye": "holding_ortak_ve_sirket",
+      "bagli_organ": "Holding/Şirket İcra Kurulu; olayın niteliğine göre",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Kritik olaylarda güvenlik, süreklilik ve iletişim kararlarını koordine etmek",
+      "organizasyon": {
+        "baskan_unvani": "COO / Kriz Lideri",
+        "baskan_yardimcisi_unvani": "Bilgi Güvenliği Direktörü veya Operasyon Yedeği",
+        "daimi_uyeler_unvanlari": [
+          "Hukuk",
+          "İK",
+          "BT",
+          "Siber Güvenlik",
+          "Kurumsal İletişim",
+          "İlgili şirket genel müdürü",
+          "İSG uzmanı (olaya göre)"
+        ],
+        "sekreterya": "Kriz Koordinasyon Masası",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "04",
+          "05",
+          "10",
+          "12",
+          "15",
+          "16",
+          "21",
+          "22",
+          "23"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Kriz seviyesini belirlemek ve olay komutasını aktive etmek",
+        "Çalışan ve müşteri güvenliğini önceliklendirmek",
+        "Operasyonları kurtarma planına göre koordine etmek",
+        "Yasal bildirim ve kamu açıklamalarını yetkili sorumlulara yönlendirmek",
+        "Kök neden ve iyileştirme planını izlemek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Koordinasyon/öneri; sadece belgelenmiş delege sınırları içinde bağlayıcı karar",
+        "kapsam": "Kritik olaylarda güvenlik, süreklilik ve iletişim kararlarını koordine etmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Yılda iki tatbikat; kriz anında olay bazlı",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kurtarma hedefi uyumu",
+          "hesaplama": "Hedef süre içinde toparlanan kritik hizmet / toplam",
+          "baslangic_hedefi": "Kritik hizmet hedefi",
+          "olcum_sikligi": "olay_bazli",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-03",
+        "KMT-15",
+        "KMT-16",
+        "KMT-22"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-08",
+      "ad": "Teknoloji ve Ürün Programları Yönlendirme Kurulu",
+      "kategori": "yonlendirme",
+      "seviye": "holding_ortak",
+      "bagli_organ": "Holding İcra Kurulu",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Stratejik ürün platformları ve ortak teknoloji programlarında kaynak bağımlılıklarını yönetmek",
+      "organizasyon": {
+        "baskan_unvani": "CPO / Ürün Portföyü Sponsoru",
+        "baskan_yardimcisi_unvani": "CTO / CIO",
+        "daimi_uyeler_unvanlari": [
+          "Ürün sahipleri",
+          "BT mimari lideri",
+          "Operasyon lideri",
+          "Finans temsilcisi",
+          "Pazarlama ve Satış temsilcisi",
+          "Siber Güvenlik danışmanı"
+        ],
+        "sekreterya": "Ürün ve Teknoloji PMO",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "03",
+          "08",
+          "09",
+          "12",
+          "15",
+          "16",
+          "17",
+          "18"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Birden fazla ürün/şirketi etkileyen platform yol haritasını değerlendirmek",
+        "Ürün ve teknoloji teslimat bağımlılıklarını çözmek",
+        "Pilot ve lansman hazırlığını bağımsız kanıtlarla incelemek",
+        "Teknoloji risklerini ve kapasite ihtiyaçlarını eskale etmek",
+        "İş değeri gerçekleşmesini takip etmek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Koordinasyon/öneri; sadece belgelenmiş delege sınırları içinde bağlayıcı karar",
+        "kapsam": "Stratejik ürün platformları ve ortak teknoloji programlarında kaynak bağımlılıklarını yönetmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Aylık 90 dk",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Ürün/platform program teslimatı",
+          "hesaplama": "Zamanında tamamlanan kabul edilmiş çıktı / toplam",
+          "baslangic_hedefi": "≥ %85",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-18",
+        "KMT-20",
+        "KMT-21",
+        "KMT-23",
+        "KMT-24"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    },
+    {
+      "kod": "KRL-09",
+      "ad": "Bilimsel ve Sektörel Danışma Kurulu",
+      "kategori": "danisma",
+      "seviye": "holding_ortak_istege_bagli",
+      "bagli_organ": "Holding Yönetim Kurulu / İcra Kurulu",
+      "kurulus_durumu": "onerilen_yapi; fiili_hukuki_varlik_ve_atamalar_dogrulanmadi",
+      "amac": "Bilimsel, etik ve sektörel gelişmeler hakkında bağımsız görüş üretmek",
+      "organizasyon": {
+        "baskan_unvani": "Atanmış Bağımsız Danışma Kurulu Başkanı",
+        "baskan_yardimcisi_unvani": "İlgili Sektör Uzmanı",
+        "daimi_uyeler_unvanlari": [
+          "Akademisyenler",
+          "Sektör temsilcileri",
+          "Ürün/Ar-Ge liderleri",
+          "Hukuk/Uyum danışmanı",
+          "İlgili şirket yöneticileri"
+        ],
+        "sekreterya": "Kurumsal Strateji / Ar-Ge",
+        "davetli_uzman": "Gündeme göre, davetle; oy kullanımı yetki metninde özel olarak verilmedikçe yoktur",
+        "uye_atama": "Hukuki yönetim organında Genel Kurul/esas sözleşme; diğerlerinde yetkili organ yazılı onayı",
+        "gorev_suresi": "Hukuki organlarda mevzuat/esas sözleşme; diğerlerinde önerilen 1 yıl ve yıllık gözden geçirme"
+      },
+      "departman_iliskileri": {
+        "departman_kodlari": [
+          "01",
+          "05",
+          "06",
+          "17",
+          "18",
+          "21"
+        ],
+        "ilgili_sirketler": "Yetki, tüzel kişilik ve katılım kapsamına göre tanımlanır"
+      },
+      "gorevler": [
+        "Pazar/teknoloji eğilimlerini değerlendirmek",
+        "Araştırma ve inovasyon yönlerini önermek",
+        "Bilimsel kalite ve etik risklerini işaret etmek",
+        "Ürün güvenilirliği için uzman geri bildirimi sunmak",
+        "Yönetim organlarına bağlayıcı olmayan tavsiye vermek"
+      ],
+      "yetkiler": {
+        "karar_niteligi": "Koordinasyon/öneri; sadece belgelenmiş delege sınırları içinde bağlayıcı karar",
+        "kapsam": "Bilimsel, etik ve sektörel gelişmeler hakkında bağımsız görüş üretmek",
+        "ust_onay": "Konu ve tüzel kişilik bazında yetki matrisi; kanuni saklı görevler ilgili şirket YK/genel kuruluna",
+        "sinirlar": [
+          "Komite veya kurul üyeliği kendiliğinden temsil/imza yetkisi vermez",
+          "Bütçe aşımı, yüksek risk ve kanuni saklı yetkiler ilgili organa eskale edilir",
+          "Bağlı şirketin hak ve yükümlülükleri holding koordinasyon kararıyla otomatik doğmaz"
+        ],
+        "ozel_not": "Kararlar iç yönerge, imza sirküleri ve delegasyon matrisiyle sınırlandırılır"
+      },
+      "toplanti": {
+        "periyot": "Üç ayda bir",
+        "gundem_paylasim_is_gunu_once": 2,
+        "tutanak_yayin_is_gunu_sonra": 2,
+        "toplanti_yeter_sayisi": "Oy hakkı tanımlı üyelerin salt çoğunluğu (öneri)",
+        "karar_yeter_sayisi": "Katılan oy hakkı tanımlı üyelerin salt çoğunluğu; eşitlikte üst organa sevk (öneri)",
+        "uzaktan_katilim": "Kanuni koşullar, iç yönerge ve bilgi güvenliği şartları sağlanır",
+        "acil_karar": "Usulüne uygun yazılı kayıt ve yetki kontrolü şarttır"
+      },
+      "karar_akis_kodlari": [
+        "TALEP",
+        "YETKI_KONTROL",
+        "GUNDEM",
+        "MUZAKERE",
+        "KARAR",
+        "TESCIL_VE_UYGULAMA",
+        "IZLEME"
+      ],
+      "kpi": [
+        {
+          "ad": "Aksiyon zamanında kapanış",
+          "hesaplama": "Vadesinde kapatılan aksiyon / vadesi gelen aksiyon",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Karar tutanağı tamlığı",
+          "hesaplama": "Zorunlu alanları dolu karar / toplam karar",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Kararların izlenebilirliği",
+          "hesaplama": "Sorumlu, tarih ve kanıtı bulunan karar / toplam",
+          "baslangic_hedefi": "%100",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        },
+        {
+          "ad": "Öneri değerlendirme oranı",
+          "hesaplama": "Karara bağlanan tavsiye / sunulan tavsiye",
+          "baslangic_hedefi": "≥ %90",
+          "olcum_sikligi": "uc_aylik",
+          "hedef_tipi": "öneri, ölçüm sonrası kalibre edilir"
+        }
+      ],
+      "zorunlu_ciktilar": [
+        "Gündem ve toplantı katılım kaydı",
+        "Gerekçeli karar/tavsiye ve yetki kaydı",
+        "Sorumlu-termin-kanıt içeren aksiyon listesi",
+        "Risk ve eskalasyon özeti",
+        "Dönemsel kurul performans raporu"
+      ],
+      "iliskili_komite_kodlari": [
+        "KMT-01",
+        "KMT-20",
+        "KMT-23",
+        "KMT-24"
+      ],
+      "kontrol_noktalari": [
+        "Çıkar çatışması ve bağımsızlık beyanı",
+        "Şirket bazlı yetki ve gizlilik kontrolü",
+        "Tutanak, karar defteri ve tescil gerekliliği kontrolü",
+        "Görevlerin ayrılığı ve kanıtlı takip",
+        "İlgili şirketin hukuki organ onayı gerektiğinde açık eskalasyon"
+      ]
+    }
+  ],
+  "entegrasyon": {
+    "ilgili_komite_json": "Rasyo_Holding_24_Komite_Organizasyon_Modeli.json",
+    "anahtarlar": [
+      "kod",
+      "organizasyon",
+      "yetkiler",
+      "toplanti",
+      "kpi",
+      "iliskili_komite_kodlari"
+    ],
+    "onerilen_varliklar": [
+      "Board",
+      "BoardMembership",
+      "BoardMeeting",
+      "BoardResolution",
+      "BoardAction",
+      "BoardKPI",
+      "BoardAuditLog"
+    ],
+    "erisim": "Şirket bazlı yetkilendirme",
+    "kimliklendirme": "KRL / KMT kod alanları ayrı tutulur"
+  },
+  "hiyerarsi": [
+    {
+      "ust": "İlgili şirket Genel Kurulu",
+      "alt": "İlgili şirket Yönetim Kurulu",
+      "not": "Hukuki organ ilişkisi"
+    },
+    {
+      "ust": "Holding Yönetim Kurulu",
+      "alt": "Holding İcra Kurulu",
+      "not": "Yalnızca geçerli yönetim devri sınırlarında"
+    },
+    {
+      "ust": "Şirket Yönetim Kurulu",
+      "alt": "Şirket İcra Kurulu",
+      "not": "Yalnızca geçerli yönetim devri sınırlarında"
+    },
+    {
+      "ust": "Holding İcra Kurulu",
+      "alt": "Grup koordinasyon ve yönlendirme kurulları",
+      "not": "Danışma ve koordinasyon kararları; bağlı şirketin karar organı yerine geçmez"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "ad": "Türk Ticaret Kanunu (güncel mevzuat)",
+      "url": "https://mevzuat.adalet.gov.tr/mevzuat/103039",
+      "ilgili_maddeler": [
+        "367",
+        "375"
+      ]
+    },
+    {
+      "ad": "SPK / KAP kurul-komite yapısına ilişkin örnek açıklama",
+      "url": "https://kap.org.tr/tr/api/file/download/4028328d969f29560196c6214384376a",
+      "not": "Şirketlerin halka açıklık durumuna göre uygulanabilirlik ayrıca incelenmeli"
+    }
+  ]
+}

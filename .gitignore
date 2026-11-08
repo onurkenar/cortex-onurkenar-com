@@ -1,0 +1,15 @@
+# Yedekler (yerelde kalır)
+_yedek/
+
+# macOS
+.DS_Store
+
+# Yayın: bağımlılıklar, wrangler önbelleği ve yayinla.sh'nin ürettiği kopyalar
+yayin/node_modules/
+yayin/.wrangler/
+yayin/public/index.html
+yayin/public/index.html.br
+yayin/public/index.html.gz
+yayin/public/*.tmp
+.dev.vars
+.env*

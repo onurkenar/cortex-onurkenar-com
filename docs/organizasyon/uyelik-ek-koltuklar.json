@@ -1,0 +1,1216 @@
+{
+ "KRL-01": [
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit",
+   "role": "Davetli (raportör)",
+   "why": "Kanuni finansal raporlama, konsolidasyon ve Genel Kurul finansal tablolarını hazırlayan birim kurula raporlar"
+  },
+  {
+   "dept": "03",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Finansal kontrol, hazine ve iştirak finansmanı gündemlerinde departman adına raporlama yapar"
+  },
+  {
+   "dept": "05",
+   "pos": "05.01",
+   "role": "Davetli (raportör)",
+   "why": "Şirketler hukuku, iştirak hakları ve Genel Kurul hazırlıklarının hukuki boyutunu kurula sunar"
+  },
+  {
+   "dept": "06",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Önemli riskler, uyum ve iç kontrol sisteminin durumunu üst gözetim için kurula raporlar"
+  },
+  {
+   "dept": "07",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "İç denetim sonuçlarını ve gözetim bulgularını bağımsız biçimde doğrudan kurula sunar"
+  },
+  {
+   "dept": "21",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "İSG, çevre ve sürdürülebilirlik risklerini ve yasal raporlama durumunu kurula aktarır"
+  }
+ ],
+ "KRL-02": [
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit",
+   "role": "Davetli (raportör)",
+   "why": "Şirketin yasal finansal raporlarını hazırlayan birim olarak finansal raporlama gözetimine bilgi verir"
+  },
+  {
+   "dept": "03",
+   "pos": "03.01",
+   "role": "Davetli (raportör)",
+   "why": "Şirket bütçesi ve finansal planlamasının gerçekleşmesini kurula raporlar"
+  },
+  {
+   "dept": "04",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Yönetim teşkilatı ve yöneticilerle ilgili saklı yetki kararlarına İK girdisini sunar"
+  },
+  {
+   "dept": "05",
+   "pos": "05.01",
+   "role": "Davetli (raportör)",
+   "why": "Holdingle ilişkili işlemlerin ve organ kararlarının şirketler hukuku sınırlarını raporlar"
+  },
+  {
+   "dept": "06",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Mevzuata uyum ve risk gözetimi gündemlerinde departman adına raporlama yapar"
+  },
+  {
+   "dept": "07",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Şirkete ilişkin iç denetim bulgularını ve aksiyon durumunu kurula sunar"
+  },
+  {
+   "dept": "12",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Şirket operasyonlarının performansını ve operasyonel riskleri kurula raporlar"
+  },
+  {
+   "dept": "21",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "İSG, çevre ve sürdürülebilirlik yükümlülüklerinin durumunu kurula aktarır"
+  }
+ ],
+ "KRL-03": [
+  {
+   "dept": "03",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Onaylı bütçenin uygulanması, nakit ve finansman durumunu icra kuruluna raporlar"
+  },
+  {
+   "dept": "08",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Satış ve gelir hedeflerinin gerçekleşmesini ve ticari riskleri raporlar"
+  },
+  {
+   "dept": "12",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Grup operasyon performansı ve çapraz fonksiyon operasyon sorunlarını raporlar"
+  },
+  {
+   "dept": "15",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "BT kapasitesi, kritik sistemler ve teknoloji risklerini icra kuruluna aktarır"
+  },
+  {
+   "dept": "18",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Ürün yol haritası ve Ar-Ge hedeflerinin uygulanma durumunu raporlar"
+  },
+  {
+   "dept": "23",
+   "pos": "23.02",
+   "role": "Davetli (raportör)",
+   "why": "İcra kurulu sekreteryasını yürüten birim olarak karar ve aksiyon takibini raporlar"
+  }
+ ],
+ "KRL-04": [
+  {
+   "dept": "02",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Şirket bütçe gerçekleşmesi ve muhasebe kapanış sonuçlarını kurula raporlar"
+  },
+  {
+   "dept": "23",
+   "pos": "23.02",
+   "role": "Davetli (raportör)",
+   "why": "İcra kurulu sekreteryası birimi olarak gündem, karar ve aksiyon takibini raporlar"
+  }
+ ],
+ "KRL-05": [
+  {
+   "dept": "03",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Şirketler arası paylaşılabilir finansal kaynakları ve ortak girişim finansmanını raporlar"
+  },
+  {
+   "dept": "08",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Şirketler arası ortak müşteri ve çapraz satış fırsatlarını kurula sunar"
+  },
+  {
+   "dept": "12",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Ortak operasyon standartları ve merkezi hizmet ihtiyaçlarını raporlar"
+  }
+ ],
+ "KRL-06": [
+  {
+   "dept": "03",
+   "pos": "03.07",
+   "role": "Davetli (raportör)",
+   "why": "Yatırım kapıları, iş gerekçesi ve fayda gerçekleşmesinin finansal izlemesini raporlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01",
+   "role": "Davetli (raportör)",
+   "why": "Operasyon stratejisi ve planlama birimi olarak dönüşüm projelerinin operasyon etkisini raporlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.01",
+   "role": "Davetli (raportör)",
+   "why": "BT portföy yönetimi ve kurumsal mimari bağımlılıklarını yönlendirme kuruluna sunar"
+  },
+  {
+   "dept": "17",
+   "pos": "17.01",
+   "role": "Davetli (raportör)",
+   "why": "Veri ve YZ portföyündeki stratejik projelerin ilerleyişini ve bağımlılıklarını raporlar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.01",
+   "role": "Davetli (raportör)",
+   "why": "Ürün portföyü ve yatırım önceliklerindeki stratejik program durumunu raporlar"
+  }
+ ],
+ "KRL-07": [
+  {
+   "dept": "23",
+   "pos": "lider",
+   "role": "Davetli (raportör)",
+   "why": "Kriz anında üst yönetim toplantı, iletişim trafiği ve karar kayıtlarının koordinasyonunu raporlar"
+  }
+ ],
+ "KRL-08": [
+  {
+   "dept": "17",
+   "pos": "17.01",
+   "role": "Davetli (raportör)",
+   "why": "Veri ve YZ platform portföyü ile ürün ve teknoloji programlarına bağımlılıklarını raporlar"
+  }
+ ],
+ "KRL-09": [
+  {
+   "dept": "17",
+   "pos": "17.08",
+   "role": "Davetli (raportör)",
+   "why": "Sorumlu YZ, model riski ve etik konulardaki gelişmeleri danışma kuruluna aktarır"
+  },
+  {
+   "dept": "21",
+   "pos": "21.07",
+   "role": "Davetli (raportör)",
+   "why": "Sürdürülebilirlik ve ESG alanındaki sektörel gelişmeleri danışma kuruluna raporlar"
+  }
+ ],
+ "KMT-01": [
+  {
+   "dept": "03",
+   "pos": "03.01",
+   "role": "Departman temsilcisi",
+   "why": "Uzun vadeli finansal planlama ve stratejinin finansal karşılığını komitede temsil eder"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01",
+   "role": "Departman temsilcisi",
+   "why": "Operasyon stratejisi ve işletim modeli önceliklerini strateji sürecine taşır"
+  },
+  {
+   "dept": "15",
+   "pos": "15.01",
+   "role": "Departman temsilcisi",
+   "why": "BT stratejisi ve teknoloji yol haritasını kurumsal stratejiyle hizalar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.01",
+   "role": "Departman temsilcisi",
+   "why": "Ürün stratejisi ve portföy önceliklerini büyüme planına taşır"
+  }
+ ],
+ "KMT-02": [
+  {
+   "dept": "18",
+   "pos": "18.01",
+   "role": "Departman temsilcisi",
+   "why": "Ürün portföyü ve yatırım yönetimi ekibiyle ürün yatırımlarının önceliğini temsil eder"
+  }
+ ],
+ "KMT-03": [
+  {
+   "dept": "01",
+   "pos": "kurumsal-yonetisim-mudurlugu",
+   "role": "Departman temsilcisi",
+   "why": "Yetki matrisi ve kurumsal politikalar üzerinden yönetişim risklerini temsil eder"
+  },
+  {
+   "dept": "22",
+   "pos": "22.01",
+   "role": "Departman temsilcisi",
+   "why": "Güvenlik risk ve tehdit değerlendirmesini kurumsal risk envanterine taşır"
+  }
+ ],
+ "KMT-04": [
+  {
+   "dept": "01",
+   "pos": "kurumsal-yonetisim-mudurlugu",
+   "role": "Departman temsilcisi",
+   "why": "Davranış kodu ve kurumsal politika sahibi olarak etik çerçeveyi temsil eder"
+  }
+ ],
+ "KMT-05": [
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit",
+   "role": "Departman temsilcisi",
+   "why": "Finansal raporlama ve bağımsız denetim koordinasyonunu yürüten birim olarak temsil eder"
+  },
+  {
+   "dept": "03",
+   "pos": "03.06",
+   "role": "Departman temsilcisi",
+   "why": "Hazine süreçlerindeki finansal kontrol ve risk bulgularını komiteye taşır"
+  },
+  {
+   "dept": "05",
+   "pos": "05.01",
+   "role": "Departman temsilcisi",
+   "why": "Yönetim organlarına hukuki destek veren birim olarak komite işleyişini temsil eder"
+  },
+  {
+   "dept": "06",
+   "pos": "06.03",
+   "role": "Departman temsilcisi",
+   "why": "İç kontrol tasarımı, testleri ve aksiyon kapanışlarını komiteye raporlar"
+  }
+ ],
+ "KMT-07": [
+  {
+   "dept": "15",
+   "pos": "15.01",
+   "role": "Departman temsilcisi",
+   "why": "BT alımlarında teknoloji standardı, mimari uyum ve portföy değerlendirmesini temsil eder"
+  }
+ ],
+ "KMT-09": [
+  {
+   "dept": "02",
+   "pos": "payroll_accounting",
+   "role": "Departman temsilcisi",
+   "why": "Bordro muhasebesi birimi olarak kadro kararlarının personel maliyetine etkisini temsil eder"
+  }
+ ],
+ "KMT-10": [
+  {
+   "dept": "03",
+   "pos": "03.01",
+   "role": "Departman temsilcisi",
+   "why": "Ücret ve prim modellerinin bütçe ve finansal sürdürülebilirlik etkisini değerlendirir"
+  }
+ ],
+ "KMT-11": [
+  {
+   "dept": "20",
+   "pos": "20.05",
+   "role": "Departman temsilcisi",
+   "why": "Eğitim programlarının organizasyon, seyahat ve konaklama lojistiğini temsil eder"
+  }
+ ],
+ "KMT-13": [
+  {
+   "dept": "13",
+   "pos": "13.03",
+   "role": "Departman temsilcisi",
+   "why": "Üretimde yalın operasyon ve sürekli iyileştirme ekibini yöneten birim olarak temsil eder"
+  }
+ ],
+ "KMT-15": [
+  {
+   "dept": "04",
+   "pos": "calisan-iliskileri",
+   "role": "Departman temsilcisi",
+   "why": "Çalışan temsilciliği ve çalışan ilişkileri boyutunu İSG komitesine taşır"
+  },
+  {
+   "dept": "05",
+   "pos": "05.04",
+   "role": "Departman temsilcisi",
+   "why": "İş ve sosyal güvenlik hukuku kapsamında İSG yükümlülüklerini ve bildirimleri temsil eder"
+  },
+  {
+   "dept": "12",
+   "pos": "12.07",
+   "role": "Departman temsilcisi",
+   "why": "Operasyonel risk, süreklilik ve acil durum ekibiyle sahadaki İSG önlemlerini temsil eder"
+  },
+  {
+   "dept": "14",
+   "pos": "14.01",
+   "role": "Departman temsilcisi",
+   "why": "Entegre yönetim sistemi kapsamında İSG ve çevre süreçlerinin sistem uyumunu temsil eder"
+  }
+ ],
+ "KMT-16": [
+  {
+   "dept": "20",
+   "pos": "20.06",
+   "role": "Departman temsilcisi",
+   "why": "Acil durum ve tahliye destek hizmetlerini yöneten birim olarak kriz hazırlığını temsil eder"
+  }
+ ],
+ "KMT-18": [
+  {
+   "dept": "19",
+   "pos": "19.01",
+   "role": "Departman temsilcisi",
+   "why": "Yaratıcı strateji ve tasarım yönetişimi ile kampanya ve lansman kreatifini temsil eder"
+  }
+ ],
+ "KMT-24": [
+  {
+   "dept": "17",
+   "pos": "17.06",
+   "role": "Departman temsilcisi",
+   "why": "Yapay zekâ ve otomasyon PoC'lerinin seçimi ve doğrulanmasında veri tarafını temsil eder"
+  }
+ ],
+ "CLG-01": [
+  {
+   "dept": "03",
+   "pos": "03.01/uzun-vadeli-finansal-planlama",
+   "role": "Çekirdek ekip",
+   "why": "Strateji haritasının uzun vadeli finansal hedeflerle tutarlılığını sağlar"
+  },
+  {
+   "dept": "03",
+   "pos": "03.01/butce-ve-tahminleme/butce-analisti",
+   "role": "Çekirdek ekip",
+   "why": "OKR inisiyatiflerinin sorumlu ve bütçe eşlemesini hazırlar"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_strategy_brand/stratejik-planlama-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama tarafındaki stratejik hedefleri OKR ağacına dönüştürür"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_strategy_brand/stratejik-planlama-yoneticisi/pazarlama-planlama-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama OKR'lerinin inisiyatif ve bütçe karşılıklarını çıkarır"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01/operasyon-stratejisi-ve-isletim-modeli",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon stratejisini strateji haritası ve OKR ağacına işler"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01/operasyonel-yonetisim-ve-performans/operasyon-performans-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon OKR'leri için ölçülebilir KPI ve hedef değerleri hazırlar"
+  }
+ ],
+ "CLG-02": [
+  {
+   "dept": "03",
+   "pos": "03.02/finansal-performans-analizi",
+   "role": "Çekirdek ekip",
+   "why": "Sinerji fırsatlarının finansal etkisini analiz eder ve tasarrufları doğrular"
+  },
+  {
+   "dept": "03",
+   "pos": "03.02/finansal-performans-analizi/maliyet-ve-verimlilik-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Ortak hizmet senaryolarının maliyet ve tasarruf hesabını yapar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01/operasyon-stratejisi-ve-isletim-modeli",
+   "role": "Çekirdek ekip",
+   "why": "Ortak hizmet fizibilitesi ve pilot hizmet işletim modelini tasarlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.08/verimlilik-ve-benchmark-yonetimi/benchmark-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Şirketler arası tekrar eden işlevleri benchmark verisiyle karşılaştırır"
+  },
+  {
+   "dept": "20",
+   "pos": "20.01/idari-hizmet-stratejisi-ve-planlama",
+   "role": "Çekirdek ekip",
+   "why": "Ortaklaştırılabilecek idari hizmetleri belirler ve pilot modeli planlar"
+  },
+  {
+   "dept": "20",
+   "pos": "20.01/idari-hizmet-stratejisi-ve-planlama/idari-butce-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Ortak idari hizmet pilotunun maliyet ve tasarruf verisini hazırlar"
+  }
+ ],
+ "CLG-03": [
+  {
+   "dept": "05",
+   "pos": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi",
+   "role": "Çekirdek ekip",
+   "why": "Yatırımın şirket yapısı, ortaklık ve işlem hukuku açısından uygulanabilirliğini belgeler"
+  },
+  {
+   "dept": "05",
+   "pos": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/ruhsat-ve-izinler-hukuk-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Yatırım için gerekli ruhsat ve izinlerin hukuki risk analizini hazırlar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.01/urun-portfoyu-ve-yatirim-yonetimi",
+   "role": "Çekirdek ekip",
+   "why": "Ürün yatırım taleplerinin iş gerekçesi ve portföy uyumunu hazırlar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.08/urun-ekonomisi-fiyatlandirma-ve-is-modeli/is-modeli-analisti",
+   "role": "Çekirdek ekip",
+   "why": "İş modeli ve gelir varsayımlarıyla senaryo analizine girdi üretir"
+  }
+ ],
+ "CLG-04": [
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit/konsolidasyon-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Çok şirketli konsolidasyon modelini ve eliminasyon kurallarını kurar"
+  },
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/muhasebe-veri-kalitesi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Bütçe veri sözlüğünü muhasebe hesap ve veri standartlarıyla eşler"
+  },
+  {
+   "dept": "08",
+   "pos": "08.08/satis-tahminleme-ve-gelir-planlama",
+   "role": "Çekirdek ekip",
+   "why": "Gelir bütçesi ve satış forecast girdilerini standart şablona taşır"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama bütçesinin şablona ve sapma takibine uyarlanmasını sağlar"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/butce-ve-operasyon-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama harcama verisini konsolidasyon ve sapma dashboarduna hazırlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01/operasyon-planlama-ve-butce",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon bütçesi ve tahmin girdilerini standart şablona uyarlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.01/operasyon-planlama-ve-butce/operasyon-butce-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon bütçe sapmalarını dashboard için analiz eder"
+  }
+ ],
+ "CLG-05": [
+  {
+   "dept": "03",
+   "pos": "03.06/karsi-taraf-riski-ve-finansal-kontroller",
+   "role": "Çekirdek ekip",
+   "why": "Onay matrisindeki finansal limitleri ve tedarikçi karşı taraf riskini tanımlar"
+  },
+  {
+   "dept": "03",
+   "pos": "03.05/calisma-sermayesi-optimizasyonu/calisma-sermayesi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Teklif karşılaştırmasına ödeme vadesi ve çalışma sermayesi etkisini ekler"
+  },
+  {
+   "dept": "05",
+   "pos": "05.02/sozlesme-standartlari-ekibi",
+   "role": "Çekirdek ekip",
+   "why": "Satın alma sözleşme standartlarını ve hukuki onay adımlarını belirler"
+  },
+  {
+   "dept": "05",
+   "pos": "05.02/sozlesme-standartlari-ekibi/sozlesme-sablonlari-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Tedarikçi sözleşme şablonlarını standarda uygun hale getirir"
+  },
+  {
+   "dept": "14",
+   "pos": "14.04/tedarikci-kalifikasyonu",
+   "role": "Çekirdek ekip",
+   "why": "Tedarikçi puan kartındaki kalite ve yeterlilik kriterlerini tasarlar"
+  },
+  {
+   "dept": "14",
+   "pos": "14.04/tedarikci-kalifikasyonu/tedarikci-risk-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Puan kartı için tedarikçi kalite risk ölçütlerini hazırlar"
+  },
+  {
+   "dept": "20",
+   "pos": "20.08/idari-tedarikci-ve-sozlesme-operasyonlari",
+   "role": "Çekirdek ekip",
+   "why": "İdari hizmet alımlarının standarda uyarlanmasını ve pilotunu yürütür"
+  },
+  {
+   "dept": "20",
+   "pos": "20.08/idari-tedarikci-ve-sozlesme-operasyonlari/tedarikci-performans-analisti",
+   "role": "Çekirdek ekip",
+   "why": "İdari tedarikçi performans verisini puan kartına taşır"
+  }
+ ],
+ "CLG-06": [
+  {
+   "dept": "01",
+   "pos": "kurumsal-yonetisim-mudurlugu/yetki-matrisi-ve-politika-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "RACI taslağını kurumsal yetki matrisiyle tutarlı hale getirir"
+  },
+  {
+   "dept": "01",
+   "pos": "kurumsal-yonetisim-mudurlugu/kurumsal-yonetisim-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Departman görevlerinin yönetişim yapısı ve organ yetkileriyle uyumunu sağlar"
+  },
+  {
+   "dept": "05",
+   "pos": "05.04/is-hukuku-danismanligi-ekibi/is-sozlesmeleri-hukuk-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Unvan ve görev tanımlarının iş sözleşmelerine hukuki uyumunu inceler"
+  },
+  {
+   "dept": "23",
+   "pos": "23.08/kalite-performans-ve-yetkinlik-gelisimi/sekreterya-yetkinlik-gelisim-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Sekreterya ve yönetici destek rollerinin yetkinlik matrisini hazırlar"
+  },
+  {
+   "dept": "23",
+   "pos": "23.05/resmi-ve-kurumsal-protokol/protokol-siralama-ve-uygulama-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Unvan standardının protokol sıralaması ve kurumsal temsil kurallarıyla uyumunu sağlar"
+  }
+ ],
+ "CLG-07": [
+  {
+   "dept": "12",
+   "pos": "12.03/is-gucu-ve-vardiya-planlama",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon işe alımlarında aday akışını iş gücü ve vardiya planıyla eşler"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/ik-operasyon-ve-destek-sistemleri",
+   "role": "Çekirdek ekip",
+   "why": "İşe alım ve onboarding sürecinin İK sistemlerinde dijitalleşmesini sağlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/uc-nokta-yonetimi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "İlk gün cihaz, hesap ve erişim hazırlığını onboarding listesine taşır"
+  },
+  {
+   "dept": "20",
+   "pos": "20.03/calisan-idari-destek-masasi",
+   "role": "Çekirdek ekip",
+   "why": "Onboarding checklistindeki çalışma alanı ve idari hazırlık adımlarını yürütür"
+  }
+ ],
+ "CLG-08": [
+  {
+   "dept": "01",
+   "pos": "strateji-ve-kurumsal-performans-direktorlugu/kurumsal-performans-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Kurumsal hedeflerin performans döngüsüne kademelendirilmesini sağlar"
+  },
+  {
+   "dept": "01",
+   "pos": "strateji-ve-kurumsal-performans-direktorlugu/kurumsal-performans-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Hedef temelli performans ölçütlerini kurumsal KPI'larla eşler"
+  },
+  {
+   "dept": "03",
+   "pos": "03.02/finansal-performans-analizi",
+   "role": "Çekirdek ekip",
+   "why": "Performans hedeflerinin finansal KPI'larla tutarlılığını ve pilot verisini sağlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/ik-operasyon-ve-destek-sistemleri/kidemli-is-uygulamalari-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Performans ve kariyer süreçlerinin İK sistemlerinde kurgulanmasını yürütür"
+  }
+ ],
+ "CLG-09": [
+  {
+   "dept": "11",
+   "pos": "11.06/kok-neden-ve-iyilestirme",
+   "role": "Çekirdek ekip",
+   "why": "Müşteri süreçlerinde kök neden analizini ve iyileştirme backlogunu yürütür"
+  },
+  {
+   "dept": "11",
+   "pos": "11.01/servis-tasarimi-ve-deneyim-standartlari/servis-tasarimi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Müşteri temaslı süreçlerin as-is/to-be haritalarını çıkarır"
+  },
+  {
+   "dept": "14",
+   "pos": "14.06/kalite-iyilestirme-programlari",
+   "role": "Çekirdek ekip",
+   "why": "Yalın ve Six Sigma yöntemleriyle iyileştirme pilotunu yönetir"
+  },
+  {
+   "dept": "14",
+   "pos": "14.06/kok-neden-ve-capa-yonetimi/kok-neden-analizi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Darboğaz ve tekrar iş için kök neden analizlerini yapar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/ik-operasyon-ve-destek-sistemleri/is-sistemleri-analisti",
+   "role": "Çekirdek ekip",
+   "why": "To-be süreçlerin sistem ve otomasyon gereksinimlerini analiz eder"
+  }
+ ],
+ "CLG-10": [
+  {
+   "dept": "11",
+   "pos": "11.01/servis-tasarimi-ve-deneyim-standartlari",
+   "role": "Çekirdek ekip",
+   "why": "Müşteri deneyimi standartlarını SLA kataloğuna dönüştürür"
+  },
+  {
+   "dept": "11",
+   "pos": "11.05/problem-ve-tekrarlayan-hata-yonetimi/tekrarlayan-hata-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Hata sınıflandırmasını ve tekrarlayan hata verisini hazırlar"
+  },
+  {
+   "dept": "17",
+   "pos": "17.04/kurumsal-raporlama-ve-kpi-yonetimi/kpi-ve-raporlama-analisti",
+   "role": "Çekirdek ekip",
+   "why": "SLA göstergeleri için izleme raporunu ve KPI tanımlarını kurar"
+  }
+ ],
+ "CLG-11": [
+  {
+   "dept": "05",
+   "pos": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi",
+   "role": "Çekirdek ekip",
+   "why": "Kesinti senaryolarındaki yasal yükümlülük ve bildirim gerekliliklerini belirler"
+  },
+  {
+   "dept": "12",
+   "pos": "12.07/operasyonel-risk-sureklilik-ve-acil-durum",
+   "role": "Çekirdek ekip",
+   "why": "Operasyonel BIA ve kritik süreç envanterini hazırlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.07/operasyonel-risk-sureklilik-ve-acil-durum/kidemli-operasyonel-sureklilik-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Operasyon tatbikat senaryosunu ve düzeltme planını hazırlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.02/yedekleme-depolama-ve-felaket-kurtarma",
+   "role": "Çekirdek ekip",
+   "why": "BT felaket kurtarma ve yedekten dönüş senaryolarını tatbikata taşır"
+  },
+  {
+   "dept": "15",
+   "pos": "15.02/yedekleme-depolama-ve-felaket-kurtarma/felaket-kurtarma-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "DR testlerini uygular ve kurtarma süresi sonuçlarını raporlar"
+  },
+  {
+   "dept": "16",
+   "pos": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/siber-tatbikat-koordinatoru",
+   "role": "Çekirdek ekip",
+   "why": "Siber olay kaynaklı kesinti tatbikat senaryosunu tasarlar ve yürütür"
+  },
+  {
+   "dept": "16",
+   "pos": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme",
+   "role": "Çekirdek ekip",
+   "why": "Siber olay müdahale adımlarını süreklilik senaryolarına bağlar"
+  },
+  {
+   "dept": "20",
+   "pos": "20.06/acil-durum-ve-tahliye-destek-hizmetleri",
+   "role": "Çekirdek ekip",
+   "why": "Tesis kaynaklı kesinti ve tahliye senaryolarını planlar"
+  },
+  {
+   "dept": "20",
+   "pos": "20.06/acil-durum-ve-tahliye-destek-hizmetleri/tahliye-ve-tatbikat-koordinatoru",
+   "role": "Çekirdek ekip",
+   "why": "Tahliye ve acil durum tatbikatının sahada uygulanmasını koordine eder"
+  }
+ ],
+ "CLG-12": [
+  {
+   "dept": "05",
+   "pos": "05.06/veri-koruma-danismanligi-ekibi",
+   "role": "Çekirdek ekip",
+   "why": "Veri işleme envanterinin hukuki dayanak ve saklama sürelerini onaylar"
+  },
+  {
+   "dept": "05",
+   "pos": "05.06/veri-koruma-danismanligi-ekibi/kvkk-ve-gdpr-hukuk-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "İşleme amaçları, hukuki sebepler ve imha planının KVKK uyumunu inceler"
+  },
+  {
+   "dept": "15",
+   "pos": "15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Kişisel verinin tutulduğu veritabanlarını envantere ve imha planına taşır"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/crm-satis-ve-musteri-sistemleri/kidemli-crm-uygulama-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Müşteri sistemlerindeki kişisel veri alanlarını ve erişim yetkilerini çıkarır"
+  },
+  {
+   "dept": "17",
+   "pos": "17.02/ana-veri-referans-veri-ve-metadata/veri-katalogu-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Veri kataloğu ve metadata üzerinden veri işleme envanterini besler"
+  },
+  {
+   "dept": "17",
+   "pos": "17.02/veri-yonetisimi-ve-veri-sahipligi/veri-sorumlulugu-koordinatoru",
+   "role": "Çekirdek ekip",
+   "why": "Veri sahipliği ve erişim matrisinin veri yönetişimiyle uyumunu sağlar"
+  },
+  {
+   "dept": "22",
+   "pos": "22.06/video-gozetim-ve-analitik/goruntu-kayit-ve-delil-sistemleri-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Kamera kayıtlarının işleme, saklama ve imha bilgilerini envantere taşır"
+  },
+  {
+   "dept": "22",
+   "pos": "22.02/erisim-kontrolu-ve-ziyaretci-guvenligi/ziyaretci-ve-resepsiyon-guvenligi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Ziyaretçi ve geçiş kontrol verilerinin envanter ve erişim kayıtlarını hazırlar"
+  }
+ ],
+ "CLG-13": [
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlamadan satışa lead devir SLA'sını ve CRM aşama tanımlarını kurar"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/lead-yonetimi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Lead aşamaları ve devir kurallarını CRM sözlüğüne işler"
+  },
+  {
+   "dept": "11",
+   "pos": "11.08/yenileme-yonetimi",
+   "role": "Çekirdek ekip",
+   "why": "Yenileme fırsatlarının pipeline ve forecast tanımlarına katılmasını sağlar"
+  },
+  {
+   "dept": "11",
+   "pos": "11.02/satistan-devir-ve-hazirlik/musteri-devir-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Satıştan müşteri deneyimine devir aşamasını CRM akışında tanımlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/crm-satis-ve-musteri-sistemleri",
+   "role": "Çekirdek ekip",
+   "why": "Ortak CRM aşama sözlüğünün ve pilot dashboardun sistemde kurulmasını yönetir"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/crm-satis-ve-musteri-sistemleri/kidemli-crm-uygulama-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "CRM aşama, alan ve forecast yapılandırmasını uygular"
+  }
+ ],
+ "CLG-14": [
+  {
+   "dept": "10",
+   "pos": "10.01/kurumsal-anlati-ve-mesaj-mimarisi",
+   "role": "Çekirdek ekip",
+   "why": "Marka mimarisine kurumsal anlatı ve mesaj hiyerarşisini taşır"
+  },
+  {
+   "dept": "10",
+   "pos": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-dil-ve-terminoloji-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Grup markalarının isimlendirme ve terminoloji kurallarını hazırlar"
+  },
+  {
+   "dept": "19",
+   "pos": "19.02/marka-kimligi-tasarimi",
+   "role": "Çekirdek ekip",
+   "why": "Kimlik standartlarının görsel tasarımını ve marka mimarisi uygulamasını üretir"
+  },
+  {
+   "dept": "19",
+   "pos": "19.02/marka-rehberi-ve-varlik-yonetimi/dijital-varlik-yonetimi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Marka varlık kütüphanesini kurar ve sürüm yönetimini yapar"
+  },
+  {
+   "dept": "23",
+   "pos": "23.07/yonetim-yazismalari/metin-ve-bicim-kontrol-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Kimlik standartlarının yönetim yazışma şablonlarında uygulanmasını denetler"
+  },
+  {
+   "dept": "23",
+   "pos": "23.05/resmi-ve-kurumsal-protokol/kurumsal-protokol-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Tören, protokol ve temsil materyallerinde kimlik kurallarının uygulanmasını sağlar"
+  }
+ ],
+ "CLG-15": [
+  {
+   "dept": "08",
+   "pos": "08.03/hizli-satis-ve-donusum/satis-donusum-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Dijital leadlerin satışa dönüşüm adımlarını huni testlerine taşır"
+  },
+  {
+   "dept": "08",
+   "pos": "08.01/satis-veri-ve-analitigi/donusum-ve-funnel-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Huni dönüşüm verisini ve atıf sözlüğünün satış tarafını hazırlar"
+  },
+  {
+   "dept": "11",
+   "pos": "11.02/aktivasyon-ve-ilk-deger",
+   "role": "Çekirdek ekip",
+   "why": "Kazanılan müşterinin aktivasyon adımlarını dönüşüm hipotezlerine bağlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/crm-satis-ve-musteri-sistemleri/crm-uygulama-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Landing sayfa formları ve izleme verisinin CRM entegrasyonunu kurar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Landing sayfa varyantlarını ve deney altyapısını geliştirir"
+  },
+  {
+   "dept": "17",
+   "pos": "17.05/musteri-pazarlama-ve-gelir-analitigi",
+   "role": "Çekirdek ekip",
+   "why": "Kanal testleri ve deneylerin analitik tasarımını yönetir"
+  },
+  {
+   "dept": "17",
+   "pos": "17.05/musteri-pazarlama-ve-gelir-analitigi/pazarlama-analitigi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Atıf modelini ve deney raporunun istatistiksel analizini hazırlar"
+  }
+ ],
+ "CLG-16": [
+  {
+   "dept": "08",
+   "pos": "08.01/crm-ve-pipeline-yonetimi/crm-surec-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Satış sürecindeki müşteri temas noktalarını yolculuk haritasına aktarır"
+  },
+  {
+   "dept": "09",
+   "pos": "market_research_analytics/musteri-icgoruleri-muduru/musterinin-sesi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "VoC verisini toplar ve sınıflandırma şemasını hazırlar"
+  },
+  {
+   "dept": "09",
+   "pos": "growth_conversion/yasam-dongusu-pazarlama-muduru",
+   "role": "Çekirdek ekip",
+   "why": "Yaşam döngüsü iletişimindeki sürtünmeleri belirler ve pilot iyileştirmeyi yürütür"
+  },
+  {
+   "dept": "12",
+   "pos": "12.02/hizmet-teslimati/kidemli-hizmet-teslimati-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Hizmet teslimatındaki kritik temas noktalarını ve sürtünmeleri haritalar"
+  },
+  {
+   "dept": "17",
+   "pos": "17.05/musteri-pazarlama-ve-gelir-analitigi/kidemli-musteri-analitigi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Yolculuk ve VoC verisini analiz ederek kritik sürtünmeleri ölçer"
+  },
+  {
+   "dept": "17",
+   "pos": "17.06/dogal-dil-goruntu-ve-konusma-yapay-zekasi/nlp-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "VoC metinlerinin otomatik sınıflandırmasını NLP ile kurar"
+  }
+ ],
+ "CLG-17": [
+  {
+   "dept": "08",
+   "pos": "08.02/stratejik-musteriler",
+   "role": "Çekirdek ekip",
+   "why": "Pilot müşterileri belirler ve pilot kabul kriterlerini müşteriyle yürütür"
+  },
+  {
+   "dept": "09",
+   "pos": "product_solution_marketing/urun-pazarlamasi-muduru/persona-ve-kullanim-senaryosu-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "MVP kapsamına persona ve kullanım senaryosu girdisi sağlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.06/operasyon-otomasyonu-ve-dijitallesme",
+   "role": "Çekirdek ekip",
+   "why": "MVP'nin operasyon süreçleriyle entegrasyonunu ve pilot hazırlığını yürütür"
+  },
+  {
+   "dept": "16",
+   "pos": "16.06/uygulama-ve-api-guvenlik-testleri",
+   "role": "Çekirdek ekip",
+   "why": "MVP ve entegrasyon API'lerinin güvenlik testlerini yürütür"
+  },
+  {
+   "dept": "16",
+   "pos": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Güvenlik kontrolü teslimatını SSDLC gereksinimleriyle hazırlar"
+  },
+  {
+   "dept": "17",
+   "pos": "17.03/veri-hatlari-ve-entegrasyon-muhendisligi/kidemli-veri-muhendisi",
+   "role": "Çekirdek ekip",
+   "why": "MVP veri akışlarını ve entegrasyon veri sözleşmelerini kurar"
+  }
+ ],
+ "CLG-18": [
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi",
+   "role": "Çekirdek ekip",
+   "why": "Finansal KPI'ların tanım ve kalite kurallarının sahipliğini üstlenir"
+  },
+  {
+   "dept": "02",
+   "pos": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/muhasebe-veri-kalitesi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Muhasebe kaynaklı KPI verisi için kalite kurallarını yazar"
+  },
+  {
+   "dept": "03",
+   "pos": "03.02/yonetim-raporlamasi",
+   "role": "Çekirdek ekip",
+   "why": "Holding yönetim raporlaması KPI'larının ortak tanımlarını belirler"
+  },
+  {
+   "dept": "03",
+   "pos": "03.02/yonetim-raporlamasi/finansal-veri-ve-bi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Finansal KPI'ların kaynak izlenebilirliğini ve veri sözlüğünü hazırlar"
+  },
+  {
+   "dept": "08",
+   "pos": "08.01/satis-veri-ve-analitigi",
+   "role": "Çekirdek ekip",
+   "why": "Satış ve gelir KPI'larının tanım ve veri sahipliğini üstlenir"
+  },
+  {
+   "dept": "08",
+   "pos": "08.01/crm-ve-pipeline-yonetimi/crm-veri-kalitesi-analisti",
+   "role": "Çekirdek ekip",
+   "why": "CRM kaynaklı satış verisi için kalite kurallarını hazırlar"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama KPI'larının tanım ve veri sahipliğini üstlenir"
+  },
+  {
+   "dept": "09",
+   "pos": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/veri-kalitesi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pazarlama verisi için kalite kurallarını ve kaynak eşlemesini hazırlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/erp-ve-finans-sistemleri/finans-sistemleri-analisti",
+   "role": "Çekirdek ekip",
+   "why": "ERP kaynak alanlarını KPI veri sözlüğüyle eşler ve izlenebilirliği sağlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.04/crm-satis-ve-musteri-sistemleri/musteri-sistemleri-analisti",
+   "role": "Çekirdek ekip",
+   "why": "CRM ve müşteri sistemlerindeki kaynak alanları veri sözlüğüne eşler"
+  }
+ ],
+ "CLG-19": [
+  {
+   "dept": "05",
+   "pos": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/yapay-zeka-hukuku-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "YZ pilotunun hukuki etki ve risk analizini hazırlar"
+  },
+  {
+   "dept": "05",
+   "pos": "05.06/veri-koruma-danismanligi-ekibi/veri-koruma-hukuku-musaviri",
+   "role": "Çekirdek ekip",
+   "why": "Pilotta kullanılan kişisel verinin KVKK uygunluğunu değerlendirir"
+  },
+  {
+   "dept": "12",
+   "pos": "12.06/operasyon-otomasyonu-ve-dijitallesme",
+   "role": "Çekirdek ekip",
+   "why": "Operasyondaki YZ kullanım senaryolarının iş sahibi olarak pilotu yürütür"
+  },
+  {
+   "dept": "12",
+   "pos": "12.06/operasyon-otomasyonu-ve-dijitallesme/is-surecleri-otomasyon-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Senaryo listesini ve pilotun iş değeri ölçümünü hazırlar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.05/entegrasyon-ve-api-yonetimi/api-ve-entegrasyon-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pilot prototipin kurumsal sistemlere API entegrasyonunu kurar"
+  },
+  {
+   "dept": "15",
+   "pos": "15.02/bulut-platformlari-ve-finops/bulut-platform-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pilot için güvenli bulut ortamını ve maliyet takibini sağlar"
+  },
+  {
+   "dept": "16",
+   "pos": "16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "YZ pilotunda veri sızıntısı ve kayıp önleme kontrollerini tanımlar"
+  },
+  {
+   "dept": "16",
+   "pos": "16.06/uygulama-ve-api-guvenlik-testleri/uygulama-guvenlik-test-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Pilot prototipin uygulama ve istem güvenliği testlerini yapar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.07/hizli-prototipleme-ve-kanit-calismalari/poc-gelistirme-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Seçilen senaryonun pilot prototipini geliştirir"
+  },
+  {
+   "dept": "18",
+   "pos": "18.08/urun-analitigi-ve-deney-yonetimi/urun-deneyleri-analisti",
+   "role": "Çekirdek ekip",
+   "why": "Pilotun ölçüm planını ve kapatma raporu analizini hazırlar"
+  }
+ ],
+ "CLG-20": [
+  {
+   "dept": "05",
+   "pos": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/dijital-urun-hukuku-musaviri",
+   "role": "Çekirdek ekip",
+   "why": "Lansman öncesi ürünün hukuki uygunluğunu go/no-go dosyasına taşır"
+  },
+  {
+   "dept": "05",
+   "pos": "05.02/sozlesme-standartlari-ekibi/sozlesme-sablonlari-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Yeni ürün için müşteri sözleşmesi ve koşul şablonlarını hazırlar"
+  },
+  {
+   "dept": "08",
+   "pos": "08.06/satis-icerigi-ve-araclari",
+   "role": "Çekirdek ekip",
+   "why": "Satış enablement içeriklerini ve araçlarını lansmana hazırlar"
+  },
+  {
+   "dept": "08",
+   "pos": "08.07/fiyatlandirma-stratejisi/kidemli-fiyatlandirma-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Fiyatlandırma önerisini ticari kurallar ve kârlılıkla hazırlar"
+  },
+  {
+   "dept": "11",
+   "pos": "11.04/destek-bilgi-yonetimi",
+   "role": "Çekirdek ekip",
+   "why": "Destek bilgi tabanı ve servis hazırlığını lansman kontrol listesine işler"
+  },
+  {
+   "dept": "11",
+   "pos": "11.07/musteri-egitimleri/egitim-icerik-gelistirme-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Yeni ürün için müşteri eğitim içeriklerini hazırlar"
+  },
+  {
+   "dept": "12",
+   "pos": "12.02/hizmet-teslimati",
+   "role": "Çekirdek ekip",
+   "why": "Lansman sonrası hizmet teslimatının operasyonel hazırlığını yönetir"
+  },
+  {
+   "dept": "12",
+   "pos": "12.03/talep-ve-kapasite-planlama",
+   "role": "Çekirdek ekip",
+   "why": "Lansman talebine göre operasyon kapasitesini planlar"
+  },
+  {
+   "dept": "18",
+   "pos": "18.04/lansman-benimseme-ve-urun-yasam-dongusu",
+   "role": "Çekirdek ekip",
+   "why": "Lansman kontrol listesini ve go/no-go dosyasını yürütür"
+  },
+  {
+   "dept": "18",
+   "pos": "18.08/urun-ekonomisi-fiyatlandirma-ve-is-modeli/urun-fiyatlandirma-uzmani",
+   "role": "Çekirdek ekip",
+   "why": "Ürün ekonomisine dayalı fiyatlandırma önerisini hazırlar"
+  }
+ ]
+}

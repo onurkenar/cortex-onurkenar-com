@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "department": {
+    "id": "DEP-01",
+    "code": "01",
+    "name_tr": "Üst Yönetim ve Kurumsal Yönetişim",
+    "name_en": "Executive Management and Corporate Governance",
+    "purpose": "Şirketin stratejik yönünü, önceliklerini, kaynak dağılımını, karar mekanizmalarını ve hesap verebilirlik sistemini belirlemek; kurumsal performansı ve stratejik dönüşüm programlarını yönetmek.",
+    "administrative_reporting_to": "Yönetim Kurulu",
+    "governance_principle": "Departman, şirketin yönünü ve karar sistemini yönetir; diğer departmanların günlük icra sorumluluğunu devralmaz."
+  },
+  "organization_chart": {
+    "root": {
+      "id": "GOV-001",
+      "position_tr": "Genel Kurul",
+      "position_en": "General Assembly",
+      "children": [
+        {
+          "id": "GOV-002",
+          "position_tr": "Yönetim Kurulu",
+          "position_en": "Board of Directors",
+          "roles": [
+            "Yönetim Kurulu Başkanı / Chairperson of the Board",
+            "Yönetim Kurulu Başkan Vekili / Vice Chairperson",
+            "Yönetim Kurulu Üyesi / Board Member",
+            "Bağımsız Yönetim Kurulu Üyesi / Independent Board Member"
+          ],
+          "children": [
+            {
+              "id": "GOV-003",
+              "position_tr": "Yönetim Kurulu Komiteleri",
+              "position_en": "Board Committees",
+              "children": [
+                { "id": "COM-001", "name_tr": "Denetim Komitesi", "name_en": "Audit Committee" },
+                { "id": "COM-002", "name_tr": "Risk ve Uyum Komitesi", "name_en": "Risk and Compliance Committee" },
+                { "id": "COM-003", "name_tr": "Aday Gösterme ve Ücret Komitesi", "name_en": "Nomination and Remuneration Committee" },
+                { "id": "COM-004", "name_tr": "Strateji ve Yatırım Komitesi", "name_en": "Strategy and Investment Committee" }
+              ]
+            },
+            {
+              "id": "EXE-001",
+              "position_tr": "CEO / Genel Müdür",
+              "position_en": "Chief Executive Officer / General Manager",
+              "children": [
+                {
+                  "id": "EXE-002",
+                  "position_tr": "CEO Ofisi Başkanı",
+                  "position_en": "Chief of Staff / Head of CEO Office",
+                  "children": [
+                    { "unit_ref": "UNIT-01" },
+                    { "unit_ref": "UNIT-02" },
+                    { "unit_ref": "UNIT-03" },
+                    { "unit_ref": "UNIT-04" },
+                    { "unit_ref": "UNIT-05" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "executive_positions": [
+    {
+      "code": "POS-001",
+      "title_tr": "Yönetim Kurulu Başkanı",
+      "title_en": "Chairperson of the Board",
+      "level": "Yönetim Kurulu",
+      "reports_to": "Genel Kurul",
+      "responsibilities": ["Yönetim Kuruluna liderlik etmek", "Strateji ve gözetim gündemini yönetmek", "CEO performansını gözetmek"]
+    },
+    {
+      "code": "POS-002",
+      "title_tr": "CEO / Genel Müdür",
+      "title_en": "Chief Executive Officer / General Manager",
+      "level": "C-Level",
+      "reports_to": "Yönetim Kurulu",
+      "responsibilities": ["Yönetim Kurulu kararlarını icra etmek", "Şirket stratejisini uygulamak", "Şirket genelinin performansından sorumlu olmak"]
+    },
+    {
+      "code": "POS-003",
+      "title_tr": "CEO Ofisi Başkanı",
+      "title_en": "Chief of Staff / Head of CEO Office",
+      "level": "Üst Yönetim",
+      "reports_to": "CEO / Genel Müdür",
+      "responsibilities": ["CEO'nun strateji ve karar gündemini koordine etmek", "Kurumsal performans döngüsünü yönetmek", "Stratejik dönüşüm portföyünü bütünleştirmek"]
+    }
+  ],
+  "units": [
+    {
+      "id": "UNIT-01",
+      "name_tr": "Strateji ve Kurumsal Performans Direktörlüğü",
+      "name_en": "Directorate of Strategy and Corporate Performance",
+      "manager_title_tr": "Strateji ve Kurumsal Performans Direktörü",
+      "manager_title_en": "Director of Strategy and Corporate Performance",
+      "reports_to": "CEO Ofisi Başkanı",
+      "positions": [
+        { "title_tr": "Stratejik Planlama Yöneticisi", "title_en": "Strategic Planning Manager", "level": "Yönetici", "responsibility": "Uzun vadeli strateji, yıllık iş planı ve stratejik öncelikleri koordine eder." },
+        { "title_tr": "Kurumsal Performans Yöneticisi", "title_en": "Corporate Performance Manager", "level": "Yönetici", "responsibility": "Kurumsal hedefler, KPI/OKR sistemi ve performans döngüsünü yönetir." },
+        { "title_tr": "Kıdemli Strateji Uzmanı", "title_en": "Senior Strategy Specialist", "level": "Kıdemli Uzman", "responsibility": "Pazar, sektör, büyüme ve stratejik seçenek analizleri üretir." },
+        { "title_tr": "Kurumsal Performans Uzmanı", "title_en": "Corporate Performance Specialist", "level": "Uzman", "responsibility": "Hedef kartlarını, gerçekleşmeleri ve sapmaları takip eder." },
+        { "title_tr": "Strateji Analisti", "title_en": "Strategy Analyst", "level": "Analist", "responsibility": "Araştırma, veri analizi, senaryo ve yönetim sunumları hazırlar." }
+      ]
+    },
+    {
+      "id": "UNIT-02",
+      "name_tr": "Kurumsal Yönetişim Müdürlüğü",
+      "name_en": "Corporate Governance Department",
+      "manager_title_tr": "Kurumsal Yönetişim Müdürü",
+      "manager_title_en": "Corporate Governance Manager",
+      "reports_to": "CEO Ofisi Başkanı",
+      "positions": [
+        { "title_tr": "Kurumsal Yönetişim Yöneticisi", "title_en": "Corporate Governance Lead", "level": "Yönetici", "responsibility": "Yönetişim modeli ve karar mekanizmalarının uygulanmasını yönetir." },
+        { "title_tr": "Yönetim Kurulu Uyum Uzmanı", "title_en": "Board Governance Specialist", "level": "Uzman", "responsibility": "Kurul ve komite yapılarının yönetişim standartlarına uyumunu izler." },
+        { "title_tr": "Yetki Matrisi ve Politika Uzmanı", "title_en": "Delegation of Authority and Policy Specialist", "level": "Uzman", "responsibility": "Yetki devri, imza yetkisi ve politika hiyerarşisini koordine eder." },
+        { "title_tr": "Kurumsal Politika Uzmanı", "title_en": "Corporate Policy Specialist", "level": "Uzman", "responsibility": "Kurumsal politika ve prosedür standartlarını koordine eder." },
+        { "title_tr": "Yönetişim Analisti", "title_en": "Governance Analyst", "level": "Analist", "responsibility": "Yönetişim göstergeleri ve iyileştirme analizleri hazırlar." }
+      ]
+    },
+    {
+      "id": "UNIT-03",
+      "name_tr": "Stratejik Projeler ve Dönüşüm Ofisi",
+      "name_en": "Strategic Projects and Transformation Office",
+      "manager_title_tr": "Stratejik Projeler ve Dönüşüm Direktörü",
+      "manager_title_en": "Director of Strategic Projects and Transformation",
+      "reports_to": "CEO Ofisi Başkanı",
+      "positions": [
+        { "title_tr": "Dönüşüm Programları Yöneticisi", "title_en": "Transformation Programs Manager", "level": "Yönetici", "responsibility": "Şirket çapındaki dönüşüm programlarını yönetir." },
+        { "title_tr": "Stratejik Proje Portföy Yöneticisi", "title_en": "Strategic Portfolio Manager", "level": "Yönetici", "responsibility": "Proje seçimi, önceliklendirme, kapasite ve portföy dengesini yönetir." },
+        { "title_tr": "Kıdemli Program Yöneticisi", "title_en": "Senior Program Manager", "level": "Kıdemli Yönetici", "responsibility": "Birbiriyle ilişkili stratejik projeleri koordine eder." },
+        { "title_tr": "Stratejik Proje Yöneticisi", "title_en": "Strategic Project Manager", "level": "Yönetici", "responsibility": "Öncelikli projeleri uçtan uca yönetir." },
+        { "title_tr": "Değişim Yönetimi Uzmanı", "title_en": "Change Management Specialist", "level": "Uzman", "responsibility": "Değişim etkisi, adaptasyon ve paydaş katılımını yönetir." },
+        { "title_tr": "PMO Analisti", "title_en": "PMO Analyst", "level": "Analist", "responsibility": "Proje takvimi, bütçe, risk, bağımlılık ve ilerleme raporlarını hazırlar." }
+      ]
+    },
+    {
+      "id": "UNIT-04",
+      "name_tr": "İştirakler ve Şirket Performansı Müdürlüğü",
+      "name_en": "Subsidiaries and Business Performance Department",
+      "manager_title_tr": "İştirakler ve Şirket Performansı Müdürü",
+      "manager_title_en": "Subsidiaries and Business Performance Manager",
+      "reports_to": "CEO Ofisi Başkanı",
+      "positions": [
+        { "title_tr": "İştirak Performans Yöneticisi", "title_en": "Subsidiary Performance Lead", "level": "Yönetici", "responsibility": "Grup şirketlerinin hedef ve performans koordinasyonunu yürütür." },
+        { "title_tr": "Kurumsal Performans Raporlama Uzmanı", "title_en": "Corporate Performance Reporting Specialist", "level": "Uzman", "responsibility": "Şirket ve marka bazlı performans raporlarını hazırlar." },
+        { "title_tr": "İştirak Yönetimi Uzmanı", "title_en": "Subsidiary Management Specialist", "level": "Uzman", "responsibility": "Holding ile iştirakler arasındaki yönetişim ve raporlama süreçlerini koordine eder." },
+        { "title_tr": "İş ve Sektör Analisti", "title_en": "Business and Sector Analyst", "level": "Analist", "responsibility": "Şirket, sektör ve rekabet performansı analizleri üretir." },
+        { "title_tr": "Performans Analisti", "title_en": "Performance Analyst", "level": "Analist", "responsibility": "Finansal ve operasyonel KPI analizlerini gerçekleştirir." }
+      ]
+    },
+    {
+      "id": "UNIT-05",
+      "name_tr": "Karar Yönetimi ve Yönetim Raporlama Müdürlüğü",
+      "name_en": "Management Reporting and Decision Governance Department",
+      "manager_title_tr": "Karar Yönetimi ve Yönetim Raporlama Müdürü",
+      "manager_title_en": "Management Reporting and Decision Governance Manager",
+      "reports_to": "CEO Ofisi Başkanı",
+      "positions": [
+        { "title_tr": "Yönetim Raporlama Yöneticisi", "title_en": "Executive Reporting Lead", "level": "Yönetici", "responsibility": "CEO ve üst yönetim raporlama sistemini yönetir." },
+        { "title_tr": "Yönetim Raporlama Uzmanı", "title_en": "Executive Reporting Specialist", "level": "Uzman", "responsibility": "Yönetim raporu, toplantı paketi ve karar destek çıktılarını hazırlar." },
+        { "title_tr": "Karar ve Aksiyon Takip Uzmanı", "title_en": "Decision and Action Tracking Specialist", "level": "Uzman", "responsibility": "Üst yönetim kararlarının sahip, termin ve sonuç takibini yürütür." },
+        { "title_tr": "Yönetim Zekâsı Uzmanı", "title_en": "Management Intelligence Specialist", "level": "Uzman", "responsibility": "Yönetim dashboardlarını ve erken uyarı göstergelerini geliştirir." },
+        { "title_tr": "Raporlama Analisti", "title_en": "Reporting Analyst", "level": "Analist", "responsibility": "Yönetim verilerini birleştirir, doğrular ve analiz eder." }
+      ]
+    }
+  ],
+  "board_committees": [
+    { "name_tr": "Denetim Komitesi", "name_en": "Audit Committee", "recommended_chair": "Bağımsız Yönetim Kurulu Üyesi", "oversight_scope": ["İç denetim", "Finansal raporlama", "İç kontrol güvencesi"] },
+    { "name_tr": "Risk ve Uyum Komitesi", "name_en": "Risk and Compliance Committee", "recommended_chair": "Yönetim Kurulu Üyesi", "oversight_scope": ["Kurumsal risk", "Uyum", "Etik", "Risk iştahı"] },
+    { "name_tr": "Aday Gösterme ve Ücret Komitesi", "name_en": "Nomination and Remuneration Committee", "recommended_chair": "Yönetim Kurulu Üyesi", "oversight_scope": ["Üst yönetim atamaları", "Halefiyet", "Ücret politikaları"] },
+    { "name_tr": "Strateji ve Yatırım Komitesi", "name_en": "Strategy and Investment Committee", "recommended_chair": "Yönetim Kurulu Başkanı veya görevlendirilen üye", "oversight_scope": ["Stratejik yatırımlar", "Büyüme", "Kaynak tahsisi"] }
+  ],
+  "staffing_models": [
+    { "model": "Yalın yapı", "recommended_headcount_min": 6, "recommended_headcount_max": 9 },
+    { "model": "Orta ölçekli şirket", "recommended_headcount_min": 12, "recommended_headcount_max": 18 },
+    { "model": "Holding / çok şirketli yapı", "recommended_headcount_min": 20, "recommended_headcount_max": 30 },
+    { "model": "Büyük ve dönüşüm yoğun holding", "recommended_headcount_min": 31, "recommended_headcount_max": null }
+  ],
+  "rasyo_holding_recommended_staffing": {
+    "total_headcount_min": 21,
+    "total_headcount_max": 26,
+    "composition": [
+      { "role_group": "CEO Ofisi Başkanı", "count_min": 1, "count_max": 1 },
+      { "role_group": "Direktör", "count_min": 2, "count_max": 2 },
+      { "role_group": "Müdür", "count_min": 3, "count_max": 3 },
+      { "role_group": "Yönetici / Ekip Lideri", "count_min": 5, "count_max": 5 },
+      { "role_group": "Uzman / Kıdemli Uzman", "count_min": 7, "count_max": 10 },
+      { "role_group": "Analist", "count_min": 3, "count_max": 5 }
+    ]
+  },
+  "responsibility_boundaries": {
+    "in_scope": [
+      "Şirket stratejisini ve kurumsal hedef sistemini koordine etmek",
+      "Yönetim karar mekanizmalarını ve yetki modelini tasarlamak",
+      "Şirket ve iştirak performansını bütünsel olarak izlemek",
+      "Stratejik proje portföyünü yönetmek",
+      "CEO ve Yönetim Kurulu için karar desteği üretmek"
+    ],
+    "out_of_scope": [
+      "Departmanların günlük operasyonlarını yürütmek",
+      "Muhasebe veya finansal kayıt üretmek",
+      "İç denetim gerçekleştirmek",
+      "Hukuki görüş veya mevzuat uyum kararı vermek",
+      "Departman yöneticilerinin icra sorumluluğunu devralmak",
+      "Yönetim Kurulu sekretaryası, takvim, toplantı ve protokol operasyonlarını yürütmek"
+    ],
+    "interfaces": [
+      { "department": "23. Sekreterya, Yönetici Destek ve Protokol", "division_of_responsibility": "Toplantı organizasyonu, takvim, tutanak, protokol ve sekretarya operasyonlarını yürütür." },
+      { "department": "7. İç Denetim", "division_of_responsibility": "Yönetişim, risk ve iç kontrol sistemlerine bağımsız güvence sağlar." },
+      { "department": "6. Uyum, Kurumsal Risk ve İç Kontrol", "division_of_responsibility": "Uyum ve risk kontrol sistemini tasarlar ve izler." },
+      { "department": "5. Hukuk İşleri", "division_of_responsibility": "Yönetim kararlarının hukuki risk ve uygulanabilirlik değerlendirmesini yapar." }
+    ]
+  }
+}

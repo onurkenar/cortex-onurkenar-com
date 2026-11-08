@@ -1,0 +1,2209 @@
+{
+ "format": "wp-onke-skill-registry",
+ "version": 1,
+ "generated": "2026-10-30",
+ "project": null,
+ "categories": [
+  {
+   "name": "Yazılım",
+   "skills": 7
+  },
+  {
+   "name": "Kalite & Güvenlik",
+   "skills": 4
+  },
+  {
+   "name": "Altyapı & Operasyon",
+   "skills": 3
+  },
+  {
+   "name": "Pazarlama",
+   "skills": 3
+  },
+  {
+   "name": "Satış",
+   "skills": 2
+  },
+  {
+   "name": "Dokümantasyon",
+   "skills": 2
+  },
+  {
+   "name": "Muhasebe",
+   "skills": 1
+  }
+ ],
+ "suggested_categories": [
+  {
+   "department_id": "ust-yonetim",
+   "unit_id": "strateji-ve-kurumsal-performans-direktorlugu",
+   "category": "Strateji ve Kurumsal Performans Direktörlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ust-yonetim",
+   "unit_id": "kurumsal-yonetisim-mudurlugu",
+   "category": "Kurumsal Yönetişim Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ust-yonetim",
+   "unit_id": "stratejik-projeler-ve-donusum-ofisi",
+   "category": "Stratejik Projeler ve Dönüşüm Ofisi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ust-yonetim",
+   "unit_id": "istirakler-ve-sirket-performansi-mudurlugu",
+   "category": "İştirakler ve Şirket Performansı Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ust-yonetim",
+   "unit_id": "karar-yonetimi-ve-yonetim-raporlama-mudurlugu",
+   "category": "Karar Yönetimi ve Yönetim Raporlama Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "general_accounting_closing",
+   "category": "Genel Muhasebe ve Dönem Kapanışı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "accounts_receivable_payable",
+   "category": "Cari Hesaplar ve Borç-Alacak Muhasebesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "invoicing_ebilling",
+   "category": "Faturalama ve E-Belge Operasyonları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "cost_accounting",
+   "category": "Maliyet Muhasebesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "fixed_assets",
+   "category": "Sabit Kıymet ve Amortisman Muhasebesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "payroll_accounting",
+   "category": "Bordro Muhasebesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "tax_compliance",
+   "category": "Vergi, Beyannameler ve E-Defter Uyum yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "muhasebe",
+   "unit_id": "reporting_consolidation_audit",
+   "category": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.01",
+   "category": "Finansal Strateji ve Planlama Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.02",
+   "category": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.03",
+   "category": "Hazine ve Nakit Yönetimi Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.04",
+   "category": "Banka İlişkileri ve Finansman Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.05",
+   "category": "Tahsilat ve Çalışma Sermayesi Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.06",
+   "category": "Finansal Risk Yönetimi Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.07",
+   "category": "Yatırım ve Sermaye Yönetimi Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "finans",
+   "unit_id": "03.08",
+   "category": "Yatırımcı İlişkileri Müdürlüğü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "ik-planlama-ve-organizasyonel-gelisim",
+   "category": "İK Planlama ve Organizasyonel Gelişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "ise-alim-ve-yetenek-kazanimi",
+   "category": "İşe Alım ve Yetenek Kazanımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "egitim-ve-gelisim",
+   "category": "Eğitim ve Gelişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "performans-ve-kariyer-yonetimi",
+   "category": "Performans ve Kariyer Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "yetenek-ve-yedekleme-yonetimi",
+   "category": "Yetenek ve Yedekleme Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "ucret-ve-yan-haklar",
+   "category": "Ücret ve Yan Haklar yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "bordro-ve-ozluk-isleri",
+   "category": "Bordro ve Özlük İşleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "calisan-deneyimi-ve-baglilik",
+   "category": "Çalışan Deneyimi ve Bağlılık yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "isveren-markasi-ve-ic-iletisim",
+   "category": "İşveren Markası ve İç İletişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "calisan-iliskileri",
+   "category": "Çalışan İlişkileri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "insan-kaynaklari",
+   "unit_id": "ik-analitigi-ve-dijitallesme",
+   "category": "İK Analitiği ve Dijitalleşme yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.01",
+   "category": "Şirketler ve Ticaret Hukuku yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.02",
+   "category": "Sözleşmeler ve Ticari Hukuk yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.03",
+   "category": "Dava, İcra ve Uyuşmazlık Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.04",
+   "category": "İş ve Sosyal Güvenlik Hukuku yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.05",
+   "category": "Mevzuat ve Düzenleyici Hukuk yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.06",
+   "category": "KVKK ve Veri Koruma Hukuku yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.07",
+   "category": "Fikrî Mülkiyet ve Teknoloji Hukuku yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "hukuk",
+   "unit_id": "05.08",
+   "category": "Hukuk Operasyonları ve Dış Danışman Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.01",
+   "category": "Mevzuat Uyum Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.02",
+   "category": "Kurumsal Risk Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.03",
+   "category": "İç Kontrol ve Görevler Ayrılığı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.04",
+   "category": "Etik, İhbar ve Suistimal Önleme yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.05",
+   "category": "Üçüncü Taraf Uyum ve Risk Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.06",
+   "category": "KVKK ve Veri Koruma Uyumu yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.07",
+   "category": "İş Sürekliliği ve Kriz Riskleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uyum-risk",
+   "unit_id": "06.08",
+   "category": "Uyum Operasyonları, İzleme ve Raporlama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.01",
+   "category": "Denetim Planlama ve Metodoloji yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.02",
+   "category": "Finansal Denetim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.03",
+   "category": "Operasyonel Denetim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.04",
+   "category": "BT, Siber Güvenlik ve Veri Denetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.05",
+   "category": "Uyum ve Düzenleyici Denetim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.06",
+   "category": "Suistimal İncelemeleri ve Özel Denetimler yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.07",
+   "category": "Grup Şirketleri ve İştirak Denetimleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "ic-denetim",
+   "unit_id": "07.08",
+   "category": "Kalite Güvence, Bulgular ve Raporlama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.01",
+   "category": "Satış Stratejisi ve Gelir Operasyonları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.02",
+   "category": "Kurumsal Satış yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.03",
+   "category": "KOBİ ve Orta Ölçekli Müşteri Satışları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.04",
+   "category": "Kanal, İş Ortaklıkları ve Ekosistem Satışları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.05",
+   "category": "Teklif, İhale ve Ticari Sözleşme Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.06",
+   "category": "Satış Etkinliği ve Yetkinlik Gelişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.07",
+   "category": "Fiyatlandırma ve Ticari Yönetişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "satis",
+   "unit_id": "08.08",
+   "category": "Satış Performansı ve Gelir Planlama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "marketing_strategy_brand",
+   "category": "Pazarlama Stratejisi ve Marka Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "digital_demand_generation",
+   "category": "Dijital Pazarlama ve Talep Yaratma yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "content_marketing",
+   "category": "İçerik Pazarlaması yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "social_media_marketing",
+   "category": "Sosyal Medya Pazarlaması yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "product_solution_marketing",
+   "category": "Ürün ve Çözüm Pazarlaması yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "growth_conversion",
+   "category": "Growth Marketing ve Dönüşüm yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "marketing_operations_crm_martech",
+   "category": "Pazarlama Operasyonları, CRM ve MarTech yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "market_research_analytics",
+   "category": "Pazar Araştırmaları ve Pazarlama Analitiği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "pazarlama",
+   "unit_id": "campaign_event_marketing",
+   "category": "Kampanya ve Etkinlik Pazarlaması yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.01",
+   "category": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.02",
+   "category": "Medya İlişkileri ve Basın Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.03",
+   "category": "İtibar, Gündem ve Kriz İletişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.04",
+   "category": "Yönetici ve Liderlik İletişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.05",
+   "category": "İç İletişim ve Çalışan Katılımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.06",
+   "category": "Paydaş, Kamu ve Sektör İletişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.07",
+   "category": "Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-iletisim",
+   "unit_id": "10.08",
+   "category": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.01",
+   "category": "Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.02",
+   "category": "Müşteri Onboarding ve Uygulama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.03",
+   "category": "Müşteri Başarı Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.04",
+   "category": "Müşteri Destek ve Servis Masası yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.05",
+   "category": "Servis ve Teknik Destek Koordinasyonu yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.06",
+   "category": "Şikâyet, Talep ve Müşterinin Sesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.07",
+   "category": "Müşteri Adaptasyonu, Eğitim ve Topluluk yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "musteri-deneyimi",
+   "unit_id": "11.08",
+   "category": "Yenileme, Müşteri Tutundurma ve Değer Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.01",
+   "category": "Operasyon Stratejisi, Planlama ve Yönetişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.02",
+   "category": "Hizmet Teslimatı ve Operasyon Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.03",
+   "category": "Kapasite, Kaynak ve Vardiya Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.04",
+   "category": "Saha Operasyonları ve Lokasyon Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.06",
+   "category": "Süreç Yönetimi ve Operasyonel Mükemmellik yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.07",
+   "category": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "operasyon",
+   "unit_id": "12.08",
+   "category": "Operasyon Analitiği, Maliyet ve Verimlilik yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.01",
+   "category": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.02",
+   "category": "Talep, Üretim ve Kapasite Planlama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.03",
+   "category": "Üretim Operasyonları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.04",
+   "category": "Bakım, Tesis ve Teknik Hizmetler yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.05",
+   "category": "Satın Alma ve Tedarikçi Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.06",
+   "category": "Malzeme, Stok ve Depo Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.07",
+   "category": "Lojistik, Dağıtım ve Dış Ticaret yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "uretim-tedarik",
+   "unit_id": "13.08",
+   "category": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.01",
+   "category": "Kalite Yönetim Sistemi ve Strateji yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.02",
+   "category": "Kalite Güvence ve Standartlar yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.03",
+   "category": "Operasyonel Kalite Kontrol yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.04",
+   "category": "Tedarikçi Kalitesi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.05",
+   "category": "Müşteri Kalitesi ve Geri Bildirim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.06",
+   "category": "Uygunsuzluk, CAPA ve Sürekli İyileştirme yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.07",
+   "category": "Kalite Denetimleri ve Uygunluk Değerlendirme yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kalite",
+   "unit_id": "14.08",
+   "category": "Laboratuvar, Metroloji ve Kalite Analitiği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.01",
+   "category": "BT Stratejisi, Yönetişim ve Kurumsal Mimari yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.02",
+   "category": "Altyapı, Bulut ve Platform Operasyonları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.03",
+   "category": "Ağ, İletişim ve Dijital İşyeri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.04",
+   "category": "Kurumsal Uygulamalar ve İş Sistemleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.05",
+   "category": "Yazılım Mühendisliği, Entegrasyon ve DevOps yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "bilgi-teknolojileri",
+   "unit_id": "15.08",
+   "category": "BT Hizmet Yönetimi ve Kullanıcı Destek yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.01",
+   "category": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.02",
+   "category": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.03",
+   "category": "Güvenlik Mimarisi ve Mühendisliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.04",
+   "category": "Güvenlik Operasyonları ve Olay Müdahale yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.05",
+   "category": "Kimlik ve Erişim Güvenliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.06",
+   "category": "Uygulama Güvenliği ve DevSecOps yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.07",
+   "category": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "siber-guvenlik",
+   "unit_id": "16.08",
+   "category": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.01",
+   "category": "Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.02",
+   "category": "Veri Yönetişimi, Kalitesi ve Ana Veri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.03",
+   "category": "Veri Mühendisliği ve Platformları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.04",
+   "category": "İş Zekâsı, Raporlama ve Karar Destek yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.05",
+   "category": "İleri Analitik ve Veri Bilimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.06",
+   "category": "Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.07",
+   "category": "MLOps, Model Platformları ve Yapay Zekâ Güvenilirliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "veri-analitik",
+   "unit_id": "17.08",
+   "category": "Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.01",
+   "category": "Ürün Stratejisi, Portföy ve Yönetişim yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.02",
+   "category": "Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.03",
+   "category": "Ürün Yönetimi ve Ürün Alanları yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.04",
+   "category": "Ürün Operasyonları ve Yaşam Döngüsü yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.05",
+   "category": "Kullanıcı Deneyimi ve Ürün Tasarımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.06",
+   "category": "Ar-Ge, Teknoloji Araştırmaları ve İnovasyon yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.07",
+   "category": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "urun-arge",
+   "unit_id": "18.08",
+   "category": "Ürün Analitiği, Ticarileştirme ve Değer Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.01",
+   "category": "Yaratıcı Strateji ve Tasarım Yönetişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.02",
+   "category": "Marka Kimliği ve Kurumsal Tasarım yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.03",
+   "category": "Grafik Tasarım ve Kampanya Kreatifi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.04",
+   "category": "Dijital Deneyim ve Arayüz Tasarımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.05",
+   "category": "Video, Fotoğraf ve İçerik Prodüksiyonu yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.06",
+   "category": "Hareketli Tasarım, 3D ve Yaratıcı Teknoloji yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.07",
+   "category": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "tasarim",
+   "unit_id": "19.08",
+   "category": "Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.01",
+   "category": "İdari İşler Stratejisi ve Hizmet Yönetişimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.02",
+   "category": "Tesis, Bina ve Teknik İşletme yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.03",
+   "category": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.04",
+   "category": "Filo, Ulaşım ve Araç Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.05",
+   "category": "Seyahat, Konaklama ve Organizasyon Hizmetleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.06",
+   "category": "Resepsiyon ve Acil Durum Destek yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.07",
+   "category": "Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "idari-isler",
+   "unit_id": "20.08",
+   "category": "Temizlik, İkram ve İdari Tedarikçi Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.01",
+   "category": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.02",
+   "category": "İş Sağlığı ve Güvenliği Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.03",
+   "category": "İş Sağlığı, Hijyen ve Ergonomi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.04",
+   "category": "Proses Güvenliği, Yüklenici ve Olay Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.05",
+   "category": "Çevre Yönetimi ve Döngüsel Ekonomi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.06",
+   "category": "Enerji, İklim ve Karbon Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.07",
+   "category": "Kurumsal Sürdürülebilirlik ve ESG yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "isg-cevre",
+   "unit_id": "21.08",
+   "category": "Acil Durum, Yangın Güvenliği ve EHS Güvence yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.01",
+   "category": "Güvenlik Stratejisi, Yönetişim ve Risk yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.02",
+   "category": "Fiziksel Güvenlik ve Tesis Koruma yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.03",
+   "category": "Güvenlik Operasyonları ve Kontrol Merkezi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.04",
+   "category": "Güvenlik İstihbaratı ve Soruşturmalar yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.05",
+   "category": "Yönetici, Seyahat ve Etkinlik Güvenliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.06",
+   "category": "Güvenlik Teknolojileri ve Sistemleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "kurumsal-guvenlik",
+   "unit_id": "22.07",
+   "category": "Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.01",
+   "category": "Yönetim Kurulu ve Komite Sekreteryası yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.02",
+   "category": "İcra Kurulu ve Üst Yönetim Sekreteryası yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.03",
+   "category": "Yönetici Destek Hizmetleri yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.04",
+   "category": "Takvim, Toplantı ve Gündem Yönetimi yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.05",
+   "category": "Kurumsal Protokol ve Temsil yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.06",
+   "category": "Yönetici Seyahat Koordinasyonu yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.07",
+   "category": "Kurumsal Yazışma, Belge ve İletişim Koordinasyonu yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  },
+  {
+   "department_id": "sekreterya",
+   "unit_id": "23.08",
+   "category": "Hizmet Tasarımı, Dijitalleşme ve Kalite yetkinlikleri",
+   "status": "öneri",
+   "source": "birim adı (kaynak: organizasyon JSON'u)"
+  }
+ ],
+ "skills": [
+  {
+   "skill_id": "SKL-API-STANDARTLARI",
+   "skill_code": "api-standartlari",
+   "name_tr": "API Standartları",
+   "description": "API uç noktası yazarken veya incelerken uygulanacak adlandırma, sürümleme, hata biçimi, sayfalama ve doğrulama kuralları.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0060"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "5dae42c3",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Kaynak adlarını çoğul ve küçük harfle yaz; sürümü adrese ekle (/api/v1/…).\n- Hataları tek tip yapıda döndür (kod, mesaj, alan bazlı ayrıntı); iç hata ayrıntısını istemciye sızdırma.\n- Liste uç noktalarında sayfalama, sıralama ve filtre parametrelerini tutarlı kullan.\n- Her girdiyi sunucuda şemayla doğrula; kimlik doğrulama ve sahiplik kontrolünü atlama.\n- Değişiklik geriye dönük uyumsuzsa yeni sürüm aç ve eski sürümün kapanış tarihini belgele.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-GUVENLI-KOD",
+   "skill_code": "guvenli-kod",
+   "name_tr": "Güvenli Kod Kontrol Listesi",
+   "description": "Endpoint, form, dosya yükleme, giriş veya ödeme kodu yazarken/incelerken uygulanacak temel güvenlik kontrolleri.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0060",
+    "AGT-15-0065",
+    "AGT-15-0072",
+    "AGT-16-0074"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "3a93cd4d",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- İstemciden gelen her kimlikte sahiplik kontrolü yap (IDOR); tutar, rol ve durum sunucuda belirlenir.\n- Sorguları parametreli yaz; kullanıcı içeriğini HTML'e kaçışsız basma (XSS).\n- Durum değiştiren isteklerde CSRF koruması ve uygun çerez ayarlarını (HttpOnly, Secure, SameSite) kullan.\n- Dosya yüklemede tür, boyut ve içerik doğrulaması yap; dosyaları çalıştırılamaz bir konumda sakla.\n- Gizli anahtarları koda, loga veya tarayıcıya koyma; hata mesajlarında iç ayrıntı gösterme.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-MIGRATION-GUVENLIGI",
+   "skill_code": "migration-guvenligi",
+   "name_tr": "Güvenli Migration",
+   "description": "Veritabanı şeması değiştirilirken veri kaybını ve uzun kilitlenmeleri önleyen adımlar.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0029"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "d120fb65",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Her migration'ı geri alınabilir yaz ve geri alma adımını test et.\n- Veri silen veya dönüştüren adımlardan önce yedek al ve onay iste.\n- Büyük tablolarda kilitlenmeyi önlemek için önce ekle, sonra geçiş yap, en son kaldır yaklaşımını kullan.\n- Migration'ı önce test ortamında gerçekçi veri hacmiyle çalıştır.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-ODEME-AKISI",
+   "skill_code": "odeme-akisi",
+   "name_tr": "Ödeme Akışı Kontrolleri",
+   "description": "Ödeme entegrasyonu yazarken tutar bütünlüğü, bildirim (webhook) doğrulama, idempotency ve mutabakat kuralları.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0065"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "6dfe1c2f",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Tutarı sunucuda hesapla; istemciden gelen fiyata güvenme.\n- Ödeme bildirimlerinin imzasını doğrula; aynı bildirimi iki kez işleme (idempotency anahtarı).\n- Siparişi yalnız doğrulanmış bildirimle “ödendi” yap; ödeme sayfasından dönüşe tek başına güvenme.\n- Kart verisini sistemde tutma; iade ve mutabakat adımlarını kayıt altına al.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-TASARIM-TOKENLARI",
+   "skill_code": "tasarim-tokenlari",
+   "name_tr": "Kurumsal Kimlik Token'ları",
+   "description": "Kurumsal Kimlik kararlarındaki renk, font, köşe, boşluk ve gölge değerlerinin kodda tasarım token'ı olarak kullanılması.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0062"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "d0883295",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Renk, font, köşe, boşluk ve gölge değerlerini yalnız token'lardan (CSS değişkenleri veya tema dosyası) kullan.\n- Bileşen içinde sabit renk, piksel veya font adı yazma; eksik token varsa önce token ekle.\n- Koyu tema ve durum renklerini (başarı, uyarı, hata) aynı token sistemiyle tanımla.\n- Token adlarını anlamına göre ver (color-primary), görünüşüne göre değil (blue-500).",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-ERISILEBILIRLIK",
+   "skill_code": "erisilebilirlik",
+   "name_tr": "Erişilebilirlik (WCAG 2.2 AA) Kontrolü",
+   "description": "Arayüz kodunun klavye, ekran okuyucu ve renk körlüğü dahil herkes tarafından kullanılabilmesi için WCAG 2.2 AA kontrolleri.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0062",
+    "AGT-15-0072",
+    "AGT-19-0101"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "6af16f48",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Tüm işlemler klavyeyle yapılabilmeli; odak görünür ve mantıklı sırada ilerlemeli.\n- Metin kontrastı en az 4,5:1 (büyük metinde 3:1) olmalı.\n- Görsellerde anlamlı alternatif metin, form alanlarında görünür etiket ve açıklayıcı hata mesajı olmalı.\n- Doğru HTML öğelerini kullan (button, nav, main…); ARIA'yı yalnız gerektiğinde ekle.\n- Hareketli içerikte azaltılmış hareket tercihine (prefers-reduced-motion) uy.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-FORM-STANDARDI",
+   "skill_code": "form-standardi",
+   "name_tr": "Form Standardı",
+   "description": "İletişim, teklif, kayıt ve başvuru formlarının etiket, doğrulama, durum, spam ve KVKK kuralları.",
+   "category": "Yazılım",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-09-0098",
+    "AGT-15-0062"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "7f3c5c6b",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Yalnız gerçekten gereken alanları iste; zorunlu ve isteğe bağlı alanları açıkça ayır.\n- Doğrulamayı hem tarayıcıda hem sunucuda yap; hata mesajını alanın yanında, anlaşılır dille göster.\n- Gönderiliyor, başarılı ve hata durumlarını tasarla; çift gönderimi engelle.\n- Spam koruması (bot doğrulaması, hız sınırı) ekle.\n- Kişisel veri alan formlarda aydınlatma metni bağlantısını göster; isteğe bağlı onay kutularını önceden işaretleme.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-KOD-INCELEME",
+   "skill_code": "kod-inceleme",
+   "name_tr": "Kod İnceleme Kontrol Listesi",
+   "description": "Bir değişikliği doğruluk, okunabilirlik, tekrar, test ve proje kurallarına uygunluk açısından incelemek için kontrol listesi ve rapor biçimi.",
+   "category": "Kalite & Güvenlik",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0061",
+    "AGT-15-0072"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "2fd6b2b3",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Önce değişikliğin amacını anla; sonra doğruluk, sınır durumları ve hata yollarını kontrol et.\n- Tekrarlanan kodu, gereksiz karmaşıklığı ve anlaşılmaz isimleri işaretle.\n- Değişikliği kapsayan test olup olmadığını kontrol et.\n- Bulguları önem sırasıyla (kritik, önemli, öneri), dosya ve satır bilgisiyle ve somut düzeltme önerisiyle raporla.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-HATA-AYIKLAMA",
+   "skill_code": "hata-ayiklama",
+   "name_tr": "Sistematik Hata Ayıklama",
+   "description": "Bir hatayı tahmine dayanmadan yeniden üretip kök nedenini bulmak ve düzeltmeyi testle kanıtlamak için adımlar.",
+   "category": "Kalite & Güvenlik",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0073"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "60279a14",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Hatayı yeniden üret ve beklenen ile gerçekleşen davranışı yaz.\n- Olasılıkları ölçerek daralt (log, adım adım deneme); tahminle kod değiştirme.\n- Kök nedeni düzelt, belirtiyi değil.\n- Düzeltmeyi hatayı yakalayan bir testle teslim et ve benzer yerleri kontrol et.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-TEST-STRATEJISI",
+   "skill_code": "test-stratejisi",
+   "name_tr": "Test Yazım Standardı",
+   "description": "Birim, entegrasyon ve uçtan uca testlerin nasıl yazılacağı: davranış odaklılık, adlandırma, sınır durumları ve kararlılık.",
+   "category": "Kalite & Güvenlik",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0061",
+    "AGT-15-0073",
+    "AGT-15-0074"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "87d58551",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Uygulamanın iç yapısını değil davranışını test et; test adı beklenen davranışı anlatsın.\n- Hazırla – çalıştır – doğrula düzenini kullan; her test tek bir şeyi doğrulasın.\n- Sınır ve hata durumlarını (boş, çok büyük, yetkisiz, zaman aşımı) kapsa.\n- Testler deterministik olsun: rastgelelik, saat ve dış servisler kontrol altında tutulsun.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-KVKK-KONTROL",
+   "skill_code": "kvkk-kontrol",
+   "name_tr": "KVKK Uyum Kontrolü",
+   "description": "Kişisel veri toplayan veya işleyen her özellikte aydınlatma, rıza, veri minimizasyonu, saklama süresi ve log hijyeni kontrolleri.",
+   "category": "Kalite & Güvenlik",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-06-0080",
+    "AGT-08-0006",
+    "AGT-08-0026",
+    "AGT-08-0042",
+    "AGT-09-0117",
+    "AGT-11-0045",
+    "AGT-11-0048",
+    "AGT-17-0045",
+    "AGT-17-0061"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "66434509",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Yalnız amaç için gereken kişisel veriyi topla; her veri için amaç ve saklama süresi belirle.\n- Aydınlatma ile açık rızayı birbirine karıştırma; isteğe bağlı onaylar önceden işaretli olmasın.\n- Verilen onayları tarih, metin sürümü ve kaynakla kayıt altına al; geri alınabilir olsun.\n- Kişisel veriyi loglara, analitik araçlarına veya üçüncü taraflara gereksiz yere gönderme; yurt dışı aktarımı değerlendir.\n- Bu kontrol hukuki görüş değildir; kritik konularda avukat veya veri koruma uzmanı onayı iste.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-YAYIN-KONTROL",
+   "skill_code": "yayin-kontrol",
+   "name_tr": "Canlıya Çıkış Kontrol Listesi",
+   "description": "Bir sürümü canlıya almadan önce ve hemen sonra yapılacak kontroller: testler, yedek, geri dönüş, yönlendirmeler ve izleme.",
+   "category": "Altyapı & Operasyon",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0068"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "9db72b10",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Testler, derleme ve güvenlik taraması geçmeden yayınlama.\n- Veritabanı yedeği al ve geri dönüş adımlarının çalıştığını doğrula.\n- Test ortamından kalan noindex, test anahtarları ve geçici yönlendirmeleri kontrol et.\n- Yayından sonra kritik akışları dene, hata ve performans metriklerini izle; sorun varsa geri dön.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-PERFORMANS-OLCUM",
+   "skill_code": "performans-olcum",
+   "name_tr": "Performans Ölçüm Rutini",
+   "description": "Core Web Vitals (LCP, INP, CLS) ve sunucu yanıt sürelerini ölçüp önce/sonra değerleriyle raporlama adımları.",
+   "category": "Altyapı & Operasyon",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0062",
+    "AGT-15-0069"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "5616910d",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Değişiklikten önce aynı koşullarda (cihaz, ağ, sayfa) ölçüm al.\n- Darboğazı veriyle bul: büyük görseller, engelleyici kaynaklar, yavaş sorgular, gereksiz JavaScript.\n- Her iyileştirmeyi tek tek uygula ve yeniden ölç.\n- Sonucu önce/sonra değerleriyle raporla; okunabilirliği bozan erken optimizasyondan kaçın.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-LOG-STANDARDI",
+   "skill_code": "log-standardi",
+   "name_tr": "Loglama Standardı",
+   "description": "Yapılandırılmış log biçimi, log seviyeleri, istek izleme kimliği ve kişisel veri/gizli bilgi yasağı.",
+   "category": "Altyapı & Operasyon",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0060",
+    "AGT-15-0069"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "6f93fcf6",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Logları yapılandırılmış (anahtar-değer/JSON) yaz; olay adlarını tutarlı tut.\n- Seviyeleri doğru kullan: hata, uyarı, bilgi, ayrıntı.\n- Her isteğe bir izleme kimliği ver ve servisler arasında taşı.\n- Parola, anahtar, kart verisi ve gereksiz kişisel veriyi asla loglama.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-SEO-SAYFA",
+   "skill_code": "seo-sayfa",
+   "name_tr": "Sayfa SEO Kontrolü",
+   "description": "Bir sayfayı yayınlamadan önce başlık, açıklama, başlık hiyerarşisi, kanonik adres, yapılandırılmış veri, iç bağlantı ve görsel metin kontrolleri.",
+   "category": "Pazarlama",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-09-0022",
+    "AGT-09-0025",
+    "AGT-09-0043"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "1d13ae2b",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Her sayfada benzersiz başlık (title) ve açıklama (meta description) olsun.\n- Tek bir H1 ve mantıklı başlık hiyerarşisi kullan.\n- Kanonik adresi doğru ver; sayfa site haritasında olsun ve dizine eklenmeye açık olsun (gerekmiyorsa noindex).\n- Uygun yapılandırılmış veriyi (schema.org) ekle ve doğrula.\n- İlgili sayfalara anlamlı metinle iç bağlantı ver; görsellere alternatif metin yaz.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-MARKA-SESI",
+   "skill_code": "marka-sesi",
+   "name_tr": "Marka Ses Tonu",
+   "description": "Kurumsal Kimlik'te seçilen ses tonu ve hitap şekline (siz/sen) uygun metin yazma kuralları.",
+   "category": "Pazarlama",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-08-0009",
+    "AGT-08-0091",
+    "AGT-09-0043",
+    "AGT-09-0056",
+    "AGT-09-0117",
+    "AGT-10-0033",
+    "AGT-11-0045",
+    "AGT-11-0048"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "e91a109e",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Kurumsal Kimlik'teki ses tonu ve hitap şeklini (siz/sen) tüm metinlerde tutarlı kullan.\n- Kısa cümleler ve okurun anlayacağı kelimeler seç; jargon gerekiyorsa aç.\n- Doğrulanmamış iddia, abartılı vaat veya uydurma müşteri yorumu kullanma.\n- Her metnin tek bir amacı ve net bir sonraki adımı (CTA) olsun.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-OLAY-TAKIBI",
+   "skill_code": "olay-takibi",
+   "name_tr": "Olay (Event) Takibi Sözlüğü",
+   "description": "Analitik olaylarının adlandırılması, parametreleri, dönüşüm hedefleri ve çerez onayına bağlı çalışması.",
+   "category": "Pazarlama",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-09-0098",
+    "AGT-09-0126",
+    "AGT-17-0045",
+    "AGT-17-0061"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "559e63b8",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Olay adlarını tek bir sözlükte, tutarlı biçimde (ör. küçük harf ve alt çizgi) tanımla.\n- Her olayın hangi parametreleri taşıdığını belgele; kişisel veri gönderme.\n- Dönüşüm hedeflerini iş hedeflerine bağla (talep, kayıt, satış).\n- Çerez/izleme onayı verilmeden ölçüm etiketlerini çalıştırma.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-LEAD-FORMU",
+   "skill_code": "lead-formu",
+   "name_tr": "Talep Formu ve Nitelendirme",
+   "description": "Talep formlarındaki nitelendirme soruları, puanlama ölçütleri, atama kuralları ve CRM'e aktarım standardı.",
+   "category": "Satış",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-08-0006",
+    "AGT-08-0042"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "aec3f90d",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Nitelendirme sorularını az ve anlamlı tut (ihtiyaç, bütçe, zamanlama, karar verici).\n- Puanlama ölçütlerini açık ve belgeli yaz; kişinin yaş, cinsiyet gibi özelliklerine göre puanlama yapma.\n- Atama ve hatırlatma kurallarını test edilebilir biçimde tanımla.\n- Formu CRM'e mükerrer kayıt oluşturmadan aktar; KVKK aydınlatmasını ekle.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-TEKLIF-SABLONU",
+   "skill_code": "teklif-sablonu",
+   "name_tr": "Teklif Şablonu Standardı",
+   "description": "Teklif ve fiyat sayfalarının bölümleri, fiyatların tek kaynaktan alınması, geçerlilik süresi ve yasal bilgilendirme kuralları.",
+   "category": "Satış",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-08-0072",
+    "AGT-08-0091"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "3a2f8b32",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Fiyatları ve paket içeriklerini yalnız yönetim panelinden al; metne sabit fiyat yazma.\n- Kapsam, fiyat, geçerlilik süresi ve koşulları açıkça ayır.\n- Mesafeli satış ve ön bilgilendirme gerekliliklerini atlama.\n- Abartılı veya doğrulanamayan vaatlerden kaçın.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-DOKUMANTASYON",
+   "skill_code": "dokumantasyon",
+   "name_tr": "Dokümantasyon Yazımı",
+   "description": "README, kurulum, kullanım kılavuzu, runbook ve sürüm notlarını okura göre, koddan doğrulayarak yazma kuralları.",
+   "category": "Dokümantasyon",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0075"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "3bfb37f2",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Önce okuru belirle (geliştirici, editör, yönetici) ve belge türünü seç (öğretici, nasıl yapılır, başvuru, açıklama).\n- Her teknik iddiayı koddan doğrula; tahmin yazma.\n- Adımları numaralı ve denenebilir yaz; komutları ve beklenen sonucu göster.\n- Güncelliğini yitirmiş dokümanları işaretle veya güncelle.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-ADR-YAZIMI",
+   "skill_code": "adr-yazimi",
+   "name_tr": "Karar Kaydı (ADR) Yazımı",
+   "description": "Önemli mimari ve teknik kararları bağlam, karar, sonuçlar ve değerlendirilen alternatiflerle kayıt altına alma biçimi.",
+   "category": "Dokümantasyon",
+   "scope": {
+    "type": "general",
+    "departments": []
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [],
+   "assigned_agents": [
+    "AGT-15-0075"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "bf90766a",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Her kararı numaralı ayrı bir kayıt olarak yaz: başlık, tarih, durum.\n- Bağlamı, değerlendirilen alternatifleri ve seçim gerekçesini açıkla.\n- Kararın olumlu ve olumsuz sonuçlarını belirt.\n- Karar değişirse eski kaydı silme; yeni kayıtla geçersiz kıl.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  },
+  {
+   "skill_id": "SKL-HESAP-MUTABAKATI",
+   "skill_code": "hesap-mutabakati",
+   "name_tr": "Hesap Mutabakatı",
+   "description": "Bilanço hesaplarının defter bakiyesini bağımsız bir kaynakla (banka ekstresi, kasa sayımı, POS raporu, yardımcı defter) karşılaştırır; farkları kalem kalem sınıflandırır, düzeltme kaydı önerir ve kanıta dayalı mutabakat raporu hazırlar.",
+   "category": "Muhasebe",
+   "scope": {
+    "type": "department",
+    "departments": [
+     "muhasebe"
+    ]
+   },
+   "custom": false,
+   "latest": "1.0.0",
+   "active_version": null,
+   "status": "draft",
+   "unpublished_changes": false,
+   "positions": [
+    {
+     "dept": "muhasebe",
+     "pos": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi/hesap-mutabakat-uzmani"
+    }
+   ],
+   "assigned_agents": [
+    "AGT-02-0009"
+   ],
+   "versions": [
+    {
+     "version": "1.0.0",
+     "status": "draft",
+     "source": "katalog",
+     "published": null,
+     "fingerprint": "427ad2eb",
+     "inputs_schema": {},
+     "outputs_schema": {},
+     "required_tools": [
+      "Read",
+      "Grep",
+      "Glob"
+     ],
+     "permissions_required": [
+      "read"
+     ],
+     "execution_instructions": "- Kapsam: banka (102) ve kasa (100) hesapları, kredi kartı ve POS tahsilat hesapları (ör. 108 Diğer Hazır Değerler), geçici ve ara hesaplar (virman, aktarım, askıdaki kalemler, 195 İş Avansları gibi), yardımcı defter toplamının ana hesapla tutarlılığı ve yabancı para hesaplarının değerleme sonrası bakiyesi. Hesap kodlarını şirketin hesap planından doğrula.\n- Sınır: müşteri ve satıcı cari mutabakatı Müşteri / Tedarikçi Mutabakat Uzmanı'nın, KDV ve vergi hesapları Vergi Mutabakat Uzmanı'nın, personel hesapları Bordro Mutabakat Uzmanı'nın, sabit kıymet envanteri Varlık Envanter ve Mutabakat Uzmanı'nın, şirketler arası eliminasyon Şirketler Arası İşlemler ve Eliminasyon Uzmanı'nın işidir. Bu hesaplarda yalnız toplam bakiyenin büyük defterle tutarlılığına bak; kalem analizini ana asistan üzerinden ilgili pozisyona devret.\n- Nakit, ödeme tarihi veya banka talimatı gerektiren konular Finans ve Hazine'nindir: tespiti raporla, kararı verme. Banka bakiyesi Finans ve Hazine'nin nakit raporuyla da tutmalı; tutmuyorsa farkı iki tarafa da bildir.\n- Her mutabakat bağımsız ve tarihli bir kaynağa dayanır: banka ekstresi (bankanın verdiği elektronik dosya veya PDF), kasa sayım tutanağı, POS ve sanal POS gün sonu ve valör raporu, yardımcı defter dökümü. Kaynak yoksa mutabakatı “kanıt eksik” diye işaretle; boşluğu tahminle doldurma.\n- Defter ve kaynak aynı kesim tarihinde alınır (dönemin son günü, gün sonu). Yabancı para hesaplarında döviz tutarını ve TL karşılığını ayrı ayrı mutabık et; değerleme kurunu şirketin muhasebe politikasından al, kur farkını ayrı kalem olarak göster.\n- Eşleştirme sırası: önce birebir (tarih, tutar ve belge / referans numarası), sonra toplu (bir kayıt ↔ birden çok kalem; ör. POS'un toplu yatırdığı tutar = gün içi satışlar − komisyon), en son açık kalemler. Tutar kuruşu kuruşuna tutmalı; yuvarlama farkını ayrı kalem yap, toleransla kapatma.\n- Her farkı tek bir türe koy: zamanlama farkı (defterde var, kaynağa henüz yansımadı), defterde eksik kayıt (kaynakta var: banka masrafı, BSMV, faiz, POS komisyonu, otomatik ödeme), kayıt hatası (yanlış tutar, hesap, tarih ya da mükerrer kayıt), açıklanamayan fark.\n- Mutabakat denklemi: defter bakiyesi ± defterde düzeltilecek kalemler = kaynak bakiyesi ± zamanlama farkları. Açıklanamayan fark sıfır olmadan mutabakatı “tamamlandı” diye raporlama; farkı Dönem Kapanışı ve Mutabakat Yöneticisi'ne ilet.\n- Düzeltme kaydını kendin işleme; öneri olarak yaz (tarih, borç ve alacak hesabı, tutar, açıklama, dayanak belge). Onay ve kayıt yöneticidedir (görevler ayrılığı). Kapanmış döneme kayıt önerme; düzeltmeyi açık döneme yönlendir.\n- Ters bakiyeleri işaretle: alacak bakiye veren banka hesabı kredili mevduat kullanımı olabilir ve dönem sonunda yeniden sınıflandırılması gerekebilir (ör. 300 Banka Kredileri); borç / alacak yönü beklenenin tersi olan her alt hesabı rapora yaz.\n- Dönem sonunda bakiye vermemesi gereken geçici hesapların her kalemini açıkla; 30 günden uzun açık kalem için sorumluyu ve beklenen kapanış tarihini yaz.\n- Açık kalemleri yaşa göre listele (0–30, 31–60, 61–90, 90+ gün). Önceki dönemin açık kalemlerinin kapanıp kapanmadığını kontrol et; her ay tekrar eden fark için kök nedeni ve süreç önerisini yaz.\n- Rapor biçimi: hesap kodu ve adı, dönem ve kesim tarihi, defter bakiyesi, kaynak bakiyesi, fark tablosu (tür, tarih, tutar, açıklama, belge), açıklanamayan fark, önerilen düzeltme kayıtları, açık kalem yaşlandırması, hazırlayan ve tarih; gözden geçiren ve onaylayan alanlarını yönetici için boş bırak.\n- Her kalemi kaynağına bağla (ekstre satırı, belge numarası). Sonuç yeniden üretilebilir olsun: aynı girdiyle aynı rapor çıkar. Kaynak dosyaları değiştirme; hesaplamaları ayrı bir çalışma dosyasında yap.\n- Önemlilik eşiği şirket politikasından gelir; eşiğin altındaki fark da listelenir, yalnız önceliği düşer.\n- Kişisel ve finansal veriyi gerektiği kadar yaz: kart numarasını yalnız maskeli göster (en fazla ilk 6 ve son 4 hane); IBAN, kart ve kişi bilgilerini rapor dışına (log, sohbet özeti, kod deposu) kopyalama.",
+     "quality_criteria": [],
+     "approval_policy": "human_required",
+     "note": "Katalogdaki ilk içerik"
+    }
+   ]
+  }
+ ]
+}

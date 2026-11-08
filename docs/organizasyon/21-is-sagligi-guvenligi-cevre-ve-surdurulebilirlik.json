@@ -1,0 +1,3141 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "21",
+    "name_tr": "İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+    "name_en": "Occupational Health, Safety, Environment and Sustainability",
+    "organization_model": "Tam Fonksiyonel EHS ve ESG Modeli",
+    "purpose": "Çalışanların sağlığını ve güvenliğini korumak, çevresel etkileri azaltmak, iklim dayanıklılığını geliştirmek ve sürdürülebilirlik hedeflerini ölçülebilir kurumsal performansa dönüştürmek.",
+    "reports_to": {
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer",
+      "functional_access": [
+        "Yönetim Kurulu Risk Komitesi",
+        "Sürdürülebilirlik Komitesi"
+      ]
+    },
+    "head": {
+      "position_code": "21.00.001",
+      "title_tr": "İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik Direktörü",
+      "title_en": "Health, Safety, Environment and Sustainability Director",
+      "alternative_executive_title": "Chief Sustainability and EHS Officer",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "21.01",
+        "21.02",
+        "21.03",
+        "21.04",
+        "21.05",
+        "21.06",
+        "21.07",
+        "21.08"
+      ],
+      "accountabilities": [
+        "İSG, çevre ve sürdürülebilirlik stratejisini yönetmek",
+        "İş kazası, meslek hastalığı ve çevresel olayları önlemek",
+        "Çevre, enerji, karbon ve iklim performansını geliştirmek",
+        "ESG raporlama ve sorumlu değer zinciri süreçlerini yönetmek",
+        "Acil durum hazırlığı ve EHS güvence sistemini işletmek"
+      ]
+    },
+    "independence_principle": "EHS fonksiyonu operasyonla yakın çalışır ancak ciddi ve yakın tehlikede işi durdurma, uygunsuzluğu eskale etme ve yönetim kuruluna risk raporlama yetkisine sahiptir.",
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "21.01",
+        "name_tr": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler",
+        "name_en": "EHS and Sustainability Strategy, Governance and Systems",
+        "manager": {
+          "position_code": "21.01.001",
+          "title_tr": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler Müdürü",
+          "title_en": "EHS and Sustainability Strategy, Governance and Systems Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.01.01",
+            "name_tr": "EHS ve Sürdürülebilirlik Stratejisi",
+            "name_en": "EHS and Sustainability Strategy",
+            "lead": {
+              "position_code": "21.01.01.001",
+              "title_tr": "EHS ve Sürdürülebilirlik Stratejisi Yöneticisi",
+              "title_en": "EHS and Sustainability Strategy Manager",
+              "reports_to": "21.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.01.01.002",
+                "title_tr": "Kıdemli EHS Stratejisi Uzmanı",
+                "title_en": "Senior EHS Strategy Specialist",
+                "reports_to": "21.01.01.001"
+              },
+              {
+                "position_code": "21.01.01.003",
+                "title_tr": "Sürdürülebilirlik Stratejisi Uzmanı",
+                "title_en": "Sustainability Strategy Specialist",
+                "reports_to": "21.01.01.001"
+              },
+              {
+                "position_code": "21.01.01.004",
+                "title_tr": "EHS Performans Analisti",
+                "title_en": "EHS Performance Analyst",
+                "reports_to": "21.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "EHS ve sürdürülebilirlik stratejisi ile hedeflerini oluşturmak",
+              "Yatırım, yetkinlik ve dönüşüm yol haritasını yönetmek",
+              "Yönetim performansı ve stratejik ilerlemeyi izlemek"
+            ]
+          },
+          {
+            "team_code": "21.01.02",
+            "name_tr": "EHS Yönetim Sistemleri ve Standartlar",
+            "name_en": "EHS Management Systems and Standards",
+            "lead": {
+              "position_code": "21.01.02.001",
+              "title_tr": "EHS Yönetim Sistemleri ve Standartlar Yöneticisi",
+              "title_en": "EHS Management Systems and Standards Manager",
+              "reports_to": "21.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.01.02.002",
+                "title_tr": "Kıdemli EHS Sistemleri Uzmanı",
+                "title_en": "Senior EHS Systems Specialist",
+                "reports_to": "21.01.02.001"
+              },
+              {
+                "position_code": "21.01.02.003",
+                "title_tr": "ISO 45001 ve 14001 Uzmanı",
+                "title_en": "ISO 45001 and 14001 Specialist",
+                "reports_to": "21.01.02.001"
+              },
+              {
+                "position_code": "21.01.02.004",
+                "title_tr": "EHS Dokümantasyon Uzmanı",
+                "title_en": "EHS Documentation Specialist",
+                "reports_to": "21.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "ISO 45001, ISO 14001 ve ilgili yönetim sistemlerini yürütmek",
+              "Politika, prosedür, kayıt ve sertifikasyon süreçlerini yönetmek",
+              "Sistem uygunluğu ve etkinliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "21.01.03",
+            "name_tr": "EHS Veri, Raporlama ve Dijital Sistemler",
+            "name_en": "EHS Data, Reporting and Digital Systems",
+            "lead": {
+              "position_code": "21.01.03.001",
+              "title_tr": "EHS Veri, Raporlama ve Dijital Sistemler Yöneticisi",
+              "title_en": "EHS Data, Reporting and Digital Systems Manager",
+              "reports_to": "21.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.01.03.002",
+                "title_tr": "Kıdemli EHS Raporlama Uzmanı",
+                "title_en": "Senior EHS Reporting Specialist",
+                "reports_to": "21.01.03.001"
+              },
+              {
+                "position_code": "21.01.03.003",
+                "title_tr": "EHS Veri Analisti",
+                "title_en": "EHS Data Analyst",
+                "reports_to": "21.01.03.001"
+              },
+              {
+                "position_code": "21.01.03.004",
+                "title_tr": "EHS Dijital Sistemler Uzmanı",
+                "title_en": "EHS Digital Systems Specialist",
+                "reports_to": "21.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "EHS veri modeli, gösterge panosu ve raporlarını yönetmek",
+              "Olay, risk, denetim ve çevre verisinin doğruluğunu sağlamak",
+              "Dijital EHS uygulamaları ve otomasyonunu geliştirmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.02",
+        "name_tr": "İş Sağlığı ve Güvenliği Yönetimi",
+        "name_en": "Occupational Health and Safety Management",
+        "manager": {
+          "position_code": "21.02.001",
+          "title_tr": "İş Sağlığı ve Güvenliği Yönetimi Müdürü",
+          "title_en": "Occupational Health and Safety Management Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.02.01",
+            "name_tr": "İSG Risk Değerlendirme ve Saha Güvenliği",
+            "name_en": "OHS Risk Assessment and Site Safety",
+            "lead": {
+              "position_code": "21.02.01.001",
+              "title_tr": "İSG Risk Değerlendirme ve Saha Güvenliği Yöneticisi",
+              "title_en": "OHS Risk Assessment and Site Safety Manager",
+              "reports_to": "21.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.02.01.002",
+                "title_tr": "Kıdemli İş Güvenliği Uzmanı",
+                "title_en": "Senior Occupational Safety Specialist",
+                "reports_to": "21.02.01.001"
+              },
+              {
+                "position_code": "21.02.01.003",
+                "title_tr": "İş Güvenliği Uzmanı",
+                "title_en": "Occupational Safety Specialist",
+                "reports_to": "21.02.01.001"
+              },
+              {
+                "position_code": "21.02.01.004",
+                "title_tr": "Saha Güvenliği Uzmanı",
+                "title_en": "Site Safety Specialist",
+                "reports_to": "21.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "İSG risk değerlendirmesi ve saha kontrollerini yürütmek",
+              "Tehlike, kontrol ve güvenli çalışma yöntemlerini belirlemek",
+              "Saha uygunsuzlukları ve aksiyonlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "21.02.02",
+            "name_tr": "İş İzinleri ve Yüksek Riskli Çalışmalar",
+            "name_en": "Permit to Work and High-Risk Activities",
+            "lead": {
+              "position_code": "21.02.02.001",
+              "title_tr": "İş İzinleri ve Yüksek Riskli Çalışmalar Yöneticisi",
+              "title_en": "Permit to Work and High-Risk Activities Manager",
+              "reports_to": "21.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.02.02.002",
+                "title_tr": "Kıdemli İş İzni Uzmanı",
+                "title_en": "Senior Permit to Work Specialist",
+                "reports_to": "21.02.02.001"
+              },
+              {
+                "position_code": "21.02.02.003",
+                "title_tr": "Yüksek Riskli İşler Uzmanı",
+                "title_en": "High-Risk Activities Specialist",
+                "reports_to": "21.02.02.001"
+              },
+              {
+                "position_code": "21.02.02.004",
+                "title_tr": "İSG Saha Kontrolörü",
+                "title_en": "OHS Site Inspector",
+                "reports_to": "21.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "İş izin sistemi ve yüksek riskli faaliyet kontrollerini yönetmek",
+              "Yüksekte çalışma, kapalı alan ve sıcak iş güvenliğini sağlamak",
+              "İzin uygunluğu ve saha doğrulamalarını yürütmek"
+            ]
+          },
+          {
+            "team_code": "21.02.03",
+            "name_tr": "İSG Eğitim, Kültür ve Davranış Güvenliği",
+            "name_en": "OHS Training, Culture and Behavioral Safety",
+            "lead": {
+              "position_code": "21.02.03.001",
+              "title_tr": "İSG Eğitim, Kültür ve Davranış Güvenliği Yöneticisi",
+              "title_en": "OHS Training, Culture and Behavioral Safety Manager",
+              "reports_to": "21.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.02.03.002",
+                "title_tr": "Kıdemli İSG Eğitim Uzmanı",
+                "title_en": "Senior OHS Training Specialist",
+                "reports_to": "21.02.03.001"
+              },
+              {
+                "position_code": "21.02.03.003",
+                "title_tr": "Davranış Güvenliği Uzmanı",
+                "title_en": "Behavioral Safety Specialist",
+                "reports_to": "21.02.03.001"
+              },
+              {
+                "position_code": "21.02.03.004",
+                "title_tr": "İSG Kültür Analisti",
+                "title_en": "OHS Culture Analyst",
+                "reports_to": "21.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Zorunlu ve rol bazlı İSG eğitimlerini yönetmek",
+              "Davranış odaklı güvenlik ve ramak kala programlarını yürütmek",
+              "Güvenlik kültürü göstergelerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.03",
+        "name_tr": "İş Sağlığı, Hijyen ve Ergonomi",
+        "name_en": "Occupational Health, Hygiene and Ergonomics",
+        "manager": {
+          "position_code": "21.03.001",
+          "title_tr": "İş Sağlığı, Hijyen ve Ergonomi Müdürü",
+          "title_en": "Occupational Health, Hygiene and Ergonomics Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.03.01",
+            "name_tr": "İşyeri Sağlığı ve Sağlık Gözetimi",
+            "name_en": "Workplace Health and Health Surveillance",
+            "lead": {
+              "position_code": "21.03.01.001",
+              "title_tr": "İşyeri Sağlığı ve Sağlık Gözetimi Yöneticisi",
+              "title_en": "Workplace Health and Health Surveillance Manager",
+              "reports_to": "21.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.03.01.002",
+                "title_tr": "İşyeri Hekimi",
+                "title_en": "Occupational Physician",
+                "reports_to": "21.03.01.001"
+              },
+              {
+                "position_code": "21.03.01.003",
+                "title_tr": "İşyeri Sağlık Uzmanı",
+                "title_en": "Occupational Health Specialist",
+                "reports_to": "21.03.01.001"
+              },
+              {
+                "position_code": "21.03.01.004",
+                "title_tr": "İşyeri Hemşiresi",
+                "title_en": "Occupational Health Nurse",
+                "reports_to": "21.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Sağlık gözetimi ve periyodik muayene programlarını yürütmek",
+              "Meslek hastalığı risklerini ve sağlık verilerini izlemek",
+              "İlk yardım ve işyeri sağlık hizmetlerini koordine etmek"
+            ]
+          },
+          {
+            "team_code": "21.03.02",
+            "name_tr": "Endüstriyel Hijyen ve Maruziyet Yönetimi",
+            "name_en": "Industrial Hygiene and Exposure Management",
+            "lead": {
+              "position_code": "21.03.02.001",
+              "title_tr": "Endüstriyel Hijyen ve Maruziyet Yönetimi Yöneticisi",
+              "title_en": "Industrial Hygiene and Exposure Management Manager",
+              "reports_to": "21.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.03.02.002",
+                "title_tr": "Kıdemli Endüstriyel Hijyen Uzmanı",
+                "title_en": "Senior Industrial Hygienist",
+                "reports_to": "21.03.02.001"
+              },
+              {
+                "position_code": "21.03.02.003",
+                "title_tr": "Endüstriyel Hijyen Uzmanı",
+                "title_en": "Industrial Hygienist",
+                "reports_to": "21.03.02.001"
+              },
+              {
+                "position_code": "21.03.02.004",
+                "title_tr": "Maruziyet Ölçüm Uzmanı",
+                "title_en": "Exposure Monitoring Specialist",
+                "reports_to": "21.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kimyasal, fiziksel ve biyolojik maruziyetleri değerlendirmek",
+              "Ölçüm, numune ve maruziyet kontrol programlarını yönetmek",
+              "Yasal sınır ve kontrol etkinliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "21.03.03",
+            "name_tr": "Ergonomi ve Çalışan İyilik Hali",
+            "name_en": "Ergonomics and Employee Wellbeing",
+            "lead": {
+              "position_code": "21.03.03.001",
+              "title_tr": "Ergonomi ve Çalışan İyilik Hali Yöneticisi",
+              "title_en": "Ergonomics and Employee Wellbeing Manager",
+              "reports_to": "21.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.03.03.002",
+                "title_tr": "Kıdemli Ergonomi Uzmanı",
+                "title_en": "Senior Ergonomics Specialist",
+                "reports_to": "21.03.03.001"
+              },
+              {
+                "position_code": "21.03.03.003",
+                "title_tr": "Ergonomi Uzmanı",
+                "title_en": "Ergonomics Specialist",
+                "reports_to": "21.03.03.001"
+              },
+              {
+                "position_code": "21.03.03.004",
+                "title_tr": "Çalışan İyilik Hali Koordinatörü",
+                "title_en": "Employee Wellbeing Coordinator",
+                "reports_to": "21.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Fiziksel ve bilişsel ergonomi değerlendirmelerini yürütmek",
+              "İş istasyonu ve iş tasarımı iyileştirmelerini koordine etmek",
+              "Kas-iskelet ve iyilik hali göstergelerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.04",
+        "name_tr": "Proses Güvenliği, Yüklenici ve Olay Yönetimi",
+        "name_en": "Process Safety, Contractor and Incident Management",
+        "manager": {
+          "position_code": "21.04.001",
+          "title_tr": "Proses Güvenliği, Yüklenici ve Olay Yönetimi Müdürü",
+          "title_en": "Process Safety, Contractor and Incident Management Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.04.01",
+            "name_tr": "Proses ve Makine Güvenliği",
+            "name_en": "Process and Machine Safety",
+            "lead": {
+              "position_code": "21.04.01.001",
+              "title_tr": "Proses ve Makine Güvenliği Yöneticisi",
+              "title_en": "Process and Machine Safety Manager",
+              "reports_to": "21.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.04.01.002",
+                "title_tr": "Kıdemli Proses Güvenliği Mühendisi",
+                "title_en": "Senior Process Safety Engineer",
+                "reports_to": "21.04.01.001"
+              },
+              {
+                "position_code": "21.04.01.003",
+                "title_tr": "Proses Güvenliği Uzmanı",
+                "title_en": "Process Safety Specialist",
+                "reports_to": "21.04.01.001"
+              },
+              {
+                "position_code": "21.04.01.004",
+                "title_tr": "Makine Güvenliği Uzmanı",
+                "title_en": "Machine Safety Specialist",
+                "reports_to": "21.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Proses tehlike analizleri ve makine güvenliği kontrollerini yürütmek",
+              "LOTO, koruyucu sistem ve emniyet bütünlüğünü yönetmek",
+              "Kritik proses güvenliği göstergelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "21.04.02",
+            "name_tr": "Yüklenici ve Tedarikçi EHS Yönetimi",
+            "name_en": "Contractor and Supplier EHS Management",
+            "lead": {
+              "position_code": "21.04.02.001",
+              "title_tr": "Yüklenici ve Tedarikçi EHS Yönetimi Yöneticisi",
+              "title_en": "Contractor and Supplier EHS Management Manager",
+              "reports_to": "21.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.04.02.002",
+                "title_tr": "Kıdemli Yüklenici EHS Uzmanı",
+                "title_en": "Senior Contractor EHS Specialist",
+                "reports_to": "21.04.02.001"
+              },
+              {
+                "position_code": "21.04.02.003",
+                "title_tr": "Tedarikçi EHS Uzmanı",
+                "title_en": "Supplier EHS Specialist",
+                "reports_to": "21.04.02.001"
+              },
+              {
+                "position_code": "21.04.02.004",
+                "title_tr": "Yüklenici Saha Koordinatörü",
+                "title_en": "Contractor Site Coordinator",
+                "reports_to": "21.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yüklenici EHS ön yeterlilik ve saha kurallarını yönetmek",
+              "İşe başlama, denetim ve performans süreçlerini yürütmek",
+              "Yüklenici olay ve uygunsuzluklarını izlemek"
+            ]
+          },
+          {
+            "team_code": "21.04.03",
+            "name_tr": "İş Kazası, Ramak Kala ve Kök Neden",
+            "name_en": "Accident, Near Miss and Root Cause",
+            "lead": {
+              "position_code": "21.04.03.001",
+              "title_tr": "İş Kazası, Ramak Kala ve Kök Neden Yöneticisi",
+              "title_en": "Accident, Near Miss and Root Cause Manager",
+              "reports_to": "21.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.04.03.002",
+                "title_tr": "Kıdemli Olay Araştırma Uzmanı",
+                "title_en": "Senior Incident Investigation Specialist",
+                "reports_to": "21.04.03.001"
+              },
+              {
+                "position_code": "21.04.03.003",
+                "title_tr": "İş Kazası Araştırma Uzmanı",
+                "title_en": "Accident Investigation Specialist",
+                "reports_to": "21.04.03.001"
+              },
+              {
+                "position_code": "21.04.03.004",
+                "title_tr": "Kök Neden Analisti",
+                "title_en": "Root Cause Analyst",
+                "reports_to": "21.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İş kazası, ramak kala ve EHS olaylarını araştırmak",
+              "Kök neden ve düzeltici faaliyetleri yönetmek",
+              "Olay öğrenimlerini şirket geneline yaymak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.05",
+        "name_tr": "Çevre Yönetimi ve Döngüsel Ekonomi",
+        "name_en": "Environmental Management and Circular Economy",
+        "manager": {
+          "position_code": "21.05.001",
+          "title_tr": "Çevre Yönetimi ve Döngüsel Ekonomi Müdürü",
+          "title_en": "Environmental Management and Circular Economy Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.05.01",
+            "name_tr": "Çevre Uyum, İzin ve Lisanslar",
+            "name_en": "Environmental Compliance, Permits and Licenses",
+            "lead": {
+              "position_code": "21.05.01.001",
+              "title_tr": "Çevre Uyum, İzin ve Lisanslar Yöneticisi",
+              "title_en": "Environmental Compliance, Permits and Licenses Manager",
+              "reports_to": "21.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.05.01.002",
+                "title_tr": "Kıdemli Çevre Uzmanı",
+                "title_en": "Senior Environmental Specialist",
+                "reports_to": "21.05.01.001"
+              },
+              {
+                "position_code": "21.05.01.003",
+                "title_tr": "Çevre Uyum Uzmanı",
+                "title_en": "Environmental Compliance Specialist",
+                "reports_to": "21.05.01.001"
+              },
+              {
+                "position_code": "21.05.01.004",
+                "title_tr": "Çevre İzinleri Uzmanı",
+                "title_en": "Environmental Permits Specialist",
+                "reports_to": "21.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Çevre mevzuatı, izin, lisans ve bildirim süreçlerini yönetmek",
+              "Çevresel yükümlülük ve saha uygunluğunu izlemek",
+              "Kurum denetimleri ve aksiyonlarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "21.05.02",
+            "name_tr": "Atık, Su ve Kirlilik Önleme",
+            "name_en": "Waste, Water and Pollution Prevention",
+            "lead": {
+              "position_code": "21.05.02.001",
+              "title_tr": "Atık, Su ve Kirlilik Önleme Yöneticisi",
+              "title_en": "Waste, Water and Pollution Prevention Manager",
+              "reports_to": "21.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.05.02.002",
+                "title_tr": "Kıdemli Atık Yönetimi Uzmanı",
+                "title_en": "Senior Waste Management Specialist",
+                "reports_to": "21.05.02.001"
+              },
+              {
+                "position_code": "21.05.02.003",
+                "title_tr": "Su ve Atıksu Uzmanı",
+                "title_en": "Water and Wastewater Specialist",
+                "reports_to": "21.05.02.001"
+              },
+              {
+                "position_code": "21.05.02.004",
+                "title_tr": "Kirlilik Önleme Analisti",
+                "title_en": "Pollution Prevention Analyst",
+                "reports_to": "21.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Atık, su, atıksu, emisyon ve kirlilik kontrollerini yönetmek",
+              "Kaynakta azaltım, geri kazanım ve bertaraf süreçlerini yürütmek",
+              "Çevresel performans ve yasal limitleri izlemek"
+            ]
+          },
+          {
+            "team_code": "21.05.03",
+            "name_tr": "Biyoçeşitlilik ve Doğal Kaynaklar",
+            "name_en": "Biodiversity and Natural Resources",
+            "lead": {
+              "position_code": "21.05.03.001",
+              "title_tr": "Biyoçeşitlilik ve Doğal Kaynaklar Yöneticisi",
+              "title_en": "Biodiversity and Natural Resources Manager",
+              "reports_to": "21.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.05.03.002",
+                "title_tr": "Kıdemli Biyoçeşitlilik Uzmanı",
+                "title_en": "Senior Biodiversity Specialist",
+                "reports_to": "21.05.03.001"
+              },
+              {
+                "position_code": "21.05.03.003",
+                "title_tr": "Doğal Kaynak Yönetimi Uzmanı",
+                "title_en": "Natural Resources Specialist",
+                "reports_to": "21.05.03.001"
+              },
+              {
+                "position_code": "21.05.03.004",
+                "title_tr": "Çevresel Etki Analisti",
+                "title_en": "Environmental Impact Analyst",
+                "reports_to": "21.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Biyoçeşitlilik ve doğal kaynak etkilerini değerlendirmek",
+              "Koruma, restorasyon ve etki azaltma planlarını yönetmek",
+              "Çevresel etki ve arazi kullanım göstergelerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.06",
+        "name_tr": "Enerji, İklim ve Karbon Yönetimi",
+        "name_en": "Energy, Climate and Carbon Management",
+        "manager": {
+          "position_code": "21.06.001",
+          "title_tr": "Enerji, İklim ve Karbon Yönetimi Müdürü",
+          "title_en": "Energy, Climate and Carbon Management Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.06.01",
+            "name_tr": "Enerji Yönetimi ve Verimlilik",
+            "name_en": "Energy Management and Efficiency",
+            "lead": {
+              "position_code": "21.06.01.001",
+              "title_tr": "Enerji Yönetimi ve Verimlilik Yöneticisi",
+              "title_en": "Energy Management and Efficiency Manager",
+              "reports_to": "21.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.06.01.002",
+                "title_tr": "Kıdemli Enerji Yöneticisi",
+                "title_en": "Senior Energy Manager",
+                "reports_to": "21.06.01.001"
+              },
+              {
+                "position_code": "21.06.01.003",
+                "title_tr": "Enerji Verimliliği Uzmanı",
+                "title_en": "Energy Efficiency Specialist",
+                "reports_to": "21.06.01.001"
+              },
+              {
+                "position_code": "21.06.01.004",
+                "title_tr": "Enerji Analisti",
+                "title_en": "Energy Analyst",
+                "reports_to": "21.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Enerji yönetim sistemi ve tüketim planını yönetmek",
+              "Enerji verimliliği projeleri ve tasarruf fırsatlarını geliştirmek",
+              "Enerji yoğunluğu ve maliyet performansını izlemek"
+            ]
+          },
+          {
+            "team_code": "21.06.02",
+            "name_tr": "Karbon Envanteri ve Emisyon Azaltımı",
+            "name_en": "Carbon Inventory and Emissions Reduction",
+            "lead": {
+              "position_code": "21.06.02.001",
+              "title_tr": "Karbon Envanteri ve Emisyon Azaltımı Yöneticisi",
+              "title_en": "Carbon Inventory and Emissions Reduction Manager",
+              "reports_to": "21.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.06.02.002",
+                "title_tr": "Kıdemli Karbon Yönetimi Uzmanı",
+                "title_en": "Senior Carbon Management Specialist",
+                "reports_to": "21.06.02.001"
+              },
+              {
+                "position_code": "21.06.02.003",
+                "title_tr": "Sera Gazı Envanteri Uzmanı",
+                "title_en": "GHG Inventory Specialist",
+                "reports_to": "21.06.02.001"
+              },
+              {
+                "position_code": "21.06.02.004",
+                "title_tr": "Emisyon Azaltım Analisti",
+                "title_en": "Emissions Reduction Analyst",
+                "reports_to": "21.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kapsam 1, 2 ve 3 sera gazı envanterini yönetmek",
+              "Emisyon azaltım yol haritası ve hedeflerini geliştirmek",
+              "Karbon verisi, doğrulama ve ilerleme raporlamasını yürütmek"
+            ]
+          },
+          {
+            "team_code": "21.06.03",
+            "name_tr": "İklim Riski ve Uyum",
+            "name_en": "Climate Risk and Adaptation",
+            "lead": {
+              "position_code": "21.06.03.001",
+              "title_tr": "İklim Riski ve Uyum Yöneticisi",
+              "title_en": "Climate Risk and Adaptation Manager",
+              "reports_to": "21.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.06.03.002",
+                "title_tr": "Kıdemli İklim Riski Uzmanı",
+                "title_en": "Senior Climate Risk Specialist",
+                "reports_to": "21.06.03.001"
+              },
+              {
+                "position_code": "21.06.03.003",
+                "title_tr": "İklim Uyum Uzmanı",
+                "title_en": "Climate Adaptation Specialist",
+                "reports_to": "21.06.03.001"
+              },
+              {
+                "position_code": "21.06.03.004",
+                "title_tr": "İklim Senaryo Analisti",
+                "title_en": "Climate Scenario Analyst",
+                "reports_to": "21.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Fiziksel ve geçiş iklim risklerini değerlendirmek",
+              "Senaryo analizi ve uyum planlarını geliştirmek",
+              "İklim risklerini kurumsal risk ve yatırım süreçlerine entegre etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.07",
+        "name_tr": "Kurumsal Sürdürülebilirlik ve ESG",
+        "name_en": "Corporate Sustainability and ESG",
+        "manager": {
+          "position_code": "21.07.001",
+          "title_tr": "Kurumsal Sürdürülebilirlik ve ESG Müdürü",
+          "title_en": "Corporate Sustainability and ESG Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.07.01",
+            "name_tr": "Sürdürülebilirlik Programları ve Etki",
+            "name_en": "Sustainability Programs and Impact",
+            "lead": {
+              "position_code": "21.07.01.001",
+              "title_tr": "Sürdürülebilirlik Programları ve Etki Yöneticisi",
+              "title_en": "Sustainability Programs and Impact Manager",
+              "reports_to": "21.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.07.01.002",
+                "title_tr": "Kıdemli Sürdürülebilirlik Uzmanı",
+                "title_en": "Senior Sustainability Specialist",
+                "reports_to": "21.07.01.001"
+              },
+              {
+                "position_code": "21.07.01.003",
+                "title_tr": "Sürdürülebilirlik Program Uzmanı",
+                "title_en": "Sustainability Program Specialist",
+                "reports_to": "21.07.01.001"
+              },
+              {
+                "position_code": "21.07.01.004",
+                "title_tr": "Etki Ölçüm Analisti",
+                "title_en": "Impact Measurement Analyst",
+                "reports_to": "21.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Sürdürülebilirlik programlarını ve hedeflerini yönetmek",
+              "Çevresel ve sosyal etki ölçüm metodolojisini geliştirmek",
+              "Program fayda ve etki sonuçlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "21.07.02",
+            "name_tr": "ESG Raporlama ve Paydaş Talepleri",
+            "name_en": "ESG Reporting and Stakeholder Requests",
+            "lead": {
+              "position_code": "21.07.02.001",
+              "title_tr": "ESG Raporlama ve Paydaş Talepleri Yöneticisi",
+              "title_en": "ESG Reporting and Stakeholder Requests Manager",
+              "reports_to": "21.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.07.02.002",
+                "title_tr": "Kıdemli ESG Raporlama Uzmanı",
+                "title_en": "Senior ESG Reporting Specialist",
+                "reports_to": "21.07.02.001"
+              },
+              {
+                "position_code": "21.07.02.003",
+                "title_tr": "ESG Raporlama Uzmanı",
+                "title_en": "ESG Reporting Specialist",
+                "reports_to": "21.07.02.001"
+              },
+              {
+                "position_code": "21.07.02.004",
+                "title_tr": "Sürdürülebilirlik Veri Analisti",
+                "title_en": "Sustainability Data Analyst",
+                "reports_to": "21.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Sürdürülebilirlik ve ESG raporlarını hazırlamak",
+              "Yatırımcı, müşteri ve derecelendirme taleplerini koordine etmek",
+              "Raporlama verisi ve açıklamaların izlenebilirliğini sağlamak"
+            ]
+          },
+          {
+            "team_code": "21.07.03",
+            "name_tr": "Sosyal Etki ve Sorumlu Değer Zinciri",
+            "name_en": "Social Impact and Responsible Value Chain",
+            "lead": {
+              "position_code": "21.07.03.001",
+              "title_tr": "Sosyal Etki ve Sorumlu Değer Zinciri Yöneticisi",
+              "title_en": "Social Impact and Responsible Value Chain Manager",
+              "reports_to": "21.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.07.03.002",
+                "title_tr": "Kıdemli Sosyal Etki Uzmanı",
+                "title_en": "Senior Social Impact Specialist",
+                "reports_to": "21.07.03.001"
+              },
+              {
+                "position_code": "21.07.03.003",
+                "title_tr": "Sorumlu Tedarik Uzmanı",
+                "title_en": "Responsible Sourcing Specialist",
+                "reports_to": "21.07.03.001"
+              },
+              {
+                "position_code": "21.07.03.004",
+                "title_tr": "İnsan Hakları Durum Tespiti Analisti",
+                "title_en": "Human Rights Due Diligence Analyst",
+                "reports_to": "21.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Sosyal etki ve sorumlu değer zinciri programlarını yönetmek",
+              "İnsan hakları ve tedarik zinciri durum tespiti süreçlerini koordine etmek",
+              "Sosyal risk, etki ve iyileştirme planlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "21.08",
+        "name_tr": "Acil Durum, Yangın Güvenliği ve EHS Güvence",
+        "name_en": "Emergency Response, Fire Safety and EHS Assurance",
+        "manager": {
+          "position_code": "21.08.001",
+          "title_tr": "Acil Durum, Yangın Güvenliği ve EHS Güvence Müdürü",
+          "title_en": "Emergency Response, Fire Safety and EHS Assurance Manager",
+          "reports_to": "21.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "21.08.01",
+            "name_tr": "Acil Durum ve Kriz Hazırlığı",
+            "name_en": "Emergency and Crisis Preparedness",
+            "lead": {
+              "position_code": "21.08.01.001",
+              "title_tr": "Acil Durum ve Kriz Hazırlığı Yöneticisi",
+              "title_en": "Emergency and Crisis Preparedness Manager",
+              "reports_to": "21.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.08.01.002",
+                "title_tr": "Kıdemli Acil Durum Uzmanı",
+                "title_en": "Senior Emergency Response Specialist",
+                "reports_to": "21.08.01.001"
+              },
+              {
+                "position_code": "21.08.01.003",
+                "title_tr": "Acil Durum Planlama Uzmanı",
+                "title_en": "Emergency Planning Specialist",
+                "reports_to": "21.08.01.001"
+              },
+              {
+                "position_code": "21.08.01.004",
+                "title_tr": "Tatbikat Koordinatörü",
+                "title_en": "Exercise Coordinator",
+                "reports_to": "21.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Acil durum planı, ekip ve kaynaklarını yönetmek",
+              "Masa başı ve saha tatbikatlarını yürütmek",
+              "Acil durum aksiyonları ve hazırlık seviyesini izlemek"
+            ]
+          },
+          {
+            "team_code": "21.08.02",
+            "name_tr": "Yangın Güvenliği ve Kurtarma",
+            "name_en": "Fire Safety and Rescue",
+            "lead": {
+              "position_code": "21.08.02.001",
+              "title_tr": "Yangın Güvenliği ve Kurtarma Yöneticisi",
+              "title_en": "Fire Safety and Rescue Manager",
+              "reports_to": "21.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.08.02.002",
+                "title_tr": "Kıdemli Yangın Güvenliği Uzmanı",
+                "title_en": "Senior Fire Safety Specialist",
+                "reports_to": "21.08.02.001"
+              },
+              {
+                "position_code": "21.08.02.003",
+                "title_tr": "Yangın Güvenliği Uzmanı",
+                "title_en": "Fire Safety Specialist",
+                "reports_to": "21.08.02.001"
+              },
+              {
+                "position_code": "21.08.02.004",
+                "title_tr": "Kurtarma ve Müdahale Koordinatörü",
+                "title_en": "Rescue and Response Coordinator",
+                "reports_to": "21.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yangın risk değerlendirmesi ve koruma sistemlerini yönetmek",
+              "Yangın ekipmanı, tahliye ve müdahale hazırlığını sağlamak",
+              "Periyodik test ve yasal kontrolleri izlemek"
+            ]
+          },
+          {
+            "team_code": "21.08.03",
+            "name_tr": "EHS Denetim ve Güvence",
+            "name_en": "EHS Audit and Assurance",
+            "lead": {
+              "position_code": "21.08.03.001",
+              "title_tr": "EHS Denetim ve Güvence Yöneticisi",
+              "title_en": "EHS Audit and Assurance Manager",
+              "reports_to": "21.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "21.08.03.002",
+                "title_tr": "Kıdemli EHS Denetçisi",
+                "title_en": "Senior EHS Auditor",
+                "reports_to": "21.08.03.001"
+              },
+              {
+                "position_code": "21.08.03.003",
+                "title_tr": "EHS Denetçisi",
+                "title_en": "EHS Auditor",
+                "reports_to": "21.08.03.001"
+              },
+              {
+                "position_code": "21.08.03.004",
+                "title_tr": "EHS Güvence Analisti",
+                "title_en": "EHS Assurance Analyst",
+                "reports_to": "21.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "EHS iç denetim ve saha güvence programını yürütmek",
+              "Kontrol ve yönetim sistemi etkinliğini değerlendirmek",
+              "Bulgular, düzeltici faaliyet ve kapanışları izlemek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Kayıp Zamanlı Kaza Sıklık Oranı (LTIFR)",
+        "Toplam Kaydedilebilir Olay Oranı (TRIR)",
+        "Ramak Kala Bildirim Oranı",
+        "İSG Aksiyon Zamanında Kapanış Oranı",
+        "Meslek Hastalığı Vaka Sayısı",
+        "Yüksek Riskli İş İzni Uyum Oranı",
+        "Atık Geri Kazanım Oranı",
+        "Su Tüketim Yoğunluğu",
+        "Enerji Yoğunluğu",
+        "Kapsam 1-2-3 Emisyonları",
+        "Karbon Yoğunluğu",
+        "Çevre Uygunsuzluk Sayısı",
+        "EHS Eğitim Tamamlama Oranı",
+        "Acil Durum Tatbikat Başarı Oranı",
+        "ESG Veri Doğruluk Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük EHS Operasyon Toplantısı",
+          "focus": "Kritik riskler, olaylar, yüksek riskli işler ve çevresel sapmalar"
+        },
+        {
+          "forum": "Haftalık EHS Aksiyon Toplantısı",
+          "focus": "Saha bulguları, olay araştırmaları ve düzeltici faaliyetler"
+        },
+        {
+          "forum": "Aylık EHS ve Sürdürülebilirlik Kurulu",
+          "focus": "KPI, mevzuat, enerji, karbon, çevre ve program performansı"
+        },
+        {
+          "forum": "Çeyreklik Yönetim Kurulu EHS/ESG Raporlaması",
+          "focus": "Risk, stratejik hedef, iklim, insan hakları ve yatırım kararları"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "operations": "Operasyon günlük işin güvenli ve çevreye uygun yürütülmesinin; EHS politika, standart, uzmanlık, gözetim ve güvence sisteminin sahibidir.",
+      "human_resources": "İK çalışan politikası, özlük ve genel iyilik halinin; EHS iş sağlığı gözetimi, mesleki maruziyet, ergonomi ve İSG eğitiminin sahibidir.",
+      "quality": "Kalite ürün/hizmet kalite sistemi ve uygunluğun; EHS çalışan güvenliği, çevre ve sürdürülebilirlik yönetim sistemlerinin sahibidir.",
+      "risk_compliance": "Uyum ve Risk kurumsal risk metodolojisi ve mevzuat gözetiminin; EHS uzmanlık mevzuatı, saha kontrolleri ve EHS risk uygulamasının sahibidir.",
+      "internal_audit": "İç Denetim bağımsız üçüncü hat güvencenin; EHS saha güvence, yönetim sistemi denetimi ve aksiyon takibinin sahibidir.",
+      "administrative_affairs": "İdari İşler tesis, bina ve destek operasyonunun; EHS tesis güvenliği gereksinimi, risk değerlendirmesi ve acil durum standardının sahibidir.",
+      "supply_chain": "Tedarik Zinciri satın alma ve tedarikçi ticari performansının; EHS tedarikçi çevre, insan hakları ve iş güvenliği kriterlerinin sahibidir.",
+      "finance": "Finans mali kontrol ve yatırım onayının; EHS enerji, karbon ve sürdürülebilirlik iş vakası ile performans ölçümünün sahibidir.",
+      "corporate_communications": "Kurumsal İletişim yayımlanan kurumsal söylem ve raporun; EHS/ESG teknik veri, metodoloji ve performans açıklamalarının sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; çalışan sayısı, tehlike sınıfı, tesis ve lokasyon sayısı, vardiya yapısı, proses riski, çevre izinleri, enerji tüketimi, ESG raporlama kapsamı ve yasal zorunluluklara göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; iş güvenliği uzmanı, hekim, hemşire, çevre/enerji mühendisi ve saha kadroları yasal ve operasyonel ihtiyaca göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Çalışan ve yüklenici sayısı",
+        "Tehlike sınıfı ve proses kritiklik seviyesi",
+        "Tesis, lokasyon ve vardiya sayısı",
+        "Yüksek riskli iş hacmi",
+        "Çevre izin ve lisans kapsamı",
+        "Enerji, su ve atık yoğunluğu",
+        "Karbon envanteri ve değer zinciri kapsamı",
+        "ESG raporlama ve paydaş talep yoğunluğu"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Sıfır kaza, minimum çevresel etki ve sürdürülebilir değer; yalnızca EHS ekibinin değil, her yönetici ve çalışanın operasyonel sorumluluğudur."
+    }
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "İSG, çevre ve sürdürülebilirlik stratejisini, politikalarını ve ölçülebilir hedeflerini oluşturmak",
+        "İş kazası, meslek hastalığı ve çevresel olayları önleyen risk yönetimi ve saha kontrol sistemini yönetmek",
+        "ISO 45001, ISO 14001 ve ilgili yönetim sistemlerini kurum genelinde işletmek",
+        "Çevre uyumu, atık, su, enerji ve karbon performansını izlemek ve iyileştirmek",
+        "İklim risklerini ve emisyon azaltım yol haritasını kurumsal risk ve yatırım süreçlerine entegre etmek",
+        "ESG raporlama, paydaş talepleri ve sorumlu değer zinciri süreçlerini yönetmek",
+        "Acil durum hazırlığı, yangın güvenliği ve EHS güvence sistemini işletmek",
+        "EHS performansını, ciddi riskleri ve uygunsuzlukları üst yönetime ve yönetim kurulu komitelerine raporlamak"
+      ],
+      "authorities": [
+        "EHS politika, standart ve prosedürlerini belirler ve yayımlar",
+        "Ciddi ve yakın tehlike bulunan iş veya faaliyeti durdurabilir",
+        "Yüksek riskli iş izinleri ve yüklenici EHS ön yeterliliği için asgari kuralları belirler",
+        "EHS uygunsuzluklarını ve gecikmiş aksiyonları üst yönetime ve yönetim kurulu komitelerine eskale eder",
+        "ESG raporlarındaki teknik veriyi, metodolojiyi ve performans açıklamalarını onaylar",
+        "Enerji, karbon ve sürdürülebilirlik yatırımlarının iş vakasını Finans onayına sunar",
+        "Tedarikçi seçiminde çevre, insan hakları ve iş güvenliği kriterlerine ilişkin görüş verir"
+      ],
+      "collaborations": [
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Saha Operasyonları ve Lokasyon Yönetimi",
+          "topic": "Saha risk kontrolleri, iş izinleri ve güvenli çalışma yöntemlerinin günlük operasyona uygulanması"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Eğitim ve Gelişim",
+          "topic": "Zorunlu İSG eğitimleri, sağlık gözetimi kayıtları ve çalışan iyilik hali programları"
+        },
+        {
+          "department": "14 - Kalite Yönetimi",
+          "unit": "Kalite Yönetim Sistemi ve Strateji",
+          "topic": "Entegre yönetim sistemi, ortak doküman yapısı ve sertifikasyon denetimleri"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "Kurumsal Risk Yönetimi",
+          "topic": "EHS ve iklim risklerinin kurumsal risk metodolojisine ve mevzuat gözetimine entegrasyonu"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "Operasyonel Denetim",
+          "topic": "EHS saha güvencesinin bağımsız iç denetim planıyla uyumu ve bulgu takibi"
+        },
+        {
+          "department": "20 - İdari İşler ve Destek Hizmetleri",
+          "unit": "Tesis, Bina ve Teknik İşletme",
+          "topic": "Tesis güvenliği gereksinimleri, yangın sistemleri ve acil durum standartlarının uygulanması"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Tedarikçi çevre, insan hakları ve iş güvenliği kriterlerinin satın alma sürecine uygulanması"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+          "topic": "Enerji, karbon ve sürdürülebilirlik yatırımlarının iş vakası ve performans ölçümü"
+        },
+        {
+          "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+          "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+          "topic": "Sürdürülebilirlik raporu ve ESG açıklamalarının kurumsal söyleme uygun yayımlanması"
+        }
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü",
+          "title_tr": "Direktör",
+          "title_en": "Director"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Lead"
+        },
+        {
+          "level": "Uzman Pozisyonlar",
+          "title_tr": "Kıdemli Uzman / Kıdemli Mühendis",
+          "title_en": "Senior Specialist / Senior Engineer"
+        },
+        {
+          "level": "Uzman Pozisyonlar",
+          "title_tr": "Uzman / Mühendis / Denetçi",
+          "title_en": "Specialist / Engineer / Auditor"
+        },
+        {
+          "level": "Uzman Pozisyonlar",
+          "title_tr": "Analist / Koordinatör",
+          "title_en": "Analyst / Coordinator"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 57,
+          "max": 106
+        },
+        {
+          "model": "Standart",
+          "min": 106,
+          "max": 213
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 161,
+          "max": 300
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 106,
+        "total_max": 213,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 23,
+            "max": 46
+          },
+          {
+            "role_group": "Uzman",
+            "min": 30,
+            "max": 90
+          },
+          {
+            "role_group": "Analist",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 4,
+            "max": 8
+          },
+          {
+            "role_group": "Teknisyen / Operatör",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "role_group": "Destek",
+            "min": 1,
+            "max": 4
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "21.01",
+        "name_tr": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler",
+        "responsibilities": [
+          "EHS ve sürdürülebilirlik stratejisini, hedeflerini ve dönüşüm yol haritasını oluşturmak",
+          "ISO 45001, ISO 14001 ve ilgili yönetim sistemlerini yürütmek ve sertifikasyonunu sürdürmek",
+          "EHS politika, prosedür ve kayıt yapısını yönetmek",
+          "EHS veri modelini, gösterge panolarını ve yönetim raporlarını yönetmek",
+          "Dijital EHS uygulamalarını ve otomasyonunu geliştirmek",
+          "Stratejik ilerlemeyi ve yönetim sistemi etkinliğini izlemek"
+        ],
+        "authorities": [
+          "EHS politika ve prosedür taslaklarını hazırlar ve direktör onayına sunar",
+          "Yönetim sistemi doküman ve kayıt standartlarını belirler",
+          "EHS veri tanımlarını, gösterge setini ve raporlama takvimini belirler",
+          "Dijital EHS uygulamalarının geliştirme önceliklerini belirler ve BT'ye talep olarak iletir"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Acil Durum, Yangın Güvenliği ve EHS Güvence",
+            "topic": "EHS iç denetim programı ile yönetim sistemi uygunluk değerlendirmesinin uyumu"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "ESG raporlamasına aktarılan EHS verisinin tanımı ve doğruluğu"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Yönetim Sistemi ve Strateji",
+            "topic": "Entegre yönetim sistemi, ortak doküman yapısı ve sertifikasyon denetimleri"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Dijital EHS uygulamalarının seçimi, entegrasyonu ve bakımı"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "EHS gösterge panolarının veri platformu ve raporlama altyapısıyla entegrasyonu"
+          }
+        ],
+        "kpis": [
+          "Stratejik EHS Hedefleri Gerçekleşme Oranı",
+          "Yönetim Sistemi Dış Denetim Majör Bulgu Sayısı",
+          "Prosedür Güncellik Oranı",
+          "EHS Veri Doğruluk Oranı",
+          "EHS Raporlarının Zamanında Yayım Oranı",
+          "Dijitalleştirilmiş EHS Süreç Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.01",
+            "level": "Birim Müdürü",
+            "title_tr": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler Müdürü",
+            "title_en": "EHS and Sustainability Strategy, Governance and Systems Manager"
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "EHS ve Sürdürülebilirlik Stratejisi Yöneticisi",
+            "title_en": "EHS and Sustainability Strategy Manager"
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/kidemli-ehs-stratejisi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli EHS Stratejisi Uzmanı",
+            "title_en": "Senior EHS Strategy Specialist"
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/surdurulebilirlik-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sürdürülebilirlik Stratejisi Uzmanı",
+            "title_en": "Sustainability Strategy Specialist"
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/ehs-performans-analisti",
+            "level": "Analist",
+            "title_tr": "EHS Performans Analisti",
+            "title_en": "EHS Performance Analyst"
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "EHS Yönetim Sistemleri ve Standartlar Yöneticisi",
+            "title_en": "EHS Management Systems and Standards Manager"
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/kidemli-ehs-sistemleri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli EHS Sistemleri Uzmanı",
+            "title_en": "Senior EHS Systems Specialist"
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/iso-45001-ve-14001-uzmani",
+            "level": "Uzman",
+            "title_tr": "ISO 45001 ve 14001 Uzmanı",
+            "title_en": "ISO 45001 and 14001 Specialist"
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/ehs-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "EHS Dokümantasyon Uzmanı",
+            "title_en": "EHS Documentation Specialist"
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "EHS Veri, Raporlama ve Dijital Sistemler Yöneticisi",
+            "title_en": "EHS Data, Reporting and Digital Systems Manager"
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/kidemli-ehs-raporlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli EHS Raporlama Uzmanı",
+            "title_en": "Senior EHS Reporting Specialist"
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/ehs-veri-analisti",
+            "level": "Analist",
+            "title_tr": "EHS Veri Analisti",
+            "title_en": "EHS Data Analyst"
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/ehs-dijital-sistemler-uzmani",
+            "level": "Uzman",
+            "title_tr": "EHS Dijital Sistemler Uzmanı",
+            "title_en": "EHS Digital Systems Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.01",
+            "title_tr": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi",
+            "title_tr": "EHS ve Sürdürülebilirlik Stratejisi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/kidemli-ehs-stratejisi-uzmani",
+            "title_tr": "Kıdemli EHS Stratejisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/surdurulebilirlik-stratejisi-uzmani",
+            "title_tr": "Sürdürülebilirlik Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.01/ehs-ve-surdurulebilirlik-stratejisi/ehs-performans-analisti",
+            "title_tr": "EHS Performans Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar",
+            "title_tr": "EHS Yönetim Sistemleri ve Standartlar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/kidemli-ehs-sistemleri-uzmani",
+            "title_tr": "Kıdemli EHS Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/iso-45001-ve-14001-uzmani",
+            "title_tr": "ISO 45001 ve 14001 Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.01/ehs-yonetim-sistemleri-ve-standartlar/ehs-dokumantasyon-uzmani",
+            "title_tr": "EHS Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler",
+            "title_tr": "EHS Veri, Raporlama ve Dijital Sistemler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/kidemli-ehs-raporlama-uzmani",
+            "title_tr": "Kıdemli EHS Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/ehs-veri-analisti",
+            "title_tr": "EHS Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.01/ehs-veri-raporlama-ve-dijital-sistemler/ehs-dijital-sistemler-uzmani",
+            "title_tr": "EHS Dijital Sistemler Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "21.02",
+        "name_tr": "İş Sağlığı ve Güvenliği Yönetimi",
+        "responsibilities": [
+          "İSG risk değerlendirmelerini ve saha kontrollerini yürütmek",
+          "Tehlikelere karşı kontrol önlemlerini ve güvenli çalışma yöntemlerini belirlemek",
+          "İş izin sistemini ve yüksek riskli faaliyet kontrollerini yönetmek",
+          "Yüksekte çalışma, kapalı alan ve sıcak iş güvenliğini sağlamak",
+          "Zorunlu ve rol bazlı İSG eğitimlerini yönetmek",
+          "Davranış odaklı güvenlik, ramak kala ve güvenlik kültürü programlarını yürütmek"
+        ],
+        "authorities": [
+          "Ciddi ve yakın tehlike gördüğü saha çalışmasını durdurabilir",
+          "Saha risk değerlendirmelerini ve kontrol önlemlerini onaylar",
+          "Yüksek riskli çalışmalar için iş izni uygunluğunu doğrular ve uygun olmayan izni reddeder",
+          "Saha uygunsuzlukları için aksiyon sahibini ve kapanış süresini belirler",
+          "Rol bazlı İSG eğitim gerekliliklerini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Proses Güvenliği, Yüklenici ve Olay Yönetimi",
+            "topic": "Olay araştırma bulgularının risk değerlendirmesine ve saha kontrollerine yansıtılması"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı, Hijyen ve Ergonomi",
+            "topic": "Maruziyet ve ergonomi bulgularının İSG risk değerlendirmesine entegrasyonu"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Saha Operasyonları ve Lokasyon Yönetimi",
+            "topic": "Saha kontrolleri, iş izinleri ve güvenli çalışma yöntemlerinin uygulanması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Üretim alanında yüksek riskli işlerin ve saha güvenliğinin yönetimi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Zorunlu İSG eğitimlerinin planlanması, kaydı ve takibi"
+          }
+        ],
+        "kpis": [
+          "Yüksek Riskli İş İzni Uyum Oranı",
+          "Risk Değerlendirmesi Güncellik Oranı",
+          "Saha Uygunsuzluğu Zamanında Kapanış Oranı",
+          "Ramak Kala Bildirim Oranı",
+          "Zorunlu İSG Eğitimi Tamamlama Oranı",
+          "Davranış Odaklı Güvenlik Gözlem Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.02",
+            "level": "Birim Müdürü",
+            "title_tr": "İş Sağlığı ve Güvenliği Yönetimi Müdürü",
+            "title_en": "Occupational Health and Safety Management Manager"
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İSG Risk Değerlendirme ve Saha Güvenliği Yöneticisi",
+            "title_en": "OHS Risk Assessment and Site Safety Manager"
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/kidemli-is-guvenligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş Güvenliği Uzmanı",
+            "title_en": "Senior Occupational Safety Specialist"
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/is-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Güvenliği Uzmanı",
+            "title_en": "Occupational Safety Specialist"
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/saha-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Saha Güvenliği Uzmanı",
+            "title_en": "Site Safety Specialist"
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş İzinleri ve Yüksek Riskli Çalışmalar Yöneticisi",
+            "title_en": "Permit to Work and High-Risk Activities Manager"
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/kidemli-is-izni-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş İzni Uzmanı",
+            "title_en": "Senior Permit to Work Specialist"
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/yuksek-riskli-isler-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yüksek Riskli İşler Uzmanı",
+            "title_en": "High-Risk Activities Specialist"
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/isg-saha-kontroloru",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "İSG Saha Kontrolörü",
+            "title_en": "OHS Site Inspector"
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İSG Eğitim, Kültür ve Davranış Güvenliği Yöneticisi",
+            "title_en": "OHS Training, Culture and Behavioral Safety Manager"
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/kidemli-isg-egitim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İSG Eğitim Uzmanı",
+            "title_en": "Senior OHS Training Specialist"
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/davranis-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Davranış Güvenliği Uzmanı",
+            "title_en": "Behavioral Safety Specialist"
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/isg-kultur-analisti",
+            "level": "Analist",
+            "title_tr": "İSG Kültür Analisti",
+            "title_en": "OHS Culture Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 14
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 30
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 22,
+            "max": 42
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.02",
+            "title_tr": "İş Sağlığı ve Güvenliği Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi",
+            "title_tr": "İSG Risk Değerlendirme ve Saha Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/kidemli-is-guvenligi-uzmani",
+            "title_tr": "Kıdemli İş Güvenliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/is-guvenligi-uzmani",
+            "title_tr": "İş Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/saha-guvenligi-uzmani",
+            "title_tr": "Saha Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar",
+            "title_tr": "İş İzinleri ve Yüksek Riskli Çalışmalar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/kidemli-is-izni-uzmani",
+            "title_tr": "Kıdemli İş İzni Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/yuksek-riskli-isler-uzmani",
+            "title_tr": "Yüksek Riskli İşler Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.02/is-izinleri-ve-yuksek-riskli-calismalar/isg-saha-kontroloru",
+            "title_tr": "İSG Saha Kontrolörü",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi",
+            "title_tr": "İSG Eğitim, Kültür ve Davranış Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/kidemli-isg-egitim-uzmani",
+            "title_tr": "Kıdemli İSG Eğitim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/davranis-guvenligi-uzmani",
+            "title_tr": "Davranış Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.02/isg-egitim-kultur-ve-davranis-guvenligi/isg-kultur-analisti",
+            "title_tr": "İSG Kültür Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.03",
+        "name_tr": "İş Sağlığı, Hijyen ve Ergonomi",
+        "responsibilities": [
+          "Sağlık gözetimi ve periyodik muayene programlarını yürütmek",
+          "Meslek hastalığı risklerini ve işyeri sağlık verilerini izlemek",
+          "İlk yardım ve işyeri sağlık hizmetlerini koordine etmek",
+          "Kimyasal, fiziksel ve biyolojik maruziyetleri ölçmek ve kontrol programlarını yönetmek",
+          "Fiziksel ve bilişsel ergonomi değerlendirmelerini yürütmek ve iş istasyonu iyileştirmelerini koordine etmek",
+          "Kas-iskelet sağlığı ve çalışan iyilik hali göstergelerini izlemek"
+        ],
+        "authorities": [
+          "Periyodik muayene sıklığını ve sağlık gözetimi kapsamını belirler",
+          "Maruziyet ölçüm planını ve kontrol önlemlerini onaylar",
+          "Çalışanın işe uygunluğu ve iş kısıtlamaları için hekim görüşü verir",
+          "Yasal sınırı aşan maruziyette ek kontrol önlemi ve iş düzenlemesi talep eder",
+          "Ergonomik iyileştirme önceliklerini belirler ve ilgili birimlere önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı ve Güvenliği Yönetimi",
+            "topic": "Maruziyet ve ergonomi bulgularının İSG risk değerlendirmesine yansıtılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan Deneyimi ve Bağlılık",
+            "topic": "Çalışan iyilik hali programları ve sağlık kampanyalarının koordinasyonu"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "İşe giriş muayeneleri, sağlık raporları ve özlük kayıtlarının eşleştirilmesi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Özel nitelikli sağlık verisinin işlenmesi, erişimi ve saklanması kuralları"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri",
+            "topic": "Ofis çalışma ortamı ve iş istasyonlarının ergonomik düzenlenmesi"
+          }
+        ],
+        "kpis": [
+          "Periyodik Muayene Zamanında Tamamlama Oranı",
+          "Meslek Hastalığı Vaka Sayısı",
+          "Maruziyet Ölçüm Planı Gerçekleşme Oranı",
+          "Yasal Sınır Aşımı Tespit Edilen Ölçüm Sayısı",
+          "Ergonomik Risk Değerlendirmesi Kapsama Oranı",
+          "Kas-İskelet Rahatsızlığı Kaynaklı İş Günü Kaybı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.03",
+            "level": "Birim Müdürü",
+            "title_tr": "İş Sağlığı, Hijyen ve Ergonomi Müdürü",
+            "title_en": "Occupational Health, Hygiene and Ergonomics Manager"
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İşyeri Sağlığı ve Sağlık Gözetimi Yöneticisi",
+            "title_en": "Workplace Health and Health Surveillance Manager"
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-hekimi",
+            "level": "Uzman",
+            "title_tr": "İşyeri Hekimi",
+            "title_en": "Occupational Physician"
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-saglik-uzmani",
+            "level": "Uzman",
+            "title_tr": "İşyeri Sağlık Uzmanı",
+            "title_en": "Occupational Health Specialist"
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-hemsiresi",
+            "level": "Destek",
+            "title_tr": "İşyeri Hemşiresi",
+            "title_en": "Occupational Health Nurse"
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Endüstriyel Hijyen ve Maruziyet Yönetimi Yöneticisi",
+            "title_en": "Industrial Hygiene and Exposure Management Manager"
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/kidemli-endustriyel-hijyen-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Endüstriyel Hijyen Uzmanı",
+            "title_en": "Senior Industrial Hygienist"
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/endustriyel-hijyen-uzmani",
+            "level": "Uzman",
+            "title_tr": "Endüstriyel Hijyen Uzmanı",
+            "title_en": "Industrial Hygienist"
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/maruziyet-olcum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Maruziyet Ölçüm Uzmanı",
+            "title_en": "Exposure Monitoring Specialist"
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ergonomi ve Çalışan İyilik Hali Yöneticisi",
+            "title_en": "Ergonomics and Employee Wellbeing Manager"
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/kidemli-ergonomi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Ergonomi Uzmanı",
+            "title_en": "Senior Ergonomics Specialist"
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/ergonomi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ergonomi Uzmanı",
+            "title_en": "Ergonomics Specialist"
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/calisan-iyilik-hali-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Çalışan İyilik Hali Koordinatörü",
+            "title_en": "Employee Wellbeing Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 29
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 21,
+            "max": 41
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.03",
+            "title_tr": "İş Sağlığı, Hijyen ve Ergonomi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi",
+            "title_tr": "İşyeri Sağlığı ve Sağlık Gözetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-hekimi",
+            "title_tr": "İşyeri Hekimi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-saglik-uzmani",
+            "title_tr": "İşyeri Sağlık Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-hemsiresi",
+            "title_tr": "İşyeri Hemşiresi",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi",
+            "title_tr": "Endüstriyel Hijyen ve Maruziyet Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/kidemli-endustriyel-hijyen-uzmani",
+            "title_tr": "Kıdemli Endüstriyel Hijyen Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/endustriyel-hijyen-uzmani",
+            "title_tr": "Endüstriyel Hijyen Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.03/endustriyel-hijyen-ve-maruziyet-yonetimi/maruziyet-olcum-uzmani",
+            "title_tr": "Maruziyet Ölçüm Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali",
+            "title_tr": "Ergonomi ve Çalışan İyilik Hali Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/kidemli-ergonomi-uzmani",
+            "title_tr": "Kıdemli Ergonomi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/ergonomi-uzmani",
+            "title_tr": "Ergonomi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.03/ergonomi-ve-calisan-iyilik-hali/calisan-iyilik-hali-koordinatoru",
+            "title_tr": "Çalışan İyilik Hali Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.04",
+        "name_tr": "Proses Güvenliği, Yüklenici ve Olay Yönetimi",
+        "responsibilities": [
+          "Proses tehlike analizlerini ve makine güvenliği kontrollerini yürütmek",
+          "LOTO, koruyucu sistemler ve emniyet bütünlüğünü yönetmek",
+          "Yüklenici EHS ön yeterliliğini, işe başlama ve saha denetim süreçlerini yönetmek",
+          "İş kazası, ramak kala ve EHS olaylarını araştırmak",
+          "Kök neden analizlerini ve düzeltici faaliyetleri yönetmek",
+          "Olay öğrenimlerini şirket geneline yaymak"
+        ],
+        "authorities": [
+          "Proses ve makine değişikliklerinin güvenlik değerlendirmesini onaylar",
+          "Emniyet bütünlüğü bozulmuş ekipmanın kullanımını durdurabilir",
+          "Yüklenici EHS ön yeterlilik sonucunu belirler ve konsolide üçüncü taraf risk sınıfına girdi olarak verir; ciddi EHS ihlalinde yüklenici çalışmasını durdurabilir",
+          "Olay araştırma ekibini ve araştırma kapsamını belirler",
+          "Düzeltici faaliyetlerin sahibini ve kapanış süresini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı ve Güvenliği Yönetimi",
+            "topic": "Olay öğrenimlerinin risk değerlendirmesine ve saha kontrollerine aktarılması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Bakım, Tesis ve Teknik Hizmetler",
+            "topic": "LOTO, koruyucu sistemler ve kritik emniyet ekipmanlarının bakımı ve bütünlüğü"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Yüklenici ve tedarikçi EHS ön yeterlilik kriterlerinin satın alma sürecine eklenmesi"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Saha Operasyonları ve Lokasyon Yönetimi",
+            "topic": "Yüklenici saha çalışmalarının planlanması ve olay bildirimlerinin yönetimi"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+            "topic": "Kök neden ve düzeltici faaliyet metodolojisinin ortak kullanımı"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "İş kazası bildirimleri ve olası hukuki süreçlerin yönetimi"
+          }
+        ],
+        "kpis": [
+          "Proses Güvenliği Olay Oranı",
+          "Kritik Emniyet Ekipmanı Test Uyum Oranı",
+          "Yüklenici EHS Ön Yeterlilik Kapsama Oranı",
+          "Yüklenici Kaydedilebilir Olay Oranı",
+          "Olay Araştırması Zamanında Tamamlama Oranı",
+          "Düzeltici Faaliyet Zamanında Kapanış Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Proses Güvenliği, Yüklenici ve Olay Yönetimi Müdürü",
+            "title_en": "Process Safety, Contractor and Incident Management Manager"
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Proses ve Makine Güvenliği Yöneticisi",
+            "title_en": "Process and Machine Safety Manager"
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/kidemli-proses-guvenligi-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Proses Güvenliği Mühendisi",
+            "title_en": "Senior Process Safety Engineer"
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/proses-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Proses Güvenliği Uzmanı",
+            "title_en": "Process Safety Specialist"
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/makine-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Makine Güvenliği Uzmanı",
+            "title_en": "Machine Safety Specialist"
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yüklenici ve Tedarikçi EHS Yönetimi Yöneticisi",
+            "title_en": "Contractor and Supplier EHS Management Manager"
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/kidemli-yuklenici-ehs-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yüklenici EHS Uzmanı",
+            "title_en": "Senior Contractor EHS Specialist"
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/tedarikci-ehs-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi EHS Uzmanı",
+            "title_en": "Supplier EHS Specialist"
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/yuklenici-saha-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Yüklenici Saha Koordinatörü",
+            "title_en": "Contractor Site Coordinator"
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Kazası, Ramak Kala ve Kök Neden Yöneticisi",
+            "title_en": "Accident, Near Miss and Root Cause Manager"
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/kidemli-olay-arastirma-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Olay Araştırma Uzmanı",
+            "title_en": "Senior Incident Investigation Specialist"
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/is-kazasi-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Kazası Araştırma Uzmanı",
+            "title_en": "Accident Investigation Specialist"
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/kok-neden-analisti",
+            "level": "Analist",
+            "title_tr": "Kök Neden Analisti",
+            "title_en": "Root Cause Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.04",
+            "title_tr": "Proses Güvenliği, Yüklenici ve Olay Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi",
+            "title_tr": "Proses ve Makine Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/kidemli-proses-guvenligi-muhendisi",
+            "title_tr": "Kıdemli Proses Güvenliği Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/proses-guvenligi-uzmani",
+            "title_tr": "Proses Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.04/proses-ve-makine-guvenligi/makine-guvenligi-uzmani",
+            "title_tr": "Makine Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi",
+            "title_tr": "Yüklenici ve Tedarikçi EHS Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/kidemli-yuklenici-ehs-uzmani",
+            "title_tr": "Kıdemli Yüklenici EHS Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/tedarikci-ehs-uzmani",
+            "title_tr": "Tedarikçi EHS Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.04/yuklenici-ve-tedarikci-ehs-yonetimi/yuklenici-saha-koordinatoru",
+            "title_tr": "Yüklenici Saha Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden",
+            "title_tr": "İş Kazası, Ramak Kala ve Kök Neden Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/kidemli-olay-arastirma-uzmani",
+            "title_tr": "Kıdemli Olay Araştırma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/is-kazasi-arastirma-uzmani",
+            "title_tr": "İş Kazası Araştırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.04/is-kazasi-ramak-kala-ve-kok-neden/kok-neden-analisti",
+            "title_tr": "Kök Neden Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.05",
+        "name_tr": "Çevre Yönetimi ve Döngüsel Ekonomi",
+        "responsibilities": [
+          "Çevre mevzuatı, izin, lisans ve bildirim süreçlerini yönetmek",
+          "Çevresel yükümlülükleri ve saha uygunluğunu izlemek, kurum denetimlerini koordine etmek",
+          "Atık, su, atıksu, emisyon ve kirlilik kontrollerini yönetmek",
+          "Kaynakta azaltım, geri kazanım ve bertaraf süreçlerini yürütmek",
+          "Biyoçeşitlilik ve doğal kaynak etkilerini değerlendirmek, koruma ve restorasyon planlarını yönetmek",
+          "Çevresel performansı ve yasal limitleri izlemek"
+        ],
+        "authorities": [
+          "Çevre izin ve lisans başvurularını hazırlar ve direktör onayına sunar",
+          "Atık sınıflandırma, depolama ve bertaraf yöntemlerini belirler",
+          "Yasal limit aşımı riskinde ilgili faaliyetin durdurulmasını talep eder",
+          "Atık bertaraf ve geri kazanım firmalarının çevresel uygunluğuna görüş verir",
+          "Yeni yatırım ve arazi kullanımı projelerinin çevresel etki değerlendirmesine görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Enerji, İklim ve Karbon Yönetimi",
+            "topic": "Su, atık ve emisyon verilerinin enerji ve karbon envanteriyle tutarlılığı"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "Çevresel performans verisinin ESG raporlarına aktarılması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Atıksu, emisyon ve kirlilik kontrollerinin üretim süreçlerine uygulanması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Tehlikeli madde depolama, atık sahası ve geri kazanım akışlarının yönetimi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Çevre mevzuatı değişiklikleri ve idari yaptırım süreçleri"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Temizlik, İkram ve İdari Tedarikçi Yönetimi",
+            "topic": "Ofis ve tesis atıklarının ayrıştırılması ve geri kazanımı"
+          }
+        ],
+        "kpis": [
+          "Çevre Uygunsuzluk Sayısı",
+          "İzin ve Lisans Geçerlilik Oranı",
+          "Atık Geri Kazanım Oranı",
+          "Düzenli Depolamaya Gönderilen Atık Oranı",
+          "Su Tüketim Yoğunluğu",
+          "Yasal Limit Aşımı Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Çevre Yönetimi ve Döngüsel Ekonomi Müdürü",
+            "title_en": "Environmental Management and Circular Economy Manager"
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çevre Uyum, İzin ve Lisanslar Yöneticisi",
+            "title_en": "Environmental Compliance, Permits and Licenses Manager"
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/kidemli-cevre-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Çevre Uzmanı",
+            "title_en": "Senior Environmental Specialist"
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/cevre-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çevre Uyum Uzmanı",
+            "title_en": "Environmental Compliance Specialist"
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/cevre-izinleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çevre İzinleri Uzmanı",
+            "title_en": "Environmental Permits Specialist"
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Atık, Su ve Kirlilik Önleme Yöneticisi",
+            "title_en": "Waste, Water and Pollution Prevention Manager"
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/kidemli-atik-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Atık Yönetimi Uzmanı",
+            "title_en": "Senior Waste Management Specialist"
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/su-ve-atiksu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Su ve Atıksu Uzmanı",
+            "title_en": "Water and Wastewater Specialist"
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/kirlilik-onleme-analisti",
+            "level": "Analist",
+            "title_tr": "Kirlilik Önleme Analisti",
+            "title_en": "Pollution Prevention Analyst"
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Biyoçeşitlilik ve Doğal Kaynaklar Yöneticisi",
+            "title_en": "Biodiversity and Natural Resources Manager"
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/kidemli-biyocesitlilik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Biyoçeşitlilik Uzmanı",
+            "title_en": "Senior Biodiversity Specialist"
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/dogal-kaynak-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Doğal Kaynak Yönetimi Uzmanı",
+            "title_en": "Natural Resources Specialist"
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/cevresel-etki-analisti",
+            "level": "Analist",
+            "title_tr": "Çevresel Etki Analisti",
+            "title_en": "Environmental Impact Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.05",
+            "title_tr": "Çevre Yönetimi ve Döngüsel Ekonomi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar",
+            "title_tr": "Çevre Uyum, İzin ve Lisanslar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/kidemli-cevre-uzmani",
+            "title_tr": "Kıdemli Çevre Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/cevre-uyum-uzmani",
+            "title_tr": "Çevre Uyum Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.05/cevre-uyum-izin-ve-lisanslar/cevre-izinleri-uzmani",
+            "title_tr": "Çevre İzinleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme",
+            "title_tr": "Atık, Su ve Kirlilik Önleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/kidemli-atik-yonetimi-uzmani",
+            "title_tr": "Kıdemli Atık Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/su-ve-atiksu-uzmani",
+            "title_tr": "Su ve Atıksu Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.05/atik-su-ve-kirlilik-onleme/kirlilik-onleme-analisti",
+            "title_tr": "Kirlilik Önleme Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar",
+            "title_tr": "Biyoçeşitlilik ve Doğal Kaynaklar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/kidemli-biyocesitlilik-uzmani",
+            "title_tr": "Kıdemli Biyoçeşitlilik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/dogal-kaynak-yonetimi-uzmani",
+            "title_tr": "Doğal Kaynak Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.05/biyocesitlilik-ve-dogal-kaynaklar/cevresel-etki-analisti",
+            "title_tr": "Çevresel Etki Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.06",
+        "name_tr": "Enerji, İklim ve Karbon Yönetimi",
+        "responsibilities": [
+          "Enerji yönetim sistemini ve tüketim planını yönetmek",
+          "Enerji verimliliği projelerini ve tasarruf fırsatlarını geliştirmek",
+          "Kapsam 1, 2 ve 3 sera gazı envanterini yönetmek",
+          "Emisyon azaltım yol haritasını ve hedeflerini geliştirmek",
+          "Fiziksel ve geçiş iklim risklerini senaryo analiziyle değerlendirmek",
+          "İklim risklerini kurumsal risk ve yatırım süreçlerine entegre etmek"
+        ],
+        "authorities": [
+          "Sera gazı envanteri hesaplama metodolojisini ve emisyon faktörlerini belirler",
+          "Enerji verimliliği projelerinin iş vakasını hazırlar ve Finans onayına sunar",
+          "Emisyon azaltım hedeflerini ve yol haritasını direktör onayına sunar",
+          "Karbon verisinin dış doğrulamaya sunulacak kapsamını belirler",
+          "Yatırım tekliflerinin iklim riski ve karbon etkisine ilişkin görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "Karbon ve iklim verisinin ESG raporlarına ve derecelendirme taleplerine aktarılması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Kurumsal Risk Yönetimi",
+            "topic": "İklim risklerinin kurumsal risk envanterine entegrasyonu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+            "topic": "Enerji ve karbon yatırımlarının iş vakası ve geri dönüş takibi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Bakım, Tesis ve Teknik Hizmetler",
+            "topic": "Enerji tüketimi ölçümü ve verimlilik projelerinin tesislerde uygulanması"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Tesis, Bina ve Teknik İşletme",
+            "topic": "Bina enerji tüketimi ve verimlilik iyileştirmeleri"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik",
+            "topic": "Kapsam 3 tedarik zinciri emisyon verisinin toplanması"
+          }
+        ],
+        "kpis": [
+          "Enerji Yoğunluğu",
+          "Enerji Verimliliği Projelerinden Sağlanan Tasarruf",
+          "Kapsam 1-2-3 Emisyonları",
+          "Karbon Yoğunluğu",
+          "Emisyon Azaltım Yol Haritası Gerçekleşme Oranı",
+          "Yenilenebilir Enerji Payı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Enerji, İklim ve Karbon Yönetimi Müdürü",
+            "title_en": "Energy, Climate and Carbon Management Manager"
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Enerji Yönetimi ve Verimlilik Yöneticisi",
+            "title_en": "Energy Management and Efficiency Manager"
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/kidemli-enerji-yoneticisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Enerji Yöneticisi",
+            "title_en": "Senior Energy Manager"
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/enerji-verimliligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Enerji Verimliliği Uzmanı",
+            "title_en": "Energy Efficiency Specialist"
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/enerji-analisti",
+            "level": "Analist",
+            "title_tr": "Enerji Analisti",
+            "title_en": "Energy Analyst"
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Karbon Envanteri ve Emisyon Azaltımı Yöneticisi",
+            "title_en": "Carbon Inventory and Emissions Reduction Manager"
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/kidemli-karbon-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Karbon Yönetimi Uzmanı",
+            "title_en": "Senior Carbon Management Specialist"
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/sera-gazi-envanteri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sera Gazı Envanteri Uzmanı",
+            "title_en": "GHG Inventory Specialist"
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/emisyon-azaltim-analisti",
+            "level": "Analist",
+            "title_tr": "Emisyon Azaltım Analisti",
+            "title_en": "Emissions Reduction Analyst"
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İklim Riski ve Uyum Yöneticisi",
+            "title_en": "Climate Risk and Adaptation Manager"
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/kidemli-iklim-riski-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İklim Riski Uzmanı",
+            "title_en": "Senior Climate Risk Specialist"
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/iklim-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "İklim Uyum Uzmanı",
+            "title_en": "Climate Adaptation Specialist"
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/iklim-senaryo-analisti",
+            "level": "Analist",
+            "title_tr": "İklim Senaryo Analisti",
+            "title_en": "Climate Scenario Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.06",
+            "title_tr": "Enerji, İklim ve Karbon Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik",
+            "title_tr": "Enerji Yönetimi ve Verimlilik Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/kidemli-enerji-yoneticisi",
+            "title_tr": "Kıdemli Enerji Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/enerji-verimliligi-uzmani",
+            "title_tr": "Enerji Verimliliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.06/enerji-yonetimi-ve-verimlilik/enerji-analisti",
+            "title_tr": "Enerji Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi",
+            "title_tr": "Karbon Envanteri ve Emisyon Azaltımı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/kidemli-karbon-yonetimi-uzmani",
+            "title_tr": "Kıdemli Karbon Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/sera-gazi-envanteri-uzmani",
+            "title_tr": "Sera Gazı Envanteri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.06/karbon-envanteri-ve-emisyon-azaltimi/emisyon-azaltim-analisti",
+            "title_tr": "Emisyon Azaltım Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum",
+            "title_tr": "İklim Riski ve Uyum Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/kidemli-iklim-riski-uzmani",
+            "title_tr": "Kıdemli İklim Riski Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/iklim-uyum-uzmani",
+            "title_tr": "İklim Uyum Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.06/iklim-riski-ve-uyum/iklim-senaryo-analisti",
+            "title_tr": "İklim Senaryo Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.07",
+        "name_tr": "Kurumsal Sürdürülebilirlik ve ESG",
+        "responsibilities": [
+          "Sürdürülebilirlik programlarını ve hedeflerini yönetmek",
+          "Çevresel ve sosyal etki ölçüm metodolojisini geliştirmek",
+          "Sürdürülebilirlik ve ESG raporlarını hazırlamak",
+          "Yatırımcı, müşteri ve derecelendirme kuruluşu taleplerini koordine etmek",
+          "Raporlama verisinin ve açıklamaların izlenebilirliğini sağlamak",
+          "Sosyal etki, insan hakları ve sorumlu değer zinciri durum tespiti süreçlerini yönetmek"
+        ],
+        "authorities": [
+          "ESG raporunun teknik içeriğini ve performans açıklamalarını doğrular ve direktör onayına sunar",
+          "Derecelendirme ve paydaş anketlerine verilecek yanıtların içeriğini belirler",
+          "Sürdürülebilirlik programlarının etki ölçüm yöntemini belirler",
+          "İnsan hakları durum tespiti sonuçlarına göre tedarikçiden iyileştirme planı talep eder",
+          "Yayımlanacak sürdürülebilirlik söylemi için Kurumsal İletişime teknik görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Enerji, İklim ve Karbon Yönetimi",
+            "topic": "Karbon, enerji ve iklim verisinin rapora aktarılması"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Çevre Yönetimi ve Döngüsel Ekonomi",
+            "topic": "Çevresel performans verisinin rapora aktarılması"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+            "topic": "Sürdürülebilirlik raporunun yayımı ve kurumsal söylem uyumu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırımcı İlişkileri Müdürlüğü",
+            "topic": "Yatırımcı ESG talepleri ve derecelendirme süreçleri"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi insan hakları ve sorumlu tedarik değerlendirmeleri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Sürdürülebilirlik açıklamalarının finansal raporlamayla tutarlılığı"
+          }
+        ],
+        "kpis": [
+          "ESG Veri Doğruluk Oranı",
+          "ESG Raporu Zamanında Yayım Oranı",
+          "Paydaş ve Derecelendirme Talebi Zamanında Yanıt Oranı",
+          "Sürdürülebilirlik Programı Hedef Gerçekleşme Oranı",
+          "İnsan Hakları Durum Tespiti Kapsamındaki Tedarikçi Oranı",
+          "Sosyal Etki Programlarından Yararlanan Kişi Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Kurumsal Sürdürülebilirlik ve ESG Müdürü",
+            "title_en": "Corporate Sustainability and ESG Manager"
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sürdürülebilirlik Programları ve Etki Yöneticisi",
+            "title_en": "Sustainability Programs and Impact Manager"
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/kidemli-surdurulebilirlik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sürdürülebilirlik Uzmanı",
+            "title_en": "Senior Sustainability Specialist"
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/surdurulebilirlik-program-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sürdürülebilirlik Program Uzmanı",
+            "title_en": "Sustainability Program Specialist"
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/etki-olcum-analisti",
+            "level": "Analist",
+            "title_tr": "Etki Ölçüm Analisti",
+            "title_en": "Impact Measurement Analyst"
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "ESG Raporlama ve Paydaş Talepleri Yöneticisi",
+            "title_en": "ESG Reporting and Stakeholder Requests Manager"
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/kidemli-esg-raporlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli ESG Raporlama Uzmanı",
+            "title_en": "Senior ESG Reporting Specialist"
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/esg-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "ESG Raporlama Uzmanı",
+            "title_en": "ESG Reporting Specialist"
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/surdurulebilirlik-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Sürdürülebilirlik Veri Analisti",
+            "title_en": "Sustainability Data Analyst"
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sosyal Etki ve Sorumlu Değer Zinciri Yöneticisi",
+            "title_en": "Social Impact and Responsible Value Chain Manager"
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/kidemli-sosyal-etki-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sosyal Etki Uzmanı",
+            "title_en": "Senior Social Impact Specialist"
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/sorumlu-tedarik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sorumlu Tedarik Uzmanı",
+            "title_en": "Responsible Sourcing Specialist"
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/insan-haklari-durum-tespiti-analisti",
+            "level": "Analist",
+            "title_tr": "İnsan Hakları Durum Tespiti Analisti",
+            "title_en": "Human Rights Due Diligence Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.07",
+            "title_tr": "Kurumsal Sürdürülebilirlik ve ESG Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki",
+            "title_tr": "Sürdürülebilirlik Programları ve Etki Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/kidemli-surdurulebilirlik-uzmani",
+            "title_tr": "Kıdemli Sürdürülebilirlik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/surdurulebilirlik-program-uzmani",
+            "title_tr": "Sürdürülebilirlik Program Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.07/surdurulebilirlik-programlari-ve-etki/etki-olcum-analisti",
+            "title_tr": "Etki Ölçüm Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri",
+            "title_tr": "ESG Raporlama ve Paydaş Talepleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/kidemli-esg-raporlama-uzmani",
+            "title_tr": "Kıdemli ESG Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/esg-raporlama-uzmani",
+            "title_tr": "ESG Raporlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.07/esg-raporlama-ve-paydas-talepleri/surdurulebilirlik-veri-analisti",
+            "title_tr": "Sürdürülebilirlik Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri",
+            "title_tr": "Sosyal Etki ve Sorumlu Değer Zinciri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/kidemli-sosyal-etki-uzmani",
+            "title_tr": "Kıdemli Sosyal Etki Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/sorumlu-tedarik-uzmani",
+            "title_tr": "Sorumlu Tedarik Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.07/sosyal-etki-ve-sorumlu-deger-zinciri/insan-haklari-durum-tespiti-analisti",
+            "title_tr": "İnsan Hakları Durum Tespiti Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "21.08",
+        "name_tr": "Acil Durum, Yangın Güvenliği ve EHS Güvence",
+        "responsibilities": [
+          "Acil durum planlarını, ekiplerini ve kaynaklarını yönetmek",
+          "Masa başı ve saha tatbikatlarını yürütmek",
+          "Yangın risk değerlendirmesini ve koruma sistemlerini yönetmek",
+          "Yangın ekipmanı, tahliye ve müdahale hazırlığını sağlamak",
+          "EHS iç denetim ve saha güvence programını yürütmek",
+          "Denetim bulgularını, düzeltici faaliyetleri ve kapanışları izlemek"
+        ],
+        "authorities": [
+          "Acil durum planları ve tahliye prosedürleri için standartları belirler",
+          "Acil durum, yangın ve tahliye tatbikatlarının senaryolarını belirler ve kurumsal tatbikat takvimine işletir",
+          "Yangın güvenliği uygunsuzluğu bulunan alanın kullanımının durdurulmasını talep eder",
+          "EHS iç denetim planını ve kapsamını belirler",
+          "Kapanmayan denetim bulgularını direktöre ve ilgili yöneticilere eskale eder"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler",
+            "topic": "Yönetim sistemi denetimleri ve sertifikasyon hazırlığı"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Operasyonel Denetim",
+            "topic": "EHS güvence planının bağımsız iç denetim planıyla koordinasyonu"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Resepsiyon ve Acil Durum Destek",
+            "topic": "Bina acil durum ekipleri, tahliye ve ilk müdahale koordinasyonu"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Tesis, Bina ve Teknik İşletme",
+            "topic": "Yangın algılama ve söndürme sistemlerinin periyodik test ve bakım takibi"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Güvenlik Operasyonları ve Kontrol Merkezi",
+            "topic": "Acil durum alarmları, tahliye ve dış kurumlarla müdahale koordinasyonu"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Acil durum planlarının iş sürekliliği ve kriz yönetimiyle uyumu"
+          }
+        ],
+        "kpis": [
+          "Acil Durum Tatbikat Başarı Oranı",
+          "Tatbikat Planı Gerçekleşme Oranı",
+          "Yangın Sistemleri Periyodik Test Uyum Oranı",
+          "Tahliye Süresi Hedefine Uyum Oranı",
+          "EHS Denetim Planı Gerçekleşme Oranı",
+          "Denetim Bulgusu Zamanında Kapanış Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "21.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Acil Durum, Yangın Güvenliği ve EHS Güvence Müdürü",
+            "title_en": "Emergency Response, Fire Safety and EHS Assurance Manager"
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Acil Durum ve Kriz Hazırlığı Yöneticisi",
+            "title_en": "Emergency and Crisis Preparedness Manager"
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/kidemli-acil-durum-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Acil Durum Uzmanı",
+            "title_en": "Senior Emergency Response Specialist"
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/acil-durum-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Acil Durum Planlama Uzmanı",
+            "title_en": "Emergency Planning Specialist"
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/tatbikat-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Tatbikat Koordinatörü",
+            "title_en": "Exercise Coordinator"
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yangın Güvenliği ve Kurtarma Yöneticisi",
+            "title_en": "Fire Safety and Rescue Manager"
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/kidemli-yangin-guvenligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yangın Güvenliği Uzmanı",
+            "title_en": "Senior Fire Safety Specialist"
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/yangin-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yangın Güvenliği Uzmanı",
+            "title_en": "Fire Safety Specialist"
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/kurtarma-ve-mudahale-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kurtarma ve Müdahale Koordinatörü",
+            "title_en": "Rescue and Response Coordinator"
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "EHS Denetim ve Güvence Yöneticisi",
+            "title_en": "EHS Audit and Assurance Manager"
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/kidemli-ehs-denetcisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli EHS Denetçisi",
+            "title_en": "Senior EHS Auditor"
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/ehs-denetcisi",
+            "level": "Uzman",
+            "title_tr": "EHS Denetçisi",
+            "title_en": "EHS Auditor"
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/ehs-guvence-analisti",
+            "level": "Analist",
+            "title_tr": "EHS Güvence Analisti",
+            "title_en": "EHS Assurance Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "21.08",
+            "title_tr": "Acil Durum, Yangın Güvenliği ve EHS Güvence Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi",
+            "title_tr": "Acil Durum ve Kriz Hazırlığı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/kidemli-acil-durum-uzmani",
+            "title_tr": "Kıdemli Acil Durum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/acil-durum-planlama-uzmani",
+            "title_tr": "Acil Durum Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.08/acil-durum-ve-kriz-hazirligi/tatbikat-koordinatoru",
+            "title_tr": "Tatbikat Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma",
+            "title_tr": "Yangın Güvenliği ve Kurtarma Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/kidemli-yangin-guvenligi-uzmani",
+            "title_tr": "Kıdemli Yangın Güvenliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/yangin-guvenligi-uzmani",
+            "title_tr": "Yangın Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.08/yangin-guvenligi-ve-kurtarma/kurtarma-ve-mudahale-koordinatoru",
+            "title_tr": "Kurtarma ve Müdahale Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence",
+            "title_tr": "EHS Denetim ve Güvence Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/kidemli-ehs-denetcisi",
+            "title_tr": "Kıdemli EHS Denetçisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/ehs-denetcisi",
+            "title_tr": "EHS Denetçisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "21.08/ehs-denetim-ve-guvence/ehs-guvence-analisti",
+            "title_tr": "EHS Güvence Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

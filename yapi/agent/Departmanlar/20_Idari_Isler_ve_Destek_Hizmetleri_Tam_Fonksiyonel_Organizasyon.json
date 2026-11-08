@@ -1,0 +1,1089 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "20 - İdari İşler ve Destek Hizmetleri Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "20",
+    "name_tr": "İdari İşler ve Destek Hizmetleri",
+    "name_en": "Administrative Affairs and Support Services",
+    "organization_model": "Tam Fonksiyonel Destek Hizmetleri Modeli",
+    "purpose": "Çalışanların ve iş birimlerinin güvenli, düzenli, verimli ve kesintisiz bir çalışma ortamında faaliyet göstermesini sağlamak; tesis, ofis, ulaşım, seyahat, güvenlik, arşiv ve ortak destek hizmetlerini standartlaştırmak.",
+    "reports_to": {
+      "title_tr": "İnsan Kaynakları ve Organizasyon Başkanı / Operasyon Başkanı / Genel Müdür",
+      "title_en": "Chief Human Resources Officer / Chief Operating Officer / Chief Executive Officer"
+    },
+    "head": {
+      "position_code": "20.00.001",
+      "title_tr": "İdari İşler ve Destek Hizmetleri Direktörü",
+      "title_en": "Administrative Affairs and Support Services Director",
+      "alternative_executive_title": "Head of Corporate Services",
+      "reports_to": "İnsan Kaynakları ve Organizasyon Başkanı / CHRO",
+      "direct_reports": [
+        "20.01",
+        "20.02",
+        "20.03",
+        "20.04",
+        "20.05",
+        "20.06",
+        "20.07",
+        "20.08"
+      ],
+      "accountabilities": [
+        "Tesis, ofis ve ortak çalışma ortamlarının sürekliliğini sağlamak",
+        "Filo, ulaşım, seyahat ve organizasyon hizmetlerini yönetmek",
+        "Fiziksel güvenlik, resepsiyon ve acil durum desteğini koordine etmek",
+        "Evrak, arşiv, posta ve kurumsal kayıt operasyonlarını yönetmek",
+        "Temizlik, ikram ve idari tedarikçi hizmetlerinde kalite, maliyet ve memnuniyeti yönetmek"
+      ]
+    },
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "20.01",
+        "name_tr": "İdari İşler Stratejisi ve Hizmet Yönetişimi",
+        "name_en": "Administrative Affairs Strategy and Service Governance",
+        "manager": {
+          "position_code": "20.01.001",
+          "title_tr": "İdari İşler Stratejisi ve Hizmet Yönetişimi Müdürü",
+          "title_en": "Administrative Affairs Strategy and Service Governance Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.01.01",
+            "name_tr": "İdari Hizmet Stratejisi ve Planlama",
+            "name_en": "Administrative Services Strategy and Planning",
+            "lead": {
+              "position_code": "20.01.01.001",
+              "title_tr": "İdari Hizmet Stratejisi ve Planlama Yöneticisi",
+              "title_en": "Administrative Services Strategy and Planning Manager",
+              "reports_to": "20.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.01.01.002",
+                "title_tr": "Kıdemli İdari Hizmetler Uzmanı",
+                "title_en": "Senior Administrative Services Specialist",
+                "reports_to": "20.01.01.001"
+              },
+              {
+                "position_code": "20.01.01.003",
+                "title_tr": "İdari Hizmetler Planlama Uzmanı",
+                "title_en": "Administrative Services Planning Specialist",
+                "reports_to": "20.01.01.001"
+              },
+              {
+                "position_code": "20.01.01.004",
+                "title_tr": "İdari Bütçe Analisti",
+                "title_en": "Administrative Budget Analyst",
+                "reports_to": "20.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "İdari hizmet stratejisi, yıllık plan ve bütçeyi oluşturmak",
+              "Lokasyon, hizmet ve kaynak ihtiyaçlarını planlamak",
+              "Plan-gerçekleşen maliyet ve kapasite sapmalarını izlemek"
+            ]
+          },
+          {
+            "team_code": "20.01.02",
+            "name_tr": "Hizmet Seviyesi ve İdari Performans",
+            "name_en": "Service Level and Administrative Performance",
+            "lead": {
+              "position_code": "20.01.02.001",
+              "title_tr": "Hizmet Seviyesi ve İdari Performans Yöneticisi",
+              "title_en": "Service Level and Administrative Performance Manager",
+              "reports_to": "20.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.01.02.002",
+                "title_tr": "Kıdemli İdari Performans Uzmanı",
+                "title_en": "Senior Administrative Performance Specialist",
+                "reports_to": "20.01.02.001"
+              },
+              {
+                "position_code": "20.01.02.003",
+                "title_tr": "Hizmet Seviyesi Uzmanı",
+                "title_en": "Service Level Specialist",
+                "reports_to": "20.01.02.001"
+              },
+              {
+                "position_code": "20.01.02.004",
+                "title_tr": "İdari Raporlama Analisti",
+                "title_en": "Administrative Reporting Analyst",
+                "reports_to": "20.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "İdari hizmet katalogları ve SLA'ları tanımlamak",
+              "Hizmet kalitesi, süre, maliyet ve memnuniyeti ölçmek",
+              "Performans raporları ve iyileştirme aksiyonlarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "20.01.03",
+            "name_tr": "İdari Süreçler ve Sürekli İyileştirme",
+            "name_en": "Administrative Processes and Continuous Improvement",
+            "lead": {
+              "position_code": "20.01.03.001",
+              "title_tr": "İdari Süreçler ve Sürekli İyileştirme Yöneticisi",
+              "title_en": "Administrative Processes and Continuous Improvement Manager",
+              "reports_to": "20.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.01.03.002",
+                "title_tr": "Kıdemli İdari Süreç Uzmanı",
+                "title_en": "Senior Administrative Process Specialist",
+                "reports_to": "20.01.03.001"
+              },
+              {
+                "position_code": "20.01.03.003",
+                "title_tr": "İdari Süreç Uzmanı",
+                "title_en": "Administrative Process Specialist",
+                "reports_to": "20.01.03.001"
+              },
+              {
+                "position_code": "20.01.03.004",
+                "title_tr": "Sürekli İyileştirme Analisti",
+                "title_en": "Continuous Improvement Analyst",
+                "reports_to": "20.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İdari süreçleri, prosedürleri ve iş akışlarını standardize etmek",
+              "Dijitalleşme ve otomasyon fırsatlarını geliştirmek",
+              "Hizmet hataları ve tekrar işleri azaltmak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.02",
+        "name_tr": "Tesis, Bina ve Teknik İşletme",
+        "name_en": "Facilities, Buildings and Technical Operations",
+        "manager": {
+          "position_code": "20.02.001",
+          "title_tr": "Tesis, Bina ve Teknik İşletme Müdürü",
+          "title_en": "Facilities, Buildings and Technical Operations Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.02.01",
+            "name_tr": "Tesis ve Bina Yönetimi",
+            "name_en": "Facility and Building Management",
+            "lead": {
+              "position_code": "20.02.01.001",
+              "title_tr": "Tesis ve Bina Yönetimi Yöneticisi",
+              "title_en": "Facility and Building Management Manager",
+              "reports_to": "20.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.02.01.002",
+                "title_tr": "Kıdemli Tesis Yönetimi Uzmanı",
+                "title_en": "Senior Facility Management Specialist",
+                "reports_to": "20.02.01.001"
+              },
+              {
+                "position_code": "20.02.01.003",
+                "title_tr": "Tesis Yönetimi Uzmanı",
+                "title_en": "Facility Management Specialist",
+                "reports_to": "20.02.01.001"
+              },
+              {
+                "position_code": "20.02.01.004",
+                "title_tr": "Bina Operasyon Koordinatörü",
+                "title_en": "Building Operations Coordinator",
+                "reports_to": "20.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Bina, ortak alan ve tesislerin günlük işletimini yönetmek",
+              "Kira, aidat, kullanım ve bina yönetimi ilişkilerini koordine etmek",
+              "Tesis hizmet seviyesi ve kullanıcı memnuniyetini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.02.02",
+            "name_tr": "Teknik Bakım ve Yardımcı Sistemler",
+            "name_en": "Technical Maintenance and Utility Systems",
+            "lead": {
+              "position_code": "20.02.02.001",
+              "title_tr": "Teknik Bakım ve Yardımcı Sistemler Yöneticisi",
+              "title_en": "Technical Maintenance and Utility Systems Manager",
+              "reports_to": "20.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.02.02.002",
+                "title_tr": "Kıdemli Teknik Tesis Uzmanı",
+                "title_en": "Senior Technical Facilities Specialist",
+                "reports_to": "20.02.02.001"
+              },
+              {
+                "position_code": "20.02.02.003",
+                "title_tr": "Teknik Bakım Uzmanı",
+                "title_en": "Technical Maintenance Specialist",
+                "reports_to": "20.02.02.001"
+              },
+              {
+                "position_code": "20.02.02.004",
+                "title_tr": "Tesis Teknisyeni",
+                "title_en": "Facilities Technician",
+                "reports_to": "20.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Elektrik, mekanik, iklimlendirme ve yardımcı sistemleri işletmek",
+              "Planlı bakım, arıza ve teknik müdahale süreçlerini yürütmek",
+              "Teknik uygunluk, enerji kullanımı ve ekipman sürekliliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.02.03",
+            "name_tr": "Alan, Taşınma ve Yerleşim Yönetimi",
+            "name_en": "Space, Relocation and Workplace Planning",
+            "lead": {
+              "position_code": "20.02.03.001",
+              "title_tr": "Alan, Taşınma ve Yerleşim Yönetimi Yöneticisi",
+              "title_en": "Space, Relocation and Workplace Planning Manager",
+              "reports_to": "20.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.02.03.002",
+                "title_tr": "Kıdemli İşyeri Planlama Uzmanı",
+                "title_en": "Senior Workplace Planning Specialist",
+                "reports_to": "20.02.03.001"
+              },
+              {
+                "position_code": "20.02.03.003",
+                "title_tr": "Alan ve Yerleşim Uzmanı",
+                "title_en": "Space and Layout Specialist",
+                "reports_to": "20.02.03.001"
+              },
+              {
+                "position_code": "20.02.03.004",
+                "title_tr": "Taşınma Koordinatörü",
+                "title_en": "Relocation Coordinator",
+                "reports_to": "20.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ofis alanı, kapasite ve yerleşim planlarını oluşturmak",
+              "Taşınma, açılış, kapanış ve yenileme projelerini koordine etmek",
+              "Alan kullanım verimliliği ve hibrit çalışma ihtiyaçlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.03",
+        "name_tr": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri",
+        "name_en": "Office, Workplace and Employee Support Services",
+        "manager": {
+          "position_code": "20.03.001",
+          "title_tr": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri Müdürü",
+          "title_en": "Office, Workplace and Employee Support Services Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.03.01",
+            "name_tr": "Ofis Operasyonları ve Sarf Yönetimi",
+            "name_en": "Office Operations and Supplies Management",
+            "lead": {
+              "position_code": "20.03.01.001",
+              "title_tr": "Ofis Operasyonları ve Sarf Yönetimi Yöneticisi",
+              "title_en": "Office Operations and Supplies Management Manager",
+              "reports_to": "20.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.03.01.002",
+                "title_tr": "Kıdemli Ofis Operasyon Uzmanı",
+                "title_en": "Senior Office Operations Specialist",
+                "reports_to": "20.03.01.001"
+              },
+              {
+                "position_code": "20.03.01.003",
+                "title_tr": "Ofis Operasyon Uzmanı",
+                "title_en": "Office Operations Specialist",
+                "reports_to": "20.03.01.001"
+              },
+              {
+                "position_code": "20.03.01.004",
+                "title_tr": "Ofis Destek Görevlisi",
+                "title_en": "Office Support Officer",
+                "reports_to": "20.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Ofis günlük operasyonlarını ve çalışma ortamı düzenini yönetmek",
+              "Kırtasiye, sarf ve ortak kullanım malzemelerini planlamak",
+              "Stok, tüketim ve hizmet taleplerini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.03.02",
+            "name_tr": "Toplantı, Etkinlik ve Misafir Hizmetleri",
+            "name_en": "Meeting, Event and Guest Services",
+            "lead": {
+              "position_code": "20.03.02.001",
+              "title_tr": "Toplantı, Etkinlik ve Misafir Hizmetleri Yöneticisi",
+              "title_en": "Meeting, Event and Guest Services Manager",
+              "reports_to": "20.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.03.02.002",
+                "title_tr": "Kıdemli Misafir Hizmetleri Uzmanı",
+                "title_en": "Senior Guest Services Specialist",
+                "reports_to": "20.03.02.001"
+              },
+              {
+                "position_code": "20.03.02.003",
+                "title_tr": "Toplantı ve Etkinlik Koordinatörü",
+                "title_en": "Meeting and Event Coordinator",
+                "reports_to": "20.03.02.001"
+              },
+              {
+                "position_code": "20.03.02.004",
+                "title_tr": "Kurumsal Ağırlama Uzmanı",
+                "title_en": "Corporate Hospitality Specialist",
+                "reports_to": "20.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Toplantı salonu, kurumsal etkinlik ve ağırlama operasyonlarını yönetmek",
+              "Misafir karşılama ve protokol ihtiyaçlarını koordine etmek",
+              "Etkinlik lojistiği ve hizmet kalitesini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.03.03",
+            "name_tr": "Çalışan İdari Destek Masası",
+            "name_en": "Employee Administrative Support Desk",
+            "lead": {
+              "position_code": "20.03.03.001",
+              "title_tr": "Çalışan İdari Destek Masası Yöneticisi",
+              "title_en": "Employee Administrative Support Desk Manager",
+              "reports_to": "20.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.03.03.002",
+                "title_tr": "Kıdemli İdari Destek Uzmanı",
+                "title_en": "Senior Administrative Support Specialist",
+                "reports_to": "20.03.03.001"
+              },
+              {
+                "position_code": "20.03.03.003",
+                "title_tr": "İdari Destek Uzmanı",
+                "title_en": "Administrative Support Specialist",
+                "reports_to": "20.03.03.001"
+              },
+              {
+                "position_code": "20.03.03.004",
+                "title_tr": "İdari Talep Koordinatörü",
+                "title_en": "Administrative Request Coordinator",
+                "reports_to": "20.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Çalışanların idari talep ve sorunlarını tek noktadan yönetmek",
+              "Talep sınıflandırma, yönlendirme ve kapanış süreçlerini yürütmek",
+              "Çözüm süresi ve çalışan memnuniyetini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.04",
+        "name_tr": "Filo, Ulaşım ve Araç Yönetimi",
+        "name_en": "Fleet, Transportation and Vehicle Management",
+        "manager": {
+          "position_code": "20.04.001",
+          "title_tr": "Filo, Ulaşım ve Araç Yönetimi Müdürü",
+          "title_en": "Fleet, Transportation and Vehicle Management Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.04.01",
+            "name_tr": "Filo Planlama ve Araç Tahsisi",
+            "name_en": "Fleet Planning and Vehicle Allocation",
+            "lead": {
+              "position_code": "20.04.01.001",
+              "title_tr": "Filo Planlama ve Araç Tahsisi Yöneticisi",
+              "title_en": "Fleet Planning and Vehicle Allocation Manager",
+              "reports_to": "20.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.04.01.002",
+                "title_tr": "Kıdemli Filo Yönetimi Uzmanı",
+                "title_en": "Senior Fleet Management Specialist",
+                "reports_to": "20.04.01.001"
+              },
+              {
+                "position_code": "20.04.01.003",
+                "title_tr": "Filo Planlama Uzmanı",
+                "title_en": "Fleet Planning Specialist",
+                "reports_to": "20.04.01.001"
+              },
+              {
+                "position_code": "20.04.01.004",
+                "title_tr": "Araç Tahsis Koordinatörü",
+                "title_en": "Vehicle Allocation Coordinator",
+                "reports_to": "20.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Araç ihtiyacı, filo kapasitesi ve tahsis planını yönetmek",
+              "Araç yaşam döngüsü, kiralama ve yenileme ihtiyaçlarını planlamak",
+              "Filo kullanım oranı ve toplam sahip olma maliyetini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.04.02",
+            "name_tr": "Araç Operasyonları ve Bakım",
+            "name_en": "Vehicle Operations and Maintenance",
+            "lead": {
+              "position_code": "20.04.02.001",
+              "title_tr": "Araç Operasyonları ve Bakım Yöneticisi",
+              "title_en": "Vehicle Operations and Maintenance Manager",
+              "reports_to": "20.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.04.02.002",
+                "title_tr": "Kıdemli Araç Operasyon Uzmanı",
+                "title_en": "Senior Vehicle Operations Specialist",
+                "reports_to": "20.04.02.001"
+              },
+              {
+                "position_code": "20.04.02.003",
+                "title_tr": "Araç Bakım ve Hasar Uzmanı",
+                "title_en": "Vehicle Maintenance and Damage Specialist",
+                "reports_to": "20.04.02.001"
+              },
+              {
+                "position_code": "20.04.02.004",
+                "title_tr": "Filo Operasyon Koordinatörü",
+                "title_en": "Fleet Operations Coordinator",
+                "reports_to": "20.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Bakım, muayene, sigorta, lastik ve hasar süreçlerini yürütmek",
+              "Yakıt, HGS, ceza ve araç evrak operasyonlarını yönetmek",
+              "Araç güvenliği ve kullanılabilirliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.04.03",
+            "name_tr": "Servis, Transfer ve Ulaşım Hizmetleri",
+            "name_en": "Shuttle, Transfer and Transportation Services",
+            "lead": {
+              "position_code": "20.04.03.001",
+              "title_tr": "Servis, Transfer ve Ulaşım Hizmetleri Yöneticisi",
+              "title_en": "Shuttle, Transfer and Transportation Services Manager",
+              "reports_to": "20.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.04.03.002",
+                "title_tr": "Kıdemli Ulaşım Hizmetleri Uzmanı",
+                "title_en": "Senior Transportation Services Specialist",
+                "reports_to": "20.04.03.001"
+              },
+              {
+                "position_code": "20.04.03.003",
+                "title_tr": "Personel Servisleri Uzmanı",
+                "title_en": "Employee Shuttle Specialist",
+                "reports_to": "20.04.03.001"
+              },
+              {
+                "position_code": "20.04.03.004",
+                "title_tr": "Transfer Koordinatörü",
+                "title_en": "Transfer Coordinator",
+                "reports_to": "20.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Personel servisi, transfer ve ulaşım hizmetlerini planlamak",
+              "Güzergâh, kapasite ve hizmet sağlayıcı operasyonunu yönetmek",
+              "Zamanında hizmet, güvenlik ve kullanıcı memnuniyetini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.05",
+        "name_tr": "Seyahat, Konaklama ve Organizasyon Hizmetleri",
+        "name_en": "Travel, Accommodation and Organization Services",
+        "manager": {
+          "position_code": "20.05.001",
+          "title_tr": "Seyahat, Konaklama ve Organizasyon Hizmetleri Müdürü",
+          "title_en": "Travel, Accommodation and Organization Services Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.05.01",
+            "name_tr": "Kurumsal Seyahat Yönetimi",
+            "name_en": "Corporate Travel Management",
+            "lead": {
+              "position_code": "20.05.01.001",
+              "title_tr": "Kurumsal Seyahat Yönetimi Yöneticisi",
+              "title_en": "Corporate Travel Management Manager",
+              "reports_to": "20.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.05.01.002",
+                "title_tr": "Kıdemli Kurumsal Seyahat Uzmanı",
+                "title_en": "Senior Corporate Travel Specialist",
+                "reports_to": "20.05.01.001"
+              },
+              {
+                "position_code": "20.05.01.003",
+                "title_tr": "Kurumsal Seyahat Uzmanı",
+                "title_en": "Corporate Travel Specialist",
+                "reports_to": "20.05.01.001"
+              },
+              {
+                "position_code": "20.05.01.004",
+                "title_tr": "Seyahat Rezervasyon Koordinatörü",
+                "title_en": "Travel Booking Coordinator",
+                "reports_to": "20.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Uçak, tren ve ulaşım rezervasyonlarını politika kapsamında yönetmek",
+              "Seyahat talep, onay ve acil destek süreçlerini yürütmek",
+              "Seyahat maliyeti ve hizmet sağlayıcı performansını izlemek"
+            ]
+          },
+          {
+            "team_code": "20.05.02",
+            "name_tr": "Konaklama ve Vize Operasyonları",
+            "name_en": "Accommodation and Visa Operations",
+            "lead": {
+              "position_code": "20.05.02.001",
+              "title_tr": "Konaklama ve Vize Operasyonları Yöneticisi",
+              "title_en": "Accommodation and Visa Operations Manager",
+              "reports_to": "20.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.05.02.002",
+                "title_tr": "Kıdemli Konaklama Operasyon Uzmanı",
+                "title_en": "Senior Accommodation Operations Specialist",
+                "reports_to": "20.05.02.001"
+              },
+              {
+                "position_code": "20.05.02.003",
+                "title_tr": "Vize ve Seyahat Evrakı Uzmanı",
+                "title_en": "Visa and Travel Documentation Specialist",
+                "reports_to": "20.05.02.001"
+              },
+              {
+                "position_code": "20.05.02.004",
+                "title_tr": "Konaklama Koordinatörü",
+                "title_en": "Accommodation Coordinator",
+                "reports_to": "20.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Otel ve uzun süreli konaklama ihtiyaçlarını yönetmek",
+              "Vize, davet mektubu ve seyahat evrak süreçlerini koordine etmek",
+              "Konaklama standartları, maliyet ve memnuniyeti izlemek"
+            ]
+          },
+          {
+            "team_code": "20.05.03",
+            "name_tr": "Kurumsal Organizasyon Lojistiği",
+            "name_en": "Corporate Event Logistics",
+            "lead": {
+              "position_code": "20.05.03.001",
+              "title_tr": "Kurumsal Organizasyon Lojistiği Yöneticisi",
+              "title_en": "Corporate Event Logistics Manager",
+              "reports_to": "20.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.05.03.002",
+                "title_tr": "Kıdemli Organizasyon Lojistiği Uzmanı",
+                "title_en": "Senior Event Logistics Specialist",
+                "reports_to": "20.05.03.001"
+              },
+              {
+                "position_code": "20.05.03.003",
+                "title_tr": "Organizasyon Operasyon Uzmanı",
+                "title_en": "Event Operations Specialist",
+                "reports_to": "20.05.03.001"
+              },
+              {
+                "position_code": "20.05.03.004",
+                "title_tr": "Etkinlik Lojistik Koordinatörü",
+                "title_en": "Event Logistics Coordinator",
+                "reports_to": "20.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Toplantı, eğitim, konferans ve etkinlik lojistiğini yönetmek",
+              "Ulaşım, konaklama, mekân ve tedarikçi koordinasyonunu sağlamak",
+              "Etkinlik operasyon bütçesi ve hizmet kalitesini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.06",
+        "name_tr": "Fiziksel Güvenlik, Resepsiyon ve Acil Durum Destek",
+        "name_en": "Physical Security, Reception and Emergency Support",
+        "manager": {
+          "position_code": "20.06.001",
+          "title_tr": "Fiziksel Güvenlik, Resepsiyon ve Acil Durum Destek Müdürü",
+          "title_en": "Physical Security, Reception and Emergency Support Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.06.01",
+            "name_tr": "Fiziksel Güvenlik ve Erişim Kontrolü",
+            "name_en": "Physical Security and Access Control",
+            "lead": {
+              "position_code": "20.06.01.001",
+              "title_tr": "Fiziksel Güvenlik ve Erişim Kontrolü Yöneticisi",
+              "title_en": "Physical Security and Access Control Manager",
+              "reports_to": "20.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.06.01.002",
+                "title_tr": "Kıdemli Fiziksel Güvenlik Uzmanı",
+                "title_en": "Senior Physical Security Specialist",
+                "reports_to": "20.06.01.001"
+              },
+              {
+                "position_code": "20.06.01.003",
+                "title_tr": "Fiziksel Güvenlik Uzmanı",
+                "title_en": "Physical Security Specialist",
+                "reports_to": "20.06.01.001"
+              },
+              {
+                "position_code": "20.06.01.004",
+                "title_tr": "Erişim Kontrol Koordinatörü",
+                "title_en": "Access Control Coordinator",
+                "reports_to": "20.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Bina güvenliği, kartlı geçiş ve ziyaretçi erişim kontrollerini yönetmek",
+              "Güvenlik görevlisi ve kamera izleme hizmetlerini koordine etmek",
+              "Fiziksel güvenlik olaylarını ve iyileştirme aksiyonlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "20.06.02",
+            "name_tr": "Resepsiyon, Santral ve Ziyaretçi Yönetimi",
+            "name_en": "Reception, Switchboard and Visitor Management",
+            "lead": {
+              "position_code": "20.06.02.001",
+              "title_tr": "Resepsiyon, Santral ve Ziyaretçi Yönetimi Yöneticisi",
+              "title_en": "Reception, Switchboard and Visitor Management Manager",
+              "reports_to": "20.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.06.02.002",
+                "title_tr": "Kıdemli Resepsiyon Uzmanı",
+                "title_en": "Senior Reception Specialist",
+                "reports_to": "20.06.02.001"
+              },
+              {
+                "position_code": "20.06.02.003",
+                "title_tr": "Resepsiyon ve Santral Görevlisi",
+                "title_en": "Reception and Switchboard Officer",
+                "reports_to": "20.06.02.001"
+              },
+              {
+                "position_code": "20.06.02.004",
+                "title_tr": "Ziyaretçi Hizmetleri Uzmanı",
+                "title_en": "Visitor Services Specialist",
+                "reports_to": "20.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Resepsiyon, santral ve ziyaretçi karşılama hizmetlerini yürütmek",
+              "Ziyaretçi kayıt, yönlendirme ve geçici erişim süreçlerini yönetmek",
+              "Kurumsal karşılama standardı ve hizmet kalitesini sağlamak"
+            ]
+          },
+          {
+            "team_code": "20.06.03",
+            "name_tr": "Acil Durum ve Tahliye Destek Hizmetleri",
+            "name_en": "Emergency and Evacuation Support Services",
+            "lead": {
+              "position_code": "20.06.03.001",
+              "title_tr": "Acil Durum ve Tahliye Destek Hizmetleri Yöneticisi",
+              "title_en": "Emergency and Evacuation Support Services Manager",
+              "reports_to": "20.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.06.03.002",
+                "title_tr": "Kıdemli Acil Durum Destek Uzmanı",
+                "title_en": "Senior Emergency Support Specialist",
+                "reports_to": "20.06.03.001"
+              },
+              {
+                "position_code": "20.06.03.003",
+                "title_tr": "Tahliye ve Tatbikat Koordinatörü",
+                "title_en": "Evacuation and Drill Coordinator",
+                "reports_to": "20.06.03.001"
+              },
+              {
+                "position_code": "20.06.03.004",
+                "title_tr": "Acil Durum Ekipman Sorumlusu",
+                "title_en": "Emergency Equipment Officer",
+                "reports_to": "20.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Acil durum, tahliye ve toplanma alanı organizasyonunu desteklemek",
+              "Tatbikat, ekipman kontrolü ve ekip koordinasyonunu yürütmek",
+              "İSG ve İş Sürekliliği ekipleriyle acil durum aksiyonlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.07",
+        "name_tr": "Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri",
+        "name_en": "Document, Archive, Mail and Corporate Records Services",
+        "manager": {
+          "position_code": "20.07.001",
+          "title_tr": "Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri Müdürü",
+          "title_en": "Document, Archive, Mail and Corporate Records Services Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.07.01",
+            "name_tr": "Gelen-Giden Evrak ve Posta",
+            "name_en": "Incoming-Outgoing Documents and Mail",
+            "lead": {
+              "position_code": "20.07.01.001",
+              "title_tr": "Gelen-Giden Evrak ve Posta Yöneticisi",
+              "title_en": "Incoming-Outgoing Documents and Mail Manager",
+              "reports_to": "20.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.07.01.002",
+                "title_tr": "Kıdemli Evrak Yönetimi Uzmanı",
+                "title_en": "Senior Document Administration Specialist",
+                "reports_to": "20.07.01.001"
+              },
+              {
+                "position_code": "20.07.01.003",
+                "title_tr": "Evrak ve Posta Uzmanı",
+                "title_en": "Document and Mail Specialist",
+                "reports_to": "20.07.01.001"
+              },
+              {
+                "position_code": "20.07.01.004",
+                "title_tr": "Kurye Operasyon Koordinatörü",
+                "title_en": "Courier Operations Coordinator",
+                "reports_to": "20.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Gelen-giden evrak, posta ve kurye süreçlerini yönetmek",
+              "Kayıt, dağıtım, teslim teyidi ve izlenebilirliği sağlamak",
+              "Gizli ve süreli evrak için özel işlem kurallarını uygulamak"
+            ]
+          },
+          {
+            "team_code": "20.07.02",
+            "name_tr": "Fiziksel ve Dijital Arşiv Operasyonları",
+            "name_en": "Physical and Digital Archive Operations",
+            "lead": {
+              "position_code": "20.07.02.001",
+              "title_tr": "Fiziksel ve Dijital Arşiv Operasyonları Yöneticisi",
+              "title_en": "Physical and Digital Archive Operations Manager",
+              "reports_to": "20.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.07.02.002",
+                "title_tr": "Kıdemli Arşiv Uzmanı",
+                "title_en": "Senior Archive Specialist",
+                "reports_to": "20.07.02.001"
+              },
+              {
+                "position_code": "20.07.02.003",
+                "title_tr": "Arşiv Uzmanı",
+                "title_en": "Archive Specialist",
+                "reports_to": "20.07.02.001"
+              },
+              {
+                "position_code": "20.07.02.004",
+                "title_tr": "Dijital Arşiv Operatörü",
+                "title_en": "Digital Archive Operator",
+                "reports_to": "20.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Fiziksel ve dijital arşivleme süreçlerini yürütmek",
+              "Dosyalama, indeksleme, saklama ve erişim hizmetlerini yönetmek",
+              "Arşiv güvenliği, kapasitesi ve erişim kayıtlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "20.07.03",
+            "name_tr": "Saklama, İmha ve Kayıt Uyumu",
+            "name_en": "Retention, Disposal and Records Compliance",
+            "lead": {
+              "position_code": "20.07.03.001",
+              "title_tr": "Saklama, İmha ve Kayıt Uyumu Yöneticisi",
+              "title_en": "Retention, Disposal and Records Compliance Manager",
+              "reports_to": "20.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.07.03.002",
+                "title_tr": "Kıdemli Kayıt Yönetimi Uzmanı",
+                "title_en": "Senior Records Management Specialist",
+                "reports_to": "20.07.03.001"
+              },
+              {
+                "position_code": "20.07.03.003",
+                "title_tr": "Saklama ve İmha Uzmanı",
+                "title_en": "Retention and Disposal Specialist",
+                "reports_to": "20.07.03.001"
+              },
+              {
+                "position_code": "20.07.03.004",
+                "title_tr": "Kayıt Uyumu Analisti",
+                "title_en": "Records Compliance Analyst",
+                "reports_to": "20.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Saklama planı ve imha takvimini Hukuk/Uyum ile uygulamak",
+              "Yasal bekletme ve kayıt koruma taleplerini koordine etmek",
+              "İmha kanıtı ve kayıt yaşam döngüsü uyumunu izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "20.08",
+        "name_tr": "Temizlik, İkram ve İdari Tedarikçi Yönetimi",
+        "name_en": "Cleaning, Catering and Administrative Vendor Management",
+        "manager": {
+          "position_code": "20.08.001",
+          "title_tr": "Temizlik, İkram ve İdari Tedarikçi Yönetimi Müdürü",
+          "title_en": "Cleaning, Catering and Administrative Vendor Management Manager",
+          "reports_to": "20.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "20.08.01",
+            "name_tr": "Temizlik ve Hijyen Hizmetleri",
+            "name_en": "Cleaning and Hygiene Services",
+            "lead": {
+              "position_code": "20.08.01.001",
+              "title_tr": "Temizlik ve Hijyen Hizmetleri Yöneticisi",
+              "title_en": "Cleaning and Hygiene Services Manager",
+              "reports_to": "20.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.08.01.002",
+                "title_tr": "Kıdemli Temizlik Hizmetleri Uzmanı",
+                "title_en": "Senior Cleaning Services Specialist",
+                "reports_to": "20.08.01.001"
+              },
+              {
+                "position_code": "20.08.01.003",
+                "title_tr": "Hijyen Hizmetleri Uzmanı",
+                "title_en": "Hygiene Services Specialist",
+                "reports_to": "20.08.01.001"
+              },
+              {
+                "position_code": "20.08.01.004",
+                "title_tr": "Temizlik Saha Koordinatörü",
+                "title_en": "Cleaning Site Coordinator",
+                "reports_to": "20.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Temizlik, hijyen, atık toplama ve sarf hizmetlerini yönetmek",
+              "Hizmet planı, vardiya ve saha kontrollerini yürütmek",
+              "Hijyen standardı, tüketim ve kullanıcı bildirimlerini izlemek"
+            ]
+          },
+          {
+            "team_code": "20.08.02",
+            "name_tr": "Yemek, İkram ve Otomat Hizmetleri",
+            "name_en": "Catering, Refreshment and Vending Services",
+            "lead": {
+              "position_code": "20.08.02.001",
+              "title_tr": "Yemek, İkram ve Otomat Hizmetleri Yöneticisi",
+              "title_en": "Catering, Refreshment and Vending Services Manager",
+              "reports_to": "20.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.08.02.002",
+                "title_tr": "Kıdemli İkram Hizmetleri Uzmanı",
+                "title_en": "Senior Catering Services Specialist",
+                "reports_to": "20.08.02.001"
+              },
+              {
+                "position_code": "20.08.02.003",
+                "title_tr": "Yemek ve İkram Uzmanı",
+                "title_en": "Food and Refreshment Specialist",
+                "reports_to": "20.08.02.001"
+              },
+              {
+                "position_code": "20.08.02.004",
+                "title_tr": "Otomat Hizmetleri Koordinatörü",
+                "title_en": "Vending Services Coordinator",
+                "reports_to": "20.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yemek, içecek, ikram ve otomat hizmetlerini yönetmek",
+              "Menü, hijyen, kapasite ve özel ihtiyaçları koordine etmek",
+              "Hizmet kalitesi, israf, maliyet ve memnuniyeti izlemek"
+            ]
+          },
+          {
+            "team_code": "20.08.03",
+            "name_tr": "İdari Tedarikçi ve Sözleşme Operasyonları",
+            "name_en": "Administrative Vendor and Contract Operations",
+            "lead": {
+              "position_code": "20.08.03.001",
+              "title_tr": "İdari Tedarikçi ve Sözleşme Operasyonları Yöneticisi",
+              "title_en": "Administrative Vendor and Contract Operations Manager",
+              "reports_to": "20.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "20.08.03.002",
+                "title_tr": "Kıdemli İdari Tedarikçi Uzmanı",
+                "title_en": "Senior Administrative Vendor Specialist",
+                "reports_to": "20.08.03.001"
+              },
+              {
+                "position_code": "20.08.03.003",
+                "title_tr": "İdari Sözleşme Operasyon Uzmanı",
+                "title_en": "Administrative Contract Operations Specialist",
+                "reports_to": "20.08.03.001"
+              },
+              {
+                "position_code": "20.08.03.004",
+                "title_tr": "Tedarikçi Performans Analisti",
+                "title_en": "Vendor Performance Analyst",
+                "reports_to": "20.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İdari hizmet tedarikçilerinin günlük operasyonunu yönetmek",
+              "SLA, hakediş, fatura teyidi ve hizmet kabulünü yürütmek",
+              "Satın Alma ile yenileme, performans ve iyileştirme süreçlerini koordine etmek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "İdari Hizmet SLA Uyum Oranı",
+        "Çalışan İdari Hizmet Memnuniyeti",
+        "İdari Talep Ortalama Çözüm Süresi",
+        "Tesis Erişilebilirlik Oranı",
+        "Planlı Bakım Tamamlama Oranı",
+        "Alan Kullanım Verimliliği",
+        "Filo Kullanım Oranı",
+        "Araç Başına Toplam Maliyet",
+        "Seyahat Politika Uyum Oranı",
+        "Fiziksel Güvenlik Olayı Sayısı",
+        "Evrak Teslim ve İzlenebilirlik Oranı",
+        "Arşiv Kayıt Doğruluk Oranı",
+        "Temizlik ve Hijyen Uyum Skoru",
+        "İkram İsraf Oranı",
+        "İdari Tedarikçi SLA Uyum Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük İdari Operasyon Toplantısı",
+          "focus": "Tesis, güvenlik, ulaşım, temizlik ve kritik hizmet olayları"
+        },
+        {
+          "forum": "Haftalık Hizmet ve Tedarikçi Toplantısı",
+          "focus": "SLA, talepler, bakım, filo, seyahat ve tedarikçi aksiyonları"
+        },
+        {
+          "forum": "Aylık İdari Hizmetler Kurulu",
+          "focus": "KPI, bütçe, memnuniyet, risk ve iyileştirme portföyü"
+        },
+        {
+          "forum": "Çeyreklik Kurumsal Hizmetler Gözden Geçirmesi",
+          "focus": "Kapasite, lokasyon, sözleşme, yatırım ve hizmet modeli kararları"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "human_resources": "İnsan Kaynakları çalışan politikası, yan hak, özlük ve çalışan deneyiminin; İdari İşler fiziksel çalışma ortamı ve ortak destek hizmetlerinin sahibidir.",
+      "operations": "Operasyon müşteri ve üretim/hizmet teslimat süreçlerinin; İdari İşler kurumsal ofis, tesis ve destek operasyonlarının sahibidir.",
+      "procurement": "Satın Alma kaynak bulma, ihale, müzakere ve sözleşmenin; İdari İşler ihtiyaç tanımı, günlük hizmet yönetimi, kabul ve tedarikçi performans girdisinin sahibidir.",
+      "finance": "Finans bütçe politikası, ödeme ve mali kontrolün; İdari İşler hizmet bütçesi, tüketim, hakediş ve maliyet sürücülerinin sahibidir.",
+      "occupational_health_safety": "İSG risk değerlendirmesi, yasal İSG yükümlülüğü ve uzmanlığın; İdari İşler bina, ekipman, tahliye ve saha aksiyonlarının uygulanmasının sahibidir.",
+      "security_cyber": "Siber Güvenlik dijital erişim ve bilgi güvenliğinin; İdari İşler fiziksel güvenlik, ziyaretçi ve bina erişim operasyonlarının sahibidir.",
+      "legal_compliance": "Hukuk/Uyum mevzuat, sözleşme, saklama ve imha kurallarının; İdari İşler evrak, arşiv, saklama ve imha operasyonunun sahibidir.",
+      "information_technology": "BT dijital işyeri cihazları, ağ ve iletişim teknolojisinin; İdari İşler fiziksel alan, toplantı odası, tesis ve ofis ekipmanının sahibidir.",
+      "corporate_communications": "Kurumsal İletişim etkinlik içeriği, protokol mesajı ve kurumsal temsilin; İdari İşler organizasyon lojistiği, mekân ve ağırlama operasyonunun sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; çalışan ve lokasyon sayısı, bina alanı, vardiya düzeni, araç filosu, seyahat hacmi, ziyaretçi yoğunluğu, arşiv kapasitesi ve dış kaynak kullanımına göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; teknisyen, görevli, koordinatör ve saha kadroları lokasyon ve hizmet hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Çalışan ve günlük ofis kullanıcı sayısı",
+        "Lokasyon ve toplam metrekare",
+        "Vardiya ve hizmet saati kapsamı",
+        "Araç ve servis hattı sayısı",
+        "Aylık seyahat ve konaklama hacmi",
+        "Ziyaretçi ve etkinlik yoğunluğu",
+        "Fiziksel/dijital arşiv hacmi",
+        "Dış kaynak ve tedarikçi sayısı"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "İdari İşler görünmeyen destek fonksiyonu değil; çalışan deneyimini, iş sürekliliğini ve kurumsal verimliliği doğrudan etkileyen ölçülebilir bir kurumsal hizmet platformudur."
+    }
+  }
+}

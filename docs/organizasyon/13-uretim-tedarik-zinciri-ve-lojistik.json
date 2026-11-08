@@ -1,0 +1,3125 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "13 - Üretim, Tedarik Zinciri ve Lojistik Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "13",
+    "name_tr": "Üretim, Tedarik Zinciri ve Lojistik",
+    "name_en": "Manufacturing, Supply Chain and Logistics",
+    "organization_model": "Tam Fonksiyonel",
+    "purpose": "Talebi güvenli, kaliteli, zamanında ve rekabetçi maliyetle ürüne dönüştürmek; hammadde kaynağından müşteriye teslimata kadar üretim, tedarik, stok ve lojistik akışını uçtan uca yönetmek.",
+    "reports_to": {
+      "title_tr": "Operasyonlardan Sorumlu Genel Müdür Yardımcısı / Operasyon Başkanı",
+      "title_en": "Chief Operating Officer (COO)"
+    },
+    "head": {
+      "position_code": "13.00.001",
+      "title_tr": "Üretim, Tedarik Zinciri ve Lojistik Direktörü",
+      "title_en": "Manufacturing, Supply Chain and Logistics Director",
+      "alternative_executive_title": "Chief Supply Chain Officer (CSCO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "13.01",
+        "13.02",
+        "13.03",
+        "13.04",
+        "13.05",
+        "13.06",
+        "13.07",
+        "13.08"
+      ],
+      "accountabilities": [
+        "Üretim ve tedarik zinciri stratejisini oluşturmak",
+        "Talep, üretim, kapasite, malzeme ve dağıtım planlarını bütünleştirmek",
+        "Üretim güvenliği, kalite, teslimat, stok ve maliyet performansını yönetmek",
+        "Satın alma ve tedarikçi ekosistemini geliştirmek",
+        "Tedarik zinciri dayanıklılığı, dijital görünürlük ve sürdürülebilirliği güçlendirmek"
+      ]
+    },
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "13.01",
+        "name_tr": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi",
+        "name_en": "Integrated Business Planning and Supply Chain Strategy",
+        "manager": {
+          "position_code": "13.01.001",
+          "title_tr": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi Müdürü",
+          "title_en": "Integrated Business Planning and Supply Chain Strategy Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.01.01",
+            "name_tr": "Tedarik Zinciri Stratejisi ve Ağ Tasarımı",
+            "name_en": "Supply Chain Strategy and Network Design",
+            "lead": {
+              "position_code": "13.01.01.001",
+              "title_tr": "Tedarik Zinciri Stratejisi ve Ağ Tasarımı Yöneticisi",
+              "title_en": "Supply Chain Strategy and Network Design Manager",
+              "reports_to": "13.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.01.01.002",
+                "title_tr": "Kıdemli Tedarik Zinciri Stratejisi Uzmanı",
+                "title_en": "Senior Supply Chain Strategy Specialist",
+                "reports_to": "13.01.01.001"
+              },
+              {
+                "position_code": "13.01.01.003",
+                "title_tr": "Tedarik Zinciri Stratejisi Uzmanı",
+                "title_en": "Supply Chain Strategy Specialist",
+                "reports_to": "13.01.01.001"
+              },
+              {
+                "position_code": "13.01.01.004",
+                "title_tr": "Ağ Tasarımı Analisti",
+                "title_en": "Network Design Analyst",
+                "reports_to": "13.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarik zinciri stratejisi ve hedef işletim modelini oluşturmak",
+              "Üretim, depo, dağıtım ve tedarik ağını tasarlamak",
+              "Dayanıklılık, maliyet ve hizmet seviyesi senaryolarını değerlendirmek"
+            ]
+          },
+          {
+            "team_code": "13.01.02",
+            "name_tr": "Entegre İş Planlama",
+            "name_en": "Integrated Business Planning",
+            "lead": {
+              "position_code": "13.01.02.001",
+              "title_tr": "Entegre İş Planlama Yöneticisi",
+              "title_en": "Integrated Business Planning Manager",
+              "reports_to": "13.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.01.02.002",
+                "title_tr": "Kıdemli Entegre İş Planlama Uzmanı",
+                "title_en": "Senior Integrated Business Planning Specialist",
+                "reports_to": "13.01.02.001"
+              },
+              {
+                "position_code": "13.01.02.003",
+                "title_tr": "Entegre İş Planlama Uzmanı",
+                "title_en": "Integrated Business Planning Specialist",
+                "reports_to": "13.01.02.001"
+              },
+              {
+                "position_code": "13.01.02.004",
+                "title_tr": "IBP Analisti",
+                "title_en": "IBP Analyst",
+                "reports_to": "13.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Talep, arz, kapasite, stok ve finansal planları bütünleştirmek",
+              "Aylık IBP/S&OP sürecini ve karar takvimini yönetmek",
+              "Senaryo, kısıt ve yönetim kararlarını takip etmek"
+            ]
+          },
+          {
+            "team_code": "13.01.03",
+            "name_tr": "Tedarik Zinciri Risk ve Süreklilik",
+            "name_en": "Supply Chain Risk and Continuity",
+            "lead": {
+              "position_code": "13.01.03.001",
+              "title_tr": "Tedarik Zinciri Risk ve Süreklilik Yöneticisi",
+              "title_en": "Supply Chain Risk and Continuity Manager",
+              "reports_to": "13.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.01.03.002",
+                "title_tr": "Kıdemli Tedarik Zinciri Risk Uzmanı",
+                "title_en": "Senior Supply Chain Risk Specialist",
+                "reports_to": "13.01.03.001"
+              },
+              {
+                "position_code": "13.01.03.003",
+                "title_tr": "Tedarik Zinciri Süreklilik Uzmanı",
+                "title_en": "Supply Chain Continuity Specialist",
+                "reports_to": "13.01.03.001"
+              },
+              {
+                "position_code": "13.01.03.004",
+                "title_tr": "Tedarik Riski Analisti",
+                "title_en": "Supply Risk Analyst",
+                "reports_to": "13.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Kritik tedarik, kapasite ve lojistik risklerini izlemek",
+              "Alternatif kaynak ve iş sürekliliği senaryolarını hazırlamak",
+              "Tedarik zinciri olaylarını ve aksiyon planlarını koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.02",
+        "name_tr": "Talep, Üretim ve Kapasite Planlama",
+        "name_en": "Demand, Production and Capacity Planning",
+        "manager": {
+          "position_code": "13.02.001",
+          "title_tr": "Talep, Üretim ve Kapasite Planlama Müdürü",
+          "title_en": "Demand, Production and Capacity Planning Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.02.01",
+            "name_tr": "Talep Planlama",
+            "name_en": "Demand Planning",
+            "lead": {
+              "position_code": "13.02.01.001",
+              "title_tr": "Talep Planlama Yöneticisi",
+              "title_en": "Demand Planning Manager",
+              "reports_to": "13.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.02.01.002",
+                "title_tr": "Kıdemli Talep Planlama Uzmanı",
+                "title_en": "Senior Demand Planning Specialist",
+                "reports_to": "13.02.01.001"
+              },
+              {
+                "position_code": "13.02.01.003",
+                "title_tr": "Talep Planlama Uzmanı",
+                "title_en": "Demand Planning Specialist",
+                "reports_to": "13.02.01.001"
+              },
+              {
+                "position_code": "13.02.01.004",
+                "title_tr": "Talep Tahmin Analisti",
+                "title_en": "Demand Forecast Analyst",
+                "reports_to": "13.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Satış tahminlerini istatistiksel ve ticari girdilerle oluşturmak",
+              "Tahmin doğruluğu ve sapma nedenlerini analiz etmek",
+              "Kampanya, sezon ve yeni ürün etkilerini plana yansıtmak"
+            ]
+          },
+          {
+            "team_code": "13.02.02",
+            "name_tr": "Üretim Planlama ve Çizelgeleme",
+            "name_en": "Production Planning and Scheduling",
+            "lead": {
+              "position_code": "13.02.02.001",
+              "title_tr": "Üretim Planlama ve Çizelgeleme Yöneticisi",
+              "title_en": "Production Planning and Scheduling Manager",
+              "reports_to": "13.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.02.02.002",
+                "title_tr": "Kıdemli Üretim Planlama Uzmanı",
+                "title_en": "Senior Production Planning Specialist",
+                "reports_to": "13.02.02.001"
+              },
+              {
+                "position_code": "13.02.02.003",
+                "title_tr": "Üretim Planlama Uzmanı",
+                "title_en": "Production Planning Specialist",
+                "reports_to": "13.02.02.001"
+              },
+              {
+                "position_code": "13.02.02.004",
+                "title_tr": "Üretim Çizelgeleme Uzmanı",
+                "title_en": "Production Scheduling Specialist",
+                "reports_to": "13.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ana üretim planını ve detay çizelgeleri hazırlamak",
+              "Malzeme, kapasite ve teslimat kısıtlarını dengelemek",
+              "Plan gerçekleşme ve çizelge uyumunu izlemek"
+            ]
+          },
+          {
+            "team_code": "13.02.03",
+            "name_tr": "Kapasite ve Kaynak Planlama",
+            "name_en": "Capacity and Resource Planning",
+            "lead": {
+              "position_code": "13.02.03.001",
+              "title_tr": "Kapasite ve Kaynak Planlama Yöneticisi",
+              "title_en": "Capacity and Resource Planning Manager",
+              "reports_to": "13.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.02.03.002",
+                "title_tr": "Kıdemli Kapasite Planlama Uzmanı",
+                "title_en": "Senior Capacity Planning Specialist",
+                "reports_to": "13.02.03.001"
+              },
+              {
+                "position_code": "13.02.03.003",
+                "title_tr": "Kapasite Planlama Uzmanı",
+                "title_en": "Capacity Planning Specialist",
+                "reports_to": "13.02.03.001"
+              },
+              {
+                "position_code": "13.02.03.004",
+                "title_tr": "Kaynak Planlama Analisti",
+                "title_en": "Resource Planning Analyst",
+                "reports_to": "13.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Makine, iş gücü, hat ve vardiya kapasitesini planlamak",
+              "Darboğaz ve kapasite açığı senaryolarını oluşturmak",
+              "Fazla mesai, dış kaynak ve yatırım ihtiyaçlarını belirlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.03",
+        "name_tr": "Üretim Operasyonları",
+        "name_en": "Manufacturing Operations",
+        "manager": {
+          "position_code": "13.03.001",
+          "title_tr": "Üretim Operasyonları Müdürü",
+          "title_en": "Manufacturing Operations Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.03.01",
+            "name_tr": "Üretim Hatları ve Vardiya Yönetimi",
+            "name_en": "Production Lines and Shift Management",
+            "lead": {
+              "position_code": "13.03.01.001",
+              "title_tr": "Üretim Hatları ve Vardiya Yönetimi Yöneticisi",
+              "title_en": "Production Lines and Shift Management Manager",
+              "reports_to": "13.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.03.01.002",
+                "title_tr": "Kıdemli Üretim Sorumlusu",
+                "title_en": "Senior Production Supervisor",
+                "reports_to": "13.03.01.001"
+              },
+              {
+                "position_code": "13.03.01.003",
+                "title_tr": "Üretim Sorumlusu",
+                "title_en": "Production Supervisor",
+                "reports_to": "13.03.01.001"
+              },
+              {
+                "position_code": "13.03.01.004",
+                "title_tr": "Vardiya Amiri",
+                "title_en": "Shift Supervisor",
+                "reports_to": "13.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Günlük üretim planını hat ve vardiya bazında gerçekleştirmek",
+              "İş gücü, makine ve malzeme akışını koordine etmek",
+              "Çıktı, duruş, fire ve güvenlik göstergelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "13.03.02",
+            "name_tr": "Üretim Mühendisliği ve Endüstriyelleştirme",
+            "name_en": "Manufacturing Engineering and Industrialization",
+            "lead": {
+              "position_code": "13.03.02.001",
+              "title_tr": "Üretim Mühendisliği ve Endüstriyelleştirme Yöneticisi",
+              "title_en": "Manufacturing Engineering and Industrialization Manager",
+              "reports_to": "13.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.03.02.002",
+                "title_tr": "Kıdemli Üretim Mühendisi",
+                "title_en": "Senior Manufacturing Engineer",
+                "reports_to": "13.03.02.001"
+              },
+              {
+                "position_code": "13.03.02.003",
+                "title_tr": "Üretim Mühendisi",
+                "title_en": "Manufacturing Engineer",
+                "reports_to": "13.03.02.001"
+              },
+              {
+                "position_code": "13.03.02.004",
+                "title_tr": "Endüstriyelleştirme Uzmanı",
+                "title_en": "Industrialization Specialist",
+                "reports_to": "13.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Üretim metotları, iş akışı ve proses parametrelerini tasarlamak",
+              "Yeni ürünlerin üretime alınmasını koordine etmek",
+              "Çevrim süresi, hat dengeleme ve proses yeterliliğini geliştirmek"
+            ]
+          },
+          {
+            "team_code": "13.03.03",
+            "name_tr": "Yalın Üretim ve Sürekli İyileştirme",
+            "name_en": "Lean Manufacturing and Continuous Improvement",
+            "lead": {
+              "position_code": "13.03.03.001",
+              "title_tr": "Yalın Üretim ve Sürekli İyileştirme Yöneticisi",
+              "title_en": "Lean Manufacturing and Continuous Improvement Manager",
+              "reports_to": "13.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.03.03.002",
+                "title_tr": "Kıdemli Yalın Üretim Uzmanı",
+                "title_en": "Senior Lean Manufacturing Specialist",
+                "reports_to": "13.03.03.001"
+              },
+              {
+                "position_code": "13.03.03.003",
+                "title_tr": "Sürekli İyileştirme Uzmanı",
+                "title_en": "Continuous Improvement Specialist",
+                "reports_to": "13.03.03.001"
+              },
+              {
+                "position_code": "13.03.03.004",
+                "title_tr": "Üretim Verimlilik Analisti",
+                "title_en": "Manufacturing Productivity Analyst",
+                "reports_to": "13.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Lean, Kaizen, 5S ve problem çözme programlarını yürütmek",
+              "İsraf, bekleme, hurda ve tekrar işi azaltmak",
+              "İyileştirme faydalarını kapasite, maliyet ve kalite bazında ölçmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.04",
+        "name_tr": "Bakım, Tesis ve Teknik Hizmetler",
+        "name_en": "Maintenance, Facilities and Technical Services",
+        "manager": {
+          "position_code": "13.04.001",
+          "title_tr": "Bakım, Tesis ve Teknik Hizmetler Müdürü",
+          "title_en": "Maintenance, Facilities and Technical Services Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.04.01",
+            "name_tr": "Planlı ve Kestirimci Bakım",
+            "name_en": "Preventive and Predictive Maintenance",
+            "lead": {
+              "position_code": "13.04.01.001",
+              "title_tr": "Planlı ve Kestirimci Bakım Yöneticisi",
+              "title_en": "Preventive and Predictive Maintenance Manager",
+              "reports_to": "13.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.04.01.002",
+                "title_tr": "Kıdemli Bakım Mühendisi",
+                "title_en": "Senior Maintenance Engineer",
+                "reports_to": "13.04.01.001"
+              },
+              {
+                "position_code": "13.04.01.003",
+                "title_tr": "Bakım Mühendisi",
+                "title_en": "Maintenance Engineer",
+                "reports_to": "13.04.01.001"
+              },
+              {
+                "position_code": "13.04.01.004",
+                "title_tr": "Kestirimci Bakım Uzmanı",
+                "title_en": "Predictive Maintenance Specialist",
+                "reports_to": "13.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Bakım stratejisi ve periyodik bakım planlarını oluşturmak",
+              "Kestirimci bakım verilerini ve ekipman sağlığını izlemek",
+              "Bakım uyumu, MTBF ve MTTR sonuçlarını geliştirmek"
+            ]
+          },
+          {
+            "team_code": "13.04.02",
+            "name_tr": "Arıza ve Teknik Müdahale",
+            "name_en": "Breakdown and Technical Response",
+            "lead": {
+              "position_code": "13.04.02.001",
+              "title_tr": "Arıza ve Teknik Müdahale Yöneticisi",
+              "title_en": "Breakdown and Technical Response Manager",
+              "reports_to": "13.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.04.02.002",
+                "title_tr": "Kıdemli Teknik Bakım Uzmanı",
+                "title_en": "Senior Technical Maintenance Specialist",
+                "reports_to": "13.04.02.001"
+              },
+              {
+                "position_code": "13.04.02.003",
+                "title_tr": "Teknik Bakım Uzmanı",
+                "title_en": "Technical Maintenance Specialist",
+                "reports_to": "13.04.02.001"
+              },
+              {
+                "position_code": "13.04.02.004",
+                "title_tr": "Arıza Müdahale Teknisyeni",
+                "title_en": "Breakdown Response Technician",
+                "reports_to": "13.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Üretim arızalarına hızlı ve güvenli müdahale etmek",
+              "Kök neden analizi ve kalıcı çözüm aksiyonlarını yürütmek",
+              "Kritik yedek parça ve teknik eskalasyonu koordine etmek"
+            ]
+          },
+          {
+            "team_code": "13.04.03",
+            "name_tr": "Tesis, Enerji ve Yardımcı İşletmeler",
+            "name_en": "Facilities, Energy and Utilities",
+            "lead": {
+              "position_code": "13.04.03.001",
+              "title_tr": "Tesis, Enerji ve Yardımcı İşletmeler Yöneticisi",
+              "title_en": "Facilities, Energy and Utilities Manager",
+              "reports_to": "13.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.04.03.002",
+                "title_tr": "Kıdemli Tesis ve Enerji Uzmanı",
+                "title_en": "Senior Facilities and Energy Specialist",
+                "reports_to": "13.04.03.001"
+              },
+              {
+                "position_code": "13.04.03.003",
+                "title_tr": "Tesis Yönetimi Uzmanı",
+                "title_en": "Facilities Management Specialist",
+                "reports_to": "13.04.03.001"
+              },
+              {
+                "position_code": "13.04.03.004",
+                "title_tr": "Yardımcı İşletmeler Teknisyeni",
+                "title_en": "Utilities Technician",
+                "reports_to": "13.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tesis altyapısı, enerji ve yardımcı işletmeleri yönetmek",
+              "Enerji tüketimi ve verimlilik projelerini izlemek",
+              "Tesis sürekliliği ve yasal teknik kontrolleri koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.05",
+        "name_tr": "Satın Alma ve Tedarikçi Yönetimi",
+        "name_en": "Procurement and Supplier Management",
+        "manager": {
+          "position_code": "13.05.001",
+          "title_tr": "Satın Alma ve Tedarikçi Yönetimi Müdürü",
+          "title_en": "Procurement and Supplier Management Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.05.01",
+            "name_tr": "Stratejik Satın Alma ve Kategori Yönetimi",
+            "name_en": "Strategic Sourcing and Category Management",
+            "lead": {
+              "position_code": "13.05.01.001",
+              "title_tr": "Stratejik Satın Alma ve Kategori Yönetimi Yöneticisi",
+              "title_en": "Strategic Sourcing and Category Management Manager",
+              "reports_to": "13.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.05.01.002",
+                "title_tr": "Kıdemli Stratejik Satın Alma Uzmanı",
+                "title_en": "Senior Strategic Sourcing Specialist",
+                "reports_to": "13.05.01.001"
+              },
+              {
+                "position_code": "13.05.01.003",
+                "title_tr": "Kategori Yönetimi Uzmanı",
+                "title_en": "Category Management Specialist",
+                "reports_to": "13.05.01.001"
+              },
+              {
+                "position_code": "13.05.01.004",
+                "title_tr": "Satın Alma Analisti",
+                "title_en": "Procurement Analyst",
+                "reports_to": "13.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kategori stratejileri ve kaynak bulma planlarını oluşturmak",
+              "İhale, teklif toplama ve ticari müzakere süreçlerini yürütmek",
+              "Toplam sahip olma maliyeti ve tasarruf hedeflerini yönetmek"
+            ]
+          },
+          {
+            "team_code": "13.05.02",
+            "name_tr": "Operasyonel Satın Alma",
+            "name_en": "Operational Procurement",
+            "lead": {
+              "position_code": "13.05.02.001",
+              "title_tr": "Operasyonel Satın Alma Yöneticisi",
+              "title_en": "Operational Procurement Manager",
+              "reports_to": "13.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.05.02.002",
+                "title_tr": "Kıdemli Satın Alma Uzmanı",
+                "title_en": "Senior Procurement Specialist",
+                "reports_to": "13.05.02.001"
+              },
+              {
+                "position_code": "13.05.02.003",
+                "title_tr": "Satın Alma Uzmanı",
+                "title_en": "Procurement Specialist",
+                "reports_to": "13.05.02.001"
+              },
+              {
+                "position_code": "13.05.02.004",
+                "title_tr": "Satın Alma Operasyonları Koordinatörü",
+                "title_en": "Procurement Operations Coordinator",
+                "reports_to": "13.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Onaylı talepleri siparişe dönüştürmek",
+              "Sipariş teyidi, termin ve teslimat takibini yürütmek",
+              "Acil satın alma ve sipariş uyuşmazlıklarını çözmek"
+            ]
+          },
+          {
+            "team_code": "13.05.03",
+            "name_tr": "Tedarikçi Performansı ve Geliştirme",
+            "name_en": "Supplier Performance and Development",
+            "lead": {
+              "position_code": "13.05.03.001",
+              "title_tr": "Tedarikçi Performansı ve Geliştirme Yöneticisi",
+              "title_en": "Supplier Performance and Development Manager",
+              "reports_to": "13.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.05.03.002",
+                "title_tr": "Kıdemli Tedarikçi Geliştirme Uzmanı",
+                "title_en": "Senior Supplier Development Specialist",
+                "reports_to": "13.05.03.001"
+              },
+              {
+                "position_code": "13.05.03.003",
+                "title_tr": "Tedarikçi Performans Uzmanı",
+                "title_en": "Supplier Performance Specialist",
+                "reports_to": "13.05.03.001"
+              },
+              {
+                "position_code": "13.05.03.004",
+                "title_tr": "Tedarikçi Kalite Analisti",
+                "title_en": "Supplier Quality Analyst",
+                "reports_to": "13.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarikçi performans kartlarını ve değerlendirmeleri yönetmek",
+              "Kalite, teslimat, maliyet ve risk iyileştirme planlarını yürütmek",
+              "Alternatif tedarikçi ve yerelleştirme programlarını desteklemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.06",
+        "name_tr": "Malzeme, Stok ve Depo Yönetimi",
+        "name_en": "Materials, Inventory and Warehouse Management",
+        "manager": {
+          "position_code": "13.06.001",
+          "title_tr": "Malzeme, Stok ve Depo Yönetimi Müdürü",
+          "title_en": "Materials, Inventory and Warehouse Management Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.06.01",
+            "name_tr": "Malzeme İhtiyaç Planlama",
+            "name_en": "Material Requirements Planning",
+            "lead": {
+              "position_code": "13.06.01.001",
+              "title_tr": "Malzeme İhtiyaç Planlama Yöneticisi",
+              "title_en": "Material Requirements Planning Manager",
+              "reports_to": "13.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.06.01.002",
+                "title_tr": "Kıdemli Malzeme Planlama Uzmanı",
+                "title_en": "Senior Material Planning Specialist",
+                "reports_to": "13.06.01.001"
+              },
+              {
+                "position_code": "13.06.01.003",
+                "title_tr": "Malzeme Planlama Uzmanı",
+                "title_en": "Material Planning Specialist",
+                "reports_to": "13.06.01.001"
+              },
+              {
+                "position_code": "13.06.01.004",
+                "title_tr": "MRP Analisti",
+                "title_en": "MRP Analyst",
+                "reports_to": "13.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Üretim planına göre malzeme ihtiyaç planını çalıştırmak",
+              "Eksik, fazla ve kritik malzeme risklerini izlemek",
+              "Tedarik ve üretim ekipleriyle malzeme uygunluğunu koordine etmek"
+            ]
+          },
+          {
+            "team_code": "13.06.02",
+            "name_tr": "Stok ve Envanter Yönetimi",
+            "name_en": "Stock and Inventory Management",
+            "lead": {
+              "position_code": "13.06.02.001",
+              "title_tr": "Stok ve Envanter Yönetimi Yöneticisi",
+              "title_en": "Stock and Inventory Management Manager",
+              "reports_to": "13.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.06.02.002",
+                "title_tr": "Kıdemli Envanter Yönetimi Uzmanı",
+                "title_en": "Senior Inventory Management Specialist",
+                "reports_to": "13.06.02.001"
+              },
+              {
+                "position_code": "13.06.02.003",
+                "title_tr": "Stok Yönetimi Uzmanı",
+                "title_en": "Stock Management Specialist",
+                "reports_to": "13.06.02.001"
+              },
+              {
+                "position_code": "13.06.02.004",
+                "title_tr": "Envanter Kontrol Analisti",
+                "title_en": "Inventory Control Analyst",
+                "reports_to": "13.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Stok politika, güvenlik stoğu ve yeniden sipariş seviyelerini yönetmek",
+              "Sayım, hareket ve stok doğruluğunu güvence altına almak",
+              "Stok devir hızı, atıl ve yavaş hareketli stokları izlemek"
+            ]
+          },
+          {
+            "team_code": "13.06.03",
+            "name_tr": "Depo ve İç Lojistik",
+            "name_en": "Warehouse and Intralogistics",
+            "lead": {
+              "position_code": "13.06.03.001",
+              "title_tr": "Depo ve İç Lojistik Yöneticisi",
+              "title_en": "Warehouse and Intralogistics Manager",
+              "reports_to": "13.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.06.03.002",
+                "title_tr": "Kıdemli Depo Operasyon Uzmanı",
+                "title_en": "Senior Warehouse Operations Specialist",
+                "reports_to": "13.06.03.001"
+              },
+              {
+                "position_code": "13.06.03.003",
+                "title_tr": "Depo Operasyon Uzmanı",
+                "title_en": "Warehouse Operations Specialist",
+                "reports_to": "13.06.03.001"
+              },
+              {
+                "position_code": "13.06.03.004",
+                "title_tr": "İç Lojistik Koordinatörü",
+                "title_en": "Intralogistics Coordinator",
+                "reports_to": "13.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Mal kabul, adresleme, toplama ve üretim besleme süreçlerini yönetmek",
+              "Depo yerleşimi ve malzeme akışını optimize etmek",
+              "Depo güvenliği, doğruluk ve verimlilik göstergelerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.07",
+        "name_tr": "Lojistik, Dağıtım ve Dış Ticaret",
+        "name_en": "Logistics, Distribution and Foreign Trade",
+        "manager": {
+          "position_code": "13.07.001",
+          "title_tr": "Lojistik, Dağıtım ve Dış Ticaret Müdürü",
+          "title_en": "Logistics, Distribution and Foreign Trade Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.07.01",
+            "name_tr": "Nakliye ve Dağıtım Yönetimi",
+            "name_en": "Transportation and Distribution Management",
+            "lead": {
+              "position_code": "13.07.01.001",
+              "title_tr": "Nakliye ve Dağıtım Yönetimi Yöneticisi",
+              "title_en": "Transportation and Distribution Management Manager",
+              "reports_to": "13.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.07.01.002",
+                "title_tr": "Kıdemli Lojistik Uzmanı",
+                "title_en": "Senior Logistics Specialist",
+                "reports_to": "13.07.01.001"
+              },
+              {
+                "position_code": "13.07.01.003",
+                "title_tr": "Nakliye ve Dağıtım Uzmanı",
+                "title_en": "Transportation and Distribution Specialist",
+                "reports_to": "13.07.01.001"
+              },
+              {
+                "position_code": "13.07.01.004",
+                "title_tr": "Sevkiyat Koordinatörü",
+                "title_en": "Dispatch Coordinator",
+                "reports_to": "13.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Sevkiyat, taşıma ve teslimat planlarını oluşturmak",
+              "Taşıyıcı kapasitesi, rota ve teslimat performansını yönetmek",
+              "Navlun, hasar, gecikme ve teslimat doğruluğunu izlemek"
+            ]
+          },
+          {
+            "team_code": "13.07.02",
+            "name_tr": "Dış Ticaret ve Gümrük Operasyonları",
+            "name_en": "Foreign Trade and Customs Operations",
+            "lead": {
+              "position_code": "13.07.02.001",
+              "title_tr": "Dış Ticaret ve Gümrük Operasyonları Yöneticisi",
+              "title_en": "Foreign Trade and Customs Operations Manager",
+              "reports_to": "13.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.07.02.002",
+                "title_tr": "Kıdemli Dış Ticaret Uzmanı",
+                "title_en": "Senior Foreign Trade Specialist",
+                "reports_to": "13.07.02.001"
+              },
+              {
+                "position_code": "13.07.02.003",
+                "title_tr": "Dış Ticaret Uzmanı",
+                "title_en": "Foreign Trade Specialist",
+                "reports_to": "13.07.02.001"
+              },
+              {
+                "position_code": "13.07.02.004",
+                "title_tr": "Gümrük Operasyonları Uzmanı",
+                "title_en": "Customs Operations Specialist",
+                "reports_to": "13.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "İthalat, ihracat ve gümrük süreçlerini yürütmek",
+              "Dış ticaret belgeleri ve mevzuat uygunluğunu sağlamak",
+              "Gümrük müşaviri, taşıyıcı ve ilgili kurum koordinasyonunu yönetmek"
+            ]
+          },
+          {
+            "team_code": "13.07.03",
+            "name_tr": "Lojistik Hizmet Sağlayıcı Yönetimi",
+            "name_en": "Logistics Service Provider Management",
+            "lead": {
+              "position_code": "13.07.03.001",
+              "title_tr": "Lojistik Hizmet Sağlayıcı Yönetimi Yöneticisi",
+              "title_en": "Logistics Service Provider Management Manager",
+              "reports_to": "13.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.07.03.002",
+                "title_tr": "Kıdemli Lojistik Tedarikçi Uzmanı",
+                "title_en": "Senior Logistics Provider Specialist",
+                "reports_to": "13.07.03.001"
+              },
+              {
+                "position_code": "13.07.03.003",
+                "title_tr": "Lojistik Sözleşme ve Performans Uzmanı",
+                "title_en": "Logistics Contract and Performance Specialist",
+                "reports_to": "13.07.03.001"
+              },
+              {
+                "position_code": "13.07.03.004",
+                "title_tr": "3PL Operasyon Analisti",
+                "title_en": "3PL Operations Analyst",
+                "reports_to": "13.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "3PL ve taşıyıcı hizmet seviyelerini yönetmek",
+              "Lojistik kapasite ve performans değerlendirmelerini yürütmek",
+              "Sözleşme KPI, maliyet ve iyileştirme aksiyonlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "13.08",
+        "name_tr": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik",
+        "name_en": "Supply Chain Analytics, Cost and Sustainability",
+        "manager": {
+          "position_code": "13.08.001",
+          "title_tr": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik Müdürü",
+          "title_en": "Supply Chain Analytics, Cost and Sustainability Manager",
+          "reports_to": "13.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "13.08.01",
+            "name_tr": "Tedarik Zinciri Analitiği ve Kontrol Kulesi",
+            "name_en": "Supply Chain Analytics and Control Tower",
+            "lead": {
+              "position_code": "13.08.01.001",
+              "title_tr": "Tedarik Zinciri Analitiği ve Kontrol Kulesi Yöneticisi",
+              "title_en": "Supply Chain Analytics and Control Tower Manager",
+              "reports_to": "13.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.08.01.002",
+                "title_tr": "Kıdemli Tedarik Zinciri Analitiği Uzmanı",
+                "title_en": "Senior Supply Chain Analytics Specialist",
+                "reports_to": "13.08.01.001"
+              },
+              {
+                "position_code": "13.08.01.003",
+                "title_tr": "Tedarik Zinciri Analitiği Uzmanı",
+                "title_en": "Supply Chain Analytics Specialist",
+                "reports_to": "13.08.01.001"
+              },
+              {
+                "position_code": "13.08.01.004",
+                "title_tr": "Kontrol Kulesi Analisti",
+                "title_en": "Control Tower Analyst",
+                "reports_to": "13.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Uçtan uca tedarik zinciri görünürlüğü ve gösterge panolarını yönetmek",
+              "Talep, üretim, stok, tedarik ve lojistik istisnalarını izlemek",
+              "Erken uyarı, senaryo ve karar destek analizleri üretmek"
+            ]
+          },
+          {
+            "team_code": "13.08.02",
+            "name_tr": "Üretim ve Tedarik Zinciri Maliyet Yönetimi",
+            "name_en": "Manufacturing and Supply Chain Cost Management",
+            "lead": {
+              "position_code": "13.08.02.001",
+              "title_tr": "Üretim ve Tedarik Zinciri Maliyet Yönetimi Yöneticisi",
+              "title_en": "Manufacturing and Supply Chain Cost Management Manager",
+              "reports_to": "13.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.08.02.002",
+                "title_tr": "Kıdemli Tedarik Zinciri Maliyet Uzmanı",
+                "title_en": "Senior Supply Chain Cost Specialist",
+                "reports_to": "13.08.02.001"
+              },
+              {
+                "position_code": "13.08.02.003",
+                "title_tr": "Üretim Maliyet Uzmanı",
+                "title_en": "Manufacturing Cost Specialist",
+                "reports_to": "13.08.02.001"
+              },
+              {
+                "position_code": "13.08.02.004",
+                "title_tr": "Tedarik Zinciri Maliyet Analisti",
+                "title_en": "Supply Chain Cost Analyst",
+                "reports_to": "13.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Üretim, stok, lojistik ve satın alma maliyet sürücülerini analiz etmek",
+              "Birim maliyet, sapma ve tasarruf fırsatlarını izlemek",
+              "Finans ile maliyet düşürme iş planlarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "13.08.03",
+            "name_tr": "Sürdürülebilir Tedarik Zinciri",
+            "name_en": "Sustainable Supply Chain",
+            "lead": {
+              "position_code": "13.08.03.001",
+              "title_tr": "Sürdürülebilir Tedarik Zinciri Yöneticisi",
+              "title_en": "Sustainable Supply Chain Manager",
+              "reports_to": "13.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "13.08.03.002",
+                "title_tr": "Kıdemli Sürdürülebilir Tedarik Zinciri Uzmanı",
+                "title_en": "Senior Sustainable Supply Chain Specialist",
+                "reports_to": "13.08.03.001"
+              },
+              {
+                "position_code": "13.08.03.003",
+                "title_tr": "Sürdürülebilirlik Uzmanı",
+                "title_en": "Sustainability Specialist",
+                "reports_to": "13.08.03.001"
+              },
+              {
+                "position_code": "13.08.03.004",
+                "title_tr": "Karbon ve Kaynak Verimliliği Analisti",
+                "title_en": "Carbon and Resource Efficiency Analyst",
+                "reports_to": "13.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarik zinciri çevresel ve sosyal kriterlerini uygulamak",
+              "Enerji, emisyon, atık ve kaynak verimliliği göstergelerini izlemek",
+              "Tedarikçi sürdürülebilirlik değerlendirmelerini koordine etmek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Tahmin Doğruluğu",
+        "Üretim Planına Uyum",
+        "Genel Ekipman Etkinliği (OEE)",
+        "Zamanında ve Eksiksiz Teslimat (OTIF)",
+        "Sipariş Karşılama Oranı",
+        "Stok Devir Hızı",
+        "Stok Doğruluk Oranı",
+        "Tedarikçi Zamanında Teslimat Oranı",
+        "Tedarikçi Hata Oranı",
+        "Satın Alma Tasarrufu",
+        "Birim Üretim Maliyeti",
+        "Fire ve Hurda Oranı",
+        "MTBF ve MTTR",
+        "Lojistik Maliyet / Ciro Oranı",
+        "Tedarik Zinciri Karbon Yoğunluğu"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük Üretim ve Tedarik Kontrol Toplantısı",
+          "focus": "Üretim planı, malzeme, kalite, arıza ve sevkiyat istisnaları"
+        },
+        {
+          "forum": "Haftalık Arz ve Kapasite Toplantısı",
+          "focus": "Talep değişimi, kapasite, stok, tedarik ve teslimat riskleri"
+        },
+        {
+          "forum": "Aylık IBP / S&OP Kurulu",
+          "focus": "Talep-arz-finans dengesi, senaryolar ve yönetim kararları"
+        },
+        {
+          "forum": "Çeyreklik Tedarik Zinciri Strateji Kurulu",
+          "focus": "Ağ tasarımı, tedarikçi portföyü, yatırım, risk ve sürdürülebilirlik"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "operations_management": "Operasyon Yönetimi şirket genelindeki hizmet teslimatı, saha ve operasyonel yönetişimin; bu departman ise fiziksel üretim, malzeme, tedarik, depo ve dağıtım akışının sahibidir.",
+      "sales": "Satış müşteri talebi, teklif ve ticari taahhüdün; Tedarik Zinciri talep planı, üretilebilirlik, kapasite ve teslimat teyidinin sahibidir.",
+      "product_rd": "Ürün ve Ar-Ge ürün tasarımı, teknik şartname ve ürün yol haritasının; Üretim yeni ürünün endüstriyelleştirilmesi ve seri üretim yeterliliğinin sahibidir.",
+      "quality": "Kalite kurumsal kalite sistemi, bağımsız güvence ve ürün serbest bırakma kriterlerinin; Üretim süreç içi kalite, proses kontrolü ve düzeltici uygulamaların sahibidir.",
+      "finance": "Finans bütçe politikası, muhasebe ve mali kontrolün; departman üretim, tedarik, stok ve lojistik maliyet sürücülerinin sahibidir.",
+      "legal": "Hukuk sözleşme hükümleri ve uyuşmazlıkların; Satın Alma ticari müzakere, sipariş ve tedarikçi performansının sahibidir.",
+      "risk_compliance": "Uyum ve Risk metodoloji ve ikinci hat gözetiminin; departman tedarik zinciri birinci hat risk kontrolleri ve süreklilik uygulamasının sahibidir.",
+      "sustainability": "Kurumsal sürdürülebilirlik politika ve raporlama çerçevesinin; departman üretim ve tedarik zinciri verisi, hedef uygulaması ve tedarikçi programlarının sahibidir.",
+      "human_resources": "İnsan Kaynakları çalışan politikaları, işe alım ve ücretin; Üretim günlük vardiya, yetkinlik ihtiyacı ve iş gücü kapasitesinin sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; üretim hacmi, vardiya sayısı, tesis ve hat sayısı, ürün çeşitliliği, otomasyon seviyesi, tedarikçi portföyü, stok ve sevkiyat hacmi ile dış ticaret kapsamına göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; mühendis, uzman, teknisyen ve operatör kadroları iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Üretim hattı ve tesis sayısı",
+        "Vardiya düzeni ve yıllık üretim hacmi",
+        "SKU ve reçete çeşitliliği",
+        "Tedarikçi ve satın alma kategorisi sayısı",
+        "Depo alanı ve stok hareketi",
+        "Sevkiyat ve dış ticaret hacmi",
+        "Bakım varlık sayısı ve kritiklik",
+        "Otomasyon düzeyi ve büyüme tahmini"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Doğru ürünü; doğru miktarda, doğru kalitede, doğru zamanda ve toplam değer zinciri açısından en uygun maliyetle üretip teslim etmek."
+    }
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Üretim, tedarik zinciri ve lojistik stratejisini ve hedef işletim modelini oluşturmak",
+        "Talep, üretim, kapasite, malzeme ve dağıtım planlarını entegre iş planlama süreciyle bütünleştirmek",
+        "Üretim operasyonlarını güvenlik, süreç içi kalite, teslimat, verimlilik ve maliyet hedefleriyle yönetmek",
+        "Bakım, tesis ve yardımcı işletmelerin sürekliliğini ve ekipman güvenilirliğini sağlamak",
+        "Satın alma kategorilerini ve tedarikçi ekosistemini toplam sahip olma maliyeti ve risk bakışıyla geliştirmek",
+        "Malzeme, stok ve depo akışını stok doğruluğu, devir hızı ve hizmet seviyesi hedefleriyle yönetmek",
+        "Sevkiyat, dağıtım, dış ticaret ve gümrük süreçlerini zamanında ve mevzuata uygun yürütmek",
+        "Tedarik zincirinin uçtan uca görünürlüğünü, maliyet şeffaflığını, dayanıklılığını ve sürdürülebilirliğini güçlendirmek"
+      ],
+      "authorities": [
+        "Onaylı entegre iş planına bağlı ana üretim, malzeme ve dağıtım planlarını onaylar",
+        "Satış taleplerine üretilebilirlik, kapasite ve teslimat teyidi verir",
+        "Yetki matrisi sınırları içinde tedarikçi seçimini ve satın alma siparişlerini onaylar",
+        "Güvenlik, ekipman veya proses kontrolü riski oluşan hatta üretimi durdurabilir",
+        "Stok politikasını, güvenlik stoğu ilkelerini ve depo standartlarını belirler",
+        "Kapasite, yatırım, dış kaynak ve vardiya değişikliği ihtiyaçlarını gerekçeleriyle onaya sunar",
+        "Departman bütçesini ve maliyet düşürme planlarını Finans çerçevesine uygun hazırlayıp onaya sunar"
+      ],
+      "collaborations": [
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Operasyon Stratejisi, Planlama ve Yönetişim",
+          "topic": "Şirket geneli operasyonel yönetişim ile fiziksel üretim ve dağıtım akışı arasındaki devir noktaları"
+        },
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "Satış Performansı ve Gelir Planlama",
+          "topic": "Satış tahmini, talep planı, kapasite ve teslimat teyidi için IBP girdileri"
+        },
+        {
+          "department": "18 - Ürün Yönetimi ve Ar-Ge",
+          "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+          "topic": "Yeni ürünün endüstriyelleştirilmesi ve seri üretim yeterliliğinin doğrulanması"
+        },
+        {
+          "department": "14 - Kalite Yönetimi",
+          "unit": "Operasyonel Kalite Kontrol",
+          "topic": "Süreç içi kalite, proses kontrolü, ürün serbest bırakma kriterleri ve düzeltici uygulamalar"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+          "topic": "Üretim, tedarik, stok ve lojistik maliyet sürücüleri ile bütçe planlaması"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Sözleşmeler ve Ticari Hukuk",
+          "topic": "Tedarikçi, taşıyıcı ve 3PL sözleşme hükümleri ile ticari uyuşmazlıklar"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "İş Sürekliliği ve Kriz Riskleri",
+          "topic": "Tedarik zinciri birinci hat risk kontrolleri, iş sürekliliği ve ikinci hat gözetimi"
+        },
+        {
+          "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+          "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+          "topic": "Üretim ve tedarik zinciri sürdürülebilirlik verisi, hedef uygulaması ve kurumsal raporlama"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "İK Planlama ve Organizasyonel Gelişim",
+          "topic": "Vardiya düzeni, yetkinlik ihtiyacı ve iş gücü kapasitesi planlaması"
+        }
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü",
+          "title_tr": "Üretim, Tedarik Zinciri ve Lojistik Direktörü",
+          "title_en": "Manufacturing, Supply Chain and Logistics Director"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Manager / Lead"
+        },
+        {
+          "level": "Kıdemli Uzman",
+          "title_tr": "Kıdemli Uzman / Kıdemli Mühendis",
+          "title_en": "Senior Specialist / Senior Engineer"
+        },
+        {
+          "level": "Uzman",
+          "title_tr": "Uzman / Mühendis / Sorumlu",
+          "title_en": "Specialist / Engineer / Officer"
+        },
+        {
+          "level": "Analist / Koordinatör",
+          "title_tr": "Analist / Koordinatör",
+          "title_en": "Analyst / Coordinator"
+        },
+        {
+          "level": "Vardiya ve Teknik Roller",
+          "title_tr": "Vardiya Amiri / Teknisyen",
+          "title_en": "Shift Supervisor / Technician"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 53,
+          "max": 111
+        },
+        {
+          "model": "Standart",
+          "min": 111,
+          "max": 228
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 228,
+          "max": 321
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 111,
+        "total_max": 228,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Yönetici",
+            "min": 5,
+            "max": 12
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 24,
+            "max": 48
+          },
+          {
+            "role_group": "Uzman",
+            "min": 27,
+            "max": 81
+          },
+          {
+            "role_group": "Analist",
+            "min": 14,
+            "max": 28
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "role_group": "Teknisyen / Operatör",
+            "min": 5,
+            "max": 20
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "13.01",
+        "name_tr": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi",
+        "responsibilities": [
+          "Tedarik zinciri stratejisini ve hedef işletim modelini oluşturmak",
+          "Üretim, depo, dağıtım ve tedarik ağını hizmet, maliyet ve dayanıklılık senaryolarıyla tasarlamak",
+          "Talep, arz, kapasite, stok ve finansal planları aylık IBP/S&OP döngüsünde bütünleştirmek",
+          "IBP karar takvimini, senaryoları ve yönetim kararlarının takibini yönetmek",
+          "Kritik tedarik, kapasite ve lojistik risklerini izleyerek alternatif kaynak ve süreklilik senaryolarını hazırlamak",
+          "Tedarik zinciri olaylarında aksiyon planlarını koordine etmek"
+        ],
+        "authorities": [
+          "IBP/S&OP gündemini, karar takvimini ve senaryo varsayımlarını belirler",
+          "Plan uyuşmazlıklarında kısıt ve öncelik seçeneklerini direktörün onayına sunar",
+          "Ağ tasarımı ve hedef işletim modeli değişikliklerini gerekçeleriyle onaya sunar",
+          "Tedarik zinciri olaylarında süreklilik aksiyonlarını başlatır ve ilgili birimlere atar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Talep, Üretim ve Kapasite Planlama",
+            "topic": "Talep, üretim ve kapasite planlarının IBP döngüsüne girdisi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik",
+            "topic": "Kontrol kulesi verisi, erken uyarılar ve senaryo analizleri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Performansı ve Gelir Planlama",
+            "topic": "Satış tahmini, gelir planı ve ticari varsayımların IBP sürecine aktarımı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+            "topic": "Finansal plan ile operasyon planının uyumu ve senaryo etkileri"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Tedarik zinciri iş sürekliliği senaryoları ve kriz riskleri"
+          }
+        ],
+        "kpis": [
+          "Entegre Plan Uyum Oranı",
+          "IBP Kararlarının Zamanında Uygulanma Oranı",
+          "Alternatif Kaynağı Tanımlı Kritik Malzeme Oranı",
+          "Tedarik Zinciri Olayı Toparlanma Süresi",
+          "Açık Kritik Tedarik Riski Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi Müdürü",
+            "title_en": "Integrated Business Planning and Supply Chain Strategy Manager"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarik Zinciri Stratejisi ve Ağ Tasarımı Yöneticisi",
+            "title_en": "Supply Chain Strategy and Network Design Manager"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/kidemli-tedarik-zinciri-stratejisi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarik Zinciri Stratejisi Uzmanı",
+            "title_en": "Senior Supply Chain Strategy Specialist"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/tedarik-zinciri-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarik Zinciri Stratejisi Uzmanı",
+            "title_en": "Supply Chain Strategy Specialist"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/ag-tasarimi-analisti",
+            "level": "Analist",
+            "title_tr": "Ağ Tasarımı Analisti",
+            "title_en": "Network Design Analyst"
+          },
+          {
+            "position": "13.01/entegre-is-planlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Entegre İş Planlama Yöneticisi",
+            "title_en": "Integrated Business Planning Manager"
+          },
+          {
+            "position": "13.01/entegre-is-planlama/kidemli-entegre-is-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Entegre İş Planlama Uzmanı",
+            "title_en": "Senior Integrated Business Planning Specialist"
+          },
+          {
+            "position": "13.01/entegre-is-planlama/entegre-is-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Entegre İş Planlama Uzmanı",
+            "title_en": "Integrated Business Planning Specialist"
+          },
+          {
+            "position": "13.01/entegre-is-planlama/ibp-analisti",
+            "level": "Analist",
+            "title_tr": "IBP Analisti",
+            "title_en": "IBP Analyst"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarik Zinciri Risk ve Süreklilik Yöneticisi",
+            "title_en": "Supply Chain Risk and Continuity Manager"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/kidemli-tedarik-zinciri-risk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarik Zinciri Risk Uzmanı",
+            "title_en": "Senior Supply Chain Risk Specialist"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/tedarik-zinciri-sureklilik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarik Zinciri Süreklilik Uzmanı",
+            "title_en": "Supply Chain Continuity Specialist"
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/tedarik-riski-analisti",
+            "level": "Analist",
+            "title_tr": "Tedarik Riski Analisti",
+            "title_en": "Supply Risk Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.01",
+            "title_tr": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi",
+            "title_tr": "Tedarik Zinciri Stratejisi ve Ağ Tasarımı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/kidemli-tedarik-zinciri-stratejisi-uzmani",
+            "title_tr": "Kıdemli Tedarik Zinciri Stratejisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/tedarik-zinciri-stratejisi-uzmani",
+            "title_tr": "Tedarik Zinciri Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.01/tedarik-zinciri-stratejisi-ve-ag-tasarimi/ag-tasarimi-analisti",
+            "title_tr": "Ağ Tasarımı Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.01/entegre-is-planlama",
+            "title_tr": "Entegre İş Planlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.01/entegre-is-planlama/kidemli-entegre-is-planlama-uzmani",
+            "title_tr": "Kıdemli Entegre İş Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.01/entegre-is-planlama/entegre-is-planlama-uzmani",
+            "title_tr": "Entegre İş Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.01/entegre-is-planlama/ibp-analisti",
+            "title_tr": "IBP Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik",
+            "title_tr": "Tedarik Zinciri Risk ve Süreklilik Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/kidemli-tedarik-zinciri-risk-uzmani",
+            "title_tr": "Kıdemli Tedarik Zinciri Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/tedarik-zinciri-sureklilik-uzmani",
+            "title_tr": "Tedarik Zinciri Süreklilik Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.01/tedarik-zinciri-risk-ve-sureklilik/tedarik-riski-analisti",
+            "title_tr": "Tedarik Riski Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.02",
+        "name_tr": "Talep, Üretim ve Kapasite Planlama",
+        "responsibilities": [
+          "Satış tahminlerini istatistiksel ve ticari girdilerle oluşturmak",
+          "Kampanya, sezon ve yeni ürün etkilerini talep planına yansıtmak",
+          "Ana üretim planını ve detay çizelgeleri malzeme, kapasite ve teslimat kısıtlarını dengeleyerek hazırlamak",
+          "Makine, iş gücü, hat ve vardiya kapasitesini planlamak",
+          "Darboğaz senaryolarıyla fazla mesai, dış kaynak ve yatırım ihtiyaçlarını belirlemek",
+          "Tahmin doğruluğunu, plan gerçekleşmesini ve çizelge uyumunu izlemek"
+        ],
+        "authorities": [
+          "Onaylı IBP çerçevesinde ana üretim planını ve dondurulmuş plan ufkunu belirler",
+          "Detay üretim çizelgelerini yayımlar ve kısıt durumunda sıralama önceliklerini belirler",
+          "Satış taleplerine kapasite ve teslim tarihi teyidi verir",
+          "Fazla mesai, dış kaynak ve kapasite yatırımı ihtiyaçlarını onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Çizelge uygulaması, hat kısıtları ve plan gerçekleşme geri bildirimi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Malzeme ihtiyaç planı ve kritik malzeme uygunluğu"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Performansı ve Gelir Planlama",
+            "topic": "Satış tahmini, sipariş girdileri ve teslim tarihi teyidi"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Kampanya ve Etkinlik Pazarlaması",
+            "topic": "Kampanya ve lansman takviminin talep planına etkisi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Planlama ve Organizasyonel Gelişim",
+            "topic": "Vardiya ve iş gücü kapasite ihtiyacının planlanması"
+          }
+        ],
+        "kpis": [
+          "Tahmin Doğruluğu",
+          "Tahmin Sapması (Bias)",
+          "Üretim Planına Uyum",
+          "Çizelge Uyum Oranı",
+          "Kapasite Kullanım Oranı",
+          "Dondurulmuş Ufukta Plan Değişikliği Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Talep, Üretim ve Kapasite Planlama Müdürü",
+            "title_en": "Demand, Production and Capacity Planning Manager"
+          },
+          {
+            "position": "13.02/talep-planlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Talep Planlama Yöneticisi",
+            "title_en": "Demand Planning Manager"
+          },
+          {
+            "position": "13.02/talep-planlama/kidemli-talep-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Talep Planlama Uzmanı",
+            "title_en": "Senior Demand Planning Specialist"
+          },
+          {
+            "position": "13.02/talep-planlama/talep-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Talep Planlama Uzmanı",
+            "title_en": "Demand Planning Specialist"
+          },
+          {
+            "position": "13.02/talep-planlama/talep-tahmin-analisti",
+            "level": "Analist",
+            "title_tr": "Talep Tahmin Analisti",
+            "title_en": "Demand Forecast Analyst"
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Üretim Planlama ve Çizelgeleme Yöneticisi",
+            "title_en": "Production Planning and Scheduling Manager"
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/kidemli-uretim-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Üretim Planlama Uzmanı",
+            "title_en": "Senior Production Planning Specialist"
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/uretim-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üretim Planlama Uzmanı",
+            "title_en": "Production Planning Specialist"
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/uretim-cizelgeleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üretim Çizelgeleme Uzmanı",
+            "title_en": "Production Scheduling Specialist"
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kapasite ve Kaynak Planlama Yöneticisi",
+            "title_en": "Capacity and Resource Planning Manager"
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kidemli-kapasite-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kapasite Planlama Uzmanı",
+            "title_en": "Senior Capacity Planning Specialist"
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kapasite-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kapasite Planlama Uzmanı",
+            "title_en": "Capacity Planning Specialist"
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kaynak-planlama-analisti",
+            "level": "Analist",
+            "title_tr": "Kaynak Planlama Analisti",
+            "title_en": "Resource Planning Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.02",
+            "title_tr": "Talep, Üretim ve Kapasite Planlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.02/talep-planlama",
+            "title_tr": "Talep Planlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.02/talep-planlama/kidemli-talep-planlama-uzmani",
+            "title_tr": "Kıdemli Talep Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.02/talep-planlama/talep-planlama-uzmani",
+            "title_tr": "Talep Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.02/talep-planlama/talep-tahmin-analisti",
+            "title_tr": "Talep Tahmin Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme",
+            "title_tr": "Üretim Planlama ve Çizelgeleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/kidemli-uretim-planlama-uzmani",
+            "title_tr": "Kıdemli Üretim Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/uretim-planlama-uzmani",
+            "title_tr": "Üretim Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.02/uretim-planlama-ve-cizelgeleme/uretim-cizelgeleme-uzmani",
+            "title_tr": "Üretim Çizelgeleme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama",
+            "title_tr": "Kapasite ve Kaynak Planlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kidemli-kapasite-planlama-uzmani",
+            "title_tr": "Kıdemli Kapasite Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kapasite-planlama-uzmani",
+            "title_tr": "Kapasite Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.02/kapasite-ve-kaynak-planlama/kaynak-planlama-analisti",
+            "title_tr": "Kaynak Planlama Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.03",
+        "name_tr": "Üretim Operasyonları",
+        "responsibilities": [
+          "Günlük üretim planını hat ve vardiya bazında güvenli ve kaliteli şekilde gerçekleştirmek",
+          "İş gücü, makine ve malzeme akışını koordine etmek",
+          "Üretim metotlarını, iş akışını ve proses parametrelerini tasarlamak",
+          "Yeni ürünlerin üretime alınmasını ve seri üretim yeterliliğini sağlamak",
+          "Lean, Kaizen, 5S ve problem çözme programlarıyla israf, hurda ve tekrar işi azaltmak",
+          "Çıktı, duruş, fire, süreç içi kalite ve güvenlik göstergelerini izlemek"
+        ],
+        "authorities": [
+          "Vardiya planını, hat görevlendirmelerini ve günlük üretim önceliklerini belirler",
+          "Güvenlik veya proses kontrolü riski oluşan hatta üretimi durdurabilir",
+          "Proses parametresi ve iş talimatı değişikliklerini kalite gereklerine uygun onaylar",
+          "Yeni ürünün seri üretime geçiş hazırlığını değerlendirip devreye alma önerisini onaya sunar",
+          "İyileştirme projelerini kapasite, maliyet ve kalite faydasına göre önceliklendirir"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Talep, Üretim ve Kapasite Planlama",
+            "topic": "Üretim çizelgesi, kapasite kısıtları ve plan gerçekleşme bildirimi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Bakım, Tesis ve Teknik Hizmetler",
+            "topic": "Arıza müdahalesi, planlı bakım duruşları ve ekipman güvenilirliği"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Hat besleme, malzeme akışı ve üretim sarfiyatı"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Operasyonel Kalite Kontrol",
+            "topic": "Süreç içi kalite kontrolü, proses sapmaları ve anlık düzeltmeler"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+            "topic": "Yeni ürünün endüstriyelleştirilmesi ve seri üretim doğrulaması"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı ve Güvenliği Yönetimi",
+            "topic": "Üretim alanında iş sağlığı ve güvenliği uygulamaları"
+          }
+        ],
+        "kpis": [
+          "Genel Ekipman Etkinliği (OEE)",
+          "Hat Bazında Plan Gerçekleşme Oranı",
+          "Fire ve Hurda Oranı",
+          "İlk Seferde Doğru Üretim Oranı",
+          "Çevrim Süresi Sapması",
+          "Uygulanan İyileştirme Önerisi Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Üretim Operasyonları Müdürü",
+            "title_en": "Manufacturing Operations Manager"
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Üretim Hatları ve Vardiya Yönetimi Yöneticisi",
+            "title_en": "Production Lines and Shift Management Manager"
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/kidemli-uretim-sorumlusu",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Üretim Sorumlusu",
+            "title_en": "Senior Production Supervisor"
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/uretim-sorumlusu",
+            "level": "Yönetici",
+            "title_tr": "Üretim Sorumlusu",
+            "title_en": "Production Supervisor"
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/vardiya-amiri",
+            "level": "Yönetici",
+            "title_tr": "Vardiya Amiri",
+            "title_en": "Shift Supervisor"
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Üretim Mühendisliği ve Endüstriyelleştirme Yöneticisi",
+            "title_en": "Manufacturing Engineering and Industrialization Manager"
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/kidemli-uretim-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Üretim Mühendisi",
+            "title_en": "Senior Manufacturing Engineer"
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/uretim-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Üretim Mühendisi",
+            "title_en": "Manufacturing Engineer"
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/endustriyellestirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Endüstriyelleştirme Uzmanı",
+            "title_en": "Industrialization Specialist"
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yalın Üretim ve Sürekli İyileştirme Yöneticisi",
+            "title_en": "Lean Manufacturing and Continuous Improvement Manager"
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/kidemli-yalin-uretim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yalın Üretim Uzmanı",
+            "title_en": "Senior Lean Manufacturing Specialist"
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/surekli-iyilestirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sürekli İyileştirme Uzmanı",
+            "title_en": "Continuous Improvement Specialist"
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/uretim-verimlilik-analisti",
+            "level": "Analist",
+            "title_tr": "Üretim Verimlilik Analisti",
+            "title_en": "Manufacturing Productivity Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 33
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 33,
+            "max": 47
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.03",
+            "title_tr": "Üretim Operasyonları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi",
+            "title_tr": "Üretim Hatları ve Vardiya Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/kidemli-uretim-sorumlusu",
+            "title_tr": "Kıdemli Üretim Sorumlusu",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/uretim-sorumlusu",
+            "title_tr": "Üretim Sorumlusu",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "13.03/uretim-hatlari-ve-vardiya-yonetimi/vardiya-amiri",
+            "title_tr": "Vardiya Amiri",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme",
+            "title_tr": "Üretim Mühendisliği ve Endüstriyelleştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/kidemli-uretim-muhendisi",
+            "title_tr": "Kıdemli Üretim Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/uretim-muhendisi",
+            "title_tr": "Üretim Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.03/uretim-muhendisligi-ve-endustriyellestirme/endustriyellestirme-uzmani",
+            "title_tr": "Endüstriyelleştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme",
+            "title_tr": "Yalın Üretim ve Sürekli İyileştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/kidemli-yalin-uretim-uzmani",
+            "title_tr": "Kıdemli Yalın Üretim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/surekli-iyilestirme-uzmani",
+            "title_tr": "Sürekli İyileştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.03/yalin-uretim-ve-surekli-iyilestirme/uretim-verimlilik-analisti",
+            "title_tr": "Üretim Verimlilik Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.04",
+        "name_tr": "Bakım, Tesis ve Teknik Hizmetler",
+        "responsibilities": [
+          "Bakım stratejisini, periyodik ve kestirimci bakım planlarını oluşturmak",
+          "Ekipman sağlığını kestirimci bakım verileriyle izlemek",
+          "Üretim arızalarına hızlı ve güvenli müdahale ederek kök neden analizlerini yürütmek",
+          "Kritik yedek parça ve teknik eskalasyonu koordine etmek",
+          "Tesis altyapısını, enerji ve yardımcı işletmeleri süreklilik gözeterek yönetmek",
+          "Yasal teknik kontrolleri ve enerji verimliliği projelerini koordine etmek"
+        ],
+        "authorities": [
+          "Üretim tesisleri, hatları, ekipmanı ve üretim sahası bina altyapısının bakım planlarını ve planlı duruş takvimini üretim planlamayla mutabık kalarak belirler",
+          "Arıza durumunda müdahale önceliğini ve teknik eskalasyonu belirler",
+          "Güvenli olmayan ekipmanı kullanım dışı bırakabilir",
+          "Kritik yedek parça seviyelerini ve bakım hizmet alımı ihtiyaçlarını onaya sunar",
+          "Enerji verimliliği ve tesis iyileştirme yatırımlarını gerekçeleriyle onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Arıza müdahalesi, planlı duruşlar ve ekipman performansı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Kritik yedek parça stoğu ve bakım malzemesi temini"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Tesis, Bina ve Teknik İşletme",
+            "topic": "Bina teknik işletmesi ile üretim tesisi yardımcı işletmeleri arasındaki sınırlar"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Enerji, İklim ve Karbon Yönetimi",
+            "topic": "Enerji tüketimi, verimlilik projeleri ve karbon verisi"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Proses Güvenliği, Yüklenici ve Olay Yönetimi",
+            "topic": "Bakım işlerinde yüklenici güvenliği ve iş izin sistemi"
+          }
+        ],
+        "kpis": [
+          "Arızalar Arası Ortalama Süre (MTBF)",
+          "Ortalama Onarım Süresi (MTTR)",
+          "Planlı Bakım Uyum Oranı",
+          "Plansız Duruş Süresi",
+          "Birim Üretim Başına Enerji Tüketimi"
+        ],
+        "title_standard": [
+          {
+            "position": "13.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Bakım, Tesis ve Teknik Hizmetler Müdürü",
+            "title_en": "Maintenance, Facilities and Technical Services Manager"
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Planlı ve Kestirimci Bakım Yöneticisi",
+            "title_en": "Preventive and Predictive Maintenance Manager"
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/kidemli-bakim-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Bakım Mühendisi",
+            "title_en": "Senior Maintenance Engineer"
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/bakim-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Bakım Mühendisi",
+            "title_en": "Maintenance Engineer"
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/kestirimci-bakim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kestirimci Bakım Uzmanı",
+            "title_en": "Predictive Maintenance Specialist"
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Arıza ve Teknik Müdahale Yöneticisi",
+            "title_en": "Breakdown and Technical Response Manager"
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/kidemli-teknik-bakim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Teknik Bakım Uzmanı",
+            "title_en": "Senior Technical Maintenance Specialist"
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/teknik-bakim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Teknik Bakım Uzmanı",
+            "title_en": "Technical Maintenance Specialist"
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/ariza-mudahale-teknisyeni",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Arıza Müdahale Teknisyeni",
+            "title_en": "Breakdown Response Technician"
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tesis, Enerji ve Yardımcı İşletmeler Yöneticisi",
+            "title_en": "Facilities, Energy and Utilities Manager"
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/kidemli-tesis-ve-enerji-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tesis ve Enerji Uzmanı",
+            "title_en": "Senior Facilities and Energy Specialist"
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/tesis-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tesis Yönetimi Uzmanı",
+            "title_en": "Facilities Management Specialist"
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/yardimci-isletmeler-teknisyeni",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Yardımcı İşletmeler Teknisyeni",
+            "title_en": "Utilities Technician"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 42
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 42,
+            "max": 59
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.04",
+            "title_tr": "Bakım, Tesis ve Teknik Hizmetler Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim",
+            "title_tr": "Planlı ve Kestirimci Bakım Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/kidemli-bakim-muhendisi",
+            "title_tr": "Kıdemli Bakım Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/bakim-muhendisi",
+            "title_tr": "Bakım Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.04/planli-ve-kestirimci-bakim/kestirimci-bakim-uzmani",
+            "title_tr": "Kestirimci Bakım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale",
+            "title_tr": "Arıza ve Teknik Müdahale Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/kidemli-teknik-bakim-uzmani",
+            "title_tr": "Kıdemli Teknik Bakım Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/teknik-bakim-uzmani",
+            "title_tr": "Teknik Bakım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.04/ariza-ve-teknik-mudahale/ariza-mudahale-teknisyeni",
+            "title_tr": "Arıza Müdahale Teknisyeni",
+            "min": 3,
+            "max": 12
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler",
+            "title_tr": "Tesis, Enerji ve Yardımcı İşletmeler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/kidemli-tesis-ve-enerji-uzmani",
+            "title_tr": "Kıdemli Tesis ve Enerji Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/tesis-yonetimi-uzmani",
+            "title_tr": "Tesis Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.04/tesis-enerji-ve-yardimci-isletmeler/yardimci-isletmeler-teknisyeni",
+            "title_tr": "Yardımcı İşletmeler Teknisyeni",
+            "min": 2,
+            "max": 8
+          }
+        ]
+      },
+      {
+        "unit_id": "13.05",
+        "name_tr": "Satın Alma ve Tedarikçi Yönetimi",
+        "responsibilities": [
+          "Kategori stratejilerini ve kaynak bulma planlarını oluşturmak",
+          "İhale, teklif toplama ve ticari müzakere süreçlerini yürütmek",
+          "Onaylı talepleri siparişe dönüştürmek, termin ve teslimat takibini yürütmek",
+          "Toplam sahip olma maliyeti ve tasarruf hedeflerini yönetmek",
+          "Tedarikçi performans kartlarını, değerlendirmeleri ve iyileştirme planlarını yönetmek",
+          "Alternatif tedarikçi ve yerelleştirme programlarını desteklemek"
+        ],
+        "authorities": [
+          "Kategori stratejilerini ve kaynak bulma planlarını belirler",
+          "Yetki matrisi sınırları içinde tedarikçi seçimini ve satın alma siparişlerini onaylar",
+          "Ticari müzakereyi yürütür ve sözleşme hükümlerini Hukuk görüşüyle onaya sunar",
+          "Acil satın alma ve sipariş uyuşmazlıklarında çözüm kararını verir",
+          "Tedarikçi performansına göre iyileştirme planı ister ve statü değişikliği önerisini onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Malzeme ihtiyaç planı, sipariş terminleri ve kritik malzeme temini"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Tedarikçi Kalitesi",
+            "topic": "Tedarikçi kalifikasyonu, kalite anlaşmaları ve tedarikçi uygunsuzlukları"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Tedarikçi sözleşme hükümleri ve ticari uyuşmazlıklar"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+            "topic": "Tedarikçi uyum değerlendirmesi ve üçüncü taraf riskleri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Sipariş, mal kabul ve fatura eşleştirmesi ile tedarikçi ödemeleri"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+            "topic": "Tedarikçi ödeme vadeleri ve çalışma sermayesi etkisi"
+          }
+        ],
+        "kpis": [
+          "Satın Alma Tasarrufu",
+          "Tedarikçi Zamanında Teslimat Oranı",
+          "Tedarikçi Hata Oranı",
+          "Sipariş Çevrim Süresi",
+          "Sözleşmeli Harcama Oranı",
+          "Tek Kaynaklı Kritik Kategori Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Satın Alma ve Tedarikçi Yönetimi Müdürü",
+            "title_en": "Procurement and Supplier Management Manager"
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Stratejik Satın Alma ve Kategori Yönetimi Yöneticisi",
+            "title_en": "Strategic Sourcing and Category Management Manager"
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/kidemli-stratejik-satin-alma-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Stratejik Satın Alma Uzmanı",
+            "title_en": "Senior Strategic Sourcing Specialist"
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/kategori-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kategori Yönetimi Uzmanı",
+            "title_en": "Category Management Specialist"
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/satin-alma-analisti",
+            "level": "Analist",
+            "title_tr": "Satın Alma Analisti",
+            "title_en": "Procurement Analyst"
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Operasyonel Satın Alma Yöneticisi",
+            "title_en": "Operational Procurement Manager"
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/kidemli-satin-alma-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Satın Alma Uzmanı",
+            "title_en": "Senior Procurement Specialist"
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/satin-alma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Satın Alma Uzmanı",
+            "title_en": "Procurement Specialist"
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/satin-alma-operasyonlari-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Satın Alma Operasyonları Koordinatörü",
+            "title_en": "Procurement Operations Coordinator"
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi Performansı ve Geliştirme Yöneticisi",
+            "title_en": "Supplier Performance and Development Manager"
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/kidemli-tedarikci-gelistirme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarikçi Geliştirme Uzmanı",
+            "title_en": "Senior Supplier Development Specialist"
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/tedarikci-performans-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Performans Uzmanı",
+            "title_en": "Supplier Performance Specialist"
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/tedarikci-kalite-analisti",
+            "level": "Analist",
+            "title_tr": "Tedarikçi Kalite Analisti",
+            "title_en": "Supplier Quality Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.05",
+            "title_tr": "Satın Alma ve Tedarikçi Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi",
+            "title_tr": "Stratejik Satın Alma ve Kategori Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/kidemli-stratejik-satin-alma-uzmani",
+            "title_tr": "Kıdemli Stratejik Satın Alma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/kategori-yonetimi-uzmani",
+            "title_tr": "Kategori Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.05/stratejik-satin-alma-ve-kategori-yonetimi/satin-alma-analisti",
+            "title_tr": "Satın Alma Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma",
+            "title_tr": "Operasyonel Satın Alma Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/kidemli-satin-alma-uzmani",
+            "title_tr": "Kıdemli Satın Alma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/satin-alma-uzmani",
+            "title_tr": "Satın Alma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.05/operasyonel-satin-alma/satin-alma-operasyonlari-koordinatoru",
+            "title_tr": "Satın Alma Operasyonları Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme",
+            "title_tr": "Tedarikçi Performansı ve Geliştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/kidemli-tedarikci-gelistirme-uzmani",
+            "title_tr": "Kıdemli Tedarikçi Geliştirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/tedarikci-performans-uzmani",
+            "title_tr": "Tedarikçi Performans Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.05/tedarikci-performansi-ve-gelistirme/tedarikci-kalite-analisti",
+            "title_tr": "Tedarikçi Kalite Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.06",
+        "name_tr": "Malzeme, Stok ve Depo Yönetimi",
+        "responsibilities": [
+          "Üretim planına göre malzeme ihtiyaç planını çalıştırmak",
+          "Eksik, fazla ve kritik malzeme risklerini izleyerek malzeme uygunluğunu koordine etmek",
+          "Stok politikasını, güvenlik stoğu ve yeniden sipariş seviyelerini yönetmek",
+          "Sayım, hareket ve stok doğruluğunu güvence altına almak",
+          "Mal kabul, adresleme, toplama ve üretim besleme süreçlerini yönetmek",
+          "Depo yerleşimini, malzeme akışını ve depo güvenliğini optimize etmek"
+        ],
+        "authorities": [
+          "Güvenlik stoğu ve yeniden sipariş seviyelerini stok politikası çerçevesinde belirler",
+          "Sayım takvimini belirler ve sayım farkı düzeltmelerini onaya sunar",
+          "Depo yerleşimi, adresleme ve iç lojistik standartlarını belirler",
+          "Atıl ve yavaş hareketli stoklar için değerlendirme veya imha önerisini onaya sunar",
+          "Kalite blokajındaki malzemenin üretime ve sevkiyata çıkışını durdurur"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Talep, Üretim ve Kapasite Planlama",
+            "topic": "Üretim planı ile malzeme ihtiyaç planının uyumu"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Satın alma talepleri, sipariş terminleri ve mal kabul"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Lojistik, Dağıtım ve Dış Ticaret",
+            "topic": "Sevkiyat hazırlığı, yükleme ve depo çıkışları"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Operasyonel Kalite Kontrol",
+            "topic": "Girdi kalite kontrolü ve karantinadaki malzemenin yönetimi"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Stok sayımı, dönem sonu stok mutabakatı ve değerleme kayıtları"
+          }
+        ],
+        "kpis": [
+          "Stok Doğruluk Oranı",
+          "Stok Devir Hızı",
+          "Atıl ve Yavaş Hareketli Stok Oranı",
+          "Malzeme Kaynaklı Üretim Duruş Süresi",
+          "Toplama Doğruluk Oranı",
+          "Mal Kabul Süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "13.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Malzeme, Stok ve Depo Yönetimi Müdürü",
+            "title_en": "Materials, Inventory and Warehouse Management Manager"
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Malzeme İhtiyaç Planlama Yöneticisi",
+            "title_en": "Material Requirements Planning Manager"
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/kidemli-malzeme-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Malzeme Planlama Uzmanı",
+            "title_en": "Senior Material Planning Specialist"
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/malzeme-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Malzeme Planlama Uzmanı",
+            "title_en": "Material Planning Specialist"
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/mrp-analisti",
+            "level": "Analist",
+            "title_tr": "MRP Analisti",
+            "title_en": "MRP Analyst"
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Stok ve Envanter Yönetimi Yöneticisi",
+            "title_en": "Stock and Inventory Management Manager"
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/kidemli-envanter-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Envanter Yönetimi Uzmanı",
+            "title_en": "Senior Inventory Management Specialist"
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/stok-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Stok Yönetimi Uzmanı",
+            "title_en": "Stock Management Specialist"
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/envanter-kontrol-analisti",
+            "level": "Analist",
+            "title_tr": "Envanter Kontrol Analisti",
+            "title_en": "Inventory Control Analyst"
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Depo ve İç Lojistik Yöneticisi",
+            "title_en": "Warehouse and Intralogistics Manager"
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/kidemli-depo-operasyon-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Depo Operasyon Uzmanı",
+            "title_en": "Senior Warehouse Operations Specialist"
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/depo-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Depo Operasyon Uzmanı",
+            "title_en": "Warehouse Operations Specialist"
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/ic-lojistik-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "İç Lojistik Koordinatörü",
+            "title_en": "Intralogistics Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.06",
+            "title_tr": "Malzeme, Stok ve Depo Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama",
+            "title_tr": "Malzeme İhtiyaç Planlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/kidemli-malzeme-planlama-uzmani",
+            "title_tr": "Kıdemli Malzeme Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/malzeme-planlama-uzmani",
+            "title_tr": "Malzeme Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.06/malzeme-ihtiyac-planlama/mrp-analisti",
+            "title_tr": "MRP Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi",
+            "title_tr": "Stok ve Envanter Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/kidemli-envanter-yonetimi-uzmani",
+            "title_tr": "Kıdemli Envanter Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/stok-yonetimi-uzmani",
+            "title_tr": "Stok Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.06/stok-ve-envanter-yonetimi/envanter-kontrol-analisti",
+            "title_tr": "Envanter Kontrol Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik",
+            "title_tr": "Depo ve İç Lojistik Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/kidemli-depo-operasyon-uzmani",
+            "title_tr": "Kıdemli Depo Operasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/depo-operasyon-uzmani",
+            "title_tr": "Depo Operasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.06/depo-ve-ic-lojistik/ic-lojistik-koordinatoru",
+            "title_tr": "İç Lojistik Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.07",
+        "name_tr": "Lojistik, Dağıtım ve Dış Ticaret",
+        "responsibilities": [
+          "Sevkiyat, taşıma ve teslimat planlarını oluşturmak",
+          "Taşıyıcı kapasitesini, rotaları ve teslimat performansını yönetmek",
+          "İthalat, ihracat ve gümrük süreçlerini mevzuata uygun yürütmek",
+          "Gümrük müşaviri, taşıyıcı ve ilgili kurum koordinasyonunu yönetmek",
+          "3PL ve taşıyıcı hizmet seviyelerini, sözleşme KPI'larını ve maliyetlerini izlemek",
+          "Navlun, hasar, gecikme ve teslimat doğruluğu sonuçlarını iyileştirmek"
+        ],
+        "authorities": [
+          "Sevkiyat planını, taşıyıcı ve rota seçimini belirler",
+          "Yetki matrisi sınırları içinde navlun ve lojistik hizmet siparişlerini onaylar",
+          "Dış ticaret belgelerini ve gümrük beyanı talimatlarını onaylar",
+          "3PL ve taşıyıcı seçimi ile sözleşme değişikliklerini onaya sunar",
+          "Hasar ve gecikme durumlarında taşıyıcıya karşı tazmin sürecini başlatır"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Depo çıkışı, yükleme ve sevkiyat hazırlığı"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Müşteri Destek ve Servis Masası",
+            "topic": "Teslimat durumu, gecikme ve hasar bildirimleri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+            "topic": "Teslim şekli, teslim koşulları ve teslimat taahhütleri"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Dış ticaret ve gümrük mevzuatına ilişkin hukuki görüş"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Vergi, Beyannameler ve E-Defter Uyum",
+            "topic": "İthalat ve ihracat işlemlerinin vergi ve beyan uyumu"
+          }
+        ],
+        "kpis": [
+          "Zamanında ve Eksiksiz Teslimat (OTIF)",
+          "Lojistik Maliyet / Ciro Oranı",
+          "Taşıma Hasar Oranı",
+          "Gümrük İşlem Süresi",
+          "3PL Hizmet Seviyesi Uyum Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Lojistik, Dağıtım ve Dış Ticaret Müdürü",
+            "title_en": "Logistics, Distribution and Foreign Trade Manager"
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Nakliye ve Dağıtım Yönetimi Yöneticisi",
+            "title_en": "Transportation and Distribution Management Manager"
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/kidemli-lojistik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Lojistik Uzmanı",
+            "title_en": "Senior Logistics Specialist"
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/nakliye-ve-dagitim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Nakliye ve Dağıtım Uzmanı",
+            "title_en": "Transportation and Distribution Specialist"
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/sevkiyat-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Sevkiyat Koordinatörü",
+            "title_en": "Dispatch Coordinator"
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dış Ticaret ve Gümrük Operasyonları Yöneticisi",
+            "title_en": "Foreign Trade and Customs Operations Manager"
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/kidemli-dis-ticaret-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Dış Ticaret Uzmanı",
+            "title_en": "Senior Foreign Trade Specialist"
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/dis-ticaret-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dış Ticaret Uzmanı",
+            "title_en": "Foreign Trade Specialist"
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/gumruk-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Gümrük Operasyonları Uzmanı",
+            "title_en": "Customs Operations Specialist"
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Lojistik Hizmet Sağlayıcı Yönetimi Yöneticisi",
+            "title_en": "Logistics Service Provider Management Manager"
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/kidemli-lojistik-tedarikci-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Lojistik Tedarikçi Uzmanı",
+            "title_en": "Senior Logistics Provider Specialist"
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/lojistik-sozlesme-ve-performans-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lojistik Sözleşme ve Performans Uzmanı",
+            "title_en": "Logistics Contract and Performance Specialist"
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/3pl-operasyon-analisti",
+            "level": "Analist",
+            "title_tr": "3PL Operasyon Analisti",
+            "title_en": "3PL Operations Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.07",
+            "title_tr": "Lojistik, Dağıtım ve Dış Ticaret Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi",
+            "title_tr": "Nakliye ve Dağıtım Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/kidemli-lojistik-uzmani",
+            "title_tr": "Kıdemli Lojistik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/nakliye-ve-dagitim-uzmani",
+            "title_tr": "Nakliye ve Dağıtım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.07/nakliye-ve-dagitim-yonetimi/sevkiyat-koordinatoru",
+            "title_tr": "Sevkiyat Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari",
+            "title_tr": "Dış Ticaret ve Gümrük Operasyonları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/kidemli-dis-ticaret-uzmani",
+            "title_tr": "Kıdemli Dış Ticaret Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/dis-ticaret-uzmani",
+            "title_tr": "Dış Ticaret Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.07/dis-ticaret-ve-gumruk-operasyonlari/gumruk-operasyonlari-uzmani",
+            "title_tr": "Gümrük Operasyonları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi",
+            "title_tr": "Lojistik Hizmet Sağlayıcı Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/kidemli-lojistik-tedarikci-uzmani",
+            "title_tr": "Kıdemli Lojistik Tedarikçi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/lojistik-sozlesme-ve-performans-uzmani",
+            "title_tr": "Lojistik Sözleşme ve Performans Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.07/lojistik-hizmet-saglayici-yonetimi/3pl-operasyon-analisti",
+            "title_tr": "3PL Operasyon Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "13.08",
+        "name_tr": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik",
+        "responsibilities": [
+          "Uçtan uca tedarik zinciri görünürlüğünü ve gösterge panolarını yönetmek",
+          "Talep, üretim, stok, tedarik ve lojistik istisnalarını izlemek",
+          "Erken uyarı, senaryo ve karar destek analizleri üretmek",
+          "Üretim, stok, lojistik ve satın alma maliyet sürücülerini ve birim maliyet sapmalarını analiz etmek",
+          "Maliyet düşürme iş planlarını Finans ile koordine etmek",
+          "Tedarik zinciri çevresel ve sosyal kriterlerini uygulayarak tedarikçi sürdürülebilirlik değerlendirmelerini koordine etmek"
+        ],
+        "authorities": [
+          "Departman gösterge panolarındaki KPI tanımlarını ve hesaplama kurallarını belirler",
+          "Kontrol kulesi istisnalarını sahip birime atar ve gecikenleri direktöre eskale eder",
+          "Maliyet düşürme fırsatlarını ve tasarruf hesaplarını Finans doğrulamasına sunar",
+          "Tedarikçi sürdürülebilirlik değerlendirme kriterlerini kurumsal çerçeveye uygun belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Entegre İş Planlama ve Tedarik Zinciri Stratejisi",
+            "topic": "Senaryo analizleri ve risk erken uyarılarının IBP sürecine aktarımı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Harcama analizi ve tedarikçi sürdürülebilirlik değerlendirmesi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+            "topic": "Maliyet sapmaları, tasarruf doğrulaması ve yönetim raporlaması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Maliyet Muhasebesi",
+            "topic": "Birim maliyet hesaplaması ve üretim maliyet verisi"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "Tedarik zinciri emisyon ve sürdürülebilirlik verisinin kurumsal raporlamaya aktarımı"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "Tedarik zinciri veri modeli, gösterge panoları ve raporlama altyapısı"
+          }
+        ],
+        "kpis": [
+          "Birim Üretim Maliyeti",
+          "Doğrulanmış Maliyet Tasarrufu",
+          "Tedarik Zinciri Karbon Yoğunluğu",
+          "İstisna Kapanış Süresi",
+          "Sürdürülebilirlik Değerlendirmesi Tamamlanan Tedarikçi Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "13.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik Müdürü",
+            "title_en": "Supply Chain Analytics, Cost and Sustainability Manager"
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarik Zinciri Analitiği ve Kontrol Kulesi Yöneticisi",
+            "title_en": "Supply Chain Analytics and Control Tower Manager"
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/kidemli-tedarik-zinciri-analitigi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarik Zinciri Analitiği Uzmanı",
+            "title_en": "Senior Supply Chain Analytics Specialist"
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/tedarik-zinciri-analitigi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarik Zinciri Analitiği Uzmanı",
+            "title_en": "Supply Chain Analytics Specialist"
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/kontrol-kulesi-analisti",
+            "level": "Analist",
+            "title_tr": "Kontrol Kulesi Analisti",
+            "title_en": "Control Tower Analyst"
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Üretim ve Tedarik Zinciri Maliyet Yönetimi Yöneticisi",
+            "title_en": "Manufacturing and Supply Chain Cost Management Manager"
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/kidemli-tedarik-zinciri-maliyet-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarik Zinciri Maliyet Uzmanı",
+            "title_en": "Senior Supply Chain Cost Specialist"
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/uretim-maliyet-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üretim Maliyet Uzmanı",
+            "title_en": "Manufacturing Cost Specialist"
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/tedarik-zinciri-maliyet-analisti",
+            "level": "Analist",
+            "title_tr": "Tedarik Zinciri Maliyet Analisti",
+            "title_en": "Supply Chain Cost Analyst"
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sürdürülebilir Tedarik Zinciri Yöneticisi",
+            "title_en": "Sustainable Supply Chain Manager"
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/kidemli-surdurulebilir-tedarik-zinciri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sürdürülebilir Tedarik Zinciri Uzmanı",
+            "title_en": "Senior Sustainable Supply Chain Specialist"
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/surdurulebilirlik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sürdürülebilirlik Uzmanı",
+            "title_en": "Sustainability Specialist"
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/karbon-ve-kaynak-verimliligi-analisti",
+            "level": "Analist",
+            "title_tr": "Karbon ve Kaynak Verimliliği Analisti",
+            "title_en": "Carbon and Resource Efficiency Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "13.08",
+            "title_tr": "Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi",
+            "title_tr": "Tedarik Zinciri Analitiği ve Kontrol Kulesi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/kidemli-tedarik-zinciri-analitigi-uzmani",
+            "title_tr": "Kıdemli Tedarik Zinciri Analitiği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/tedarik-zinciri-analitigi-uzmani",
+            "title_tr": "Tedarik Zinciri Analitiği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.08/tedarik-zinciri-analitigi-ve-kontrol-kulesi/kontrol-kulesi-analisti",
+            "title_tr": "Kontrol Kulesi Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi",
+            "title_tr": "Üretim ve Tedarik Zinciri Maliyet Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/kidemli-tedarik-zinciri-maliyet-uzmani",
+            "title_tr": "Kıdemli Tedarik Zinciri Maliyet Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/uretim-maliyet-uzmani",
+            "title_tr": "Üretim Maliyet Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.08/uretim-ve-tedarik-zinciri-maliyet-yonetimi/tedarik-zinciri-maliyet-analisti",
+            "title_tr": "Tedarik Zinciri Maliyet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri",
+            "title_tr": "Sürdürülebilir Tedarik Zinciri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/kidemli-surdurulebilir-tedarik-zinciri-uzmani",
+            "title_tr": "Kıdemli Sürdürülebilir Tedarik Zinciri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/surdurulebilirlik-uzmani",
+            "title_tr": "Sürdürülebilirlik Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "13.08/surdurulebilir-tedarik-zinciri/karbon-ve-kaynak-verimliligi-analisti",
+            "title_tr": "Karbon ve Kaynak Verimliliği Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

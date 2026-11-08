@@ -1,0 +1,1810 @@
+{
+ "Yönetim Kurulu Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/yonetim-kurulu-baskani"
+   }
+  ]
+ },
+ "Yönetim Kurulu Başkan Vekili": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/yonetim-kurulu-baskan-vekili"
+   }
+  ]
+ },
+ "Yönetim Kurulu Sekreteryası": {
+  "seats": [
+   {
+    "dept": "23",
+    "pos": "23.01"
+   }
+  ]
+ },
+ "Esas sözleşme ve Genel Kurul seçimiyle belirlenen üyeler": {
+  "seats": [],
+  "note": "Genel Kurulca kişi bazında seçilen üyeler; kural gereği pozisyona bağlanmadı (istenirse kurul/yonetim-kurulu-uyesi)"
+ },
+ "Şirket Yönetim Kurulu Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/yonetim-kurulu-baskani"
+   }
+  ],
+  "note": "Grup şirketi YK başkanı; 'Yönetim Kurulu Başkanı ve benzerleri' kuralıyla kurul başkanına bağlandı"
+ },
+ "İlgili Şirket Yönetim Kurulu Sekreteryası": {
+  "seats": [
+   {
+    "dept": "23",
+    "pos": "23.01"
+   }
+  ],
+  "note": "YK sekreteryası kuralı: 23 › Yönetim Kurulu ve Komite Sekreteryası"
+ },
+ "İlgili şirketin seçilmiş Yönetim Kurulu üyeleri": {
+  "seats": [],
+  "note": "Grup şirketinin kendi YK üyeleri; şemada karşılığı yok"
+ },
+ "Holding CEO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ]
+ },
+ "COO / CEO Yardımcısı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "CEO Ofisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "ofis"
+   }
+  ]
+ },
+ "CFO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/cfo-mali-isler-ve-finans-baskani"
+   }
+  ]
+ },
+ "CMO": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "lider"
+   }
+  ]
+ },
+ "CHRO": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "CTO/CIO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/teknolojiden-sorumlu-genel-mudur-yardimcisi-teknoloji-baskani"
+   }
+  ]
+ },
+ "CCO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/ticari-isler-baskani-cco"
+   }
+  ]
+ },
+ "CPO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/urunden-sorumlu-genel-mudur-yardimcisi"
+   }
+  ]
+ },
+ "İlgili grup şirketleri genel müdürleri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Şirket Genel Müdürü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Şirket Operasyon Direktörü / GM Yardımcısı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ],
+  "note": "Operasyonlardan Sorumlu Genel Müdür Yardımcısı = COO"
+ },
+ "Şirket Genel Müdürlük Ofisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "ofis"
+   }
+  ],
+  "note": "Genel Müdür = CEO olduğundan CEO Ofisi"
+ },
+ "Şirket finans lideri": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "lider"
+   }
+  ],
+  "note": "Finans işlevi → 03 departman lideri"
+ },
+ "Satış lideri": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Pazarlama lideri": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İK lideri": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Operasyon lideri": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Teknoloji temsilcisi": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "lider"
+   }
+  ],
+  "note": "Teknoloji işlevi → 15 Bilgi Teknolojileri"
+ },
+ "Holding CEO / Grup Operasyon Lideri": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Strateji ve İş Geliştirme Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   }
+  ]
+ },
+ "Strateji / CEO Ofisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   },
+   {
+    "dept": "01",
+    "pos": "ofis"
+   }
+  ]
+ },
+ "Tüm grup şirketlerinin genel müdürleri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Holding CFO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/cfo-mali-isler-ve-finans-baskani"
+   }
+  ]
+ },
+ "Holding İK yöneticisi": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Kurumsal Teknoloji yöneticisi": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "lider"
+   }
+  ],
+  "note": "Kurumsal teknoloji yöneticisi → BT Direktörü"
+ },
+ "COO / Stratejik Program Sponsoru": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "Proje ve Program Yönetimi Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "stratejik-projeler-ve-donusum-ofisi"
+   }
+  ],
+  "note": "Stratejik Projeler ve Dönüşüm Ofisi (PMO) direktörü"
+ },
+ "Proje Yönetim Ofisi (PMO)": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "stratejik-projeler-ve-donusum-ofisi"
+   }
+  ],
+  "note": "PMO = Stratejik Projeler ve Dönüşüm Ofisi"
+ },
+ "İlgili proje sponsorları": {
+  "seats": [],
+  "note": "Projeye göre değişen sponsorlar; sabit pozisyon yok"
+ },
+ "CFO temsilcisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/cfo-mali-isler-ve-finans-baskani"
+   }
+  ],
+  "note": "CFO ya da CFO'nun görevlendirdiği temsilci"
+ },
+ "CTO/CIO temsilcisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/teknolojiden-sorumlu-genel-mudur-yardimcisi-teknoloji-baskani"
+   }
+  ],
+  "note": "CTO/CIO ya da görevlendirdiği temsilci"
+ },
+ "İş birimi sahipleri": {
+  "seats": [],
+  "note": "Projeye göre değişen iş birimi sahipleri; belirsiz kitle"
+ },
+ "Risk/Uyum danışmanı": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "lider"
+   }
+  ],
+  "note": "Risk ve uyum aynı departmanda (06)"
+ },
+ "COO / Kriz Lideri": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "Bilgi Güvenliği Direktörü veya Operasyon Yedeği": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   },
+   {
+    "dept": "12",
+    "pos": "lider"
+   }
+  ],
+  "note": "BG Direktörü (16) ya da COO yedeği olarak Operasyon Direktörü (12)"
+ },
+ "Kriz Koordinasyon Masası": {
+  "seats": [
+   {
+    "dept": "22",
+    "pos": "22.03/kriz-guvenligi-ve-is-surekliligi-koordinasyonu"
+   }
+  ],
+  "note": "Kriz Güvenliği ve İş Sürekliliği Koordinasyon ekibi"
+ },
+ "Hukuk": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İK": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "BT": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Siber Güvenlik": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Kurumsal İletişim": {
+  "seats": [
+   {
+    "dept": "10",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İlgili şirket genel müdürü": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "İSG uzmanı (olaya göre)": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/is-guvenligi-uzmani"
+   }
+  ],
+  "note": "Birebir unvan: İş Güvenliği Uzmanı"
+ },
+ "CPO / Ürün Portföyü Sponsoru": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/urunden-sorumlu-genel-mudur-yardimcisi"
+   }
+  ]
+ },
+ "CTO / CIO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/teknolojiden-sorumlu-genel-mudur-yardimcisi-teknoloji-baskani"
+   }
+  ]
+ },
+ "Ürün ve Teknoloji PMO": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.04"
+   },
+   {
+    "dept": "15",
+    "pos": "15.01/bt-yonetisimi-ve-portfoy-yonetimi"
+   }
+  ],
+  "note": "Ürün tarafı: Ürün Operasyonları; teknoloji tarafı: BT Yönetişimi ve Portföy"
+ },
+ "Ürün sahipleri": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.03"
+   }
+  ],
+  "note": "Ürün yöneticileri 18 › Ürün Yönetimi ve Ürün Alanları biriminde"
+ },
+ "BT mimari lideri": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "15.01/kurumsal-ve-cozum-mimarisi"
+   }
+  ]
+ },
+ "Finans temsilcisi": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Pazarlama ve Satış temsilcisi": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "lider"
+   },
+   {
+    "dept": "08",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Siber Güvenlik danışmanı": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Atanmış Bağımsız Danışma Kurulu Başkanı": {
+  "seats": [],
+  "note": "Dışarıdan atanan bağımsız başkan; şemada karşılığı yok"
+ },
+ "İlgili Sektör Uzmanı": {
+  "seats": [],
+  "note": "Şirket dışı uzman"
+ },
+ "Kurumsal Strateji / Ar-Ge": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   },
+   {
+    "dept": "18",
+    "pos": "18.06"
+   }
+  ]
+ },
+ "Akademisyenler": {
+  "seats": [],
+  "note": "Şirket dışı"
+ },
+ "Sektör temsilcileri": {
+  "seats": [],
+  "note": "Şirket dışı"
+ },
+ "Ürün/Ar-Ge liderleri": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "lider"
+   },
+   {
+    "dept": "18",
+    "pos": "18.06"
+   }
+  ],
+  "note": "Ürün → 18 lideri; Ar-Ge → 18 › Ar-Ge birimi"
+ },
+ "Hukuk/Uyum danışmanı": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "lider"
+   },
+   {
+    "dept": "06",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İlgili şirket yöneticileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Holding CEO / Genel Müdür": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ]
+ },
+ "CEO Ofisi / Strateji": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "ofis"
+   },
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   }
+  ]
+ },
+ "COO": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "grup şirketleri genel müdürleri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "CEO veya Yatırım Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ],
+  "note": "Yatırım Komitesi Başkanı bu komitenin kendisi; CEO esas alındı"
+ },
+ "Finans ve Yatırım Direktörü": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "lider"
+   }
+  ],
+  "note": "Finans ve Hazine Direktörü"
+ },
+ "Strateji / Yatırım Ofisi": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   },
+   {
+    "dept": "03",
+    "pos": "03.07"
+   }
+  ],
+  "note": "Strateji birimi + Yatırım ve Sermaye Yönetimi"
+ },
+ "Strateji Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   }
+  ]
+ },
+ "Operasyon": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Teknoloji": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "lider"
+   }
+  ]
+ },
+ "ilgili şirket genel müdürü": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Risk ve Uyum Başkanı / bağımsız gözetim rolü": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "lider"
+   }
+  ],
+  "note": "Uyum, Kurumsal Risk ve İç Kontrol Direktörü"
+ },
+ "Kurumsal Risk Yönetimi Sorumlusu": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.02"
+   }
+  ]
+ },
+ "Risk ve Uyum Ofisi": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.08"
+   }
+  ],
+  "note": "Uyum Operasyonları, İzleme ve Raporlama (Risk ve Uyum Raporlama ekibi)"
+ },
+ "Finans": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İç Kontrol": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.03"
+   }
+  ]
+ },
+ "ilgili şirket temsilcileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Etik Komite Başkanı (çıkar çatışmasından bağımsız)": {
+  "seats": [],
+  "note": "Vakaya göre çıkar çatışması olmayan kişi atanır; sabit pozisyon yok (aday: kurul/bagimsiz-yonetim-kurulu-uyesi)"
+ },
+ "Hukuk veya Uyum Yöneticisi": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "lider"
+   },
+   {
+    "dept": "06",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Hukuk / Uyum Sekreteryası": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "05.08"
+   },
+   {
+    "dept": "06",
+    "pos": "06.04"
+   }
+  ],
+  "note": "Hukuk Operasyonları + Etik, İhbar ve Suistimal Önleme (etik komitesi sekreteryası)"
+ },
+ "gerektiğinde bağımsız üye": {
+  "seats": [],
+  "note": "Dışarıdan/duruma göre davet edilen bağımsız üye"
+ },
+ "olayla ilgisiz temsilciler": {
+  "seats": [],
+  "note": "Vakaya göre belirlenen temsilciler; belirsiz kitle"
+ },
+ "Yönetim Kurulu tarafından atanmış denetim komitesi başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/bagimsiz-yonetim-kurulu-uyesi"
+   }
+  ],
+  "note": "Denetim komitesi bağımsız YK üyelerinden oluşur"
+ },
+ "Komite üyesi / görevlendirilmiş başkan yardımcısı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/bagimsiz-yonetim-kurulu-uyesi"
+   }
+  ],
+  "note": "Denetim komitesi üyeleri arasından; bağımsız YK üyesi varsayıldı"
+ },
+ "Kurul Sekreteryası": {
+  "seats": [
+   {
+    "dept": "23",
+    "pos": "23.01"
+   }
+  ]
+ },
+ "Uygun yönetim kurulu üyeleri": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "kurul/yonetim-kurulu-uyesi"
+   },
+   {
+    "dept": "01",
+    "pos": "kurul/bagimsiz-yonetim-kurulu-uyesi"
+   }
+  ],
+  "note": "Bağımsızlık şartı aranıyorsa yalnız bağımsız üye"
+ },
+ "iç denetim ve dış denetçi davetli (oy hakkı rolüne göre)": {
+  "seats": [
+   {
+    "dept": "07",
+    "pos": "lider"
+   }
+  ],
+  "note": "İç Denetim Direktörü; dış denetçi şirket dışı"
+ },
+ "CFO / Finans ve Hazine Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/cfo-mali-isler-ve-finans-baskani"
+   }
+  ]
+ },
+ "Finansal Planlama ve Analiz Müdürü": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "03.01"
+   },
+   {
+    "dept": "03",
+    "pos": "03.02"
+   }
+  ],
+  "note": "FP&A: Finansal Planlama + Finansal Analiz birimleri"
+ },
+ "Finansal Planlama ve Analiz": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "03.01"
+   },
+   {
+    "dept": "03",
+    "pos": "03.02"
+   }
+  ],
+  "note": "FP&A: Finansal Planlama + Finansal Analiz birimleri"
+ },
+ "Muhasebe": {
+  "seats": [
+   {
+    "dept": "02",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Satış": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Pazarlama": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "lider"
+   }
+  ]
+ },
+ "şirket finans temsilcileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Satın Alma / Tedarik Zinciri Direktörü": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "lider"
+   }
+  ],
+  "note": "Üretim, Tedarik Zinciri ve Lojistik Direktörü"
+ },
+ "Satın Alma Müdürü": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "13.05"
+   }
+  ]
+ },
+ "Satın Alma Operasyonları": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "13.05/operasyonel-satin-alma"
+   }
+  ]
+ },
+ "Kalite": {
+  "seats": [
+   {
+    "dept": "14",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Bilgi Güvenliği (BT tedariklerinde)": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ]
+ },
+ "ilgili talep sahibi": {
+  "seats": [],
+  "note": "Talebe göre değişen birim; belirsiz"
+ },
+ "CFO veya Operasyonel Mükemmellik Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/cfo-mali-isler-ve-finans-baskani"
+   },
+   {
+    "dept": "12",
+    "pos": "12.06"
+   }
+  ],
+  "note": "Operasyonel mükemmellik → 12 › Süreç Yönetimi ve Operasyonel Mükemmellik"
+ },
+ "Maliyet Analizi Müdürü": {
+  "seats": [
+   {
+    "dept": "02",
+    "pos": "cost_accounting"
+   },
+   {
+    "dept": "12",
+    "pos": "12.08"
+   }
+  ],
+  "note": "Maliyet Muhasebesi + Operasyon Analitiği, Maliyet ve Verimlilik"
+ },
+ "Finans / Operasyon PMO": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "03.02"
+   },
+   {
+    "dept": "12",
+    "pos": "12.01"
+   }
+  ],
+  "note": "Finansal Analiz (maliyet/verimlilik analizi) + Operasyon Stratejisi, Planlama ve Yönetişim"
+ },
+ "Satın Alma": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "13.05"
+   }
+  ]
+ },
+ "CHRO / İK Direktörü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Organizasyon Geliştirme Müdürü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "ik-planlama-ve-organizasyonel-gelisim"
+   }
+  ]
+ },
+ "İK Operasyonları": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "bordro-ve-ozluk-isleri"
+   }
+  ],
+  "note": "İK operasyonları = bordro ve özlük işleri"
+ },
+ "şirket İK yöneticileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "CHRO veya Ücret Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ],
+  "note": "Ücret Komitesi Başkanı bu komitenin kendisi; CHRO esas alındı"
+ },
+ "Toplam Ödüllendirme Müdürü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "ucret-ve-yan-haklar"
+   }
+  ]
+ },
+ "İK Ücret ve Yan Haklar": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "ucret-ve-yan-haklar"
+   }
+  ]
+ },
+ "seçili iş birimi yöneticileri": {
+  "seats": [],
+  "note": "Dönemsel seçilen yöneticiler; belirsiz kitle"
+ },
+ "gerektiğinde bağımsız danışman": {
+  "seats": [],
+  "note": "Şirket dışı danışman"
+ },
+ "Yetenek Gelişimi / İK Direktörü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Eğitim ve Gelişim Müdürü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "egitim-ve-gelisim"
+   }
+  ]
+ },
+ "Eğitim ve Gelişim": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "egitim-ve-gelisim"
+   }
+  ]
+ },
+ "Departman yöneticileri": {
+  "seats": [],
+  "note": "Tüm departman yöneticileri; belirsiz kitle"
+ },
+ "Akademi/Eğitim": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "egitim-ve-gelisim"
+   }
+  ]
+ },
+ "Ürün/Teknoloji temsilcileri": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "lider"
+   },
+   {
+    "dept": "15",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İK / Çalışan Deneyimi Direktörü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İç İletişim ve Çalışan Deneyimi Müdürü": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "calisan-deneyimi-ve-baglilik"
+   },
+   {
+    "dept": "04",
+    "pos": "isveren-markasi-ve-ic-iletisim"
+   }
+  ],
+  "note": "04 içinde çalışan deneyimi ve iç iletişim birimleri"
+ },
+ "Çalışan Deneyimi": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "calisan-deneyimi-ve-baglilik"
+   }
+  ]
+ },
+ "şirket çalışan temsilcileri": {
+  "seats": [],
+  "note": "Seçilmiş çalışan temsilcileri / grup şirketleri; pozisyon değil"
+ },
+ "COO / Operasyon Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "Süreç Geliştirme Müdürü": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "12.06"
+   }
+  ]
+ },
+ "Operasyon PMO": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "12.01"
+   }
+  ],
+  "note": "Operasyon Stratejisi, Planlama ve Yönetişim"
+ },
+ "Müşteri Deneyimi": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "lider"
+   }
+  ]
+ },
+ "operasyon yöneticileri": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "lider"
+   }
+  ],
+  "note": "Operasyon işlevinin temsilcisi olarak 12 departman lideri"
+ },
+ "Kalite Yönetimi Direktörü": {
+  "seats": [
+   {
+    "dept": "14",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Kalite Güvence Müdürü": {
+  "seats": [
+   {
+    "dept": "14",
+    "pos": "14.02"
+   }
+  ]
+ },
+ "Kalite Yönetimi": {
+  "seats": [
+   {
+    "dept": "14",
+    "pos": "14.01"
+   }
+  ],
+  "note": "Sekreterya: Kalite Yönetim Sistemi ve Strateji birimi"
+ },
+ "Ürün": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Tedarik": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "lider"
+   }
+  ]
+ },
+ "İşveren veya İşveren Vekili (mevzuata uygun)": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ],
+  "note": "İşveren adına Genel Müdür; işveren vekili atanırsa o kişi"
+ },
+ "İSG Profesyoneli / görevlendirilmiş temsilci": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.02"
+   }
+  ]
+ },
+ "İSG Birimi": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.02"
+   }
+  ]
+ },
+ "İSG uzmanı": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.02/isg-risk-degerlendirme-ve-saha-guvenligi/is-guvenligi-uzmani"
+   }
+  ],
+  "note": "Birebir unvan: İş Güvenliği Uzmanı"
+ },
+ "işyeri hekimi": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.03/isyeri-sagligi-ve-saglik-gozetimi/isyeri-hekimi"
+   }
+  ]
+ },
+ "çalışan temsilcisi": {
+  "seats": [],
+  "note": "Çalışanlarca seçilen temsilci; pozisyon değil"
+ },
+ "destek elemanı ve diğer zorunlu üyeler": {
+  "seats": [],
+  "note": "Mevzuata göre görevlendirilen kişiler; belirsiz"
+ },
+ "Çevre/Sürdürülebilirlik": {
+  "seats": [
+   {
+    "dept": "21",
+    "pos": "21.05"
+   },
+   {
+    "dept": "21",
+    "pos": "21.07"
+   }
+  ]
+ },
+ "COO / Kriz Yönetimi Lideri": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ]
+ },
+ "Bilgi Teknolojileri / İş Sürekliliği Yöneticisi": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "lider"
+   },
+   {
+    "dept": "06",
+    "pos": "06.07"
+   }
+  ],
+  "note": "BT tarafı: 15 lideri; iş sürekliliği tarafı: 06 › İş Sürekliliği ve Kriz Riskleri"
+ },
+ "İş Sürekliliği Koordinatörü": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.07/is-surekliligi-yonetimi"
+   },
+   {
+    "dept": "22",
+    "pos": "22.03/kriz-guvenligi-ve-is-surekliligi-koordinasyonu"
+   }
+  ],
+  "note": "İş Sürekliliği Yönetimi ekibi + Kriz Güvenliği ve İş Sürekliliği Koordinasyonu ekibi"
+ },
+ "Bilgi Güvenliği": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ]
+ },
+ "ilgili şirket yöneticileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "CCO / Satış Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/ticari-isler-baskani-cco"
+   }
+  ]
+ },
+ "Satış Operasyonları Müdürü": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "08.01"
+   }
+  ],
+  "note": "Satış Stratejisi ve Gelir Operasyonları Müdürü"
+ },
+ "Satış Operasyonları": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "08.01"
+   }
+  ]
+ },
+ "Şirket satış yöneticileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "İş Geliştirme": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "08.04"
+   }
+  ],
+  "note": "Ayrı iş geliştirme birimi yok; Kanal, İş Ortaklıkları ve Ekosistem Satışları"
+ },
+ "CMO / Pazarlama ve Büyüme Direktörü": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Büyüme Pazarlaması Müdürü": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "growth_conversion/growth-marketing-muduru"
+   }
+  ],
+  "note": "Birebir: Growth Marketing Müdürü"
+ },
+ "Pazarlama Operasyonları": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "marketing_operations_crm_martech"
+   }
+  ]
+ },
+ "Veri": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "lider"
+   }
+  ]
+ },
+ "marka temsilcileri": {
+  "seats": [],
+  "note": "Marka/grup şirketi temsilcileri; belirsiz kitle"
+ },
+ "Müşteri Deneyimi Direktörü": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Müşteri Başarısı / Kalite Müdürü": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "11.03"
+   },
+   {
+    "dept": "14",
+    "pos": "14.05"
+   }
+  ],
+  "note": "Müşteri Başarı Yönetimi + Müşteri Kalitesi ve Geri Bildirim"
+ },
+ "Müşteri Deneyimi Operasyonları": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "11.01"
+   }
+  ],
+  "note": "Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi"
+ },
+ "şirket müşteri temsilcileri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "CPO / Ürün Yönetimi Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/urunden-sorumlu-genel-mudur-yardimcisi"
+   }
+  ]
+ },
+ "Portföy ve Ürün Operasyonları Müdürü": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.01"
+   },
+   {
+    "dept": "18",
+    "pos": "18.04"
+   }
+  ],
+  "note": "Ürün Portföyü + Ürün Operasyonları birimleri"
+ },
+ "Ürün Operasyonları": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.04"
+   }
+  ]
+ },
+ "şirket ürün sahipleri": {
+  "seats": [],
+  "note": "Grup şirketi temsilcisi; holding şemasında karşılığı yok"
+ },
+ "Dijital Dönüşüm Müdürü": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "15.01"
+   }
+  ],
+  "note": "Ayrı dijital dönüşüm pozisyonu yok; BT Stratejisi, Yönetişim ve Kurumsal Mimari"
+ },
+ "Teknoloji PMO": {
+  "seats": [
+   {
+    "dept": "15",
+    "pos": "15.01/bt-yonetisimi-ve-portfoy-yonetimi"
+   }
+  ]
+ },
+ "Veri ve AI": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "lider"
+   }
+  ]
+ },
+ "CISO / Bilgi Güvenliği Direktörü": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Bilgi Güvenliği Yöneticisi": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "16.01"
+   }
+  ],
+  "note": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum Müdürü"
+ },
+ "Bilgi Güvenliği ve KVKK Koordinasyonu": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "16.01"
+   },
+   {
+    "dept": "06",
+    "pos": "06.06"
+   }
+  ]
+ },
+ "Hukuk/KVKK": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "lider"
+   },
+   {
+    "dept": "06",
+    "pos": "06.06"
+   }
+  ],
+  "note": "Hukuk → 05 lideri; KVKK → 06 › KVKK ve Veri Koruma Uyumu"
+ },
+ "ilgili veri sorumlusu temsilcileri": {
+  "seats": [],
+  "note": "Veri sorumlusu şirketlerin temsilcileri; belirsiz kitle"
+ },
+ "CDO / Veri ve Yapay Zekâ Direktörü": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Veri Yönetişimi Müdürü": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "17.02"
+   }
+  ]
+ },
+ "Veri Ofisi": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "17.01"
+   }
+  ],
+  "note": "Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy"
+ },
+ "Ar-Ge ve İnovasyon Direktörü": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.06"
+   }
+  ]
+ },
+ "İnovasyon Program Müdürü": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.06/acik-inovasyon-ve-akademik-is-birlikleri"
+   }
+  ],
+  "note": "İnovasyon programları → Açık İnovasyon ekibi"
+ },
+ "Ar-Ge PMO": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.06"
+   }
+  ],
+  "note": "Ayrı Ar-Ge PMO pozisyonu yok; Ar-Ge birimi"
+ },
+ "Akademi/İK": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "egitim-ve-gelisim"
+   },
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ]
+ },
+ "gerektiğinde Hukuk": {
+  "seats": [
+   {
+    "dept": "05",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Strateji ve Kurumsal Gelişim Direktörü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu"
+   }
+  ]
+ },
+ "Strateji/PMO Müdürü": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "strateji-ve-kurumsal-performans-direktorlugu/stratejik-planlama-yoneticisi"
+   },
+   {
+    "dept": "01",
+    "pos": "stratejik-projeler-ve-donusum-ofisi/stratejik-proje-portfoy-yoneticisi"
+   }
+  ],
+  "note": "Stratejik Planlama Yöneticisi + Stratejik Proje Portföy Yöneticisi"
+ },
+ "Grup Şirketleri Koordinasyon Kurulu temsilcisi": {
+  "seats": [],
+  "note": "Kurulun görevlendireceği temsilci; sabit pozisyon yok"
+ },
+ "Kurumsal Gelişim Proje Lideri": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "istirakler-ve-sirket-performansi-mudurlugu"
+   }
+  ],
+  "note": "Şirketler arası sinerji konusu → İştirakler ve Şirket Performansı"
+ },
+ "Yatırım ve Proje Değerlendirme Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-02 başkanı: CEO"
+ },
+ "Finansal Analiz Proje Lideri": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "03.02/finansal-performans-analizi"
+   },
+   {
+    "dept": "03",
+    "pos": "03.07/yatirim-degerlendirme"
+   }
+  ],
+  "note": "Finansal Analiz Takım Lideri + Yatırım Analizi (fizibilite) Takım Lideri"
+ },
+ "FP&A Proje Lideri": {
+  "seats": [
+   {
+    "dept": "03",
+    "pos": "03.01/butce-ve-tahminleme"
+   }
+  ],
+  "note": "Bütçe ve Tahminleme ekibi"
+ },
+ "Satın Alma ve Tedarikçi Değerlendirme Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-07 başkanı: Satın Alma / Tedarik Zinciri Direktörü"
+ },
+ "Satın Alma Süreç Lideri": {
+  "seats": [
+   {
+    "dept": "13",
+    "pos": "13.05/operasyonel-satin-alma"
+   }
+  ],
+  "note": "Satın alma süreç operasyonu ekibi"
+ },
+ "İnsan Kaynakları ve Organizasyon Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-09 başkanı: CHRO"
+ },
+ "İşe Alım ve Çalışan Deneyimi Lideri": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "ise-alim-ve-yetenek-kazanimi"
+   },
+   {
+    "dept": "04",
+    "pos": "calisan-deneyimi-ve-baglilik"
+   }
+  ]
+ },
+ "Yetenek Yönetimi Proje Lideri": {
+  "seats": [
+   {
+    "dept": "04",
+    "pos": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri"
+   }
+  ],
+  "note": "Birebir: Yetenek Yönetimi Takım Lideri"
+ },
+ "Süreç İyileştirme Müdürü": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "12.06"
+   }
+  ]
+ },
+ "Kalite Yönetimi Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "14",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-14 (Kalite ve Hizmet Standartları) başkanı: Kalite Yönetimi Direktörü"
+ },
+ "Kalite ve SLA Proje Lideri": {
+  "seats": [
+   {
+    "dept": "12",
+    "pos": "12.07"
+   }
+  ],
+  "note": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence"
+ },
+ "İş Sürekliliği ve Kriz Yönetimi Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani"
+   }
+  ],
+  "note": "KMT-16 başkanı: COO"
+ },
+ "BCP Koordinatörü": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.07/is-surekliligi-yonetimi"
+   },
+   {
+    "dept": "22",
+    "pos": "22.03/kriz-guvenligi-ve-is-surekliligi-koordinasyonu"
+   }
+  ],
+  "note": "İş sürekliliği koordinatörü ile aynı"
+ },
+ "Bilgi Güvenliği ve KVKK Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "16",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-22 başkanı: CISO"
+ },
+ "KVKK Uyum Proje Lideri": {
+  "seats": [
+   {
+    "dept": "06",
+    "pos": "06.06"
+   }
+  ]
+ },
+ "Satış Direktörü": {
+  "seats": [
+   {
+    "dept": "08",
+    "pos": "lider"
+   }
+  ]
+ },
+ "Marka Stratejisi Proje Lideri": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru"
+   }
+  ],
+  "note": "Marka mimarisi konusu → Marka Portföyü ve Mimari Müdürü"
+ },
+ "Growth Marketing Lideri": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "growth_conversion"
+   }
+  ]
+ },
+ "Müşteri Deneyimi Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-19 başkanı: Müşteri Deneyimi Direktörü"
+ },
+ "CX Proje Lideri": {
+  "seats": [
+   {
+    "dept": "11",
+    "pos": "11.01"
+   }
+  ]
+ },
+ "Ürün ve Hizmet Portföyü Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "01",
+    "pos": "lider/urunden-sorumlu-genel-mudur-yardimcisi"
+   }
+  ],
+  "note": "KMT-20 başkanı: CPO"
+ },
+ "Ürün Yöneticisi / Teknik Proje Lideri": {
+  "seats": [
+   {
+    "dept": "18",
+    "pos": "18.03/dijital-urun-yonetimi"
+   },
+   {
+    "dept": "15",
+    "pos": "15.05/entegrasyon-ve-api-yonetimi"
+   }
+  ],
+  "note": "Dijital Ürün Yönetimi + Entegrasyon ve API Yönetimi"
+ },
+ "Veri Analitik ve Yapay Zekâ Komitesi Başkanı": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "lider"
+   }
+  ],
+  "note": "KMT-23 başkanı: CDO"
+ },
+ "Veri Yönetişimi Lideri": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "17.02"
+   }
+  ]
+ },
+ "AI Ürün / Otomasyon Lideri": {
+  "seats": [
+   {
+    "dept": "17",
+    "pos": "17.06"
+   }
+  ],
+  "note": "Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon"
+ },
+ "Ürün Pazarlama / Lansman Lideri": {
+  "seats": [
+   {
+    "dept": "09",
+    "pos": "product_solution_marketing/urun-pazarlamasi-muduru"
+   },
+   {
+    "dept": "09",
+    "pos": "product_solution_marketing/gtm-ve-lansman-muduru"
+   }
+  ]
+ }
+}

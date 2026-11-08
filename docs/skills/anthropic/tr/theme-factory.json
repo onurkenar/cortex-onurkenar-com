@@ -1,0 +1,7 @@
+{
+ "name": "Tema Fabrikası",
+ "desc": "Slayt, belge, rapor ve HTML sayfası gibi artifact'lere 10 hazır renk ve yazı tipi temasından birini uygular ya da istenirse yeni bir tema üretir.",
+ "trigger": "Artifact'lere bir temayla stil vermek için araç takımı. Bu artifact'ler slaytlar, belgeler, raporlar, HTML açılış sayfaları vb. olabilir. Oluşturulmuş herhangi bir artifact'e uygulanabilecek renk ve yazı tiplerine sahip 10 hazır tema vardır; ayrıca anında yeni bir tema da üretilebilir.",
+ "scenario": "Bir sunuma, belgeye ya da sayfaya tutarlı ve profesyonel bir renk ve yazı tipi teması verilmek istendiğinde.",
+ "example": "Kullanıcı tema vitrininden 'Ocean Depths'i seçer; destenin bütün slaytlarına bu temanın HEX renkleri ve başlık/gövde yazı tipleri uygulanır."
+}

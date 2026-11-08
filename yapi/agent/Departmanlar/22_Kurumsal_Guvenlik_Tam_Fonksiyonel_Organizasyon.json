@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "type": "department_organization_model",
+    "language": "tr-TR",
+    "created_at": "2026-10-29",
+    "project": "CW-ŞİRKET-IK-YONETIM"
+  },
+  "department": {
+    "code": "22",
+    "name_tr": "Kurumsal Güvenlik",
+    "name_en": "Corporate Security",
+    "operating_model": "Merkezi yönetişim, risk bazlı koruma ve yerel güvenlik operasyonları",
+    "purpose": "Çalışanları, yöneticileri, ziyaretçileri, fiziksel varlıkları, tesisleri, operasyonları ve kurumsal itibarı; fiziksel tehdit, suç, sabotaj, şiddet, dolandırıcılık ve güvenlik kesintilerine karşı korumak."
+  },
+  "reports_to": {
+    "primary": "İcra Kurulu Başkanı / CEO",
+    "administrative_alternative": "Operasyonlardan Sorumlu Genel Müdür Yardımcısı / COO",
+    "independent_escalation": ["Denetim Komitesi", "Risk Komitesi", "Yönetim Kurulu"]
+  },
+  "head": {
+    "position_code": "22-DIR-001",
+    "title_tr": "Kurumsal Güvenlik Direktörü",
+    "title_en": "Director of Corporate Security",
+    "alternative_executive_title": "Kurumsal Güvenlik Başkanı / Chief Security Officer (CSO)",
+    "direct_reports": ["22.01-MGR", "22.02-MGR", "22.03-MGR", "22.04-MGR", "22.05-MGR", "22.06-MGR", "22.07-MGR", "22.08-MGR"],
+    "accountabilities": [
+      "Kurumsal güvenlik stratejisi, politikaları ve güvenlik risk iştahını yönetmek",
+      "İnsan, tesis, varlık, etkinlik ve seyahat güvenliğini güvence altına almak",
+      "Kritik güvenlik olaylarında komuta, koordinasyon ve üst yönetim bildirimini yürütmek",
+      "Güvenlik istihbaratı, soruşturma ve üçüncü taraf güvenlik kontrollerini yönetmek",
+      "Güvenlik teknolojileri, bütçesi, hizmet sağlayıcıları ve performansından sorumlu olmak"
+    ]
+  },
+  "hierarchy_standard": {
+    "levels": [
+      {"level": 1, "role": "Direktör / Başkan", "scope": "Departman stratejisi ve kurumsal hesap verebilirlik"},
+      {"level": 2, "role": "Birim Müdürü", "scope": "Fonksiyonel politika, kapasite ve performans yönetimi"},
+      {"level": 3, "role": "Takım Lideri", "scope": "Süreç, ekip ve operasyon yönetimi"},
+      {"level": 4, "role": "Uzmanlık Rolleri", "scope": "Analiz, uygulama, kontrol ve saha icrası"}
+    ]
+  },
+  "units": [
+    {
+      "unit_code": "22.01",
+      "name_tr": "Güvenlik Stratejisi, Yönetişim ve Risk",
+      "name_en": "Security Strategy, Governance and Risk",
+      "manager": {"position_code": "22.01-MGR", "title_tr": "Güvenlik Stratejisi, Yönetişim ve Risk Müdürü", "title_en": "Security Strategy, Governance and Risk Manager"},
+      "teams": [
+        {"team_code": "22.01.01", "name_tr": "Güvenlik Stratejisi ve Politikalar", "lead": {"position_code": "22.01.01-TL", "title_tr": "Güvenlik Stratejisi ve Politikalar Takım Lideri", "title_en": "Security Strategy and Policy Team Lead"}, "roles": ["Kurumsal Güvenlik Stratejisi Uzmanı / Corporate Security Strategy Specialist", "Güvenlik Politikaları Uzmanı / Security Policy Specialist", "Güvenlik Portföy ve Bütçe Uzmanı / Security Portfolio and Budget Specialist"]},
+        {"team_code": "22.01.02", "name_tr": "Güvenlik Risk ve Tehdit Değerlendirme", "lead": {"position_code": "22.01.02-TL", "title_tr": "Güvenlik Risk ve Tehdit Değerlendirme Takım Lideri", "title_en": "Security Risk and Threat Assessment Team Lead"}, "roles": ["Güvenlik Risk Uzmanı / Security Risk Specialist", "Tehdit Değerlendirme Analisti / Threat Assessment Analyst", "Ülke ve Lokasyon Risk Analisti / Country and Location Risk Analyst"]},
+        {"team_code": "22.01.03", "name_tr": "Güvenlik Uyum, Güvence ve Performans", "lead": {"position_code": "22.01.03-TL", "title_tr": "Güvenlik Uyum, Güvence ve Performans Takım Lideri", "title_en": "Security Compliance, Assurance and Performance Team Lead"}, "roles": ["Güvenlik Uyum Uzmanı / Security Compliance Specialist", "Güvenlik Güvence Uzmanı / Security Assurance Specialist", "Güvenlik Performans ve Raporlama Uzmanı / Security Performance and Reporting Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "22.02",
+      "name_tr": "Fiziksel Güvenlik ve Tesis Koruma",
+      "name_en": "Physical Security and Facility Protection",
+      "manager": {"position_code": "22.02-MGR", "title_tr": "Fiziksel Güvenlik ve Tesis Koruma Müdürü", "title_en": "Physical Security and Facility Protection Manager"},
+      "teams": [
+        {"team_code": "22.02.01", "name_tr": "Tesis ve Çevre Güvenliği", "lead": {"position_code": "22.02.01-TL", "title_tr": "Tesis ve Çevre Güvenliği Takım Lideri", "title_en": "Facility and Perimeter Security Team Lead"}, "roles": ["Tesis Güvenliği Uzmanı / Facility Security Specialist", "Çevre ve Perimetre Güvenliği Uzmanı / Perimeter Security Specialist", "Fiziksel Güvenlik Tasarım Uzmanı / Physical Security Design Specialist"]},
+        {"team_code": "22.02.02", "name_tr": "Erişim Kontrolü ve Ziyaretçi Güvenliği", "lead": {"position_code": "22.02.02-TL", "title_tr": "Erişim Kontrolü ve Ziyaretçi Güvenliği Takım Lideri", "title_en": "Access Control and Visitor Security Team Lead"}, "roles": ["Erişim Kontrol Uzmanı / Access Control Specialist", "Kimlik ve Yetkilendirme Uzmanı / Physical Identity and Authorization Specialist", "Ziyaretçi ve Resepsiyon Güvenliği Uzmanı / Visitor and Reception Security Specialist"]},
+        {"team_code": "22.02.03", "name_tr": "Kritik Varlık ve Operasyon Koruma", "lead": {"position_code": "22.02.03-TL", "title_tr": "Kritik Varlık ve Operasyon Koruma Takım Lideri", "title_en": "Critical Asset and Operations Protection Team Lead"}, "roles": ["Kritik Varlık Koruma Uzmanı / Critical Asset Protection Specialist", "Depo ve Lojistik Güvenliği Uzmanı / Warehouse and Logistics Security Specialist", "Kayıp Önleme Uzmanı / Loss Prevention Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "22.03",
+      "name_tr": "Güvenlik Operasyonları ve Kontrol Merkezi",
+      "name_en": "Security Operations and Control Center",
+      "manager": {"position_code": "22.03-MGR", "title_tr": "Güvenlik Operasyonları ve Kontrol Merkezi Müdürü", "title_en": "Security Operations and Control Center Manager"},
+      "teams": [
+        {"team_code": "22.03.01", "name_tr": "Güvenlik Operasyon Merkezi", "lead": {"position_code": "22.03.01-TL", "title_tr": "Güvenlik Operasyon Merkezi Takım Lideri", "title_en": "Security Operations Center Team Lead"}, "roles": ["Güvenlik Operasyon Merkezi Kıdemli Operatörü / Senior Security Operations Center Operator", "Güvenlik İzleme Operatörü / Security Monitoring Operator", "Alarm ve Olay Yönetimi Uzmanı / Alarm and Incident Management Specialist"]},
+        {"team_code": "22.03.02", "name_tr": "Saha Güvenlik Operasyonları", "lead": {"position_code": "22.03.02-TL", "title_tr": "Saha Güvenlik Operasyonları Takım Lideri", "title_en": "Field Security Operations Team Lead"}, "roles": ["Bölge Güvenlik Sorumlusu / Regional Security Officer", "Saha Güvenlik Sorumlusu / Site Security Officer", "Güvenlik Vardiya Amiri / Security Shift Supervisor"]},
+        {"team_code": "22.03.03", "name_tr": "Olay Komuta ve Müdahale", "lead": {"position_code": "22.03.03-TL", "title_tr": "Olay Komuta ve Müdahale Takım Lideri", "title_en": "Incident Command and Response Team Lead"}, "roles": ["Güvenlik Olay Müdahale Uzmanı / Security Incident Response Specialist", "Olay Komuta Koordinatörü / Incident Command Coordinator", "Kriz Haberleşme Koordinatörü / Crisis Communications Coordinator"]}
+      ]
+    },
+    {
+      "unit_code": "22.04",
+      "name_tr": "Güvenlik İstihbaratı ve Soruşturmalar",
+      "name_en": "Security Intelligence and Investigations",
+      "manager": {"position_code": "22.04-MGR", "title_tr": "Güvenlik İstihbaratı ve Soruşturmalar Müdürü", "title_en": "Security Intelligence and Investigations Manager"},
+      "teams": [
+        {"team_code": "22.04.01", "name_tr": "Güvenlik İstihbaratı ve Erken Uyarı", "lead": {"position_code": "22.04.01-TL", "title_tr": "Güvenlik İstihbaratı ve Erken Uyarı Takım Lideri", "title_en": "Security Intelligence and Early Warning Team Lead"}, "roles": ["Güvenlik İstihbarat Analisti / Security Intelligence Analyst", "Açık Kaynak İstihbarat Analisti / OSINT Analyst", "Erken Uyarı ve İzleme Uzmanı / Early Warning and Monitoring Specialist"]},
+        {"team_code": "22.04.02", "name_tr": "Kurumsal Soruşturmalar", "lead": {"position_code": "22.04.02-TL", "title_tr": "Kurumsal Soruşturmalar Takım Lideri", "title_en": "Corporate Investigations Team Lead"}, "roles": ["Kurumsal Soruşturma Uzmanı / Corporate Investigations Specialist", "Suistimal ve Varlık Kaybı Araştırma Uzmanı / Fraud and Asset Loss Investigator", "Görüşme ve Vaka Analizi Uzmanı / Interview and Case Analysis Specialist"]},
+        {"team_code": "22.04.03", "name_tr": "Adli Delil ve Vaka Yönetimi", "lead": {"position_code": "22.04.03-TL", "title_tr": "Adli Delil ve Vaka Yönetimi Takım Lideri", "title_en": "Forensic Evidence and Case Management Team Lead"}, "roles": ["Fiziksel Delil Yönetimi Uzmanı / Physical Evidence Management Specialist", "Vaka Yönetimi Uzmanı / Case Management Specialist", "Adli İnceleme Koordinatörü / Forensic Examination Coordinator"]}
+      ]
+    },
+    {
+      "unit_code": "22.05",
+      "name_tr": "Yönetici, Seyahat ve Etkinlik Güvenliği",
+      "name_en": "Executive, Travel and Event Security",
+      "manager": {"position_code": "22.05-MGR", "title_tr": "Yönetici, Seyahat ve Etkinlik Güvenliği Müdürü", "title_en": "Executive, Travel and Event Security Manager"},
+      "teams": [
+        {"team_code": "22.05.01", "name_tr": "Yönetici Koruma", "lead": {"position_code": "22.05.01-TL", "title_tr": "Yönetici Koruma Takım Lideri", "title_en": "Executive Protection Team Lead"}, "roles": ["Yakın Koruma Uzmanı / Close Protection Specialist", "Koruma Planlama Uzmanı / Protection Planning Specialist", "Güvenli Sürüş ve Ulaşım Uzmanı / Secure Transport Specialist"]},
+        {"team_code": "22.05.02", "name_tr": "Seyahat Güvenliği", "lead": {"position_code": "22.05.02-TL", "title_tr": "Seyahat Güvenliği Takım Lideri", "title_en": "Travel Security Team Lead"}, "roles": ["Seyahat Güvenliği Uzmanı / Travel Security Specialist", "Seyahat Risk Analisti / Travel Risk Analyst", "Yolcu Destek ve Acil Müdahale Koordinatörü / Traveler Assistance and Emergency Response Coordinator"]},
+        {"team_code": "22.05.03", "name_tr": "Etkinlik ve Toplantı Güvenliği", "lead": {"position_code": "22.05.03-TL", "title_tr": "Etkinlik ve Toplantı Güvenliği Takım Lideri", "title_en": "Event and Meeting Security Team Lead"}, "roles": ["Etkinlik Güvenliği Uzmanı / Event Security Specialist", "Mekân Risk Değerlendirme Uzmanı / Venue Risk Assessment Specialist", "Kalabalık ve Giriş Yönetimi Uzmanı / Crowd and Entry Management Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "22.06",
+      "name_tr": "Güvenlik Teknolojileri ve Sistemleri",
+      "name_en": "Security Technologies and Systems",
+      "manager": {"position_code": "22.06-MGR", "title_tr": "Güvenlik Teknolojileri ve Sistemleri Müdürü", "title_en": "Security Technologies and Systems Manager"},
+      "teams": [
+        {"team_code": "22.06.01", "name_tr": "Video Gözetim ve Analitik", "lead": {"position_code": "22.06.01-TL", "title_tr": "Video Gözetim ve Analitik Takım Lideri", "title_en": "Video Surveillance and Analytics Team Lead"}, "roles": ["CCTV Sistemleri Uzmanı / CCTV Systems Specialist", "Video Analitik Uzmanı / Video Analytics Specialist", "Görüntü Kayıt ve Delil Sistemleri Uzmanı / Video Evidence Systems Specialist"]},
+        {"team_code": "22.06.02", "name_tr": "Erişim, Alarm ve Entegre Güvenlik Sistemleri", "lead": {"position_code": "22.06.02-TL", "title_tr": "Erişim, Alarm ve Entegre Güvenlik Sistemleri Takım Lideri", "title_en": "Access, Alarm and Integrated Security Systems Team Lead"}, "roles": ["Elektronik Erişim Sistemleri Uzmanı / Electronic Access Systems Specialist", "Alarm ve Sensör Sistemleri Uzmanı / Alarm and Sensor Systems Specialist", "Güvenlik Sistemleri Entegrasyon Uzmanı / Security Systems Integration Specialist"]},
+        {"team_code": "22.06.03", "name_tr": "Güvenlik Teknolojisi Mimarisi ve Yaşam Döngüsü", "lead": {"position_code": "22.06.03-TL", "title_tr": "Güvenlik Teknolojisi Mimarisi ve Yaşam Döngüsü Takım Lideri", "title_en": "Security Technology Architecture and Lifecycle Team Lead"}, "roles": ["Fiziksel Güvenlik Teknolojisi Mimarı / Physical Security Technology Architect", "Güvenlik Sistemleri Proje Uzmanı / Security Systems Project Specialist", "Bakım ve Yaşam Döngüsü Uzmanı / Maintenance and Lifecycle Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "22.07",
+      "name_tr": "Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği",
+      "name_en": "Third-Party, Supply Chain and Personnel Security",
+      "manager": {"position_code": "22.07-MGR", "title_tr": "Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği Müdürü", "title_en": "Third-Party, Supply Chain and Personnel Security Manager"},
+      "teams": [
+        {"team_code": "22.07.01", "name_tr": "Özel Güvenlik Hizmetleri Yönetimi", "lead": {"position_code": "22.07.01-TL", "title_tr": "Özel Güvenlik Hizmetleri Yönetimi Takım Lideri", "title_en": "Guarding Services Management Team Lead"}, "roles": ["Özel Güvenlik Hizmetleri Uzmanı / Guarding Services Specialist", "Hizmet Seviyesi ve Kalite Uzmanı / Service Level and Quality Specialist", "Güvenlik Tedarikçi Performans Uzmanı / Security Vendor Performance Specialist"]},
+        {"team_code": "22.07.02", "name_tr": "Tedarik Zinciri ve Üçüncü Taraf Güvenliği", "lead": {"position_code": "22.07.02-TL", "title_tr": "Tedarik Zinciri ve Üçüncü Taraf Güvenliği Takım Lideri", "title_en": "Supply Chain and Third-Party Security Team Lead"}, "roles": ["Tedarik Zinciri Güvenliği Uzmanı / Supply Chain Security Specialist", "Üçüncü Taraf Güvenlik Risk Uzmanı / Third-Party Security Risk Specialist", "Kargo ve Nakliye Güvenliği Uzmanı / Cargo and Transport Security Specialist"]},
+        {"team_code": "22.07.03", "name_tr": "Personel Güvenliği ve Güvenlik Farkındalığı", "lead": {"position_code": "22.07.03-TL", "title_tr": "Personel Güvenliği ve Güvenlik Farkındalığı Takım Lideri", "title_en": "Personnel Security and Awareness Team Lead"}, "roles": ["Personel Güvenliği Uzmanı / Personnel Security Specialist", "Güvenlik Farkındalık ve Eğitim Uzmanı / Security Awareness and Training Specialist", "İç Tehdit Risk Analisti / Insider Threat Risk Analyst"]}
+      ]
+    },
+    {
+      "unit_code": "22.08",
+      "name_tr": "Acil Durum Güvenliği ve Dayanıklılık",
+      "name_en": "Emergency Security and Resilience",
+      "manager": {"position_code": "22.08-MGR", "title_tr": "Acil Durum Güvenliği ve Dayanıklılık Müdürü", "title_en": "Emergency Security and Resilience Manager"},
+      "teams": [
+        {"team_code": "22.08.01", "name_tr": "Güvenlik Acil Durum Planlama", "lead": {"position_code": "22.08.01-TL", "title_tr": "Güvenlik Acil Durum Planlama Takım Lideri", "title_en": "Security Emergency Planning Team Lead"}, "roles": ["Güvenlik Acil Durum Planlama Uzmanı / Security Emergency Planning Specialist", "Tahliye ve Toplanma Koordinatörü / Evacuation and Assembly Coordinator", "Güvenlik Senaryo ve Tatbikat Uzmanı / Security Scenario and Exercise Specialist"]},
+        {"team_code": "22.08.02", "name_tr": "Kriz Güvenliği ve İş Sürekliliği Koordinasyonu", "lead": {"position_code": "22.08.02-TL", "title_tr": "Kriz Güvenliği ve İş Sürekliliği Koordinasyon Takım Lideri", "title_en": "Crisis Security and Business Continuity Coordination Team Lead"}, "roles": ["Kriz Güvenliği Uzmanı / Crisis Security Specialist", "İş Sürekliliği Güvenlik Koordinatörü / Business Continuity Security Coordinator", "Kurtarma ve Alternatif Lokasyon Güvenliği Uzmanı / Recovery Site Security Specialist"]},
+        {"team_code": "22.08.03", "name_tr": "Güvenlik Tatbikat, Hazırlık ve İyileştirme", "lead": {"position_code": "22.08.03-TL", "title_tr": "Güvenlik Tatbikat, Hazırlık ve İyileştirme Takım Lideri", "title_en": "Security Exercise, Preparedness and Improvement Team Lead"}, "roles": ["Tatbikat ve Hazırlık Uzmanı / Exercise and Preparedness Specialist", "Olay Sonrası Değerlendirme Uzmanı / After-Action Review Specialist", "Güvenlik İyileştirme Programı Uzmanı / Security Improvement Program Specialist"]}
+      ]
+    }
+  ],
+  "governance": {
+    "core_kpis": [
+      "Kayıt edilebilir fiziksel güvenlik olayı sıklığı ve şiddeti",
+      "Kritik olaylara ortalama tespit, bildirim ve müdahale süresi",
+      "Güvenlik risk değerlendirmesi ve iyileştirme aksiyonu tamamlama oranı",
+      "Yetkisiz erişim, kayıp ve hırsızlık olaylarındaki değişim",
+      "Kritik tesislerin güvenlik standardına uyum oranı",
+      "Güvenlik sistemleri erişilebilirliği ve alarm doğrulama oranı",
+      "Üçüncü taraf güvenlik hizmeti SLA ve denetim başarı oranı",
+      "Seyahat ve etkinlik güvenliği kapsama oranı",
+      "Zorunlu güvenlik eğitimi ve tatbikat katılım oranı"
+    ],
+    "cadences": [
+      {"frequency": "Anlık", "forum": "Kritik Güvenlik Olayı Komuta ve Eskalasyon"},
+      {"frequency": "Günlük", "forum": "Güvenlik Operasyon Merkezi Durum Değerlendirmesi"},
+      {"frequency": "Haftalık", "forum": "Tehdit, Olay ve Operasyon Gözden Geçirme"},
+      {"frequency": "Aylık", "forum": "Kurumsal Güvenlik Performans Kurulu"},
+      {"frequency": "Üç Aylık", "forum": "Kurumsal Risk ve Güvenlik Komitesi"},
+      {"frequency": "Yıllık", "forum": "Güvenlik Stratejisi, Bütçe ve Dayanıklılık Gözden Geçirmesi"}
+    ]
+  },
+  "scope_boundaries": [
+    {"adjacent_department": "16 - Siber Güvenlik ve Bilgi Güvenliği", "boundary": "Kurumsal Güvenlik fiziksel tehditleri, tesisleri ve fiziksel güvenlik teknolojilerini; Siber Güvenlik dijital varlıkları, ağları ve bilgi sistemlerini yönetir. Hibrit olaylar ortak müdahale edilir."},
+    {"adjacent_department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik", "boundary": "Kurumsal Güvenlik kasıtlı tehdit, suç ve fiziksel korumayı; İSG iş kazası, mesleki risk, yangın standardı ve çevresel yükümlülükleri yönetir. Acil durum planları ortaklaştırılır."},
+    {"adjacent_department": "05 - Hukuk İşleri", "boundary": "Kurumsal Güvenlik olay tespiti, delil muhafazası ve idari soruşturma desteğini; Hukuk yasal değerlendirme, resmi makam ilişkisi ve hukuki süreci yönetir."},
+    {"adjacent_department": "06 - Uyum, Kurumsal Risk ve İç Kontrol", "boundary": "Kurumsal Güvenlik güvenlik risklerinin sahibi ve uygulayıcısıdır; Uyum ve Risk kurumsal çerçeveyi, konsolidasyonu ve ikinci hat gözetimini sağlar."},
+    {"adjacent_department": "20 - İdari İşler ve Destek Hizmetleri", "boundary": "Kurumsal Güvenlik koruma standartlarını ve güvenlik operasyonunu; İdari İşler bina, resepsiyon, filo ve tesis hizmetlerinin idari işletimini yönetir."},
+    {"adjacent_department": "İnsan Kaynakları", "boundary": "Personel güvenliği kontrolleri mevzuat, kişisel veri, eşitlik ve çalışma hukuku ilkeleri doğrultusunda İnsan Kaynakları ve Hukuk ile yürütülür."}
+  ],
+  "staffing_guidance": {
+    "minimum_core_headcount": 33,
+    "minimum_core_composition": {"director": 1, "unit_managers": 8, "team_leads": 24},
+    "specialist_staffing": "Uzman sayıları tesis sayısı, coğrafi yayılım, vardiya düzeni, risk seviyesi, çalışan ve ziyaretçi hacmi ile yasal özel güvenlik gerekliliklerine göre belirlenir.",
+    "shift_note": "Güvenlik Operasyon Merkezi ve saha güvenliği rolleri kritik lokasyonlarda 7/24 vardiya esasına göre ayrıca kadrolanır.",
+    "outsourcing_principle": "Özel güvenlik görevlileri ve teknik bakım hizmetleri dış kaynakla sağlanabilir; politika, risk sahipliği, soruşturma, istihbarat, kritik olay komutası ve tedarikçi gözetimi kurum içinde tutulur."
+  },
+  "organization_summary": {
+    "director_count": 1,
+    "unit_count": 8,
+    "manager_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "specialist_role_type_count": 72,
+    "minimum_core_headcount": 33
+  }
+}

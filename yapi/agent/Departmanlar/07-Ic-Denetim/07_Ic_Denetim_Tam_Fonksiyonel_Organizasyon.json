@@ -1,0 +1,1020 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "07",
+    "name_tr": "İç Denetim",
+    "name_en": "Internal Audit",
+    "mission": "Yönetişim, risk yönetimi ve iç kontrol sistemlerinin etkinliğine ilişkin bağımsız ve objektif güvence sağlamak; kuruma değer katacak iyileştirme önerileri geliştirmek.",
+    "administrative_reporting_to": {
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer"
+    },
+    "functional_reporting_to": {
+      "title_tr": "Yönetim Kurulu Denetim Komitesi",
+      "title_en": "Board Audit Committee"
+    },
+    "department_head": {
+      "title_tr": "İç Denetim Direktörü",
+      "title_en": "Chief Audit Executive / Internal Audit Director"
+    },
+    "hierarchy_standard": [
+      "Departman lideri",
+      "Birim müdürü",
+      "Ekip yöneticisi",
+      "Uzman pozisyon"
+    ],
+    "independence_principle": "İç Denetim Direktörü, Denetim Komitesine doğrudan ve sınırsız erişime sahiptir; denetim planı, kapsamı, bütçesi, kaynakları ve kritik bulguları fonksiyonel olarak Komite gözetimindedir."
+  },
+  "organization_chart": {
+    "root": {
+      "id": "BOARD",
+      "title_tr": "Yönetim Kurulu",
+      "title_en": "Board of Directors",
+      "children": [
+        {
+          "id": "AUDIT-COMMITTEE",
+          "title_tr": "Denetim Komitesi",
+          "title_en": "Audit Committee",
+          "relationship": "Fonksiyonel bağlılık",
+          "children": [
+            {
+              "id": "CAE",
+              "title_tr": "İç Denetim Direktörü",
+              "title_en": "Chief Audit Executive / Internal Audit Director",
+              "administrative_reporting_to": "Genel Müdür / CEO",
+              "children": [
+                {
+                  "unit_ref": "07.01"
+                },
+                {
+                  "unit_ref": "07.02"
+                },
+                {
+                  "unit_ref": "07.03"
+                },
+                {
+                  "unit_ref": "07.04"
+                },
+                {
+                  "unit_ref": "07.05"
+                },
+                {
+                  "unit_ref": "07.06"
+                },
+                {
+                  "unit_ref": "07.07"
+                },
+                {
+                  "unit_ref": "07.08"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {
+      "id": "CAE",
+      "title_tr": "İç Denetim Direktörü",
+      "title_en": "Chief Audit Executive / Internal Audit Director",
+      "reports_administratively_to": "Genel Müdür / CEO",
+      "reports_functionally_to": "Yönetim Kurulu Denetim Komitesi"
+    },
+    {
+      "id": "DEPUTY-CAE",
+      "title_tr": "İç Denetim Direktör Yardımcısı",
+      "title_en": "Deputy Chief Audit Executive",
+      "reports_to": "CAE",
+      "status": "Şirket ölçeğine göre opsiyonel"
+    },
+    {
+      "id": "PRINCIPAL-AUDITOR",
+      "title_tr": "Baş Denetçi",
+      "title_en": "Principal Auditor / Head Auditor",
+      "reports_to": "CAE",
+      "status": "Karmaşık ve yüksek riskli denetimler için opsiyonel"
+    },
+    {
+      "id": "COMMITTEE-REPORTING",
+      "title_tr": "Denetim Komitesi Raporlama Uzmanı",
+      "title_en": "Audit Committee Reporting Specialist",
+      "reports_to": "CAE"
+    }
+  ],
+  "units": [
+    {
+      "id": "07.01",
+      "name_tr": "Denetim Planlama ve Metodoloji",
+      "name_en": "Audit Planning and Methodology",
+      "manager": {
+        "title_tr": "Denetim Planlama ve Metodoloji Müdürü",
+        "title_en": "Audit Planning and Methodology Manager"
+      },
+      "responsibilities": [
+        "Denetim evrenini oluşturmak ve güncellemek",
+        "Risk bazlı yıllık ve çok yıllı denetim planlarını hazırlamak",
+        "Denetim metodolojisi, programları ve çalışma kâğıdı standartlarını yönetmek",
+        "Denetim kaynak ve kapasite planlamasını yürütmek",
+        "Sürekli denetim ve analitik senaryolar geliştirmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Risk Değerlendirme ve Planlama",
+          "name_en": "Risk Assessment and Planning",
+          "lead": {
+            "title_tr": "Denetim Risk Değerlendirme ve Planlama Yöneticisi",
+            "title_en": "Audit Risk Assessment and Planning Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Denetim Planlama Uzmanı",
+              "title_en": "Senior Audit Planning Specialist"
+            },
+            {
+              "title_tr": "Denetim Risk Değerlendirme Uzmanı",
+              "title_en": "Audit Risk Assessment Specialist"
+            },
+            {
+              "title_tr": "Denetim Evreni ve Kapsam Analisti",
+              "title_en": "Audit Universe and Scope Analyst"
+            },
+            {
+              "title_tr": "Kaynak ve Denetim Takvimi Uzmanı",
+              "title_en": "Audit Resource and Schedule Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Denetim Metodolojisi",
+          "name_en": "Audit Methodology",
+          "lead": {
+            "title_tr": "Denetim Metodolojisi Yöneticisi",
+            "title_en": "Audit Methodology Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Denetim Metodolojisi Uzmanı",
+              "title_en": "Senior Audit Methodology Specialist"
+            },
+            {
+              "title_tr": "Denetim Standartları Uzmanı",
+              "title_en": "Audit Standards Specialist"
+            },
+            {
+              "title_tr": "Çalışma Kâğıtları ve Dokümantasyon Uzmanı",
+              "title_en": "Audit Documentation Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Denetim Analitiği ve Sürekli Denetim",
+          "name_en": "Audit Analytics and Continuous Auditing",
+          "lead": {
+            "title_tr": "Denetim Analitiği ve Sürekli Denetim Yöneticisi",
+            "title_en": "Audit Analytics and Continuous Auditing Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Denetim Veri Analisti",
+              "title_en": "Senior Audit Data Analyst"
+            },
+            {
+              "title_tr": "Sürekli Denetim Uzmanı",
+              "title_en": "Continuous Auditing Specialist"
+            },
+            {
+              "title_tr": "Denetim Otomasyonu Uzmanı",
+              "title_en": "Audit Automation Specialist"
+            },
+            {
+              "title_tr": "Denetim Analitiği Geliştiricisi",
+              "title_en": "Audit Analytics Developer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.02",
+      "name_tr": "Finansal Denetim",
+      "name_en": "Financial Audit",
+      "manager": {
+        "title_tr": "Finansal Denetim Müdürü",
+        "title_en": "Financial Audit Manager"
+      },
+      "responsibilities": [
+        "Finansal raporlama ve konsolidasyon kontrollerini denetlemek",
+        "Muhasebe, vergi, e-belge ve kapanış süreçlerini değerlendirmek",
+        "Hazine, nakit, ödeme, kredi ve finansman süreçlerini denetlemek",
+        "Finansal yetki ve onay mekanizmalarını test etmek",
+        "Finansal risk kontrollerinin etkinliğini değerlendirmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Finansal Raporlama Denetimi",
+          "name_en": "Financial Reporting Audit",
+          "lead": {
+            "title_tr": "Finansal Raporlama Denetimi Yöneticisi",
+            "title_en": "Financial Reporting Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Finansal Denetçi",
+              "title_en": "Senior Financial Auditor"
+            },
+            {
+              "title_tr": "Finansal Denetçi",
+              "title_en": "Financial Auditor"
+            },
+            {
+              "title_tr": "Konsolidasyon Denetim Uzmanı",
+              "title_en": "Consolidation Audit Specialist"
+            },
+            {
+              "title_tr": "Finansal Raporlama Kontrol Analisti",
+              "title_en": "Financial Reporting Controls Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Muhasebe ve Mali Süreçler Denetimi",
+          "name_en": "Accounting and Financial Processes Audit",
+          "lead": {
+            "title_tr": "Muhasebe ve Mali Süreçler Denetimi Yöneticisi",
+            "title_en": "Accounting and Financial Processes Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Muhasebe Süreçleri Denetçisi",
+              "title_en": "Senior Accounting Process Auditor"
+            },
+            {
+              "title_tr": "Muhasebe Süreçleri Denetçisi",
+              "title_en": "Accounting Process Auditor"
+            },
+            {
+              "title_tr": "Vergi Süreçleri Denetim Uzmanı",
+              "title_en": "Tax Process Audit Specialist"
+            },
+            {
+              "title_tr": "E-Belge ve Mali Sistemler Denetçisi",
+              "title_en": "E-Document and Financial Systems Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Hazine ve Finans Denetimi",
+          "name_en": "Treasury and Finance Audit",
+          "lead": {
+            "title_tr": "Hazine ve Finans Denetimi Yöneticisi",
+            "title_en": "Treasury and Finance Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Hazine Denetçisi",
+              "title_en": "Senior Treasury Auditor"
+            },
+            {
+              "title_tr": "Hazine ve Nakit Yönetimi Denetçisi",
+              "title_en": "Treasury and Cash Management Auditor"
+            },
+            {
+              "title_tr": "Finansman ve Banka Süreçleri Denetçisi",
+              "title_en": "Financing and Banking Processes Auditor"
+            },
+            {
+              "title_tr": "Finansal Risk Kontrolleri Denetçisi",
+              "title_en": "Financial Risk Controls Auditor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.03",
+      "name_tr": "Operasyonel Denetim",
+      "name_en": "Operational Audit",
+      "manager": {
+        "title_tr": "Operasyonel Denetim Müdürü",
+        "title_en": "Operational Audit Manager"
+      },
+      "responsibilities": [
+        "Operasyon ve hizmet teslimat süreçlerini denetlemek",
+        "Kapasite, kaynak kullanımı, SLA ve verimlilik kontrollerini değerlendirmek",
+        "Satın alma, stok, depo ve lojistik süreçlerini denetlemek",
+        "Satış, fiyatlandırma, iskonto ve müşteri süreçlerini değerlendirmek",
+        "Varlıkların korunması ve operasyonel kontrol etkinliğini test etmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Süreç ve Operasyon Denetimi",
+          "name_en": "Process and Operations Audit",
+          "lead": {
+            "title_tr": "Süreç ve Operasyon Denetimi Yöneticisi",
+            "title_en": "Process and Operations Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Operasyonel Denetçi",
+              "title_en": "Senior Operational Auditor"
+            },
+            {
+              "title_tr": "Operasyonel Denetçi",
+              "title_en": "Operational Auditor"
+            },
+            {
+              "title_tr": "Süreç Verimliliği Denetçisi",
+              "title_en": "Process Efficiency Auditor"
+            },
+            {
+              "title_tr": "SLA ve Hizmet Kalitesi Denetçisi",
+              "title_en": "SLA and Service Quality Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Tedarik Zinciri ve Lojistik Denetimi",
+          "name_en": "Supply Chain and Logistics Audit",
+          "lead": {
+            "title_tr": "Tedarik Zinciri ve Lojistik Denetimi Yöneticisi",
+            "title_en": "Supply Chain and Logistics Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Tedarik Zinciri Denetçisi",
+              "title_en": "Senior Supply Chain Auditor"
+            },
+            {
+              "title_tr": "Satın Alma Denetçisi",
+              "title_en": "Procurement Auditor"
+            },
+            {
+              "title_tr": "Stok ve Depo Denetçisi",
+              "title_en": "Inventory and Warehouse Auditor"
+            },
+            {
+              "title_tr": "Lojistik ve Sevkiyat Denetçisi",
+              "title_en": "Logistics and Distribution Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Müşteri ve Ticari Süreçler Denetimi",
+          "name_en": "Customer and Commercial Processes Audit",
+          "lead": {
+            "title_tr": "Müşteri ve Ticari Süreçler Denetimi Yöneticisi",
+            "title_en": "Customer and Commercial Processes Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Satış Süreçleri Denetçisi",
+              "title_en": "Sales Process Auditor"
+            },
+            {
+              "title_tr": "Fiyatlandırma ve İskonto Denetçisi",
+              "title_en": "Pricing and Discount Auditor"
+            },
+            {
+              "title_tr": "Müşteri ve Tahsilat Süreçleri Denetçisi",
+              "title_en": "Customer and Collections Auditor"
+            },
+            {
+              "title_tr": "Satış Sonrası Hizmetler Denetçisi",
+              "title_en": "After-Sales Services Auditor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.04",
+      "name_tr": "BT, Siber Güvenlik ve Veri Denetimi",
+      "name_en": "IT, Cybersecurity and Data Audit",
+      "manager": {
+        "title_tr": "BT ve Siber Güvenlik Denetim Müdürü",
+        "title_en": "IT and Cybersecurity Audit Manager"
+      },
+      "responsibilities": [
+        "BT genel kontrollerini ve sistem erişimlerini denetlemek",
+        "Değişiklik, sürüm, yedekleme ve felaket kurtarma kontrollerini değerlendirmek",
+        "Ağ, uygulama, bulut ve siber olay yönetimi kontrollerini denetlemek",
+        "Veri yönetişimi ve veri kalitesi kontrollerini değerlendirmek",
+        "Yapay zekâ, algoritma, model ve dijital platform risklerini denetlemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "BT Genel Kontroller Denetimi",
+          "name_en": "IT General Controls Audit",
+          "lead": {
+            "title_tr": "BT Genel Kontroller Denetimi Yöneticisi",
+            "title_en": "IT General Controls Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli BT Denetçisi",
+              "title_en": "Senior IT Auditor"
+            },
+            {
+              "title_tr": "BT Genel Kontroller Denetçisi",
+              "title_en": "IT General Controls Auditor"
+            },
+            {
+              "title_tr": "Erişim ve Yetki Denetçisi",
+              "title_en": "Access and Authorisation Auditor"
+            },
+            {
+              "title_tr": "Değişiklik ve Sürüm Yönetimi Denetçisi",
+              "title_en": "Change and Release Management Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Siber Güvenlik Denetimi",
+          "name_en": "Cybersecurity Audit",
+          "lead": {
+            "title_tr": "Siber Güvenlik Denetimi Yöneticisi",
+            "title_en": "Cybersecurity Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Siber Güvenlik Denetçisi",
+              "title_en": "Senior Cybersecurity Auditor"
+            },
+            {
+              "title_tr": "Siber Güvenlik Denetçisi",
+              "title_en": "Cybersecurity Auditor"
+            },
+            {
+              "title_tr": "Bulut Güvenliği Denetçisi",
+              "title_en": "Cloud Security Auditor"
+            },
+            {
+              "title_tr": "Olay Müdahale ve SOC Denetçisi",
+              "title_en": "Incident Response and SOC Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Veri, Yapay Zekâ ve Dijital Sistemler Denetimi",
+          "name_en": "Data, AI and Digital Systems Audit",
+          "lead": {
+            "title_tr": "Veri ve Yapay Zekâ Denetimi Yöneticisi",
+            "title_en": "Data and Artificial Intelligence Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Veri Yönetişimi Denetçisi",
+              "title_en": "Data Governance Auditor"
+            },
+            {
+              "title_tr": "Yapay Zekâ Sistemleri Denetçisi",
+              "title_en": "AI Systems Auditor"
+            },
+            {
+              "title_tr": "Algoritma ve Model Risk Denetçisi",
+              "title_en": "Algorithm and Model Risk Auditor"
+            },
+            {
+              "title_tr": "Dijital Platformlar Denetçisi",
+              "title_en": "Digital Platforms Auditor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.05",
+      "name_tr": "Uyum ve Düzenleyici Denetim",
+      "name_en": "Compliance and Regulatory Audit",
+      "manager": {
+        "title_tr": "Uyum ve Düzenleyici Denetim Müdürü",
+        "title_en": "Compliance and Regulatory Audit Manager"
+      },
+      "responsibilities": [
+        "Mevzuat uyum programlarının tasarım ve işletim etkinliğini değerlendirmek",
+        "KVKK ve GDPR kontrol ortamını denetlemek",
+        "Etik ve ihbar mekanizmalarını değerlendirmek",
+        "Üçüncü taraf durum tespiti ve yaptırım kontrollerini denetlemek",
+        "Uyum ihlali, eğitim ve farkındalık süreçlerini incelemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Mevzuat ve Uyum Denetimi",
+          "name_en": "Regulatory and Compliance Audit",
+          "lead": {
+            "title_tr": "Mevzuat ve Uyum Denetimi Yöneticisi",
+            "title_en": "Regulatory and Compliance Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Uyum Denetçisi",
+              "title_en": "Senior Compliance Auditor"
+            },
+            {
+              "title_tr": "Uyum Denetçisi",
+              "title_en": "Compliance Auditor"
+            },
+            {
+              "title_tr": "Mevzuat Kontrolleri Denetçisi",
+              "title_en": "Regulatory Controls Auditor"
+            },
+            {
+              "title_tr": "Uyum Programı Etkinlik Analisti",
+              "title_en": "Compliance Program Effectiveness Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "KVKK ve Veri Koruma Denetimi",
+          "name_en": "Data Protection Audit",
+          "lead": {
+            "title_tr": "Veri Koruma Denetimi Yöneticisi",
+            "title_en": "Data Protection Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Veri Koruma Denetçisi",
+              "title_en": "Senior Data Protection Auditor"
+            },
+            {
+              "title_tr": "KVKK Denetçisi",
+              "title_en": "KVKK Auditor"
+            },
+            {
+              "title_tr": "GDPR Denetçisi",
+              "title_en": "GDPR Auditor"
+            },
+            {
+              "title_tr": "Veri Yaşam Döngüsü Denetçisi",
+              "title_en": "Data Lifecycle Auditor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Etik ve Üçüncü Taraf Uyum Denetimi",
+          "name_en": "Ethics and Third-Party Compliance Audit",
+          "lead": {
+            "title_tr": "Etik ve Üçüncü Taraf Uyum Denetimi Yöneticisi",
+            "title_en": "Ethics and Third-Party Compliance Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Etik Program Denetçisi",
+              "title_en": "Ethics Program Auditor"
+            },
+            {
+              "title_tr": "İhbar Mekanizması Denetçisi",
+              "title_en": "Whistleblowing Program Auditor"
+            },
+            {
+              "title_tr": "Üçüncü Taraf Uyum Denetçisi",
+              "title_en": "Third-Party Compliance Auditor"
+            },
+            {
+              "title_tr": "Yaptırım ve Durum Tespiti Denetçisi",
+              "title_en": "Sanctions and Due Diligence Auditor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.06",
+      "name_tr": "Suistimal İncelemeleri ve Özel Denetimler",
+      "name_en": "Fraud Investigations and Special Audits",
+      "manager": {
+        "title_tr": "Suistimal İncelemeleri ve Özel Denetimler Müdürü",
+        "title_en": "Fraud Investigations and Special Audits Manager"
+      },
+      "responsibilities": [
+        "Suistimal iddialarını bağımsız olarak incelemek",
+        "Yönetim Kurulu veya üst yönetim tarafından talep edilen özel denetimleri yürütmek",
+        "Dijital delil, veri analitiği ve vaka dokümantasyonunu yönetmek",
+        "Kök neden ve kontrol zafiyeti analizi yapmak",
+        "Bulguları yetkili yönetim, Hukuk, İnsan Kaynakları ve Etik Kurula aktarmak"
+      ],
+      "teams": [
+        {
+          "name_tr": "Suistimal İncelemeleri",
+          "name_en": "Fraud Investigations",
+          "lead": {
+            "title_tr": "Suistimal İncelemeleri Yöneticisi",
+            "title_en": "Fraud Investigations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Suistimal İnceleme Uzmanı",
+              "title_en": "Senior Fraud Investigator"
+            },
+            {
+              "title_tr": "Suistimal İnceleme Uzmanı",
+              "title_en": "Fraud Investigator"
+            },
+            {
+              "title_tr": "Finansal Suistimal İnceleme Uzmanı",
+              "title_en": "Financial Fraud Investigator"
+            },
+            {
+              "title_tr": "Vaka Dokümantasyon Uzmanı",
+              "title_en": "Case Documentation Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Özel İncelemeler",
+          "name_en": "Special Investigations",
+          "lead": {
+            "title_tr": "Özel İncelemeler Yöneticisi",
+            "title_en": "Special Investigations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Özel İnceleme Uzmanı",
+              "title_en": "Senior Special Investigations Specialist"
+            },
+            {
+              "title_tr": "Özel İnceleme Uzmanı",
+              "title_en": "Special Investigations Specialist"
+            },
+            {
+              "title_tr": "Etik Vaka İnceleme Uzmanı",
+              "title_en": "Ethics Case Investigator"
+            },
+            {
+              "title_tr": "Araştırma ve İstihbarat Analisti",
+              "title_en": "Research and Intelligence Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Adli Veri Analitiği",
+          "name_en": "Forensic Data Analytics",
+          "lead": {
+            "title_tr": "Adli Veri Analitiği Yöneticisi",
+            "title_en": "Forensic Data Analytics Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Adli Veri Analisti",
+              "title_en": "Senior Forensic Data Analyst"
+            },
+            {
+              "title_tr": "Adli Veri Analisti",
+              "title_en": "Forensic Data Analyst"
+            },
+            {
+              "title_tr": "Dijital İnceleme Uzmanı",
+              "title_en": "Digital Forensics Specialist"
+            },
+            {
+              "title_tr": "Suistimal Analitiği Geliştiricisi",
+              "title_en": "Fraud Analytics Developer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.07",
+      "name_tr": "Grup Şirketleri ve İştirak Denetimleri",
+      "name_en": "Group Companies and Subsidiaries Audit",
+      "manager": {
+        "title_tr": "Grup Şirketleri Denetim Müdürü",
+        "title_en": "Group Companies Audit Manager"
+      },
+      "responsibilities": [
+        "Grup şirketleri ve iştiraklerde risk bazlı denetimler yürütmek",
+        "Holding politika ve standartlarına uyumu değerlendirmek",
+        "Şube, saha, lokasyon ve tesis kontrollerini denetlemek",
+        "Yurt dışı şirket ve operasyonları denetlemek",
+        "Grup genelinde karşılaştırmalı bulgu ve risk analizleri hazırlamak"
+      ],
+      "teams": [
+        {
+          "name_tr": "İştirak ve Şirket Denetimleri",
+          "name_en": "Subsidiaries and Companies Audit",
+          "lead": {
+            "title_tr": "İştirak ve Şirket Denetimleri Yöneticisi",
+            "title_en": "Subsidiaries and Companies Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İştirak Denetçisi",
+              "title_en": "Senior Subsidiary Auditor"
+            },
+            {
+              "title_tr": "İştirak Denetçisi",
+              "title_en": "Subsidiary Auditor"
+            },
+            {
+              "title_tr": "Grup Politikaları Uyum Denetçisi",
+              "title_en": "Group Policies Compliance Auditor"
+            },
+            {
+              "title_tr": "İştirak Risk Analisti",
+              "title_en": "Subsidiary Risk Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Şube ve Lokasyon Denetimleri",
+          "name_en": "Branch and Site Audit",
+          "lead": {
+            "title_tr": "Şube ve Lokasyon Denetimleri Yöneticisi",
+            "title_en": "Branch and Site Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Saha Denetçisi",
+              "title_en": "Senior Field Auditor"
+            },
+            {
+              "title_tr": "Şube Denetçisi",
+              "title_en": "Branch Auditor"
+            },
+            {
+              "title_tr": "Lokasyon ve Tesis Denetçisi",
+              "title_en": "Site and Facility Auditor"
+            },
+            {
+              "title_tr": "Saha Denetim Analisti",
+              "title_en": "Field Audit Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Yurt Dışı Operasyon Denetimleri",
+          "name_en": "International Operations Audit",
+          "lead": {
+            "title_tr": "Yurt Dışı Operasyon Denetimleri Yöneticisi",
+            "title_en": "International Operations Audit Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Uluslararası Denetçi",
+              "title_en": "Senior International Auditor"
+            },
+            {
+              "title_tr": "Uluslararası Operasyon Denetçisi",
+              "title_en": "International Operations Auditor"
+            },
+            {
+              "title_tr": "Yerel Mevzuat Kontrolleri Denetçisi",
+              "title_en": "Local Regulatory Controls Auditor"
+            },
+            {
+              "title_tr": "Yurt Dışı İştirak Analisti",
+              "title_en": "International Subsidiary Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07.08",
+      "name_tr": "Kalite Güvence, Bulgular ve Raporlama",
+      "name_en": "Quality Assurance, Findings and Reporting",
+      "manager": {
+        "title_tr": "İç Denetim Kalite Güvence ve Raporlama Müdürü",
+        "title_en": "Internal Audit Quality Assurance and Reporting Manager"
+      },
+      "responsibilities": [
+        "İç denetim kalite güvence ve geliştirme programını yönetmek",
+        "Denetim dosyalarını ve mesleki standartlara uyumu değerlendirmek",
+        "Bulguların derecelendirilmesini ve düzeltici aksiyonları takip etmek",
+        "Aksiyon kapanışlarını bağımsız olarak doğrulamak",
+        "Yönetim ve Denetim Komitesi raporlarını hazırlamak"
+      ],
+      "teams": [
+        {
+          "name_tr": "Denetim Kalite Güvence",
+          "name_en": "Audit Quality Assurance",
+          "lead": {
+            "title_tr": "Denetim Kalite Güvence Yöneticisi",
+            "title_en": "Audit Quality Assurance Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kalite Güvence Uzmanı",
+              "title_en": "Senior Audit Quality Assurance Specialist"
+            },
+            {
+              "title_tr": "Denetim Kalite Güvence Uzmanı",
+              "title_en": "Audit Quality Assurance Specialist"
+            },
+            {
+              "title_tr": "Denetim Dosyası İnceleme Uzmanı",
+              "title_en": "Audit File Review Specialist"
+            },
+            {
+              "title_tr": "Mesleki Standartlar Uzmanı",
+              "title_en": "Professional Standards Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Bulgu ve Aksiyon Takibi",
+          "name_en": "Findings and Remediation Tracking",
+          "lead": {
+            "title_tr": "Bulgu ve Aksiyon Takibi Yöneticisi",
+            "title_en": "Findings and Remediation Tracking Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Bulgu Takip Uzmanı",
+              "title_en": "Senior Findings Tracking Specialist"
+            },
+            {
+              "title_tr": "Düzeltici Aksiyon Takip Uzmanı",
+              "title_en": "Remediation Tracking Specialist"
+            },
+            {
+              "title_tr": "Bulgu Doğrulama Denetçisi",
+              "title_en": "Finding Validation Auditor"
+            },
+            {
+              "title_tr": "Gecikmiş Aksiyon Raporlama Analisti",
+              "title_en": "Overdue Action Reporting Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Yönetim ve Komite Raporlaması",
+          "name_en": "Executive and Committee Reporting",
+          "lead": {
+            "title_tr": "Yönetim ve Komite Raporlaması Yöneticisi",
+            "title_en": "Executive and Committee Reporting Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Denetim Komitesi Raporlama Uzmanı",
+              "title_en": "Audit Committee Reporting Specialist"
+            },
+            {
+              "title_tr": "Yönetim Raporlama Uzmanı",
+              "title_en": "Executive Audit Reporting Specialist"
+            },
+            {
+              "title_tr": "Denetim Veri ve Dashboard Uzmanı",
+              "title_en": "Audit Data and Dashboard Specialist"
+            },
+            {
+              "title_tr": "Denetim Portföyü Analisti",
+              "title_en": "Audit Portfolio Analyst"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "organization_summary": {
+    "unit_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "specialist_position_types": 95
+  },
+  "governance_model": [
+    {
+      "subject": "İç Denetim Direktörü ataması",
+      "audit_committee_authority": "Onaylar",
+      "ceo_administrative_authority": "Aday ve idari süreç desteği sağlar"
+    },
+    {
+      "subject": "Görevden alma",
+      "audit_committee_authority": "Onaylar",
+      "ceo_administrative_authority": "Tek başına karar veremez"
+    },
+    {
+      "subject": "Denetim planı",
+      "audit_committee_authority": "Onaylar",
+      "ceo_administrative_authority": "Görüş ve risk bilgisi sağlar"
+    },
+    {
+      "subject": "Denetim kapsamı",
+      "audit_committee_authority": "Kapsam kısıtlamalarına müdahale eder",
+      "ceo_administrative_authority": "Kapsamı tek taraflı daraltamaz"
+    },
+    {
+      "subject": "Bütçe ve kaynaklar",
+      "audit_committee_authority": "Yeterliliğini gözetir",
+      "ceo_administrative_authority": "İdari bütçe sürecini yürütür"
+    },
+    {
+      "subject": "Kritik bulgular",
+      "audit_committee_authority": "Doğrudan rapor alır",
+      "ceo_administrative_authority": "Eş zamanlı bilgilendirilir"
+    },
+    {
+      "subject": "Özel incelemeler",
+      "audit_committee_authority": "Görevlendirebilir",
+      "ceo_administrative_authority": "Talepte bulunabilir"
+    }
+  ],
+  "staffing_models": [
+    {
+      "model": "Yalın yapı",
+      "recommended_structure": "1 İç Denetim Yöneticisi ve 2-4 kıdemli denetçi"
+    },
+    {
+      "model": "Orta ölçekli şirket",
+      "recommended_structure": "1 direktör, 3-5 müdür ve 8-15 denetçi"
+    },
+    {
+      "model": "Holding yapısı",
+      "recommended_structure": "1 direktör, 1 direktör yardımcısı, 6-8 müdür ve uzman denetçiler"
+    },
+    {
+      "model": "Tam fonksiyonel yapı",
+      "recommended_structure": "8 müdürlük ve 24 uzmanlık ekibinin ayrı kadrolanması"
+    }
+  ],
+  "three_lines_model": [
+    {
+      "line": 1,
+      "name_tr": "Birinci Savunma Hattı",
+      "owner": "Operasyonel ve ticari birimler",
+      "responsibility": "Riskleri sahiplenmek ve günlük kontrolleri uygulamak"
+    },
+    {
+      "line": 2,
+      "name_tr": "İkinci Savunma Hattı",
+      "owner": "Uyum, Kurumsal Risk ve İç Kontrol",
+      "responsibility": "Risk ve kontrol sistemini kurmak, yönlendirmek ve izlemek"
+    },
+    {
+      "line": 3,
+      "name_tr": "Üçüncü Savunma Hattı",
+      "owner": "İç Denetim",
+      "responsibility": "Birinci ve ikinci hattın etkinliğini bağımsız olarak değerlendirmek"
+    }
+  ],
+  "department_boundaries": [
+    {
+      "interface_department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+      "internal_audit_owns": "Sistemin etkinliğini bağımsız değerlendirmek",
+      "other_department_owns": "Risk, uyum ve kontrol sistemini tasarlamak ve izlemek"
+    },
+    {
+      "interface_department": "05 - Hukuk İşleri",
+      "internal_audit_owns": "Hukuk süreçlerindeki kontrolleri denetlemek",
+      "other_department_owns": "Hukuki görüş, sözleşme, dava ve temsil"
+    },
+    {
+      "interface_department": "02 - Muhasebe ve Mali İşler",
+      "internal_audit_owns": "Mali süreç ve kontrolleri denetlemek",
+      "other_department_owns": "Kayıt, vergi ve yasal finansal raporlama"
+    },
+    {
+      "interface_department": "03 - Finans ve Hazine",
+      "internal_audit_owns": "Finansal karar süreçlerini ve kontrolleri denetlemek",
+      "other_department_owns": "Bütçe, nakit, finansman ve finansal risk yönetimi"
+    },
+    {
+      "interface_department": "15 - Bilgi Teknolojileri",
+      "internal_audit_owns": "BT kontrollerini bağımsız değerlendirmek",
+      "other_department_owns": "Sistemleri ve altyapıyı işletmek"
+    },
+    {
+      "interface_department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+      "internal_audit_owns": "Güvenlik yönetişimi ve kontrollerini denetlemek",
+      "other_department_owns": "Teknik güvenlik ve olay müdahalesi"
+    },
+    {
+      "interface_department": "04 - İnsan Kaynakları ve Organizasyon",
+      "internal_audit_owns": "İK süreç ve kontrollerini denetlemek",
+      "other_department_owns": "Personel ve çalışma ilişkileri süreçlerini yürütmek"
+    },
+    {
+      "interface_department": "14 - Kalite Yönetimi",
+      "internal_audit_owns": "Kalite sisteminin etkinliğini bağımsız değerlendirmek",
+      "other_department_owns": "Kalite standartlarını ve kontrol sistemini yönetmek"
+    },
+    {
+      "interface_department": "Bağımsız Denetim",
+      "internal_audit_owns": "Çalışmaları koordine etmek ve uygun ölçüde paylaşmak",
+      "other_department_owns": "Finansal tablolar hakkında bağımsız denetim görüşü vermek"
+    }
+  ],
+  "scope_exclusions": [
+    "Denetlediği süreci tasarlamak veya işletmek",
+    "Kontrol sahibi olmak",
+    "Operasyonel onay vermek",
+    "Muhasebe kaydı oluşturmak",
+    "Risk sahibi adına risk kabul etmek",
+    "Hukuki görüş veya disiplin kararı vermek",
+    "Yönetim sorumluluğunu devralmak",
+    "Denetim bulgusunu kapatan aksiyonu uygulamak",
+    "Yönetimin denetim kapsamını sınırlandırmasını kabul etmek",
+    "Uyum ve İç Kontrol departmanının görevlerini üstlenmek"
+  ],
+  "notes": [
+    "Pozisyonlar hedef organizasyon modelidir ve mevcut çalışan sayısını ifade etmez.",
+    "İç Denetim, kendi bağımsızlığını zedeleyecek operasyonel sorumluluk üstlenemez.",
+    "Denetim planında değişiklik, önemli kaynak yetersizliği ve kapsam kısıtlamaları Denetim Komitesine raporlanır.",
+    "Suistimal incelemeleri sonucunda disiplin veya hukuki yaptırım kararını yetkili yönetim, İnsan Kaynakları, Hukuk ve Etik Kurul verir.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; bağımsızlık, yetkinlik ve görevler ayrılığı korunmalıdır."
+  ]
+}

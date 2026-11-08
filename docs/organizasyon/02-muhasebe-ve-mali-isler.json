@@ -1,0 +1,1852 @@
+{
+  "department": {
+    "id": 2,
+    "name_tr": "Muhasebe ve Mali İşler Departmanı",
+    "name_en": "Accounting and Statutory Affairs Department",
+    "purpose": "Gerçekleşmiş mali işlemleri eksiksiz ve doğru kaydetmek, yasal mali yükümlülükleri zamanında yerine getirmek ve finansal tabloların güvenilirliğini sağlamak.",
+    "reports_to": "Genel Müdür / CEO",
+    "leader": {"title_tr": "Muhasebe ve Mali İşler Direktörü", "title_en": "Accounting and Statutory Affairs Director", "abbreviation": "Accounting Director"},
+    "scope": ["Genel muhasebe", "Cari hesaplar", "Faturalama", "Borç ve alacak kayıtları", "Dönem sonu kapanışları", "Maliyet muhasebesi", "Sabit kıymet muhasebesi", "Bordro muhasebesi", "Vergi ve beyannameler", "E-defter ve e-belge süreçleri", "Konsolidasyon", "Yasal finansal raporlama", "Bağımsız denetim koordinasyonu"],
+    "boundary": "Bütçe oluşturma, finansman temini, banka ilişkileri, nakit akışı ve ödeme zamanlamasını yönetmez. Muhasebe ödeme belgelerinin uygunluğunu, borcun varlığını ve kayıt doğruluğunu kontrol eder; ödeme önceliği, tarihi ve nakit tahsisi Finans ve Hazine Departmanı tarafından kararlaştırılır."
+  },
+  "units": [
+    {
+      "id": "general_accounting_closing",
+      "name_tr": "Genel Muhasebe ve Dönem Kapanışı",
+      "leader": "Genel Muhasebe ve Kapanış Müdürü",
+      "teams": [
+        {"manager": "Genel Muhasebe Yöneticisi", "roles": ["Kıdemli Genel Muhasebe Uzmanı", "Genel Muhasebe Uzmanı", "Muhasebe Uzman Yardımcısı"]},
+        {"manager": "Dönem Kapanışı ve Mutabakat Yöneticisi", "roles": ["Kapanış ve Tahakkuk Uzmanı", "Hesap Mutabakat Uzmanı"]},
+        {"manager": "Muhasebe Kontrol Yöneticisi", "roles": ["Muhasebe Kontrol Uzmanı", "Hesap Planı ve Kayıt Standartları Uzmanı"]}
+      ]
+    },
+    {
+      "id": "accounts_receivable_payable",
+      "name_tr": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+      "leader": "Cari Hesaplar ve Borç-Alacak Muhasebesi Müdürü",
+      "teams": [
+        {"manager": "Müşteri Cari Hesapları Yöneticisi", "roles": ["Alacak Muhasebesi Uzmanı", "Müşteri Mutabakat Uzmanı"]},
+        {"manager": "Tedarikçi Cari Hesapları Yöneticisi", "roles": ["Borç Muhasebesi Uzmanı", "Tedarikçi Mutabakat Uzmanı"]},
+        {"manager": "Cari Hesap Kontrol ve Yaşlandırma Yöneticisi", "roles": ["Cari Hesap Kontrol Uzmanı", "Borç-Alacak Yaşlandırma Analisti"]}
+      ]
+    },
+    {
+      "id": "invoicing_ebilling",
+      "name_tr": "Faturalama ve E-Belge Operasyonları",
+      "leader": "Faturalama ve E-Belge Operasyonları Müdürü",
+      "teams": [
+        {"manager": "Satış Faturalama Yöneticisi", "roles": ["Faturalama Uzmanı", "Fatura Kontrol Uzmanı"]},
+        {"manager": "Alış Faturası ve Belge Kontrol Yöneticisi", "roles": ["Alış Faturaları Uzmanı", "Belge Uygunluk Uzmanı"]},
+        {"manager": "E-Fatura ve E-Arşiv Operasyonları Yöneticisi", "roles": ["E-Fatura Uzmanı", "E-Arşiv ve Entegrasyon Uzmanı"]}
+      ]
+    },
+    {
+      "id": "cost_accounting",
+      "name_tr": "Maliyet Muhasebesi",
+      "leader": "Maliyet Muhasebesi Müdürü",
+      "teams": [
+        {"manager": "Maliyet Kayıtları Yöneticisi", "roles": ["Maliyet Muhasebesi Uzmanı", "Gider Dağıtım Uzmanı"]},
+        {"manager": "Ürün ve Hizmet Maliyetleri Yöneticisi", "roles": ["Ürün Maliyet Analisti", "Hizmet Maliyet Analisti"]},
+        {"manager": "Stok ve Üretim Muhasebesi Yöneticisi", "roles": ["Stok Muhasebesi Uzmanı", "Üretim Maliyetleri Uzmanı"]}
+      ]
+    },
+    {
+      "id": "fixed_assets",
+      "name_tr": "Sabit Kıymet ve Amortisman Muhasebesi",
+      "leader": "Sabit Kıymet ve Amortisman Muhasebesi Müdürü",
+      "teams": [
+        {"manager": "Sabit Kıymet Kayıtları Yöneticisi", "roles": ["Sabit Kıymet Muhasebesi Uzmanı", "Varlık Envanter ve Mutabakat Uzmanı"]},
+        {"manager": "Amortisman ve Değerleme Yöneticisi", "roles": ["Amortisman Uzmanı", "Aktifleştirme ve Değerleme Uzmanı"]}
+      ]
+    },
+    {
+      "id": "payroll_accounting",
+      "name_tr": "Bordro Muhasebesi",
+      "leader": "Bordro Muhasebesi Müdürü",
+      "teams": [
+        {"manager": "Bordro Kayıtları Yöneticisi", "roles": ["Bordro Muhasebesi Uzmanı", "Ücret Tahakkuk Uzmanı"]},
+        {"manager": "Personel Hesapları ve Mutabakat Yöneticisi", "roles": ["Personel Cari Hesap Uzmanı", "Bordro Mutabakat Uzmanı"]},
+        {"manager": "Bordro Yasal Kayıt Kontrol Yöneticisi", "roles": ["SGK ve Vergi Tahakkuk Kontrol Uzmanı", "Bordro Muhasebe Uyum Uzmanı"]}
+      ]
+    },
+    {
+      "id": "tax_compliance",
+      "name_tr": "Vergi, Beyannameler ve E-Defter Uyum",
+      "leader": "Vergi ve Mali Uyum Müdürü",
+      "teams": [
+        {"manager": "Vergi Muhasebesi Yöneticisi", "roles": ["Vergi Muhasebesi Uzmanı", "Vergi Mutabakat Uzmanı"]},
+        {"manager": "Beyanname ve Bildirimler Yöneticisi", "roles": ["Beyanname Hazırlık Uzmanı", "Yasal Bildirimler Uzmanı"]},
+        {"manager": "E-Defter ve Defter Uyum Yöneticisi", "roles": ["E-Defter Uzmanı", "Yasal Defter ve Saklama Uzmanı"]},
+        {"manager": "Vergi İnceleme ve Danışman Koordinasyon Yöneticisi", "roles": ["Vergi İnceleme Dokümantasyon Uzmanı", "Mali Müşavir Koordinasyon Uzmanı"]}
+      ]
+    },
+    {
+      "id": "reporting_consolidation_audit",
+      "name_tr": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+      "leader": "Finansal Raporlama ve Konsolidasyon Müdürü",
+      "teams": [
+        {"manager": "Yasal Finansal Raporlama Yöneticisi", "roles": ["Yasal Finansal Raporlama Uzmanı", "Finansal Tablo ve Dipnot Uzmanı"]},
+        {"manager": "Konsolidasyon Yöneticisi", "roles": ["Konsolidasyon Uzmanı", "Şirketler Arası İşlemler ve Eliminasyon Uzmanı"]},
+        {"manager": "Bağımsız Denetim Koordinasyon Yöneticisi", "roles": ["Denetim Dokümantasyon Uzmanı", "Denetim Bulguları Takip Uzmanı"]},
+        {"manager": "Raporlama Standartları ve Veri Kalitesi Yöneticisi", "roles": ["Muhasebe Veri Kalitesi Uzmanı", "Raporlama Standartları Uzmanı"]}
+      ]
+    }
+  ],
+  "lead_handoff": {
+    "accounting_owns": ["İşlem ve fatura kayıtlarının doğrulanması", "Borç ve alacakların muhasebeleştirilmesi", "Belge uygunluğu ve yasal kayıtların kontrolü", "Vergi ve beyannameler", "Muhasebe kapanışı ve yasal finansal tablolar"],
+    "joint_ownership": ["Muhasebe-Finans borç ve bakiye mutabakatı", "Ödeme öncesi belge ve borç doğrulama", "Gerçekleşen finansal verilerin yönetime aktarımı", "Bordro tahakkuklarının İnsan Kaynakları ile doğrulanması"],
+    "finance_and_treasury_owns": ["Nakit akışı ve likidite planlama", "Ödeme tarihi ve önceliklendirmesi", "Banka ilişkileri ve finansman", "Bütçe ve finansal projeksiyonlar", "Tahsilat ve ödeme nakit operasyonu kararları"],
+    "handoff_point": "Muhasebe tarafından belgeleri kontrol edilerek doğrulanan ve kayıtlara alınan ödeme yükümlülükleri, ödeme planlaması ve icrası için Finans ve Hazineye aktarılır."
+  },
+  "title_standard": [
+    {"level": "Üst fonksiyon yönetimi", "title_tr": "Muhasebe ve Mali İşler Direktörü", "title_en": "Accounting Director / Head of Accounting"},
+    {"level": "Birim yönetimi", "title_tr": "Müdür", "title_en": "Manager / Head of Unit"},
+    {"level": "Ekip yönetimi", "title_tr": "Yönetici", "title_en": "Team Lead / Senior Manager"},
+    {"level": "İleri uzmanlık", "title_tr": "Kıdemli Uzman", "title_en": "Senior Specialist"},
+    {"level": "Uzmanlık", "title_tr": "Uzman", "title_en": "Specialist"},
+    {"level": "Analiz", "title_tr": "Analist", "title_en": "Analyst"},
+    {"level": "Başlangıç", "title_tr": "Uzman Yardımcısı", "title_en": "Junior Specialist / Associate"},
+    {"level": "Operasyon", "title_tr": "Koordinatör", "title_en": "Coordinator"},
+    {"level": "Destek", "title_tr": "Asistan", "title_en": "Assistant"}
+  ],
+  "department_kpis": {
+    "accounting_quality": ["Muhasebe kayıt doğruluk oranı", "Düzeltme kaydı oranı", "Açık mutabakat kalemi sayısı", "Cari hesap mutabakat tamamlama oranı"],
+    "compliance_and_tax": ["Yasal beyanname zamanında teslim oranı", "E-defter ve e-belge hata oranı", "Mevzuata uyumsuzluk bulgusu sayısı", "Vergi kontrolünden kaynaklanan düzeltme sayısı"],
+    "closing_and_reporting": ["Aylık kapanış süresi (iş günü)", "Zamanında finansal tablo teslim oranı", "Konsolidasyon eliminasyon hata oranı", "Raporlama veri tutarlılık oranı"],
+    "operations_and_audit": ["Fatura işleme süresi", "İlk kontrolde doğru fatura oranı", "Sabit kıymet envanter mutabakat oranı", "Denetim taleplerini zamanında karşılama oranı", "Denetim bulgusu kapatma süresi"]
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Gerçekleşmiş mali işlemleri hesap planına ve kayıt standartlarına uygun biçimde eksiksiz kaydetmek",
+        "Aylık, çeyreklik ve yıllık dönem kapanışlarını takvime uygun olarak tamamlamak",
+        "Müşteri, tedarikçi ve personel cari hesaplarını mutabakatlı ve güncel tutmak",
+        "Satış ve alış faturalarını, e-fatura, e-arşiv ve e-belge süreçlerini mevzuata uygun yürütmek",
+        "Maliyet, stok, sabit kıymet ve bordro muhasebesi kayıtlarını doğru ve zamanında oluşturmak",
+        "Vergi beyannamelerini, yasal bildirimleri ve e-defter yükümlülüklerini zamanında yerine getirmek",
+        "Yasal finansal tabloları ve konsolide finansal raporları hazırlamak",
+        "Bağımsız denetim ve vergi incelemesi süreçlerini koordine etmek ve bulguları kapatmak"
+      ],
+      "authorities": [
+        "Hesap planını, muhasebe politikalarını ve kayıt standartlarını belirler",
+        "Dönem kapanış takvimini ve kapanış kontrol listesini onaylar",
+        "Tutar ve gerekçe bazında düzeltme ve ters kayıtları onaylar",
+        "Belgesi eksik veya uygunsuz yükümlülüklerin ödeme için Finans ve Hazineye aktarılmasını bekletir",
+        "Vergi beyannamelerinin ve yasal bildirimlerin gönderimini onaylar",
+        "Yasal finansal tabloları CEO ve Yönetim Kurulu onayına sunar",
+        "Ödeme önceliği, nakit tahsisi ve bütçe konularında Finans ve Hazineye yalnız görüş verir"
+      ],
+      "collaborations": [
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+          "topic": "Doğrulanmış ödeme yükümlülüklerinin ödeme planlaması ve icrası için aktarılması"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+          "topic": "Gerçekleşen finansal verilerin bütçe karşılaştırması ve yönetim raporlamasına aktarılması"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Bordro ve Özlük İşleri",
+          "topic": "Bordro tahakkuklarının ve personel hareketlerinin doğrulanması"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Satın alma, teslim ve tedarikçi faturası eşleştirmesi"
+        },
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+          "topic": "Ticari sözleşme koşullarının faturalama ve alacak kayıtlarına yansıtılması"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "Finansal Denetim",
+          "topic": "Finansal denetim bulguları ve muhasebe kontrol iyileştirmeleri"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "İç Kontrol ve Görevler Ayrılığı",
+          "topic": "Muhasebe süreçlerinde iç kontrol ve görevler ayrılığı kuralları"
+        },
+        {
+          "department": "15 - Bilgi Teknolojileri",
+          "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+          "topic": "ERP, e-belge ve e-defter sistemlerinin işletimi ve değişiklik yönetimi"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+          "topic": "Vergi uyuşmazlıkları ve dava süreçleri"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 42,
+          "max": 70
+        },
+        {
+          "model": "Standart",
+          "min": 85,
+          "max": 137
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 137,
+          "max": 180
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 85,
+        "total_max": 137,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 25,
+            "max": 25
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "role_group": "Uzman",
+            "min": 46,
+            "max": 93
+          },
+          {
+            "role_group": "Analist",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "role_group": "Uzman Yardımcısı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "general_accounting_closing",
+        "name_tr": "Genel Muhasebe ve Dönem Kapanışı",
+        "responsibilities": [
+          "Genel muhasebe kayıtlarını hesap planına ve kayıt standartlarına uygun oluşturmak",
+          "Aylık ve yıllık dönem kapanışını tahakkuk ve karşılık kayıtlarıyla birlikte yürütmek",
+          "Banka, ara hesap ve bilanço hesaplarının mutabakatını yapmak",
+          "Muhasebe kayıtlarının doğruluğunu kontrol etmek ve düzeltme kayıtlarını yönetmek",
+          "Hesap planını ve kayıt standartlarını güncel tutmak"
+        ],
+        "authorities": [
+          "Dönem kapanış takvimini ve kapanış kontrol listesini direktör onayına sunar",
+          "Hesap planı ve kayıt standardı değişikliklerini onaya sunar",
+          "Belirlenen limit içindeki düzeltme ve ters kayıtları onaylar",
+          "Mutabakatı tamamlanmamış hesapların kapanışa alınmasını bekletir"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Cari hesap bakiyelerinin genel muhasebe ile mutabakatı ve kapanışa aktarımı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Kapanış sonuçlarının yasal finansal tablolara ve konsolidasyona aktarılması"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Banka hesapları ve nakit hareketlerinin muhasebe kayıtlarıyla mutabakatı"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "ERP muhasebe modülü, hesap planı ve kayıt kurallarının sistem yapılandırması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İç Kontrol ve Görevler Ayrılığı",
+            "topic": "Kayıt ve kapanış süreçlerindeki iç kontrol noktalarının tasarımı ve testi"
+          }
+        ],
+        "kpis": [
+          "Aylık kapanış süresi (iş günü)",
+          "Muhasebe kayıt doğruluk oranı",
+          "Düzeltme kaydı oranı",
+          "Açık mutabakat kalemi sayısı",
+          "Kapanış takvimine uyum oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "general_accounting_closing",
+            "level": "Birim Müdürü",
+            "title_tr": "Genel Muhasebe ve Kapanış Müdürü",
+            "title_en": "General Accounting and Closing Manager"
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Genel Muhasebe Yöneticisi",
+            "title_en": "General Accounting Lead"
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/kidemli-genel-muhasebe-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Genel Muhasebe Uzmanı",
+            "title_en": "Senior General Accounting Specialist"
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/genel-muhasebe-uzmani",
+            "level": "Uzman",
+            "title_tr": "Genel Muhasebe Uzmanı",
+            "title_en": "General Accounting Specialist"
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/muhasebe-uzman-yardimcisi",
+            "level": "Uzman Yardımcısı",
+            "title_tr": "Muhasebe Uzman Yardımcısı",
+            "title_en": "Junior Accounting Specialist"
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dönem Kapanışı ve Mutabakat Yöneticisi",
+            "title_en": "Period Closing and Reconciliation Lead"
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi/kapanis-ve-tahakkuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kapanış ve Tahakkuk Uzmanı",
+            "title_en": "Closing and Accruals Specialist"
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi/hesap-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hesap Mutabakat Uzmanı",
+            "title_en": "Account Reconciliation Specialist"
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Muhasebe Kontrol Yöneticisi",
+            "title_en": "Accounting Control Lead"
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi/muhasebe-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Muhasebe Kontrol Uzmanı",
+            "title_en": "Accounting Control Specialist"
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi/hesap-plani-ve-kayit-standartlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hesap Planı ve Kayıt Standartları Uzmanı",
+            "title_en": "Chart of Accounts and Recording Standards Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 9
+          },
+          {
+            "model": "Standart",
+            "min": 11,
+            "max": 18
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 24
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "general_accounting_closing",
+            "title_tr": "Genel Muhasebe ve Kapanış Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi",
+            "title_tr": "Genel Muhasebe Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/kidemli-genel-muhasebe-uzmani",
+            "title_tr": "Kıdemli Genel Muhasebe Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/genel-muhasebe-uzmani",
+            "title_tr": "Genel Muhasebe Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "general_accounting_closing/genel-muhasebe-yoneticisi/muhasebe-uzman-yardimcisi",
+            "title_tr": "Muhasebe Uzman Yardımcısı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi",
+            "title_tr": "Dönem Kapanışı ve Mutabakat Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi/kapanis-ve-tahakkuk-uzmani",
+            "title_tr": "Kapanış ve Tahakkuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "general_accounting_closing/donem-kapanisi-ve-mutabakat-yoneticisi/hesap-mutabakat-uzmani",
+            "title_tr": "Hesap Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi",
+            "title_tr": "Muhasebe Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi/muhasebe-kontrol-uzmani",
+            "title_tr": "Muhasebe Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "general_accounting_closing/muhasebe-kontrol-yoneticisi/hesap-plani-ve-kayit-standartlari-uzmani",
+            "title_tr": "Hesap Planı ve Kayıt Standartları Uzmanı",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      },
+      {
+        "unit_id": "accounts_receivable_payable",
+        "name_tr": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+        "responsibilities": [
+          "Müşteri cari hesaplarını ve alacak kayıtlarını doğru ve güncel tutmak",
+          "Tedarikçi cari hesaplarını ve borç kayıtlarını belge uygunluğu kontrolüyle oluşturmak",
+          "Müşteri ve tedarikçilerle dönemsel cari hesap mutabakatı yapmak",
+          "Borç ve alacak yaşlandırma raporlarını hazırlamak ve analiz etmek",
+          "Ödeme öncesinde borcun varlığını ve bakiye doğruluğunu Finans ve Hazine için doğrulamak"
+        ],
+        "authorities": [
+          "Belgesi eksik veya mutabık olmayan borçların ödeme listesine alınmasını bekletir",
+          "Cari hesap mutabakat farklarına ilişkin düzeltme kayıtlarını onaya sunar",
+          "Şüpheli alacak karşılığı ayrılması gereken hesapları belirler ve onaya sunar",
+          "Ödeme önceliği ve tahsilat aksiyonları için yaşlandırma verisine dayalı görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+            "topic": "Tahsilat takibi, alacak yaşlandırması ve çalışma sermayesi verisi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Ödeme öncesi borç ve bakiye doğrulaması, ödeme listesi mutabakatı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi faturalarının sipariş ve teslim belgeleriyle borç eşleştirmesi"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Stratejisi ve Gelir Operasyonları",
+            "topic": "Müşteri ana verisi, sözleşme koşulları ve vade bilgilerinin cari hesaplara yansıtılması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Faturalama ve E-Belge Operasyonları",
+            "topic": "Kesilen ve alınan faturaların cari hesaplara zamanında aktarılması"
+          }
+        ],
+        "kpis": [
+          "Cari hesap mutabakat tamamlama oranı",
+          "Açık cari mutabakat farkı kalem sayısı",
+          "Yaşlandırma raporlarının zamanında yayımlanma oranı",
+          "Ödeme öncesi doğrulama süresi",
+          "Hatalı veya mükerrer borç kaydı sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "accounts_receivable_payable",
+            "level": "Birim Müdürü",
+            "title_tr": "Cari Hesaplar ve Borç-Alacak Muhasebesi Müdürü",
+            "title_en": "Current Accounts and Payables-Receivables Accounting Manager"
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri Cari Hesapları Yöneticisi",
+            "title_en": "Customer Accounts Lead"
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi/alacak-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Alacak Muhasebesi Uzmanı",
+            "title_en": "Accounts Receivable Specialist"
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi/musteri-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşteri Mutabakat Uzmanı",
+            "title_en": "Customer Reconciliation Specialist"
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi Cari Hesapları Yöneticisi",
+            "title_en": "Supplier Accounts Lead"
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi/borc-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Borç Muhasebesi Uzmanı",
+            "title_en": "Accounts Payable Specialist"
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi/tedarikci-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Mutabakat Uzmanı",
+            "title_en": "Supplier Reconciliation Specialist"
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Cari Hesap Kontrol ve Yaşlandırma Yöneticisi",
+            "title_en": "Account Control and Aging Lead"
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi/cari-hesap-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Cari Hesap Kontrol Uzmanı",
+            "title_en": "Account Control Specialist"
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi/borc-alacak-yaslandirma-analisti",
+            "level": "Analist",
+            "title_tr": "Borç-Alacak Yaşlandırma Analisti",
+            "title_en": "Payables-Receivables Aging Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 18
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 24
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "accounts_receivable_payable",
+            "title_tr": "Cari Hesaplar ve Borç-Alacak Muhasebesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi",
+            "title_tr": "Müşteri Cari Hesapları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi/alacak-muhasebesi-uzmani",
+            "title_tr": "Alacak Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "accounts_receivable_payable/musteri-cari-hesaplari-yoneticisi/musteri-mutabakat-uzmani",
+            "title_tr": "Müşteri Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi",
+            "title_tr": "Tedarikçi Cari Hesapları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi/borc-muhasebesi-uzmani",
+            "title_tr": "Borç Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "accounts_receivable_payable/tedarikci-cari-hesaplari-yoneticisi/tedarikci-mutabakat-uzmani",
+            "title_tr": "Tedarikçi Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi",
+            "title_tr": "Cari Hesap Kontrol ve Yaşlandırma Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi/cari-hesap-kontrol-uzmani",
+            "title_tr": "Cari Hesap Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "accounts_receivable_payable/cari-hesap-kontrol-ve-yaslandirma-yoneticisi/borc-alacak-yaslandirma-analisti",
+            "title_tr": "Borç-Alacak Yaşlandırma Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "invoicing_ebilling",
+        "name_tr": "Faturalama ve E-Belge Operasyonları",
+        "responsibilities": [
+          "Satış faturalarını sözleşme ve teslim bilgilerine göre doğru ve zamanında düzenlemek",
+          "Alış faturalarını ve destekleyici belgeleri uygunluk açısından kontrol etmek",
+          "E-fatura, e-arşiv ve diğer e-belge süreçlerini mevzuata uygun işletmek",
+          "Fatura iptal, iade ve düzeltme işlemlerini kayıt altına alarak yönetmek",
+          "E-belge entegrasyonlarının ve entegratör bağlantılarının çalışmasını izlemek"
+        ],
+        "authorities": [
+          "Fatura düzenleme, iptal ve düzeltme işlemlerini prosedüre göre onaylar",
+          "Mevzuata veya sipariş belgelerine uymayan alış faturalarını iade eder",
+          "Fatura ve e-belge şablonlarını ve kontrol kurallarını belirler",
+          "E-belge entegrasyonu değişiklik ihtiyaçlarını Bilgi Teknolojilerine talep olarak iletir"
+        ],
+        "collaborations": [
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+            "topic": "Ticari sözleşme ve teklif koşullarının faturalamaya doğru yansıtılması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Satın alma siparişi, teslim ve alış faturası eşleştirmesi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "E-fatura, e-arşiv ve ERP entegrasyonlarının işletimi ve değişiklik talepleri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Vergi, Beyannameler ve E-Defter Uyum",
+            "topic": "E-belge mevzuat değişikliklerinin ve vergi etkilerinin uygulanması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Faturaların cari hesaplara zamanında ve doğru aktarılması"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "Fatura itirazları ve müşteri fatura taleplerinin çözümü"
+          }
+        ],
+        "kpis": [
+          "Fatura işleme süresi",
+          "İlk kontrolde doğru fatura oranı",
+          "E-belge hata ve red oranı",
+          "Fatura iptal ve düzeltme oranı",
+          "Zamanında düzenlenen satış faturası oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "invoicing_ebilling",
+            "level": "Birim Müdürü",
+            "title_tr": "Faturalama ve E-Belge Operasyonları Müdürü",
+            "title_en": "Invoicing and e-Document Operations Manager"
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Satış Faturalama Yöneticisi",
+            "title_en": "Sales Invoicing Lead"
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi/faturalama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Faturalama Uzmanı",
+            "title_en": "Invoicing Specialist"
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Fatura Kontrol Uzmanı",
+            "title_en": "Invoice Control Specialist"
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Alış Faturası ve Belge Kontrol Yöneticisi",
+            "title_en": "Purchase Invoice and Document Control Lead"
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi/alis-faturalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Alış Faturaları Uzmanı",
+            "title_en": "Purchase Invoices Specialist"
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi/belge-uygunluk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Belge Uygunluk Uzmanı",
+            "title_en": "Document Compliance Specialist"
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "E-Fatura ve E-Arşiv Operasyonları Yöneticisi",
+            "title_en": "e-Invoice and e-Archive Operations Lead"
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+            "level": "Uzman",
+            "title_tr": "E-Fatura Uzmanı",
+            "title_en": "e-Invoice Specialist"
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "E-Arşiv ve Entegrasyon Uzmanı",
+            "title_en": "e-Archive and Integration Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 18
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 24
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "invoicing_ebilling",
+            "title_tr": "Faturalama ve E-Belge Operasyonları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi",
+            "title_tr": "Satış Faturalama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi/faturalama-uzmani",
+            "title_tr": "Faturalama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani",
+            "title_tr": "Fatura Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi",
+            "title_tr": "Alış Faturası ve Belge Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi/alis-faturalari-uzmani",
+            "title_tr": "Alış Faturaları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "invoicing_ebilling/alis-faturasi-ve-belge-kontrol-yoneticisi/belge-uygunluk-uzmani",
+            "title_tr": "Belge Uygunluk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi",
+            "title_tr": "E-Fatura ve E-Arşiv Operasyonları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+            "title_tr": "E-Fatura Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+            "title_tr": "E-Arşiv ve Entegrasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "cost_accounting",
+        "name_tr": "Maliyet Muhasebesi",
+        "responsibilities": [
+          "Maliyet kayıtlarını ve gider dağıtımlarını maliyet merkezlerine göre oluşturmak",
+          "Ürün ve hizmet birim maliyetlerini hesaplamak ve analiz etmek",
+          "Stok hareketlerini ve stok değerlemesini muhasebe kayıtlarına yansıtmak",
+          "Üretim maliyetlerini, maliyet sapmalarını ve yarı mamul değerlerini izlemek",
+          "Gerçekleşen maliyet verisini fiyatlandırma ve finansal analiz için raporlamak"
+        ],
+        "authorities": [
+          "Maliyet merkezi yapısını ve gider dağıtım anahtarlarını direktör onayına sunar",
+          "Birim maliyet hesaplama yöntemini ve dönemsel maliyet kapanış adımlarını belirler",
+          "Mutabık stok sayım farklarının muhasebe kaydını onaylar",
+          "Fiyatlandırma kararları için maliyet verisine dayalı görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Üretim emirleri, tüketim ve fire verilerinin maliyet kayıtlarına aktarılması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Stok hareketleri, sayım sonuçları ve stok değerlemesi mutabakatı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+            "topic": "Maliyet ve kârlılık analizlerinin yönetim raporlamasına aktarılması"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Fiyatlandırma ve Ticari Yönetişim",
+            "topic": "Ürün ve hizmet maliyetlerinin fiyatlandırma kararlarına girdi olarak sunulması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Maliyet kapanışının dönem sonu kapanışıyla eşgüdümü"
+          }
+        ],
+        "kpis": [
+          "Maliyet kapanışının zamanında tamamlanma oranı",
+          "Stok değerleme mutabakat farkı",
+          "Gider dağıtım düzeltme sayısı",
+          "Standart ve gerçekleşen maliyet sapma oranı",
+          "Maliyet raporlarının zamanında yayımlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "cost_accounting",
+            "level": "Birim Müdürü",
+            "title_tr": "Maliyet Muhasebesi Müdürü",
+            "title_en": "Cost Accounting Manager"
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Maliyet Kayıtları Yöneticisi",
+            "title_en": "Cost Records Lead"
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi/maliyet-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Maliyet Muhasebesi Uzmanı",
+            "title_en": "Cost Accounting Specialist"
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi/gider-dagitim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Gider Dağıtım Uzmanı",
+            "title_en": "Expense Allocation Specialist"
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ürün ve Hizmet Maliyetleri Yöneticisi",
+            "title_en": "Product and Service Costs Lead"
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi/urun-maliyet-analisti",
+            "level": "Analist",
+            "title_tr": "Ürün Maliyet Analisti",
+            "title_en": "Product Cost Analyst"
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi/hizmet-maliyet-analisti",
+            "level": "Analist",
+            "title_tr": "Hizmet Maliyet Analisti",
+            "title_en": "Service Cost Analyst"
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Stok ve Üretim Muhasebesi Yöneticisi",
+            "title_en": "Inventory and Production Accounting Lead"
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi/stok-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Stok Muhasebesi Uzmanı",
+            "title_en": "Inventory Accounting Specialist"
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi/uretim-maliyetleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üretim Maliyetleri Uzmanı",
+            "title_en": "Production Costs Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 16
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 16,
+            "max": 21
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "cost_accounting",
+            "title_tr": "Maliyet Muhasebesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi",
+            "title_tr": "Maliyet Kayıtları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi/maliyet-muhasebesi-uzmani",
+            "title_tr": "Maliyet Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "cost_accounting/maliyet-kayitlari-yoneticisi/gider-dagitim-uzmani",
+            "title_tr": "Gider Dağıtım Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi",
+            "title_tr": "Ürün ve Hizmet Maliyetleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi/urun-maliyet-analisti",
+            "title_tr": "Ürün Maliyet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "cost_accounting/urun-ve-hizmet-maliyetleri-yoneticisi/hizmet-maliyet-analisti",
+            "title_tr": "Hizmet Maliyet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi",
+            "title_tr": "Stok ve Üretim Muhasebesi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi/stok-muhasebesi-uzmani",
+            "title_tr": "Stok Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "cost_accounting/stok-ve-uretim-muhasebesi-yoneticisi/uretim-maliyetleri-uzmani",
+            "title_tr": "Üretim Maliyetleri Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "fixed_assets",
+        "name_tr": "Sabit Kıymet ve Amortisman Muhasebesi",
+        "responsibilities": [
+          "Sabit kıymet giriş, transfer ve çıkış kayıtlarını oluşturmak",
+          "Amortisman hesaplamalarını yasal ve raporlama esaslarına göre yapmak",
+          "Yatırım harcamalarının aktifleştirme uygunluğunu değerlendirmek",
+          "Sabit kıymet envanterini fiziksel sayım ve sistem kayıtlarıyla mutabık hale getirmek",
+          "Değer düşüklüğü ve yeniden değerleme kayıtlarını hazırlamak"
+        ],
+        "authorities": [
+          "Aktifleştirme kriterlerini karşılamayan harcamaların sabit kıymete alınmasını reddeder",
+          "Faydalı ömür ve amortisman yöntemi önerilerini direktör onayına sunar",
+          "Sabit kıymet sayım takvimini ve envanter mutabakat yöntemini belirler",
+          "Belgesi tamamlanan satış, hurda veya kayıp varlıkların kayıttan çıkarılmasını onaylar"
+        ],
+        "collaborations": [
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+            "topic": "Yatırım projeleri ve sermaye harcamalarının aktifleştirme takibi"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Tesis, Bina ve Teknik İşletme",
+            "topic": "Bina, tesis ve demirbaşların envanter sayımı ve kayıt mutabakatı"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "BT donanım varlıklarının envanter ve kayıt eşleştirmesi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Bakım, Tesis ve Teknik Hizmetler",
+            "topic": "Makine ve tesis varlıklarının bakım, transfer ve hurdaya ayırma bilgileri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Vergi, Beyannameler ve E-Defter Uyum",
+            "topic": "Amortisman ve yeniden değerlemenin vergi etkilerinin hesaplanması"
+          }
+        ],
+        "kpis": [
+          "Sabit kıymet envanter mutabakat oranı",
+          "Amortisman hesaplama hata sayısı",
+          "Aktifleştirme kaydının zamanında yapılma oranı",
+          "Kayıtta olup fiziksel olarak bulunamayan varlık sayısı",
+          "Sabit kıymet kapanışının zamanında tamamlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "fixed_assets",
+            "level": "Birim Müdürü",
+            "title_tr": "Sabit Kıymet ve Amortisman Muhasebesi Müdürü",
+            "title_en": "Fixed Assets and Depreciation Accounting Manager"
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sabit Kıymet Kayıtları Yöneticisi",
+            "title_en": "Fixed Asset Records Lead"
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi/sabit-kiymet-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sabit Kıymet Muhasebesi Uzmanı",
+            "title_en": "Fixed Asset Accounting Specialist"
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi/varlik-envanter-ve-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Varlık Envanter ve Mutabakat Uzmanı",
+            "title_en": "Asset Inventory and Reconciliation Specialist"
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Amortisman ve Değerleme Yöneticisi",
+            "title_en": "Depreciation and Valuation Lead"
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi/amortisman-uzmani",
+            "level": "Uzman",
+            "title_tr": "Amortisman Uzmanı",
+            "title_en": "Depreciation Specialist"
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi/aktiflestirme-ve-degerleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Aktifleştirme ve Değerleme Uzmanı",
+            "title_en": "Capitalization and Valuation Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "model": "Standart",
+            "min": 7,
+            "max": 11
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 11,
+            "max": 14
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "fixed_assets",
+            "title_tr": "Sabit Kıymet ve Amortisman Muhasebesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi",
+            "title_tr": "Sabit Kıymet Kayıtları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi/sabit-kiymet-muhasebesi-uzmani",
+            "title_tr": "Sabit Kıymet Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "fixed_assets/sabit-kiymet-kayitlari-yoneticisi/varlik-envanter-ve-mutabakat-uzmani",
+            "title_tr": "Varlık Envanter ve Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi",
+            "title_tr": "Amortisman ve Değerleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi/amortisman-uzmani",
+            "title_tr": "Amortisman Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "fixed_assets/amortisman-ve-degerleme-yoneticisi/aktiflestirme-ve-degerleme-uzmani",
+            "title_tr": "Aktifleştirme ve Değerleme Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "payroll_accounting",
+        "name_tr": "Bordro Muhasebesi",
+        "responsibilities": [
+          "Bordro sonuçlarını ve ücret tahakkuklarını muhasebe kayıtlarına aktarmak",
+          "Personel cari hesaplarını, avans ve kesinti bakiyelerini izlemek",
+          "Bordro, banka ödemeleri ve muhasebe kayıtları arasında mutabakat yapmak",
+          "SGK primi ve gelir vergisi tahakkuklarının muhasebe kayıtlarını kontrol etmek",
+          "Kıdem, izin ve diğer personel karşılıklarını dönem sonunda hesaplamak ve kaydetmek"
+        ],
+        "authorities": [
+          "Bordro tahakkuku ile muhasebe kaydı arasındaki farkların düzeltilmesini İnsan Kaynaklarından ister",
+          "Bordro muhasebe kayıt şablonunu ve hesap eşleştirmesini belirler",
+          "Mutabakatı tamamlanmamış bordro kayıtlarının kapanışa alınmasını bekletir",
+          "Ücret ve yan hak hesaplama kurallarına yalnız muhasebe etkisi açısından görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "Bordro tahakkuklarının, kesintilerin ve personel hareketlerinin doğrulanması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Ücret ve Yan Haklar",
+            "topic": "Yan hak ve prim uygulamalarının muhasebe etkisinin belirlenmesi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Ücret ödemeleri ve banka talimatlarının kayıtlarla mutabakatı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Vergi, Beyannameler ve E-Defter Uyum",
+            "topic": "Muhtasar ve prim hizmet beyannamesi verilerinin mutabakatı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Personel karşılıkları ve bordro kayıtlarının dönem kapanışına aktarılması"
+          }
+        ],
+        "kpis": [
+          "Bordro muhasebe kaydı doğruluk oranı",
+          "Bordro ve banka ödeme mutabakat oranı",
+          "Personel cari hesap açık bakiye sayısı",
+          "Bordro kayıtlarının kapanış takvimine uyum oranı",
+          "SGK ve vergi tahakkuk düzeltme sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "payroll_accounting",
+            "level": "Birim Müdürü",
+            "title_tr": "Bordro Muhasebesi Müdürü",
+            "title_en": "Payroll Accounting Manager"
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bordro Kayıtları Yöneticisi",
+            "title_en": "Payroll Records Lead"
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi/bordro-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bordro Muhasebesi Uzmanı",
+            "title_en": "Payroll Accounting Specialist"
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi/ucret-tahakkuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ücret Tahakkuk Uzmanı",
+            "title_en": "Wage Accruals Specialist"
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Personel Hesapları ve Mutabakat Yöneticisi",
+            "title_en": "Employee Accounts and Reconciliation Lead"
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi/personel-cari-hesap-uzmani",
+            "level": "Uzman",
+            "title_tr": "Personel Cari Hesap Uzmanı",
+            "title_en": "Employee Account Specialist"
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi/bordro-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bordro Mutabakat Uzmanı",
+            "title_en": "Payroll Reconciliation Specialist"
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bordro Yasal Kayıt Kontrol Yöneticisi",
+            "title_en": "Payroll Statutory Records Control Lead"
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi/sgk-ve-vergi-tahakkuk-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "SGK ve Vergi Tahakkuk Kontrol Uzmanı",
+            "title_en": "Social Security and Tax Accruals Control Specialist"
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi/bordro-muhasebe-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bordro Muhasebe Uyum Uzmanı",
+            "title_en": "Payroll Accounting Compliance Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 16
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 16,
+            "max": 21
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "payroll_accounting",
+            "title_tr": "Bordro Muhasebesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi",
+            "title_tr": "Bordro Kayıtları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi/bordro-muhasebesi-uzmani",
+            "title_tr": "Bordro Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "payroll_accounting/bordro-kayitlari-yoneticisi/ucret-tahakkuk-uzmani",
+            "title_tr": "Ücret Tahakkuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi",
+            "title_tr": "Personel Hesapları ve Mutabakat Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi/personel-cari-hesap-uzmani",
+            "title_tr": "Personel Cari Hesap Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "payroll_accounting/personel-hesaplari-ve-mutabakat-yoneticisi/bordro-mutabakat-uzmani",
+            "title_tr": "Bordro Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi",
+            "title_tr": "Bordro Yasal Kayıt Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi/sgk-ve-vergi-tahakkuk-kontrol-uzmani",
+            "title_tr": "SGK ve Vergi Tahakkuk Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "payroll_accounting/bordro-yasal-kayit-kontrol-yoneticisi/bordro-muhasebe-uyum-uzmani",
+            "title_tr": "Bordro Muhasebe Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "tax_compliance",
+        "name_tr": "Vergi, Beyannameler ve E-Defter Uyum",
+        "responsibilities": [
+          "Vergi muhasebesi kayıtlarını ve vergi hesabı mutabakatlarını yürütmek",
+          "Vergi beyannamelerini ve yasal bildirimleri hazırlamak ve zamanında göndermek",
+          "E-defter oluşturma, imzalama ve berat yükleme süreçlerini yönetmek",
+          "Yasal defterlerin ve mali belgelerin saklama yükümlülüklerini yerine getirmek",
+          "Vergi incelemelerini ve mali müşavir ile vergi danışmanı çalışmalarını koordine etmek",
+          "Vergi mevzuatı değişikliklerini izlemek ve muhasebe süreçlerine etkisini bildirmek"
+        ],
+        "authorities": [
+          "Kontrolü tamamlanan beyanname ve bildirimleri gönderim öncesinde direktör onayına sunar",
+          "Vergi uygulamalarına ilişkin muhasebe kayıt yöntemini belirler",
+          "Vergi incelemelerinde talep edilen belgelerin hazırlanmasını ilgili birimlerden ister",
+          "Vergi uyuşmazlıklarında dava sürecine ilişkin görüşünü Hukuk İşlerine sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+            "topic": "Vergi uyuşmazlıkları, uzlaşma ve dava süreçleri"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Vergi ve mali mevzuat değişikliklerinin yorumlanması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Bordro Muhasebesi",
+            "topic": "Muhtasar ve prim hizmet beyannamesi verilerinin mutabakatı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Faturalama ve E-Belge Operasyonları",
+            "topic": "E-belge ve e-defter süreçlerinin uyumlu işletilmesi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "E-defter, berat ve beyanname üretiminde kullanılan sistemlerin işletimi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Mevzuat Uyum Yönetimi",
+            "topic": "Vergi yükümlülüklerinin mevzuat uyum envanterinde izlenmesi"
+          }
+        ],
+        "kpis": [
+          "Yasal beyanname zamanında teslim oranı",
+          "E-defter ve berat yüklemelerinin zamanında tamamlanma oranı",
+          "Düzeltme beyannamesi sayısı",
+          "Vergi kontrolünden kaynaklanan düzeltme sayısı",
+          "Vergi inceleme belge taleplerini zamanında karşılama oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "tax_compliance",
+            "level": "Birim Müdürü",
+            "title_tr": "Vergi ve Mali Uyum Müdürü",
+            "title_en": "Tax and Financial Compliance Manager"
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Vergi Muhasebesi Yöneticisi",
+            "title_en": "Tax Accounting Lead"
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi/vergi-muhasebesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Vergi Muhasebesi Uzmanı",
+            "title_en": "Tax Accounting Specialist"
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi/vergi-mutabakat-uzmani",
+            "level": "Uzman",
+            "title_tr": "Vergi Mutabakat Uzmanı",
+            "title_en": "Tax Reconciliation Specialist"
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Beyanname ve Bildirimler Yöneticisi",
+            "title_en": "Tax Returns and Filings Lead"
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi/beyanname-hazirlik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Beyanname Hazırlık Uzmanı",
+            "title_en": "Tax Return Preparation Specialist"
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi/yasal-bildirimler-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yasal Bildirimler Uzmanı",
+            "title_en": "Statutory Filings Specialist"
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "E-Defter ve Defter Uyum Yöneticisi",
+            "title_en": "e-Ledger and Ledger Compliance Lead"
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi/e-defter-uzmani",
+            "level": "Uzman",
+            "title_tr": "E-Defter Uzmanı",
+            "title_en": "e-Ledger Specialist"
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi/yasal-defter-ve-saklama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yasal Defter ve Saklama Uzmanı",
+            "title_en": "Statutory Books and Retention Specialist"
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Vergi İnceleme ve Danışman Koordinasyon Yöneticisi",
+            "title_en": "Tax Audit and Advisor Coordination Lead"
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi/vergi-inceleme-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Vergi İnceleme Dokümantasyon Uzmanı",
+            "title_en": "Tax Audit Documentation Specialist"
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi/mali-musavir-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Mali Müşavir Koordinasyon Uzmanı",
+            "title_en": "Certified Public Accountant Coordination Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 20
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 26
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "tax_compliance",
+            "title_tr": "Vergi ve Mali Uyum Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi",
+            "title_tr": "Vergi Muhasebesi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi/vergi-muhasebesi-uzmani",
+            "title_tr": "Vergi Muhasebesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/vergi-muhasebesi-yoneticisi/vergi-mutabakat-uzmani",
+            "title_tr": "Vergi Mutabakat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi",
+            "title_tr": "Beyanname ve Bildirimler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi/beyanname-hazirlik-uzmani",
+            "title_tr": "Beyanname Hazırlık Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/beyanname-ve-bildirimler-yoneticisi/yasal-bildirimler-uzmani",
+            "title_tr": "Yasal Bildirimler Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi",
+            "title_tr": "E-Defter ve Defter Uyum Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi/e-defter-uzmani",
+            "title_tr": "E-Defter Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/e-defter-ve-defter-uyum-yoneticisi/yasal-defter-ve-saklama-uzmani",
+            "title_tr": "Yasal Defter ve Saklama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi",
+            "title_tr": "Vergi İnceleme ve Danışman Koordinasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi/vergi-inceleme-dokumantasyon-uzmani",
+            "title_tr": "Vergi İnceleme Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "tax_compliance/vergi-inceleme-ve-danisman-koordinasyon-yoneticisi/mali-musavir-koordinasyon-uzmani",
+            "title_tr": "Mali Müşavir Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      },
+      {
+        "unit_id": "reporting_consolidation_audit",
+        "name_tr": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+        "responsibilities": [
+          "Yasal finansal tabloları ve dipnotları hazırlamak",
+          "Grup şirketlerinin konsolidasyonunu ve şirketler arası işlem eliminasyonlarını yapmak",
+          "Bağımsız denetim sürecini planlamak, belge taleplerini karşılamak ve bulguları takip etmek",
+          "Raporlama standartlarını ve muhasebe politikası uygulamalarını güncel tutmak",
+          "Muhasebe verisinin kalite ve tutarlılık kontrollerini yürütmek",
+          "Gerçekleşen finansal verileri yönetim raporlaması için Finans ve Hazineye aktarmak"
+        ],
+        "authorities": [
+          "Yasal finansal tablo ve dipnot taslaklarını direktör onayına sunar",
+          "Konsolidasyon paketlerinin formatını, takvimini ve şirketler arası mutabakat kurallarını belirler",
+          "Grup şirketlerinden konsolidasyon verisi ve mutabakat açıklaması talep eder",
+          "Bağımsız denetim bulgularına yönelik aksiyon planlarını ilgili birimlerden ister"
+        ],
+        "collaborations": [
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+            "topic": "Gerçekleşen finansal verilerin yönetim raporlaması ve analizlere aktarılması"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırımcı İlişkileri Müdürlüğü",
+            "topic": "Yatırımcılarla paylaşılan finansal tablo ve dipnot bilgilerinin tutarlılığı"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "İştirakler ve Şirket Performansı Müdürlüğü",
+            "topic": "Konsolide sonuçların iştirak performans değerlendirmesine aktarılması"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Finansal Denetim",
+            "topic": "Finansal raporlama kontrolleri ve iç denetim bulgularının takibi"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Yönetişimi, Kalitesi ve Ana Veri",
+            "topic": "Muhasebe ana verisi ve raporlama veri kalitesi kuralları"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Kapanış sonuçlarının yasal finansal tablolara aktarılması"
+          }
+        ],
+        "kpis": [
+          "Zamanında finansal tablo teslim oranı",
+          "Konsolidasyon eliminasyon hata oranı",
+          "Raporlama veri tutarlılık oranı",
+          "Denetim taleplerini zamanında karşılama oranı",
+          "Denetim bulgusu kapatma süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "reporting_consolidation_audit",
+            "level": "Birim Müdürü",
+            "title_tr": "Finansal Raporlama ve Konsolidasyon Müdürü",
+            "title_en": "Financial Reporting and Consolidation Manager"
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yasal Finansal Raporlama Yöneticisi",
+            "title_en": "Statutory Financial Reporting Lead"
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi/yasal-finansal-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yasal Finansal Raporlama Uzmanı",
+            "title_en": "Statutory Financial Reporting Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi/finansal-tablo-ve-dipnot-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Tablo ve Dipnot Uzmanı",
+            "title_en": "Financial Statements and Notes Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Konsolidasyon Yöneticisi",
+            "title_en": "Consolidation Lead"
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi/konsolidasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Konsolidasyon Uzmanı",
+            "title_en": "Consolidation Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi/sirketler-arasi-islemler-ve-eliminasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Şirketler Arası İşlemler ve Eliminasyon Uzmanı",
+            "title_en": "Intercompany Transactions and Elimination Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bağımsız Denetim Koordinasyon Yöneticisi",
+            "title_en": "External Audit Coordination Lead"
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi/denetim-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Denetim Dokümantasyon Uzmanı",
+            "title_en": "Audit Documentation Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi/denetim-bulgulari-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Denetim Bulguları Takip Uzmanı",
+            "title_en": "Audit Findings Follow-Up Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Raporlama Standartları ve Veri Kalitesi Yöneticisi",
+            "title_en": "Reporting Standards and Data Quality Lead"
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/muhasebe-veri-kalitesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Muhasebe Veri Kalitesi Uzmanı",
+            "title_en": "Accounting Data Quality Specialist"
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/raporlama-standartlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Raporlama Standartları Uzmanı",
+            "title_en": "Reporting Standards Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 19
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 25
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "reporting_consolidation_audit",
+            "title_tr": "Finansal Raporlama ve Konsolidasyon Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi",
+            "title_tr": "Yasal Finansal Raporlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi/yasal-finansal-raporlama-uzmani",
+            "title_tr": "Yasal Finansal Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/yasal-finansal-raporlama-yoneticisi/finansal-tablo-ve-dipnot-uzmani",
+            "title_tr": "Finansal Tablo ve Dipnot Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi",
+            "title_tr": "Konsolidasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi/konsolidasyon-uzmani",
+            "title_tr": "Konsolidasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/konsolidasyon-yoneticisi/sirketler-arasi-islemler-ve-eliminasyon-uzmani",
+            "title_tr": "Şirketler Arası İşlemler ve Eliminasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi",
+            "title_tr": "Bağımsız Denetim Koordinasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi/denetim-dokumantasyon-uzmani",
+            "title_tr": "Denetim Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/bagimsiz-denetim-koordinasyon-yoneticisi/denetim-bulgulari-takip-uzmani",
+            "title_tr": "Denetim Bulguları Takip Uzmanı",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi",
+            "title_tr": "Raporlama Standartları ve Veri Kalitesi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/muhasebe-veri-kalitesi-uzmani",
+            "title_tr": "Muhasebe Veri Kalitesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "reporting_consolidation_audit/raporlama-standartlari-ve-veri-kalitesi-yoneticisi/raporlama-standartlari-uzmani",
+            "title_tr": "Raporlama Standartları Uzmanı",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      }
+    ]
+  }
+}

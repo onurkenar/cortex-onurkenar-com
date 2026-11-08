@@ -1,0 +1,7 @@
+{
+ "name": "Web Uygulaması Testi",
+ "desc": "Yerel web uygulamalarını Python Playwright betikleriyle test eder: arayüz davranışını doğrular, ekran görüntüsü alır ve tarayıcı loglarını okur.",
+ "trigger": "Playwright kullanarak yerel web uygulamalarıyla etkileşim kurmaya ve onları test etmeye yönelik araç takımı. Frontend işlevselliğini doğrulamayı, arayüz davranışındaki hataları ayıklamayı, tarayıcı ekran görüntüleri almayı ve tarayıcı loglarını görüntülemeyi destekler.",
+ "scenario": "Yerel çalışan bir web uygulamasının arayüzü doğrulanırken, bir arayüz hatası ayıklanırken ya da ekran görüntüsü ve konsol logu gerektiğinde.",
+ "example": "scripts/with_server.py geliştirme sunucusunu 5173 portunda başlatır; Playwright betiği networkidle bekleyip formu doldurur, ekran görüntüsü alır ve konsol hatalarını raporlar."
+}

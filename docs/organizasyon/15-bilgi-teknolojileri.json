@@ -1,0 +1,2598 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "15 - Bilgi Teknolojileri Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "15",
+    "name_tr": "Bilgi Teknolojileri",
+    "name_en": "Information Technology",
+    "organization_model": "Tam Fonksiyonel",
+    "purpose": "Şirketin iş stratejisini güvenli, ölçeklenebilir, dayanıklı ve maliyet etkin teknoloji hizmetleriyle desteklemek; uygulama, altyapı, veri ve dijital işyeri ekosistemini uçtan uca yönetmek.",
+    "reports_to": {
+      "title_tr": "Teknolojiden Sorumlu Genel Müdür Yardımcısı / Teknoloji Başkanı",
+      "title_en": "Chief Technology Officer (CTO) / Chief Information Officer (CIO)"
+    },
+    "head": {
+      "position_code": "15.00.001",
+      "title_tr": "Bilgi Teknolojileri Direktörü",
+      "title_en": "Information Technology Director",
+      "alternative_executive_title": "Chief Information Officer (CIO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "15.01",
+        "15.02",
+        "15.03",
+        "15.04",
+        "15.05",
+        "15.08"
+      ],
+      "accountabilities": [
+        "BT stratejisi, mimarisi ve yatırım portföyünü yönetmek",
+        "Altyapı, bulut, ağ, uygulama ve veri platformlarının sürekliliğini sağlamak",
+        "Siber Güvenliğin belirlediği güvenlik kontrollerini altyapı, uygulama ve platformlarda uygulamak; erişim tanımlama, felaket kurtarma ve teknik dayanıklılığı yönetmek",
+        "İş gereksinimlerini güvenli ve sürdürülebilir teknoloji çözümlerine dönüştürmek",
+        "BT hizmet kalitesi, kullanıcı deneyimi, maliyet ve teknoloji risklerini yönetmek"
+      ]
+    },
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "15.01",
+        "name_tr": "BT Stratejisi, Yönetişim ve Kurumsal Mimari",
+        "name_en": "IT Strategy, Governance and Enterprise Architecture",
+        "manager": {
+          "position_code": "15.01.001",
+          "title_tr": "BT Stratejisi, Yönetişim ve Kurumsal Mimari Müdürü",
+          "title_en": "IT Strategy, Governance and Enterprise Architecture Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.01.01",
+            "name_tr": "BT Stratejisi ve Teknoloji Yol Haritası",
+            "name_en": "IT Strategy and Technology Roadmap",
+            "lead": {
+              "position_code": "15.01.01.001",
+              "title_tr": "BT Stratejisi ve Teknoloji Yol Haritası Yöneticisi",
+              "title_en": "IT Strategy and Technology Roadmap Manager",
+              "reports_to": "15.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.01.01.002",
+                "title_tr": "Kıdemli BT Stratejisi Uzmanı",
+                "title_en": "Senior IT Strategy Specialist",
+                "reports_to": "15.01.01.001"
+              },
+              {
+                "position_code": "15.01.01.003",
+                "title_tr": "BT Stratejisi Uzmanı",
+                "title_en": "IT Strategy Specialist",
+                "reports_to": "15.01.01.001"
+              },
+              {
+                "position_code": "15.01.01.004",
+                "title_tr": "Teknoloji Araştırma Analisti",
+                "title_en": "Technology Research Analyst",
+                "reports_to": "15.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "BT stratejisi ve teknoloji yol haritasını oluşturmak",
+              "Teknoloji trendlerini ve kurumsal kullanım senaryolarını değerlendirmek",
+              "Dijital yetkinlik ve modernizasyon önceliklerini belirlemek"
+            ]
+          },
+          {
+            "team_code": "15.01.02",
+            "name_tr": "BT Yönetişimi ve Portföy Yönetimi",
+            "name_en": "IT Governance and Portfolio Management",
+            "lead": {
+              "position_code": "15.01.02.001",
+              "title_tr": "BT Yönetişimi ve Portföy Yönetimi Yöneticisi",
+              "title_en": "IT Governance and Portfolio Management Manager",
+              "reports_to": "15.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.01.02.002",
+                "title_tr": "Kıdemli BT Yönetişim Uzmanı",
+                "title_en": "Senior IT Governance Specialist",
+                "reports_to": "15.01.02.001"
+              },
+              {
+                "position_code": "15.01.02.003",
+                "title_tr": "BT Portföy Uzmanı",
+                "title_en": "IT Portfolio Specialist",
+                "reports_to": "15.01.02.001"
+              },
+              {
+                "position_code": "15.01.02.004",
+                "title_tr": "BT Performans Analisti",
+                "title_en": "IT Performance Analyst",
+                "reports_to": "15.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "BT yatırım, talep ve proje portföyünü yönetmek",
+              "Karar kurulları, KPI, politika ve standartları işletmek",
+              "Bütçe, fayda ve kaynak gerçekleşmelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "15.01.03",
+            "name_tr": "Kurumsal ve Çözüm Mimarisi",
+            "name_en": "Enterprise and Solution Architecture",
+            "lead": {
+              "position_code": "15.01.03.001",
+              "title_tr": "Kurumsal ve Çözüm Mimarisi Yöneticisi",
+              "title_en": "Enterprise and Solution Architecture Manager",
+              "reports_to": "15.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.01.03.002",
+                "title_tr": "Kıdemli Kurumsal Mimar",
+                "title_en": "Senior Enterprise Architect",
+                "reports_to": "15.01.03.001"
+              },
+              {
+                "position_code": "15.01.03.003",
+                "title_tr": "Çözüm Mimarı",
+                "title_en": "Solution Architect",
+                "reports_to": "15.01.03.001"
+              },
+              {
+                "position_code": "15.01.03.004",
+                "title_tr": "Mimari Yönetişim Uzmanı",
+                "title_en": "Architecture Governance Specialist",
+                "reports_to": "15.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İş, uygulama, veri ve teknoloji mimarisi ilkelerini oluşturmak",
+              "Çözüm tasarımlarını ölçeklenebilirlik, güvenlik ve entegrasyon açısından değerlendirmek",
+              "Teknoloji standartları ve mimari istisnaları yönetmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "15.02",
+        "name_tr": "Altyapı, Bulut ve Platform Operasyonları",
+        "name_en": "Infrastructure, Cloud and Platform Operations",
+        "manager": {
+          "position_code": "15.02.001",
+          "title_tr": "Altyapı, Bulut ve Platform Operasyonları Müdürü",
+          "title_en": "Infrastructure, Cloud and Platform Operations Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.02.01",
+            "name_tr": "Sunucu, Sanallaştırma ve İşletim Sistemleri",
+            "name_en": "Server, Virtualization and Operating Systems",
+            "lead": {
+              "position_code": "15.02.01.001",
+              "title_tr": "Sunucu, Sanallaştırma ve İşletim Sistemleri Yöneticisi",
+              "title_en": "Server, Virtualization and Operating Systems Manager",
+              "reports_to": "15.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.02.01.002",
+                "title_tr": "Kıdemli Sistem Mühendisi",
+                "title_en": "Senior Systems Engineer",
+                "reports_to": "15.02.01.001"
+              },
+              {
+                "position_code": "15.02.01.003",
+                "title_tr": "Sistem Mühendisi",
+                "title_en": "Systems Engineer",
+                "reports_to": "15.02.01.001"
+              },
+              {
+                "position_code": "15.02.01.004",
+                "title_tr": "Sistem Operasyon Uzmanı",
+                "title_en": "Systems Operations Specialist",
+                "reports_to": "15.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Sunucu, sanallaştırma ve işletim sistemi platformlarını yönetmek",
+              "Kapasite, yama, konfigürasyon ve yaşam döngüsü süreçlerini yürütmek",
+              "Performans ve erişilebilirlik göstergelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "15.02.02",
+            "name_tr": "Bulut Platformları ve FinOps",
+            "name_en": "Cloud Platforms and FinOps",
+            "lead": {
+              "position_code": "15.02.02.001",
+              "title_tr": "Bulut Platformları ve FinOps Yöneticisi",
+              "title_en": "Cloud Platforms and FinOps Manager",
+              "reports_to": "15.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.02.02.002",
+                "title_tr": "Kıdemli Bulut Mühendisi",
+                "title_en": "Senior Cloud Engineer",
+                "reports_to": "15.02.02.001"
+              },
+              {
+                "position_code": "15.02.02.003",
+                "title_tr": "Bulut Platform Uzmanı",
+                "title_en": "Cloud Platform Specialist",
+                "reports_to": "15.02.02.001"
+              },
+              {
+                "position_code": "15.02.02.004",
+                "title_tr": "FinOps Analisti",
+                "title_en": "FinOps Analyst",
+                "reports_to": "15.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Genel, özel ve hibrit bulut platformlarını yönetmek",
+              "Bulut güvenliği, kaynak politikaları ve otomasyonu uygulamak",
+              "Bulut maliyeti, kapasitesi ve kullanım verimliliğini optimize etmek"
+            ]
+          },
+          {
+            "team_code": "15.02.03",
+            "name_tr": "Yedekleme, Depolama ve Felaket Kurtarma",
+            "name_en": "Backup, Storage and Disaster Recovery",
+            "lead": {
+              "position_code": "15.02.03.001",
+              "title_tr": "Yedekleme, Depolama ve Felaket Kurtarma Yöneticisi",
+              "title_en": "Backup, Storage and Disaster Recovery Manager",
+              "reports_to": "15.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.02.03.002",
+                "title_tr": "Kıdemli Depolama ve Yedekleme Uzmanı",
+                "title_en": "Senior Storage and Backup Specialist",
+                "reports_to": "15.02.03.001"
+              },
+              {
+                "position_code": "15.02.03.003",
+                "title_tr": "Felaket Kurtarma Uzmanı",
+                "title_en": "Disaster Recovery Specialist",
+                "reports_to": "15.02.03.001"
+              },
+              {
+                "position_code": "15.02.03.004",
+                "title_tr": "Altyapı Süreklilik Analisti",
+                "title_en": "Infrastructure Continuity Analyst",
+                "reports_to": "15.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Depolama, arşivleme ve yedekleme platformlarını yönetmek",
+              "RPO ve RTO hedeflerine uygun felaket kurtarma planlarını yürütmek",
+              "Geri yükleme testleri ve kurtarma tatbikatlarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "15.02.04",
+            "name_tr": "Veritabanı Yönetimi",
+            "name_en": "Database Administration",
+            "lead": {
+              "position_code": "15.02.04.001",
+              "title_tr": "Veritabanı Yönetimi Yöneticisi",
+              "title_en": "Database Administration Manager",
+              "reports_to": "15.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.02.04.002",
+                "title_tr": "Kıdemli Veritabanı Yöneticisi",
+                "title_en": "Senior Database Administrator",
+                "reports_to": "15.02.04.001"
+              },
+              {
+                "position_code": "15.02.04.003",
+                "title_tr": "Veritabanı Yöneticisi",
+                "title_en": "Database Administrator",
+                "reports_to": "15.02.04.001"
+              },
+              {
+                "position_code": "15.02.04.004",
+                "title_tr": "Veritabanı Operasyon Uzmanı",
+                "title_en": "Database Operations Specialist",
+                "reports_to": "15.02.04.001"
+              }
+            ],
+            "responsibilities": [
+              "Kurumsal veritabanlarının erişilebilirlik ve performansını yönetmek",
+              "Yedekleme, yama, kapasite ve yüksek erişilebilirliği sağlamak",
+              "Veritabanı güvenliği ve değişiklik kontrollerini uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "15.03",
+        "name_tr": "Ağ, İletişim ve Dijital İşyeri",
+        "name_en": "Network, Communications and Digital Workplace",
+        "manager": {
+          "position_code": "15.03.001",
+          "title_tr": "Ağ, İletişim ve Dijital İşyeri Müdürü",
+          "title_en": "Network, Communications and Digital Workplace Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.03.01",
+            "name_tr": "Ağ ve Bağlantı Hizmetleri",
+            "name_en": "Network and Connectivity Services",
+            "lead": {
+              "position_code": "15.03.01.001",
+              "title_tr": "Ağ ve Bağlantı Hizmetleri Yöneticisi",
+              "title_en": "Network and Connectivity Services Manager",
+              "reports_to": "15.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.03.01.002",
+                "title_tr": "Kıdemli Ağ Mühendisi",
+                "title_en": "Senior Network Engineer",
+                "reports_to": "15.03.01.001"
+              },
+              {
+                "position_code": "15.03.01.003",
+                "title_tr": "Ağ Mühendisi",
+                "title_en": "Network Engineer",
+                "reports_to": "15.03.01.001"
+              },
+              {
+                "position_code": "15.03.01.004",
+                "title_tr": "Ağ Operasyon Uzmanı",
+                "title_en": "Network Operations Specialist",
+                "reports_to": "15.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "LAN, WAN, internet ve kablosuz ağ altyapısını yönetmek",
+              "Ağ kapasitesi, segmentasyon ve erişilebilirliği sağlamak",
+              "Ağ performansı ve kesinti olaylarını izlemek"
+            ]
+          },
+          {
+            "team_code": "15.03.02",
+            "name_tr": "İletişim ve Birleşik İletişim Sistemleri",
+            "name_en": "Communications and Unified Communications",
+            "lead": {
+              "position_code": "15.03.02.001",
+              "title_tr": "İletişim ve Birleşik İletişim Sistemleri Yöneticisi",
+              "title_en": "Communications and Unified Communications Manager",
+              "reports_to": "15.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.03.02.002",
+                "title_tr": "Kıdemli İletişim Sistemleri Uzmanı",
+                "title_en": "Senior Communications Systems Specialist",
+                "reports_to": "15.03.02.001"
+              },
+              {
+                "position_code": "15.03.02.003",
+                "title_tr": "Birleşik İletişim Uzmanı",
+                "title_en": "Unified Communications Specialist",
+                "reports_to": "15.03.02.001"
+              },
+              {
+                "position_code": "15.03.02.004",
+                "title_tr": "Telekom Operasyon Uzmanı",
+                "title_en": "Telecom Operations Specialist",
+                "reports_to": "15.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Telefon, video konferans ve kurumsal iletişim platformlarını yönetmek",
+              "Operatör, numara, hat ve iletişim kapasitesini koordine etmek",
+              "İletişim hizmet seviyeleri ve maliyetlerini izlemek"
+            ]
+          },
+          {
+            "team_code": "15.03.03",
+            "name_tr": "Dijital İşyeri ve Uç Nokta Yönetimi",
+            "name_en": "Digital Workplace and Endpoint Management",
+            "lead": {
+              "position_code": "15.03.03.001",
+              "title_tr": "Dijital İşyeri ve Uç Nokta Yönetimi Yöneticisi",
+              "title_en": "Digital Workplace and Endpoint Management Manager",
+              "reports_to": "15.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.03.03.002",
+                "title_tr": "Kıdemli Dijital İşyeri Uzmanı",
+                "title_en": "Senior Digital Workplace Specialist",
+                "reports_to": "15.03.03.001"
+              },
+              {
+                "position_code": "15.03.03.003",
+                "title_tr": "Uç Nokta Yönetimi Uzmanı",
+                "title_en": "Endpoint Management Specialist",
+                "reports_to": "15.03.03.001"
+              },
+              {
+                "position_code": "15.03.03.004",
+                "title_tr": "Masaüstü Sistemleri Uzmanı",
+                "title_en": "Desktop Systems Specialist",
+                "reports_to": "15.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Bilgisayar, mobil cihaz ve kurumsal işyeri araçlarını yönetmek",
+              "Cihaz yapılandırma, yazılım dağıtımı ve yaşam döngüsünü yürütmek",
+              "Uç nokta uyumu, envanteri ve kullanıcı deneyimini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "15.04",
+        "name_tr": "Kurumsal Uygulamalar ve İş Sistemleri",
+        "name_en": "Enterprise Applications and Business Systems",
+        "manager": {
+          "position_code": "15.04.001",
+          "title_tr": "Kurumsal Uygulamalar ve İş Sistemleri Müdürü",
+          "title_en": "Enterprise Applications and Business Systems Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.04.01",
+            "name_tr": "ERP ve Finans Sistemleri",
+            "name_en": "ERP and Finance Systems",
+            "lead": {
+              "position_code": "15.04.01.001",
+              "title_tr": "ERP ve Finans Sistemleri Yöneticisi",
+              "title_en": "ERP and Finance Systems Manager",
+              "reports_to": "15.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.04.01.002",
+                "title_tr": "Kıdemli ERP Uygulama Uzmanı",
+                "title_en": "Senior ERP Application Specialist",
+                "reports_to": "15.04.01.001"
+              },
+              {
+                "position_code": "15.04.01.003",
+                "title_tr": "ERP Uygulama Uzmanı",
+                "title_en": "ERP Application Specialist",
+                "reports_to": "15.04.01.001"
+              },
+              {
+                "position_code": "15.04.01.004",
+                "title_tr": "Finans Sistemleri Analisti",
+                "title_en": "Finance Systems Analyst",
+                "reports_to": "15.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "ERP ve finans uygulamalarının iş sürekliliğini sağlamak",
+              "İş gereksinimi, konfigürasyon ve sürüm değişikliklerini yönetmek",
+              "Finans ve operasyon süreçleri için uygulama desteği sunmak"
+            ]
+          },
+          {
+            "team_code": "15.04.02",
+            "name_tr": "CRM, Satış ve Müşteri Sistemleri",
+            "name_en": "CRM, Sales and Customer Systems",
+            "lead": {
+              "position_code": "15.04.02.001",
+              "title_tr": "CRM, Satış ve Müşteri Sistemleri Yöneticisi",
+              "title_en": "CRM, Sales and Customer Systems Manager",
+              "reports_to": "15.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.04.02.002",
+                "title_tr": "Kıdemli CRM Uygulama Uzmanı",
+                "title_en": "Senior CRM Application Specialist",
+                "reports_to": "15.04.02.001"
+              },
+              {
+                "position_code": "15.04.02.003",
+                "title_tr": "CRM Uygulama Uzmanı",
+                "title_en": "CRM Application Specialist",
+                "reports_to": "15.04.02.001"
+              },
+              {
+                "position_code": "15.04.02.004",
+                "title_tr": "Müşteri Sistemleri Analisti",
+                "title_en": "Customer Systems Analyst",
+                "reports_to": "15.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "CRM, satış ve müşteri hizmetleri uygulamalarını yönetmek",
+              "Müşteri yaşam döngüsü süreçlerini sistemlerde desteklemek",
+              "Veri kalitesi, otomasyon ve kullanıcı benimsemesini geliştirmek"
+            ]
+          },
+          {
+            "team_code": "15.04.03",
+            "name_tr": "İK, Operasyon ve Destek Sistemleri",
+            "name_en": "HR, Operations and Support Systems",
+            "lead": {
+              "position_code": "15.04.03.001",
+              "title_tr": "İK, Operasyon ve Destek Sistemleri Yöneticisi",
+              "title_en": "HR, Operations and Support Systems Manager",
+              "reports_to": "15.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.04.03.002",
+                "title_tr": "Kıdemli İş Uygulamaları Uzmanı",
+                "title_en": "Senior Business Applications Specialist",
+                "reports_to": "15.04.03.001"
+              },
+              {
+                "position_code": "15.04.03.003",
+                "title_tr": "İş Uygulamaları Uzmanı",
+                "title_en": "Business Applications Specialist",
+                "reports_to": "15.04.03.001"
+              },
+              {
+                "position_code": "15.04.03.004",
+                "title_tr": "İş Sistemleri Analisti",
+                "title_en": "Business Systems Analyst",
+                "reports_to": "15.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İK, operasyon, satın alma ve destek uygulamalarını yönetmek",
+              "İş gereksinimlerini sistemsel çözümlere dönüştürmek",
+              "Uygulama değişiklikleri, test ve kabul süreçlerini koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "15.05",
+        "name_tr": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+        "name_en": "Software Engineering, Integration and DevOps",
+        "manager": {
+          "position_code": "15.05.001",
+          "title_tr": "Yazılım Mühendisliği, Entegrasyon ve DevOps Müdürü",
+          "title_en": "Software Engineering, Integration and DevOps Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.05.01",
+            "name_tr": "Kurumsal Yazılım Geliştirme",
+            "name_en": "Enterprise Software Development",
+            "lead": {
+              "position_code": "15.05.01.001",
+              "title_tr": "Kurumsal Yazılım Geliştirme Yöneticisi",
+              "title_en": "Enterprise Software Development Manager",
+              "reports_to": "15.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.05.01.002",
+                "title_tr": "Kıdemli Yazılım Mühendisi",
+                "title_en": "Senior Software Engineer",
+                "reports_to": "15.05.01.001"
+              },
+              {
+                "position_code": "15.05.01.003",
+                "title_tr": "Yazılım Mühendisi",
+                "title_en": "Software Engineer",
+                "reports_to": "15.05.01.001"
+              },
+              {
+                "position_code": "15.05.01.004",
+                "title_tr": "Uygulama Geliştirme Uzmanı",
+                "title_en": "Application Development Specialist",
+                "reports_to": "15.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kurumsal iç uygulama ve otomasyon çözümleri geliştirmek",
+              "Kod kalitesi, test ve güvenli geliştirme standartlarını uygulamak",
+              "Teknik borç ve uygulama yaşam döngüsünü yönetmek"
+            ]
+          },
+          {
+            "team_code": "15.05.02",
+            "name_tr": "Entegrasyon ve API Yönetimi",
+            "name_en": "Integration and API Management",
+            "lead": {
+              "position_code": "15.05.02.001",
+              "title_tr": "Entegrasyon ve API Yönetimi Yöneticisi",
+              "title_en": "Integration and API Management Manager",
+              "reports_to": "15.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.05.02.002",
+                "title_tr": "Kıdemli Entegrasyon Mühendisi",
+                "title_en": "Senior Integration Engineer",
+                "reports_to": "15.05.02.001"
+              },
+              {
+                "position_code": "15.05.02.003",
+                "title_tr": "API ve Entegrasyon Uzmanı",
+                "title_en": "API and Integration Specialist",
+                "reports_to": "15.05.02.001"
+              },
+              {
+                "position_code": "15.05.02.004",
+                "title_tr": "Entegrasyon Analisti",
+                "title_en": "Integration Analyst",
+                "reports_to": "15.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Sistemler arası entegrasyon ve API mimarisini yönetmek",
+              "Entegrasyon güvenliği, versiyonlama ve servis kataloglarını uygulamak",
+              "Veri akışları, hata kuyrukları ve entegrasyon performansını izlemek"
+            ]
+          },
+          {
+            "team_code": "15.05.03",
+            "name_tr": "DevOps, SRE ve Yayın Yönetimi",
+            "name_en": "DevOps, SRE and Release Management",
+            "lead": {
+              "position_code": "15.05.03.001",
+              "title_tr": "DevOps, SRE ve Yayın Yönetimi Yöneticisi",
+              "title_en": "DevOps, SRE and Release Management Manager",
+              "reports_to": "15.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.05.03.002",
+                "title_tr": "Kıdemli DevOps Mühendisi",
+                "title_en": "Senior DevOps Engineer",
+                "reports_to": "15.05.03.001"
+              },
+              {
+                "position_code": "15.05.03.003",
+                "title_tr": "Site Güvenilirlik Mühendisi",
+                "title_en": "Site Reliability Engineer",
+                "reports_to": "15.05.03.001"
+              },
+              {
+                "position_code": "15.05.03.004",
+                "title_tr": "Yayın Yönetimi Uzmanı",
+                "title_en": "Release Management Specialist",
+                "reports_to": "15.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "CI/CD, altyapı kodu ve dağıtım otomasyonunu yönetmek",
+              "Hizmet güvenilirliği, gözlemlenebilirlik ve hata bütçelerini izlemek",
+              "Sürüm, yayın, geri alma ve ortam yönetimini koordine etmek"
+            ]
+          },
+          {
+            "team_code": "15.05.04",
+            "name_tr": "Yazılım Kalitesi, Test ve Dokümantasyon",
+            "name_en": "Software Quality, Testing and Documentation",
+            "lead": {
+              "position_code": "15.05.04.001",
+              "title_tr": "Yazılım Kalitesi, Test ve Dokümantasyon Yöneticisi",
+              "title_en": "Software Quality, Testing and Documentation Manager",
+              "reports_to": "15.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.05.04.002",
+                "title_tr": "Kod İnceleme Uzmanı",
+                "title_en": "Code Review Specialist",
+                "reports_to": "15.05.04.001"
+              },
+              {
+                "position_code": "15.05.04.003",
+                "title_tr": "Statik Analiz ve Hata Tespit Uzmanı",
+                "title_en": "Static Analysis and Defect Detection Specialist",
+                "reports_to": "15.05.04.001"
+              },
+              {
+                "position_code": "15.05.04.004",
+                "title_tr": "Test Otomasyon Mühendisi",
+                "title_en": "Test Automation Engineer",
+                "reports_to": "15.05.04.001"
+              },
+              {
+                "position_code": "15.05.04.005",
+                "title_tr": "Teknik Dokümantasyon Uzmanı",
+                "title_en": "Technical Documentation Specialist",
+                "reports_to": "15.05.04.001"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "15.08",
+        "name_tr": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+        "name_en": "IT Service Management and User Support",
+        "manager": {
+          "position_code": "15.08.001",
+          "title_tr": "BT Hizmet Yönetimi ve Kullanıcı Destek Müdürü",
+          "title_en": "IT Service Management and User Support Manager",
+          "reports_to": "15.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "15.08.01",
+            "name_tr": "Servis Masası ve Kullanıcı Destek",
+            "name_en": "Service Desk and User Support",
+            "lead": {
+              "position_code": "15.08.01.001",
+              "title_tr": "Servis Masası ve Kullanıcı Destek Yöneticisi",
+              "title_en": "Service Desk and User Support Manager",
+              "reports_to": "15.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.08.01.002",
+                "title_tr": "Kıdemli BT Destek Uzmanı",
+                "title_en": "Senior IT Support Specialist",
+                "reports_to": "15.08.01.001"
+              },
+              {
+                "position_code": "15.08.01.003",
+                "title_tr": "BT Destek Uzmanı",
+                "title_en": "IT Support Specialist",
+                "reports_to": "15.08.01.001"
+              },
+              {
+                "position_code": "15.08.01.004",
+                "title_tr": "Servis Masası Temsilcisi",
+                "title_en": "Service Desk Representative",
+                "reports_to": "15.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kullanıcı olay ve taleplerini tek temas noktasından yönetmek",
+              "İlk seviye çözüm, yönlendirme ve kullanıcı iletişimini sağlamak",
+              "İlk temas çözümü ve memnuniyet göstergelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "15.08.02",
+            "name_tr": "Olay, Problem ve Değişiklik Yönetimi",
+            "name_en": "Incident, Problem and Change Management",
+            "lead": {
+              "position_code": "15.08.02.001",
+              "title_tr": "Olay, Problem ve Değişiklik Yönetimi Yöneticisi",
+              "title_en": "Incident, Problem and Change Management Manager",
+              "reports_to": "15.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.08.02.002",
+                "title_tr": "Kıdemli BT Hizmet Yönetimi Uzmanı",
+                "title_en": "Senior IT Service Management Specialist",
+                "reports_to": "15.08.02.001"
+              },
+              {
+                "position_code": "15.08.02.003",
+                "title_tr": "Olay ve Problem Yönetimi Uzmanı",
+                "title_en": "Incident and Problem Management Specialist",
+                "reports_to": "15.08.02.001"
+              },
+              {
+                "position_code": "15.08.02.004",
+                "title_tr": "Değişiklik Yönetimi Uzmanı",
+                "title_en": "Change Management Specialist",
+                "reports_to": "15.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kritik olay, problem ve değişiklik süreçlerini yönetmek",
+              "Kök neden, bilinen hata ve kalıcı çözüm kayıtlarını izlemek",
+              "Değişiklik risk, onay, takvim ve başarısını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "15.08.03",
+            "name_tr": "Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi",
+            "name_en": "Asset, Configuration and Service Level Management",
+            "lead": {
+              "position_code": "15.08.03.001",
+              "title_tr": "Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi Yöneticisi",
+              "title_en": "Asset, Configuration and Service Level Management Manager",
+              "reports_to": "15.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "15.08.03.002",
+                "title_tr": "Kıdemli BT Varlık Yönetimi Uzmanı",
+                "title_en": "Senior IT Asset Management Specialist",
+                "reports_to": "15.08.03.001"
+              },
+              {
+                "position_code": "15.08.03.003",
+                "title_tr": "Konfigürasyon Yönetimi Uzmanı",
+                "title_en": "Configuration Management Specialist",
+                "reports_to": "15.08.03.001"
+              },
+              {
+                "position_code": "15.08.03.004",
+                "title_tr": "Hizmet Seviyesi Analisti",
+                "title_en": "Service Level Analyst",
+                "reports_to": "15.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "BT varlık envanteri, lisans ve yaşam döngüsünü yönetmek",
+              "CMDB ve konfigürasyon ilişkilerinin doğruluğunu sağlamak",
+              "SLA, OLA, hizmet kataloğu ve tedarikçi hizmet performansını izlemek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Kritik Sistem Erişilebilirliği",
+        "SLA Uyum Oranı",
+        "Ortalama Onarım Süresi (MTTR)",
+        "İlk Temasta Çözüm Oranı",
+        "Değişiklik Başarı Oranı",
+        "Kritik Olay Sayısı",
+        "Yama Uyum Oranı",
+        "Kritik Güvenlik Açığı Kapanış Süresi",
+        "RPO/RTO Test Başarı Oranı",
+        "Bulut ve Altyapı Birim Maliyeti",
+        "BT Bütçe Sapması",
+        "Proje Zamanında Teslim Oranı",
+        "Kullanıcı Memnuniyet Skoru",
+        "CMDB ve Varlık Envanteri Doğruluk Oranı",
+        "Dağıtım Sıklığı ve Değişiklik Hata Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük BT Operasyon Toplantısı",
+          "focus": "Kritik olaylar, güvenlik uyarıları, kapasite ve hizmet kesintileri"
+        },
+        {
+          "forum": "Haftalık Hizmet ve Değişiklik Kurulu",
+          "focus": "SLA, problem, değişiklik, yayın ve operasyonel riskler"
+        },
+        {
+          "forum": "Aylık BT Yönetişim Kurulu",
+          "focus": "Portföy, bütçe, mimari, güvenlik, tedarikçi ve hizmet performansı"
+        },
+        {
+          "forum": "Çeyreklik Teknoloji Strateji Kurulu",
+          "focus": "Yol haritası, modernizasyon, yatırım, teknik borç ve inovasyon"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "product": "Ürün Yönetimi müşteri problemi, ürün vizyonu, öncelik ve yol haritasının; BT kurumsal teknoloji platformları, teknik mimari, geliştirme ve işletimin sahibidir.",
+      "business_units": "İş birimleri süreç hedefi, gereksinim ve kabul kriterlerinin; BT çözüm tasarımı, teknik teslimat ve teknoloji yaşam döngüsünün sahibidir.",
+      "data_governance": "İş birimleri veri anlamı ve veri sahipliğinin; BT veri platformu, entegrasyon, teknik erişim ve platform güvenliğinin sahibidir.",
+      "compliance_risk": "Uyum ve Risk politika, mevzuat yorumu ve ikinci hat gözetiminin; BT teknik kontrollerin uygulanması, kanıtı ve teknoloji risk aksiyonlarının sahibidir.",
+      "internal_audit": "İç Denetim bağımsız üçüncü hat güvencenin; BT günlük kontrol işletimi ve bulgu aksiyonlarının sahibidir.",
+      "cybersecurity": "Siber Güvenlik ve Bilgi Güvenliği güvenlik politikası, risk, güvenlik mimarisi, güvenlik gereksinimi, güvenlik izleme ve olay müdahalesi ile güvencenin; BT güvenlik kontrollerinin altyapı, uygulama ve platformlarda teknik uygulanması, yama ve yapılandırma yönetimi ile günlük teknoloji işletiminin sahibidir.",
+      "procurement": "Satın Alma ticari süreç, müzakere ve sözleşmenin; BT teknik şartname, lisans ihtiyacı, kabul ve tedarikçi teknik performansının sahibidir.",
+      "customer_support": "Müşteri Destek dış müşterilere ürün/hizmet desteğinin; BT Servis Masası çalışan ve kurumsal teknoloji kullanıcı desteğinin sahibidir.",
+      "operations": "Operasyon iş süreçlerinin günlük yürütülmesinin; BT bu süreçleri destekleyen sistemlerin erişilebilirlik ve teknik sürekliliğinin sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; kullanıcı sayısı, lokasyon, uygulama ve entegrasyon sayısı, altyapı karmaşıklığı, bulut kullanımı, hizmet saatleri, regülasyon seviyesi, geliştirme portföyü ve güvenlik riskine göre ölçeklenir.",
+      "minimum_core_headcount": 27,
+      "minimum_core_headcount_note": "1 direktör + 6 birim müdürü + 20 ekip yöneticisi; mühendis, mimar, geliştirici, analist ve destek kadroları iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Aktif kullanıcı ve cihaz sayısı",
+        "Lokasyon ve ağ noktası sayısı",
+        "Uygulama ve entegrasyon portföyü",
+        "Veri hacmi ve veritabanı sayısı",
+        "7/24 hizmet gereksinimi",
+        "Bulut ve altyapı varlık sayısı",
+        "Yazılım geliştirme ve değişiklik hacmi",
+        "Siber güvenlik ve regülasyon kritiklik seviyesi"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 6,
+      "team_leads": 20,
+      "specialist_role_types": 61,
+      "core_principle": "BT yalnızca sistemleri çalıştıran bir destek fonksiyonu değil; iş stratejisini güvenli, veri odaklı ve ölçeklenebilir dijital yetkinliklere dönüştüren kurumsal teknoloji ortağıdır."
+    }
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "BT stratejisini, kurumsal mimariyi ve teknoloji yatırım portföyünü yönetmek",
+        "Altyapı, bulut, veritabanı ve platform hizmetlerinin erişilebilirliğini, kapasitesini ve sürekliliğini sağlamak",
+        "Ağ, iletişim ve dijital işyeri hizmetlerini güvenli ve kullanıcı odaklı biçimde sunmak",
+        "Kurumsal uygulamaları ve iş sistemlerini iş gereksinimlerine uygun yönetmek ve geliştirmek",
+        "Yazılım geliştirme, entegrasyon, DevOps ve yazılım kalitesi standartlarını işletmek",
+        "Servis masası, olay, problem, değişiklik ve BT varlık süreçlerini yönetmek",
+        "Yedekleme, felaket kurtarma ve teknik dayanıklılık kapasitesini RPO ve RTO hedeflerine göre sağlamak",
+        "Bilgi güvenliği politikalarına uygun teknik kontrolleri uygulamak, BT maliyetlerini ve teknoloji risklerini yönetmek"
+      ],
+      "authorities": [
+        "BT stratejisi, teknoloji yol haritası ve yatırım portföyü önceliklerini üst yönetim onayına sunar",
+        "Kurumsal mimari ilkelerini, teknoloji standartlarını ve mimari istisnaları onaylar",
+        "İş birimlerinin kabul kriterleri doğrultusunda çözüm tasarımını ve teknik teslimat yaklaşımını belirler",
+        "Üretim ortamı değişikliklerini değişiklik kurulu kararıyla onaylar ve riskli değişikliği erteleyebilir",
+        "Kritik olayda olay yönetimini başlatır ve hizmet kurtarma önceliklerini belirler",
+        "BT alımlarında teknik şartnameyi, lisans ihtiyacını ve teknik kabulü onaylar",
+        "Onaylı BT bütçesi içinde kaynak ve bulut harcama tahsisini belirler"
+      ],
+      "collaborations": [
+        {
+          "department": "18 - Ürün Yönetimi ve Ar-Ge",
+          "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+          "topic": "Ürün yol haritası ile kurumsal teknoloji platformları ve teknik mimarinin uyumu"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "İç Kontrol ve Görevler Ayrılığı",
+          "topic": "Teknik kontrollerin uygulanması, kanıtı ve teknoloji risk aksiyonları"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "BT, Siber Güvenlik ve Veri Denetimi",
+          "topic": "BT kontrol işletimi, denetim kanıtları ve bulgu aksiyonları"
+        },
+        {
+          "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+          "unit": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum",
+          "topic": "Bilgi güvenliği politikalarının teknik kontrollere dönüştürülmesi ve bağımsız gözetimi"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "BT alımlarında teknik şartname, lisans ihtiyacı ve teknik kabul"
+        },
+        {
+          "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+          "unit": "Müşteri Destek ve Servis Masası",
+          "topic": "Dış müşteri desteği ile çalışan BT desteği arasındaki iş bölümü"
+        },
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Hizmet Teslimatı ve Operasyon Yönetimi",
+          "topic": "Operasyon süreçlerini destekleyen sistemlerin erişilebilirliği ve teknik sürekliliği"
+        },
+        {
+          "department": "17 - Veri, Analitik ve Yapay Zekâ",
+          "unit": "Veri Mühendisliği ve Platformları",
+          "topic": "Veri platformu altyapısı, entegrasyon ve teknik veri erişimi"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+          "topic": "BT bütçesi, yatırım planı ve teknoloji maliyetleri"
+        }
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü",
+          "title_tr": "Bilgi Teknolojileri Direktörü (CIO)",
+          "title_en": "Information Technology Director (CIO)"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Manager / Lead"
+        },
+        {
+          "level": "Kıdemli Uzman",
+          "title_tr": "Kıdemli Uzman / Kıdemli Mühendis / Kıdemli Mimar",
+          "title_en": "Senior Specialist / Senior Engineer / Senior Architect"
+        },
+        {
+          "level": "Uzman",
+          "title_tr": "Uzman / Mühendis / Mimar",
+          "title_en": "Specialist / Engineer / Architect"
+        },
+        {
+          "level": "Analist / Koordinatör",
+          "title_tr": "Analist",
+          "title_en": "Analyst"
+        },
+        {
+          "level": "Destek Rolleri",
+          "title_tr": "Servis Masası Temsilcisi",
+          "title_en": "Service Desk Agent"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 45,
+          "max": 92
+        },
+        {
+          "model": "Standart",
+          "min": 92,
+          "max": 197
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 197,
+          "max": 278
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 92,
+        "total_max": 197,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 20,
+            "max": 20
+          },
+          {
+            "role_group": "Yönetici",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 19,
+            "max": 38
+          },
+          {
+            "role_group": "Uzman",
+            "min": 36,
+            "max": 111
+          },
+          {
+            "role_group": "Analist",
+            "min": 9,
+            "max": 18
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "15.01",
+        "name_tr": "BT Stratejisi, Yönetişim ve Kurumsal Mimari",
+        "responsibilities": [
+          "BT stratejisini ve teknoloji yol haritasını oluşturmak",
+          "Teknoloji trendlerini değerlendirerek dijital yetkinlik ve modernizasyon önceliklerini belirlemek",
+          "BT yatırım, talep ve proje portföyünü yönetmek",
+          "BT karar kurullarını, politika ve standartları işletmek, bütçe, fayda ve kaynak gerçekleşmelerini izlemek",
+          "İş, uygulama, veri ve teknoloji mimarisi ilkelerini oluşturmak",
+          "Çözüm tasarımlarını ölçeklenebilirlik, güvenlik ve entegrasyon açısından değerlendirmek"
+        ],
+        "authorities": [
+          "BT talep ve proje portföyünün önceliklendirme önerisini BT karar kuruluna sunar",
+          "Çözüm tasarımlarının mimari uygunluğunu onaylar veya düzeltme ister",
+          "Teknoloji standartlarını ve mimari istisna taleplerini değerlendirip karara bağlar",
+          "BT politika ve standart taslaklarını hazırlar ve onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Uygulama portföyü, yaşam döngüsü ve modernizasyon planları"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Çözüm mimarisi, entegrasyon standartları ve teknik borç yönetimi"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Mimarisi ve Mühendisliği",
+            "topic": "Kurumsal mimaride güvenlik ilkeleri ve tasarım değerlendirmeleri"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+            "topic": "BT yatırım bütçesi, fayda takibi ve finansal planlama"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+            "topic": "Ürün yol haritası ile kurumsal teknoloji yol haritasının uyumu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Stratejik Projeler ve Dönüşüm Ofisi",
+            "topic": "Dijital dönüşüm projelerinin kurumsal portföyle uyumu"
+          }
+        ],
+        "kpis": [
+          "Proje Zamanında Teslim Oranı",
+          "BT Bütçe Sapması",
+          "Portföy Fayda Gerçekleşme Oranı",
+          "Mimari İncelemeden Geçen Proje Oranı",
+          "Açık Mimari İstisna Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "15.01",
+            "level": "Birim Müdürü",
+            "title_tr": "BT Stratejisi, Yönetişim ve Kurumsal Mimari Müdürü",
+            "title_en": "IT Strategy, Governance and Enterprise Architecture Manager"
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "BT Stratejisi ve Teknoloji Yol Haritası Yöneticisi",
+            "title_en": "IT Strategy and Technology Roadmap Manager"
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/kidemli-bt-stratejisi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BT Stratejisi Uzmanı",
+            "title_en": "Senior IT Strategy Specialist"
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/bt-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "BT Stratejisi Uzmanı",
+            "title_en": "IT Strategy Specialist"
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/teknoloji-arastirma-analisti",
+            "level": "Analist",
+            "title_tr": "Teknoloji Araştırma Analisti",
+            "title_en": "Technology Research Analyst"
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "BT Yönetişimi ve Portföy Yönetimi Yöneticisi",
+            "title_en": "IT Governance and Portfolio Management Manager"
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/kidemli-bt-yonetisim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BT Yönetişim Uzmanı",
+            "title_en": "Senior IT Governance Specialist"
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/bt-portfoy-uzmani",
+            "level": "Uzman",
+            "title_tr": "BT Portföy Uzmanı",
+            "title_en": "IT Portfolio Specialist"
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/bt-performans-analisti",
+            "level": "Analist",
+            "title_tr": "BT Performans Analisti",
+            "title_en": "IT Performance Analyst"
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal ve Çözüm Mimarisi Yöneticisi",
+            "title_en": "Enterprise and Solution Architecture Manager"
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/kidemli-kurumsal-mimar",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal Mimar",
+            "title_en": "Senior Enterprise Architect"
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/cozum-mimari",
+            "level": "Uzman",
+            "title_tr": "Çözüm Mimarı",
+            "title_en": "Solution Architect"
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/mimari-yonetisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Mimari Yönetişim Uzmanı",
+            "title_en": "Architecture Governance Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.01",
+            "title_tr": "BT Stratejisi, Yönetişim ve Kurumsal Mimari Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi",
+            "title_tr": "BT Stratejisi ve Teknoloji Yol Haritası Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/kidemli-bt-stratejisi-uzmani",
+            "title_tr": "Kıdemli BT Stratejisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/bt-stratejisi-uzmani",
+            "title_tr": "BT Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.01/bt-stratejisi-ve-teknoloji-yol-haritasi/teknoloji-arastirma-analisti",
+            "title_tr": "Teknoloji Araştırma Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi",
+            "title_tr": "BT Yönetişimi ve Portföy Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/kidemli-bt-yonetisim-uzmani",
+            "title_tr": "Kıdemli BT Yönetişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/bt-portfoy-uzmani",
+            "title_tr": "BT Portföy Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.01/bt-yonetisimi-ve-portfoy-yonetimi/bt-performans-analisti",
+            "title_tr": "BT Performans Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi",
+            "title_tr": "Kurumsal ve Çözüm Mimarisi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/kidemli-kurumsal-mimar",
+            "title_tr": "Kıdemli Kurumsal Mimar",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/cozum-mimari",
+            "title_tr": "Çözüm Mimarı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.01/kurumsal-ve-cozum-mimarisi/mimari-yonetisim-uzmani",
+            "title_tr": "Mimari Yönetişim Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "15.02",
+        "name_tr": "Altyapı, Bulut ve Platform Operasyonları",
+        "responsibilities": [
+          "Sunucu, sanallaştırma ve işletim sistemi platformlarını kapasite, yama ve yaşam döngüsü süreçleriyle yönetmek",
+          "Genel, özel ve hibrit bulut platformlarını güvenlik ve kaynak politikalarına uygun yönetmek",
+          "Bulut maliyetini, kapasitesini ve kullanım verimliliğini optimize etmek",
+          "Depolama, arşivleme ve yedekleme platformlarını yönetmek",
+          "RPO ve RTO hedeflerine uygun felaket kurtarma planlarını ve geri yükleme testlerini yürütmek",
+          "Kurumsal veritabanlarının erişilebilirliğini, performansını ve güvenliğini yönetmek"
+        ],
+        "authorities": [
+          "Altyapı kapasite, yama ve yaşam döngüsü takvimini belirler",
+          "Bulut kaynak politikalarını, etiketleme ve maliyet kurallarını belirler",
+          "Felaket kurtarma tatbikatlarının senaryolarını ve tarihlerini kurumsal tatbikat takvimine uygun belirler ve kurtarma prosedürlerini devreye alır",
+          "Veritabanı erişim ve değişiklik taleplerini teknik kontrollere göre onaylar",
+          "Yaşam sonu altyapı bileşenlerinin yenileme ihtiyacını gerekçeleriyle onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Altyapı kodu, dağıtım otomasyonu ve ortam yönetimi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "Altyapı olayları, değişiklikler ve CMDB kayıtları"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Altyapı güvenlik olayları, log kaynakları ve müdahale koordinasyonu"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Felaket kurtarma planlarının iş sürekliliği gereksinimleriyle uyumu"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Mühendisliği ve Platformları",
+            "topic": "Veri platformu altyapısı, veritabanı kapasitesi ve performansı"
+          }
+        ],
+        "kpis": [
+          "Kritik Sistem Erişilebilirliği",
+          "Yama Uyum Oranı",
+          "RPO/RTO Test Başarı Oranı",
+          "Başarılı Geri Yükleme Testi Oranı",
+          "Bulut ve Altyapı Birim Maliyeti",
+          "Veritabanı Yanıt Süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "15.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Altyapı, Bulut ve Platform Operasyonları Müdürü",
+            "title_en": "Infrastructure, Cloud and Platform Operations Manager"
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sunucu, Sanallaştırma ve İşletim Sistemleri Yöneticisi",
+            "title_en": "Server, Virtualization and Operating Systems Manager"
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/kidemli-sistem-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sistem Mühendisi",
+            "title_en": "Senior Systems Engineer"
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/sistem-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Sistem Mühendisi",
+            "title_en": "Systems Engineer"
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/sistem-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sistem Operasyon Uzmanı",
+            "title_en": "Systems Operations Specialist"
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bulut Platformları ve FinOps Yöneticisi",
+            "title_en": "Cloud Platforms and FinOps Manager"
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/kidemli-bulut-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Bulut Mühendisi",
+            "title_en": "Senior Cloud Engineer"
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/bulut-platform-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bulut Platform Uzmanı",
+            "title_en": "Cloud Platform Specialist"
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/finops-analisti",
+            "level": "Analist",
+            "title_tr": "FinOps Analisti",
+            "title_en": "FinOps Analyst"
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yedekleme, Depolama ve Felaket Kurtarma Yöneticisi",
+            "title_en": "Backup, Storage and Disaster Recovery Manager"
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/kidemli-depolama-ve-yedekleme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Depolama ve Yedekleme Uzmanı",
+            "title_en": "Senior Storage and Backup Specialist"
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/felaket-kurtarma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Felaket Kurtarma Uzmanı",
+            "title_en": "Disaster Recovery Specialist"
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/altyapi-sureklilik-analisti",
+            "level": "Analist",
+            "title_tr": "Altyapı Süreklilik Analisti",
+            "title_en": "Infrastructure Continuity Analyst"
+          },
+          {
+            "position": "15.02/veritabani-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veritabanı Yönetimi Yöneticisi",
+            "title_en": "Database Administration Manager"
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Veritabanı Yöneticisi",
+            "title_en": "Senior Database Administrator"
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/veritabani-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Veritabanı Yöneticisi",
+            "title_en": "Database Administrator"
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/veritabani-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veritabanı Operasyon Uzmanı",
+            "title_en": "Database Operations Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 9,
+            "max": 18
+          },
+          {
+            "model": "Standart",
+            "min": 18,
+            "max": 38
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 38,
+            "max": 54
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.02",
+            "title_tr": "Altyapı, Bulut ve Platform Operasyonları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri",
+            "title_tr": "Sunucu, Sanallaştırma ve İşletim Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/kidemli-sistem-muhendisi",
+            "title_tr": "Kıdemli Sistem Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/sistem-muhendisi",
+            "title_tr": "Sistem Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.02/sunucu-sanallastirma-ve-isletim-sistemleri/sistem-operasyon-uzmani",
+            "title_tr": "Sistem Operasyon Uzmanı",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops",
+            "title_tr": "Bulut Platformları ve FinOps Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/kidemli-bulut-muhendisi",
+            "title_tr": "Kıdemli Bulut Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/bulut-platform-uzmani",
+            "title_tr": "Bulut Platform Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.02/bulut-platformlari-ve-finops/finops-analisti",
+            "title_tr": "FinOps Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma",
+            "title_tr": "Yedekleme, Depolama ve Felaket Kurtarma Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/kidemli-depolama-ve-yedekleme-uzmani",
+            "title_tr": "Kıdemli Depolama ve Yedekleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/felaket-kurtarma-uzmani",
+            "title_tr": "Felaket Kurtarma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.02/yedekleme-depolama-ve-felaket-kurtarma/altyapi-sureklilik-analisti",
+            "title_tr": "Altyapı Süreklilik Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/veritabani-yonetimi",
+            "title_tr": "Veritabanı Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+            "title_tr": "Kıdemli Veritabanı Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/veritabani-yoneticisi",
+            "title_tr": "Veritabanı Yöneticisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.02/veritabani-yonetimi/veritabani-operasyon-uzmani",
+            "title_tr": "Veritabanı Operasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "15.03",
+        "name_tr": "Ağ, İletişim ve Dijital İşyeri",
+        "responsibilities": [
+          "LAN, WAN, internet ve kablosuz ağ altyapısını yönetmek",
+          "Ağ kapasitesini, segmentasyonunu ve erişilebilirliğini sağlamak",
+          "Telefon, video konferans ve kurumsal iletişim platformlarını yönetmek",
+          "Operatör, numara, hat ve iletişim kapasitesini koordine etmek",
+          "Kurumsal cihazların yapılandırma, yazılım dağıtımı ve yaşam döngüsü süreçlerini yürütmek",
+          "Uç nokta uyumunu, envanterini ve kullanıcı deneyimini izlemek"
+        ],
+        "authorities": [
+          "Ağ mimarisi, segmentasyon ve bağlantı standartlarını belirler",
+          "Ağ değişikliklerini ve bakım pencerelerini planlayıp değişiklik kuruluna sunar",
+          "Standart cihaz ve yazılım kataloğunu belirler",
+          "Uyumsuz uç noktanın kurumsal ağa erişimini kısıtlar",
+          "Operatör ve iletişim hizmeti değişiklik ihtiyaçlarını onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "Kullanıcı talepleri, uç nokta olayları ve cihaz envanteri"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Kimlik ve Erişim Güvenliği",
+            "topic": "Ağ erişim kontrolü, cihaz uyumu ve uzaktan erişim güvenliği"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri",
+            "topic": "Ofis kurulumları ve çalışma alanlarının teknoloji ihtiyaçları"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Cihaz, operatör ve iletişim hizmeti alımlarında teknik şartname ve kabul"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "İşe giriş ve çıkışlarda cihaz teslimi ve iadesi"
+          }
+        ],
+        "kpis": [
+          "Ağ Erişilebilirliği",
+          "Ağ Kaynaklı Kesinti Süresi",
+          "Uç Nokta Uyum Oranı",
+          "Cihaz Teslim Süresi",
+          "Birleşik İletişim Hizmet Erişilebilirliği",
+          "Dijital İşyeri Kullanıcı Memnuniyeti"
+        ],
+        "title_standard": [
+          {
+            "position": "15.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Ağ, İletişim ve Dijital İşyeri Müdürü",
+            "title_en": "Network, Communications and Digital Workplace Manager"
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ağ ve Bağlantı Hizmetleri Yöneticisi",
+            "title_en": "Network and Connectivity Services Manager"
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/kidemli-ag-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Ağ Mühendisi",
+            "title_en": "Senior Network Engineer"
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/ag-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Ağ Mühendisi",
+            "title_en": "Network Engineer"
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/ag-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ağ Operasyon Uzmanı",
+            "title_en": "Network Operations Specialist"
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İletişim ve Birleşik İletişim Sistemleri Yöneticisi",
+            "title_en": "Communications and Unified Communications Manager"
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/kidemli-iletisim-sistemleri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İletişim Sistemleri Uzmanı",
+            "title_en": "Senior Communications Systems Specialist"
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/birlesik-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Birleşik İletişim Uzmanı",
+            "title_en": "Unified Communications Specialist"
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/telekom-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Telekom Operasyon Uzmanı",
+            "title_en": "Telecom Operations Specialist"
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dijital İşyeri ve Uç Nokta Yönetimi Yöneticisi",
+            "title_en": "Digital Workplace and Endpoint Management Manager"
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/kidemli-dijital-isyeri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Dijital İşyeri Uzmanı",
+            "title_en": "Senior Digital Workplace Specialist"
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/uc-nokta-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uç Nokta Yönetimi Uzmanı",
+            "title_en": "Endpoint Management Specialist"
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/masaustu-sistemleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Masaüstü Sistemleri Uzmanı",
+            "title_en": "Desktop Systems Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.03",
+            "title_tr": "Ağ, İletişim ve Dijital İşyeri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri",
+            "title_tr": "Ağ ve Bağlantı Hizmetleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/kidemli-ag-muhendisi",
+            "title_tr": "Kıdemli Ağ Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/ag-muhendisi",
+            "title_tr": "Ağ Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.03/ag-ve-baglanti-hizmetleri/ag-operasyon-uzmani",
+            "title_tr": "Ağ Operasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri",
+            "title_tr": "İletişim ve Birleşik İletişim Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/kidemli-iletisim-sistemleri-uzmani",
+            "title_tr": "Kıdemli İletişim Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/birlesik-iletisim-uzmani",
+            "title_tr": "Birleşik İletişim Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.03/iletisim-ve-birlesik-iletisim-sistemleri/telekom-operasyon-uzmani",
+            "title_tr": "Telekom Operasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi",
+            "title_tr": "Dijital İşyeri ve Uç Nokta Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/kidemli-dijital-isyeri-uzmani",
+            "title_tr": "Kıdemli Dijital İşyeri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/uc-nokta-yonetimi-uzmani",
+            "title_tr": "Uç Nokta Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.03/dijital-isyeri-ve-uc-nokta-yonetimi/masaustu-sistemleri-uzmani",
+            "title_tr": "Masaüstü Sistemleri Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "15.04",
+        "name_tr": "Kurumsal Uygulamalar ve İş Sistemleri",
+        "responsibilities": [
+          "ERP ve finans uygulamalarının iş sürekliliğini sağlamak",
+          "CRM, satış ve müşteri hizmetleri uygulamalarını yönetmek",
+          "İK, operasyon, satın alma ve destek uygulamalarını yönetmek",
+          "İş gereksinimlerini konfigürasyon ve sistemsel çözümlere dönüştürmek",
+          "Uygulama sürüm, değişiklik, test ve kabul süreçlerini koordine etmek",
+          "Uygulamalarda veri kalitesini, otomasyonu ve kullanıcı benimsemesini geliştirmek"
+        ],
+        "authorities": [
+          "Uygulama konfigürasyonu ve sürüm değişikliklerinin teknik çözümünü belirler",
+          "İş birimi kabulü tamamlanmamış değişikliğin canlıya alınmasını durdurur",
+          "Uygulama yetki rolü tasarımını hazırlar ve iş sahibi onayına sunar",
+          "Uygulama talepleri arasındaki teknik öncelik önerisini portföy kuruluna sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "ERP muhasebe süreçleri, dönem kapanışı ve sistem değişiklikleri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Stratejisi ve Gelir Operasyonları",
+            "topic": "CRM süreç gereksinimleri ve satış operasyonu otomasyonu"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Analitiği ve Dijitalleşme",
+            "topic": "İK sistemleri gereksinimleri ve dijitalleşme projeleri"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Satın alma ve tedarik zinciri uygulama süreçleri"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İç Kontrol ve Görevler Ayrılığı",
+            "topic": "Uygulama yetki rolleri ve görevler ayrılığı kontrolleri"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Uygulama entegrasyonları, geliştirme ve test otomasyonu"
+          }
+        ],
+        "kpis": [
+          "Kritik İş Uygulaması Erişilebilirliği",
+          "Uygulama Değişikliği Başarı Oranı",
+          "Uygulama Talebi Teslim Süresi",
+          "Kullanıcı Benimseme Oranı",
+          "Uygulama Kaynaklı Olay Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "15.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Kurumsal Uygulamalar ve İş Sistemleri Müdürü",
+            "title_en": "Enterprise Applications and Business Systems Manager"
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "ERP ve Finans Sistemleri Yöneticisi",
+            "title_en": "ERP and Finance Systems Manager"
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/kidemli-erp-uygulama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli ERP Uygulama Uzmanı",
+            "title_en": "Senior ERP Application Specialist"
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/erp-uygulama-uzmani",
+            "level": "Uzman",
+            "title_tr": "ERP Uygulama Uzmanı",
+            "title_en": "ERP Application Specialist"
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/finans-sistemleri-analisti",
+            "level": "Analist",
+            "title_tr": "Finans Sistemleri Analisti",
+            "title_en": "Finance Systems Analyst"
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "CRM, Satış ve Müşteri Sistemleri Yöneticisi",
+            "title_en": "CRM, Sales and Customer Systems Manager"
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/kidemli-crm-uygulama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli CRM Uygulama Uzmanı",
+            "title_en": "Senior CRM Application Specialist"
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/crm-uygulama-uzmani",
+            "level": "Uzman",
+            "title_tr": "CRM Uygulama Uzmanı",
+            "title_en": "CRM Application Specialist"
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/musteri-sistemleri-analisti",
+            "level": "Analist",
+            "title_tr": "Müşteri Sistemleri Analisti",
+            "title_en": "Customer Systems Analyst"
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İK, Operasyon ve Destek Sistemleri Yöneticisi",
+            "title_en": "HR, Operations and Support Systems Manager"
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/kidemli-is-uygulamalari-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş Uygulamaları Uzmanı",
+            "title_en": "Senior Business Applications Specialist"
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/is-uygulamalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Uygulamaları Uzmanı",
+            "title_en": "Business Applications Specialist"
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/is-sistemleri-analisti",
+            "level": "Analist",
+            "title_tr": "İş Sistemleri Analisti",
+            "title_en": "Business Systems Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.04",
+            "title_tr": "Kurumsal Uygulamalar ve İş Sistemleri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri",
+            "title_tr": "ERP ve Finans Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/kidemli-erp-uygulama-uzmani",
+            "title_tr": "Kıdemli ERP Uygulama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/erp-uygulama-uzmani",
+            "title_tr": "ERP Uygulama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.04/erp-ve-finans-sistemleri/finans-sistemleri-analisti",
+            "title_tr": "Finans Sistemleri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri",
+            "title_tr": "CRM, Satış ve Müşteri Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/kidemli-crm-uygulama-uzmani",
+            "title_tr": "Kıdemli CRM Uygulama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/crm-uygulama-uzmani",
+            "title_tr": "CRM Uygulama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.04/crm-satis-ve-musteri-sistemleri/musteri-sistemleri-analisti",
+            "title_tr": "Müşteri Sistemleri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri",
+            "title_tr": "İK, Operasyon ve Destek Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/kidemli-is-uygulamalari-uzmani",
+            "title_tr": "Kıdemli İş Uygulamaları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/is-uygulamalari-uzmani",
+            "title_tr": "İş Uygulamaları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.04/ik-operasyon-ve-destek-sistemleri/is-sistemleri-analisti",
+            "title_tr": "İş Sistemleri Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "15.05",
+        "name_tr": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+        "responsibilities": [
+          "Kurumsal iç uygulama ve otomasyon çözümleri geliştirmek",
+          "Kod kalitesi, test ve güvenli geliştirme standartlarını uygulamak",
+          "Sistemler arası entegrasyon ve API mimarisini versiyonlama ve güvenlik kurallarıyla yönetmek",
+          "CI/CD, altyapı kodu ve dağıtım otomasyonunu yönetmek",
+          "Hizmet güvenilirliğini, gözlemlenebilirliği ve hata bütçelerini izlemek",
+          "Kod inceleme, statik analiz, test otomasyonu ve teknik dokümantasyon süreçlerini yürütmek"
+        ],
+        "authorities": [
+          "Kodlama, kod inceleme ve test standartlarını belirler",
+          "Kalite kapılarını geçemeyen sürümün yayınını durdurur",
+          "API tasarım, versiyonlama ve entegrasyon kalıplarını onaylar",
+          "Yayın takvimini belirler ve başarısız dağıtımda geri alma kararını verir",
+          "Hata bütçesi aşıldığında yeni özellik yayınlarını erteleyebilir"
+        ],
+        "collaborations": [
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Uygulama Güvenliği ve DevSecOps",
+            "topic": "Güvenli geliştirme, güvenlik testleri ve dağıtım hattı kontrolleri"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Altyapı kodu, ortam yönetimi ve platform kapasitesi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "Değişiklik yönetimi, yayın takvimi ve olay sonrası düzeltmeler"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Kurumsal uygulama entegrasyonları ve özelleştirme geliştirmeleri"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Mühendisliği ve Platformları",
+            "topic": "Veri entegrasyonları, veri akışları ve API tabanlı veri paylaşımı"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Yönetimi ve Ürün Alanları",
+            "topic": "Ürün önceliklerinin kurumsal platformlarda teknik teslimatı"
+          }
+        ],
+        "kpis": [
+          "Dağıtım Sıklığı",
+          "Değişiklik Hata Oranı",
+          "Değişiklik Teslim Süresi",
+          "Otomasyon Test Kapsamı",
+          "Entegrasyon Hata Oranı",
+          "Hizmet Seviyesi Hedefi (SLO) Uyumu"
+        ],
+        "title_standard": [
+          {
+            "position": "15.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Yazılım Mühendisliği, Entegrasyon ve DevOps Müdürü",
+            "title_en": "Software Engineering, Integration and DevOps Manager"
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Yazılım Geliştirme Yöneticisi",
+            "title_en": "Enterprise Software Development Manager"
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/kidemli-yazilim-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yazılım Mühendisi",
+            "title_en": "Senior Software Engineer"
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/yazilim-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Yazılım Mühendisi",
+            "title_en": "Software Engineer"
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uygulama Geliştirme Uzmanı",
+            "title_en": "Application Development Specialist"
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Entegrasyon ve API Yönetimi Yöneticisi",
+            "title_en": "Integration and API Management Manager"
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Entegrasyon Mühendisi",
+            "title_en": "Senior Integration Engineer"
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/api-ve-entegrasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "API ve Entegrasyon Uzmanı",
+            "title_en": "API and Integration Specialist"
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/entegrasyon-analisti",
+            "level": "Analist",
+            "title_tr": "Entegrasyon Analisti",
+            "title_en": "Integration Analyst"
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "DevOps, SRE ve Yayın Yönetimi Yöneticisi",
+            "title_en": "DevOps, SRE and Release Management Manager"
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli DevOps Mühendisi",
+            "title_en": "Senior DevOps Engineer"
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Site Güvenilirlik Mühendisi",
+            "title_en": "Site Reliability Engineer"
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/yayin-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yayın Yönetimi Uzmanı",
+            "title_en": "Release Management Specialist"
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yazılım Kalitesi, Test ve Dokümantasyon Yöneticisi",
+            "title_en": "Software Quality, Testing and Documentation Manager"
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/kod-inceleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kod İnceleme Uzmanı",
+            "title_en": "Code Review Specialist"
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/statik-analiz-ve-hata-tespit-uzmani",
+            "level": "Uzman",
+            "title_tr": "Statik Analiz ve Hata Tespit Uzmanı",
+            "title_en": "Static Analysis and Defect Detection Specialist"
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/test-otomasyon-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Test Otomasyon Mühendisi",
+            "title_en": "Test Automation Engineer"
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/teknik-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Teknik Dokümantasyon Uzmanı",
+            "title_en": "Technical Documentation Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 9,
+            "max": 18
+          },
+          {
+            "model": "Standart",
+            "min": 18,
+            "max": 40
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 40,
+            "max": 56
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.05",
+            "title_tr": "Yazılım Mühendisliği, Entegrasyon ve DevOps Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme",
+            "title_tr": "Kurumsal Yazılım Geliştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/kidemli-yazilim-muhendisi",
+            "title_tr": "Kıdemli Yazılım Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/yazilim-muhendisi",
+            "title_tr": "Yazılım Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani",
+            "title_tr": "Uygulama Geliştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi",
+            "title_tr": "Entegrasyon ve API Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi",
+            "title_tr": "Kıdemli Entegrasyon Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/api-ve-entegrasyon-uzmani",
+            "title_tr": "API ve Entegrasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/entegrasyon-ve-api-yonetimi/entegrasyon-analisti",
+            "title_tr": "Entegrasyon Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi",
+            "title_tr": "DevOps, SRE ve Yayın Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi",
+            "title_tr": "Kıdemli DevOps Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi",
+            "title_tr": "Site Güvenilirlik Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/devops-sre-ve-yayin-yonetimi/yayin-yonetimi-uzmani",
+            "title_tr": "Yayın Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon",
+            "title_tr": "Yazılım Kalitesi, Test ve Dokümantasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/kod-inceleme-uzmani",
+            "title_tr": "Kod İnceleme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/statik-analiz-ve-hata-tespit-uzmani",
+            "title_tr": "Statik Analiz ve Hata Tespit Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/test-otomasyon-muhendisi",
+            "title_tr": "Test Otomasyon Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.05/yazilim-kalitesi-test-ve-dokumantasyon/teknik-dokumantasyon-uzmani",
+            "title_tr": "Teknik Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "15.08",
+        "name_tr": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+        "responsibilities": [
+          "Kullanıcı olay ve taleplerini tek temas noktasından yönetmek",
+          "İlk seviye çözüm, yönlendirme ve kullanıcı iletişimini sağlamak",
+          "Kritik olay, problem ve değişiklik süreçlerini yönetmek",
+          "Kök neden, bilinen hata ve kalıcı çözüm kayıtlarını izlemek",
+          "BT varlık envanterini, lisans yaşam döngüsünü ve CMDB doğruluğunu yönetmek",
+          "SLA, OLA, hizmet kataloğu ve tedarikçi hizmet performansını izlemek"
+        ],
+        "authorities": [
+          "Olay önceliklendirme ve eskalasyon kurallarını belirler",
+          "Kritik olay ilan eder ve olay yönetim sürecini başlatır",
+          "Değişiklik kurulu gündemini, değişiklik takvimini ve risk sınıflandırmasını belirler",
+          "Hizmet kataloğu, SLA ve OLA taslaklarını hazırlar ve onaya sunar",
+          "Lisans uyumsuzluğu tespit edilen yazılımın kullanımını kısıtlar"
+        ],
+        "collaborations": [
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Müşteri Destek ve Servis Masası",
+            "topic": "Dış müşteri desteği ile çalışan BT desteği arasındaki talep yönlendirmesi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Altyapı olayları, problem kayıtları ve CMDB güncellemeleri"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Ağ, İletişim ve Dijital İşyeri",
+            "topic": "Uç nokta talepleri, cihaz envanteri ve yerinde destek"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Lisans ve BT tedarikçi sözleşmelerinin hizmet performansı"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "BT, Siber Güvenlik ve Veri Denetimi",
+            "topic": "BT kontrol kanıtları ve denetim bulgu aksiyonları"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+            "topic": "Operasyon süreçlerini destekleyen sistemlerin hizmet seviyesi takibi"
+          }
+        ],
+        "kpis": [
+          "İlk Temasta Çözüm Oranı",
+          "SLA Uyum Oranı",
+          "Ortalama Onarım Süresi (MTTR)",
+          "Kullanıcı Memnuniyet Skoru",
+          "CMDB ve Varlık Envanteri Doğruluk Oranı",
+          "Değişiklik Başarı Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "15.08",
+            "level": "Birim Müdürü",
+            "title_tr": "BT Hizmet Yönetimi ve Kullanıcı Destek Müdürü",
+            "title_en": "IT Service Management and User Support Manager"
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Servis Masası ve Kullanıcı Destek Yöneticisi",
+            "title_en": "Service Desk and User Support Manager"
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/kidemli-bt-destek-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BT Destek Uzmanı",
+            "title_en": "Senior IT Support Specialist"
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/bt-destek-uzmani",
+            "level": "Uzman",
+            "title_tr": "BT Destek Uzmanı",
+            "title_en": "IT Support Specialist"
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/servis-masasi-temsilcisi",
+            "level": "Uzman",
+            "title_tr": "Servis Masası Temsilcisi",
+            "title_en": "Service Desk Representative"
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Olay, Problem ve Değişiklik Yönetimi Yöneticisi",
+            "title_en": "Incident, Problem and Change Management Manager"
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/kidemli-bt-hizmet-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BT Hizmet Yönetimi Uzmanı",
+            "title_en": "Senior IT Service Management Specialist"
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/olay-ve-problem-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Olay ve Problem Yönetimi Uzmanı",
+            "title_en": "Incident and Problem Management Specialist"
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/degisiklik-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Değişiklik Yönetimi Uzmanı",
+            "title_en": "Change Management Specialist"
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi Yöneticisi",
+            "title_en": "Asset, Configuration and Service Level Management Manager"
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/kidemli-bt-varlik-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BT Varlık Yönetimi Uzmanı",
+            "title_en": "Senior IT Asset Management Specialist"
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/konfigurasyon-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Konfigürasyon Yönetimi Uzmanı",
+            "title_en": "Configuration Management Specialist"
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/hizmet-seviyesi-analisti",
+            "level": "Analist",
+            "title_tr": "Hizmet Seviyesi Analisti",
+            "title_en": "Service Level Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 39
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 39,
+            "max": 55
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "15.08",
+            "title_tr": "BT Hizmet Yönetimi ve Kullanıcı Destek Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek",
+            "title_tr": "Servis Masası ve Kullanıcı Destek Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/kidemli-bt-destek-uzmani",
+            "title_tr": "Kıdemli BT Destek Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/bt-destek-uzmani",
+            "title_tr": "BT Destek Uzmanı",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "15.08/servis-masasi-ve-kullanici-destek/servis-masasi-temsilcisi",
+            "title_tr": "Servis Masası Temsilcisi",
+            "min": 3,
+            "max": 12
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi",
+            "title_tr": "Olay, Problem ve Değişiklik Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/kidemli-bt-hizmet-yonetimi-uzmani",
+            "title_tr": "Kıdemli BT Hizmet Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/olay-ve-problem-yonetimi-uzmani",
+            "title_tr": "Olay ve Problem Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.08/olay-problem-ve-degisiklik-yonetimi/degisiklik-yonetimi-uzmani",
+            "title_tr": "Değişiklik Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi",
+            "title_tr": "Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/kidemli-bt-varlik-yonetimi-uzmani",
+            "title_tr": "Kıdemli BT Varlık Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/konfigurasyon-yonetimi-uzmani",
+            "title_tr": "Konfigürasyon Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "15.08/varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi/hizmet-seviyesi-analisti",
+            "title_tr": "Hizmet Seviyesi Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

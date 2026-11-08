@@ -1,0 +1,7 @@
+{
+ "name": "Frontend Tasarımı",
+ "desc": "Yeni bir arayüz kurarken ya da mevcut olanı yeniden biçimlendirirken şablon gibi görünmeyen, konuya özgü palet, tipografi ve yerleşim seçimleri yapmayı yönlendirir.",
+ "trigger": "Yeni bir arayüz oluştururken ya da mevcut bir arayüzü yeniden biçimlendirirken kendine özgü, bilinçli görsel tasarım için rehberlik. Estetik yön, tipografi ve şablon varsayılanı gibi okunmayan seçimler yapma konusunda yardımcı olur.",
+ "scenario": "Yeni bir sayfa ya da arayüz tasarlanırken veya mevcut bir arayüzün görsel kimliği yenilenirken.",
+ "example": "Bir seramik atölyesinin sitesi için önce 4–6 renkli palet, yazı tipleri ve ASCII tel kafesle bir plan yazılır, sıradan yapay zekâ kalıplarına benzeyen kısımlar revize edilir, sonra kod yazılır."
+}

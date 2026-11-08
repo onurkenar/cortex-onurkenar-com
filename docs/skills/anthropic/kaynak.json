@@ -1,0 +1,559 @@
+{
+ "repo": "anthropics/skills",
+ "url": "https://github.com/anthropics/skills",
+ "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+ "date": "2026-10-28",
+ "fetched": "2026-11-01",
+ "skills": {
+  "academy-guide": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md"
+   ],
+   "binaries": []
+  },
+  "algorithmic-art": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "templates/generator_template.js",
+    "templates/viewer.html"
+   ],
+   "binaries": []
+  },
+  "brand-guidelines": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md"
+   ],
+   "binaries": []
+  },
+  "canvas-design": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "canvas-fonts/ArsenalSC-OFL.txt",
+    "canvas-fonts/BigShoulders-OFL.txt",
+    "canvas-fonts/Boldonse-OFL.txt",
+    "canvas-fonts/BricolageGrotesque-OFL.txt",
+    "canvas-fonts/CrimsonPro-OFL.txt",
+    "canvas-fonts/DMMono-OFL.txt",
+    "canvas-fonts/EricaOne-OFL.txt",
+    "canvas-fonts/GeistMono-OFL.txt",
+    "canvas-fonts/Gloock-OFL.txt",
+    "canvas-fonts/IBMPlexMono-OFL.txt",
+    "canvas-fonts/InstrumentSans-OFL.txt",
+    "canvas-fonts/Italiana-OFL.txt",
+    "canvas-fonts/JetBrainsMono-OFL.txt",
+    "canvas-fonts/Jura-OFL.txt",
+    "canvas-fonts/LibreBaskerville-OFL.txt",
+    "canvas-fonts/Lora-OFL.txt",
+    "canvas-fonts/NationalPark-OFL.txt",
+    "canvas-fonts/NothingYouCouldDo-OFL.txt",
+    "canvas-fonts/Outfit-OFL.txt",
+    "canvas-fonts/PixelifySans-OFL.txt",
+    "canvas-fonts/PoiretOne-OFL.txt",
+    "canvas-fonts/RedHatMono-OFL.txt",
+    "canvas-fonts/Silkscreen-OFL.txt",
+    "canvas-fonts/SmoochSans-OFL.txt",
+    "canvas-fonts/Tektur-OFL.txt",
+    "canvas-fonts/WorkSans-OFL.txt",
+    "canvas-fonts/YoungSerif-OFL.txt"
+   ],
+   "binaries": [
+    [
+     "canvas-fonts/ArsenalSC-Regular.ttf",
+     165848
+    ],
+    [
+     "canvas-fonts/BigShoulders-Bold.ttf",
+     94528
+    ],
+    [
+     "canvas-fonts/BigShoulders-Regular.ttf",
+     94396
+    ],
+    [
+     "canvas-fonts/Boldonse-Regular.ttf",
+     77168
+    ],
+    [
+     "canvas-fonts/BricolageGrotesque-Bold.ttf",
+     90952
+    ],
+    [
+     "canvas-fonts/BricolageGrotesque-Regular.ttf",
+     90920
+    ],
+    [
+     "canvas-fonts/CrimsonPro-Bold.ttf",
+     107352
+    ],
+    [
+     "canvas-fonts/CrimsonPro-Italic.ttf",
+     108828
+    ],
+    [
+     "canvas-fonts/CrimsonPro-Regular.ttf",
+     106696
+    ],
+    [
+     "canvas-fonts/DMMono-Regular.ttf",
+     48852
+    ],
+    [
+     "canvas-fonts/EricaOne-Regular.ttf",
+     24872
+    ],
+    [
+     "canvas-fonts/GeistMono-Bold.ttf",
+     78304
+    ],
+    [
+     "canvas-fonts/GeistMono-Regular.ttf",
+     78232
+    ],
+    [
+     "canvas-fonts/Gloock-Regular.ttf",
+     95156
+    ],
+    [
+     "canvas-fonts/IBMPlexMono-Bold.ttf",
+     136008
+    ],
+    [
+     "canvas-fonts/IBMPlexMono-Regular.ttf",
+     133796
+    ],
+    [
+     "canvas-fonts/IBMPlexSerif-Bold.ttf",
+     161000
+    ],
+    [
+     "canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+     169840
+    ],
+    [
+     "canvas-fonts/IBMPlexSerif-Italic.ttf",
+     170004
+    ],
+    [
+     "canvas-fonts/IBMPlexSerif-Regular.ttf",
+     160380
+    ],
+    [
+     "canvas-fonts/InstrumentSans-Bold.ttf",
+     68084
+    ],
+    [
+     "canvas-fonts/InstrumentSans-BoldItalic.ttf",
+     70004
+    ],
+    [
+     "canvas-fonts/InstrumentSans-Italic.ttf",
+     69900
+    ],
+    [
+     "canvas-fonts/InstrumentSans-Regular.ttf",
+     68028
+    ],
+    [
+     "canvas-fonts/InstrumentSerif-Italic.ttf",
+     70868
+    ],
+    [
+     "canvas-fonts/InstrumentSerif-Regular.ttf",
+     69312
+    ],
+    [
+     "canvas-fonts/Italiana-Regular.ttf",
+     27184
+    ],
+    [
+     "canvas-fonts/JetBrainsMono-Bold.ttf",
+     114828
+    ],
+    [
+     "canvas-fonts/JetBrainsMono-Regular.ttf",
+     114904
+    ],
+    [
+     "canvas-fonts/Jura-Light.ttf",
+     154308
+    ],
+    [
+     "canvas-fonts/Jura-Medium.ttf",
+     154488
+    ],
+    [
+     "canvas-fonts/LibreBaskerville-Regular.ttf",
+     147584
+    ],
+    [
+     "canvas-fonts/Lora-Bold.ttf",
+     133828
+    ],
+    [
+     "canvas-fonts/Lora-BoldItalic.ttf",
+     140332
+    ],
+    [
+     "canvas-fonts/Lora-Italic.ttf",
+     139328
+    ],
+    [
+     "canvas-fonts/Lora-Regular.ttf",
+     133888
+    ],
+    [
+     "canvas-fonts/NationalPark-Bold.ttf",
+     79208
+    ],
+    [
+     "canvas-fonts/NationalPark-Regular.ttf",
+     76424
+    ],
+    [
+     "canvas-fonts/NothingYouCouldDo-Regular.ttf",
+     32020
+    ],
+    [
+     "canvas-fonts/Outfit-Bold.ttf",
+     55392
+    ],
+    [
+     "canvas-fonts/Outfit-Regular.ttf",
+     54912
+    ],
+    [
+     "canvas-fonts/PixelifySans-Medium.ttf",
+     51072
+    ],
+    [
+     "canvas-fonts/PoiretOne-Regular.ttf",
+     45244
+    ],
+    [
+     "canvas-fonts/RedHatMono-Bold.ttf",
+     34420
+    ],
+    [
+     "canvas-fonts/RedHatMono-Regular.ttf",
+     34488
+    ],
+    [
+     "canvas-fonts/Silkscreen-Regular.ttf",
+     31960
+    ],
+    [
+     "canvas-fonts/SmoochSans-Medium.ttf",
+     59704
+    ],
+    [
+     "canvas-fonts/Tektur-Medium.ttf",
+     76248
+    ],
+    [
+     "canvas-fonts/Tektur-Regular.ttf",
+     75604
+    ],
+    [
+     "canvas-fonts/WorkSans-Bold.ttf",
+     191304
+    ],
+    [
+     "canvas-fonts/WorkSans-BoldItalic.ttf",
+     175772
+    ],
+    [
+     "canvas-fonts/WorkSans-Italic.ttf",
+     174280
+    ],
+    [
+     "canvas-fonts/WorkSans-Regular.ttf",
+     188916
+    ],
+    [
+     "canvas-fonts/YoungSerif-Regular.ttf",
+     105136
+    ]
+   ]
+  },
+  "claude-api": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "csharp/claude-api/README.md",
+    "csharp/claude-api/batches.md",
+    "csharp/claude-api/files-api.md",
+    "csharp/claude-api/streaming.md",
+    "csharp/claude-api/tool-use.md",
+    "curl/examples.md",
+    "curl/managed-agents.md",
+    "go/claude-api/README.md",
+    "go/claude-api/files-api.md",
+    "go/claude-api/streaming.md",
+    "go/claude-api/tool-use.md",
+    "go/managed-agents/README.md",
+    "java/claude-api/README.md",
+    "java/claude-api/files-api.md",
+    "java/claude-api/streaming.md",
+    "java/claude-api/tool-use.md",
+    "java/managed-agents/README.md",
+    "php/claude-api/README.md",
+    "php/claude-api/batches.md",
+    "php/claude-api/files-api.md",
+    "php/claude-api/streaming.md",
+    "php/claude-api/tool-use.md",
+    "php/managed-agents/README.md",
+    "python/claude-api/README.md",
+    "python/claude-api/batches.md",
+    "python/claude-api/files-api.md",
+    "python/claude-api/sdk-upgrade.md",
+    "python/claude-api/streaming.md",
+    "python/claude-api/tool-use.md",
+    "python/managed-agents/README.md",
+    "ruby/claude-api/README.md",
+    "ruby/claude-api/streaming.md",
+    "ruby/claude-api/tool-use.md",
+    "ruby/managed-agents/README.md",
+    "shared/admin-api.md",
+    "shared/agent-design.md",
+    "shared/anthropic-cli.md",
+    "shared/claude-platform-on-aws.md",
+    "shared/cost-optimization.md",
+    "shared/error-codes.md",
+    "shared/evals/build-eval.md",
+    "shared/evals/cost-hillclimb.md",
+    "shared/evals/eval-audit.md",
+    "shared/evals/eval-hillclimb.md",
+    "shared/evals/report/SCHEMA.md",
+    "shared/evals/report/build-report-lite.mjs",
+    "shared/evals/report/runner-scaffold.mjs",
+    "shared/live-sources.md",
+    "shared/managed-agents-api-reference.md",
+    "shared/managed-agents-client-patterns.md",
+    "shared/managed-agents-core.md",
+    "shared/managed-agents-environments.md",
+    "shared/managed-agents-events.md",
+    "shared/managed-agents-memory.md",
+    "shared/managed-agents-multiagent.md",
+    "shared/managed-agents-onboarding-from-quickstart.md",
+    "shared/managed-agents-onboarding-from-url.md",
+    "shared/managed-agents-onboarding.md",
+    "shared/managed-agents-outcomes.md",
+    "shared/managed-agents-overview.md",
+    "shared/managed-agents-quickstarts/bug-hunter.md",
+    "shared/managed-agents-quickstarts/contract-tracker.md",
+    "shared/managed-agents-quickstarts/data-analyst.md",
+    "shared/managed-agents-quickstarts/deep-researcher.md",
+    "shared/managed-agents-quickstarts/explainer-video-maker.md",
+    "shared/managed-agents-quickstarts/field-monitor.md",
+    "shared/managed-agents-quickstarts/incident-commander.md",
+    "shared/managed-agents-quickstarts/performance-tuner.md",
+    "shared/managed-agents-quickstarts/sprint-retro-facilitator.md",
+    "shared/managed-agents-quickstarts/structured-extractor.md",
+    "shared/managed-agents-quickstarts/support-agent.md",
+    "shared/managed-agents-quickstarts/support-to-eng-escalator.md",
+    "shared/managed-agents-quickstarts/watchlist-scanner.md",
+    "shared/managed-agents-scheduled-deployments.md",
+    "shared/managed-agents-self-hosted-sandboxes.md",
+    "shared/managed-agents-tools.md",
+    "shared/managed-agents-webhooks.md",
+    "shared/model-migration.md",
+    "shared/models.md",
+    "shared/platform-availability.md",
+    "shared/preserved-thinking-migration.md",
+    "shared/preserved-thinking-migration/causes.md",
+    "shared/preserved-thinking-migration/drop_block_probe.py",
+    "shared/preserved-thinking-migration/prefix_diff.py",
+    "shared/prompt-audit.md",
+    "shared/prompt-caching.md",
+    "shared/token-counting.md",
+    "shared/tool-use-concepts.md",
+    "typescript/claude-api/README.md",
+    "typescript/claude-api/batches.md",
+    "typescript/claude-api/files-api.md",
+    "typescript/claude-api/streaming.md",
+    "typescript/claude-api/tool-use.md",
+    "typescript/managed-agents/README.md"
+   ],
+   "binaries": []
+  },
+  "discernment-nudge": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md"
+   ],
+   "binaries": []
+  },
+  "doc-coauthoring": {
+   "license": "Apache-2.0",
+   "licLine": null,
+   "files": [
+    "SKILL.md"
+   ],
+   "binaries": []
+  },
+  "docx": {
+   "license": "Proprietary",
+   "licLine": "Proprietary. LICENSE.txt has complete terms"
+  },
+  "frontend-design": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md"
+   ],
+   "binaries": []
+  },
+  "internal-comms": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "examples/3p-updates.md",
+    "examples/company-newsletter.md",
+    "examples/faq-answers.md",
+    "examples/general-comms.md"
+   ],
+   "binaries": []
+  },
+  "mcp-builder": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "reference/evaluation.md",
+    "reference/mcp_best_practices.md",
+    "reference/node_mcp_server.md",
+    "reference/node_mcp_server_v2.md",
+    "reference/python_mcp_server.md",
+    "scripts/connections.py",
+    "scripts/evaluation.py",
+    "scripts/example_evaluation.xml",
+    "scripts/requirements.txt"
+   ],
+   "binaries": []
+  },
+  "pdf": {
+   "license": "Proprietary",
+   "licLine": "Proprietary. LICENSE.txt has complete terms"
+  },
+  "pptx": {
+   "license": "Proprietary",
+   "licLine": "Proprietary. LICENSE.txt has complete terms"
+  },
+  "skill-creator": {
+   "license": "Apache-2.0",
+   "licLine": null,
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "agents/analyzer.md",
+    "agents/comparator.md",
+    "agents/grader.md",
+    "assets/eval_review.html",
+    "eval-viewer/generate_review.py",
+    "eval-viewer/viewer.html",
+    "references/schemas.md",
+    "scripts/__init__.py",
+    "scripts/aggregate_benchmark.py",
+    "scripts/generate_report.py",
+    "scripts/improve_description.py",
+    "scripts/package_skill.py",
+    "scripts/quick_validate.py",
+    "scripts/run_eval.py",
+    "scripts/run_loop.py",
+    "scripts/utils.py"
+   ],
+   "binaries": []
+  },
+  "slack-gif-creator": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "core/easing.py",
+    "core/frame_composer.py",
+    "core/gif_builder.py",
+    "core/validators.py",
+    "requirements.txt"
+   ],
+   "binaries": []
+  },
+  "theme-factory": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "themes/arctic-frost.md",
+    "themes/botanical-garden.md",
+    "themes/desert-rose.md",
+    "themes/forest-canopy.md",
+    "themes/golden-hour.md",
+    "themes/midnight-galaxy.md",
+    "themes/modern-minimalist.md",
+    "themes/ocean-depths.md",
+    "themes/sunset-boulevard.md",
+    "themes/tech-innovation.md"
+   ],
+   "binaries": [
+    [
+     "theme-showcase.pdf",
+     124310
+    ]
+   ]
+  },
+  "web-artifacts-builder": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "scripts/bundle-artifact.sh",
+    "scripts/init-artifact.sh"
+   ],
+   "binaries": [
+    [
+     "scripts/shadcn-components.tar.gz",
+     19967
+    ]
+   ]
+  },
+  "webapp-testing": {
+   "license": "Apache-2.0",
+   "licLine": "Complete terms in LICENSE.txt",
+   "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "examples/console_logging.py",
+    "examples/element_discovery.py",
+    "examples/static_html_automation.py",
+    "scripts/with_server.py"
+   ],
+   "binaries": []
+  },
+  "xlsx": {
+   "license": "Proprietary",
+   "licLine": "Proprietary. LICENSE.txt has complete terms"
+  }
+ }
+}

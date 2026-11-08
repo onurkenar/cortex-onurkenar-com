@@ -1,0 +1,7 @@
+{
+ "name": "Algoritmik Sanat",
+ "desc": "p5.js ile tohumlu rastgelelik ve etkileşimli parametre keşfi kullanarak özgün algoritmik sanat üretir: önce bir algoritmik felsefe, sonra kendi kendine yeten bir HTML görüntüleyici yazar.",
+ "trigger": "Tohumlu rastgelelik ve etkileşimli parametre keşfiyle p5.js kullanarak algoritmik sanat oluşturma. Kullanıcılar kodla sanat oluşturmayı, üretken sanatı, algoritmik sanatı, akış alanlarını ya da parçacık sistemlerini istediğinde bunu kullan. Telif hakkı ihlallerinden kaçınmak için mevcut sanatçıların eserlerini kopyalamak yerine özgün algoritmik sanat oluştur.",
+ "scenario": "Kodla üretken sanat, akış alanı, parçacık sistemi ya da algoritmik bir görsel istendiğinde.",
+ "example": "Önce 'Organik Türbülans' gibi adlandırılmış bir algoritmik felsefe .md dosyası yazılır, ardından şablondan türeyen, tohum gezinmeli ve parametre kaydırıcılı tek bir p5.js HTML artifact'i üretilir."
+}

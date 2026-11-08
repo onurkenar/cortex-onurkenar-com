@@ -1,0 +1,2764 @@
+{
+  "dokuman": {
+    "baslik": "Rasyo Holding Çalışma Grupları Organizasyon ve Yönetim Modeli",
+    "surum": "1.0.0",
+    "olusturma_tarihi": "2026-10-30",
+    "dil": "tr-TR",
+    "nitelik": "Öneri / henüz kurulmamış grup şablonları",
+    "toplam_sablon": 20,
+    "referans_komite_sayisi": 24,
+    "referans_kurul_turu_sayisi": 9
+  },
+  "yonetisim": {
+    "temel_ilke": "Çalışma grubu belirli teslimatı ve kapanış tarihi olan geçici, çapraz fonksiyonlu uygulama ekibidir",
+    "ayrim": {
+      "kurul": "Stratejik veya hukuki yönetsel karar ve gözetim",
+      "komite": "Sürekli/tekrarlayan değerlendirme, koordinasyon ve performans takibi",
+      "calisma_grubu": "Zaman sınırlı uygulama, analiz, pilot ve ölçülebilir teslimat"
+    },
+    "kurulus": "Sponsorun yazılı kapsam ve kaynak onayı olmadan aktif grup oluşturulmaz",
+    "uyari": "Şablonlar otomatik organ oluşturmaz; şirket bazlı yetki, temsil, KVKK ve iş hukuku kuralları saklıdır",
+    "oncelik": "8 pilot komiteden veya yetkili kurullardan doğan taleplerden başlatılması önerilir"
+  },
+  "grup_yasam_dongusu": [
+    {
+      "kod": "TALEP",
+      "ad": "İhtiyacın kaydı",
+      "cikis_kriteri": "Talep sahibi ve amaç net"
+    },
+    {
+      "kod": "ON_DEGERLENDIRME",
+      "ad": "İlgili komite/sponsor değerlendirmesi",
+      "cikis_kriteri": "Sahiplik, öncelik ve yetki doğru"
+    },
+    {
+      "kod": "CHARTER_ONAY",
+      "ad": "Grup kuruluş belgesi onayı",
+      "cikis_kriteri": "Kapsam, kaynak, tarih, sponsor, ekip atandı"
+    },
+    {
+      "kod": "PLAN",
+      "ad": "İş paketleri ve KPI baz değeri",
+      "cikis_kriteri": "Onaylanmış çalışma planı"
+    },
+    {
+      "kod": "UYGULAMA",
+      "ad": "Üretim, test ve ara kontrol",
+      "cikis_kriteri": "Teslimat kanıtları ve risk izleri"
+    },
+    {
+      "kod": "KABUL",
+      "ad": "Sponsor ve süreç sahibi onayı",
+      "cikis_kriteri": "Kabul kriterlerinin sağlanması"
+    },
+    {
+      "kod": "DEVIR",
+      "ad": "Kalıcı fonksiyona devretme",
+      "cikis_kriteri": "Sahiplik ve eğitim tamam"
+    },
+    {
+      "kod": "KAPANIS",
+      "ad": "Grubu kapatma",
+      "cikis_kriteri": "Kapanış raporu, arşiv ve yetkilerin sonlandırılması"
+    }
+  ],
+  "standart_isleyis": {
+    "grup_kurulus_belgesi_zorunlu_alanlar": [
+      "Grup adı",
+      "Şirket kapsamı",
+      "Amaç",
+      "Problem",
+      "Sponsor",
+      "Lider",
+      "Üyeler",
+      "İlgili komite/kurul",
+      "Başlangıç-bitiş",
+      "Kapsam dışı",
+      "Bütçe ve kaynak",
+      "Teslimatlar",
+      "Kabul kriterleri",
+      "KPI baz değerleri",
+      "Riskler",
+      "Onaylayan"
+    ],
+    "roller": {
+      "sponsor": "Öncelik ve kaynak desteği verir, kapsam ve teslimatı onaylar",
+      "lider": "Günlük koordinasyon, kapsam, raporlama ve sonuçtan sorumlu",
+      "uye": "Atanan iş paketini üretir ve kanıt sağlar",
+      "konu_uzmani": "Görüş ve kontrol sağlar; otomatik oy/imza yetkisi yok",
+      "surec_sahibi": "Teslimatı kabul ederek kalıcı işletimini üstlenir"
+    },
+    "eskalasyon": [
+      "Operasyonel sorun: grup lideri → sponsor",
+      "Komiteler arası çatışma: sponsor → ilgili komite başkanları",
+      "Kaynak/öncelik ihtilafı: sponsor → KRL-03 veya KRL-04",
+      "Saklı hukuki karar: ilgili şirketin yetkili organı",
+      "Bilgi güvenliği/KVKK riski: ilgili kontrol fonksiyonu ve KMT-22"
+    ],
+    "karar_kaydi": [
+      "Karar no",
+      "Tarih",
+      "Gerekçe",
+      "Alternatifler",
+      "Yetki dayanağı",
+      "Sorumlu",
+      "Termin",
+      "Onay kanıtı"
+    ]
+  },
+  "calisma_gruplari": [
+    {
+      "kod": "CLG-01",
+      "ad": "Stratejik Plan ve OKR Uygulama Çalışma Grubu",
+      "kategori": "Strateji ve Yönetişim",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03",
+        "KRL-05"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-01",
+        "KMT-06"
+      ],
+      "departman_kodlari": [
+        "01",
+        "03",
+        "07",
+        "09",
+        "12"
+      ],
+      "amac": "Şirket bazlı stratejik hedefleri yıllık OKR ve inisiyatif portföyüne dönüştürmek",
+      "organizasyon": {
+        "sponsor_unvani": "Strateji ve Kurumsal Gelişim Direktörü",
+        "calisma_grubu_lideri_unvani": "Strateji/PMO Müdürü",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Strateji haritası",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Yıllık OKR ağacı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Sorumlu ve bütçe eşlemesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Onay öneri dosyası",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "OKR kapsama oranı",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Zamanında teslimat",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Strateji haritası",
+        "Yıllık OKR ağacı",
+        "Sorumlu ve bütçe eşlemesi",
+        "Onay öneri dosyası"
+      ]
+    },
+    {
+      "kod": "CLG-02",
+      "ad": "Şirketler Arası Sinerji ve Ortak Hizmetler Çalışma Grubu",
+      "kategori": "Strateji ve Yönetişim",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-05",
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-01",
+        "KMT-08",
+        "KMT-13"
+      ],
+      "departman_kodlari": [
+        "01",
+        "03",
+        "07",
+        "12",
+        "20"
+      ],
+      "amac": "Grup şirketleri arasındaki tekrar eden işlevleri ve çapraz fırsatları belirlemek",
+      "organizasyon": {
+        "sponsor_unvani": "Grup Şirketleri Koordinasyon Kurulu temsilcisi",
+        "calisma_grubu_lideri_unvani": "Kurumsal Gelişim Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Sinerji fırsat listesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Ortak hizmet fizibilitesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot hizmet modeli",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Tasarruf doğrulaması",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Doğrulanan fırsat sayısı",
+          "hedef_onerisi": "≥ 5",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Pilot uygulanma oranı",
+          "hedef_onerisi": "≥ %80",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Sinerji fırsat listesi",
+        "Ortak hizmet fizibilitesi",
+        "Pilot hizmet modeli",
+        "Tasarruf doğrulaması"
+      ]
+    },
+    {
+      "kod": "CLG-03",
+      "ad": "Yatırım Fizibilite ve İş Gerekçesi Çalışma Grubu",
+      "kategori": "Strateji ve Yönetişim",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-06"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-02",
+        "KMT-06",
+        "KMT-20"
+      ],
+      "departman_kodlari": [
+        "01",
+        "03",
+        "05",
+        "07",
+        "18"
+      ],
+      "amac": "Seçilmiş yatırım talebinin finansal, hukuki ve operasyonel uygulanabilirliğini belgelemek",
+      "organizasyon": {
+        "sponsor_unvani": "Yatırım ve Proje Değerlendirme Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "Finansal Analiz Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 60,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "İş gerekçesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Senaryo analizi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Risk analizi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Üst onay sunumu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Zamanında fizibilite",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Varsayım kanıt tamlığı",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "İş gerekçesi",
+        "Senaryo analizi",
+        "Risk analizi",
+        "Üst onay sunumu"
+      ]
+    },
+    {
+      "kod": "CLG-04",
+      "ad": "Bütçe Konsolidasyon ve Tahmin İyileştirme Çalışma Grubu",
+      "kategori": "Finans ve Kaynak",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-06",
+        "KMT-08"
+      ],
+      "departman_kodlari": [
+        "02",
+        "03",
+        "08",
+        "09",
+        "12"
+      ],
+      "amac": "Çok şirketli bütçe ve forecast standartlarını geliştirmek",
+      "organizasyon": {
+        "sponsor_unvani": "CFO",
+        "calisma_grubu_lideri_unvani": "FP&A Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Bütçe şablonu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Veri sözlüğü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Konsolidasyon modeli",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Sapma dashboardu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Veri kapsamı",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Forecast hata azalması",
+          "hedef_onerisi": "Baz döneme göre iyileşme",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Bütçe şablonu",
+        "Veri sözlüğü",
+        "Konsolidasyon modeli",
+        "Sapma dashboardu"
+      ]
+    },
+    {
+      "kod": "CLG-05",
+      "ad": "Satın Alma Standardizasyonu Çalışma Grubu",
+      "kategori": "Finans ve Kaynak",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03",
+        "KRL-05"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-07",
+        "KMT-08"
+      ],
+      "departman_kodlari": [
+        "03",
+        "05",
+        "13",
+        "14",
+        "20"
+      ],
+      "amac": "Tedarikçi ve satın alma politikalarını ortaklaştırmak",
+      "organizasyon": {
+        "sponsor_unvani": "Satın Alma ve Tedarikçi Değerlendirme Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "Satın Alma Süreç Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Onay matrisi taslağı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Tedarikçi puan kartı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Teklif karşılaştırma standardı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot satın alma raporu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Standart şablon kullanımı",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Pilot tasarrufu",
+          "hedef_onerisi": "Finans doğrulamalı",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Onay matrisi taslağı",
+        "Tedarikçi puan kartı",
+        "Teklif karşılaştırma standardı",
+        "Pilot satın alma raporu"
+      ]
+    },
+    {
+      "kod": "CLG-06",
+      "ad": "Organizasyon, Unvan ve Yetkinlik Matrisi Çalışma Grubu",
+      "kategori": "İnsan ve Organizasyon",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-09",
+        "KMT-10",
+        "KMT-11"
+      ],
+      "departman_kodlari": [
+        "01",
+        "04",
+        "05",
+        "23"
+      ],
+      "amac": "Departman görevleri, pozisyon titleları, roller ve yetkinlikleri tutarlı hale getirmek",
+      "organizasyon": {
+        "sponsor_unvani": "CHRO",
+        "calisma_grubu_lideri_unvani": "Organizasyon Geliştirme Müdürü",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Pozisyon envanteri",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Unvan standardı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Yetkinlik matrisi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "RACI taslağı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Pozisyon kapsama",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Onaylı görev tanımı",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Pozisyon envanteri",
+        "Unvan standardı",
+        "Yetkinlik matrisi",
+        "RACI taslağı"
+      ]
+    },
+    {
+      "kod": "CLG-07",
+      "ad": "İşe Alım ve Onboarding Deneyimi Çalışma Grubu",
+      "kategori": "İnsan ve Organizasyon",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-04"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-09",
+        "KMT-12"
+      ],
+      "departman_kodlari": [
+        "04",
+        "12",
+        "15",
+        "20"
+      ],
+      "amac": "İşe giriş süreçlerini ölçülebilir ve dijital hale getirmek",
+      "organizasyon": {
+        "sponsor_unvani": "İnsan Kaynakları ve Organizasyon Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "İşe Alım ve Çalışan Deneyimi Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Aday akış haritası",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Onboarding checklist",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "İlk 30/60/90 gün planı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot rapor",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Onboarding tamamlama",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "İlk gün hazır olma",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Aday akış haritası",
+        "Onboarding checklist",
+        "İlk 30/60/90 gün planı",
+        "Pilot rapor"
+      ]
+    },
+    {
+      "kod": "CLG-08",
+      "ad": "Performans ve Kariyer Sistemi Çalışma Grubu",
+      "kategori": "İnsan ve Organizasyon",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-09",
+        "KMT-10",
+        "KMT-11"
+      ],
+      "departman_kodlari": [
+        "01",
+        "03",
+        "04",
+        "15"
+      ],
+      "amac": "Hedef ve yetkinlik temelli performans ve kariyer süreçlerini tasarlamak",
+      "organizasyon": {
+        "sponsor_unvani": "CHRO",
+        "calisma_grubu_lideri_unvani": "Yetenek Yönetimi Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Performans döngüsü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Yetkinlik modeli",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kalibrasyon rehberi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot değerlendirme",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Pilot kapsam",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Değerlendirme tamamlama",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Performans döngüsü",
+        "Yetkinlik modeli",
+        "Kalibrasyon rehberi",
+        "Pilot değerlendirme"
+      ]
+    },
+    {
+      "kod": "CLG-09",
+      "ad": "Süreç Haritalama ve Yalın Operasyon Çalışma Grubu",
+      "kategori": "Operasyon ve Kalite",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-04"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-13",
+        "KMT-14",
+        "KMT-08"
+      ],
+      "departman_kodlari": [
+        "11",
+        "12",
+        "14",
+        "15"
+      ],
+      "amac": "Öncelikli uçtan uca süreçlerde darboğaz ve tekrar işi azaltmak",
+      "organizasyon": {
+        "sponsor_unvani": "COO",
+        "calisma_grubu_lideri_unvani": "Süreç İyileştirme Müdürü",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "As-is/to-be süreç haritaları",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kök neden analizi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "İyileştirme backlogu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot sonucu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Çevrim süresi düşüşü",
+          "hedef_onerisi": "Baz döneme göre ≥ %10",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Süreç dokümantasyonu",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "As-is/to-be süreç haritaları",
+        "Kök neden analizi",
+        "İyileştirme backlogu",
+        "Pilot sonucu"
+      ]
+    },
+    {
+      "kod": "CLG-10",
+      "ad": "Hizmet Kalitesi ve SLA İyileştirme Çalışma Grubu",
+      "kategori": "Operasyon ve Kalite",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-04"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-13",
+        "KMT-14",
+        "KMT-19"
+      ],
+      "departman_kodlari": [
+        "11",
+        "12",
+        "14",
+        "17"
+      ],
+      "amac": "Seçilmiş hizmetlerde SLA ve müşteri deneyimi standartlarını iyileştirmek",
+      "organizasyon": {
+        "sponsor_unvani": "Kalite Yönetimi Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "Kalite ve SLA Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "SLA kataloğu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Hata sınıflandırması",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Düzeltici faaliyet listesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "İzleme raporu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "SLA uyumu",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Tekrar hata oranı",
+          "hedef_onerisi": "Azalan trend",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "SLA kataloğu",
+        "Hata sınıflandırması",
+        "Düzeltici faaliyet listesi",
+        "İzleme raporu"
+      ]
+    },
+    {
+      "kod": "CLG-11",
+      "ad": "İş Sürekliliği Senaryo ve Tatbikat Çalışma Grubu",
+      "kategori": "Risk ve Uyum",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-07"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-03",
+        "KMT-16",
+        "KMT-22"
+      ],
+      "departman_kodlari": [
+        "05",
+        "12",
+        "15",
+        "16",
+        "20",
+        "22"
+      ],
+      "amac": "Kritik operasyonların kesintiye dayanıklılığını sınamak",
+      "organizasyon": {
+        "sponsor_unvani": "İş Sürekliliği ve Kriz Yönetimi Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "BCP Koordinatörü",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "BIA",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kritik süreç envanteri",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Tatbikat senaryosu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Düzeltme planı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Tatbikat kapsamı",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Kritik bulgu kapanışı",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "BIA",
+        "Kritik süreç envanteri",
+        "Tatbikat senaryosu",
+        "Düzeltme planı"
+      ]
+    },
+    {
+      "kod": "CLG-12",
+      "ad": "KVKK Veri Envanteri ve Uyum İyileştirme Çalışma Grubu",
+      "kategori": "Risk ve Uyum",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-03",
+        "KMT-22"
+      ],
+      "departman_kodlari": [
+        "05",
+        "15",
+        "16",
+        "17",
+        "22"
+      ],
+      "amac": "Veri işleme faaliyetlerini envanterleyip öncelikli uyum açıklarını gidermek",
+      "organizasyon": {
+        "sponsor_unvani": "Bilgi Güvenliği ve KVKK Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "KVKK Uyum Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Veri işleme envanteri",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Erişim matrisi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Saklama/imha planı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Risk aksiyonları",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Kritik veri akışı kapsama",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Kritik bulgu kapanışı",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Veri işleme envanteri",
+        "Erişim matrisi",
+        "Saklama/imha planı",
+        "Risk aksiyonları"
+      ]
+    },
+    {
+      "kod": "CLG-13",
+      "ad": "Satış CRM ve Pipeline Standardizasyonu Çalışma Grubu",
+      "kategori": "Ticari Büyüme",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-17",
+        "KMT-18",
+        "KMT-19"
+      ],
+      "departman_kodlari": [
+        "07",
+        "08",
+        "09",
+        "11",
+        "15"
+      ],
+      "amac": "Şirketler arası ortak fırsat yönetimi ve pipeline tanımları kurmak",
+      "organizasyon": {
+        "sponsor_unvani": "Satış Direktörü",
+        "calisma_grubu_lideri_unvani": "Satış Operasyonları Müdürü",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "CRM aşama sözlüğü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Lead devir SLA",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Forecast modeli",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot satış dashboardu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "CRM zorunlu alan tamlığı",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Forecast doğruluğu",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "CRM aşama sözlüğü",
+        "Lead devir SLA",
+        "Forecast modeli",
+        "Pilot satış dashboardu"
+      ]
+    },
+    {
+      "kod": "CLG-14",
+      "ad": "Marka Mimarisi ve Kurumsal Kimlik Çalışma Grubu",
+      "kategori": "Ticari Büyüme",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-01",
+        "KMT-18",
+        "KMT-20"
+      ],
+      "departman_kodlari": [
+        "09",
+        "10",
+        "19",
+        "23"
+      ],
+      "amac": "Grup markalarının isimlendirme ve kimlik kurallarını standardize etmek",
+      "organizasyon": {
+        "sponsor_unvani": "CMO",
+        "calisma_grubu_lideri_unvani": "Marka Stratejisi Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Marka mimarisi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kimlik standartları",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Varlık kütüphanesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Uygulama denetimi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Marka kapsama",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Kritik kimlik uyumu",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Marka mimarisi",
+        "Kimlik standartları",
+        "Varlık kütüphanesi",
+        "Uygulama denetimi"
+      ]
+    },
+    {
+      "kod": "CLG-15",
+      "ad": "Dijital Talep Üretimi ve Dönüşüm Optimizasyonu Çalışma Grubu",
+      "kategori": "Ticari Büyüme",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-03"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-17",
+        "KMT-18",
+        "KMT-19"
+      ],
+      "departman_kodlari": [
+        "08",
+        "09",
+        "11",
+        "15",
+        "17"
+      ],
+      "amac": "Seçili ürünlerde müşteri kazanım hunisini iyileştirmek",
+      "organizasyon": {
+        "sponsor_unvani": "CMO",
+        "calisma_grubu_lideri_unvani": "Growth Marketing Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Kanal test planı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Landing sayfa hipotezleri",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Atıf sözlüğü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Deney raporu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "MQL → SQL dönüşümü",
+          "hedef_onerisi": "Baz döneme göre artış",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Deney tamamlama",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Kanal test planı",
+        "Landing sayfa hipotezleri",
+        "Atıf sözlüğü",
+        "Deney raporu"
+      ]
+    },
+    {
+      "kod": "CLG-16",
+      "ad": "Müşteri Yolculuğu ve Geri Bildirim Çalışma Grubu",
+      "kategori": "Ticari Büyüme",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-04"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-17",
+        "KMT-19",
+        "KMT-20"
+      ],
+      "departman_kodlari": [
+        "08",
+        "09",
+        "11",
+        "12",
+        "17"
+      ],
+      "amac": "Müşteri yolculuğundaki sürtünmeleri belirleyip azaltmak",
+      "organizasyon": {
+        "sponsor_unvani": "Müşteri Deneyimi Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "CX Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Yolculuk haritası",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "VoC sınıflandırması",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kritik temas noktaları",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot iyileştirme",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Kritik şikayet çözümü",
+          "hedef_onerisi": "SLA içinde ≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "CSAT",
+          "hedef_onerisi": "Baz döneme göre artış",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Yolculuk haritası",
+        "VoC sınıflandırması",
+        "Kritik temas noktaları",
+        "Pilot iyileştirme"
+      ]
+    },
+    {
+      "kod": "CLG-17",
+      "ad": "Süper Portal Ürün ve Entegrasyon MVP Çalışma Grubu",
+      "kategori": "Teknoloji ve Ürün",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-08"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-20",
+        "KMT-21",
+        "KMT-22",
+        "KMT-23"
+      ],
+      "departman_kodlari": [
+        "08",
+        "09",
+        "12",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "amac": "Çalışan yaşam döngüsü senaryolarında öncelikli MVP ve entegrasyonları teslim etmek",
+      "organizasyon": {
+        "sponsor_unvani": "Ürün ve Hizmet Portföyü Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "Ürün Yöneticisi / Teknik Proje Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "MVP kapsam dokümanı",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Entegrasyon sözleşmeleri",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Güvenlik kontrolü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot kabul raporu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Kabul edilen kullanıcı hikayesi",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Kritik güvenlik açığı",
+          "hedef_onerisi": "0 açık kritik",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "MVP kapsam dokümanı",
+        "Entegrasyon sözleşmeleri",
+        "Güvenlik kontrolü",
+        "Pilot kabul raporu"
+      ]
+    },
+    {
+      "kod": "CLG-18",
+      "ad": "Kurumsal Veri Sözlüğü ve Yönetimi Çalışma Grubu",
+      "kategori": "Teknoloji ve Ürün",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-08"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-21",
+        "KMT-22",
+        "KMT-23"
+      ],
+      "departman_kodlari": [
+        "02",
+        "03",
+        "08",
+        "09",
+        "15",
+        "17"
+      ],
+      "amac": "Temel holding KPI ve veri kaynaklarında ortak tanım ve sahiplik oluşturmak",
+      "organizasyon": {
+        "sponsor_unvani": "Veri Analitik ve Yapay Zekâ Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "Veri Yönetişimi Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 120,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "KPI veri sözlüğü",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Veri sahipliği",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kalite kuralları",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Kaynak izlenebilirliği",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Kritik alan sahipliği",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Veri kalite test geçişi",
+          "hedef_onerisi": "≥ %95",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "KPI veri sözlüğü",
+        "Veri sahipliği",
+        "Kalite kuralları",
+        "Kaynak izlenebilirliği"
+      ]
+    },
+    {
+      "kod": "CLG-19",
+      "ad": "AI Kullanım Senaryoları ve Güvenli Pilot Çalışma Grubu",
+      "kategori": "Teknoloji ve Ürün",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-08"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-21",
+        "KMT-22",
+        "KMT-23",
+        "KMT-24"
+      ],
+      "departman_kodlari": [
+        "05",
+        "12",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "amac": "İş değeri ve güvenlik kriterlerine göre yapay zekâ pilotu geliştirmek",
+      "organizasyon": {
+        "sponsor_unvani": "Veri Analitik ve Yapay Zekâ Komitesi Başkanı",
+        "calisma_grubu_lideri_unvani": "AI Ürün / Otomasyon Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 90,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Kullanım senaryosu listesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Etki ve risk analizi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Pilot prototip",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Ölçüm ve kapatma raporu",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Pilot başarı kriteri",
+          "hedef_onerisi": "≥ %85",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Gizlilik ihlali",
+          "hedef_onerisi": "0",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Kullanım senaryosu listesi",
+        "Etki ve risk analizi",
+        "Pilot prototip",
+        "Ölçüm ve kapatma raporu"
+      ]
+    },
+    {
+      "kod": "CLG-20",
+      "ad": "Ürün Lansman Hazırlığı ve Go-to-Market Çalışma Grubu",
+      "kategori": "Teknoloji ve Ürün",
+      "tip": "gecici_cok_fonksiyonlu",
+      "sablon_mu": true,
+      "durum": "taslak_sablon",
+      "olusturma_tetikleyicisi": "Onaylı proje/iyileştirme talebi ve yazılı sponsor ataması",
+      "seviye": "holding_ortak_veya_sirket_bazli",
+      "bagli_kurul_kodlari": [
+        "KRL-08"
+      ],
+      "bagli_komite_kodlari": [
+        "KMT-17",
+        "KMT-18",
+        "KMT-20",
+        "KMT-21"
+      ],
+      "departman_kodlari": [
+        "05",
+        "08",
+        "09",
+        "11",
+        "12",
+        "18"
+      ],
+      "amac": "Yeni ürün/hizmetin pazara çıkış için operasyonel ve ticari hazırlığını tamamlamak",
+      "organizasyon": {
+        "sponsor_unvani": "CPO / Ürün Yönetimi Direktörü",
+        "calisma_grubu_lideri_unvani": "Ürün Pazarlama / Lansman Lideri",
+        "cekirdek_uyeler": "İlgili departmanlardan atanmış iş sahibi, analist/uzman ve uygulama temsilcileri",
+        "onerilen_uye_sayisi": {
+          "min": 3,
+          "max": 7
+        },
+        "uzman_davetliler": "İhtiyaca göre Hukuk, Bilgi Güvenliği, Finans, Kalite veya dış danışman",
+        "sekreterya": "Çalışma grubu lideri veya proje koordinatörü",
+        "atanma_usulu": "Sponsor tarafından yazılı görev tanımı ve çalışan/pozisyon ataması; ilgili şirket yöneticisinin mutabakatı",
+        "raporlama": "Sponsor ve bağlı ana komite/kurula düzenli ilerleme raporu"
+      },
+      "gorevler": [
+        "Onaylı kapsam, hedef ve teslimat planını ayrıntılandırmak",
+        "Gereksinim, veri ve riskleri ilgili departmanlardan toplamak",
+        "Çözüm alternatiflerini karşılaştırmak ve uygun olanı pilotlamak",
+        "Teslimatların kanıtlarını ve açık kararlarını kayıt altında tutmak",
+        "Sonuç raporunu sponsora sunmak, devri ve kapanışı tamamlamak"
+      ],
+      "karar_yetkisi": {
+        "grup_ici": "Onaylı kapsam içindeki iş planlama, teknik öneri ve görev dağılımı",
+        "ust_onay": "Bütçe/kontrat/organizasyon/strateji/politika değişikliği bağlı sponsor veya yetkili kurul/komiteye",
+        "yasaklar": [
+          "Tüzel kişiliği bağlayan sözleşme veya temsil işlemi",
+          "Yetkisiz harcama ve personel ataması",
+          "Hukuki/siber güvenlik/kontrol fonksiyonları adına istisna onayı"
+        ],
+        "imza_yetkisi": "Çalışma grubu üyeliği imza veya temsil yetkisi vermez"
+      },
+      "calisma_plani": {
+        "onerilen_azami_sure_gun": 60,
+        "toplanti_sikligi": "Haftalık 30–60 dakika; sprint veya kritik eşik döneminde ihtiyaca göre",
+        "ilerleme_raporu": "İki haftada bir sponsora; aylık bağlı komiteye",
+        "gundem_on_hazirlik_is_gunu": 1,
+        "tutanak_aksiyon_kaydi_is_gunu": 2,
+        "kapsam_degisiminde": "Sponsor onayı ve proje değişiklik kaydı gerekir"
+      },
+      "teslimatlar": [
+        {
+          "ad": "Lansman kontrol listesi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Fiyatlandırma önerisi",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Satış enablement",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        },
+        {
+          "ad": "Go/no-go dosyası",
+          "kabul_kriteri": "Sponsorca onaylanmış kapsam ve ilgili fonksiyonun doğrulanabilir kabul kanıtı",
+          "sorumlu_rol": "Çalışma grubu liderinin atadığı iş paketi sahibi"
+        }
+      ],
+      "kpi": [
+        {
+          "ad": "Lansman hazırlık kontrolü",
+          "hedef_onerisi": "%100",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Kritik açık",
+          "hedef_onerisi": "0",
+          "olcum": "Haftalık/aylık izleme; veri kaynağı proje başlangıcında belirlenir"
+        },
+        {
+          "ad": "Teslimat zamanında tamamlanma",
+          "hedef_onerisi": "≥ %90",
+          "olcum": "Zamanında kabul edilen teslimat / planlanan teslimat"
+        },
+        {
+          "ad": "Kritik açık kapanışı",
+          "hedef_onerisi": "%100",
+          "olcum": "Kapatılan kritik açık / tespit edilen kritik açık"
+        }
+      ],
+      "cikis_ve_kapanis": {
+        "kapanis_sartlari": [
+          "Teslimatlar sponsor tarafından kabul edildi",
+          "Operasyonel süreç sahibi ve destek modeli belirlendi",
+          "Açık riskler ve kalan aksiyonlar devredildi",
+          "Sonuç ve öğrenimler raporlandı"
+        ],
+        "basarisizlik_durumu": "Sponsor gerekçeli durdurma/iptal kararı verebilir; açık yükümlülükler kayıt altında devredilir",
+        "kapanis_otoritesi": "Sponsor, varsa bağlı komitenin bilgilendirilmesiyle"
+      },
+      "risk_ve_kontroller": [
+        "Çıkar çatışması ve veri erişimi kontrolü",
+        "Şirket bazlı veri izolasyonu ve asgari yetki",
+        "Değişiklik, karar ve kanıt izlenebilirliği",
+        "İlgili kontrol fonksiyonlarından zorunlu görüş alma"
+      ],
+      "ornek_is_paketleri": [
+        "Lansman kontrol listesi",
+        "Fiyatlandırma önerisi",
+        "Satış enablement",
+        "Go/no-go dosyası"
+      ]
+    }
+  ],
+  "entegrasyon": {
+    "kod_sablonu": "CLG-XX (şablon); CLGI-YYYY-NNNN (aktif örnek)",
+    "iliskiler": {
+      "sablon": "working_group_template",
+      "olusan_grup": "working_group_instance",
+      "sponsor": "position_id / employee_id",
+      "lider": "position_id / employee_id",
+      "uyelik": "working_group_membership",
+      "komite": "committee_code",
+      "kurul": "board_code",
+      "sirket": "company_id",
+      "departman": "department_code"
+    },
+    "veri_varliklari": [
+      "WorkingGroupTemplate",
+      "WorkingGroupInstance",
+      "WorkingGroupMembership",
+      "WorkingGroupCharter",
+      "WorkingGroupWorkPackage",
+      "WorkingGroupDeliverable",
+      "WorkingGroupMilestone",
+      "WorkingGroupMeeting",
+      "WorkingGroupDecision",
+      "WorkingGroupAction",
+      "WorkingGroupKPI",
+      "WorkingGroupRisk",
+      "WorkingGroupApproval",
+      "WorkingGroupClosure",
+      "AuditLog"
+    ],
+    "durumlar": [
+      "taslak",
+      "onay_bekliyor",
+      "aktif",
+      "askida",
+      "kabul_bekliyor",
+      "tamamlandi",
+      "iptal"
+    ],
+    "onay_kontrolu": "Kurum politikası ve şirket yetki matrisi üzerinden gerçek zamanlı kontrol",
+    "guvenlik": "Şirket kapsamı bazlı izolasyon; rol tabanlı yetki; hassas insan ve müşteri verilerine asgari erişim; audit log",
+    "dashboard": [
+      "Aktif grup sayısı",
+      "Takvimi aşan gruplar",
+      "Kritik teslimat sapmaları",
+      "Açık riskler",
+      "Bütçe sapması",
+      "Sponsor bazlı portföy",
+      "Kabul bekleyen teslimatlar",
+      "Kapanan grupların doğrulanmış faydası"
+    ]
+  }
+}

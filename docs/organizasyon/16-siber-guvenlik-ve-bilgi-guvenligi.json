@@ -1,0 +1,3106 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "16 - Siber Güvenlik ve Bilgi Güvenliği Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "16",
+    "name_tr": "Siber Güvenlik ve Bilgi Güvenliği",
+    "name_en": "Cybersecurity and Information Security",
+    "organization_model": "Tam Fonksiyonel Bağımsız CISO Modeli",
+    "purpose": "Şirketin bilgi varlıklarını, dijital hizmetlerini ve paydaş güvenini siber tehditlere karşı korumak; gizlilik, bütünlük, erişilebilirlik ve dayanıklılığı risk temelli güvenlik yönetişimiyle güvence altına almak.",
+    "reports_to": {
+      "primary": {
+        "title_tr": "Genel Müdür / CEO",
+        "title_en": "Chief Executive Officer"
+      },
+      "functional_access": [
+        "Yönetim Kurulu Risk Komitesi",
+        "Denetim Komitesi",
+        "İcra Kurulu"
+      ]
+    },
+    "head": {
+      "position_code": "16.00.001",
+      "title_tr": "Siber Güvenlik ve Bilgi Güvenliği Direktörü",
+      "title_en": "Cybersecurity and Information Security Director",
+      "alternative_executive_title": "Chief Information Security Officer (CISO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "16.01",
+        "16.02",
+        "16.03",
+        "16.04",
+        "16.05",
+        "16.06",
+        "16.07",
+        "16.08"
+      ],
+      "accountabilities": [
+        "Siber güvenlik ve bilgi güvenliği stratejisini oluşturmak",
+        "Kurumsal güvenlik riskleri, politikaları ve kontrol çerçevesini yönetmek",
+        "Güvenlik mimarisi, operasyonları, olay müdahale ve dayanıklılığı yönetmek",
+        "Kimlik, uygulama, veri, tedarikçi ve bulut güvenliğini güvence altına almak",
+        "Yönetim kuruluna siber risk, olay ve güvenlik olgunluğu hakkında bağımsız raporlama yapmak"
+      ]
+    },
+    "independence_principle": "CISO, BT hizmetlerini yöneten CIO/CTO'dan organizasyonel olarak bağımsız konumlandırılır veya Yönetim Kurulu Risk/Denetim Komitesine doğrudan fonksiyonel erişime sahip olur. Güvenlik riski kabul kararları iş ve risk sahipleri tarafından alınır; CISO değerlendirme ve eskalasyon sağlar.",
+    "hierarchy_standard": [
+      "Departman Direktörü / CISO",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "16.01",
+        "name_tr": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum",
+        "name_en": "Information Security Strategy, Governance and Compliance",
+        "manager": {
+          "position_code": "16.01.001",
+          "title_tr": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum Müdürü",
+          "title_en": "Information Security Strategy, Governance and Compliance Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.01.01",
+            "name_tr": "Bilgi Güvenliği Stratejisi ve Yönetişim",
+            "name_en": "Information Security Strategy and Governance",
+            "lead": {
+              "position_code": "16.01.01.001",
+              "title_tr": "Bilgi Güvenliği Stratejisi ve Yönetişim Yöneticisi",
+              "title_en": "Information Security Strategy and Governance Manager",
+              "reports_to": "16.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.01.01.002",
+                "title_tr": "Kıdemli Bilgi Güvenliği Stratejisi Uzmanı",
+                "title_en": "Senior Information Security Strategy Specialist",
+                "reports_to": "16.01.01.001"
+              },
+              {
+                "position_code": "16.01.01.003",
+                "title_tr": "Bilgi Güvenliği Yönetişim Uzmanı",
+                "title_en": "Information Security Governance Specialist",
+                "reports_to": "16.01.01.001"
+              },
+              {
+                "position_code": "16.01.01.004",
+                "title_tr": "Siber Güvenlik Performans Analisti",
+                "title_en": "Cybersecurity Performance Analyst",
+                "reports_to": "16.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Bilgi ve siber güvenlik stratejisi ile yol haritasını oluşturmak",
+              "Güvenlik politika, standart ve karar kurullarını yönetmek",
+              "Güvenlik KPI, yatırım ve olgunluk gelişimini izlemek"
+            ]
+          },
+          {
+            "team_code": "16.01.02",
+            "name_tr": "Bilgi Güvenliği Yönetim Sistemi",
+            "name_en": "Information Security Management System",
+            "lead": {
+              "position_code": "16.01.02.001",
+              "title_tr": "Bilgi Güvenliği Yönetim Sistemi Yöneticisi",
+              "title_en": "Information Security Management System Manager",
+              "reports_to": "16.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.01.02.002",
+                "title_tr": "Kıdemli BGYS Uzmanı",
+                "title_en": "Senior ISMS Specialist",
+                "reports_to": "16.01.02.001"
+              },
+              {
+                "position_code": "16.01.02.003",
+                "title_tr": "BGYS Uzmanı",
+                "title_en": "ISMS Specialist",
+                "reports_to": "16.01.02.001"
+              },
+              {
+                "position_code": "16.01.02.004",
+                "title_tr": "Bilgi Güvenliği Dokümantasyon Uzmanı",
+                "title_en": "Information Security Documentation Specialist",
+                "reports_to": "16.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "ISO 27001 uyumlu BGYS'yi kurmak ve sürdürmek",
+              "Politika, prosedür, kontrol ve kayıt yaşam döngüsünü yönetmek",
+              "Yönetimin gözden geçirmesi ve sertifikasyon hazırlığını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "16.01.03",
+            "name_tr": "Güvenlik Uyum ve Kontrol Güvencesi",
+            "name_en": "Security Compliance and Control Assurance",
+            "lead": {
+              "position_code": "16.01.03.001",
+              "title_tr": "Güvenlik Uyum ve Kontrol Güvencesi Yöneticisi",
+              "title_en": "Security Compliance and Control Assurance Manager",
+              "reports_to": "16.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.01.03.002",
+                "title_tr": "Kıdemli Güvenlik Uyum Uzmanı",
+                "title_en": "Senior Security Compliance Specialist",
+                "reports_to": "16.01.03.001"
+              },
+              {
+                "position_code": "16.01.03.003",
+                "title_tr": "Güvenlik Kontrol Güvence Uzmanı",
+                "title_en": "Security Control Assurance Specialist",
+                "reports_to": "16.01.03.001"
+              },
+              {
+                "position_code": "16.01.03.004",
+                "title_tr": "Güvenlik Uyum Analisti",
+                "title_en": "Security Compliance Analyst",
+                "reports_to": "16.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Mevzuat, sözleşme ve güvenlik standardı gerekliliklerini kontrollere dönüştürmek",
+              "Kontrol tasarımı ve işleyiş kanıtlarını değerlendirmek",
+              "Uyum boşlukları ve iyileştirme aksiyonlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.02",
+        "name_tr": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+        "name_en": "Cyber Risk, Asset and Third-Party Security",
+        "manager": {
+          "position_code": "16.02.001",
+          "title_tr": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği Müdürü",
+          "title_en": "Cyber Risk, Asset and Third-Party Security Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.02.01",
+            "name_tr": "Siber Risk Yönetimi",
+            "name_en": "Cyber Risk Management",
+            "lead": {
+              "position_code": "16.02.01.001",
+              "title_tr": "Siber Risk Yönetimi Yöneticisi",
+              "title_en": "Cyber Risk Management Manager",
+              "reports_to": "16.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.02.01.002",
+                "title_tr": "Kıdemli Siber Risk Uzmanı",
+                "title_en": "Senior Cyber Risk Specialist",
+                "reports_to": "16.02.01.001"
+              },
+              {
+                "position_code": "16.02.01.003",
+                "title_tr": "Siber Risk Uzmanı",
+                "title_en": "Cyber Risk Specialist",
+                "reports_to": "16.02.01.001"
+              },
+              {
+                "position_code": "16.02.01.004",
+                "title_tr": "Siber Risk Analisti",
+                "title_en": "Cyber Risk Analyst",
+                "reports_to": "16.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Siber risk metodolojisi ve risk kayıtlarını yönetmek",
+              "Tehdit, zafiyet, etki ve kontrol etkinliğini değerlendirmek",
+              "Risk kabulü, azaltma ve eskalasyon kararlarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "16.02.02",
+            "name_tr": "Bilgi Varlığı ve Güvenlik Sınıflandırma",
+            "name_en": "Information Asset and Security Classification",
+            "lead": {
+              "position_code": "16.02.02.001",
+              "title_tr": "Bilgi Varlığı ve Güvenlik Sınıflandırma Yöneticisi",
+              "title_en": "Information Asset and Security Classification Manager",
+              "reports_to": "16.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.02.02.002",
+                "title_tr": "Kıdemli Bilgi Varlığı Uzmanı",
+                "title_en": "Senior Information Asset Specialist",
+                "reports_to": "16.02.02.001"
+              },
+              {
+                "position_code": "16.02.02.003",
+                "title_tr": "Bilgi Sınıflandırma Uzmanı",
+                "title_en": "Information Classification Specialist",
+                "reports_to": "16.02.02.001"
+              },
+              {
+                "position_code": "16.02.02.004",
+                "title_tr": "Varlık Risk Analisti",
+                "title_en": "Asset Risk Analyst",
+                "reports_to": "16.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Bilgi varlığı sahipliği ve sınıflandırma modelini yönetmek",
+              "Kritiklik, gizlilik, bütünlük ve erişilebilirlik gereksinimlerini belirlemek",
+              "Varlık envanteri ile güvenlik kontrollerinin eşleşmesini izlemek"
+            ]
+          },
+          {
+            "team_code": "16.02.03",
+            "name_tr": "Tedarikçi ve Üçüncü Taraf Güvenliği",
+            "name_en": "Supplier and Third-Party Security",
+            "lead": {
+              "position_code": "16.02.03.001",
+              "title_tr": "Tedarikçi ve Üçüncü Taraf Güvenliği Yöneticisi",
+              "title_en": "Supplier and Third-Party Security Manager",
+              "reports_to": "16.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.02.03.002",
+                "title_tr": "Kıdemli Üçüncü Taraf Güvenlik Uzmanı",
+                "title_en": "Senior Third-Party Security Specialist",
+                "reports_to": "16.02.03.001"
+              },
+              {
+                "position_code": "16.02.03.003",
+                "title_tr": "Tedarikçi Güvenliği Uzmanı",
+                "title_en": "Supplier Security Specialist",
+                "reports_to": "16.02.03.001"
+              },
+              {
+                "position_code": "16.02.03.004",
+                "title_tr": "Üçüncü Taraf Risk Analisti",
+                "title_en": "Third-Party Risk Analyst",
+                "reports_to": "16.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarikçi güvenlik ön değerlendirme ve durum tespitini yürütmek",
+              "Sözleşmesel güvenlik gerekliliklerini Hukuk ve Satın Alma ile tanımlamak",
+              "Üçüncü taraf risk, bulgu ve iyileştirme planlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.03",
+        "name_tr": "Güvenlik Mimarisi ve Mühendisliği",
+        "name_en": "Security Architecture and Engineering",
+        "manager": {
+          "position_code": "16.03.001",
+          "title_tr": "Güvenlik Mimarisi ve Mühendisliği Müdürü",
+          "title_en": "Security Architecture and Engineering Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.03.01",
+            "name_tr": "Kurumsal Güvenlik Mimarisi",
+            "name_en": "Enterprise Security Architecture",
+            "lead": {
+              "position_code": "16.03.01.001",
+              "title_tr": "Kurumsal Güvenlik Mimarisi Yöneticisi",
+              "title_en": "Enterprise Security Architecture Manager",
+              "reports_to": "16.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.03.01.002",
+                "title_tr": "Kıdemli Güvenlik Mimarı",
+                "title_en": "Senior Security Architect",
+                "reports_to": "16.03.01.001"
+              },
+              {
+                "position_code": "16.03.01.003",
+                "title_tr": "Güvenlik Mimarı",
+                "title_en": "Security Architect",
+                "reports_to": "16.03.01.001"
+              },
+              {
+                "position_code": "16.03.01.004",
+                "title_tr": "Güvenlik Tasarım Uzmanı",
+                "title_en": "Security Design Specialist",
+                "reports_to": "16.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Zero Trust ve katmanlı güvenlik mimarisini oluşturmak",
+              "Teknoloji projelerini güvenlik mimarisi açısından değerlendirmek",
+              "Güvenlik desenleri, standartları ve mimari istisnaları yönetmek"
+            ]
+          },
+          {
+            "team_code": "16.03.02",
+            "name_tr": "Ağ, Bulut ve Uç Nokta Güvenliği",
+            "name_en": "Network, Cloud and Endpoint Security",
+            "lead": {
+              "position_code": "16.03.02.001",
+              "title_tr": "Ağ, Bulut ve Uç Nokta Güvenliği Yöneticisi",
+              "title_en": "Network, Cloud and Endpoint Security Manager",
+              "reports_to": "16.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.03.02.002",
+                "title_tr": "Kıdemli Güvenlik Mühendisi",
+                "title_en": "Senior Security Engineer",
+                "reports_to": "16.03.02.001"
+              },
+              {
+                "position_code": "16.03.02.003",
+                "title_tr": "Bulut Güvenliği Uzmanı",
+                "title_en": "Cloud Security Specialist",
+                "reports_to": "16.03.02.001"
+              },
+              {
+                "position_code": "16.03.02.004",
+                "title_tr": "Uç Nokta Güvenliği Uzmanı",
+                "title_en": "Endpoint Security Specialist",
+                "reports_to": "16.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ağ, bulut ve uç nokta güvenlik kontrol tasarımlarını yönetmek",
+              "Güvenli yapılandırma ve sertleştirme standartlarını belirlemek",
+              "Teknik kontrol etkinliği ve kapsama oranını izlemek"
+            ]
+          },
+          {
+            "team_code": "16.03.03",
+            "name_tr": "Güvenlik Platformları ve Otomasyon",
+            "name_en": "Security Platforms and Automation",
+            "lead": {
+              "position_code": "16.03.03.001",
+              "title_tr": "Güvenlik Platformları ve Otomasyon Yöneticisi",
+              "title_en": "Security Platforms and Automation Manager",
+              "reports_to": "16.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.03.03.002",
+                "title_tr": "Kıdemli Güvenlik Platform Mühendisi",
+                "title_en": "Senior Security Platform Engineer",
+                "reports_to": "16.03.03.001"
+              },
+              {
+                "position_code": "16.03.03.003",
+                "title_tr": "Güvenlik Otomasyon Uzmanı",
+                "title_en": "Security Automation Specialist",
+                "reports_to": "16.03.03.001"
+              },
+              {
+                "position_code": "16.03.03.004",
+                "title_tr": "SOAR Mühendisi",
+                "title_en": "SOAR Engineer",
+                "reports_to": "16.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "SIEM, SOAR, EDR, DLP ve güvenlik platformlarını tasarlamak",
+              "Güvenlik kullanım senaryoları ve otomasyon akışlarını geliştirmek",
+              "Platform kapasitesi, entegrasyonu ve kural yaşam döngüsünü yönetmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.04",
+        "name_tr": "Güvenlik Operasyonları ve Olay Müdahale",
+        "name_en": "Security Operations and Incident Response",
+        "manager": {
+          "position_code": "16.04.001",
+          "title_tr": "Güvenlik Operasyonları ve Olay Müdahale Müdürü",
+          "title_en": "Security Operations and Incident Response Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.04.01",
+            "name_tr": "Güvenlik Operasyon Merkezi",
+            "name_en": "Security Operations Center",
+            "lead": {
+              "position_code": "16.04.01.001",
+              "title_tr": "Güvenlik Operasyon Merkezi Yöneticisi",
+              "title_en": "Security Operations Center Manager",
+              "reports_to": "16.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.04.01.002",
+                "title_tr": "Kıdemli SOC Analisti",
+                "title_en": "Senior SOC Analyst",
+                "reports_to": "16.04.01.001"
+              },
+              {
+                "position_code": "16.04.01.003",
+                "title_tr": "SOC Analisti",
+                "title_en": "SOC Analyst",
+                "reports_to": "16.04.01.001"
+              },
+              {
+                "position_code": "16.04.01.004",
+                "title_tr": "Güvenlik İzleme Uzmanı",
+                "title_en": "Security Monitoring Specialist",
+                "reports_to": "16.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Güvenlik olaylarını 7/24 izlemek ve sınıflandırmak",
+              "Alarm önceliklendirme, doğrulama ve eskalasyon süreçlerini yürütmek",
+              "Tespit kapsamı, yanlış pozitif ve müdahale sürelerini geliştirmek"
+            ]
+          },
+          {
+            "team_code": "16.04.02",
+            "name_tr": "Siber Olay Müdahale ve Dijital Adli İnceleme",
+            "name_en": "Cyber Incident Response and Digital Forensics",
+            "lead": {
+              "position_code": "16.04.02.001",
+              "title_tr": "Siber Olay Müdahale ve Dijital Adli İnceleme Yöneticisi",
+              "title_en": "Cyber Incident Response and Digital Forensics Manager",
+              "reports_to": "16.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.04.02.002",
+                "title_tr": "Kıdemli Olay Müdahale Uzmanı",
+                "title_en": "Senior Incident Response Specialist",
+                "reports_to": "16.04.02.001"
+              },
+              {
+                "position_code": "16.04.02.003",
+                "title_tr": "Dijital Adli İnceleme Uzmanı",
+                "title_en": "Digital Forensics Specialist",
+                "reports_to": "16.04.02.001"
+              },
+              {
+                "position_code": "16.04.02.004",
+                "title_tr": "Siber Olay Koordinatörü",
+                "title_en": "Cyber Incident Coordinator",
+                "reports_to": "16.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Siber olay müdahale planını ve kriz koordinasyonunu yürütmek",
+              "İzolasyon, temizleme, kurtarma ve delil koruma faaliyetlerini yönetmek",
+              "Olay sonrası kök neden ve öğrenilen ders çalışmalarını tamamlamak"
+            ]
+          },
+          {
+            "team_code": "16.04.03",
+            "name_tr": "Tehdit Avcılığı ve Tespit Mühendisliği",
+            "name_en": "Threat Hunting and Detection Engineering",
+            "lead": {
+              "position_code": "16.04.03.001",
+              "title_tr": "Tehdit Avcılığı ve Tespit Mühendisliği Yöneticisi",
+              "title_en": "Threat Hunting and Detection Engineering Manager",
+              "reports_to": "16.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.04.03.002",
+                "title_tr": "Kıdemli Tehdit Avcısı",
+                "title_en": "Senior Threat Hunter",
+                "reports_to": "16.04.03.001"
+              },
+              {
+                "position_code": "16.04.03.003",
+                "title_tr": "Tespit Mühendisi",
+                "title_en": "Detection Engineer",
+                "reports_to": "16.04.03.001"
+              },
+              {
+                "position_code": "16.04.03.004",
+                "title_tr": "Siber Tehdit Analisti",
+                "title_en": "Cyber Threat Analyst",
+                "reports_to": "16.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Proaktif tehdit avcılığı faaliyetleri yürütmek",
+              "Tespit kuralları ve saldırı senaryolarını geliştirmek",
+              "Tespit boşluklarını MITRE ATT&CK bazında izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.05",
+        "name_tr": "Kimlik ve Erişim Güvenliği",
+        "name_en": "Identity and Access Security",
+        "manager": {
+          "position_code": "16.05.001",
+          "title_tr": "Kimlik ve Erişim Güvenliği Müdürü",
+          "title_en": "Identity and Access Security Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.05.01",
+            "name_tr": "Kimlik ve Erişim Yönetişimi",
+            "name_en": "Identity and Access Governance",
+            "lead": {
+              "position_code": "16.05.01.001",
+              "title_tr": "Kimlik ve Erişim Yönetişimi Yöneticisi",
+              "title_en": "Identity and Access Governance Manager",
+              "reports_to": "16.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.05.01.002",
+                "title_tr": "Kıdemli Kimlik ve Erişim Uzmanı",
+                "title_en": "Senior Identity and Access Specialist",
+                "reports_to": "16.05.01.001"
+              },
+              {
+                "position_code": "16.05.01.003",
+                "title_tr": "Erişim Yönetişimi Uzmanı",
+                "title_en": "Access Governance Specialist",
+                "reports_to": "16.05.01.001"
+              },
+              {
+                "position_code": "16.05.01.004",
+                "title_tr": "Yetki Analisti",
+                "title_en": "Entitlement Analyst",
+                "reports_to": "16.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kimlik ve erişim politika, rol ve sorumluluk modelini yönetmek",
+              "İşe giriş, rol değişikliği ve işten çıkış erişim süreçlerini güvence altına almak",
+              "Periyodik erişim gözden geçirme ve görevler ayrılığı kontrollerini yürütmek"
+            ]
+          },
+          {
+            "team_code": "16.05.02",
+            "name_tr": "Ayrıcalıklı Erişim ve Kimlik Güvenliği",
+            "name_en": "Privileged Access and Identity Security",
+            "lead": {
+              "position_code": "16.05.02.001",
+              "title_tr": "Ayrıcalıklı Erişim ve Kimlik Güvenliği Yöneticisi",
+              "title_en": "Privileged Access and Identity Security Manager",
+              "reports_to": "16.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.05.02.002",
+                "title_tr": "Kıdemli PAM Uzmanı",
+                "title_en": "Senior PAM Specialist",
+                "reports_to": "16.05.02.001"
+              },
+              {
+                "position_code": "16.05.02.003",
+                "title_tr": "Ayrıcalıklı Erişim Uzmanı",
+                "title_en": "Privileged Access Specialist",
+                "reports_to": "16.05.02.001"
+              },
+              {
+                "position_code": "16.05.02.004",
+                "title_tr": "Kimlik Güvenliği Analisti",
+                "title_en": "Identity Security Analyst",
+                "reports_to": "16.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ayrıcalıklı hesap, kasa, oturum ve parola kontrollerini yönetmek",
+              "Yönetici ve servis hesabı kullanımını izlemek",
+              "Ayrıcalık yükseltme ve kalıcı yetki risklerini azaltmak"
+            ]
+          },
+          {
+            "team_code": "16.05.03",
+            "name_tr": "Kimlik Doğrulama ve Müşteri Kimliği Güvenliği",
+            "name_en": "Authentication and Customer Identity Security",
+            "lead": {
+              "position_code": "16.05.03.001",
+              "title_tr": "Kimlik Doğrulama ve Müşteri Kimliği Güvenliği Yöneticisi",
+              "title_en": "Authentication and Customer Identity Security Manager",
+              "reports_to": "16.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.05.03.002",
+                "title_tr": "Kıdemli Kimlik Doğrulama Uzmanı",
+                "title_en": "Senior Authentication Specialist",
+                "reports_to": "16.05.03.001"
+              },
+              {
+                "position_code": "16.05.03.003",
+                "title_tr": "CIAM Güvenliği Uzmanı",
+                "title_en": "CIAM Security Specialist",
+                "reports_to": "16.05.03.001"
+              },
+              {
+                "position_code": "16.05.03.004",
+                "title_tr": "Federasyon ve SSO Uzmanı",
+                "title_en": "Federation and SSO Specialist",
+                "reports_to": "16.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "MFA, SSO, federasyon ve kimlik doğrulama standartlarını yönetmek",
+              "Müşteri kimliği ve erişim güvenliği gereksinimlerini belirlemek",
+              "Kimlik doğrulama riskleri ve hesap ele geçirme kontrollerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.06",
+        "name_tr": "Uygulama Güvenliği ve DevSecOps",
+        "name_en": "Application Security and DevSecOps",
+        "manager": {
+          "position_code": "16.06.001",
+          "title_tr": "Uygulama Güvenliği ve DevSecOps Müdürü",
+          "title_en": "Application Security and DevSecOps Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.06.01",
+            "name_tr": "Güvenli Yazılım Geliştirme Yaşam Döngüsü",
+            "name_en": "Secure Software Development Lifecycle",
+            "lead": {
+              "position_code": "16.06.01.001",
+              "title_tr": "Güvenli Yazılım Geliştirme Yaşam Döngüsü Yöneticisi",
+              "title_en": "Secure Software Development Lifecycle Manager",
+              "reports_to": "16.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.06.01.002",
+                "title_tr": "Kıdemli Uygulama Güvenliği Uzmanı",
+                "title_en": "Senior Application Security Specialist",
+                "reports_to": "16.06.01.001"
+              },
+              {
+                "position_code": "16.06.01.003",
+                "title_tr": "Güvenli Yazılım Geliştirme Uzmanı",
+                "title_en": "Secure Software Development Specialist",
+                "reports_to": "16.06.01.001"
+              },
+              {
+                "position_code": "16.06.01.004",
+                "title_tr": "SSDLC Analisti",
+                "title_en": "SSDLC Analyst",
+                "reports_to": "16.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "SSDLC politika, kontrol kapıları ve güvenlik gereksinimlerini yönetmek",
+              "Tehdit modelleme ve güvenli tasarım incelemelerini yürütmek",
+              "Geliştirici güvenlik standartları ve eğitimlerini koordine etmek"
+            ]
+          },
+          {
+            "team_code": "16.06.02",
+            "name_tr": "DevSecOps ve Kod Güvenliği",
+            "name_en": "DevSecOps and Code Security",
+            "lead": {
+              "position_code": "16.06.02.001",
+              "title_tr": "DevSecOps ve Kod Güvenliği Yöneticisi",
+              "title_en": "DevSecOps and Code Security Manager",
+              "reports_to": "16.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.06.02.002",
+                "title_tr": "Kıdemli DevSecOps Mühendisi",
+                "title_en": "Senior DevSecOps Engineer",
+                "reports_to": "16.06.02.001"
+              },
+              {
+                "position_code": "16.06.02.003",
+                "title_tr": "Kod Güvenliği Uzmanı",
+                "title_en": "Code Security Specialist",
+                "reports_to": "16.06.02.001"
+              },
+              {
+                "position_code": "16.06.02.004",
+                "title_tr": "Yazılım Tedarik Zinciri Güvenliği Uzmanı",
+                "title_en": "Software Supply Chain Security Specialist",
+                "reports_to": "16.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "SAST, DAST, SCA ve gizli bilgi taramalarını CI/CD süreçlerine entegre etmek",
+              "Bağımlılık, paket ve yazılım tedarik zinciri risklerini yönetmek",
+              "Kod güvenliği bulgularının risk bazlı giderilmesini izlemek"
+            ]
+          },
+          {
+            "team_code": "16.06.03",
+            "name_tr": "Uygulama ve API Güvenlik Testleri",
+            "name_en": "Application and API Security Testing",
+            "lead": {
+              "position_code": "16.06.03.001",
+              "title_tr": "Uygulama ve API Güvenlik Testleri Yöneticisi",
+              "title_en": "Application and API Security Testing Manager",
+              "reports_to": "16.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.06.03.002",
+                "title_tr": "Kıdemli Sızma Testi Uzmanı",
+                "title_en": "Senior Penetration Tester",
+                "reports_to": "16.06.03.001"
+              },
+              {
+                "position_code": "16.06.03.003",
+                "title_tr": "Uygulama Güvenlik Test Uzmanı",
+                "title_en": "Application Security Testing Specialist",
+                "reports_to": "16.06.03.001"
+              },
+              {
+                "position_code": "16.06.03.004",
+                "title_tr": "API Güvenlik Analisti",
+                "title_en": "API Security Analyst",
+                "reports_to": "16.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Web, mobil, API ve kurumsal uygulama güvenlik testlerini yürütmek",
+              "Yayın öncesi güvenlik doğrulamalarını gerçekleştirmek",
+              "Test bulgularını doğrulamak ve kapatma kanıtlarını değerlendirmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.07",
+        "name_tr": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi",
+        "name_en": "Data Security, Privacy Engineering and Cryptography",
+        "manager": {
+          "position_code": "16.07.001",
+          "title_tr": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi Müdürü",
+          "title_en": "Data Security, Privacy Engineering and Cryptography Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.07.01",
+            "name_tr": "Veri Güvenliği ve Kayıp Önleme",
+            "name_en": "Data Security and Loss Prevention",
+            "lead": {
+              "position_code": "16.07.01.001",
+              "title_tr": "Veri Güvenliği ve Kayıp Önleme Yöneticisi",
+              "title_en": "Data Security and Loss Prevention Manager",
+              "reports_to": "16.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.07.01.002",
+                "title_tr": "Kıdemli Veri Güvenliği Uzmanı",
+                "title_en": "Senior Data Security Specialist",
+                "reports_to": "16.07.01.001"
+              },
+              {
+                "position_code": "16.07.01.003",
+                "title_tr": "DLP Uzmanı",
+                "title_en": "DLP Specialist",
+                "reports_to": "16.07.01.001"
+              },
+              {
+                "position_code": "16.07.01.004",
+                "title_tr": "Veri Güvenliği Analisti",
+                "title_en": "Data Security Analyst",
+                "reports_to": "16.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri güvenliği ve DLP kontrol modelini yönetmek",
+              "Hassas veri keşfi, sınıflandırma ve hareket kontrollerini uygulamak",
+              "Veri sızıntısı uyarıları ve istisnalarını izlemek"
+            ]
+          },
+          {
+            "team_code": "16.07.02",
+            "name_tr": "Gizlilik Mühendisliği ve Teknik Kontroller",
+            "name_en": "Privacy Engineering and Technical Controls",
+            "lead": {
+              "position_code": "16.07.02.001",
+              "title_tr": "Gizlilik Mühendisliği ve Teknik Kontroller Yöneticisi",
+              "title_en": "Privacy Engineering and Technical Controls Manager",
+              "reports_to": "16.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.07.02.002",
+                "title_tr": "Kıdemli Gizlilik Mühendisliği Uzmanı",
+                "title_en": "Senior Privacy Engineering Specialist",
+                "reports_to": "16.07.02.001"
+              },
+              {
+                "position_code": "16.07.02.003",
+                "title_tr": "Gizlilik Teknolojileri Uzmanı",
+                "title_en": "Privacy Technologies Specialist",
+                "reports_to": "16.07.02.001"
+              },
+              {
+                "position_code": "16.07.02.004",
+                "title_tr": "Teknik Gizlilik Analisti",
+                "title_en": "Technical Privacy Analyst",
+                "reports_to": "16.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Privacy by design gereksinimlerini teknik çözümlere dönüştürmek",
+              "Maskeleme, anonimleştirme, minimizasyon ve saklama kontrollerini tasarlamak",
+              "KVKK süreçleri için teknik uygulama ve kanıtları Hukuk/Uyum ile koordine etmek"
+            ]
+          },
+          {
+            "team_code": "16.07.03",
+            "name_tr": "Kriptografi ve Anahtar Yönetimi",
+            "name_en": "Cryptography and Key Management",
+            "lead": {
+              "position_code": "16.07.03.001",
+              "title_tr": "Kriptografi ve Anahtar Yönetimi Yöneticisi",
+              "title_en": "Cryptography and Key Management Manager",
+              "reports_to": "16.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.07.03.002",
+                "title_tr": "Kıdemli Kriptografi Uzmanı",
+                "title_en": "Senior Cryptography Specialist",
+                "reports_to": "16.07.03.001"
+              },
+              {
+                "position_code": "16.07.03.003",
+                "title_tr": "Anahtar Yönetimi Uzmanı",
+                "title_en": "Key Management Specialist",
+                "reports_to": "16.07.03.001"
+              },
+              {
+                "position_code": "16.07.03.004",
+                "title_tr": "PKI Güvenliği Uzmanı",
+                "title_en": "PKI Security Specialist",
+                "reports_to": "16.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Şifreleme, sertifika ve kriptografik algoritma standartlarını yönetmek",
+              "HSM, PKI, sertifika ve anahtar yaşam döngüsünü güvence altına almak",
+              "Kriptografik envanter ve algoritma geçiş planlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "16.08",
+        "name_tr": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+        "name_en": "Vulnerability, Threat Intelligence and Security Awareness",
+        "manager": {
+          "position_code": "16.08.001",
+          "title_tr": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı Müdürü",
+          "title_en": "Vulnerability, Threat Intelligence and Security Awareness Manager",
+          "reports_to": "16.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "16.08.01",
+            "name_tr": "Güvenlik Açığı ve Maruziyet Yönetimi",
+            "name_en": "Vulnerability and Exposure Management",
+            "lead": {
+              "position_code": "16.08.01.001",
+              "title_tr": "Güvenlik Açığı ve Maruziyet Yönetimi Yöneticisi",
+              "title_en": "Vulnerability and Exposure Management Manager",
+              "reports_to": "16.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.08.01.002",
+                "title_tr": "Kıdemli Güvenlik Açığı Uzmanı",
+                "title_en": "Senior Vulnerability Specialist",
+                "reports_to": "16.08.01.001"
+              },
+              {
+                "position_code": "16.08.01.003",
+                "title_tr": "Maruziyet Yönetimi Uzmanı",
+                "title_en": "Exposure Management Specialist",
+                "reports_to": "16.08.01.001"
+              },
+              {
+                "position_code": "16.08.01.004",
+                "title_tr": "Zafiyet Analisti",
+                "title_en": "Vulnerability Analyst",
+                "reports_to": "16.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Varlık bazlı zafiyet tarama ve maruziyet görünürlüğünü yönetmek",
+              "Bulguları tehdit, kritiklik ve iş etkisine göre önceliklendirmek",
+              "Giderme SLA, istisna ve risk kabul süreçlerini izlemek"
+            ]
+          },
+          {
+            "team_code": "16.08.02",
+            "name_tr": "Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi",
+            "name_en": "Threat Intelligence and Attack Surface Management",
+            "lead": {
+              "position_code": "16.08.02.001",
+              "title_tr": "Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi Yöneticisi",
+              "title_en": "Threat Intelligence and Attack Surface Management Manager",
+              "reports_to": "16.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.08.02.002",
+                "title_tr": "Kıdemli Tehdit İstihbaratı Uzmanı",
+                "title_en": "Senior Threat Intelligence Specialist",
+                "reports_to": "16.08.02.001"
+              },
+              {
+                "position_code": "16.08.02.003",
+                "title_tr": "Saldırı Yüzeyi Yönetimi Uzmanı",
+                "title_en": "Attack Surface Management Specialist",
+                "reports_to": "16.08.02.001"
+              },
+              {
+                "position_code": "16.08.02.004",
+                "title_tr": "Dijital Risk Analisti",
+                "title_en": "Digital Risk Analyst",
+                "reports_to": "16.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Stratejik, operasyonel ve taktik tehdit istihbaratı üretmek",
+              "Dış saldırı yüzeyi, marka suistimali ve sızdırılmış kimlikleri izlemek",
+              "İstihbaratı tespit, risk ve kontrol önceliklerine aktarmak"
+            ]
+          },
+          {
+            "team_code": "16.08.03",
+            "name_tr": "Güvenlik Kültürü, Farkındalık ve Tatbikat",
+            "name_en": "Security Culture, Awareness and Exercises",
+            "lead": {
+              "position_code": "16.08.03.001",
+              "title_tr": "Güvenlik Kültürü, Farkındalık ve Tatbikat Yöneticisi",
+              "title_en": "Security Culture, Awareness and Exercises Manager",
+              "reports_to": "16.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "16.08.03.002",
+                "title_tr": "Kıdemli Güvenlik Farkındalık Uzmanı",
+                "title_en": "Senior Security Awareness Specialist",
+                "reports_to": "16.08.03.001"
+              },
+              {
+                "position_code": "16.08.03.003",
+                "title_tr": "Güvenlik Kültürü Uzmanı",
+                "title_en": "Security Culture Specialist",
+                "reports_to": "16.08.03.001"
+              },
+              {
+                "position_code": "16.08.03.004",
+                "title_tr": "Siber Tatbikat Koordinatörü",
+                "title_en": "Cyber Exercise Coordinator",
+                "reports_to": "16.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Rol bazlı siber güvenlik farkındalık programlarını yürütmek",
+              "Kimlik avı simülasyonları ve davranış göstergelerini yönetmek",
+              "Masa başı, kırmızı takım ve kriz tatbikatlarını koordine etmek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Kritik Güvenlik Olayı Sayısı",
+        "Ortalama Tespit Süresi (MTTD)",
+        "Ortalama Müdahale Süresi (MTTR)",
+        "Kritik Zafiyet Kapanış Süresi",
+        "Kritik Varlık Güvenlik Kontrol Kapsamı",
+        "EDR/SIEM Log Kapsama Oranı",
+        "MFA ve PAM Kapsama Oranı",
+        "Erişim Gözden Geçirme Tamamlama Oranı",
+        "Kimlik Avı Simülasyonu Başarısızlık Oranı",
+        "Üçüncü Taraf Yüksek Risk Bulgu Sayısı",
+        "SSDLC Güvenlik Kapısı Uyum Oranı",
+        "DLP Olayı Kapanış Süresi",
+        "BGYS Denetim Bulgu Kapanış Oranı",
+        "Siber Tatbikat Aksiyon Kapanış Oranı",
+        "Siber Risk Azaltma Planı Gerçekleşme Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük Güvenlik Operasyon Toplantısı",
+          "focus": "Kritik alarmlar, olaylar, tehditler ve zafiyetler"
+        },
+        {
+          "forum": "Haftalık Siber Risk ve Aksiyon Toplantısı",
+          "focus": "Yüksek riskler, bulgular, güvenlik projeleri ve istisnalar"
+        },
+        {
+          "forum": "Aylık Bilgi Güvenliği Yönetişim Kurulu",
+          "focus": "KPI, BGYS, risk kabulü, üçüncü taraf ve güvenlik yatırımları"
+        },
+        {
+          "forum": "Çeyreklik Yönetim Kurulu Siber Risk Raporlaması",
+          "focus": "Tehdit görünümü, önemli olaylar, risk iştahı, dayanıklılık ve yatırım kararları"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "information_technology": "Siber Güvenlik departmanı politika, risk, mimari, güvenlik gereksinimi, izleme ve güvence sahibidir. BT; güvenlik kontrollerinin altyapı, uygulama ve platformlarda teknik uygulanması ile günlük teknoloji işletiminin sahibidir.",
+      "compliance_risk": "Uyum ve Kurumsal Risk kurumsal risk metodolojisi ve mevzuat uyum gözetiminin; CISO siber risk metodolojisi, teknik güvenlik kontrolleri ve siber risk raporlamasının sahibidir.",
+      "legal_privacy": "Hukuk ve KVKK fonksiyonları hukuki yorum, veri sorumlusu yükümlülükleri ve ilgili kişi süreçlerinin; CISO gizlilik mühendisliği, teknik veri koruma ve olay teknik incelemesinin sahibidir.",
+      "internal_audit": "İç Denetim bağımsız üçüncü hat güvence sağlar. CISO birinci/ikinci hat güvenlik yönetimi, kontrol işletimi ve iyileştirme aksiyonlarının sahibidir.",
+      "business_units": "İş birimleri bilgi varlığı ve iş riski sahipliğini taşır. CISO güvenlik risk değerlendirmesi, kontrol gereksinimi ve eskalasyon sağlar.",
+      "product_engineering": "Ürün ve Yazılım ekipleri güvenli ürün geliştirme ve bulgu düzeltmenin; CISO SSDLC standardı, güvenlik testi, tehdit modelleme ve güvence kapılarının sahibidir.",
+      "human_resources": "İnsan Kaynakları çalışan yaşam döngüsü ve disiplin süreçlerinin; CISO rol bazlı güvenlik farkındalığı ve erişim güvenliği gereksinimlerinin sahibidir.",
+      "corporate_communications": "Kurumsal İletişim dış paydaş ve medya iletişiminin; CISO siber olay teknik içerik, etki ve güvenlik bildirim girdilerinin sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; çalışan ve kullanıcı sayısı, dijital hizmet kritiklik seviyesi, veri hassasiyeti, regülasyon yükü, bulut ve uygulama portföyü, 7/24 SOC ihtiyacı, üçüncü taraf ekosistemi ve tehdit profiline göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 CISO/direktör + 8 birim müdürü + 24 ekip yöneticisi; mühendis, analist ve uzman kadroları güvenlik operasyon hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Kritik bilgi varlığı sayısı",
+        "Kullanıcı, müşteri ve kimlik sayısı",
+        "Uygulama, API ve bulut hesabı sayısı",
+        "Güvenlik olayı ve alarm hacmi",
+        "Zafiyet ve maruziyet hacmi",
+        "Regülasyon ve sertifikasyon kapsamı",
+        "Üçüncü taraf ve tedarikçi sayısı",
+        "7/24 izleme ve müdahale gereksinimi"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Siber güvenlik yalnızca BT'nin teknik görevi değil; yönetim kurulu seviyesinde sahiplenilen, iş riskiyle bütünleşik ve varsayılan olarak güvenli çalışan kurumsal bir yönetişim disiplinidir."
+    }
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Siber güvenlik ve bilgi güvenliği stratejisini ve yol haritasını oluşturmak",
+        "Güvenlik politikalarını, standartlarını ve ISO 27001 uyumlu bilgi güvenliği yönetim sistemini yönetmek",
+        "Siber risk metodolojisini, bilgi varlığı sınıflandırmasını ve üçüncü taraf güvenlik değerlendirmelerini yürütmek",
+        "Zero Trust ilkelerine dayalı güvenlik mimarisini ve güvenlik platformlarını tasarlamak",
+        "Güvenlik olaylarını 7/24 izlemek, siber olay müdahalesini ve dijital adli incelemeyi yönetmek",
+        "Kimlik, erişim, uygulama, veri ve kriptografi güvenliği gereksinimlerini belirlemek ve güvence altına almak",
+        "Güvenlik açığı, tehdit istihbaratı, farkındalık ve tatbikat programlarını yürütmek",
+        "Yönetim kuruluna ve komitelerine siber risk, olay ve güvenlik olgunluğu hakkında bağımsız raporlama yapmak"
+      ],
+      "authorities": [
+        "Bilgi güvenliği politikasını ve siber güvenlik stratejisini üst yönetim onayına sunar",
+        "Güvenlik standartlarını ve teknik güvenlik gereksinimlerini belirler",
+        "Güvenlik güvence kapılarını karşılamayan sürümün yayınını durdurabilir",
+        "Aktif siber olayda sistem izolasyonu ve hesap askıya alma gibi acil müdahale tedbirlerini başlatır",
+        "Güvenlik riski değerlendirmesini yapar ve risk kabulü taleplerini risk sahibine ve yönetime eskale eder",
+        "Tedarikçi siber güvenlik değerlendirmesi sonucunda Satın Almaya, Hukuka ve konsolide üçüncü taraf risk sınıfı için Uyum ve Risk'e görüş verir",
+        "Yönetim Kurulu Risk ve Denetim Komitelerine doğrudan siber risk raporu sunar"
+      ],
+      "collaborations": [
+        {
+          "department": "15 - Bilgi Teknolojileri",
+          "unit": "",
+          "topic": "Güvenlik kontrollerinin altyapı, uygulama ve platformlarda teknik uygulanması"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "Kurumsal Risk Yönetimi",
+          "topic": "Siber risklerin kurumsal risk metodolojisine entegrasyonu ve ikinci hat gözetimi"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "KVKK ve Veri Koruma Hukuku",
+          "topic": "Veri koruma yükümlülüklerinin hukuki yorumu ve ihlal bildirimleri"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "BT, Siber Güvenlik ve Veri Denetimi",
+          "topic": "Siber güvenlik kontrol denetimleri ve bulgu aksiyonları"
+        },
+        {
+          "department": "18 - Ürün Yönetimi ve Ar-Ge",
+          "unit": "Ürün Yönetimi ve Ürün Alanları",
+          "topic": "Güvenli ürün geliştirme, tehdit modelleme ve güvenlik bulgularının giderilmesi"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "",
+          "topic": "Çalışan yaşam döngüsünde erişim güvenliği, farkındalık ve disiplin süreçleri"
+        },
+        {
+          "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+          "unit": "İtibar, Gündem ve Kriz İletişimi",
+          "topic": "Siber olaylarda teknik içerik, etki bilgisi ve paydaş bildirimleri"
+        },
+        {
+          "department": "22 - Kurumsal Güvenlik",
+          "unit": "Güvenlik Teknolojileri ve Sistemleri",
+          "topic": "Fiziksel güvenlik sistemlerinin siber güvenliği ve ortak olay yönetimi"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Tedarikçi seçiminde güvenlik ön değerlendirmesi ve sözleşmesel güvenlik şartları"
+        }
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü / CISO",
+          "title_tr": "Siber Güvenlik ve Bilgi Güvenliği Direktörü (CISO)",
+          "title_en": "Cybersecurity and Information Security Director (CISO)"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Manager / Lead"
+        },
+        {
+          "level": "Kıdemli Uzman",
+          "title_tr": "Kıdemli Uzman / Kıdemli Mühendis / Kıdemli Mimar",
+          "title_en": "Senior Specialist / Senior Engineer / Senior Architect"
+        },
+        {
+          "level": "Uzman",
+          "title_tr": "Uzman / Mühendis / Mimar",
+          "title_en": "Specialist / Engineer / Architect"
+        },
+        {
+          "level": "Analist / Koordinatör",
+          "title_tr": "Analist / Koordinatör",
+          "title_en": "Analyst / Coordinator"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 51,
+          "max": 109
+        },
+        {
+          "model": "Standart",
+          "min": 109,
+          "max": 221
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 221,
+          "max": 313
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 109,
+        "total_max": 221,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 24,
+            "max": 48
+          },
+          {
+            "role_group": "Uzman",
+            "min": 32,
+            "max": 96
+          },
+          {
+            "role_group": "Analist",
+            "min": 18,
+            "max": 40
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 2,
+            "max": 4
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "16.01",
+        "name_tr": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum",
+        "responsibilities": [
+          "Bilgi ve siber güvenlik stratejisini ve yol haritasını oluşturmak",
+          "Güvenlik politika, standart ve karar kurullarını yönetmek",
+          "ISO 27001 uyumlu BGYS'yi kurmak ve sürdürmek",
+          "Yönetimin gözden geçirmesini ve sertifikasyon hazırlığını koordine etmek",
+          "Mevzuat, sözleşme ve standart gerekliliklerini güvenlik kontrollerine dönüştürmek",
+          "Kontrol tasarımı ve işleyiş kanıtlarını değerlendirerek uyum boşluklarını izlemek"
+        ],
+        "authorities": [
+          "Güvenlik politika ve standart taslaklarını hazırlar ve güvenlik kuruluna sunar",
+          "BGYS kapsamını, kontrol setini ve uygulanabilirlik bildirgesini belirler",
+          "Kontrol kanıtlarının yeterliliğini değerlendirir ve eksiklikler için aksiyon talep eder",
+          "Güvenlik KPI tanımlarını ve olgunluk değerlendirme yöntemini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+            "topic": "Risk değerlendirme sonuçlarının kontrol setine ve yol haritasına aktarımı"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Mevzuat Uyum Yönetimi",
+            "topic": "Güvenlik mevzuatı gerekliliklerinin uyum programına bağlanması"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "BT, Siber Güvenlik ve Veri Denetimi",
+            "topic": "BGYS kontrolleri, denetim kanıtları ve bulgu takibi"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Yönetim Sistemi ve Strateji",
+            "topic": "BGYS ile kalite yönetim sistemi doküman ve kayıt yapısının uyumu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Yönetim kurulu ve komitelere siber güvenlik raporlaması"
+          }
+        ],
+        "kpis": [
+          "BGYS Denetim Bulgu Kapanış Oranı",
+          "Güvenlik Politikası Güncellik Oranı",
+          "Kontrol Etkinlik Testi Başarı Oranı",
+          "Siber Güvenlik Olgunluk Skoru",
+          "Açık Uyum Boşluğu Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum Müdürü",
+            "title_en": "Information Security Strategy, Governance and Compliance Manager"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bilgi Güvenliği Stratejisi ve Yönetişim Yöneticisi",
+            "title_en": "Information Security Strategy and Governance Manager"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/kidemli-bilgi-guvenligi-stratejisi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Bilgi Güvenliği Stratejisi Uzmanı",
+            "title_en": "Senior Information Security Strategy Specialist"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/bilgi-guvenligi-yonetisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bilgi Güvenliği Yönetişim Uzmanı",
+            "title_en": "Information Security Governance Specialist"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/siber-guvenlik-performans-analisti",
+            "level": "Analist",
+            "title_tr": "Siber Güvenlik Performans Analisti",
+            "title_en": "Cybersecurity Performance Analyst"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bilgi Güvenliği Yönetim Sistemi Yöneticisi",
+            "title_en": "Information Security Management System Manager"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/kidemli-bgys-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli BGYS Uzmanı",
+            "title_en": "Senior ISMS Specialist"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/bgys-uzmani",
+            "level": "Uzman",
+            "title_tr": "BGYS Uzmanı",
+            "title_en": "ISMS Specialist"
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/bilgi-guvenligi-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bilgi Güvenliği Dokümantasyon Uzmanı",
+            "title_en": "Information Security Documentation Specialist"
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenlik Uyum ve Kontrol Güvencesi Yöneticisi",
+            "title_en": "Security Compliance and Control Assurance Manager"
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/kidemli-guvenlik-uyum-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Uyum Uzmanı",
+            "title_en": "Senior Security Compliance Specialist"
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/guvenlik-kontrol-guvence-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenlik Kontrol Güvence Uzmanı",
+            "title_en": "Security Control Assurance Specialist"
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/guvenlik-uyum-analisti",
+            "level": "Analist",
+            "title_tr": "Güvenlik Uyum Analisti",
+            "title_en": "Security Compliance Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.01",
+            "title_tr": "Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim",
+            "title_tr": "Bilgi Güvenliği Stratejisi ve Yönetişim Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/kidemli-bilgi-guvenligi-stratejisi-uzmani",
+            "title_tr": "Kıdemli Bilgi Güvenliği Stratejisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/bilgi-guvenligi-yonetisim-uzmani",
+            "title_tr": "Bilgi Güvenliği Yönetişim Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-stratejisi-ve-yonetisim/siber-guvenlik-performans-analisti",
+            "title_tr": "Siber Güvenlik Performans Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi",
+            "title_tr": "Bilgi Güvenliği Yönetim Sistemi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/kidemli-bgys-uzmani",
+            "title_tr": "Kıdemli BGYS Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/bgys-uzmani",
+            "title_tr": "BGYS Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.01/bilgi-guvenligi-yonetim-sistemi/bilgi-guvenligi-dokumantasyon-uzmani",
+            "title_tr": "Bilgi Güvenliği Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi",
+            "title_tr": "Güvenlik Uyum ve Kontrol Güvencesi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/kidemli-guvenlik-uyum-uzmani",
+            "title_tr": "Kıdemli Güvenlik Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/guvenlik-kontrol-guvence-uzmani",
+            "title_tr": "Güvenlik Kontrol Güvence Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.01/guvenlik-uyum-ve-kontrol-guvencesi/guvenlik-uyum-analisti",
+            "title_tr": "Güvenlik Uyum Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "16.02",
+        "name_tr": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+        "responsibilities": [
+          "Siber risk metodolojisini ve risk kayıtlarını yönetmek",
+          "Tehdit, zafiyet, etki ve kontrol etkinliğini değerlendirmek",
+          "Risk kabulü, azaltma ve eskalasyon süreçlerini koordine etmek",
+          "Bilgi varlığı sahipliği ve sınıflandırma modelini yönetmek",
+          "Varlık envanteri ile güvenlik kontrollerinin eşleşmesini izlemek",
+          "Tedarikçi güvenlik ön değerlendirmelerini yürütmek ve üçüncü taraf iyileştirme planlarını izlemek"
+        ],
+        "authorities": [
+          "Siber risk derecelendirme ölçütlerini kurumsal risk metodolojisiyle uyumlu belirler",
+          "Risk kabulü taleplerini değerlendirir ve karar için risk sahibine ve yönetime eskale eder",
+          "Bilgi varlığı sınıflandırma modelini ve kritiklik ölçütlerini belirler",
+          "Yüksek riskli tedarikçi için güvenlik görüşünü Satın Alma ve Hukuka sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Kurumsal Risk Yönetimi",
+            "topic": "Siber risklerin kurumsal risk kaydına ve raporlamasına aktarımı"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+            "topic": "Üçüncü taraf risk değerlendirmeleri ve uyum incelemeleri"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi seçiminde güvenlik ön değerlendirmesi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Sözleşmesel güvenlik gerekliliklerinin tanımlanması"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "Varlık envanteri, CMDB ve güvenlik kontrol eşleşmesi"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+            "topic": "Tehdit ve zafiyet verisinin risk değerlendirmelerine aktarımı"
+          }
+        ],
+        "kpis": [
+          "Siber Risk Azaltma Planı Gerçekleşme Oranı",
+          "Üçüncü Taraf Yüksek Risk Bulgu Sayısı",
+          "Sınıflandırılmış Kritik Varlık Oranı",
+          "Süresi Dolmuş Risk Kabulü Sayısı",
+          "Tedarikçi Güvenlik Değerlendirmesi Tamamlanma Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği Müdürü",
+            "title_en": "Cyber Risk, Asset and Third-Party Security Manager"
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Siber Risk Yönetimi Yöneticisi",
+            "title_en": "Cyber Risk Management Manager"
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/kidemli-siber-risk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Siber Risk Uzmanı",
+            "title_en": "Senior Cyber Risk Specialist"
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/siber-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Siber Risk Uzmanı",
+            "title_en": "Cyber Risk Specialist"
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/siber-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Siber Risk Analisti",
+            "title_en": "Cyber Risk Analyst"
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bilgi Varlığı ve Güvenlik Sınıflandırma Yöneticisi",
+            "title_en": "Information Asset and Security Classification Manager"
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/kidemli-bilgi-varligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Bilgi Varlığı Uzmanı",
+            "title_en": "Senior Information Asset Specialist"
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/bilgi-siniflandirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bilgi Sınıflandırma Uzmanı",
+            "title_en": "Information Classification Specialist"
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/varlik-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Varlık Risk Analisti",
+            "title_en": "Asset Risk Analyst"
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi ve Üçüncü Taraf Güvenliği Yöneticisi",
+            "title_en": "Supplier and Third-Party Security Manager"
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/kidemli-ucuncu-taraf-guvenlik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Üçüncü Taraf Güvenlik Uzmanı",
+            "title_en": "Senior Third-Party Security Specialist"
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/tedarikci-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Güvenliği Uzmanı",
+            "title_en": "Supplier Security Specialist"
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/ucuncu-taraf-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Üçüncü Taraf Risk Analisti",
+            "title_en": "Third-Party Risk Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.02",
+            "title_tr": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi",
+            "title_tr": "Siber Risk Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/kidemli-siber-risk-uzmani",
+            "title_tr": "Kıdemli Siber Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/siber-risk-uzmani",
+            "title_tr": "Siber Risk Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.02/siber-risk-yonetimi/siber-risk-analisti",
+            "title_tr": "Siber Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma",
+            "title_tr": "Bilgi Varlığı ve Güvenlik Sınıflandırma Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/kidemli-bilgi-varligi-uzmani",
+            "title_tr": "Kıdemli Bilgi Varlığı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/bilgi-siniflandirma-uzmani",
+            "title_tr": "Bilgi Sınıflandırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.02/bilgi-varligi-ve-guvenlik-siniflandirma/varlik-risk-analisti",
+            "title_tr": "Varlık Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi",
+            "title_tr": "Tedarikçi ve Üçüncü Taraf Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/kidemli-ucuncu-taraf-guvenlik-uzmani",
+            "title_tr": "Kıdemli Üçüncü Taraf Güvenlik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/tedarikci-guvenligi-uzmani",
+            "title_tr": "Tedarikçi Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.02/tedarikci-ve-ucuncu-taraf-guvenligi/ucuncu-taraf-risk-analisti",
+            "title_tr": "Üçüncü Taraf Risk Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "16.03",
+        "name_tr": "Güvenlik Mimarisi ve Mühendisliği",
+        "responsibilities": [
+          "Zero Trust ve katmanlı güvenlik mimarisini oluşturmak",
+          "Teknoloji projelerini güvenlik mimarisi açısından değerlendirmek",
+          "Ağ, bulut ve uç nokta güvenlik kontrol tasarımlarını yönetmek",
+          "Güvenli yapılandırma ve sertleştirme standartlarını belirlemek",
+          "SIEM, SOAR, EDR, DLP ve diğer güvenlik platformlarını tasarlamak",
+          "Güvenlik kullanım senaryolarını, otomasyon akışlarını ve kural yaşam döngüsünü yönetmek"
+        ],
+        "authorities": [
+          "Güvenlik mimarisi desenlerini, standartlarını ve sertleştirme kılavuzlarını belirler",
+          "Teknoloji projelerinin güvenlik mimarisi uygunluğunu onaylar veya düzeltme ister",
+          "Güvenlik mimarisi istisnalarını değerlendirir ve risk sahibinin kararına sunar",
+          "Güvenlik platformu yatırım ve kapasite ihtiyaçlarını onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Stratejisi, Yönetişim ve Kurumsal Mimari",
+            "topic": "Kurumsal mimari ile güvenlik mimarisinin uyumu ve proje değerlendirmeleri"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Bulut ve sunucu güvenlik kontrollerinin teknik uygulanması"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Ağ, İletişim ve Dijital İşyeri",
+            "topic": "Ağ segmentasyonu ve uç nokta güvenlik kontrollerinin uygulanması"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Tespit kullanım senaryoları, SOAR akışları ve platform ihtiyaçları"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Güvenlik Teknolojileri ve Sistemleri",
+            "topic": "Fiziksel güvenlik sistemlerinin ağ ve platform güvenliği"
+          }
+        ],
+        "kpis": [
+          "Kritik Varlık Güvenlik Kontrol Kapsamı",
+          "EDR/SIEM Log Kapsama Oranı",
+          "Sertleştirme Standardına Uyum Oranı",
+          "Güvenlik Mimari İncelemesinden Geçen Proje Oranı",
+          "Otomasyonla Kapatılan Alarm Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Güvenlik Mimarisi ve Mühendisliği Müdürü",
+            "title_en": "Security Architecture and Engineering Manager"
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Güvenlik Mimarisi Yöneticisi",
+            "title_en": "Enterprise Security Architecture Manager"
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/kidemli-guvenlik-mimari",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Mimarı",
+            "title_en": "Senior Security Architect"
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/guvenlik-mimari",
+            "level": "Uzman",
+            "title_tr": "Güvenlik Mimarı",
+            "title_en": "Security Architect"
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/guvenlik-tasarim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenlik Tasarım Uzmanı",
+            "title_en": "Security Design Specialist"
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ağ, Bulut ve Uç Nokta Güvenliği Yöneticisi",
+            "title_en": "Network, Cloud and Endpoint Security Manager"
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/kidemli-guvenlik-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Mühendisi",
+            "title_en": "Senior Security Engineer"
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/bulut-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bulut Güvenliği Uzmanı",
+            "title_en": "Cloud Security Specialist"
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/uc-nokta-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uç Nokta Güvenliği Uzmanı",
+            "title_en": "Endpoint Security Specialist"
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenlik Platformları ve Otomasyon Yöneticisi",
+            "title_en": "Security Platforms and Automation Manager"
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/kidemli-guvenlik-platform-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Platform Mühendisi",
+            "title_en": "Senior Security Platform Engineer"
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/guvenlik-otomasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenlik Otomasyon Uzmanı",
+            "title_en": "Security Automation Specialist"
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/soar-muhendisi",
+            "level": "Uzman",
+            "title_tr": "SOAR Mühendisi",
+            "title_en": "SOAR Engineer"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.03",
+            "title_tr": "Güvenlik Mimarisi ve Mühendisliği Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi",
+            "title_tr": "Kurumsal Güvenlik Mimarisi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/kidemli-guvenlik-mimari",
+            "title_tr": "Kıdemli Güvenlik Mimarı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/guvenlik-mimari",
+            "title_tr": "Güvenlik Mimarı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.03/kurumsal-guvenlik-mimarisi/guvenlik-tasarim-uzmani",
+            "title_tr": "Güvenlik Tasarım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi",
+            "title_tr": "Ağ, Bulut ve Uç Nokta Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/kidemli-guvenlik-muhendisi",
+            "title_tr": "Kıdemli Güvenlik Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/bulut-guvenligi-uzmani",
+            "title_tr": "Bulut Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.03/ag-bulut-ve-uc-nokta-guvenligi/uc-nokta-guvenligi-uzmani",
+            "title_tr": "Uç Nokta Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon",
+            "title_tr": "Güvenlik Platformları ve Otomasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/kidemli-guvenlik-platform-muhendisi",
+            "title_tr": "Kıdemli Güvenlik Platform Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/guvenlik-otomasyon-uzmani",
+            "title_tr": "Güvenlik Otomasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.03/guvenlik-platformlari-ve-otomasyon/soar-muhendisi",
+            "title_tr": "SOAR Mühendisi",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "16.04",
+        "name_tr": "Güvenlik Operasyonları ve Olay Müdahale",
+        "responsibilities": [
+          "Güvenlik olaylarını 7/24 izlemek ve sınıflandırmak",
+          "Alarm önceliklendirme, doğrulama ve eskalasyon süreçlerini yürütmek",
+          "Siber olay müdahale planını ve kriz koordinasyonunu yürütmek",
+          "İzolasyon, temizleme, kurtarma ve delil koruma faaliyetlerini yönetmek",
+          "Olay sonrası kök neden ve öğrenilen ders çalışmalarını tamamlamak",
+          "Proaktif tehdit avcılığı yürüterek tespit kurallarını MITRE ATT&CK bazında geliştirmek"
+        ],
+        "authorities": [
+          "Alarm önceliklendirme ve olay sınıflandırma kurallarını belirler",
+          "Siber olay ilan eder ve olay müdahale ekibini devreye alır",
+          "Aktif olayda sistem izolasyonu ve hesap askıya alma gibi acil tedbirleri başlatır",
+          "Dijital delil toplama ve adli kopya yöntemini Kurumsal Güvenliğin gözetim zinciri standardına uygun belirler",
+          "Olay bildirimine ilişkin teknik etki değerlendirmesini Hukuk ve Kurumsal İletişime sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "BT Hizmet Yönetimi ve Kullanıcı Destek",
+            "topic": "Güvenlik olaylarının BT olay yönetimiyle koordinasyonu"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Olay sırasında izolasyon, kurtarma ve log kaynakları"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "KVKK ve Veri Koruma Hukuku",
+            "topic": "Kişisel veri ihlallerinde hukuki değerlendirme ve bildirim yükümlülükleri"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "Siber olaylarda teknik içerik ve kriz iletişimi girdileri"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Güvenlik İstihbaratı ve Soruşturmalar",
+            "topic": "İçeriden tehdit ve soruşturmalarda dijital delil desteği"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+            "topic": "Tehdit istihbaratının tespit ve müdahale önceliklerine aktarımı"
+          }
+        ],
+        "kpis": [
+          "Ortalama Tespit Süresi (MTTD)",
+          "Ortalama Müdahale Süresi (MTTR)",
+          "Kritik Güvenlik Olayı Sayısı",
+          "Yanlış Pozitif Oranı",
+          "MITRE ATT&CK Tespit Kapsamı",
+          "Olay Sonrası Aksiyon Kapanış Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Güvenlik Operasyonları ve Olay Müdahale Müdürü",
+            "title_en": "Security Operations and Incident Response Manager"
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenlik Operasyon Merkezi Yöneticisi",
+            "title_en": "Security Operations Center Manager"
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/kidemli-soc-analisti",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli SOC Analisti",
+            "title_en": "Senior SOC Analyst"
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/soc-analisti",
+            "level": "Analist",
+            "title_tr": "SOC Analisti",
+            "title_en": "SOC Analyst"
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/guvenlik-izleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenlik İzleme Uzmanı",
+            "title_en": "Security Monitoring Specialist"
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Siber Olay Müdahale ve Dijital Adli İnceleme Yöneticisi",
+            "title_en": "Cyber Incident Response and Digital Forensics Manager"
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/kidemli-olay-mudahale-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Olay Müdahale Uzmanı",
+            "title_en": "Senior Incident Response Specialist"
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/dijital-adli-inceleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dijital Adli İnceleme Uzmanı",
+            "title_en": "Digital Forensics Specialist"
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/siber-olay-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Siber Olay Koordinatörü",
+            "title_en": "Cyber Incident Coordinator"
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tehdit Avcılığı ve Tespit Mühendisliği Yöneticisi",
+            "title_en": "Threat Hunting and Detection Engineering Manager"
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/kidemli-tehdit-avcisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tehdit Avcısı",
+            "title_en": "Senior Threat Hunter"
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/tespit-muhendisi",
+            "level": "Uzman",
+            "title_tr": "Tespit Mühendisi",
+            "title_en": "Detection Engineer"
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/siber-tehdit-analisti",
+            "level": "Analist",
+            "title_tr": "Siber Tehdit Analisti",
+            "title_en": "Cyber Threat Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 17
+          },
+          {
+            "model": "Standart",
+            "min": 17,
+            "max": 38
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 38,
+            "max": 54
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.04",
+            "title_tr": "Güvenlik Operasyonları ve Olay Müdahale Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi",
+            "title_tr": "Güvenlik Operasyon Merkezi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/kidemli-soc-analisti",
+            "title_tr": "Kıdemli SOC Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/soc-analisti",
+            "title_tr": "SOC Analisti",
+            "min": 4,
+            "max": 12
+          },
+          {
+            "position": "16.04/guvenlik-operasyon-merkezi/guvenlik-izleme-uzmani",
+            "title_tr": "Güvenlik İzleme Uzmanı",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme",
+            "title_tr": "Siber Olay Müdahale ve Dijital Adli İnceleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/kidemli-olay-mudahale-uzmani",
+            "title_tr": "Kıdemli Olay Müdahale Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/dijital-adli-inceleme-uzmani",
+            "title_tr": "Dijital Adli İnceleme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.04/siber-olay-mudahale-ve-dijital-adli-inceleme/siber-olay-koordinatoru",
+            "title_tr": "Siber Olay Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi",
+            "title_tr": "Tehdit Avcılığı ve Tespit Mühendisliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/kidemli-tehdit-avcisi",
+            "title_tr": "Kıdemli Tehdit Avcısı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/tespit-muhendisi",
+            "title_tr": "Tespit Mühendisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.04/tehdit-avciligi-ve-tespit-muhendisligi/siber-tehdit-analisti",
+            "title_tr": "Siber Tehdit Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "16.05",
+        "name_tr": "Kimlik ve Erişim Güvenliği",
+        "responsibilities": [
+          "Kimlik ve erişim politika, rol ve sorumluluk modelini yönetmek",
+          "İşe giriş, rol değişikliği ve işten çıkış erişim süreçlerini güvence altına almak",
+          "Periyodik erişim gözden geçirme ve görevler ayrılığı kontrollerini yürütmek",
+          "Ayrıcalıklı hesap, kasa, oturum ve parola kontrollerini yönetmek",
+          "MFA, SSO, federasyon ve kimlik doğrulama standartlarını yönetmek",
+          "Müşteri kimliği güvenliği gereksinimlerini belirleyerek hesap ele geçirme risklerini izlemek"
+        ],
+        "authorities": [
+          "Kimlik doğrulama ve erişim güvenliği standartlarını belirler",
+          "Ayrıcalıklı hesap tanımlarını ve kalıcı yetki istisnalarını onaylar",
+          "Erişim gözden geçirmesinde onaylanmayan yetkilerin kaldırılmasını talep eder",
+          "Şüpheli ayrıcalıklı oturumu sonlandırır ve ilgili hesabı askıya alır"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "İşe giriş, görev değişikliği ve işten çıkış bilgilerinin erişim süreçlerine aktarımı"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Uygulama rolleri, yetki tanımları ve erişim otomasyonu"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İç Kontrol ve Görevler Ayrılığı",
+            "topic": "Görevler ayrılığı ve erişim kontrollerinin ikinci hat gözetimi"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Yönetimi ve Ürün Alanları",
+            "topic": "Müşteri kimlik doğrulama gereksinimlerinin ürünlere yansıtılması"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Kimlik tabanlı tehditlerin izlenmesi ve hesap ele geçirme olayları"
+          }
+        ],
+        "kpis": [
+          "MFA ve PAM Kapsama Oranı",
+          "Erişim Gözden Geçirme Tamamlama Oranı",
+          "İşten Çıkışta Erişim Kapatma Süresi",
+          "Yetim ve Pasif Hesap Sayısı",
+          "Görevler Ayrılığı İhlali Sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Kimlik ve Erişim Güvenliği Müdürü",
+            "title_en": "Identity and Access Security Manager"
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kimlik ve Erişim Yönetişimi Yöneticisi",
+            "title_en": "Identity and Access Governance Manager"
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/kidemli-kimlik-ve-erisim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kimlik ve Erişim Uzmanı",
+            "title_en": "Senior Identity and Access Specialist"
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/erisim-yonetisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Erişim Yönetişimi Uzmanı",
+            "title_en": "Access Governance Specialist"
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/yetki-analisti",
+            "level": "Analist",
+            "title_tr": "Yetki Analisti",
+            "title_en": "Entitlement Analyst"
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ayrıcalıklı Erişim ve Kimlik Güvenliği Yöneticisi",
+            "title_en": "Privileged Access and Identity Security Manager"
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/kidemli-pam-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli PAM Uzmanı",
+            "title_en": "Senior PAM Specialist"
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/ayricalikli-erisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ayrıcalıklı Erişim Uzmanı",
+            "title_en": "Privileged Access Specialist"
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/kimlik-guvenligi-analisti",
+            "level": "Analist",
+            "title_tr": "Kimlik Güvenliği Analisti",
+            "title_en": "Identity Security Analyst"
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kimlik Doğrulama ve Müşteri Kimliği Güvenliği Yöneticisi",
+            "title_en": "Authentication and Customer Identity Security Manager"
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/kidemli-kimlik-dogrulama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kimlik Doğrulama Uzmanı",
+            "title_en": "Senior Authentication Specialist"
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/ciam-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "CIAM Güvenliği Uzmanı",
+            "title_en": "CIAM Security Specialist"
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/federasyon-ve-sso-uzmani",
+            "level": "Uzman",
+            "title_tr": "Federasyon ve SSO Uzmanı",
+            "title_en": "Federation and SSO Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.05",
+            "title_tr": "Kimlik ve Erişim Güvenliği Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi",
+            "title_tr": "Kimlik ve Erişim Yönetişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/kidemli-kimlik-ve-erisim-uzmani",
+            "title_tr": "Kıdemli Kimlik ve Erişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/erisim-yonetisimi-uzmani",
+            "title_tr": "Erişim Yönetişimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.05/kimlik-ve-erisim-yonetisimi/yetki-analisti",
+            "title_tr": "Yetki Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi",
+            "title_tr": "Ayrıcalıklı Erişim ve Kimlik Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/kidemli-pam-uzmani",
+            "title_tr": "Kıdemli PAM Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/ayricalikli-erisim-uzmani",
+            "title_tr": "Ayrıcalıklı Erişim Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.05/ayricalikli-erisim-ve-kimlik-guvenligi/kimlik-guvenligi-analisti",
+            "title_tr": "Kimlik Güvenliği Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi",
+            "title_tr": "Kimlik Doğrulama ve Müşteri Kimliği Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/kidemli-kimlik-dogrulama-uzmani",
+            "title_tr": "Kıdemli Kimlik Doğrulama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/ciam-guvenligi-uzmani",
+            "title_tr": "CIAM Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.05/kimlik-dogrulama-ve-musteri-kimligi-guvenligi/federasyon-ve-sso-uzmani",
+            "title_tr": "Federasyon ve SSO Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "16.06",
+        "name_tr": "Uygulama Güvenliği ve DevSecOps",
+        "responsibilities": [
+          "SSDLC politikasını, kontrol kapılarını ve güvenlik gereksinimlerini yönetmek",
+          "Tehdit modelleme ve güvenli tasarım incelemelerini yürütmek",
+          "SAST, DAST, SCA ve gizli bilgi taramalarını CI/CD süreçlerine entegre etmek",
+          "Bağımlılık, paket ve yazılım tedarik zinciri risklerini yönetmek",
+          "Web, mobil, API ve kurumsal uygulama güvenlik testlerini yürütmek",
+          "Test bulgularını doğrulamak, giderilmesini izlemek ve kapatma kanıtlarını değerlendirmek"
+        ],
+        "authorities": [
+          "SSDLC güvenlik kapılarını ve kabul kriterlerini belirler",
+          "Kritik güvenlik bulgusu bulunan sürümün yayınını durdurabilir",
+          "Güvenlik test kapsamını ve yayın öncesi doğrulama gereksinimini belirler",
+          "Bulgu giderme istisnalarını değerlendirir ve risk sahibinin kararına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Güvenlik taramalarının CI/CD hattına entegrasyonu ve bulgu giderimi"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Yönetimi ve Ürün Alanları",
+            "topic": "Ürün yol haritasında güvenlik gereksinimleri ve bulgu düzeltme önceliği"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+            "topic": "Prototip ve yeni çözümlerde tehdit modelleme ve güvenli tasarım incelemeleri"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+            "topic": "Uygulama zafiyetlerinin maruziyet yönetimine aktarımı"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Geliştirici güvenlik eğitim programları"
+          }
+        ],
+        "kpis": [
+          "SSDLC Güvenlik Kapısı Uyum Oranı",
+          "Kritik Uygulama Bulgusu Kapanış Süresi",
+          "Tehdit Modellemesi Yapılan Kritik Uygulama Oranı",
+          "Güvenlik Taraması Entegre Edilmiş Dağıtım Hattı Oranı",
+          "Yayın Öncesi Güvenlik Testi Kapsamı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Uygulama Güvenliği ve DevSecOps Müdürü",
+            "title_en": "Application Security and DevSecOps Manager"
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenli Yazılım Geliştirme Yaşam Döngüsü Yöneticisi",
+            "title_en": "Secure Software Development Lifecycle Manager"
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Uygulama Güvenliği Uzmanı",
+            "title_en": "Senior Application Security Specialist"
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/guvenli-yazilim-gelistirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenli Yazılım Geliştirme Uzmanı",
+            "title_en": "Secure Software Development Specialist"
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/ssdlc-analisti",
+            "level": "Analist",
+            "title_tr": "SSDLC Analisti",
+            "title_en": "SSDLC Analyst"
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "DevSecOps ve Kod Güvenliği Yöneticisi",
+            "title_en": "DevSecOps and Code Security Manager"
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/kidemli-devsecops-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli DevSecOps Mühendisi",
+            "title_en": "Senior DevSecOps Engineer"
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/kod-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kod Güvenliği Uzmanı",
+            "title_en": "Code Security Specialist"
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/yazilim-tedarik-zinciri-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yazılım Tedarik Zinciri Güvenliği Uzmanı",
+            "title_en": "Software Supply Chain Security Specialist"
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uygulama ve API Güvenlik Testleri Yöneticisi",
+            "title_en": "Application and API Security Testing Manager"
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sızma Testi Uzmanı",
+            "title_en": "Senior Penetration Tester"
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/uygulama-guvenlik-test-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uygulama Güvenlik Test Uzmanı",
+            "title_en": "Application Security Testing Specialist"
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/api-guvenlik-analisti",
+            "level": "Analist",
+            "title_tr": "API Güvenlik Analisti",
+            "title_en": "API Security Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.06",
+            "title_tr": "Uygulama Güvenliği ve DevSecOps Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu",
+            "title_tr": "Güvenli Yazılım Geliştirme Yaşam Döngüsü Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani",
+            "title_tr": "Kıdemli Uygulama Güvenliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/guvenli-yazilim-gelistirme-uzmani",
+            "title_tr": "Güvenli Yazılım Geliştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.06/guvenli-yazilim-gelistirme-yasam-dongusu/ssdlc-analisti",
+            "title_tr": "SSDLC Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi",
+            "title_tr": "DevSecOps ve Kod Güvenliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/kidemli-devsecops-muhendisi",
+            "title_tr": "Kıdemli DevSecOps Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/kod-guvenligi-uzmani",
+            "title_tr": "Kod Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.06/devsecops-ve-kod-guvenligi/yazilim-tedarik-zinciri-guvenligi-uzmani",
+            "title_tr": "Yazılım Tedarik Zinciri Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri",
+            "title_tr": "Uygulama ve API Güvenlik Testleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani",
+            "title_tr": "Kıdemli Sızma Testi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/uygulama-guvenlik-test-uzmani",
+            "title_tr": "Uygulama Güvenlik Test Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.06/uygulama-ve-api-guvenlik-testleri/api-guvenlik-analisti",
+            "title_tr": "API Güvenlik Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "16.07",
+        "name_tr": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi",
+        "responsibilities": [
+          "Veri güvenliği ve DLP kontrol modelini yönetmek",
+          "Hassas veri keşfi, sınıflandırma ve hareket kontrollerini uygulamak",
+          "Privacy by design gereksinimlerini teknik çözümlere dönüştürmek",
+          "Maskeleme, anonimleştirme, minimizasyon ve saklama kontrollerini tasarlamak",
+          "KVKK süreçleri için teknik uygulama ve kanıtları Hukuk ve Uyum ile koordine etmek",
+          "Şifreleme, PKI, sertifika ve anahtar yaşam döngüsünü güvence altına almak"
+        ],
+        "authorities": [
+          "Şifreleme, sertifika ve kriptografik algoritma standartlarını belirler",
+          "DLP kurallarını belirler ve istisna taleplerini risk sahibinin onayına sunar",
+          "Gizlilik mühendisliği kontrollerinin yeterliliği hakkında teknik görüş verir",
+          "Zayıf algoritma ve süresi dolmuş sertifika kullanımını kısıtlar"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "KVKK ve Veri Koruma Hukuku",
+            "topic": "Veri sorumlusu yükümlülüklerinin teknik kontrollere dönüştürülmesi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Teknik veri koruma kanıtları ve uyum değerlendirmeleri"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Yönetişimi, Kalitesi ve Ana Veri",
+            "topic": "Veri sınıflandırması ve hassas veri envanterinin uyumu"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Şifreleme, anahtar yönetimi ve sertifika uygulamalarının altyapıda işletimi"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+            "topic": "Bilgi varlığı sınıflandırmasının veri güvenliği kontrollerine aktarımı"
+          }
+        ],
+        "kpis": [
+          "DLP Olayı Kapanış Süresi",
+          "Hassas Veri Keşif Kapsamı",
+          "Şifrelenmiş Kritik Veri Deposu Oranı",
+          "Süresi Dolmadan Yenilenen Sertifika Oranı",
+          "Gizlilik Tasarım İncelemesi Tamamlanan Proje Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi Müdürü",
+            "title_en": "Data Security, Privacy Engineering and Cryptography Manager"
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri Güvenliği ve Kayıp Önleme Yöneticisi",
+            "title_en": "Data Security and Loss Prevention Manager"
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Veri Güvenliği Uzmanı",
+            "title_en": "Senior Data Security Specialist"
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/dlp-uzmani",
+            "level": "Uzman",
+            "title_tr": "DLP Uzmanı",
+            "title_en": "DLP Specialist"
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/veri-guvenligi-analisti",
+            "level": "Analist",
+            "title_tr": "Veri Güvenliği Analisti",
+            "title_en": "Data Security Analyst"
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Gizlilik Mühendisliği ve Teknik Kontroller Yöneticisi",
+            "title_en": "Privacy Engineering and Technical Controls Manager"
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/kidemli-gizlilik-muhendisligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Gizlilik Mühendisliği Uzmanı",
+            "title_en": "Senior Privacy Engineering Specialist"
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/gizlilik-teknolojileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Gizlilik Teknolojileri Uzmanı",
+            "title_en": "Privacy Technologies Specialist"
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/teknik-gizlilik-analisti",
+            "level": "Analist",
+            "title_tr": "Teknik Gizlilik Analisti",
+            "title_en": "Technical Privacy Analyst"
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kriptografi ve Anahtar Yönetimi Yöneticisi",
+            "title_en": "Cryptography and Key Management Manager"
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/kidemli-kriptografi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kriptografi Uzmanı",
+            "title_en": "Senior Cryptography Specialist"
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/anahtar-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Anahtar Yönetimi Uzmanı",
+            "title_en": "Key Management Specialist"
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/pki-guvenligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "PKI Güvenliği Uzmanı",
+            "title_en": "PKI Security Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.07",
+            "title_tr": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme",
+            "title_tr": "Veri Güvenliği ve Kayıp Önleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani",
+            "title_tr": "Kıdemli Veri Güvenliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/dlp-uzmani",
+            "title_tr": "DLP Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.07/veri-guvenligi-ve-kayip-onleme/veri-guvenligi-analisti",
+            "title_tr": "Veri Güvenliği Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller",
+            "title_tr": "Gizlilik Mühendisliği ve Teknik Kontroller Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/kidemli-gizlilik-muhendisligi-uzmani",
+            "title_tr": "Kıdemli Gizlilik Mühendisliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/gizlilik-teknolojileri-uzmani",
+            "title_tr": "Gizlilik Teknolojileri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.07/gizlilik-muhendisligi-ve-teknik-kontroller/teknik-gizlilik-analisti",
+            "title_tr": "Teknik Gizlilik Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi",
+            "title_tr": "Kriptografi ve Anahtar Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/kidemli-kriptografi-uzmani",
+            "title_tr": "Kıdemli Kriptografi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/anahtar-yonetimi-uzmani",
+            "title_tr": "Anahtar Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.07/kriptografi-ve-anahtar-yonetimi/pki-guvenligi-uzmani",
+            "title_tr": "PKI Güvenliği Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "16.08",
+        "name_tr": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+        "responsibilities": [
+          "Varlık bazlı zafiyet taramasını ve maruziyet görünürlüğünü yönetmek",
+          "Bulguları tehdit, kritiklik ve iş etkisine göre önceliklendirmek",
+          "Giderme SLA, istisna ve risk kabul süreçlerini izlemek",
+          "Stratejik, operasyonel ve taktik tehdit istihbaratı üretmek",
+          "Dış saldırı yüzeyini, marka suistimalini ve sızdırılmış kimlikleri izlemek",
+          "Rol bazlı farkındalık programlarını, kimlik avı simülasyonlarını ve siber tatbikatları yürütmek"
+        ],
+        "authorities": [
+          "Zafiyet önceliklendirme ölçütlerini ve giderme SLA'larını belirler",
+          "SLA'sı aşılan kritik zafiyetleri varlık sahibine ve yönetime eskale eder",
+          "Siber güvenlik ve bilgi güvenliği farkındalık programını ve kimlik avı simülasyonu takvimini belirler",
+          "Sızdırılmış kimlik tespitinde parola sıfırlama ve hesap koruma talebini başlatır"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "Yama, zafiyet giderme ve altyapı maruziyetinin kapatılması"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Tehdit istihbaratının tespit kurallarına ve av senaryolarına aktarımı"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Rol bazlı güvenlik farkındalık eğitimlerinin planlanması"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+            "topic": "Marka suistimali, sahte alan adları ve sahte hesapların yönetimi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Siber kriz tatbikatlarının iş sürekliliği programıyla uyumu"
+          }
+        ],
+        "kpis": [
+          "Kritik Zafiyet Kapanış Süresi",
+          "Giderme SLA Uyum Oranı",
+          "Kimlik Avı Simülasyonu Başarısızlık Oranı",
+          "Siber Tatbikat Aksiyon Kapanış Oranı",
+          "Dış Saldırı Yüzeyinde Açık Kritik Bulgu Sayısı",
+          "Farkındalık Eğitimi Tamamlama Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "16.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı Müdürü",
+            "title_en": "Vulnerability, Threat Intelligence and Security Awareness Manager"
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenlik Açığı ve Maruziyet Yönetimi Yöneticisi",
+            "title_en": "Vulnerability and Exposure Management Manager"
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/kidemli-guvenlik-acigi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Açığı Uzmanı",
+            "title_en": "Senior Vulnerability Specialist"
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/maruziyet-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Maruziyet Yönetimi Uzmanı",
+            "title_en": "Exposure Management Specialist"
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti",
+            "level": "Analist",
+            "title_tr": "Zafiyet Analisti",
+            "title_en": "Vulnerability Analyst"
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi Yöneticisi",
+            "title_en": "Threat Intelligence and Attack Surface Management Manager"
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/kidemli-tehdit-istihbarati-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tehdit İstihbaratı Uzmanı",
+            "title_en": "Senior Threat Intelligence Specialist"
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/saldiri-yuzeyi-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Saldırı Yüzeyi Yönetimi Uzmanı",
+            "title_en": "Attack Surface Management Specialist"
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/dijital-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Dijital Risk Analisti",
+            "title_en": "Digital Risk Analyst"
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Güvenlik Kültürü, Farkındalık ve Tatbikat Yöneticisi",
+            "title_en": "Security Culture, Awareness and Exercises Manager"
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/kidemli-guvenlik-farkindalik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Güvenlik Farkındalık Uzmanı",
+            "title_en": "Senior Security Awareness Specialist"
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/guvenlik-kulturu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Güvenlik Kültürü Uzmanı",
+            "title_en": "Security Culture Specialist"
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/siber-tatbikat-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Siber Tatbikat Koordinatörü",
+            "title_en": "Cyber Exercise Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "16.08",
+            "title_tr": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi",
+            "title_tr": "Güvenlik Açığı ve Maruziyet Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/kidemli-guvenlik-acigi-uzmani",
+            "title_tr": "Kıdemli Güvenlik Açığı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/maruziyet-yonetimi-uzmani",
+            "title_tr": "Maruziyet Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti",
+            "title_tr": "Zafiyet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi",
+            "title_tr": "Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/kidemli-tehdit-istihbarati-uzmani",
+            "title_tr": "Kıdemli Tehdit İstihbaratı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/saldiri-yuzeyi-yonetimi-uzmani",
+            "title_tr": "Saldırı Yüzeyi Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.08/tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi/dijital-risk-analisti",
+            "title_tr": "Dijital Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat",
+            "title_tr": "Güvenlik Kültürü, Farkındalık ve Tatbikat Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/kidemli-guvenlik-farkindalik-uzmani",
+            "title_tr": "Kıdemli Güvenlik Farkındalık Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/guvenlik-kulturu-uzmani",
+            "title_tr": "Güvenlik Kültürü Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "16.08/guvenlik-kulturu-farkindalik-ve-tatbikat/siber-tatbikat-koordinatoru",
+            "title_tr": "Siber Tatbikat Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

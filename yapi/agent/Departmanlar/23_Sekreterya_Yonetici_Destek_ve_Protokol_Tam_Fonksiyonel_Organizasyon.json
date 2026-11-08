@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "type": "department_organization_model",
+    "language": "tr-TR",
+    "created_at": "2026-10-29",
+    "project": "CW-ŞİRKET-IK-YONETIM"
+  },
+  "department": {
+    "code": "23",
+    "name_tr": "Sekreterya, Yönetici Destek ve Protokol",
+    "name_en": "Secretariat, Executive Support and Protocol",
+    "operating_model": "Merkezi yönetişim, yönetici bazlı hizmet eşleştirmesi ve standartlaştırılmış protokol operasyonu",
+    "purpose": "Yönetim Kurulu ve üst yönetimin zaman, gündem, karar, iletişim, seyahat, toplantı ve temsil süreçlerini güvenli, kesintisiz, ölçülebilir ve kurumsal protokole uygun biçimde yönetmek."
+  },
+  "reports_to": {
+    "primary": "Genel Müdür / CEO",
+    "functional_alignment": "CEO Ofisi",
+    "governance_coordination": ["Yönetim Kurulu Başkanı", "Yönetim Kurulu", "İcra Kurulu"]
+  },
+  "head": {
+    "position_code": "23-DIR-001",
+    "title_tr": "Sekreterya, Yönetici Destek ve Protokol Direktörü",
+    "title_en": "Director of Secretariat, Executive Support and Protocol",
+    "alternative_executive_title": "Yönetim Ofisi ve Protokol Başkanı / Head of Executive Office and Protocol",
+    "direct_reports": ["23.01-MGR", "23.02-MGR", "23.03-MGR", "23.04-MGR", "23.05-MGR", "23.06-MGR", "23.07-MGR", "23.08-MGR"],
+    "accountabilities": [
+      "Yönetim Kurulu, İcra Kurulu ve üst yönetim sekreterya modelini yönetmek",
+      "Yönetici zamanını, gündemini ve karar takip disiplinini optimize etmek",
+      "Kurumsal protokol, VIP ağırlama ve temsil standartlarını belirlemek",
+      "Gizlilik dereceli yönetim yazışmaları ve belgeleri için güvenli işleyiş kurmak",
+      "Yönetici destek hizmetlerinin kapasite, kalite, bütçe ve performansını yönetmek"
+    ]
+  },
+  "hierarchy_standard": {
+    "levels": [
+      {"level": 1, "role": "Direktör / Başkan", "scope": "Departman stratejisi ve kurumsal hesap verebilirlik"},
+      {"level": 2, "role": "Birim Müdürü", "scope": "Fonksiyonel politika, hizmet kapasitesi ve performans yönetimi"},
+      {"level": 3, "role": "Takım Lideri", "scope": "Süreç, ekip ve günlük operasyon yönetimi"},
+      {"level": 4, "role": "Uzmanlık Rolleri", "scope": "Koordinasyon, uygulama, kayıt ve yönetici desteği"}
+    ]
+  },
+  "units": [
+    {
+      "unit_code": "23.01",
+      "name_tr": "Yönetim Kurulu ve Komite Sekreteryası",
+      "name_en": "Board and Committee Secretariat",
+      "manager": {"position_code": "23.01-MGR", "title_tr": "Yönetim Kurulu ve Komite Sekreteryası Müdürü", "title_en": "Board and Committee Secretariat Manager"},
+      "teams": [
+        {"team_code": "23.01.01", "name_tr": "Yönetim Kurulu Sekreteryası", "lead": {"position_code": "23.01.01-TL", "title_tr": "Yönetim Kurulu Sekreteryası Takım Lideri", "title_en": "Board Secretariat Team Lead"}, "roles": ["Yönetim Kurulu Sekreteri / Board Secretary", "Yönetim Kurulu Operasyon Uzmanı / Board Operations Specialist", "Yönetim Kurulu Bilgi Paketi Uzmanı / Board Pack Specialist"]},
+        {"team_code": "23.01.02", "name_tr": "Komite Sekreteryası", "lead": {"position_code": "23.01.02-TL", "title_tr": "Komite Sekreteryası Takım Lideri", "title_en": "Committee Secretariat Team Lead"}, "roles": ["Komite Sekreteri / Committee Secretary", "Komite Gündem ve Tutanak Uzmanı / Committee Agenda and Minutes Specialist", "Komite Takip Uzmanı / Committee Follow-up Specialist"]},
+        {"team_code": "23.01.03", "name_tr": "Karar, Tutanak ve Aksiyon Takibi", "lead": {"position_code": "23.01.03-TL", "title_tr": "Karar, Tutanak ve Aksiyon Takibi Takım Lideri", "title_en": "Resolution, Minutes and Action Tracking Team Lead"}, "roles": ["Yönetim Kararları Uzmanı / Management Resolutions Specialist", "Tutanak ve Kayıt Uzmanı / Minutes and Records Specialist", "Aksiyon Takip ve Raporlama Uzmanı / Action Tracking and Reporting Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.02",
+      "name_tr": "İcra Kurulu ve Üst Yönetim Sekreteryası",
+      "name_en": "Executive Committee and Senior Management Secretariat",
+      "manager": {"position_code": "23.02-MGR", "title_tr": "İcra Kurulu ve Üst Yönetim Sekreteryası Müdürü", "title_en": "Executive Committee and Senior Management Secretariat Manager"},
+      "teams": [
+        {"team_code": "23.02.01", "name_tr": "İcra Kurulu Sekreteryası", "lead": {"position_code": "23.02.01-TL", "title_tr": "İcra Kurulu Sekreteryası Takım Lideri", "title_en": "Executive Committee Secretariat Team Lead"}, "roles": ["İcra Kurulu Sekreteri / Executive Committee Secretary", "İcra Kurulu Gündem Uzmanı / Executive Committee Agenda Specialist", "İcra Kurulu Karar Takip Uzmanı / Executive Committee Decision Tracking Specialist"]},
+        {"team_code": "23.02.02", "name_tr": "CEO Sekreteryası", "lead": {"position_code": "23.02.02-TL", "title_tr": "CEO Sekreteryası Takım Lideri", "title_en": "CEO Secretariat Team Lead"}, "roles": ["CEO Baş Asistanı / Executive Assistant to the CEO", "CEO Ofisi Koordinatörü / CEO Office Coordinator", "CEO Gündem ve Brifing Uzmanı / CEO Agenda and Briefing Specialist"]},
+        {"team_code": "23.02.03", "name_tr": "Üst Yönetim Koordinasyonu", "lead": {"position_code": "23.02.03-TL", "title_tr": "Üst Yönetim Koordinasyonu Takım Lideri", "title_en": "Senior Management Coordination Team Lead"}, "roles": ["Üst Yönetim Koordinatörü / Senior Management Coordinator", "Yönetim Takvimi Uzmanı / Executive Calendar Specialist", "Yönetim Bilgi Akışı Uzmanı / Executive Information Flow Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.03",
+      "name_tr": "Yönetici Destek Hizmetleri",
+      "name_en": "Executive Support Services",
+      "manager": {"position_code": "23.03-MGR", "title_tr": "Yönetici Destek Hizmetleri Müdürü", "title_en": "Executive Support Services Manager"},
+      "teams": [
+        {"team_code": "23.03.01", "name_tr": "C-Seviye Yönetici Asistanlığı", "lead": {"position_code": "23.03.01-TL", "title_tr": "C-Seviye Yönetici Asistanlığı Takım Lideri", "title_en": "C-Suite Executive Assistance Team Lead"}, "roles": ["Kıdemli Yönetici Asistanı / Senior Executive Assistant", "Yönetici Asistanı / Executive Assistant", "Yönetici Destek Koordinatörü / Executive Support Coordinator"]},
+        {"team_code": "23.03.02", "name_tr": "Direktörlük ve Birim Yönetici Desteği", "lead": {"position_code": "23.03.02-TL", "title_tr": "Direktörlük ve Birim Yönetici Desteği Takım Lideri", "title_en": "Director and Business Unit Support Team Lead"}, "roles": ["Birim Yönetici Asistanı / Business Unit Executive Assistant", "Ortak Yönetici Destek Uzmanı / Shared Executive Support Specialist", "İdari Koordinasyon Uzmanı / Administrative Coordination Specialist"]},
+        {"team_code": "23.03.03", "name_tr": "Yönetici Destek Kaynak ve Kalite Yönetimi", "lead": {"position_code": "23.03.03-TL", "title_tr": "Yönetici Destek Kaynak ve Kalite Yönetimi Takım Lideri", "title_en": "Executive Support Resource and Quality Team Lead"}, "roles": ["Yönetici Destek Kaynak Planlama Uzmanı / Executive Support Resource Planning Specialist", "Hizmet Kalitesi Uzmanı / Service Quality Specialist", "Yedekleme ve Süreklilik Koordinatörü / Backup and Continuity Coordinator"]}
+      ]
+    },
+    {
+      "unit_code": "23.04",
+      "name_tr": "Takvim, Toplantı ve Gündem Yönetimi",
+      "name_en": "Calendar, Meeting and Agenda Management",
+      "manager": {"position_code": "23.04-MGR", "title_tr": "Takvim, Toplantı ve Gündem Yönetimi Müdürü", "title_en": "Calendar, Meeting and Agenda Management Manager"},
+      "teams": [
+        {"team_code": "23.04.01", "name_tr": "Stratejik Takvim ve Önceliklendirme", "lead": {"position_code": "23.04.01-TL", "title_tr": "Stratejik Takvim ve Önceliklendirme Takım Lideri", "title_en": "Strategic Calendar and Prioritization Team Lead"}, "roles": ["Stratejik Takvim Uzmanı / Strategic Calendar Specialist", "Yönetici Zaman Planlama Uzmanı / Executive Time Planning Specialist", "Öncelik ve Çakışma Yönetimi Uzmanı / Priority and Conflict Management Specialist"]},
+        {"team_code": "23.04.02", "name_tr": "Toplantı Operasyonları", "lead": {"position_code": "23.04.02-TL", "title_tr": "Toplantı Operasyonları Takım Lideri", "title_en": "Meeting Operations Team Lead"}, "roles": ["Toplantı Operasyon Uzmanı / Meeting Operations Specialist", "Toplantı Teknolojileri Koordinatörü / Meeting Technology Coordinator", "Salon ve Katılımcı Koordinatörü / Venue and Participant Coordinator"]},
+        {"team_code": "23.04.03", "name_tr": "Gündem, Brifing ve Toplantı Sonrası Takip", "lead": {"position_code": "23.04.03-TL", "title_tr": "Gündem, Brifing ve Toplantı Sonrası Takip Takım Lideri", "title_en": "Agenda, Briefing and Post-Meeting Follow-up Team Lead"}, "roles": ["Gündem Yönetimi Uzmanı / Agenda Management Specialist", "Yönetici Brifing Uzmanı / Executive Briefing Specialist", "Toplantı Sonrası Takip Uzmanı / Post-Meeting Follow-up Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.05",
+      "name_tr": "Kurumsal Protokol ve Temsil",
+      "name_en": "Corporate Protocol and Representation",
+      "manager": {"position_code": "23.05-MGR", "title_tr": "Kurumsal Protokol ve Temsil Müdürü", "title_en": "Corporate Protocol and Representation Manager"},
+      "teams": [
+        {"team_code": "23.05.01", "name_tr": "Resmî ve Kurumsal Protokol", "lead": {"position_code": "23.05.01-TL", "title_tr": "Resmî ve Kurumsal Protokol Takım Lideri", "title_en": "Official and Corporate Protocol Team Lead"}, "roles": ["Kurumsal Protokol Uzmanı / Corporate Protocol Specialist", "Resmî Protokol Uzmanı / Official Protocol Specialist", "Protokol Sıralama ve Uygulama Uzmanı / Precedence and Protocol Practice Specialist"]},
+        {"team_code": "23.05.02", "name_tr": "VIP Karşılama ve Ağırlama", "lead": {"position_code": "23.05.02-TL", "title_tr": "VIP Karşılama ve Ağırlama Takım Lideri", "title_en": "VIP Reception and Hospitality Team Lead"}, "roles": ["VIP İlişkileri Uzmanı / VIP Relations Specialist", "Karşılama ve Ağırlama Koordinatörü / Reception and Hospitality Coordinator", "Konuk Deneyimi Uzmanı / Guest Experience Specialist"]},
+        {"team_code": "23.05.03", "name_tr": "Tören, İmza ve Üst Düzey Etkinlik Protokolü", "lead": {"position_code": "23.05.03-TL", "title_tr": "Tören, İmza ve Üst Düzey Etkinlik Protokolü Takım Lideri", "title_en": "Ceremony, Signing and Executive Event Protocol Team Lead"}, "roles": ["Tören ve İmza Organizasyonu Uzmanı / Ceremony and Signing Specialist", "Üst Düzey Etkinlik Protokol Uzmanı / Executive Event Protocol Specialist", "Sahne ve Oturma Düzeni Uzmanı / Stage and Seating Protocol Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.06",
+      "name_tr": "Yönetici Seyahat ve Lojistik Koordinasyonu",
+      "name_en": "Executive Travel and Logistics Coordination",
+      "manager": {"position_code": "23.06-MGR", "title_tr": "Yönetici Seyahat ve Lojistik Koordinasyonu Müdürü", "title_en": "Executive Travel and Logistics Coordination Manager"},
+      "teams": [
+        {"team_code": "23.06.01", "name_tr": "Yönetici Seyahat Planlama", "lead": {"position_code": "23.06.01-TL", "title_tr": "Yönetici Seyahat Planlama Takım Lideri", "title_en": "Executive Travel Planning Team Lead"}, "roles": ["Yönetici Seyahat Uzmanı / Executive Travel Specialist", "Seyahat Rezervasyon Koordinatörü / Travel Reservation Coordinator", "Vize ve Seyahat Belgesi Uzmanı / Visa and Travel Documentation Specialist"]},
+        {"team_code": "23.06.02", "name_tr": "Ulaşım ve Konaklama Koordinasyonu", "lead": {"position_code": "23.06.02-TL", "title_tr": "Ulaşım ve Konaklama Koordinasyonu Takım Lideri", "title_en": "Transport and Accommodation Coordination Team Lead"}, "roles": ["Ulaşım Koordinatörü / Transportation Coordinator", "Konaklama ve Misafir Hizmetleri Uzmanı / Accommodation and Guest Services Specialist", "Yönetici Transfer Operasyon Uzmanı / Executive Transfer Operations Specialist"]},
+        {"team_code": "23.06.03", "name_tr": "Seyahat Programı ve Harcama Koordinasyonu", "lead": {"position_code": "23.06.03-TL", "title_tr": "Seyahat Programı ve Harcama Koordinasyonu Takım Lideri", "title_en": "Travel Itinerary and Expense Coordination Team Lead"}, "roles": ["Seyahat Programı Uzmanı / Travel Itinerary Specialist", "Seyahat Harcama Koordinatörü / Travel Expense Coordinator", "Seyahat Tedarikçi İlişkileri Uzmanı / Travel Vendor Relations Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.07",
+      "name_tr": "Kurumsal Yazışma, Belge ve İletişim Koordinasyonu",
+      "name_en": "Corporate Correspondence, Documentation and Communication Coordination",
+      "manager": {"position_code": "23.07-MGR", "title_tr": "Kurumsal Yazışma, Belge ve İletişim Koordinasyonu Müdürü", "title_en": "Corporate Correspondence, Documentation and Communication Coordination Manager"},
+      "teams": [
+        {"team_code": "23.07.01", "name_tr": "Yönetim Yazışmaları", "lead": {"position_code": "23.07.01-TL", "title_tr": "Yönetim Yazışmaları Takım Lideri", "title_en": "Executive Correspondence Team Lead"}, "roles": ["Yönetim Yazışmaları Uzmanı / Executive Correspondence Specialist", "Resmî Yazışma Uzmanı / Official Correspondence Specialist", "Metin ve Biçim Kontrol Uzmanı / Editorial and Format Control Specialist"]},
+        {"team_code": "23.07.02", "name_tr": "Gizli Belge ve Kayıt Koordinasyonu", "lead": {"position_code": "23.07.02-TL", "title_tr": "Gizli Belge ve Kayıt Koordinasyonu Takım Lideri", "title_en": "Confidential Document and Records Coordination Team Lead"}, "roles": ["Gizli Belge Koordinatörü / Confidential Document Coordinator", "Yönetim Kayıtları Uzmanı / Executive Records Specialist", "Belge Dağıtım ve Erişim Kontrol Uzmanı / Document Distribution and Access Control Specialist"]},
+        {"team_code": "23.07.03", "name_tr": "Yönetim İletişim Trafiği Koordinasyonu", "lead": {"position_code": "23.07.03-TL", "title_tr": "Yönetim İletişim Trafiği Koordinasyonu Takım Lideri", "title_en": "Executive Communications Traffic Coordination Team Lead"}, "roles": ["Yönetim İletişim Koordinatörü / Executive Communications Coordinator", "Çağrı ve Mesaj Trafiği Uzmanı / Call and Message Traffic Specialist", "Paydaş İletişim Takip Uzmanı / Stakeholder Communication Tracking Specialist"]}
+      ]
+    },
+    {
+      "unit_code": "23.08",
+      "name_tr": "Hizmet Tasarımı, Dijitalleşme ve Kalite",
+      "name_en": "Service Design, Digitalization and Quality",
+      "manager": {"position_code": "23.08-MGR", "title_tr": "Hizmet Tasarımı, Dijitalleşme ve Kalite Müdürü", "title_en": "Service Design, Digitalization and Quality Manager"},
+      "teams": [
+        {"team_code": "23.08.01", "name_tr": "Sekreterya Süreç ve Hizmet Tasarımı", "lead": {"position_code": "23.08.01-TL", "title_tr": "Sekreterya Süreç ve Hizmet Tasarımı Takım Lideri", "title_en": "Secretariat Process and Service Design Team Lead"}, "roles": ["Sekreterya Süreç Tasarım Uzmanı / Secretariat Process Design Specialist", "Hizmet Kataloğu Uzmanı / Service Catalog Specialist", "Süreç İyileştirme Uzmanı / Process Improvement Specialist"]},
+        {"team_code": "23.08.02", "name_tr": "Dijital Yönetim Ofisi Araçları", "lead": {"position_code": "23.08.02-TL", "title_tr": "Dijital Yönetim Ofisi Araçları Takım Lideri", "title_en": "Digital Executive Office Tools Team Lead"}, "roles": ["Yönetim Ofisi Dijital Çözümler Uzmanı / Executive Office Digital Solutions Specialist", "Toplantı ve Karar Platformları Uzmanı / Meeting and Decision Platforms Specialist", "Otomasyon ve İş Akışı Uzmanı / Automation and Workflow Specialist"]},
+        {"team_code": "23.08.03", "name_tr": "Kalite, Performans ve Yetkinlik Gelişimi", "lead": {"position_code": "23.08.03-TL", "title_tr": "Kalite, Performans ve Yetkinlik Gelişimi Takım Lideri", "title_en": "Quality, Performance and Capability Development Team Lead"}, "roles": ["Hizmet Kalitesi ve Performans Uzmanı / Service Quality and Performance Specialist", "Sekreterya Yetkinlik Gelişim Uzmanı / Secretariat Capability Development Specialist", "Denetim ve Standart Uyum Uzmanı / Audit and Standards Compliance Specialist"]}
+      ]
+    }
+  ],
+  "governance": {
+    "core_kpis": [
+      "Yönetim Kurulu ve komite dokümanlarının zamanında dağıtım oranı",
+      "Karar ve aksiyonların hedef tarihte kapanma oranı",
+      "Takvim çakışması ve son dakika toplantı değişikliği oranı",
+      "Yönetici zamanının stratejik önceliklere ayrılma oranı",
+      "Toplantı hazırlık ve brifing paketlerinin zamanında tamamlama oranı",
+      "Protokol ve VIP ağırlama hizmet memnuniyeti",
+      "Yönetici seyahati plan doğruluğu ve maliyet uyumu",
+      "Gizli belge erişim veya dağıtım ihlali sayısı",
+      "Yönetici destek hizmet seviyesi ve iç müşteri memnuniyeti"
+    ],
+    "cadences": [
+      {"frequency": "Günlük", "forum": "Yönetici Gündem ve Öncelik Koordinasyonu"},
+      {"frequency": "Haftalık", "forum": "Yönetim Takvimi ve Aksiyon Takip Toplantısı"},
+      {"frequency": "Aylık", "forum": "Sekreterya ve Yönetici Destek Hizmet Performansı"},
+      {"frequency": "Üç Aylık", "forum": "Yönetim Kurulu ve Komite Takvimi Gözden Geçirmesi"},
+      {"frequency": "Yıllık", "forum": "Yönetim Takvimi, Protokol ve Hizmet Kapasitesi Planlaması"}
+    ]
+  },
+  "scope_boundaries": [
+    {"adjacent_department": "01 - Üst Yönetim ve Kurumsal Yönetişim", "boundary": "Bu departman yönetim organlarının sekreterya ve operasyon desteğini sağlar; strateji, karar yetkisi ve kurumsal yönetişim sahipliği Üst Yönetim ve ilgili organlardadır."},
+    {"adjacent_department": "05 - Hukuk İşleri", "boundary": "Sekreterya gündem, tutanak, imza ve karar kayıtlarını koordine eder; kararların hukuki geçerliliği, mevzuat ve şirketler hukuku kontrolü Hukuk İşleri tarafından yürütülür."},
+    {"adjacent_department": "10 - Kurumsal İletişim ve İtibar Yönetimi", "boundary": "Protokol ve yönetici destek birimi ağırlama, sıralama ve temsil operasyonunu; Kurumsal İletişim mesaj, medya, kamuoyu ve itibar iletişimini yönetir."},
+    {"adjacent_department": "20 - İdari İşler ve Destek Hizmetleri", "boundary": "Sekreterya yöneticiye özel seyahat, toplantı ve temsil koordinasyonunu; İdari İşler genel filo, tesis, satın alma, resepsiyon ve ortak hizmet altyapısını yönetir."},
+    {"adjacent_department": "22 - Kurumsal Güvenlik", "boundary": "Sekreterya program ve konuk koordinasyonunu; Kurumsal Güvenlik yönetici koruma, seyahat güvenliği, erişim ve fiziksel güvenlik kontrollerini yönetir."},
+    {"adjacent_department": "15 - Bilgi Teknolojileri", "boundary": "Sekreterya dijital yönetim ofisi iş gereksinimlerini ve kullanım standardını belirler; BT platform mimarisi, teknik işletim, entegrasyon ve desteği sağlar."},
+    {"adjacent_department": "03 - Finans ve Hazine / 02 - Muhasebe ve Mali İşler", "boundary": "Sekreterya seyahat ve temsil harcamalarını koordine eder; bütçe kontrolü, ödeme, muhasebeleştirme ve mali politika sahipliği mali fonksiyonlardadır."}
+  ],
+  "staffing_guidance": {
+    "minimum_core_headcount": 33,
+    "minimum_core_composition": {"director": 1, "unit_managers": 8, "team_leads": 24},
+    "specialist_staffing": "Uzman sayıları desteklenen yönetici sayısı, kurul ve komite sıklığı, lokasyon yapısı, seyahat hacmi, protokol yoğunluğu ve hizmet seviyesi hedeflerine göre belirlenir.",
+    "executive_assistant_ratio": "Rolün karmaşıklığına göre bir yönetici asistanı 1-3 üst yöneticiyi destekleyebilir; CEO ve Yönetim Kurulu Başkanı için adanmış destek önerilir.",
+    "confidentiality_principle": "Yönetim Kurulu, CEO ve gizlilik dereceli belge rolleri için görev ayrılığı, erişim yetkisi, yedekleme planı ve gizlilik taahhüdü zorunludur.",
+    "outsourcing_principle": "Rezervasyon ve lojistik hizmetleri dış kaynakla sağlanabilir; yönetim kurulu sekreteryası, gizli belge, karar takibi, yönetici gündemi ve protokol sahipliği kurum içinde tutulur."
+  },
+  "organization_summary": {
+    "director_count": 1,
+    "unit_count": 8,
+    "manager_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "specialist_role_type_count": 72,
+    "minimum_core_headcount": 33
+  }
+}

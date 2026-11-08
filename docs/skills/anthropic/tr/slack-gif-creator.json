@@ -1,0 +1,7 @@
+{
+ "name": "Slack GIF Oluşturucu",
+ "desc": "Slack için optimize edilmiş animasyonlu GIF'ler üretir; boyut, FPS ve renk kısıtlarını, doğrulama araçlarını ve PIL ile animasyon kavramlarını sağlar.",
+ "trigger": "Slack için optimize edilmiş animasyonlu GIF'ler oluşturmaya yönelik bilgi ve yardımcı araçlar. Kısıtları, doğrulama araçlarını ve animasyon kavramlarını sağlar. Kullanıcılar Slack için animasyonlu GIF istediğinde, örneğin \"Slack için X'in Y yaptığı bir GIF yap\" dediğinde kullanın.",
+ "scenario": "Slack mesajı ya da özel emoji için animasyonlu bir GIF istendiğinde veya mevcut bir görsel Slack'e uygun bir animasyona dönüştürülecekken.",
+ "example": "Zıplayan bir yıldız emojisi PIL ile 128x128, 10 FPS ve 48 renkle çizilir, `bounce_out` yumuşatmasıyla canlandırılır ve `is_slack_ready` ile Slack'e uygunluğu doğrulanıp kaydedilir."
+}

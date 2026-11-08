@@ -1,0 +1,7 @@
+{
+ "name": "Tuval Tasarımı",
+ "desc": "Önce bir tasarım felsefesi (.md) yazar, sonra onu müze kalitesinde, az metinli özgün bir görsel esere (.png ya da .pdf) dönüştürür.",
+ "trigger": "Tasarım felsefesini kullanarak .png ve .pdf belgelerinde güzel görsel sanat oluştur. Kullanıcı bir afiş, sanat eseri, tasarım ya da başka bir durağan eser oluşturmanı istediğinde bu skill'i kullanmalısın. Telif hakkı ihlallerinden kaçınmak için mevcut sanatçıların eserlerini asla kopyalamadan özgün görsel tasarımlar oluştur.",
+ "scenario": "Afiş, sanat eseri, kapak ya da benzeri durağan bir görsel tasarım istendiğinde.",
+ "example": "Bir caz festivali afişi istenince önce 'Kromatik Sessizlik' adlı bir tasarım felsefesi .md olarak yazılır, sonra bu felsefeyle tek sayfalık, taşma ve çakışma olmayan bir poster .png olarak üretilir."
+}

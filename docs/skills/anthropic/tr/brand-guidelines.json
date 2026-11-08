@@ -1,0 +1,7 @@
+{
+ "name": "Anthropic Marka Kuralları",
+ "desc": "Anthropic'in resmî marka renklerini (koyu, açık, turuncu, mavi, yeşil vurgular) ve Poppins/Lora tipografisini her türlü artifact'e uygular.",
+ "trigger": "Anthropic'in resmî marka renklerini ve tipografisini, Anthropic'in görünüm ve hissinden fayda görebilecek her türlü artifact'e uygular. Marka renkleri ya da stil kuralları, görsel biçimlendirme veya şirket tasarım standartları söz konusu olduğunda kullanın.",
+ "scenario": "Bir sunum, belge ya da sayfa Anthropic'in marka görünümüyle hazırlanacağında veya marka renkleri ve tipografisi uygulanacağında.",
+ "example": "Bir sunumda başlıklar Poppins, gövde metni Lora olur; zemin #faf9f5, metin #141413, şekiller sırayla turuncu, mavi ve yeşil vurgu renkleriyle boyanır."
+}

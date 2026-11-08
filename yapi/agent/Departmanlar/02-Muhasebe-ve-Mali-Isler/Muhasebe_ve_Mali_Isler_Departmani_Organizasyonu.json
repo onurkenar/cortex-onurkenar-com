@@ -1,0 +1,361 @@
+{
+  "department": {
+    "id": 2,
+    "name_tr": "Muhasebe ve Mali İşler Departmanı",
+    "name_en": "Accounting and Statutory Affairs Department",
+    "purpose": "Gerçekleşmiş mali işlemleri eksiksiz ve doğru kaydetmek, yasal mali yükümlülükleri zamanında yerine getirmek ve finansal tabloların güvenilirliğini sağlamak.",
+    "reports_to": "Genel Müdür / CEO",
+    "leader": {
+      "title_tr": "Muhasebe ve Mali İşler Direktörü",
+      "title_en": "Accounting and Statutory Affairs Director",
+      "abbreviation": "Accounting Director"
+    },
+    "scope": [
+      "Genel muhasebe",
+      "Cari hesaplar",
+      "Faturalama",
+      "Borç ve alacak kayıtları",
+      "Dönem sonu kapanışları",
+      "Maliyet muhasebesi",
+      "Sabit kıymet muhasebesi",
+      "Bordro muhasebesi",
+      "Vergi ve beyannameler",
+      "E-defter ve e-belge süreçleri",
+      "Konsolidasyon",
+      "Yasal finansal raporlama",
+      "Bağımsız denetim koordinasyonu"
+    ],
+    "boundary": "Bütçe oluşturma, finansman temini, banka ilişkileri, nakit akışı ve ödeme zamanlamasını yönetmez. Muhasebe ödeme belgelerinin uygunluğunu, borcun varlığını ve kayıt doğruluğunu kontrol eder; ödeme önceliği, tarihi ve nakit tahsisi Finans ve Hazine Departmanı tarafından kararlaştırılır."
+  },
+  "units": [
+    {
+      "id": "general_accounting_closing",
+      "name_tr": "Genel Muhasebe ve Dönem Kapanışı",
+      "leader": "Genel Muhasebe ve Kapanış Müdürü",
+      "teams": [
+        {
+          "manager": "Genel Muhasebe Yöneticisi",
+          "roles": [
+            "Kıdemli Genel Muhasebe Uzmanı",
+            "Genel Muhasebe Uzmanı",
+            "Muhasebe Uzman Yardımcısı"
+          ]
+        },
+        {
+          "manager": "Dönem Kapanışı ve Mutabakat Yöneticisi",
+          "roles": [
+            "Kapanış ve Tahakkuk Uzmanı",
+            "Hesap Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Muhasebe Kontrol Yöneticisi",
+          "roles": [
+            "Muhasebe Kontrol Uzmanı",
+            "Hesap Planı ve Kayıt Standartları Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accounts_receivable_payable",
+      "name_tr": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+      "leader": "Cari Hesaplar ve Borç-Alacak Muhasebesi Müdürü",
+      "teams": [
+        {
+          "manager": "Müşteri Cari Hesapları Yöneticisi",
+          "roles": [
+            "Alacak Muhasebesi Uzmanı",
+            "Müşteri Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Tedarikçi Cari Hesapları Yöneticisi",
+          "roles": [
+            "Borç Muhasebesi Uzmanı",
+            "Tedarikçi Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Cari Hesap Kontrol ve Yaşlandırma Yöneticisi",
+          "roles": [
+            "Cari Hesap Kontrol Uzmanı",
+            "Borç-Alacak Yaşlandırma Analisti"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invoicing_ebilling",
+      "name_tr": "Faturalama ve E-Belge Operasyonları",
+      "leader": "Faturalama ve E-Belge Operasyonları Müdürü",
+      "teams": [
+        {
+          "manager": "Satış Faturalama Yöneticisi",
+          "roles": [
+            "Faturalama Uzmanı",
+            "Fatura Kontrol Uzmanı"
+          ]
+        },
+        {
+          "manager": "Alış Faturası ve Belge Kontrol Yöneticisi",
+          "roles": [
+            "Alış Faturaları Uzmanı",
+            "Belge Uygunluk Uzmanı"
+          ]
+        },
+        {
+          "manager": "E-Fatura ve E-Arşiv Operasyonları Yöneticisi",
+          "roles": [
+            "E-Fatura Uzmanı",
+            "E-Arşiv ve Entegrasyon Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost_accounting",
+      "name_tr": "Maliyet Muhasebesi",
+      "leader": "Maliyet Muhasebesi Müdürü",
+      "teams": [
+        {
+          "manager": "Maliyet Kayıtları Yöneticisi",
+          "roles": [
+            "Maliyet Muhasebesi Uzmanı",
+            "Gider Dağıtım Uzmanı"
+          ]
+        },
+        {
+          "manager": "Ürün ve Hizmet Maliyetleri Yöneticisi",
+          "roles": [
+            "Ürün Maliyet Analisti",
+            "Hizmet Maliyet Analisti"
+          ]
+        },
+        {
+          "manager": "Stok ve Üretim Muhasebesi Yöneticisi",
+          "roles": [
+            "Stok Muhasebesi Uzmanı",
+            "Üretim Maliyetleri Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fixed_assets",
+      "name_tr": "Sabit Kıymet ve Amortisman Muhasebesi",
+      "leader": "Sabit Kıymet ve Amortisman Muhasebesi Müdürü",
+      "teams": [
+        {
+          "manager": "Sabit Kıymet Kayıtları Yöneticisi",
+          "roles": [
+            "Sabit Kıymet Muhasebesi Uzmanı",
+            "Varlık Envanter ve Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Amortisman ve Değerleme Yöneticisi",
+          "roles": [
+            "Amortisman Uzmanı",
+            "Aktifleştirme ve Değerleme Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "payroll_accounting",
+      "name_tr": "Bordro Muhasebesi",
+      "leader": "Bordro Muhasebesi Müdürü",
+      "teams": [
+        {
+          "manager": "Bordro Kayıtları Yöneticisi",
+          "roles": [
+            "Bordro Muhasebesi Uzmanı",
+            "Ücret Tahakkuk Uzmanı"
+          ]
+        },
+        {
+          "manager": "Personel Hesapları ve Mutabakat Yöneticisi",
+          "roles": [
+            "Personel Cari Hesap Uzmanı",
+            "Bordro Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Bordro Yasal Kayıt Kontrol Yöneticisi",
+          "roles": [
+            "SGK ve Vergi Tahakkuk Kontrol Uzmanı",
+            "Bordro Muhasebe Uyum Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tax_compliance",
+      "name_tr": "Vergi, Beyannameler ve E-Defter Uyum",
+      "leader": "Vergi ve Mali Uyum Müdürü",
+      "teams": [
+        {
+          "manager": "Vergi Muhasebesi Yöneticisi",
+          "roles": [
+            "Vergi Muhasebesi Uzmanı",
+            "Vergi Mutabakat Uzmanı"
+          ]
+        },
+        {
+          "manager": "Beyanname ve Bildirimler Yöneticisi",
+          "roles": [
+            "Beyanname Hazırlık Uzmanı",
+            "Yasal Bildirimler Uzmanı"
+          ]
+        },
+        {
+          "manager": "E-Defter ve Defter Uyum Yöneticisi",
+          "roles": [
+            "E-Defter Uzmanı",
+            "Yasal Defter ve Saklama Uzmanı"
+          ]
+        },
+        {
+          "manager": "Vergi İnceleme ve Danışman Koordinasyon Yöneticisi",
+          "roles": [
+            "Vergi İnceleme Dokümantasyon Uzmanı",
+            "Mali Müşavir Koordinasyon Uzmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reporting_consolidation_audit",
+      "name_tr": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+      "leader": "Finansal Raporlama ve Konsolidasyon Müdürü",
+      "teams": [
+        {
+          "manager": "Yasal Finansal Raporlama Yöneticisi",
+          "roles": [
+            "Yasal Finansal Raporlama Uzmanı",
+            "Finansal Tablo ve Dipnot Uzmanı"
+          ]
+        },
+        {
+          "manager": "Konsolidasyon Yöneticisi",
+          "roles": [
+            "Konsolidasyon Uzmanı",
+            "Şirketler Arası İşlemler ve Eliminasyon Uzmanı"
+          ]
+        },
+        {
+          "manager": "Bağımsız Denetim Koordinasyon Yöneticisi",
+          "roles": [
+            "Denetim Dokümantasyon Uzmanı",
+            "Denetim Bulguları Takip Uzmanı"
+          ]
+        },
+        {
+          "manager": "Raporlama Standartları ve Veri Kalitesi Yöneticisi",
+          "roles": [
+            "Muhasebe Veri Kalitesi Uzmanı",
+            "Raporlama Standartları Uzmanı"
+          ]
+        }
+      ]
+    }
+  ],
+  "lead_handoff": {
+    "accounting_owns": [
+      "İşlem ve fatura kayıtlarının doğrulanması",
+      "Borç ve alacakların muhasebeleştirilmesi",
+      "Belge uygunluğu ve yasal kayıtların kontrolü",
+      "Vergi ve beyannameler",
+      "Muhasebe kapanışı ve yasal finansal tablolar"
+    ],
+    "joint_ownership": [
+      "Muhasebe-Finans borç ve bakiye mutabakatı",
+      "Ödeme öncesi belge ve borç doğrulama",
+      "Gerçekleşen finansal verilerin yönetime aktarımı",
+      "Bordro tahakkuklarının İnsan Kaynakları ile doğrulanması"
+    ],
+    "finance_and_treasury_owns": [
+      "Nakit akışı ve likidite planlama",
+      "Ödeme tarihi ve önceliklendirmesi",
+      "Banka ilişkileri ve finansman",
+      "Bütçe ve finansal projeksiyonlar",
+      "Tahsilat ve ödeme nakit operasyonu kararları"
+    ],
+    "handoff_point": "Muhasebe tarafından belgeleri kontrol edilerek doğrulanan ve kayıtlara alınan ödeme yükümlülükleri, ödeme planlaması ve icrası için Finans ve Hazineye aktarılır."
+  },
+  "title_standard": [
+    {
+      "level": "Üst fonksiyon yönetimi",
+      "title_tr": "Muhasebe ve Mali İşler Direktörü",
+      "title_en": "Accounting Director / Head of Accounting"
+    },
+    {
+      "level": "Birim yönetimi",
+      "title_tr": "Müdür",
+      "title_en": "Manager / Head of Unit"
+    },
+    {
+      "level": "Ekip yönetimi",
+      "title_tr": "Yönetici",
+      "title_en": "Team Lead / Senior Manager"
+    },
+    {
+      "level": "İleri uzmanlık",
+      "title_tr": "Kıdemli Uzman",
+      "title_en": "Senior Specialist"
+    },
+    {
+      "level": "Uzmanlık",
+      "title_tr": "Uzman",
+      "title_en": "Specialist"
+    },
+    {
+      "level": "Analiz",
+      "title_tr": "Analist",
+      "title_en": "Analyst"
+    },
+    {
+      "level": "Başlangıç",
+      "title_tr": "Uzman Yardımcısı",
+      "title_en": "Junior Specialist / Associate"
+    },
+    {
+      "level": "Operasyon",
+      "title_tr": "Koordinatör",
+      "title_en": "Coordinator"
+    },
+    {
+      "level": "Destek",
+      "title_tr": "Asistan",
+      "title_en": "Assistant"
+    }
+  ],
+  "department_kpis": {
+    "accounting_quality": [
+      "Muhasebe kayıt doğruluk oranı",
+      "Düzeltme kaydı oranı",
+      "Açık mutabakat kalemi sayısı",
+      "Cari hesap mutabakat tamamlama oranı"
+    ],
+    "compliance_and_tax": [
+      "Yasal beyanname zamanında teslim oranı",
+      "E-defter ve e-belge hata oranı",
+      "Mevzuata uyumsuzluk bulgusu sayısı",
+      "Vergi kontrolünden kaynaklanan düzeltme sayısı"
+    ],
+    "closing_and_reporting": [
+      "Aylık kapanış süresi (iş günü)",
+      "Zamanında finansal tablo teslim oranı",
+      "Konsolidasyon eliminasyon hata oranı",
+      "Raporlama veri tutarlılık oranı"
+    ],
+    "operations_and_audit": [
+      "Fatura işleme süresi",
+      "İlk kontrolde doğru fatura oranı",
+      "Sabit kıymet envanter mutabakat oranı",
+      "Denetim taleplerini zamanında karşılama oranı",
+      "Denetim bulgusu kapatma süresi"
+    ]
+  }
+}

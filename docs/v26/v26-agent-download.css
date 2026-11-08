@@ -1,0 +1,25 @@
+<style id="v26-agent-download">
+/* 2026-11-07: üst şeritteki "Ajanları İndir" (projede seçili ajanların Claude kurulum zip'i) ve indirme uyarısı (dlWarn: Ajanları İndir ve JSON İndir panelleri) */
+#agDlBtn .dlN{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:6px;padding:0 6px;box-sizing:border-box;border-radius:999px;background:#e6f6ec;color:#145c34;font-size:11.5px;font-weight:800;line-height:1}
+.dlWarn{margin:10px 0 12px;padding:11px 13px;border:1px solid #efd9a6;background:#fff8e8;color:#6b4300;border-radius:12px;font-size:13px;line-height:1.5}
+.dlWarn>b{display:block}
+.dlWarn>span{display:block;margin-top:3px}
+.dlWarn ul{margin:8px 0 6px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:2px 14px}
+.dlWarn li.ok{color:#145c34}
+.dlWarn li.req{color:#a12a1a}
+.dlWarn .linkBtn{font-size:13px}
+.dlWarn.ok{border-color:#8fd0a9;background:#eef9f2;color:#145c34}
+.dlSum{margin:4px 0 8px;font-size:13px;line-height:1.5}
+.dlSum ul{margin:6px 0 0;padding-left:18px;columns:2;column-gap:18px}
+.dlSum li.more{list-style:none;color:#6c727b}
+.dlSum.empty span{display:block;color:#6c727b;margin-top:3px}
+.dlActs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
+.agDlMenu code{font-size:12px}
+[data-theme="dark"] #agDlBtn .dlN{background:#12301f;color:#9be3bb}
+[data-theme="dark"] .dlWarn{background:#2b2111;border-color:#4a3a1a;color:#f2c97d}
+[data-theme="dark"] .dlWarn li.ok,[data-theme="dark"] .dlWarn.ok{color:#9be3bb}
+[data-theme="dark"] .dlWarn li.req{color:#ff9b8a}
+[data-theme="dark"] .dlWarn.ok{background:#11241a;border-color:#2f7a4e}
+[data-theme="dark"] .dlSum li.more,[data-theme="dark"] .dlSum.empty span{color:var(--muted)}
+@media(max-width:560px){.dlSum ul{columns:1}}
+</style>

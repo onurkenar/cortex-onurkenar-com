@@ -1,0 +1,90 @@
+{
+ "about": "Skill Kütüphanesi'ndeki proje skill'leri ve Anthropic GitHub skill'lerinin claude.ai Skill Dizini'ndeki karşılıkları (kullanıcı onayı 2026-11-01). Eşleşen skill'in kimliği dz:<eklenti id>/<skill adı> olur; pozisyon, sahip, risk, talimat ve dosyaları korunur, eski kimlik legacy alanında ve DATA.skillLegacy'de durur.",
+ "map": {
+  "kod-inceleme": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "code-review"
+  },
+  "hata-ayiklama": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "debug"
+  },
+  "test-stratejisi": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "testing-strategy"
+  },
+  "dokumantasyon": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "documentation"
+  },
+  "adr-yazimi": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "architecture"
+  },
+  "yayin-kontrol": {
+   "plugin": "plugin_013ZVLzwpXfQ4b9BjchCpoHf",
+   "pluginName": "Engineering",
+   "skill": "deploy-checklist"
+  },
+  "erisilebilirlik": {
+   "plugin": "plugin_01XXJmxLXPEhPMmnxmrgntNw",
+   "pluginName": "Design",
+   "skill": "accessibility-review"
+  },
+  "seo-sayfa": {
+   "plugin": "plugin_01Eeb9y5m4iFuY3yRtytYfdc",
+   "pluginName": "Marketing",
+   "skill": "seo-audit"
+  },
+  "hesap-mutabakati": {
+   "plugin": "plugin_01Ng9wHENBs23L3Cn7Nz3btG",
+   "pluginName": "Finance",
+   "skill": "reconciliation"
+  },
+  "tasarim-tokenlari": {
+   "plugin": "plugin_01XXJmxLXPEhPMmnxmrgntNw",
+   "pluginName": "Design",
+   "skill": "design-system"
+  },
+  "marka-sesi": {
+   "plugin": "plugin_01Eeb9y5m4iFuY3yRtytYfdc",
+   "pluginName": "Marketing",
+   "skill": "brand-review"
+  },
+  "kvkk-kontrol": {
+   "plugin": "plugin_01B6ojDrR1bv46mnyXCF9sxd",
+   "pluginName": "Legal",
+   "skill": "compliance-check"
+  },
+  "teklif-sablonu": {
+   "plugin": "plugin_017fqi3mNPVpSHyJZ7kzaP5u",
+   "pluginName": "Small Business",
+   "skill": "proposal-builder"
+  },
+  "olay-takibi": {
+   "plugin": "plugin_01HjnQwYWPokcJcu9cRYzTbg",
+   "pluginName": "Product Tracking",
+   "skill": "product-tracking-design-tracking-plan"
+  },
+  "performans-olcum": {
+   "plugin": "plugin_01JBJRTKZtTWY8YRJgGr3aQY",
+   "pluginName": "Cloudflare",
+   "skill": "web-perf"
+  },
+  "frontend-design": {
+   "plugin": "plugin_011XJXyLY2skJXTKdTJcsNBn",
+   "pluginName": "frontend-design",
+   "skill": "frontend-design"
+  },
+  "skill-creator": {
+   "plugin": "plugin_01KQf4AbrFBKoc69Kd97rfMb",
+   "pluginName": "skill-creator",
+   "skill": "skill-creator"
+  }
+ }
+}

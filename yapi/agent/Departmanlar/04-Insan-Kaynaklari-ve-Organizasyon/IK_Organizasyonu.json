@@ -1,0 +1,26 @@
+{
+  "departman_kodu": "04",
+  "departman": "İnsan Kaynakları ve Organizasyon",
+  "ust_bagli": "Genel Müdür / CEO",
+  "direktor": {"title_tr": "İnsan Kaynakları ve Organizasyon Direktörü", "title_en": "HR & Organization Director"},
+  "birimler": [
+    {"ad":"İK Planlama ve Organizasyonel Gelişim","mudur":"İK Planlama ve Organizasyonel Gelişim Müdürü","pozisyonlar":["Organizasyonel Gelişim Takım Lideri","İş Gücü Planlama Uzmanı","Organizasyonel Gelişim Uzmanı"]},
+    {"ad":"İşe Alım ve Yetenek Kazanımı","mudur":"İşe Alım ve Yetenek Kazanımı Müdürü","pozisyonlar":["İşe Alım Takım Lideri","Kıdemli İşe Alım Uzmanı","İşe Alım Uzmanı","İşe Alım Asistanı"]},
+    {"ad":"Eğitim ve Gelişim","mudur":"Eğitim ve Gelişim Müdürü","pozisyonlar":["Eğitim ve Gelişim Takım Lideri","Eğitim Tasarımı Uzmanı","Eğitim ve Gelişim Uzmanı"]},
+    {"ad":"Performans ve Kariyer Yönetimi","mudur":"Performans ve Kariyer Yönetimi Müdürü","pozisyonlar":["Performans Yönetimi Takım Lideri","Performans Yönetimi Uzmanı","Kariyer Yönetimi Uzmanı"]},
+    {"ad":"Yetenek ve Yedekleme Yönetimi","mudur":"Yetenek ve Yedekleme Yönetimi Müdürü","pozisyonlar":["Yetenek Yönetimi Takım Lideri","Yetenek Yönetimi Uzmanı","Halefiyet Planlama Uzmanı"]},
+    {"ad":"Ücret ve Yan Haklar","mudur":"Ücret ve Yan Haklar Müdürü","pozisyonlar":["Ücret ve Yan Haklar Takım Lideri","Ücretlendirme Uzmanı","Yan Haklar Uzmanı"]},
+    {"ad":"Bordro ve Özlük İşleri","mudur":"Bordro ve Özlük İşleri Müdürü","pozisyonlar":["Bordro ve Özlük İşleri Takım Lideri","Bordro Uzmanı","Özlük İşleri Uzmanı","Özlük İşleri Asistanı"]},
+    {"ad":"Çalışan Deneyimi ve Bağlılık","mudur":"Çalışan Deneyimi ve Bağlılık Müdürü","pozisyonlar":["Çalışan Deneyimi Takım Lideri","Çalışan Deneyimi Uzmanı","Çalışan Bağlılığı Uzmanı"]},
+    {"ad":"İşveren Markası ve İç İletişim","mudur":"İşveren Markası ve İç İletişim Müdürü","pozisyonlar":["İşveren Markası Uzmanı","İK İç İletişim Uzmanı"]},
+    {"ad":"Çalışan İlişkileri","mudur":"Çalışan İlişkileri Müdürü","pozisyonlar":["Çalışan İlişkileri Takım Lideri","Çalışan İlişkileri Uzmanı"]},
+    {"ad":"İK Analitiği ve Dijitalleşme","mudur":"İK Analitiği ve Dijitalleşme Müdürü","pozisyonlar":["İK Analitiği Uzmanı","İK Sistemleri Uzmanı","İK Raporlama Uzmanı"]}
+  ],
+  "gorev_sinirlari": {
+    "hukuk":"İş hukuku danışmanlığı, hukuki görüş ve uyuşmazlık yönetimi Hukuk departmanına aittir.",
+    "muhasebe":"Bordro muhasebe kayıtları ve yasal mali raporlama Muhasebe ve Mali İşler departmanına aittir.",
+    "finans":"Ödemelerin icrası, nakit yönetimi ve banka işlemleri Finans ve Hazine departmanına aittir.",
+    "iletisim":"Kurumsal duyuru, medya ve kurumsal iletişim uygulamaları ilgili iletişim departmanına aittir.",
+    "tasarim":"Kreatif tasarım ve görsel üretim Tasarım ve Yaratıcı Hizmetler departmanına aittir."
+  }
+}

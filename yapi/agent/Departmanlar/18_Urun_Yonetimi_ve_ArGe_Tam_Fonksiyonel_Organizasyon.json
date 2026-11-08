@@ -1,0 +1,1090 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "18 - Ürün Yönetimi ve Ar-Ge Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "18",
+    "name_tr": "Ürün Yönetimi ve Ar-Ge",
+    "name_en": "Product Management and Research & Development",
+    "organization_model": "Tam Fonksiyonel CPO Modeli",
+    "purpose": "Müşteri problemlerini ve pazar fırsatlarını keşfederek sürdürülebilir ürünlere dönüştürmek; ürün portföyünü, kullanıcı deneyimini, Ar-Ge çalışmalarını ve ticarileştirme yaşam döngüsünü uçtan uca yönetmek.",
+    "reports_to": {
+      "title_tr": "Genel Müdür / Üründen Sorumlu Genel Müdür Yardımcısı",
+      "title_en": "Chief Executive Officer / Chief Product Officer"
+    },
+    "head": {
+      "position_code": "18.00.001",
+      "title_tr": "Ürün Yönetimi ve Ar-Ge Direktörü",
+      "title_en": "Product Management and R&D Director",
+      "alternative_executive_title": "Chief Product Officer (CPO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "18.01",
+        "18.02",
+        "18.03",
+        "18.04",
+        "18.05",
+        "18.06",
+        "18.07",
+        "18.08"
+      ],
+      "accountabilities": [
+        "Ürün vizyonu, stratejisi ve portföyünü yönetmek",
+        "Müşteri probleminden ürün keşfi, geliştirme ve ticarileştirmeye kadar yaşam döngüsünü sahiplenmek",
+        "Kullanıcı deneyimi, ürün analitiği ve ürün ekonomisini yönetmek",
+        "Ar-Ge, deneysel geliştirme, prototipleme ve teknik doğrulamayı yürütmek",
+        "Ürün, teknoloji, satış, pazarlama, operasyon ve müşteri deneyimi ekiplerini ortak ürün sonuçlarında hizalamak"
+      ]
+    },
+    "operating_principle": "Ürün ekipleri çıktı değil müşteri ve iş sonucu odaklı çalışır. Ürün Yöneticisi problem, değer ve öncelik sahipliğini; teknoloji ekipleri teknik çözüm ve mühendislik kalitesini; iş birimleri ise alan uzmanlığı ve operasyonel uygulanabilirliği üstlenir.",
+    "hierarchy_standard": [
+      "Departman Direktörü / CPO",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "18.01",
+        "name_tr": "Ürün Stratejisi, Portföy ve Yönetişim",
+        "name_en": "Product Strategy, Portfolio and Governance",
+        "manager": {
+          "position_code": "18.01.001",
+          "title_tr": "Ürün Stratejisi, Portföy ve Yönetişim Müdürü",
+          "title_en": "Product Strategy, Portfolio and Governance Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.01.01",
+            "name_tr": "Ürün Stratejisi ve Vizyon",
+            "name_en": "Product Strategy and Vision",
+            "lead": {
+              "position_code": "18.01.01.001",
+              "title_tr": "Ürün Stratejisi ve Vizyon Yöneticisi",
+              "title_en": "Product Strategy and Vision Manager",
+              "reports_to": "18.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.01.01.002",
+                "title_tr": "Kıdemli Ürün Stratejisi Uzmanı",
+                "title_en": "Senior Product Strategy Specialist",
+                "reports_to": "18.01.01.001"
+              },
+              {
+                "position_code": "18.01.01.003",
+                "title_tr": "Ürün Stratejisi Uzmanı",
+                "title_en": "Product Strategy Specialist",
+                "reports_to": "18.01.01.001"
+              },
+              {
+                "position_code": "18.01.01.004",
+                "title_tr": "Ürün Strateji Analisti",
+                "title_en": "Product Strategy Analyst",
+                "reports_to": "18.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün vizyonu, stratejisi ve stratejik temaları oluşturmak",
+              "Pazar, müşteri ve teknoloji eğilimlerini ürün yönüne dönüştürmek",
+              "Ürün stratejisinin şirket hedefleriyle uyumunu izlemek"
+            ]
+          },
+          {
+            "team_code": "18.01.02",
+            "name_tr": "Ürün Portföyü ve Yatırım Yönetimi",
+            "name_en": "Product Portfolio and Investment Management",
+            "lead": {
+              "position_code": "18.01.02.001",
+              "title_tr": "Ürün Portföyü ve Yatırım Yönetimi Yöneticisi",
+              "title_en": "Product Portfolio and Investment Management Manager",
+              "reports_to": "18.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.01.02.002",
+                "title_tr": "Kıdemli Ürün Portföy Uzmanı",
+                "title_en": "Senior Product Portfolio Specialist",
+                "reports_to": "18.01.02.001"
+              },
+              {
+                "position_code": "18.01.02.003",
+                "title_tr": "Ürün Portföy Uzmanı",
+                "title_en": "Product Portfolio Specialist",
+                "reports_to": "18.01.02.001"
+              },
+              {
+                "position_code": "18.01.02.004",
+                "title_tr": "Ürün Yatırım Analisti",
+                "title_en": "Product Investment Analyst",
+                "reports_to": "18.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün ve girişim portföyünü önceliklendirmek",
+              "Yatırım, kaynak, bağımlılık ve aşama kapılarını yönetmek",
+              "Portföy dengesi, getiri ve stratejik uyumu değerlendirmek"
+            ]
+          },
+          {
+            "team_code": "18.01.03",
+            "name_tr": "Ürün Yönetişimi ve Karar Sistemleri",
+            "name_en": "Product Governance and Decision Systems",
+            "lead": {
+              "position_code": "18.01.03.001",
+              "title_tr": "Ürün Yönetişimi ve Karar Sistemleri Yöneticisi",
+              "title_en": "Product Governance and Decision Systems Manager",
+              "reports_to": "18.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.01.03.002",
+                "title_tr": "Kıdemli Ürün Yönetişimi Uzmanı",
+                "title_en": "Senior Product Governance Specialist",
+                "reports_to": "18.01.03.001"
+              },
+              {
+                "position_code": "18.01.03.003",
+                "title_tr": "Ürün Yönetişimi Uzmanı",
+                "title_en": "Product Governance Specialist",
+                "reports_to": "18.01.03.001"
+              },
+              {
+                "position_code": "18.01.03.004",
+                "title_tr": "Ürün Karar Analisti",
+                "title_en": "Product Decision Analyst",
+                "reports_to": "18.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün karar hakları ve yönetim ritmini tasarlamak",
+              "Ürün konseyleri, standartlar ve karar kayıtlarını işletmek",
+              "Ürün KPI, hedef ve OKR çerçevesini yönetmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.02",
+        "name_tr": "Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı",
+        "name_en": "Product Discovery, Customer Research and Opportunity Design",
+        "manager": {
+          "position_code": "18.02.001",
+          "title_tr": "Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı Müdürü",
+          "title_en": "Product Discovery, Customer Research and Opportunity Design Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.02.01",
+            "name_tr": "Müşteri ve Kullanıcı Araştırmaları",
+            "name_en": "Customer and User Research",
+            "lead": {
+              "position_code": "18.02.01.001",
+              "title_tr": "Müşteri ve Kullanıcı Araştırmaları Yöneticisi",
+              "title_en": "Customer and User Research Manager",
+              "reports_to": "18.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.02.01.002",
+                "title_tr": "Kıdemli Kullanıcı Araştırmacısı",
+                "title_en": "Senior User Researcher",
+                "reports_to": "18.02.01.001"
+              },
+              {
+                "position_code": "18.02.01.003",
+                "title_tr": "Kullanıcı Araştırmacısı",
+                "title_en": "User Researcher",
+                "reports_to": "18.02.01.001"
+              },
+              {
+                "position_code": "18.02.01.004",
+                "title_tr": "Müşteri İçgörüleri Analisti",
+                "title_en": "Customer Insights Analyst",
+                "reports_to": "18.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Nitel ve nicel kullanıcı araştırmalarını yürütmek",
+              "İhtiyaç, davranış, sorun ve bağlam içgörüleri üretmek",
+              "Araştırma havuzu ve içgörü arşivini yönetmek"
+            ]
+          },
+          {
+            "team_code": "18.02.02",
+            "name_tr": "Problem Keşfi ve Fırsat Haritalama",
+            "name_en": "Problem Discovery and Opportunity Mapping",
+            "lead": {
+              "position_code": "18.02.02.001",
+              "title_tr": "Problem Keşfi ve Fırsat Haritalama Yöneticisi",
+              "title_en": "Problem Discovery and Opportunity Mapping Manager",
+              "reports_to": "18.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.02.02.002",
+                "title_tr": "Kıdemli Ürün Keşif Uzmanı",
+                "title_en": "Senior Product Discovery Specialist",
+                "reports_to": "18.02.02.001"
+              },
+              {
+                "position_code": "18.02.02.003",
+                "title_tr": "Ürün Keşif Uzmanı",
+                "title_en": "Product Discovery Specialist",
+                "reports_to": "18.02.02.001"
+              },
+              {
+                "position_code": "18.02.02.004",
+                "title_tr": "Fırsat Analisti",
+                "title_en": "Opportunity Analyst",
+                "reports_to": "18.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Müşteri problemlerini ve karşılanmamış ihtiyaçları tanımlamak",
+              "Fırsat çözüm ağaçları ve hipotezleri oluşturmak",
+              "Fırsatları değer, risk ve stratejik uyuma göre önceliklendirmek"
+            ]
+          },
+          {
+            "team_code": "18.02.03",
+            "name_tr": "Konsept Testi ve Ürün Doğrulama",
+            "name_en": "Concept Testing and Product Validation",
+            "lead": {
+              "position_code": "18.02.03.001",
+              "title_tr": "Konsept Testi ve Ürün Doğrulama Yöneticisi",
+              "title_en": "Concept Testing and Product Validation Manager",
+              "reports_to": "18.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.02.03.002",
+                "title_tr": "Kıdemli Ürün Doğrulama Uzmanı",
+                "title_en": "Senior Product Validation Specialist",
+                "reports_to": "18.02.03.001"
+              },
+              {
+                "position_code": "18.02.03.003",
+                "title_tr": "Konsept Test Uzmanı",
+                "title_en": "Concept Testing Specialist",
+                "reports_to": "18.02.03.001"
+              },
+              {
+                "position_code": "18.02.03.004",
+                "title_tr": "Deney Tasarımı Analisti",
+                "title_en": "Experiment Design Analyst",
+                "reports_to": "18.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Konsept, değer önerisi ve çözüm hipotezlerini test etmek",
+              "Prototip, kullanıcı testi ve deney planlarını yürütmek",
+              "Problem-çözüm uyumu ve ürün-pazar sinyallerini değerlendirmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.03",
+        "name_tr": "Ürün Yönetimi ve Ürün Alanları",
+        "name_en": "Product Management and Product Domains",
+        "manager": {
+          "position_code": "18.03.001",
+          "title_tr": "Ürün Yönetimi ve Ürün Alanları Müdürü",
+          "title_en": "Product Management and Product Domains Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.03.01",
+            "name_tr": "Dijital Ürün Yönetimi",
+            "name_en": "Digital Product Management",
+            "lead": {
+              "position_code": "18.03.01.001",
+              "title_tr": "Dijital Ürün Yönetimi Yöneticisi",
+              "title_en": "Digital Product Management Manager",
+              "reports_to": "18.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.03.01.002",
+                "title_tr": "Kıdemli Ürün Yöneticisi",
+                "title_en": "Senior Product Manager",
+                "reports_to": "18.03.01.001"
+              },
+              {
+                "position_code": "18.03.01.003",
+                "title_tr": "Ürün Yöneticisi",
+                "title_en": "Product Manager",
+                "reports_to": "18.03.01.001"
+              },
+              {
+                "position_code": "18.03.01.004",
+                "title_tr": "Ürün Uzmanı",
+                "title_en": "Product Specialist",
+                "reports_to": "18.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Dijital ürün vizyonu, yol haritası ve backlog'unu yönetmek",
+              "Müşteri değeri ve iş sonucuna göre önceliklendirme yapmak",
+              "Teslimat, benimseme ve ürün performansını izlemek"
+            ]
+          },
+          {
+            "team_code": "18.03.02",
+            "name_tr": "Platform ve Ekosistem Ürünleri",
+            "name_en": "Platform and Ecosystem Products",
+            "lead": {
+              "position_code": "18.03.02.001",
+              "title_tr": "Platform ve Ekosistem Ürünleri Yöneticisi",
+              "title_en": "Platform and Ecosystem Products Manager",
+              "reports_to": "18.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.03.02.002",
+                "title_tr": "Kıdemli Platform Ürün Yöneticisi",
+                "title_en": "Senior Platform Product Manager",
+                "reports_to": "18.03.02.001"
+              },
+              {
+                "position_code": "18.03.02.003",
+                "title_tr": "Platform Ürün Yöneticisi",
+                "title_en": "Platform Product Manager",
+                "reports_to": "18.03.02.001"
+              },
+              {
+                "position_code": "18.03.02.004",
+                "title_tr": "Ekosistem Ürün Uzmanı",
+                "title_en": "Ecosystem Product Specialist",
+                "reports_to": "18.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Platform, API ve partner yeteneklerinin yol haritasını yönetmek",
+              "Çok taraflı ekosistem ihtiyaçlarını ve ağ etkisini geliştirmek",
+              "Platform hizmet seviyeleri ve geliştirici deneyimini izlemek"
+            ]
+          },
+          {
+            "team_code": "18.03.03",
+            "name_tr": "İç Ürünler ve Kurumsal Yetkinlikler",
+            "name_en": "Internal Products and Enterprise Capabilities",
+            "lead": {
+              "position_code": "18.03.03.001",
+              "title_tr": "İç Ürünler ve Kurumsal Yetkinlikler Yöneticisi",
+              "title_en": "Internal Products and Enterprise Capabilities Manager",
+              "reports_to": "18.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.03.03.002",
+                "title_tr": "Kıdemli İç Ürün Yöneticisi",
+                "title_en": "Senior Internal Product Manager",
+                "reports_to": "18.03.03.001"
+              },
+              {
+                "position_code": "18.03.03.003",
+                "title_tr": "İç Ürün Yöneticisi",
+                "title_en": "Internal Product Manager",
+                "reports_to": "18.03.03.001"
+              },
+              {
+                "position_code": "18.03.03.004",
+                "title_tr": "Kurumsal Ürün Analisti",
+                "title_en": "Enterprise Product Analyst",
+                "reports_to": "18.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Çalışan ve operasyon odaklı iç ürünleri yönetmek",
+              "İç süreç problemlerini ölçeklenebilir ürün yeteneklerine dönüştürmek",
+              "İç kullanıcı benimseme, verimlilik ve memnuniyeti izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.04",
+        "name_tr": "Ürün Operasyonları ve Yaşam Döngüsü",
+        "name_en": "Product Operations and Lifecycle",
+        "manager": {
+          "position_code": "18.04.001",
+          "title_tr": "Ürün Operasyonları ve Yaşam Döngüsü Müdürü",
+          "title_en": "Product Operations and Lifecycle Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.04.01",
+            "name_tr": "Ürün Operasyonları ve Metodoloji",
+            "name_en": "Product Operations and Methodology",
+            "lead": {
+              "position_code": "18.04.01.001",
+              "title_tr": "Ürün Operasyonları ve Metodoloji Yöneticisi",
+              "title_en": "Product Operations and Methodology Manager",
+              "reports_to": "18.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.04.01.002",
+                "title_tr": "Kıdemli Ürün Operasyonları Uzmanı",
+                "title_en": "Senior Product Operations Specialist",
+                "reports_to": "18.04.01.001"
+              },
+              {
+                "position_code": "18.04.01.003",
+                "title_tr": "Ürün Operasyonları Uzmanı",
+                "title_en": "Product Operations Specialist",
+                "reports_to": "18.04.01.001"
+              },
+              {
+                "position_code": "18.04.01.004",
+                "title_tr": "Ürün Metodoloji Analisti",
+                "title_en": "Product Methodology Analyst",
+                "reports_to": "18.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün çalışma modeli, araç ve ritüellerini standardize etmek",
+              "Ürün ekiplerinin kapasite, bağımlılık ve karar akışını geliştirmek",
+              "Ürün yönetimi olgunluğu ve iyi uygulama paylaşımını yönetmek"
+            ]
+          },
+          {
+            "team_code": "18.04.02",
+            "name_tr": "Yol Haritası, Backlog ve Teslimat Koordinasyonu",
+            "name_en": "Roadmap, Backlog and Delivery Coordination",
+            "lead": {
+              "position_code": "18.04.02.001",
+              "title_tr": "Yol Haritası, Backlog ve Teslimat Koordinasyonu Yöneticisi",
+              "title_en": "Roadmap, Backlog and Delivery Coordination Manager",
+              "reports_to": "18.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.04.02.002",
+                "title_tr": "Kıdemli Ürün Teslimat Uzmanı",
+                "title_en": "Senior Product Delivery Specialist",
+                "reports_to": "18.04.02.001"
+              },
+              {
+                "position_code": "18.04.02.003",
+                "title_tr": "Ürün Teslimat Uzmanı",
+                "title_en": "Product Delivery Specialist",
+                "reports_to": "18.04.02.001"
+              },
+              {
+                "position_code": "18.04.02.004",
+                "title_tr": "Backlog Koordinatörü",
+                "title_en": "Backlog Coordinator",
+                "reports_to": "18.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yol haritası ve backlog görünürlüğünü sağlamak",
+              "Ürün, teknoloji ve operasyon bağımlılıklarını koordine etmek",
+              "Teslimat riski, kapsam ve kararları takip etmek"
+            ]
+          },
+          {
+            "team_code": "18.04.03",
+            "name_tr": "Lansman, Benimseme ve Ürün Yaşam Döngüsü",
+            "name_en": "Launch, Adoption and Product Lifecycle",
+            "lead": {
+              "position_code": "18.04.03.001",
+              "title_tr": "Lansman, Benimseme ve Ürün Yaşam Döngüsü Yöneticisi",
+              "title_en": "Launch, Adoption and Product Lifecycle Manager",
+              "reports_to": "18.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.04.03.002",
+                "title_tr": "Kıdemli Ürün Lansman Uzmanı",
+                "title_en": "Senior Product Launch Specialist",
+                "reports_to": "18.04.03.001"
+              },
+              {
+                "position_code": "18.04.03.003",
+                "title_tr": "Ürün Benimseme Uzmanı",
+                "title_en": "Product Adoption Specialist",
+                "reports_to": "18.04.03.001"
+              },
+              {
+                "position_code": "18.04.03.004",
+                "title_tr": "Ürün Yaşam Döngüsü Analisti",
+                "title_en": "Product Lifecycle Analyst",
+                "reports_to": "18.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün lansman hazırlığı ve fonksiyonlar arası planı yönetmek",
+              "Benimseme, kullanım ve değer gerçekleşmesini izlemek",
+              "Ürün geliştirme, olgunluk, yenileme ve sonlandırma kararlarını desteklemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.05",
+        "name_tr": "Kullanıcı Deneyimi ve Ürün Tasarımı",
+        "name_en": "User Experience and Product Design",
+        "manager": {
+          "position_code": "18.05.001",
+          "title_tr": "Kullanıcı Deneyimi ve Ürün Tasarımı Müdürü",
+          "title_en": "User Experience and Product Design Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.05.01",
+            "name_tr": "Ürün Deneyimi ve Etkileşim Tasarımı",
+            "name_en": "Product Experience and Interaction Design",
+            "lead": {
+              "position_code": "18.05.01.001",
+              "title_tr": "Ürün Deneyimi ve Etkileşim Tasarımı Yöneticisi",
+              "title_en": "Product Experience and Interaction Design Manager",
+              "reports_to": "18.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.05.01.002",
+                "title_tr": "Kıdemli Ürün Tasarımcısı",
+                "title_en": "Senior Product Designer",
+                "reports_to": "18.05.01.001"
+              },
+              {
+                "position_code": "18.05.01.003",
+                "title_tr": "Ürün Tasarımcısı",
+                "title_en": "Product Designer",
+                "reports_to": "18.05.01.001"
+              },
+              {
+                "position_code": "18.05.01.004",
+                "title_tr": "Etkileşim Tasarımcısı",
+                "title_en": "Interaction Designer",
+                "reports_to": "18.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Uçtan uca ürün deneyimi ve etkileşim akışlarını tasarlamak",
+              "Kullanılabilirlik, erişilebilirlik ve tutarlılığı sağlamak",
+              "Tasarım kararlarını araştırma ve ürün verisiyle doğrulamak"
+            ]
+          },
+          {
+            "team_code": "18.05.02",
+            "name_tr": "Tasarım Sistemi ve İçerik Tasarımı",
+            "name_en": "Design System and Content Design",
+            "lead": {
+              "position_code": "18.05.02.001",
+              "title_tr": "Tasarım Sistemi ve İçerik Tasarımı Yöneticisi",
+              "title_en": "Design System and Content Design Manager",
+              "reports_to": "18.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.05.02.002",
+                "title_tr": "Kıdemli Tasarım Sistemi Uzmanı",
+                "title_en": "Senior Design System Specialist",
+                "reports_to": "18.05.02.001"
+              },
+              {
+                "position_code": "18.05.02.003",
+                "title_tr": "UI Tasarımcısı",
+                "title_en": "UI Designer",
+                "reports_to": "18.05.02.001"
+              },
+              {
+                "position_code": "18.05.02.004",
+                "title_tr": "UX İçerik Tasarımcısı",
+                "title_en": "UX Content Designer",
+                "reports_to": "18.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Tasarım sistemi, bileşen ve görsel standartları yönetmek",
+              "Ürün içi içerik, mikro metin ve bilgi mimarisini geliştirmek",
+              "Tasarım-teknoloji tutarlılığı ve yeniden kullanım oranını artırmak"
+            ]
+          },
+          {
+            "team_code": "18.05.03",
+            "name_tr": "Servis Tasarımı ve Erişilebilirlik",
+            "name_en": "Service Design and Accessibility",
+            "lead": {
+              "position_code": "18.05.03.001",
+              "title_tr": "Servis Tasarımı ve Erişilebilirlik Yöneticisi",
+              "title_en": "Service Design and Accessibility Manager",
+              "reports_to": "18.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.05.03.002",
+                "title_tr": "Kıdemli Servis Tasarımcısı",
+                "title_en": "Senior Service Designer",
+                "reports_to": "18.05.03.001"
+              },
+              {
+                "position_code": "18.05.03.003",
+                "title_tr": "Servis Tasarımcısı",
+                "title_en": "Service Designer",
+                "reports_to": "18.05.03.001"
+              },
+              {
+                "position_code": "18.05.03.004",
+                "title_tr": "Dijital Erişilebilirlik Uzmanı",
+                "title_en": "Digital Accessibility Specialist",
+                "reports_to": "18.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Dijital ve fiziksel temas noktalarını bütüncül tasarlamak",
+              "Servis blueprint ve müşteri yolculuklarını ürün süreçlerine bağlamak",
+              "Erişilebilirlik standartları ve testlerini ürün yaşam döngüsüne uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.06",
+        "name_tr": "Ar-Ge, Teknoloji Araştırmaları ve İnovasyon",
+        "name_en": "R&D, Technology Research and Innovation",
+        "manager": {
+          "position_code": "18.06.001",
+          "title_tr": "Ar-Ge, Teknoloji Araştırmaları ve İnovasyon Müdürü",
+          "title_en": "R&D, Technology Research and Innovation Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.06.01",
+            "name_tr": "Teknoloji Araştırmaları ve Gelecek Öngörüsü",
+            "name_en": "Technology Research and Foresight",
+            "lead": {
+              "position_code": "18.06.01.001",
+              "title_tr": "Teknoloji Araştırmaları ve Gelecek Öngörüsü Yöneticisi",
+              "title_en": "Technology Research and Foresight Manager",
+              "reports_to": "18.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.06.01.002",
+                "title_tr": "Kıdemli Teknoloji Araştırmacısı",
+                "title_en": "Senior Technology Researcher",
+                "reports_to": "18.06.01.001"
+              },
+              {
+                "position_code": "18.06.01.003",
+                "title_tr": "Teknoloji Araştırmacısı",
+                "title_en": "Technology Researcher",
+                "reports_to": "18.06.01.001"
+              },
+              {
+                "position_code": "18.06.01.004",
+                "title_tr": "Gelecek Öngörüsü Analisti",
+                "title_en": "Foresight Analyst",
+                "reports_to": "18.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Yeni teknoloji, bilimsel gelişme ve patent eğilimlerini araştırmak",
+              "Teknoloji radarını ve stratejik fırsat alanlarını oluşturmak",
+              "Araştırma bulgularını ürün ve yatırım kararlarına aktarmak"
+            ]
+          },
+          {
+            "team_code": "18.06.02",
+            "name_tr": "Uygulamalı Ar-Ge ve Deneysel Geliştirme",
+            "name_en": "Applied R&D and Experimental Development",
+            "lead": {
+              "position_code": "18.06.02.001",
+              "title_tr": "Uygulamalı Ar-Ge ve Deneysel Geliştirme Yöneticisi",
+              "title_en": "Applied R&D and Experimental Development Manager",
+              "reports_to": "18.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.06.02.002",
+                "title_tr": "Kıdemli Ar-Ge Mühendisi",
+                "title_en": "Senior R&D Engineer",
+                "reports_to": "18.06.02.001"
+              },
+              {
+                "position_code": "18.06.02.003",
+                "title_tr": "Ar-Ge Mühendisi",
+                "title_en": "R&D Engineer",
+                "reports_to": "18.06.02.001"
+              },
+              {
+                "position_code": "18.06.02.004",
+                "title_tr": "Deneysel Geliştirme Uzmanı",
+                "title_en": "Experimental Development Specialist",
+                "reports_to": "18.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Teknik belirsizlik içeren Ar-Ge projelerini yürütmek",
+              "Yeni yöntem, algoritma, malzeme veya teknoloji yeteneklerini geliştirmek",
+              "Deney sonuçları ve teknik öğrenimleri dokümante etmek"
+            ]
+          },
+          {
+            "team_code": "18.06.03",
+            "name_tr": "Açık İnovasyon ve Akademik İş Birlikleri",
+            "name_en": "Open Innovation and Academic Partnerships",
+            "lead": {
+              "position_code": "18.06.03.001",
+              "title_tr": "Açık İnovasyon ve Akademik İş Birlikleri Yöneticisi",
+              "title_en": "Open Innovation and Academic Partnerships Manager",
+              "reports_to": "18.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.06.03.002",
+                "title_tr": "Kıdemli Açık İnovasyon Uzmanı",
+                "title_en": "Senior Open Innovation Specialist",
+                "reports_to": "18.06.03.001"
+              },
+              {
+                "position_code": "18.06.03.003",
+                "title_tr": "Akademik İş Birlikleri Uzmanı",
+                "title_en": "Academic Partnerships Specialist",
+                "reports_to": "18.06.03.001"
+              },
+              {
+                "position_code": "18.06.03.004",
+                "title_tr": "İnovasyon Ekosistemi Koordinatörü",
+                "title_en": "Innovation Ecosystem Coordinator",
+                "reports_to": "18.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Üniversite, startup ve araştırma merkezi iş birliklerini yönetmek",
+              "Ortak araştırma, hibe ve konsorsiyum fırsatlarını geliştirmek",
+              "Dış inovasyon kaynaklarını ürün portföyüne bağlamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.07",
+        "name_tr": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+        "name_en": "Prototyping, Product Engineering and Technical Validation",
+        "manager": {
+          "position_code": "18.07.001",
+          "title_tr": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama Müdürü",
+          "title_en": "Prototyping, Product Engineering and Technical Validation Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.07.01",
+            "name_tr": "Hızlı Prototipleme ve Kanıt Çalışmaları",
+            "name_en": "Rapid Prototyping and Proof of Concept",
+            "lead": {
+              "position_code": "18.07.01.001",
+              "title_tr": "Hızlı Prototipleme ve Kanıt Çalışmaları Yöneticisi",
+              "title_en": "Rapid Prototyping and Proof of Concept Manager",
+              "reports_to": "18.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.07.01.002",
+                "title_tr": "Kıdemli Prototipleme Mühendisi",
+                "title_en": "Senior Prototyping Engineer",
+                "reports_to": "18.07.01.001"
+              },
+              {
+                "position_code": "18.07.01.003",
+                "title_tr": "Prototipleme Mühendisi",
+                "title_en": "Prototyping Engineer",
+                "reports_to": "18.07.01.001"
+              },
+              {
+                "position_code": "18.07.01.004",
+                "title_tr": "PoC Geliştirme Uzmanı",
+                "title_en": "PoC Development Specialist",
+                "reports_to": "18.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Fikirleri hızlı prototip ve PoC'lere dönüştürmek",
+              "Teknik yapılabilirlik ve kritik varsayımları test etmek",
+              "Prototip öğrenimlerini ürün kararlarına aktarmak"
+            ]
+          },
+          {
+            "team_code": "18.07.02",
+            "name_tr": "Ürün Mühendisliği ve Endüstriyelleştirme Koordinasyonu",
+            "name_en": "Product Engineering and Industrialization Coordination",
+            "lead": {
+              "position_code": "18.07.02.001",
+              "title_tr": "Ürün Mühendisliği ve Endüstriyelleştirme Koordinasyonu Yöneticisi",
+              "title_en": "Product Engineering and Industrialization Coordination Manager",
+              "reports_to": "18.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.07.02.002",
+                "title_tr": "Kıdemli Ürün Mühendisi",
+                "title_en": "Senior Product Engineer",
+                "reports_to": "18.07.02.001"
+              },
+              {
+                "position_code": "18.07.02.003",
+                "title_tr": "Ürün Mühendisi",
+                "title_en": "Product Engineer",
+                "reports_to": "18.07.02.001"
+              },
+              {
+                "position_code": "18.07.02.004",
+                "title_tr": "Endüstriyelleştirme Koordinatörü",
+                "title_en": "Industrialization Coordinator",
+                "reports_to": "18.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün gereksinimlerini teknik tasarım ve üretilebilirlik kriterlerine bağlamak",
+              "Ar-Ge, teknoloji, kalite ve üretim ekipleri arasındaki teknik devri koordine etmek",
+              "Tasarım değişikliği ve ürün konfigürasyon kararlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "18.07.03",
+            "name_tr": "Teknik Doğrulama, Test ve Ürün Güvenilirliği",
+            "name_en": "Technical Verification, Testing and Product Reliability",
+            "lead": {
+              "position_code": "18.07.03.001",
+              "title_tr": "Teknik Doğrulama, Test ve Ürün Güvenilirliği Yöneticisi",
+              "title_en": "Technical Verification, Testing and Product Reliability Manager",
+              "reports_to": "18.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.07.03.002",
+                "title_tr": "Kıdemli Doğrulama Mühendisi",
+                "title_en": "Senior Verification Engineer",
+                "reports_to": "18.07.03.001"
+              },
+              {
+                "position_code": "18.07.03.003",
+                "title_tr": "Ürün Test Mühendisi",
+                "title_en": "Product Test Engineer",
+                "reports_to": "18.07.03.001"
+              },
+              {
+                "position_code": "18.07.03.004",
+                "title_tr": "Ürün Güvenilirliği Uzmanı",
+                "title_en": "Product Reliability Specialist",
+                "reports_to": "18.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Doğrulama ve geçerleme planlarını oluşturmak",
+              "Fonksiyon, performans, dayanıklılık ve güvenilirlik testlerini koordine etmek",
+              "Test bulguları ve ürün risklerinin kapanışını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "18.08",
+        "name_tr": "Ürün Analitiği, Ticarileştirme ve Değer Yönetimi",
+        "name_en": "Product Analytics, Commercialization and Value Management",
+        "manager": {
+          "position_code": "18.08.001",
+          "title_tr": "Ürün Analitiği, Ticarileştirme ve Değer Yönetimi Müdürü",
+          "title_en": "Product Analytics, Commercialization and Value Management Manager",
+          "reports_to": "18.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "18.08.01",
+            "name_tr": "Ürün Analitiği ve Deney Yönetimi",
+            "name_en": "Product Analytics and Experimentation",
+            "lead": {
+              "position_code": "18.08.01.001",
+              "title_tr": "Ürün Analitiği ve Deney Yönetimi Yöneticisi",
+              "title_en": "Product Analytics and Experimentation Manager",
+              "reports_to": "18.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.08.01.002",
+                "title_tr": "Kıdemli Ürün Analitiği Uzmanı",
+                "title_en": "Senior Product Analytics Specialist",
+                "reports_to": "18.08.01.001"
+              },
+              {
+                "position_code": "18.08.01.003",
+                "title_tr": "Ürün Analitiği Uzmanı",
+                "title_en": "Product Analytics Specialist",
+                "reports_to": "18.08.01.001"
+              },
+              {
+                "position_code": "18.08.01.004",
+                "title_tr": "Ürün Deneyleri Analisti",
+                "title_en": "Product Experimentation Analyst",
+                "reports_to": "18.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün kullanım, dönüşüm ve davranış metriklerini yönetmek",
+              "A/B testleri ve ürün deneylerini tasarlamak",
+              "İçgörüleri yol haritası ve ürün kararlarına aktarmak"
+            ]
+          },
+          {
+            "team_code": "18.08.02",
+            "name_tr": "Ürün Ekonomisi, Fiyatlandırma ve İş Modeli",
+            "name_en": "Product Economics, Pricing and Business Model",
+            "lead": {
+              "position_code": "18.08.02.001",
+              "title_tr": "Ürün Ekonomisi, Fiyatlandırma ve İş Modeli Yöneticisi",
+              "title_en": "Product Economics, Pricing and Business Model Manager",
+              "reports_to": "18.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.08.02.002",
+                "title_tr": "Kıdemli Ürün Ekonomisi Uzmanı",
+                "title_en": "Senior Product Economics Specialist",
+                "reports_to": "18.08.02.001"
+              },
+              {
+                "position_code": "18.08.02.003",
+                "title_tr": "Ürün Fiyatlandırma Uzmanı",
+                "title_en": "Product Pricing Specialist",
+                "reports_to": "18.08.02.001"
+              },
+              {
+                "position_code": "18.08.02.004",
+                "title_tr": "İş Modeli Analisti",
+                "title_en": "Business Model Analyst",
+                "reports_to": "18.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün birim ekonomisi ve kârlılık modellerini geliştirmek",
+              "Fiyatlandırma ve paketleme senaryolarını Satış ve Finans ile oluşturmak",
+              "İş modeli, gelir akışı ve maliyet sürücülerini değerlendirmek"
+            ]
+          },
+          {
+            "team_code": "18.08.03",
+            "name_tr": "Ticarileştirme ve Ürün Değer Gerçekleşmesi",
+            "name_en": "Commercialization and Product Value Realization",
+            "lead": {
+              "position_code": "18.08.03.001",
+              "title_tr": "Ticarileştirme ve Ürün Değer Gerçekleşmesi Yöneticisi",
+              "title_en": "Commercialization and Product Value Realization Manager",
+              "reports_to": "18.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "18.08.03.002",
+                "title_tr": "Kıdemli Ürün Ticarileştirme Uzmanı",
+                "title_en": "Senior Product Commercialization Specialist",
+                "reports_to": "18.08.03.001"
+              },
+              {
+                "position_code": "18.08.03.003",
+                "title_tr": "Ürün Değer Yönetimi Uzmanı",
+                "title_en": "Product Value Management Specialist",
+                "reports_to": "18.08.03.001"
+              },
+              {
+                "position_code": "18.08.03.004",
+                "title_tr": "Go-to-Market Koordinatörü",
+                "title_en": "Go-to-Market Coordinator",
+                "reports_to": "18.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün ticarileştirme ve pazara çıkış hazırlığını koordine etmek",
+              "Satış, Pazarlama, Operasyon ve Müşteri Deneyimi ekiplerinin hazırlığını sağlamak",
+              "Gelir, benimseme, müşteri değeri ve ürün başarısını izlemek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Ürün Geliri ve Brüt Marjı",
+        "Ürün Benimseme Oranı",
+        "Aktif Kullanıcı ve Kullanım Derinliği",
+        "Müşteri Tutundurma ve Churn",
+        "Time-to-Market",
+        "Keşiften Doğrulanmış Fırsata Geçiş Oranı",
+        "Yol Haritası Hedef Gerçekleşme Oranı",
+        "Ürün Deneyi Başarı Oranı",
+        "Kullanılabilirlik ve Erişilebilirlik Skoru",
+        "Ürün Memnuniyeti / NPS",
+        "Yeni Ürün Gelir Payı",
+        "Ar-Ge Portföy Başarı Oranı",
+        "Teknik Doğrulama Başarı Oranı",
+        "Ürün Birim Ekonomisi",
+        "Ürün Yaşam Döngüsü Kârlılığı"
+      ],
+      "cadence": [
+        {
+          "forum": "Haftalık Ürün Portföy ve Teslimat Toplantısı",
+          "focus": "Ürün hedefleri, keşif, teslimat, bağımlılık ve riskler"
+        },
+        {
+          "forum": "Aylık Ürün Konseyi",
+          "focus": "Yol haritası, portföy, müşteri içgörüleri, ürün analitiği ve yatırım kararları"
+        },
+        {
+          "forum": "Aylık Ar-Ge ve İnovasyon Kurulu",
+          "focus": "Araştırma portföyü, deneyler, teknoloji radarları ve iş birlikleri"
+        },
+        {
+          "forum": "Çeyreklik Ürün Strateji Gözden Geçirmesi",
+          "focus": "Ürün performansı, pazar değişimi, ticarileştirme ve stratejik öncelikler"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "information_technology": "Ürün Yönetimi müşteri problemi, ürün vizyonu, öncelik ve ürün sonucunun; BT teknik mimari, kurumsal platformlar, mühendislik işletimi ve teknoloji sürekliliğinin sahibidir.",
+      "data_ai": "Veri/AI departmanı veri ürünleri, model yaşam döngüsü ve analitik uzmanlığın; Ürün departmanı müşteriye dönük kullanım senaryosu, değer önerisi ve ürün yol haritasının sahibidir.",
+      "marketing": "Pazarlama pazar talebi, marka, konumlandırma ve kampanyaların; Ürün Yönetimi ürün stratejisi, özellik, deneyim ve değer önerisi kanıtlarının sahibidir.",
+      "sales": "Satış ticari fırsat, müzakere ve kapanışın; Ürün Yönetimi ürün kapsamı, ürün-pazar uyumu ve standart ürün kararlarının sahibidir.",
+      "customer_experience": "Müşteri Deneyimi onboarding, başarı, destek ve geri bildirimin; Ürün Yönetimi geri bildirimin ürün önceliğine dönüştürülmesi ve ürün deneyiminin sahibidir.",
+      "operations": "Operasyon günlük hizmet teslimatı ve ölçekli uygulamanın; Ürün Yönetimi ürün gereksinimi, hedef deneyim ve yaşam döngüsü kararlarının sahibidir.",
+      "quality": "Kalite kalite sistemi, bağımsız uygunluk ve doğrulama çerçevesinin; Ürün/Ar-Ge tasarım gereksinimi, prototip ve teknik geliştirme çıktılarının sahibidir.",
+      "finance": "Finans yatırım onayı ve mali kontrolün; Ürün Yönetimi ürün iş vakası, birim ekonomi ve değer gerçekleşmesi takibinin sahibidir.",
+      "legal_ip": "Hukuk sözleşme, fikri mülkiyet tescili ve hukuki görüşün; Ar-Ge teknik buluş kaydı ve patentlenebilir teknik içeriğin sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; ürün ve ürün alanı sayısı, müşteri segmenti, keşif ve teslimat hacmi, Ar-Ge portföyü, tasarım ihtiyacı, teknik karmaşıklık, regülasyon ve ticarileştirme yoğunluğuna göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; ürün yöneticisi, tasarımcı, araştırmacı, Ar-Ge mühendisi ve analist kadroları portföye göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Aktif ürün ve ürün alanı sayısı",
+        "Müşteri segmenti ve pazar sayısı",
+        "Keşif ve deney hacmi",
+        "Yol haritası ve teslimat yoğunluğu",
+        "Ar-Ge projesi ve teknoloji alanı sayısı",
+        "UX araştırma ve tasarım talebi",
+        "Ürün analitiği ve ticarileştirme kapsamı",
+        "Regülasyon ve teknik doğrulama seviyesi"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Ürün Yönetimi yapılacak özelliklerin listesi değildir; doğru müşteri problemini keşfedip iş, kullanıcı ve teknoloji açısından değerli, uygulanabilir ve sürdürülebilir çözüme dönüştüren kurumsal karar disiplinidir."
+    }
+  }
+}

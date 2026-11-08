@@ -1,0 +1,10 @@
+{
+  "name": "cortex-yayin",
+  "private": true,
+  "scripts": {
+    "yayinla": "sh ./yayinla.sh"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

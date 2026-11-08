@@ -1,0 +1,3097 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "14 - Kalite Yönetimi Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "14",
+    "name_tr": "Kalite Yönetimi",
+    "name_en": "Quality Management",
+    "organization_model": "Tam Fonksiyonel",
+    "purpose": "Ürün, hizmet ve süreçlerin müşteri, standart ve kurumsal kalite gerekliliklerini tutarlı biçimde karşılamasını güvence altına almak; hataları önlemek, uygunsuzlukları sistematik olarak gidermek ve kalite kültürünü sürekli geliştirmek.",
+    "reports_to": {
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer"
+    },
+    "head": {
+      "position_code": "14.00.001",
+      "title_tr": "Kalite Yönetimi Direktörü",
+      "title_en": "Quality Management Director",
+      "alternative_executive_title": "Chief Quality Officer (CQO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "14.01",
+        "14.02",
+        "14.03",
+        "14.04",
+        "14.05",
+        "14.06",
+        "14.07",
+        "14.08"
+      ],
+      "accountabilities": [
+        "Kurumsal kalite politikası ve kalite yönetim sistemini oluşturmak",
+        "Kalite güvence, kontrol, denetim ve sertifikasyon süreçlerini yönetmek",
+        "Müşteri ve tedarikçi kalite performansını geliştirmek",
+        "Uygunsuzluk, kök neden, CAPA ve sürekli iyileştirme sistemini işletmek",
+        "Kalite riskleri, kalite maliyeti ve kalite kültürünü yönetmek"
+      ]
+    },
+    "independence_principle": "Kalite fonksiyonu operasyonel birimlerle yakın çalışır; ancak uygunluk değerlendirme, ürün/hizmet serbest bırakma ve kalite bulgularında gerekli karar bağımsızlığını korur.",
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "14.01",
+        "name_tr": "Kalite Yönetim Sistemi ve Strateji",
+        "name_en": "Quality Management System and Strategy",
+        "manager": {
+          "position_code": "14.01.001",
+          "title_tr": "Kalite Yönetim Sistemi ve Strateji Müdürü",
+          "title_en": "Quality Management System and Strategy Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.01.01",
+            "name_tr": "Kalite Stratejisi ve Yönetişim",
+            "name_en": "Quality Strategy and Governance",
+            "lead": {
+              "position_code": "14.01.01.001",
+              "title_tr": "Kalite Stratejisi ve Yönetişim Yöneticisi",
+              "title_en": "Quality Strategy and Governance Manager",
+              "reports_to": "14.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.01.01.002",
+                "title_tr": "Kıdemli Kalite Stratejisi Uzmanı",
+                "title_en": "Senior Quality Strategy Specialist",
+                "reports_to": "14.01.01.001"
+              },
+              {
+                "position_code": "14.01.01.003",
+                "title_tr": "Kalite Stratejisi Uzmanı",
+                "title_en": "Quality Strategy Specialist",
+                "reports_to": "14.01.01.001"
+              },
+              {
+                "position_code": "14.01.01.004",
+                "title_tr": "Kalite Yönetişim Analisti",
+                "title_en": "Quality Governance Analyst",
+                "reports_to": "14.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite politikası, stratejisi ve hedeflerini oluşturmak",
+              "Kalite yönetim kurulları ve performans ritmini yönetmek",
+              "Kalite kültürü ve olgunluk gelişim planını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "14.01.02",
+            "name_tr": "Kalite Yönetim Sistemi",
+            "name_en": "Quality Management System",
+            "lead": {
+              "position_code": "14.01.02.001",
+              "title_tr": "Kalite Yönetim Sistemi Yöneticisi",
+              "title_en": "Quality Management System Manager",
+              "reports_to": "14.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.01.02.002",
+                "title_tr": "Kıdemli Kalite Sistemleri Uzmanı",
+                "title_en": "Senior Quality Systems Specialist",
+                "reports_to": "14.01.02.001"
+              },
+              {
+                "position_code": "14.01.02.003",
+                "title_tr": "Kalite Sistemleri Uzmanı",
+                "title_en": "Quality Systems Specialist",
+                "reports_to": "14.01.02.001"
+              },
+              {
+                "position_code": "14.01.02.004",
+                "title_tr": "QMS Analisti",
+                "title_en": "QMS Analyst",
+                "reports_to": "14.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite yönetim sistemini kurmak ve sürdürmek",
+              "Süreç etkileşimleri, kalite kayıtları ve sistem gerekliliklerini yönetmek",
+              "QMS uygunluğu ve etkinliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "14.01.03",
+            "name_tr": "Doküman ve Kayıt Kontrolü",
+            "name_en": "Document and Record Control",
+            "lead": {
+              "position_code": "14.01.03.001",
+              "title_tr": "Doküman ve Kayıt Kontrolü Yöneticisi",
+              "title_en": "Document and Record Control Manager",
+              "reports_to": "14.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.01.03.002",
+                "title_tr": "Kıdemli Doküman Kontrol Uzmanı",
+                "title_en": "Senior Document Control Specialist",
+                "reports_to": "14.01.03.001"
+              },
+              {
+                "position_code": "14.01.03.003",
+                "title_tr": "Doküman Kontrol Uzmanı",
+                "title_en": "Document Control Specialist",
+                "reports_to": "14.01.03.001"
+              },
+              {
+                "position_code": "14.01.03.004",
+                "title_tr": "Kalite Kayıtları Koordinatörü",
+                "title_en": "Quality Records Coordinator",
+                "reports_to": "14.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Politika, prosedür, talimat ve form yaşam döngüsünü yönetmek",
+              "Versiyon, onay, dağıtım ve erişim kontrollerini sağlamak",
+              "Kalite kayıtlarının saklama ve izlenebilirlik kurallarını uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.02",
+        "name_tr": "Kalite Güvence ve Standartlar",
+        "name_en": "Quality Assurance and Standards",
+        "manager": {
+          "position_code": "14.02.001",
+          "title_tr": "Kalite Güvence ve Standartlar Müdürü",
+          "title_en": "Quality Assurance and Standards Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.02.01",
+            "name_tr": "Kalite Güvence",
+            "name_en": "Quality Assurance",
+            "lead": {
+              "position_code": "14.02.01.001",
+              "title_tr": "Kalite Güvence Yöneticisi",
+              "title_en": "Quality Assurance Manager",
+              "reports_to": "14.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.02.01.002",
+                "title_tr": "Kıdemli Kalite Güvence Uzmanı",
+                "title_en": "Senior Quality Assurance Specialist",
+                "reports_to": "14.02.01.001"
+              },
+              {
+                "position_code": "14.02.01.003",
+                "title_tr": "Kalite Güvence Uzmanı",
+                "title_en": "Quality Assurance Specialist",
+                "reports_to": "14.02.01.001"
+              },
+              {
+                "position_code": "14.02.01.004",
+                "title_tr": "Kalite Güvence Analisti",
+                "title_en": "Quality Assurance Analyst",
+                "reports_to": "14.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite planları ve güvence kontrollerini oluşturmak",
+              "Süreç ve çıktıların kalite gerekliliklerine uygunluğunu doğrulamak",
+              "Kalite risklerini ve güvence bulgularını izlemek"
+            ]
+          },
+          {
+            "team_code": "14.02.02",
+            "name_tr": "Standartlar ve Sertifikasyon",
+            "name_en": "Standards and Certification",
+            "lead": {
+              "position_code": "14.02.02.001",
+              "title_tr": "Standartlar ve Sertifikasyon Yöneticisi",
+              "title_en": "Standards and Certification Manager",
+              "reports_to": "14.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.02.02.002",
+                "title_tr": "Kıdemli Standartlar Uzmanı",
+                "title_en": "Senior Standards Specialist",
+                "reports_to": "14.02.02.001"
+              },
+              {
+                "position_code": "14.02.02.003",
+                "title_tr": "Sertifikasyon Uzmanı",
+                "title_en": "Certification Specialist",
+                "reports_to": "14.02.02.001"
+              },
+              {
+                "position_code": "14.02.02.004",
+                "title_tr": "Kalite Standartları Analisti",
+                "title_en": "Quality Standards Analyst",
+                "reports_to": "14.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "ISO ve sektörel standart gerekliliklerini takip etmek",
+              "Sertifikasyon ve gözetim denetimlerini koordine etmek",
+              "Standart değişikliklerini kurum süreçlerine uyarlamak"
+            ]
+          },
+          {
+            "team_code": "14.02.03",
+            "name_tr": "Kalite Risk Yönetimi",
+            "name_en": "Quality Risk Management",
+            "lead": {
+              "position_code": "14.02.03.001",
+              "title_tr": "Kalite Risk Yönetimi Yöneticisi",
+              "title_en": "Quality Risk Management Manager",
+              "reports_to": "14.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.02.03.002",
+                "title_tr": "Kıdemli Kalite Risk Uzmanı",
+                "title_en": "Senior Quality Risk Specialist",
+                "reports_to": "14.02.03.001"
+              },
+              {
+                "position_code": "14.02.03.003",
+                "title_tr": "Kalite Risk Uzmanı",
+                "title_en": "Quality Risk Specialist",
+                "reports_to": "14.02.03.001"
+              },
+              {
+                "position_code": "14.02.03.004",
+                "title_tr": "FMEA Analisti",
+                "title_en": "FMEA Analyst",
+                "reports_to": "14.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün, hizmet ve süreç kalite risklerini değerlendirmek",
+              "FMEA ve risk temelli kalite planlarını yönetmek",
+              "Kritik kalite kontrolleri ve risk azaltma aksiyonlarını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.03",
+        "name_tr": "Operasyonel Kalite Kontrol",
+        "name_en": "Operational Quality Control",
+        "manager": {
+          "position_code": "14.03.001",
+          "title_tr": "Operasyonel Kalite Kontrol Müdürü",
+          "title_en": "Operational Quality Control Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.03.01",
+            "name_tr": "Girdi ve Mal Kabul Kalite Kontrol",
+            "name_en": "Incoming and Receiving Quality Control",
+            "lead": {
+              "position_code": "14.03.01.001",
+              "title_tr": "Girdi ve Mal Kabul Kalite Kontrol Yöneticisi",
+              "title_en": "Incoming and Receiving Quality Control Manager",
+              "reports_to": "14.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.03.01.002",
+                "title_tr": "Kıdemli Girdi Kalite Uzmanı",
+                "title_en": "Senior Incoming Quality Specialist",
+                "reports_to": "14.03.01.001"
+              },
+              {
+                "position_code": "14.03.01.003",
+                "title_tr": "Girdi Kalite Kontrol Uzmanı",
+                "title_en": "Incoming Quality Control Specialist",
+                "reports_to": "14.03.01.001"
+              },
+              {
+                "position_code": "14.03.01.004",
+                "title_tr": "Mal Kabul Kalite Kontrolörü",
+                "title_en": "Receiving Quality Inspector",
+                "reports_to": "14.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Girdi ve mal kabul kalite kontrollerini yürütmek",
+              "Numune, kontrol planı ve kabul kriterlerini uygulamak",
+              "Uygun olmayan girdileri karantina ve eskalasyon sürecine almak"
+            ]
+          },
+          {
+            "team_code": "14.03.02",
+            "name_tr": "Süreç İçi Kalite Kontrol",
+            "name_en": "In-Process Quality Control",
+            "lead": {
+              "position_code": "14.03.02.001",
+              "title_tr": "Süreç İçi Kalite Kontrol Yöneticisi",
+              "title_en": "In-Process Quality Control Manager",
+              "reports_to": "14.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.03.02.002",
+                "title_tr": "Kıdemli Proses Kalite Uzmanı",
+                "title_en": "Senior Process Quality Specialist",
+                "reports_to": "14.03.02.001"
+              },
+              {
+                "position_code": "14.03.02.003",
+                "title_tr": "Proses Kalite Kontrol Uzmanı",
+                "title_en": "Process Quality Control Specialist",
+                "reports_to": "14.03.02.001"
+              },
+              {
+                "position_code": "14.03.02.004",
+                "title_tr": "Süreç Kalite Kontrolörü",
+                "title_en": "Process Quality Inspector",
+                "reports_to": "14.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Süreç içi kontrol planlarını ve ölçümleri yürütmek",
+              "Proses sapmalarını, hata ve tekrar işi izlemek",
+              "Üretim ve operasyon ekipleriyle anlık düzeltmeleri koordine etmek"
+            ]
+          },
+          {
+            "team_code": "14.03.03",
+            "name_tr": "Nihai Ürün ve Hizmet Kalite Kontrol",
+            "name_en": "Final Product and Service Quality Control",
+            "lead": {
+              "position_code": "14.03.03.001",
+              "title_tr": "Nihai Ürün ve Hizmet Kalite Kontrol Yöneticisi",
+              "title_en": "Final Product and Service Quality Control Manager",
+              "reports_to": "14.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.03.03.002",
+                "title_tr": "Kıdemli Nihai Kalite Uzmanı",
+                "title_en": "Senior Final Quality Specialist",
+                "reports_to": "14.03.03.001"
+              },
+              {
+                "position_code": "14.03.03.003",
+                "title_tr": "Nihai Kalite Kontrol Uzmanı",
+                "title_en": "Final Quality Control Specialist",
+                "reports_to": "14.03.03.001"
+              },
+              {
+                "position_code": "14.03.03.004",
+                "title_tr": "Ürün ve Hizmet Kalite Kontrolörü",
+                "title_en": "Product and Service Quality Inspector",
+                "reports_to": "14.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Nihai ürün ve hizmet kontrollerini gerçekleştirmek",
+              "Serbest bırakma kriterlerini ve kalite kayıtlarını doğrulamak",
+              "Sevkiyat veya teslimat öncesi kalite uygunsuzluklarını yönetmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.04",
+        "name_tr": "Tedarikçi Kalitesi",
+        "name_en": "Supplier Quality",
+        "manager": {
+          "position_code": "14.04.001",
+          "title_tr": "Tedarikçi Kalitesi Müdürü",
+          "title_en": "Supplier Quality Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.04.01",
+            "name_tr": "Tedarikçi Kalifikasyonu",
+            "name_en": "Supplier Qualification",
+            "lead": {
+              "position_code": "14.04.01.001",
+              "title_tr": "Tedarikçi Kalifikasyonu Yöneticisi",
+              "title_en": "Supplier Qualification Manager",
+              "reports_to": "14.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.04.01.002",
+                "title_tr": "Kıdemli Tedarikçi Kalifikasyon Uzmanı",
+                "title_en": "Senior Supplier Qualification Specialist",
+                "reports_to": "14.04.01.001"
+              },
+              {
+                "position_code": "14.04.01.003",
+                "title_tr": "Tedarikçi Kalifikasyon Uzmanı",
+                "title_en": "Supplier Qualification Specialist",
+                "reports_to": "14.04.01.001"
+              },
+              {
+                "position_code": "14.04.01.004",
+                "title_tr": "Tedarikçi Risk Analisti",
+                "title_en": "Supplier Risk Analyst",
+                "reports_to": "14.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Aday tedarikçilerin kalite yeterliliğini değerlendirmek",
+              "Kalifikasyon, numune ve ilk ürün onay süreçlerini yürütmek",
+              "Tedarikçi kalite risk sınıflandırmasını yönetmek"
+            ]
+          },
+          {
+            "team_code": "14.04.02",
+            "name_tr": "Tedarikçi Kalite Güvence",
+            "name_en": "Supplier Quality Assurance",
+            "lead": {
+              "position_code": "14.04.02.001",
+              "title_tr": "Tedarikçi Kalite Güvence Yöneticisi",
+              "title_en": "Supplier Quality Assurance Manager",
+              "reports_to": "14.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.04.02.002",
+                "title_tr": "Kıdemli Tedarikçi Kalite Mühendisi",
+                "title_en": "Senior Supplier Quality Engineer",
+                "reports_to": "14.04.02.001"
+              },
+              {
+                "position_code": "14.04.02.003",
+                "title_tr": "Tedarikçi Kalite Uzmanı",
+                "title_en": "Supplier Quality Specialist",
+                "reports_to": "14.04.02.001"
+              },
+              {
+                "position_code": "14.04.02.004",
+                "title_tr": "Tedarikçi Denetim Uzmanı",
+                "title_en": "Supplier Audit Specialist",
+                "reports_to": "14.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarikçi kalite denetimleri ve güvence planlarını yürütmek",
+              "Tedarikçi proses kontrolleri ve kalite anlaşmalarını izlemek",
+              "Kritik tedarikçiler için geliştirme programları uygulamak"
+            ]
+          },
+          {
+            "team_code": "14.04.03",
+            "name_tr": "Tedarikçi Uygunsuzluk ve İyileştirme",
+            "name_en": "Supplier Nonconformance and Improvement",
+            "lead": {
+              "position_code": "14.04.03.001",
+              "title_tr": "Tedarikçi Uygunsuzluk ve İyileştirme Yöneticisi",
+              "title_en": "Supplier Nonconformance and Improvement Manager",
+              "reports_to": "14.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.04.03.002",
+                "title_tr": "Kıdemli Tedarikçi İyileştirme Uzmanı",
+                "title_en": "Senior Supplier Improvement Specialist",
+                "reports_to": "14.04.03.001"
+              },
+              {
+                "position_code": "14.04.03.003",
+                "title_tr": "Tedarikçi Uygunsuzluk Uzmanı",
+                "title_en": "Supplier Nonconformance Specialist",
+                "reports_to": "14.04.03.001"
+              },
+              {
+                "position_code": "14.04.03.004",
+                "title_tr": "SCAR Koordinatörü",
+                "title_en": "Supplier Corrective Action Coordinator",
+                "reports_to": "14.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tedarikçi uygunsuzluklarını ve SCAR süreçlerini yönetmek",
+              "Kök neden ve düzeltici faaliyetleri doğrulamak",
+              "Tedarikçi hata, maliyet ve teslimat etkisini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.05",
+        "name_tr": "Müşteri Kalitesi ve Geri Bildirim",
+        "name_en": "Customer Quality and Feedback",
+        "manager": {
+          "position_code": "14.05.001",
+          "title_tr": "Müşteri Kalitesi ve Geri Bildirim Müdürü",
+          "title_en": "Customer Quality and Feedback Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.05.01",
+            "name_tr": "Müşteri Kalite Gereklilikleri",
+            "name_en": "Customer Quality Requirements",
+            "lead": {
+              "position_code": "14.05.01.001",
+              "title_tr": "Müşteri Kalite Gereklilikleri Yöneticisi",
+              "title_en": "Customer Quality Requirements Manager",
+              "reports_to": "14.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.05.01.002",
+                "title_tr": "Kıdemli Müşteri Kalite Uzmanı",
+                "title_en": "Senior Customer Quality Specialist",
+                "reports_to": "14.05.01.001"
+              },
+              {
+                "position_code": "14.05.01.003",
+                "title_tr": "Müşteri Kalite Uzmanı",
+                "title_en": "Customer Quality Specialist",
+                "reports_to": "14.05.01.001"
+              },
+              {
+                "position_code": "14.05.01.004",
+                "title_tr": "Kalite Gereklilikleri Analisti",
+                "title_en": "Quality Requirements Analyst",
+                "reports_to": "14.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Müşteri kalite şartlarını sözleşme ve teknik gerekliliklere dönüştürmek",
+              "Müşteriye özel kalite planlarını koordine etmek",
+              "Gereklilik değişikliklerini ilgili süreçlere aktarmak"
+            ]
+          },
+          {
+            "team_code": "14.05.02",
+            "name_tr": "Müşteri Şikâyetleri ve Kalite Vakaları",
+            "name_en": "Customer Complaints and Quality Cases",
+            "lead": {
+              "position_code": "14.05.02.001",
+              "title_tr": "Müşteri Şikâyetleri ve Kalite Vakaları Yöneticisi",
+              "title_en": "Customer Complaints and Quality Cases Manager",
+              "reports_to": "14.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.05.02.002",
+                "title_tr": "Kıdemli Müşteri Kalite Vakası Uzmanı",
+                "title_en": "Senior Customer Quality Case Specialist",
+                "reports_to": "14.05.02.001"
+              },
+              {
+                "position_code": "14.05.02.003",
+                "title_tr": "Müşteri Şikâyet Kalite Uzmanı",
+                "title_en": "Customer Complaint Quality Specialist",
+                "reports_to": "14.05.02.001"
+              },
+              {
+                "position_code": "14.05.02.004",
+                "title_tr": "Kalite Vakası Koordinatörü",
+                "title_en": "Quality Case Coordinator",
+                "reports_to": "14.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite kaynaklı müşteri şikâyetlerini teknik açıdan incelemek",
+              "8D, kök neden ve düzeltici faaliyet sürecini koordine etmek",
+              "Müşteri yanıtı ve etkinlik doğrulamasını Müşteri Deneyimi ile yürütmek"
+            ]
+          },
+          {
+            "team_code": "14.05.03",
+            "name_tr": "Saha Kalitesi ve Garanti Analitiği",
+            "name_en": "Field Quality and Warranty Analytics",
+            "lead": {
+              "position_code": "14.05.03.001",
+              "title_tr": "Saha Kalitesi ve Garanti Analitiği Yöneticisi",
+              "title_en": "Field Quality and Warranty Analytics Manager",
+              "reports_to": "14.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.05.03.002",
+                "title_tr": "Kıdemli Saha Kalite Uzmanı",
+                "title_en": "Senior Field Quality Specialist",
+                "reports_to": "14.05.03.001"
+              },
+              {
+                "position_code": "14.05.03.003",
+                "title_tr": "Saha Kalite Uzmanı",
+                "title_en": "Field Quality Specialist",
+                "reports_to": "14.05.03.001"
+              },
+              {
+                "position_code": "14.05.03.004",
+                "title_tr": "Garanti Kalite Analisti",
+                "title_en": "Warranty Quality Analyst",
+                "reports_to": "14.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Saha hataları, iadeler ve garanti verilerini analiz etmek",
+              "Tekrarlayan kalite sorunlarını ve ürün güvenilirliğini izlemek",
+              "Saha bulgularını ürün, üretim ve tedarikçi iyileştirmelerine aktarmak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.06",
+        "name_tr": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+        "name_en": "Nonconformance, CAPA and Continuous Improvement",
+        "manager": {
+          "position_code": "14.06.001",
+          "title_tr": "Uygunsuzluk, CAPA ve Sürekli İyileştirme Müdürü",
+          "title_en": "Nonconformance, CAPA and Continuous Improvement Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.06.01",
+            "name_tr": "Uygunsuzluk Yönetimi",
+            "name_en": "Nonconformance Management",
+            "lead": {
+              "position_code": "14.06.01.001",
+              "title_tr": "Uygunsuzluk Yönetimi Yöneticisi",
+              "title_en": "Nonconformance Management Manager",
+              "reports_to": "14.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.06.01.002",
+                "title_tr": "Kıdemli Uygunsuzluk Yönetimi Uzmanı",
+                "title_en": "Senior Nonconformance Management Specialist",
+                "reports_to": "14.06.01.001"
+              },
+              {
+                "position_code": "14.06.01.003",
+                "title_tr": "Uygunsuzluk Yönetimi Uzmanı",
+                "title_en": "Nonconformance Management Specialist",
+                "reports_to": "14.06.01.001"
+              },
+              {
+                "position_code": "14.06.01.004",
+                "title_tr": "Uygunsuzluk Analisti",
+                "title_en": "Nonconformance Analyst",
+                "reports_to": "14.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Uygunsuzlukları kayıt, sınıflandırma ve risk bazında değerlendirmek",
+              "Karantina, ayırma, yeniden işleme ve imha kararlarını koordine etmek",
+              "Uygunsuzluk kapanış sürelerini ve tekrar oranını izlemek"
+            ]
+          },
+          {
+            "team_code": "14.06.02",
+            "name_tr": "Kök Neden ve CAPA Yönetimi",
+            "name_en": "Root Cause and CAPA Management",
+            "lead": {
+              "position_code": "14.06.02.001",
+              "title_tr": "Kök Neden ve CAPA Yönetimi Yöneticisi",
+              "title_en": "Root Cause and CAPA Management Manager",
+              "reports_to": "14.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.06.02.002",
+                "title_tr": "Kıdemli CAPA Uzmanı",
+                "title_en": "Senior CAPA Specialist",
+                "reports_to": "14.06.02.001"
+              },
+              {
+                "position_code": "14.06.02.003",
+                "title_tr": "Kök Neden Analizi Uzmanı",
+                "title_en": "Root Cause Analysis Specialist",
+                "reports_to": "14.06.02.001"
+              },
+              {
+                "position_code": "14.06.02.004",
+                "title_tr": "CAPA Koordinatörü",
+                "title_en": "CAPA Coordinator",
+                "reports_to": "14.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kök neden analiz metodolojilerini uygulamak",
+              "Düzeltici ve önleyici faaliyet planlarını yönetmek",
+              "CAPA etkinliğini doğrulamak ve zamanında kapanışı sağlamak"
+            ]
+          },
+          {
+            "team_code": "14.06.03",
+            "name_tr": "Kalite İyileştirme Programları",
+            "name_en": "Quality Improvement Programs",
+            "lead": {
+              "position_code": "14.06.03.001",
+              "title_tr": "Kalite İyileştirme Programları Yöneticisi",
+              "title_en": "Quality Improvement Programs Manager",
+              "reports_to": "14.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.06.03.002",
+                "title_tr": "Kıdemli Kalite İyileştirme Uzmanı",
+                "title_en": "Senior Quality Improvement Specialist",
+                "reports_to": "14.06.03.001"
+              },
+              {
+                "position_code": "14.06.03.003",
+                "title_tr": "Kalite İyileştirme Uzmanı",
+                "title_en": "Quality Improvement Specialist",
+                "reports_to": "14.06.03.001"
+              },
+              {
+                "position_code": "14.06.03.004",
+                "title_tr": "Six Sigma Analisti",
+                "title_en": "Six Sigma Analyst",
+                "reports_to": "14.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite iyileştirme portföyünü önceliklendirmek",
+              "Six Sigma, problem çözme ve hata önleme projelerini yürütmek",
+              "İyileştirme faydalarını kalite maliyeti ve müşteri etkisiyle ölçmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.07",
+        "name_tr": "Kalite Denetimleri ve Uygunluk Değerlendirme",
+        "name_en": "Quality Audits and Conformity Assessment",
+        "manager": {
+          "position_code": "14.07.001",
+          "title_tr": "Kalite Denetimleri ve Uygunluk Değerlendirme Müdürü",
+          "title_en": "Quality Audits and Conformity Assessment Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.07.01",
+            "name_tr": "İç Kalite Denetimleri",
+            "name_en": "Internal Quality Audits",
+            "lead": {
+              "position_code": "14.07.01.001",
+              "title_tr": "İç Kalite Denetimleri Yöneticisi",
+              "title_en": "Internal Quality Audits Manager",
+              "reports_to": "14.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.07.01.002",
+                "title_tr": "Kıdemli İç Kalite Denetçisi",
+                "title_en": "Senior Internal Quality Auditor",
+                "reports_to": "14.07.01.001"
+              },
+              {
+                "position_code": "14.07.01.003",
+                "title_tr": "İç Kalite Denetçisi",
+                "title_en": "Internal Quality Auditor",
+                "reports_to": "14.07.01.001"
+              },
+              {
+                "position_code": "14.07.01.004",
+                "title_tr": "Kalite Denetim Koordinatörü",
+                "title_en": "Quality Audit Coordinator",
+                "reports_to": "14.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "QMS kapsamındaki iç kalite denetim programını yürütmek",
+              "Süreç ve standart uygunluğunu örneklem bazında değerlendirmek",
+              "Bulguların aksiyon ve kapanışlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "14.07.02",
+            "name_tr": "Dış Denetim ve Sertifikasyon Koordinasyonu",
+            "name_en": "External Audit and Certification Coordination",
+            "lead": {
+              "position_code": "14.07.02.001",
+              "title_tr": "Dış Denetim ve Sertifikasyon Koordinasyonu Yöneticisi",
+              "title_en": "External Audit and Certification Coordination Manager",
+              "reports_to": "14.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.07.02.002",
+                "title_tr": "Kıdemli Sertifikasyon Koordinatörü",
+                "title_en": "Senior Certification Coordinator",
+                "reports_to": "14.07.02.001"
+              },
+              {
+                "position_code": "14.07.02.003",
+                "title_tr": "Dış Denetim Koordinatörü",
+                "title_en": "External Audit Coordinator",
+                "reports_to": "14.07.02.001"
+              },
+              {
+                "position_code": "14.07.02.004",
+                "title_tr": "Sertifika Yönetimi Uzmanı",
+                "title_en": "Certificate Management Specialist",
+                "reports_to": "14.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Belgelendirme ve müşteri denetimlerine hazırlığı koordine etmek",
+              "Denetim kanıtları, saha programı ve aksiyon takibini yönetmek",
+              "Sertifika geçerlilik ve kapsam değişikliklerini izlemek"
+            ]
+          },
+          {
+            "team_code": "14.07.03",
+            "name_tr": "Ürün ve Hizmet Uygunluk Değerlendirme",
+            "name_en": "Product and Service Conformity Assessment",
+            "lead": {
+              "position_code": "14.07.03.001",
+              "title_tr": "Ürün ve Hizmet Uygunluk Değerlendirme Yöneticisi",
+              "title_en": "Product and Service Conformity Assessment Manager",
+              "reports_to": "14.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.07.03.002",
+                "title_tr": "Kıdemli Uygunluk Değerlendirme Uzmanı",
+                "title_en": "Senior Conformity Assessment Specialist",
+                "reports_to": "14.07.03.001"
+              },
+              {
+                "position_code": "14.07.03.003",
+                "title_tr": "Uygunluk Değerlendirme Uzmanı",
+                "title_en": "Conformity Assessment Specialist",
+                "reports_to": "14.07.03.001"
+              },
+              {
+                "position_code": "14.07.03.004",
+                "title_tr": "Teknik Dosya Analisti",
+                "title_en": "Technical File Analyst",
+                "reports_to": "14.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün ve hizmet uygunluk kanıtlarını değerlendirmek",
+              "Test, sertifika, beyan ve teknik dosya bütünlüğünü doğrulamak",
+              "Uygunluk işaretleme ve serbest bırakma kararlarını desteklemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "14.08",
+        "name_tr": "Laboratuvar, Metroloji ve Kalite Analitiği",
+        "name_en": "Laboratory, Metrology and Quality Analytics",
+        "manager": {
+          "position_code": "14.08.001",
+          "title_tr": "Laboratuvar, Metroloji ve Kalite Analitiği Müdürü",
+          "title_en": "Laboratory, Metrology and Quality Analytics Manager",
+          "reports_to": "14.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "14.08.01",
+            "name_tr": "Test ve Laboratuvar Yönetimi",
+            "name_en": "Testing and Laboratory Management",
+            "lead": {
+              "position_code": "14.08.01.001",
+              "title_tr": "Test ve Laboratuvar Yönetimi Yöneticisi",
+              "title_en": "Testing and Laboratory Management Manager",
+              "reports_to": "14.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.08.01.002",
+                "title_tr": "Kıdemli Laboratuvar Uzmanı",
+                "title_en": "Senior Laboratory Specialist",
+                "reports_to": "14.08.01.001"
+              },
+              {
+                "position_code": "14.08.01.003",
+                "title_tr": "Test ve Laboratuvar Uzmanı",
+                "title_en": "Test and Laboratory Specialist",
+                "reports_to": "14.08.01.001"
+              },
+              {
+                "position_code": "14.08.01.004",
+                "title_tr": "Laboratuvar Teknisyeni",
+                "title_en": "Laboratory Technician",
+                "reports_to": "14.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Test planlarını ve laboratuvar operasyonlarını yönetmek",
+              "Numune, metot, sonuç ve laboratuvar kayıtlarını kontrol etmek",
+              "Laboratuvar güvenliği ve yeterlilik koşullarını sağlamak"
+            ]
+          },
+          {
+            "team_code": "14.08.02",
+            "name_tr": "Metroloji ve Kalibrasyon",
+            "name_en": "Metrology and Calibration",
+            "lead": {
+              "position_code": "14.08.02.001",
+              "title_tr": "Metroloji ve Kalibrasyon Yöneticisi",
+              "title_en": "Metrology and Calibration Manager",
+              "reports_to": "14.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.08.02.002",
+                "title_tr": "Kıdemli Metroloji Uzmanı",
+                "title_en": "Senior Metrology Specialist",
+                "reports_to": "14.08.02.001"
+              },
+              {
+                "position_code": "14.08.02.003",
+                "title_tr": "Kalibrasyon Uzmanı",
+                "title_en": "Calibration Specialist",
+                "reports_to": "14.08.02.001"
+              },
+              {
+                "position_code": "14.08.02.004",
+                "title_tr": "Ölçüm Sistemleri Teknisyeni",
+                "title_en": "Measurement Systems Technician",
+                "reports_to": "14.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ölçüm cihazı envanteri ve kalibrasyon planını yönetmek",
+              "Ölçüm sistemi analizi ve izlenebilirliği sağlamak",
+              "Kalibrasyon sapmalarının ürün ve süreç etkisini değerlendirmek"
+            ]
+          },
+          {
+            "team_code": "14.08.03",
+            "name_tr": "Kalite Analitiği ve Kalite Maliyeti",
+            "name_en": "Quality Analytics and Cost of Quality",
+            "lead": {
+              "position_code": "14.08.03.001",
+              "title_tr": "Kalite Analitiği ve Kalite Maliyeti Yöneticisi",
+              "title_en": "Quality Analytics and Cost of Quality Manager",
+              "reports_to": "14.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "14.08.03.002",
+                "title_tr": "Kıdemli Kalite Analitiği Uzmanı",
+                "title_en": "Senior Quality Analytics Specialist",
+                "reports_to": "14.08.03.001"
+              },
+              {
+                "position_code": "14.08.03.003",
+                "title_tr": "Kalite Veri Analisti",
+                "title_en": "Quality Data Analyst",
+                "reports_to": "14.08.03.001"
+              },
+              {
+                "position_code": "14.08.03.004",
+                "title_tr": "Kalite Maliyeti Analisti",
+                "title_en": "Cost of Quality Analyst",
+                "reports_to": "14.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Kalite KPI, trend ve erken uyarı analizlerini üretmek",
+              "Önleme, değerlendirme ve başarısızlık maliyetlerini izlemek",
+              "Yönetim gösterge panoları ve karar destek modellerini geliştirmek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Müşteri Hata ve Şikâyet Oranı",
+        "İlk Seferde Doğru Yapma Oranı",
+        "Uygunsuzluk Oranı",
+        "Tekrar Eden Uygunsuzluk Oranı",
+        "CAPA Zamanında Kapanış Oranı",
+        "CAPA Etkinlik Oranı",
+        "İç ve Dış Denetim Bulgu Sayısı",
+        "Tedarikçi Hata Oranı",
+        "Hurda ve Tekrar İş Maliyeti",
+        "Toplam Kalite Maliyeti",
+        "Kalibrasyon Uyum Oranı",
+        "Doküman Güncellik Oranı",
+        "Sertifikasyon Devamlılığı",
+        "Kalite Eğitim Tamamlama Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük Kalite Kontrol Toplantısı",
+          "focus": "Kritik uygunsuzluklar, karantina, üretim/hizmet durdurma ve serbest bırakma kararları"
+        },
+        {
+          "forum": "Haftalık Kalite Performans Toplantısı",
+          "focus": "Hata trendleri, müşteri ve tedarikçi vakaları, CAPA durumu"
+        },
+        {
+          "forum": "Aylık Kalite Yönetim Kurulu",
+          "focus": "KPI, kalite maliyeti, denetimler, risk ve iyileştirme portföyü"
+        },
+        {
+          "forum": "Yıllık Yönetimin Gözden Geçirmesi",
+          "focus": "QMS uygunluğu, yeterliliği, etkinliği ve stratejik kalite hedefleri"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "operations": "Operasyon ve Üretim süreçlerin günlük uygulanması ve süreç içi kontrollerin; Kalite bağımsız güvence, uygunluk kriterleri, doğrulama ve sistem etkinliğinin sahibidir.",
+      "internal_audit": "İç Denetim risk bazlı üçüncü hat güvence ve yönetim kontrollerinin; Kalite ise QMS ve kalite standartları kapsamındaki ürün, hizmet ve süreç denetimlerinin sahibidir.",
+      "compliance_risk": "Uyum ve Risk mevzuat uyumu ile kurumsal risk metodolojisinin; Kalite ürün, hizmet ve kalite sistemi uygunluğu ile kalite risklerinin sahibidir.",
+      "customer_experience": "Müşteri Deneyimi genel şikâyet süreci ve müşteri iletişiminin; Kalite kalite kaynaklı vakaların teknik incelemesi, kök nedeni ve CAPA doğrulamasının sahibidir.",
+      "procurement": "Satın Alma tedarikçi seçimi, ticari müzakere ve sözleşmenin; Kalite tedarikçi kalite kalifikasyonu, denetimi ve kalite geliştirmesinin sahibidir.",
+      "product_rd": "Ürün ve Ar-Ge tasarım ve teknik şartnamenin; Kalite tasarım doğrulama kanıtları, uygunluk kriterleri ve kalite risk değerlendirmesinin sahibidir.",
+      "legal": "Hukuk hukuki yorum ve uyuşmazlıkların; Kalite teknik uygunluk kanıtı ve kalite kayıtlarının sahibidir.",
+      "document_management": "Kalite, QMS kontrollü doküman ve kalite kayıtlarının sistem sahibidir; iş birimleri kendi içeriklerinin doğruluğu ve güncelliğinden sorumludur."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; ürün ve hizmet kritiklik seviyesi, tesis ve lokasyon sayısı, standart/sertifika kapsamı, üretim hacmi, tedarikçi portföyü, müşteri gereklilikleri, laboratuvar ihtiyacı ve denetim yoğunluğuna göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; kalite mühendisi, uzman, denetçi, kontrolör ve teknisyen kadroları iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Ürün ve hizmet çeşitliliği",
+        "Tesis, hat ve lokasyon sayısı",
+        "Üretim ve işlem hacmi",
+        "Sertifika ve standart kapsamı",
+        "Tedarikçi ve müşteri sayısı",
+        "Kalite kontrol ve test yoğunluğu",
+        "Uygunsuzluk ve CAPA hacmi",
+        "Regülasyon ve ürün kritiklik seviyesi"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Kalite yalnızca son kontrolde aranmaz; tasarımdan tedarike, süreçten teslimata kadar her aşamada planlanır, güvence altına alınır ve ölçülür."
+    }
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Kurumsal kalite politikasını, stratejisini ve kalite hedeflerini oluşturmak",
+        "Kalite yönetim sistemini, kontrollü doküman ve kalite kayıtları yapısını kurmak ve sürdürmek",
+        "Kalite güvence, standartlar ve sertifikasyon süreçlerini yönetmek",
+        "Girdi, süreç ve nihai ürün kalite kontrollerini uygunluk kriterlerine göre yürütmek ve doğrulamak",
+        "Müşteri ve tedarikçi kalite performansını geliştirmek",
+        "Uygunsuzluk, kök neden, CAPA ve sürekli iyileştirme sistemini işletmek",
+        "İç kalite denetimlerini, uygunluk değerlendirmeyi ve dış denetim hazırlığını yönetmek",
+        "Laboratuvar ve metroloji altyapısını, kalite risklerini, kalite maliyetini ve kalite kültürünü yönetmek"
+      ],
+      "authorities": [
+        "Kalite politikasını ve kurumsal kalite hedeflerini üst yönetim onayına sunar",
+        "Ürün ve hizmet serbest bırakma kriterlerini belirler ve kriteri karşılamayan çıktının sevkiyatını durdurabilir",
+        "Uygunsuzluk durumunda karantina uygular ve ayırma, yeniden işleme ya da imha seçeneklerini ilgili birimlerle karara bağlar",
+        "Tedarikçi kalite kalifikasyonunu onaylar veya reddeder",
+        "QMS kapsamındaki iç kalite denetim programını onaylar ve bulgular için düzeltici faaliyet talep eder",
+        "CAPA etkinliğini doğrular ve etkin olmayan CAPA'yı yeniden açar",
+        "Kontrollü doküman yapısını, onay akışını ve kalite kayıtlarının saklama kurallarını belirler"
+      ],
+      "collaborations": [
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+          "topic": "Hizmet süreçlerinde süreç içi kontroller ile bağımsız kalite güvencesinin ayrımı"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Üretim Operasyonları",
+          "topic": "Süreç içi kontrollerin uygulanması, uygunluk kriterleri ve kalite doğrulaması"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Tedarikçi seçimi ile tedarikçi kalite kalifikasyonu, denetimi ve geliştirmesi"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "Operasyonel Denetim",
+          "topic": "Kalite denetimleri ile risk bazlı iç denetim planlarının koordinasyonu"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "Kurumsal Risk Yönetimi",
+          "topic": "Kalite risklerinin kurumsal risk metodolojisi ve mevzuat uyumuyla bağlantısı"
+        },
+        {
+          "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+          "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+          "topic": "Kalite kaynaklı şikâyetlerin teknik incelemesi, kök nedeni ve CAPA doğrulaması"
+        },
+        {
+          "department": "18 - Ürün Yönetimi ve Ar-Ge",
+          "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+          "topic": "Tasarım doğrulama kanıtları, uygunluk kriterleri ve kalite risk değerlendirmesi"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+          "topic": "Ürün uyuşmazlıklarında teknik uygunluk kanıtı ve kalite kayıtları"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Eğitim ve Gelişim",
+          "topic": "Kalite kültürü, kalite eğitimleri ve yetkinlik programları"
+        }
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü",
+          "title_tr": "Kalite Yönetimi Direktörü",
+          "title_en": "Quality Management Director"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Manager / Lead"
+        },
+        {
+          "level": "Kıdemli Uzman",
+          "title_tr": "Kıdemli Uzman / Kıdemli Mühendis / Kıdemli Denetçi",
+          "title_en": "Senior Specialist / Senior Engineer / Senior Auditor"
+        },
+        {
+          "level": "Uzman",
+          "title_tr": "Uzman / Mühendis / Denetçi",
+          "title_en": "Specialist / Engineer / Auditor"
+        },
+        {
+          "level": "Analist / Koordinatör",
+          "title_tr": "Analist / Koordinatör",
+          "title_en": "Analyst / Coordinator"
+        },
+        {
+          "level": "Kontrol ve Teknik Roller",
+          "title_tr": "Kalite Kontrolörü / Teknisyen",
+          "title_en": "Quality Inspector / Technician"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 53,
+          "max": 111
+        },
+        {
+          "model": "Standart",
+          "min": 111,
+          "max": 229
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 229,
+          "max": 321
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 111,
+        "total_max": 229,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 24,
+            "max": 48
+          },
+          {
+            "role_group": "Uzman",
+            "min": 24,
+            "max": 72
+          },
+          {
+            "role_group": "Analist",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 6,
+            "max": 12
+          },
+          {
+            "role_group": "Teknisyen / Operatör",
+            "min": 11,
+            "max": 38
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "14.01",
+        "name_tr": "Kalite Yönetim Sistemi ve Strateji",
+        "responsibilities": [
+          "Kalite politikası, stratejisi ve hedeflerini oluşturmak",
+          "Kalite yönetim kurullarını ve kalite performans ritmini yönetmek",
+          "Kalite yönetim sistemini kurmak, süreç etkileşimlerini ve sistem gerekliliklerini sürdürmek",
+          "QMS uygunluğunu ve etkinliğini izlemek",
+          "Politika, prosedür, talimat ve form yaşam döngüsünü versiyon ve onay kontrolleriyle yönetmek",
+          "Kalite kültürü ve olgunluk gelişim planını koordine etmek"
+        ],
+        "authorities": [
+          "QMS yapısını, süreç haritasını ve sistem gerekliliklerini belirler",
+          "Kontrollü doküman şablonlarını, onay akışını ve versiyon kurallarını belirler",
+          "Kalite kayıtlarının saklama ve izlenebilirlik kurallarını onaylar",
+          "Kalite politikası ve hedef revizyonlarını direktör onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Denetimleri ve Uygunluk Değerlendirme",
+            "topic": "QMS etkinliği, iç denetim bulguları ve yönetim gözden geçirmesi girdileri"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Laboratuvar, Metroloji ve Kalite Analitiği",
+            "topic": "Kalite KPI'ları, kalite maliyeti ve yönetim gösterge panoları"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Kalite hedeflerinin kurumsal strateji ve performans sistemine bağlanması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İç Kontrol ve Görevler Ayrılığı",
+            "topic": "Süreç dokümantasyonu ile iç kontrol tasarımının uyumu"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Doküman yönetim sistemi ve QMS uygulamalarının işletimi"
+          }
+        ],
+        "kpis": [
+          "Kalite Hedefi Gerçekleşme Oranı",
+          "Doküman Güncellik Oranı",
+          "Doküman Onay Çevrim Süresi",
+          "Yönetim Gözden Geçirme Aksiyon Kapanış Oranı",
+          "Kalite Olgunluk Değerlendirme Skoru"
+        ],
+        "title_standard": [
+          {
+            "position": "14.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Kalite Yönetim Sistemi ve Strateji Müdürü",
+            "title_en": "Quality Management System and Strategy Manager"
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite Stratejisi ve Yönetişim Yöneticisi",
+            "title_en": "Quality Strategy and Governance Manager"
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kidemli-kalite-stratejisi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite Stratejisi Uzmanı",
+            "title_en": "Senior Quality Strategy Specialist"
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kalite-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalite Stratejisi Uzmanı",
+            "title_en": "Quality Strategy Specialist"
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kalite-yonetisim-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Yönetişim Analisti",
+            "title_en": "Quality Governance Analyst"
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite Yönetim Sistemi Yöneticisi",
+            "title_en": "Quality Management System Manager"
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/kidemli-kalite-sistemleri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite Sistemleri Uzmanı",
+            "title_en": "Senior Quality Systems Specialist"
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/kalite-sistemleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalite Sistemleri Uzmanı",
+            "title_en": "Quality Systems Specialist"
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/qms-analisti",
+            "level": "Analist",
+            "title_tr": "QMS Analisti",
+            "title_en": "QMS Analyst"
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Doküman ve Kayıt Kontrolü Yöneticisi",
+            "title_en": "Document and Record Control Manager"
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/kidemli-dokuman-kontrol-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Doküman Kontrol Uzmanı",
+            "title_en": "Senior Document Control Specialist"
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/dokuman-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Doküman Kontrol Uzmanı",
+            "title_en": "Document Control Specialist"
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/kalite-kayitlari-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kalite Kayıtları Koordinatörü",
+            "title_en": "Quality Records Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.01",
+            "title_tr": "Kalite Yönetim Sistemi ve Strateji Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim",
+            "title_tr": "Kalite Stratejisi ve Yönetişim Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kidemli-kalite-stratejisi-uzmani",
+            "title_tr": "Kıdemli Kalite Stratejisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kalite-stratejisi-uzmani",
+            "title_tr": "Kalite Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.01/kalite-stratejisi-ve-yonetisim/kalite-yonetisim-analisti",
+            "title_tr": "Kalite Yönetişim Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi",
+            "title_tr": "Kalite Yönetim Sistemi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/kidemli-kalite-sistemleri-uzmani",
+            "title_tr": "Kıdemli Kalite Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/kalite-sistemleri-uzmani",
+            "title_tr": "Kalite Sistemleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.01/kalite-yonetim-sistemi/qms-analisti",
+            "title_tr": "QMS Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu",
+            "title_tr": "Doküman ve Kayıt Kontrolü Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/kidemli-dokuman-kontrol-uzmani",
+            "title_tr": "Kıdemli Doküman Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/dokuman-kontrol-uzmani",
+            "title_tr": "Doküman Kontrol Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.01/dokuman-ve-kayit-kontrolu/kalite-kayitlari-koordinatoru",
+            "title_tr": "Kalite Kayıtları Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.02",
+        "name_tr": "Kalite Güvence ve Standartlar",
+        "responsibilities": [
+          "Kalite planlarını ve güvence kontrollerini oluşturmak",
+          "Süreç ve çıktıların kalite gerekliliklerine uygunluğunu doğrulamak",
+          "ISO ve sektörel standart gerekliliklerini takip ederek kurum süreçlerine uyarlamak",
+          "Sertifikasyon kapsamını ve gözetim denetimlerine hazırlığı yönetmek",
+          "Ürün, hizmet ve süreç kalite risklerini FMEA ve risk temelli kalite planlarıyla değerlendirmek",
+          "Kritik kalite kontrollerini ve risk azaltma aksiyonlarını izlemek"
+        ],
+        "authorities": [
+          "Kalite planlarını ve kritik kalite kontrol noktalarını onaylar",
+          "FMEA uygulama yöntemini ve kalite risk derecelendirme kriterlerini belirler",
+          "Standart değişikliklerinin süreçlere uyarlanmasını ilgili birimlerden talep eder",
+          "Yüksek kalite riski taşıyan süreç değişikliklerinde güvence görüşü verir"
+        ],
+        "collaborations": [
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Denetimleri ve Uygunluk Değerlendirme",
+            "topic": "Sertifikasyon denetimlerine hazırlık ve standart uygunluk kanıtları"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Proses FMEA, kontrol planları ve kritik kalite kontrol noktaları"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+            "topic": "Tasarım FMEA, doğrulama kanıtları ve kalite risk değerlendirmesi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Kurumsal Risk Yönetimi",
+            "topic": "Kalite risklerinin kurumsal risk metodolojisiyle uyumu"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+            "topic": "Hizmet süreçlerinin kalite planları ve güvence kontrolleri"
+          }
+        ],
+        "kpis": [
+          "Kalite Planı Kapsama Oranı",
+          "Yüksek Öncelikli Kalite Risklerinde Aksiyon Tamamlama Oranı",
+          "Güvence Bulgusu Kapanış Süresi",
+          "Sertifikasyon Devamlılığı",
+          "Standart Değişikliği Uyarlama Süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "14.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Kalite Güvence ve Standartlar Müdürü",
+            "title_en": "Quality Assurance and Standards Manager"
+          },
+          {
+            "position": "14.02/kalite-guvence",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite Güvence Yöneticisi",
+            "title_en": "Quality Assurance Manager"
+          },
+          {
+            "position": "14.02/kalite-guvence/kidemli-kalite-guvence-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite Güvence Uzmanı",
+            "title_en": "Senior Quality Assurance Specialist"
+          },
+          {
+            "position": "14.02/kalite-guvence/kalite-guvence-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalite Güvence Uzmanı",
+            "title_en": "Quality Assurance Specialist"
+          },
+          {
+            "position": "14.02/kalite-guvence/kalite-guvence-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Güvence Analisti",
+            "title_en": "Quality Assurance Analyst"
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Standartlar ve Sertifikasyon Yöneticisi",
+            "title_en": "Standards and Certification Manager"
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/kidemli-standartlar-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Standartlar Uzmanı",
+            "title_en": "Senior Standards Specialist"
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/sertifikasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sertifikasyon Uzmanı",
+            "title_en": "Certification Specialist"
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/kalite-standartlari-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Standartları Analisti",
+            "title_en": "Quality Standards Analyst"
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite Risk Yönetimi Yöneticisi",
+            "title_en": "Quality Risk Management Manager"
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/kidemli-kalite-risk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite Risk Uzmanı",
+            "title_en": "Senior Quality Risk Specialist"
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/kalite-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalite Risk Uzmanı",
+            "title_en": "Quality Risk Specialist"
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/fmea-analisti",
+            "level": "Analist",
+            "title_tr": "FMEA Analisti",
+            "title_en": "FMEA Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.02",
+            "title_tr": "Kalite Güvence ve Standartlar Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.02/kalite-guvence",
+            "title_tr": "Kalite Güvence Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.02/kalite-guvence/kidemli-kalite-guvence-uzmani",
+            "title_tr": "Kıdemli Kalite Güvence Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.02/kalite-guvence/kalite-guvence-uzmani",
+            "title_tr": "Kalite Güvence Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.02/kalite-guvence/kalite-guvence-analisti",
+            "title_tr": "Kalite Güvence Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon",
+            "title_tr": "Standartlar ve Sertifikasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/kidemli-standartlar-uzmani",
+            "title_tr": "Kıdemli Standartlar Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/sertifikasyon-uzmani",
+            "title_tr": "Sertifikasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.02/standartlar-ve-sertifikasyon/kalite-standartlari-analisti",
+            "title_tr": "Kalite Standartları Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi",
+            "title_tr": "Kalite Risk Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/kidemli-kalite-risk-uzmani",
+            "title_tr": "Kıdemli Kalite Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/kalite-risk-uzmani",
+            "title_tr": "Kalite Risk Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.02/kalite-risk-yonetimi/fmea-analisti",
+            "title_tr": "FMEA Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.03",
+        "name_tr": "Operasyonel Kalite Kontrol",
+        "responsibilities": [
+          "Girdi ve mal kabul kalite kontrollerini numune ve kabul kriterlerine göre yürütmek",
+          "Uygun olmayan girdileri karantina ve eskalasyon sürecine almak",
+          "Süreç içi kontrol planlarını ve ölçümleri yürütmek",
+          "Proses sapmalarını, hata ve tekrar işi izleyerek anlık düzeltmeleri koordine etmek",
+          "Nihai ürün ve hizmet kontrollerini gerçekleştirmek ve serbest bırakma kriterlerini doğrulamak",
+          "Sevkiyat veya teslimat öncesi kalite uygunsuzluklarını yönetmek"
+        ],
+        "authorities": [
+          "Kabul kriterlerini karşılamayan girdiyi reddeder veya karantinaya alır",
+          "Serbest bırakma kriterlerini karşılayan partiler için kalite onayını verir",
+          "Kriterleri karşılamayan nihai ürün veya hizmetin serbest bırakılmasını durdurur",
+          "Kontrol planı uygulamasında numune büyüklüğü ve kontrol sıklığı değişikliklerini onaylar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Süreç içi kontroller, proses sapmaları ve anlık düzeltmeler"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Mal kabul kontrolü ve karantinadaki malzemenin stok yönetimi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Lojistik, Dağıtım ve Dış Ticaret",
+            "topic": "Sevkiyat öncesi kalite onayı ve teslimat planı uyumu"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+            "topic": "Uygunsuz ürün kaydı, karantina kararları ve CAPA başlatma"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Laboratuvar, Metroloji ve Kalite Analitiği",
+            "topic": "Test, ölçüm ve laboratuvar sonuçlarının kontrol kararlarına aktarımı"
+          }
+        ],
+        "kpis": [
+          "Girdi Red Oranı",
+          "Süreç İçi Hata Oranı",
+          "Nihai Kontrol İlk Seferde Kabul Oranı",
+          "Müşteriye Kaçan Hata Sayısı",
+          "Kontrol Planına Uyum Oranı",
+          "Kontrol Kaynaklı Sevkiyat Gecikmesi"
+        ],
+        "title_standard": [
+          {
+            "position": "14.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Operasyonel Kalite Kontrol Müdürü",
+            "title_en": "Operational Quality Control Manager"
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Girdi ve Mal Kabul Kalite Kontrol Yöneticisi",
+            "title_en": "Incoming and Receiving Quality Control Manager"
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/kidemli-girdi-kalite-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Girdi Kalite Uzmanı",
+            "title_en": "Senior Incoming Quality Specialist"
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/girdi-kalite-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Girdi Kalite Kontrol Uzmanı",
+            "title_en": "Incoming Quality Control Specialist"
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/mal-kabul-kalite-kontroloru",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Mal Kabul Kalite Kontrolörü",
+            "title_en": "Receiving Quality Inspector"
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Süreç İçi Kalite Kontrol Yöneticisi",
+            "title_en": "In-Process Quality Control Manager"
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/kidemli-proses-kalite-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Proses Kalite Uzmanı",
+            "title_en": "Senior Process Quality Specialist"
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/proses-kalite-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Proses Kalite Kontrol Uzmanı",
+            "title_en": "Process Quality Control Specialist"
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/surec-kalite-kontroloru",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Süreç Kalite Kontrolörü",
+            "title_en": "Process Quality Inspector"
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Nihai Ürün ve Hizmet Kalite Kontrol Yöneticisi",
+            "title_en": "Final Product and Service Quality Control Manager"
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/kidemli-nihai-kalite-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Nihai Kalite Uzmanı",
+            "title_en": "Senior Final Quality Specialist"
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/nihai-kalite-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Nihai Kalite Kontrol Uzmanı",
+            "title_en": "Final Quality Control Specialist"
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/urun-ve-hizmet-kalite-kontroloru",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Ürün ve Hizmet Kalite Kontrolörü",
+            "title_en": "Product and Service Quality Inspector"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 17
+          },
+          {
+            "model": "Standart",
+            "min": 17,
+            "max": 45
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 45,
+            "max": 63
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.03",
+            "title_tr": "Operasyonel Kalite Kontrol Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol",
+            "title_tr": "Girdi ve Mal Kabul Kalite Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/kidemli-girdi-kalite-uzmani",
+            "title_tr": "Kıdemli Girdi Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/girdi-kalite-kontrol-uzmani",
+            "title_tr": "Girdi Kalite Kontrol Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.03/girdi-ve-mal-kabul-kalite-kontrol/mal-kabul-kalite-kontroloru",
+            "title_tr": "Mal Kabul Kalite Kontrolörü",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol",
+            "title_tr": "Süreç İçi Kalite Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/kidemli-proses-kalite-uzmani",
+            "title_tr": "Kıdemli Proses Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/proses-kalite-kontrol-uzmani",
+            "title_tr": "Proses Kalite Kontrol Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.03/surec-ici-kalite-kontrol/surec-kalite-kontroloru",
+            "title_tr": "Süreç Kalite Kontrolörü",
+            "min": 3,
+            "max": 12
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol",
+            "title_tr": "Nihai Ürün ve Hizmet Kalite Kontrol Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/kidemli-nihai-kalite-uzmani",
+            "title_tr": "Kıdemli Nihai Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/nihai-kalite-kontrol-uzmani",
+            "title_tr": "Nihai Kalite Kontrol Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.03/nihai-urun-ve-hizmet-kalite-kontrol/urun-ve-hizmet-kalite-kontroloru",
+            "title_tr": "Ürün ve Hizmet Kalite Kontrolörü",
+            "min": 2,
+            "max": 8
+          }
+        ]
+      },
+      {
+        "unit_id": "14.04",
+        "name_tr": "Tedarikçi Kalitesi",
+        "responsibilities": [
+          "Aday tedarikçilerin kalite yeterliliğini değerlendirmek",
+          "Kalifikasyon, numune ve ilk ürün onay süreçlerini yürütmek",
+          "Tedarikçi kalite denetimlerini ve güvence planlarını yürütmek",
+          "Tedarikçi proses kontrollerini ve kalite anlaşmalarını izlemek",
+          "Tedarikçi uygunsuzluklarını ve SCAR süreçlerini yönetmek",
+          "Kritik tedarikçiler için kalite geliştirme programları uygulamak"
+        ],
+        "authorities": [
+          "Tedarikçi kalite kalifikasyonunu ve ilk ürün onayını verir",
+          "Tedarikçi kalite risk sınıfını ve denetim sıklığını belirler",
+          "Tedarikçiden SCAR ister ve kök neden ile düzeltici faaliyet kanıtını onaylar",
+          "Kalite performansı yetersiz tedarikçi için statü değişikliğini Satın Almaya önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi seçimi, kalite anlaşmaları ve tedarikçi performans kartları"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Operasyonel Kalite Kontrol",
+            "topic": "Girdi kontrol sonuçları ve tedarikçi kaynaklı uygunsuzluklar"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+            "topic": "Tedarikçi kaynaklı CAPA ve kök neden doğrulaması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+            "topic": "Tedarikçi risk sınıflandırması ve üçüncü taraf uyum değerlendirmesi"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+            "topic": "Yeni ürün parçalarında ilk ürün onayı ve teknik şartname uyumu"
+          }
+        ],
+        "kpis": [
+          "Tedarikçi Hata Oranı (PPM)",
+          "SCAR Zamanında Kapanış Oranı",
+          "Kalifiye Tedarikçi Oranı",
+          "İlk Ürün Onayında İlk Seferde Kabul Oranı",
+          "Tedarikçi Denetim Planı Gerçekleşme Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "14.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Tedarikçi Kalitesi Müdürü",
+            "title_en": "Supplier Quality Manager"
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi Kalifikasyonu Yöneticisi",
+            "title_en": "Supplier Qualification Manager"
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/kidemli-tedarikci-kalifikasyon-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarikçi Kalifikasyon Uzmanı",
+            "title_en": "Senior Supplier Qualification Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/tedarikci-kalifikasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Kalifikasyon Uzmanı",
+            "title_en": "Supplier Qualification Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/tedarikci-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Tedarikçi Risk Analisti",
+            "title_en": "Supplier Risk Analyst"
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi Kalite Güvence Yöneticisi",
+            "title_en": "Supplier Quality Assurance Manager"
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/kidemli-tedarikci-kalite-muhendisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarikçi Kalite Mühendisi",
+            "title_en": "Senior Supplier Quality Engineer"
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/tedarikci-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Kalite Uzmanı",
+            "title_en": "Supplier Quality Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/tedarikci-denetim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Denetim Uzmanı",
+            "title_en": "Supplier Audit Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi Uygunsuzluk ve İyileştirme Yöneticisi",
+            "title_en": "Supplier Nonconformance and Improvement Manager"
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/kidemli-tedarikci-iyilestirme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tedarikçi İyileştirme Uzmanı",
+            "title_en": "Senior Supplier Improvement Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/tedarikci-uygunsuzluk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Uygunsuzluk Uzmanı",
+            "title_en": "Supplier Nonconformance Specialist"
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/scar-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "SCAR Koordinatörü",
+            "title_en": "Supplier Corrective Action Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.04",
+            "title_tr": "Tedarikçi Kalitesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu",
+            "title_tr": "Tedarikçi Kalifikasyonu Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/kidemli-tedarikci-kalifikasyon-uzmani",
+            "title_tr": "Kıdemli Tedarikçi Kalifikasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/tedarikci-kalifikasyon-uzmani",
+            "title_tr": "Tedarikçi Kalifikasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.04/tedarikci-kalifikasyonu/tedarikci-risk-analisti",
+            "title_tr": "Tedarikçi Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence",
+            "title_tr": "Tedarikçi Kalite Güvence Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/kidemli-tedarikci-kalite-muhendisi",
+            "title_tr": "Kıdemli Tedarikçi Kalite Mühendisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/tedarikci-kalite-uzmani",
+            "title_tr": "Tedarikçi Kalite Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.04/tedarikci-kalite-guvence/tedarikci-denetim-uzmani",
+            "title_tr": "Tedarikçi Denetim Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme",
+            "title_tr": "Tedarikçi Uygunsuzluk ve İyileştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/kidemli-tedarikci-iyilestirme-uzmani",
+            "title_tr": "Kıdemli Tedarikçi İyileştirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/tedarikci-uygunsuzluk-uzmani",
+            "title_tr": "Tedarikçi Uygunsuzluk Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.04/tedarikci-uygunsuzluk-ve-iyilestirme/scar-koordinatoru",
+            "title_tr": "SCAR Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.05",
+        "name_tr": "Müşteri Kalitesi ve Geri Bildirim",
+        "responsibilities": [
+          "Müşteri kalite şartlarını sözleşme ve teknik gerekliliklere dönüştürmek",
+          "Müşteriye özel kalite planlarını koordine etmek",
+          "Kalite kaynaklı müşteri şikâyetlerini teknik açıdan incelemek",
+          "8D, kök neden ve düzeltici faaliyet sürecini koordine etmek",
+          "Saha hatalarını, iadeleri ve garanti verilerini analiz etmek",
+          "Saha bulgularını ürün, üretim ve tedarikçi iyileştirmelerine aktarmak"
+        ],
+        "authorities": [
+          "Kalite kaynaklı müşteri vakalarının teknik sınıfını ve 8D sorumlularını belirler",
+          "Teknik kalite yanıtını hazırlar ve müşteriye iletilmek üzere Müşteri Deneyimine sunar",
+          "Müşteri kalite gerekliliklerinin sözleşmeye yansıtılmasında teknik görüş verir",
+          "Tekrarlayan saha hataları için ürün, üretim veya tedarikçi iyileştirmesi talep eder"
+        ],
+        "collaborations": [
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "Kalite kaynaklı şikâyetlerin teknik incelemesi ve müşteri yanıtı"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Servis ve Teknik Destek Koordinasyonu",
+            "topic": "Saha hataları, iadeler ve garanti verileri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+            "topic": "Müşteri kalite şartlarının teklif ve sözleşmelere yansıtılması"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Yönetimi ve Ürün Alanları",
+            "topic": "Saha güvenilirlik bulgularının ürün iyileştirmelerine aktarımı"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+            "topic": "Müşteri kaynaklı uygunsuzluklarda kök neden ve CAPA doğrulaması"
+          }
+        ],
+        "kpis": [
+          "Müşteri Hata ve Şikâyet Oranı",
+          "8D Kapanış Süresi",
+          "Garanti Maliyeti / Ciro Oranı",
+          "Tekrarlayan Saha Hatası Sayısı",
+          "Teknik Kalite Yanıtının Zamanında Hazırlanma Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "14.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Müşteri Kalitesi ve Geri Bildirim Müdürü",
+            "title_en": "Customer Quality and Feedback Manager"
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri Kalite Gereklilikleri Yöneticisi",
+            "title_en": "Customer Quality Requirements Manager"
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/kidemli-musteri-kalite-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Müşteri Kalite Uzmanı",
+            "title_en": "Senior Customer Quality Specialist"
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/musteri-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşteri Kalite Uzmanı",
+            "title_en": "Customer Quality Specialist"
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/kalite-gereklilikleri-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Gereklilikleri Analisti",
+            "title_en": "Quality Requirements Analyst"
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri Şikâyetleri ve Kalite Vakaları Yöneticisi",
+            "title_en": "Customer Complaints and Quality Cases Manager"
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/kidemli-musteri-kalite-vakasi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Müşteri Kalite Vakası Uzmanı",
+            "title_en": "Senior Customer Quality Case Specialist"
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/musteri-sikayet-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşteri Şikâyet Kalite Uzmanı",
+            "title_en": "Customer Complaint Quality Specialist"
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/kalite-vakasi-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kalite Vakası Koordinatörü",
+            "title_en": "Quality Case Coordinator"
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Saha Kalitesi ve Garanti Analitiği Yöneticisi",
+            "title_en": "Field Quality and Warranty Analytics Manager"
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/kidemli-saha-kalite-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Saha Kalite Uzmanı",
+            "title_en": "Senior Field Quality Specialist"
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/saha-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Saha Kalite Uzmanı",
+            "title_en": "Field Quality Specialist"
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/garanti-kalite-analisti",
+            "level": "Analist",
+            "title_tr": "Garanti Kalite Analisti",
+            "title_en": "Warranty Quality Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.05",
+            "title_tr": "Müşteri Kalitesi ve Geri Bildirim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri",
+            "title_tr": "Müşteri Kalite Gereklilikleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/kidemli-musteri-kalite-uzmani",
+            "title_tr": "Kıdemli Müşteri Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/musteri-kalite-uzmani",
+            "title_tr": "Müşteri Kalite Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.05/musteri-kalite-gereklilikleri/kalite-gereklilikleri-analisti",
+            "title_tr": "Kalite Gereklilikleri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari",
+            "title_tr": "Müşteri Şikâyetleri ve Kalite Vakaları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/kidemli-musteri-kalite-vakasi-uzmani",
+            "title_tr": "Kıdemli Müşteri Kalite Vakası Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/musteri-sikayet-kalite-uzmani",
+            "title_tr": "Müşteri Şikâyet Kalite Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.05/musteri-sikayetleri-ve-kalite-vakalari/kalite-vakasi-koordinatoru",
+            "title_tr": "Kalite Vakası Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi",
+            "title_tr": "Saha Kalitesi ve Garanti Analitiği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/kidemli-saha-kalite-uzmani",
+            "title_tr": "Kıdemli Saha Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/saha-kalite-uzmani",
+            "title_tr": "Saha Kalite Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.05/saha-kalitesi-ve-garanti-analitigi/garanti-kalite-analisti",
+            "title_tr": "Garanti Kalite Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.06",
+        "name_tr": "Uygunsuzluk, CAPA ve Sürekli İyileştirme",
+        "responsibilities": [
+          "Uygunsuzlukları kayıt, sınıflandırma ve risk bazında değerlendirmek",
+          "Karantina, ayırma, yeniden işleme ve imha kararlarını koordine etmek",
+          "Kök neden analiz metodolojilerini uygulamak",
+          "Düzeltici ve önleyici faaliyet planlarını yönetmek ve etkinliğini doğrulamak",
+          "Kalite iyileştirme portföyünü önceliklendirerek Six Sigma ve hata önleme projelerini yürütmek",
+          "İyileştirme faydalarını kalite maliyeti ve müşteri etkisiyle ölçmek"
+        ],
+        "authorities": [
+          "Uygunsuzluk sınıflandırma ve risk derecelendirme kurallarını belirler",
+          "CAPA açılmasını gerektiren durumları belirler ve CAPA sorumlusunu atar",
+          "CAPA etkinliğini doğrular ve etkin olmayan CAPA'yı yeniden açar",
+          "Kalite iyileştirme portföyünün önceliklendirmesini direktör onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Üretim Operasyonları",
+            "topic": "Üretim kaynaklı uygunsuzluklar ve yalın iyileştirme projeleri"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Operasyonel Kalite Kontrol",
+            "topic": "Uygunsuz ürün kayıtları ve karantina kararları"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Tedarikçi Kalitesi",
+            "topic": "Tedarikçi kaynaklı uygunsuzlukların CAPA takibi"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Laboratuvar, Metroloji ve Kalite Analitiği",
+            "topic": "Kalite maliyeti verisi ve iyileştirme faydalarının ölçümü"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Süreç Yönetimi ve Operasyonel Mükemmellik",
+            "topic": "Süreç iyileştirme ve Six Sigma projelerinin koordinasyonu"
+          }
+        ],
+        "kpis": [
+          "Uygunsuzluk Oranı",
+          "Tekrar Eden Uygunsuzluk Oranı",
+          "CAPA Zamanında Kapanış Oranı",
+          "CAPA Etkinlik Oranı",
+          "Uygunsuzluk Kapanış Süresi",
+          "İyileştirme Projelerinden Doğrulanmış Kalite Maliyeti Azalışı"
+        ],
+        "title_standard": [
+          {
+            "position": "14.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Uygunsuzluk, CAPA ve Sürekli İyileştirme Müdürü",
+            "title_en": "Nonconformance, CAPA and Continuous Improvement Manager"
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uygunsuzluk Yönetimi Yöneticisi",
+            "title_en": "Nonconformance Management Manager"
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/kidemli-uygunsuzluk-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Uygunsuzluk Yönetimi Uzmanı",
+            "title_en": "Senior Nonconformance Management Specialist"
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/uygunsuzluk-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uygunsuzluk Yönetimi Uzmanı",
+            "title_en": "Nonconformance Management Specialist"
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/uygunsuzluk-analisti",
+            "level": "Analist",
+            "title_tr": "Uygunsuzluk Analisti",
+            "title_en": "Nonconformance Analyst"
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kök Neden ve CAPA Yönetimi Yöneticisi",
+            "title_en": "Root Cause and CAPA Management Manager"
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/kidemli-capa-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli CAPA Uzmanı",
+            "title_en": "Senior CAPA Specialist"
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/kok-neden-analizi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kök Neden Analizi Uzmanı",
+            "title_en": "Root Cause Analysis Specialist"
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/capa-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "CAPA Koordinatörü",
+            "title_en": "CAPA Coordinator"
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite İyileştirme Programları Yöneticisi",
+            "title_en": "Quality Improvement Programs Manager"
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/kidemli-kalite-iyilestirme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite İyileştirme Uzmanı",
+            "title_en": "Senior Quality Improvement Specialist"
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/kalite-iyilestirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalite İyileştirme Uzmanı",
+            "title_en": "Quality Improvement Specialist"
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/six-sigma-analisti",
+            "level": "Analist",
+            "title_tr": "Six Sigma Analisti",
+            "title_en": "Six Sigma Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.06",
+            "title_tr": "Uygunsuzluk, CAPA ve Sürekli İyileştirme Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi",
+            "title_tr": "Uygunsuzluk Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/kidemli-uygunsuzluk-yonetimi-uzmani",
+            "title_tr": "Kıdemli Uygunsuzluk Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/uygunsuzluk-yonetimi-uzmani",
+            "title_tr": "Uygunsuzluk Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.06/uygunsuzluk-yonetimi/uygunsuzluk-analisti",
+            "title_tr": "Uygunsuzluk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi",
+            "title_tr": "Kök Neden ve CAPA Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/kidemli-capa-uzmani",
+            "title_tr": "Kıdemli CAPA Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/kok-neden-analizi-uzmani",
+            "title_tr": "Kök Neden Analizi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.06/kok-neden-ve-capa-yonetimi/capa-koordinatoru",
+            "title_tr": "CAPA Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari",
+            "title_tr": "Kalite İyileştirme Programları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/kidemli-kalite-iyilestirme-uzmani",
+            "title_tr": "Kıdemli Kalite İyileştirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/kalite-iyilestirme-uzmani",
+            "title_tr": "Kalite İyileştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.06/kalite-iyilestirme-programlari/six-sigma-analisti",
+            "title_tr": "Six Sigma Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.07",
+        "name_tr": "Kalite Denetimleri ve Uygunluk Değerlendirme",
+        "responsibilities": [
+          "QMS kapsamındaki iç kalite denetim programını yürütmek",
+          "Süreç ve standart uygunluğunu örneklem bazında değerlendirmek",
+          "Belgelendirme ve müşteri denetimlerine hazırlığı koordine etmek",
+          "Denetim kanıtlarını, saha programını ve bulgu kapanışlarını izlemek",
+          "Test, sertifika, beyan ve teknik dosya bütünlüğünü doğrulamak",
+          "Sertifika geçerliliğini ve kapsam değişikliklerini izlemek"
+        ],
+        "authorities": [
+          "Yıllık iç kalite denetim programını hazırlar ve direktör onayına sunar",
+          "Denetim bulgularını sınıflandırır ve kapanış kanıtını kabul eder",
+          "Teknik dosyası eksik ürün ve hizmet için uygunluk beyanını durdurur",
+          "Uygunluk işaretleme ve serbest bırakma kararlarına uygunluk değerlendirme görüşü verir"
+        ],
+        "collaborations": [
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Operasyonel Denetim",
+            "topic": "Denetim planlarının koordinasyonu ve mükerrer denetimin önlenmesi"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Yönetim Sistemi ve Strateji",
+            "topic": "Denetim bulgularının QMS etkinliği ve yönetim gözden geçirmesine aktarımı"
+          },
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Kalite Güvence ve Standartlar",
+            "topic": "Sertifikasyon kapsamı ve standart uygunluk kanıtları"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Ürün mevzuatı ve uygunluk beyanlarının hukuki yorumu"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama",
+            "topic": "Test ve doğrulama kanıtları ile teknik dosya bütünlüğü"
+          }
+        ],
+        "kpis": [
+          "İç Denetim Programı Gerçekleşme Oranı",
+          "İç ve Dış Denetim Bulgu Sayısı",
+          "Denetim Bulgusu Zamanında Kapanış Oranı",
+          "Sertifikasyon Devamlılığı",
+          "Teknik Dosya Tamlık Oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "14.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Kalite Denetimleri ve Uygunluk Değerlendirme Müdürü",
+            "title_en": "Quality Audits and Conformity Assessment Manager"
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İç Kalite Denetimleri Yöneticisi",
+            "title_en": "Internal Quality Audits Manager"
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/kidemli-ic-kalite-denetcisi",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İç Kalite Denetçisi",
+            "title_en": "Senior Internal Quality Auditor"
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/ic-kalite-denetcisi",
+            "level": "Uzman",
+            "title_tr": "İç Kalite Denetçisi",
+            "title_en": "Internal Quality Auditor"
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/kalite-denetim-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kalite Denetim Koordinatörü",
+            "title_en": "Quality Audit Coordinator"
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dış Denetim ve Sertifikasyon Koordinasyonu Yöneticisi",
+            "title_en": "External Audit and Certification Coordination Manager"
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/kidemli-sertifikasyon-koordinatoru",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sertifikasyon Koordinatörü",
+            "title_en": "Senior Certification Coordinator"
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/dis-denetim-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Dış Denetim Koordinatörü",
+            "title_en": "External Audit Coordinator"
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/sertifika-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sertifika Yönetimi Uzmanı",
+            "title_en": "Certificate Management Specialist"
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ürün ve Hizmet Uygunluk Değerlendirme Yöneticisi",
+            "title_en": "Product and Service Conformity Assessment Manager"
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/kidemli-uygunluk-degerlendirme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Uygunluk Değerlendirme Uzmanı",
+            "title_en": "Senior Conformity Assessment Specialist"
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/uygunluk-degerlendirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uygunluk Değerlendirme Uzmanı",
+            "title_en": "Conformity Assessment Specialist"
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/teknik-dosya-analisti",
+            "level": "Analist",
+            "title_tr": "Teknik Dosya Analisti",
+            "title_en": "Technical File Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 13
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 25
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 25,
+            "max": 35
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.07",
+            "title_tr": "Kalite Denetimleri ve Uygunluk Değerlendirme Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri",
+            "title_tr": "İç Kalite Denetimleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/kidemli-ic-kalite-denetcisi",
+            "title_tr": "Kıdemli İç Kalite Denetçisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/ic-kalite-denetcisi",
+            "title_tr": "İç Kalite Denetçisi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.07/ic-kalite-denetimleri/kalite-denetim-koordinatoru",
+            "title_tr": "Kalite Denetim Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu",
+            "title_tr": "Dış Denetim ve Sertifikasyon Koordinasyonu Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/kidemli-sertifikasyon-koordinatoru",
+            "title_tr": "Kıdemli Sertifikasyon Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/dis-denetim-koordinatoru",
+            "title_tr": "Dış Denetim Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/sertifika-yonetimi-uzmani",
+            "title_tr": "Sertifika Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme",
+            "title_tr": "Ürün ve Hizmet Uygunluk Değerlendirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/kidemli-uygunluk-degerlendirme-uzmani",
+            "title_tr": "Kıdemli Uygunluk Değerlendirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/uygunluk-degerlendirme-uzmani",
+            "title_tr": "Uygunluk Değerlendirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.07/urun-ve-hizmet-uygunluk-degerlendirme/teknik-dosya-analisti",
+            "title_tr": "Teknik Dosya Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "14.08",
+        "name_tr": "Laboratuvar, Metroloji ve Kalite Analitiği",
+        "responsibilities": [
+          "Test planlarını ve laboratuvar operasyonlarını yönetmek",
+          "Numune, metot, sonuç ve laboratuvar kayıtlarını kontrol etmek",
+          "Ölçüm cihazı envanterini ve kalibrasyon planını yönetmek",
+          "Ölçüm sistemi analizini ve ölçüm izlenebilirliğini sağlamak",
+          "Kalite KPI, trend ve erken uyarı analizlerini üretmek",
+          "Önleme, değerlendirme ve başarısızlık maliyetlerini izlemek"
+        ],
+        "authorities": [
+          "Test metotlarını ve laboratuvar kabul kriterlerini onaylar",
+          "Kalibrasyonu geçersiz ölçüm cihazını kullanım dışı bırakır",
+          "Kalibrasyon sapmasının ürün etkisi için geriye dönük değerlendirme başlatır",
+          "Kalite KPI tanımlarını ve kalite maliyeti sınıflandırmasını belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "14 - Kalite Yönetimi",
+            "unit": "Operasyonel Kalite Kontrol",
+            "topic": "Test ve ölçüm sonuçlarının kontrol kararlarına aktarımı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Bakım, Tesis ve Teknik Hizmetler",
+            "topic": "Üretim ölçüm cihazlarının kalibrasyon planı ve ekipman uyumu"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Maliyet Muhasebesi",
+            "topic": "Hurda, tekrar iş ve garanti maliyetlerinin maliyet muhasebesiyle mutabakatı"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "Kalite veri modeli, gösterge panoları ve raporlama altyapısı"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı, Hijyen ve Ergonomi",
+            "topic": "Laboratuvar güvenliği, hijyen ve kimyasal madde yönetimi"
+          }
+        ],
+        "kpis": [
+          "Kalibrasyon Uyum Oranı",
+          "Laboratuvar Sonuç Teslim Süresi",
+          "Ölçüm Sistemi Analizi Uygunluk Oranı",
+          "Toplam Kalite Maliyeti",
+          "Hurda ve Tekrar İş Maliyeti"
+        ],
+        "title_standard": [
+          {
+            "position": "14.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Laboratuvar, Metroloji ve Kalite Analitiği Müdürü",
+            "title_en": "Laboratory, Metrology and Quality Analytics Manager"
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Test ve Laboratuvar Yönetimi Yöneticisi",
+            "title_en": "Testing and Laboratory Management Manager"
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/kidemli-laboratuvar-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Laboratuvar Uzmanı",
+            "title_en": "Senior Laboratory Specialist"
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/test-ve-laboratuvar-uzmani",
+            "level": "Uzman",
+            "title_tr": "Test ve Laboratuvar Uzmanı",
+            "title_en": "Test and Laboratory Specialist"
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/laboratuvar-teknisyeni",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Laboratuvar Teknisyeni",
+            "title_en": "Laboratory Technician"
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Metroloji ve Kalibrasyon Yöneticisi",
+            "title_en": "Metrology and Calibration Manager"
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/kidemli-metroloji-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Metroloji Uzmanı",
+            "title_en": "Senior Metrology Specialist"
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/kalibrasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kalibrasyon Uzmanı",
+            "title_en": "Calibration Specialist"
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/olcum-sistemleri-teknisyeni",
+            "level": "Teknisyen / Operatör",
+            "title_tr": "Ölçüm Sistemleri Teknisyeni",
+            "title_en": "Measurement Systems Technician"
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kalite Analitiği ve Kalite Maliyeti Yöneticisi",
+            "title_en": "Quality Analytics and Cost of Quality Manager"
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kidemli-kalite-analitigi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kalite Analitiği Uzmanı",
+            "title_en": "Senior Quality Analytics Specialist"
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kalite-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Veri Analisti",
+            "title_en": "Quality Data Analyst"
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kalite-maliyeti-analisti",
+            "level": "Analist",
+            "title_tr": "Kalite Maliyeti Analisti",
+            "title_en": "Cost of Quality Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 15
+          },
+          {
+            "model": "Standart",
+            "min": 15,
+            "max": 32
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 32,
+            "max": 45
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "14.08",
+            "title_tr": "Laboratuvar, Metroloji ve Kalite Analitiği Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi",
+            "title_tr": "Test ve Laboratuvar Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/kidemli-laboratuvar-uzmani",
+            "title_tr": "Kıdemli Laboratuvar Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/test-ve-laboratuvar-uzmani",
+            "title_tr": "Test ve Laboratuvar Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.08/test-ve-laboratuvar-yonetimi/laboratuvar-teknisyeni",
+            "title_tr": "Laboratuvar Teknisyeni",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon",
+            "title_tr": "Metroloji ve Kalibrasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/kidemli-metroloji-uzmani",
+            "title_tr": "Kıdemli Metroloji Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/kalibrasyon-uzmani",
+            "title_tr": "Kalibrasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "14.08/metroloji-ve-kalibrasyon/olcum-sistemleri-teknisyeni",
+            "title_tr": "Ölçüm Sistemleri Teknisyeni",
+            "min": 2,
+            "max": 6
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti",
+            "title_tr": "Kalite Analitiği ve Kalite Maliyeti Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kidemli-kalite-analitigi-uzmani",
+            "title_tr": "Kıdemli Kalite Analitiği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kalite-veri-analisti",
+            "title_tr": "Kalite Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "14.08/kalite-analitigi-ve-kalite-maliyeti/kalite-maliyeti-analisti",
+            "title_tr": "Kalite Maliyeti Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

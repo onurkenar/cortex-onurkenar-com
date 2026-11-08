@@ -1,0 +1,2869 @@
+{
+  "department": {
+    "id": 9,
+    "name_tr": "Pazarlama ve Büyüme Departmanı",
+    "name_en": "Marketing and Growth Department",
+    "purpose": "Pazar talebi yaratmak, müşteri kazanımını hızlandırmak ve ölçülebilir büyümeyi desteklemek.",
+    "reports_to": "Genel Müdür / CEO",
+    "leader": {"title_tr": "Pazarlama ve Büyüme Direktörü", "title_en": "Chief Marketing Officer", "abbreviation": "CMO"},
+    "scope": ["Pazarlama stratejisi", "Marka ve konumlandırma", "Hedef kitle ve persona", "Dijital pazarlama", "Performans reklamları", "SEO ve GEO", "İçerik pazarlaması", "Sosyal medya pazarlaması", "Pazarlama otomasyonu", "Lead generation ve nurturing", "Dönüşüm optimizasyonu", "Growth marketing", "Ürün pazarlaması", "Kampanya yönetimi", "Etkinlik pazarlaması", "Pazar ve rakip araştırmaları", "Pazarlama analitiği", "Bütçe ve yatırım getirisi"],
+    "boundary": "Satış işlemini kapatmaz; talep ve nitelikli lead üretir. Kurumsal açıklamalar, medya ilişkileri ve kriz söylemi Kurumsal İletişim tarafından yönetilir."
+  },
+  "units": [
+    {
+      "id": "marketing_strategy_brand",
+      "name_tr": "Pazarlama Stratejisi ve Marka Yönetimi",
+      "leader": "Pazarlama Stratejisi ve Marka Yönetimi Direktörü",
+      "teams": [
+        {"manager": "Pazarlama Stratejisi Müdürü", "roles": ["Pazarlama Stratejisi Uzmanı", "Segmentasyon ve Persona Uzmanı"]},
+        {"manager": "Marka Yönetimi Müdürü", "roles": ["Marka Yöneticisi", "Marka Uzmanı", "Konumlandırma Uzmanı"]},
+        {"manager": "Marka Portföyü ve Mimari Müdürü", "roles": ["Marka Mimarisi Uzmanı", "Marka Uyum Uzmanı"]},
+        {"manager": "Stratejik Planlama Yöneticisi", "roles": ["Pazarlama Planlama Uzmanı", "Talep Planlama Analisti"]}
+      ]
+    },
+    {
+      "id": "digital_demand_generation",
+      "name_tr": "Dijital Pazarlama ve Talep Yaratma",
+      "leader": "Dijital Pazarlama ve Talep Yaratma Direktörü",
+      "teams": [
+        {"manager": "Performans Pazarlama Müdürü", "roles": ["Arama Motoru Reklamları Uzmanı", "Ücretli Sosyal Medya Uzmanı", "Medya Planlama Uzmanı", "Programatik Reklam Uzmanı"]},
+        {"manager": "SEO ve GEO Müdürü", "roles": ["SEO Yöneticisi", "Teknik SEO Uzmanı", "İçerik SEO Uzmanı", "GEO ve AI Görünürlük Yöneticisi", "AI Arama Görünürlüğü Uzmanı"]},
+        {"manager": "Talep Yaratma Müdürü", "roles": ["Demand Generation Yöneticisi", "Lead Generation Uzmanı", "ABM Uzmanı", "Yeniden Pazarlama Uzmanı"]},
+        {"manager": "Web Pazarlama Müdürü", "roles": ["Web Pazarlama Yöneticisi", "Landing Page Uzmanı", "Dijital Ölçümleme Uzmanı"]}
+      ]
+    },
+    {
+      "id": "content_marketing",
+      "name_tr": "İçerik Pazarlaması",
+      "leader": "İçerik Pazarlaması Direktörü",
+      "teams": [
+        {"manager": "Editoryal Yönetim Müdürü", "roles": ["Kıdemli Editör", "İçerik Editörü", "İçerik Kalite ve Doğrulama Uzmanı"]},
+        {"manager": "İçerik Üretimi Müdürü", "roles": ["İçerik Yazarı", "Copywriter", "Teknik İçerik Yazarı", "Vaka Çalışması Uzmanı", "SEO ve GEO İçerik Uzmanı"]},
+        {"manager": "Multimedya İçerik Müdürü", "roles": ["Video İçerik Yapımcısı", "Podcast Yapımcısı", "Webinar İçerik Uzmanı"]},
+        {"manager": "İçerik Dağıtım Yöneticisi", "roles": ["İçerik Dağıtım Uzmanı", "İçerik Dönüştürme Uzmanı"]}
+      ]
+    },
+    {
+      "id": "social_media_marketing",
+      "name_tr": "Sosyal Medya Pazarlaması",
+      "leader": "Sosyal Medya Pazarlaması Müdürü",
+      "teams": [
+        {"manager": "Kanal Yönetimi Yöneticisi", "roles": ["LinkedIn Uzmanı", "Instagram Uzmanı", "Facebook Uzmanı", "YouTube Uzmanı", "TikTok Uzmanı", "X Uzmanı", "Threads Uzmanı", "WhatsApp Uzmanı", "Telegram Uzmanı"]},
+        {"manager": "Topluluk Büyütme Yöneticisi", "roles": ["Topluluk Uzmanı", "Moderasyon Uzmanı"]},
+        {"manager": "Influencer ve İçerik Üreticileri Yöneticisi", "roles": ["Influencer Pazarlama Uzmanı", "İçerik Üreticisi İş Birlikleri Uzmanı"]},
+        {"manager": "Sosyal Dinleme ve Analitik Yöneticisi", "roles": ["Sosyal Dinleme Uzmanı", "Sosyal Medya Analisti"]}
+      ]
+    },
+    {
+      "id": "product_solution_marketing",
+      "name_tr": "Ürün ve Çözüm Pazarlaması",
+      "leader": "Ürün ve Çözüm Pazarlaması Direktörü",
+      "teams": [
+        {"manager": "Ürün Pazarlaması Müdürü", "roles": ["Ürün Pazarlama Yöneticisi", "Değer Önerisi Uzmanı", "Persona ve Kullanım Senaryosu Uzmanı"]},
+        {"manager": "GTM ve Lansman Müdürü", "roles": ["GTM Strateji Uzmanı", "Lansman Uzmanı", "Kanal Pazarlama Uzmanı"]},
+        {"manager": "Satış Etkinleştirme Müdürü", "roles": ["Satış Etkinleştirme Uzmanı", "Satış İçeriği Uzmanı", "Demo ve Eğitim Uzmanı"]},
+        {"manager": "Rekabet İstihbaratı Yöneticisi", "roles": ["Rekabet Analisti", "Fiyatlandırma ve Paketleme Analisti"]},
+        {"manager": "Müşteri Pazarlaması Yöneticisi", "roles": ["Müşteri Referans Programları Uzmanı", "Çapraz Satış Pazarlaması Uzmanı"]}
+      ]
+    },
+    {
+      "id": "growth_conversion",
+      "name_tr": "Growth Marketing ve Dönüşüm",
+      "leader": "Growth Marketing ve Dönüşüm Direktörü",
+      "teams": [
+        {"manager": "Growth Marketing Müdürü", "roles": ["Büyüme Uzmanı", "Kanal Deneyleri Uzmanı"]},
+        {"manager": "CRO ve Deney Yönetimi Müdürü", "roles": ["Kullanıcı Davranışı Analisti", "A/B Test Uzmanı", "Funnel Optimizasyon Uzmanı"]},
+        {"manager": "Yaşam Döngüsü Pazarlama Müdürü", "roles": ["Lead Nurturing Uzmanı", "Elde Tutma Pazarlaması Uzmanı", "Yeniden Aktivasyon Uzmanı"]},
+        {"manager": "Müşteri Kazanımı Yöneticisi", "roles": ["Edinim Stratejisi Uzmanı", "Referans ve Yönlendirme Programı Uzmanı"]}
+      ]
+    },
+    {
+      "id": "marketing_operations_crm_martech",
+      "name_tr": "Pazarlama Operasyonları, CRM ve MarTech",
+      "leader": "Pazarlama Operasyonları, CRM ve MarTech Direktörü",
+      "teams": [
+        {"manager": "Kampanya Operasyonları Müdürü", "roles": ["Kampanya Koordinatörü", "Kampanya Kalite Uzmanı"]},
+        {"manager": "CRM ve Lead Yönetimi Müdürü", "roles": ["CRM Uzmanı", "Lead Yönetimi Uzmanı", "Lead Skorlama Uzmanı", "E-posta Pazarlama Uzmanı", "Pazarlama Otomasyonu Uzmanı"]},
+        {"manager": "MarTech ve Entegrasyon Müdürü", "roles": ["Pazarlama Teknolojileri Uzmanı", "Entegrasyon Uzmanı", "Pazarlama Sistemleri Yöneticisi"]},
+        {"manager": "Pazarlama Verisi ve Raporlama Müdürü", "roles": ["Pazarlama Veri Analisti", "BI ve Dashboard Uzmanı", "Atıf Analitiği Uzmanı", "Veri Kalitesi Uzmanı"]},
+        {"manager": "Bütçe ve Tedarikçi Yönetimi Müdürü", "roles": ["Bütçe ve Operasyon Uzmanı", "Tedarikçi Yönetimi Uzmanı"]}
+      ]
+    },
+    {
+      "id": "market_research_analytics",
+      "name_tr": "Pazar Araştırmaları ve Pazarlama Analitiği",
+      "leader": "Pazar Araştırmaları ve Pazarlama Analitiği Direktörü",
+      "teams": [
+        {"manager": "Pazar Araştırmaları Müdürü", "roles": ["Nitel Araştırma Uzmanı", "Nicel Araştırma Uzmanı", "Pazar Büyüklüğü Analisti"]},
+        {"manager": "Müşteri İçgörüleri Müdürü", "roles": ["Müşteri İçgörüleri Uzmanı", "Segmentasyon Uzmanı", "Müşterinin Sesi Uzmanı"]},
+        {"manager": "Rekabet ve Sektör İstihbaratı Müdürü", "roles": ["Rekabet Analisti", "Sektör ve Trend Analisti", "Fiyat Araştırma Uzmanı"]},
+        {"manager": "Pazarlama Analitiği Müdürü", "roles": ["Pazarlama Veri Analisti", "ROI ve Gelir Analisti", "Talep Tahminleme Analisti"]}
+      ]
+    },
+    {
+      "id": "campaign_event_marketing",
+      "name_tr": "Kampanya ve Etkinlik Pazarlaması",
+      "leader": "Kampanya ve Etkinlik Pazarlaması Müdürü",
+      "teams": [
+        {"manager": "Entegre Kampanya Yöneticisi", "roles": ["Kampanya Uzmanı", "Kampanya Takvimi Uzmanı"]},
+        {"manager": "Etkinlik Pazarlaması Yöneticisi", "roles": ["Webinar Pazarlaması Uzmanı", "Saha Etkinlikleri Uzmanı", "Etkinlik Lead Yönetimi Uzmanı"]},
+        {"manager": "İş Ortaklığı Pazarlaması Yöneticisi", "roles": ["Kanal Pazarlama Uzmanı", "Ortak Kampanya Uzmanı"]},
+        {"manager": "Pazarlama Proje Koordinatörü", "roles": []}
+      ]
+    }
+  ],
+  "lead_handoff": {
+    "marketing_owns": ["Farkındalık", "Etkileşim", "Lead", "MQL", "Nurturing"],
+    "joint_ownership": ["MQL kabul veya ret kontrolü", "Çapraz satış iletişimi"],
+    "sales_owns": ["SQL", "Fırsat", "Teklif", "Müzakere", "Satış kapanışı"],
+    "handoff_point": "Tanımlanmış MQL kriterlerini karşılayan lead'in eksiksiz biçimde Satışa aktarılması"
+  },
+  "title_standard": [
+    {"level": "C-Level", "title_tr": "Pazarlama ve Büyüme Direktörü", "title_en": "Chief Marketing Officer"},
+    {"level": "Fonksiyon yönetimi", "title_tr": "Direktör", "title_en": "Director / Head of Function"},
+    {"level": "Birim yönetimi", "title_tr": "Müdür", "title_en": "Manager / Head of Team"},
+    {"level": "Ekip yönetimi", "title_tr": "Yönetici", "title_en": "Lead / Senior Manager"},
+    {"level": "İleri uzmanlık", "title_tr": "Kıdemli Uzman", "title_en": "Senior Specialist"},
+    {"level": "Uzmanlık", "title_tr": "Uzman", "title_en": "Specialist"},
+    {"level": "Başlangıç", "title_tr": "Uzman Yardımcısı", "title_en": "Junior Specialist / Associate"},
+    {"level": "Operasyon", "title_tr": "Koordinatör", "title_en": "Coordinator"},
+    {"level": "Destek", "title_tr": "Asistan", "title_en": "Assistant"}
+  ],
+  "department_kpis": {
+    "demand_and_revenue": ["Pazarlama kaynaklı pipeline", "Pazarlama etkili gelir", "MQL ve SQL sayısı", "MQL-SQL dönüşüm oranı", "Müşteri edinme maliyeti", "Pazarlama yatırım getirisi", "Lead başına maliyet", "Pipeline başına pazarlama maliyeti"],
+    "brand_and_visibility": ["Marka bilinirliği", "Arama payı", "Organik görünürlük", "GEO ve AI görünürlük oranı", "Doğrudan trafik", "İçerik erişimi ve etkileşimi", "Hedef segment penetrasyonu"],
+    "conversion": ["Ziyaretçi-lead dönüşüm oranı", "Landing page dönüşüm oranı", "Form tamamlama oranı", "MQL oranı", "Kampanya dönüşüm oranı", "Nurturing dönüşümü", "A/B testlerinden elde edilen artış"],
+    "operations": ["Kampanya yayına alma süresi", "Lead yönlendirme süresi", "CRM veri doğruluğu", "Bütçe gerçekleşme oranı", "Kanal bazında ROI ve ROAS", "Satışın MQL kabul oranı", "Dashboard ve raporlama güncelliği"]
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Pazarlama stratejisini, hedef kitle ve persona tanımlarını şirket büyüme hedefleriyle uyumlu biçimde oluşturmak",
+        "Marka konumlandırmasını, marka mimarisini ve pazarlama mesaj çerçevesini yönetmek",
+        "Dijital, performans, içerik ve sosyal medya kanallarıyla talep yaratmak ve nitelikli lead üretmek",
+        "Tanımlı MQL kriterlerini karşılayan lead'leri eksiksiz biçimde Satışa aktarmak",
+        "Ürün pazarlaması, pazara giriş ve lansman çalışmalarını yürütmek",
+        "Entegre kampanya ve etkinlik takvimini planlamak ve uygulamak",
+        "Pazar, müşteri ve rakip araştırmalarıyla pazarlama kararlarına içgörü sağlamak",
+        "Pazarlama bütçesini, MarTech altyapısını ve pazarlama yatırım getirisi ölçümünü yönetmek"
+      ],
+      "authorities": [
+        "Pazarlama stratejisini, yıllık pazarlama planını ve kanal karmasını belirler",
+        "Onaylı bütçe sınırları içinde kanal ve kampanya bütçesi dağılımını onaylar",
+        "MQL kriterlerini ve lead skorlama modelini Satış ile mutabakatla belirler",
+        "Marka stratejisini, konumlandırmayı, marka mesajı ve sözel kullanım kurallarını belirler; pazarlama mesajlarının marka uyumunu onaylar",
+        "Performans hedefini karşılamayan kampanya ve reklam harcamalarını durdurabilir",
+        "Fiyatlandırma ve paketleme kararlarına pazar ve rakip verisiyle görüş verir",
+        "Kurumsal açıklama veya kriz söylemi gerektiren pazarlama içeriklerini Kurumsal İletişimin onayına sunar"
+      ],
+      "collaborations": [
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "Satış Stratejisi ve Gelir Operasyonları",
+          "topic": "Lead devri, MQL kabul veya ret kontrolü ve pipeline hedeflerinin uyumu"
+        },
+        {
+          "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+          "unit": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+          "topic": "Kurumsal anlatı, medya ilişkileri ve kriz söylemi ile pazarlama mesajlarının ayrımı ve uyumu"
+        },
+        {
+          "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+          "unit": "Grafik Tasarım ve Kampanya Kreatifi",
+          "topic": "Kampanya kreatifi, görsel üretim ve marka kimliğinin pazarlama çıktılarında uygulanması"
+        },
+        {
+          "department": "18 - Ürün Yönetimi ve Ar-Ge",
+          "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+          "topic": "Ürün yol haritası, lansman takvimi ve değer önerisi kanıtları"
+        },
+        {
+          "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+          "unit": "Müşteri Adaptasyonu, Eğitim ve Topluluk",
+          "topic": "Mevcut müşteri içgörüsü, referans ve savunucu müşteri koordinasyonu"
+        },
+        {
+          "department": "17 - Veri, Analitik ve Yapay Zekâ",
+          "unit": "İleri Analitik ve Veri Bilimi",
+          "topic": "Segmentasyon, talep tahmini ve atıf modellerinin geliştirilmesi"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Fikrî Mülkiyet ve Teknoloji Hukuku",
+          "topic": "Marka tescili, fikrî mülkiyet koruması ve reklam hukuku görüşü"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+          "topic": "Pazarlama bütçesi planlaması, harcama takibi ve yatırım getirisi raporlaması"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "KVKK ve Veri Koruma Uyumu",
+          "topic": "Ticari ileti izinleri, açık rıza ve pazarlama verisinin KVKK uyumu"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 80,
+          "max": 155
+        },
+        {
+          "model": "Standart",
+          "min": 159,
+          "max": 347
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 345,
+          "max": 485
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 159,
+        "total_max": 347,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 38,
+            "max": 38
+          },
+          {
+            "role_group": "Yönetici",
+            "min": 7,
+            "max": 14
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "role_group": "Uzman",
+            "min": 90,
+            "max": 257
+          },
+          {
+            "role_group": "Analist",
+            "min": 12,
+            "max": 24
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "marketing_strategy_brand",
+        "name_tr": "Pazarlama Stratejisi ve Marka Yönetimi",
+        "responsibilities": [
+          "Pazarlama stratejisini, hedef segmentleri ve persona tanımlarını oluşturmak",
+          "Marka konumlandırmasını, marka vaadini ve mesaj çerçevesini yönetmek",
+          "Marka portföyünü, marka mimarisini ve alt marka kullanım kurallarını tanımlamak",
+          "Marka uyumunu kanal, kampanya ve içerikler genelinde izlemek",
+          "Yıllık pazarlama planını ve talep planlama varsayımlarını hazırlamak"
+        ],
+        "authorities": [
+          "Hedef segment, persona ve konumlandırma tanımlarını onaylar",
+          "Marka stratejisine ve mesaj kurallarına aykırı pazarlama çıktılarının yayınını durdurabilir",
+          "Yıllık pazarlama planını ve öncelikli büyüme alanlarını direktörün onayına sunar",
+          "Marka mimarisi ve yeni alt marka ihtiyacına ilişkin öneriyi onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Marka Kimliği ve Kurumsal Tasarım",
+            "topic": "Marka kimliği, görsel sistem ve kurumsal tasarım standartlarının uyumu"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+            "topic": "Marka mesajı ile kurumsal anlatı ve mesaj mimarisinin uyumu"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazar Araştırmaları ve Pazarlama Analitiği",
+            "topic": "Segmentasyon, persona ve marka algısı araştırmaları"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Ürün ve Çözüm Pazarlaması",
+            "topic": "Ürün konumlandırması ve değer önerisinin marka stratejisiyle uyumu"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Fikrî Mülkiyet ve Teknoloji Hukuku",
+            "topic": "Marka tescili ve marka kullanımının fikrî mülkiyet koruması"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Pazarlama planının kurumsal strateji ve hedeflerle uyumu"
+          }
+        ],
+        "kpis": [
+          "Yardımsız marka bilinirliği",
+          "Marka tercih ve değerlendirme oranı",
+          "Marka uyum denetimi geçme oranı",
+          "Hedef segment penetrasyonu",
+          "Pazarlama planı hedef gerçekleşme oranı",
+          "Talep planı tahmin doğruluğu"
+        ],
+        "title_standard": [
+          {
+            "position": "marketing_strategy_brand",
+            "level": "Birim Müdürü",
+            "title_tr": "Pazarlama Stratejisi ve Marka Yönetimi Direktörü",
+            "title_en": "Director of Marketing Strategy and Brand Management"
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Pazarlama Stratejisi Müdürü",
+            "title_en": "Marketing Strategy Manager"
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru/pazarlama-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Pazarlama Stratejisi Uzmanı",
+            "title_en": "Marketing Strategy Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru/segmentasyon-ve-persona-uzmani",
+            "level": "Uzman",
+            "title_tr": "Segmentasyon ve Persona Uzmanı",
+            "title_en": "Segmentation and Persona Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Marka Yönetimi Müdürü",
+            "title_en": "Brand Management Manager"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/marka-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Marka Yöneticisi",
+            "title_en": "Brand Lead"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/marka-uzmani",
+            "level": "Uzman",
+            "title_tr": "Marka Uzmanı",
+            "title_en": "Brand Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/konumlandirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Konumlandırma Uzmanı",
+            "title_en": "Positioning Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Marka Portföyü ve Mimari Müdürü",
+            "title_en": "Brand Portfolio and Architecture Manager"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru/marka-mimarisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Marka Mimarisi Uzmanı",
+            "title_en": "Brand Architecture Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru/marka-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Marka Uyum Uzmanı",
+            "title_en": "Brand Compliance Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Stratejik Planlama Yöneticisi",
+            "title_en": "Strategic Planning Manager"
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi/pazarlama-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Pazarlama Planlama Uzmanı",
+            "title_en": "Marketing Planning Specialist"
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi/talep-planlama-analisti",
+            "level": "Analist",
+            "title_tr": "Talep Planlama Analisti",
+            "title_en": "Demand Planning Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 7,
+            "max": 14
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 30
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 30,
+            "max": 42
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "marketing_strategy_brand",
+            "title_tr": "Pazarlama Stratejisi ve Marka Yönetimi Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru",
+            "title_tr": "Pazarlama Stratejisi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru/pazarlama-stratejisi-uzmani",
+            "title_tr": "Pazarlama Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/pazarlama-stratejisi-muduru/segmentasyon-ve-persona-uzmani",
+            "title_tr": "Segmentasyon ve Persona Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru",
+            "title_tr": "Marka Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/marka-yoneticisi",
+            "title_tr": "Marka Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/marka-uzmani",
+            "title_tr": "Marka Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/marka-yonetimi-muduru/konumlandirma-uzmani",
+            "title_tr": "Konumlandırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru",
+            "title_tr": "Marka Portföyü ve Mimari Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru/marka-mimarisi-uzmani",
+            "title_tr": "Marka Mimarisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/marka-portfoyu-ve-mimari-muduru/marka-uyum-uzmani",
+            "title_tr": "Marka Uyum Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi",
+            "title_tr": "Stratejik Planlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi/pazarlama-planlama-uzmani",
+            "title_tr": "Pazarlama Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_strategy_brand/stratejik-planlama-yoneticisi/talep-planlama-analisti",
+            "title_tr": "Talep Planlama Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "digital_demand_generation",
+        "name_tr": "Dijital Pazarlama ve Talep Yaratma",
+        "responsibilities": [
+          "Arama, sosyal ve programatik kanallarda performans reklamlarını planlamak ve yönetmek",
+          "SEO, GEO ve AI arama görünürlüğünü artıracak çalışmaları yürütmek",
+          "Lead generation, ABM ve yeniden pazarlama programlarıyla nitelikli talep yaratmak",
+          "Web sitesi ve landing page'lerin pazarlama içeriğini ve dönüşüm akışlarını yönetmek",
+          "Dijital ölçümleme, etiketleme ve kanal performans takibini sağlamak"
+        ],
+        "authorities": [
+          "Onaylı bütçe içinde kanal, kampanya ve teklif stratejisi dağılımını belirler",
+          "Hedef maliyetin üzerinde kalan reklam setlerini durdurabilir",
+          "Kampanya landing page'lerinin ve web sitesindeki ürün, çözüm ve kampanya sayfalarının yayınını onaylar",
+          "ABM hedef hesap listesini Satış ile mutabakatla belirler",
+          "Web sitesine ilişkin teknik SEO gereksinimlerini Bilgi Teknolojilerine önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Web sitesi teknik SEO gereksinimleri, etiketleme ve sayfa performansı"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Dijital Deneyim ve Arayüz Tasarımı",
+            "topic": "Landing page ve reklam görsellerinin tasarımı ve kullanıcı deneyimi"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Operasyonları, CRM ve MarTech",
+            "topic": "Lead akışı, kampanya kurulumu ve atıf verisinin CRM'e aktarımı"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "İçerik Pazarlaması",
+            "topic": "SEO ve GEO uyumlu içerik planı ve anahtar kelime öncelikleri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Kurumsal Satış",
+            "topic": "ABM hedef hesapları ve kurumsal fırsatlar için ortak talep programları"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Çerez izinleri ve kişisel verinin dijital pazarlamada uyumlu kullanımı"
+          }
+        ],
+        "kpis": [
+          "Kanal bazında ROAS",
+          "Tıklama başına maliyet",
+          "Organik trafik ve arama sıralaması",
+          "GEO ve AI arama alıntılanma oranı",
+          "Lead başına maliyet",
+          "Landing page dönüşüm oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "digital_demand_generation",
+            "level": "Birim Müdürü",
+            "title_tr": "Dijital Pazarlama ve Talep Yaratma Direktörü",
+            "title_en": "Director of Digital Marketing and Demand Generation"
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Performans Pazarlama Müdürü",
+            "title_en": "Performance Marketing Manager"
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Arama Motoru Reklamları Uzmanı",
+            "title_en": "Search Engine Advertising Specialist"
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ücretli Sosyal Medya Uzmanı",
+            "title_en": "Paid Social Media Specialist"
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/medya-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Medya Planlama Uzmanı",
+            "title_en": "Media Planning Specialist"
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/programatik-reklam-uzmani",
+            "level": "Uzman",
+            "title_tr": "Programatik Reklam Uzmanı",
+            "title_en": "Programmatic Advertising Specialist"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "SEO ve GEO Müdürü",
+            "title_en": "SEO and GEO Manager"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "SEO Yöneticisi",
+            "title_en": "SEO Lead"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+            "level": "Uzman",
+            "title_tr": "Teknik SEO Uzmanı",
+            "title_en": "Technical SEO Specialist"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani",
+            "level": "Uzman",
+            "title_tr": "İçerik SEO Uzmanı",
+            "title_en": "Content SEO Specialist"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/geo-ve-ai-gorunurluk-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "GEO ve AI Görünürlük Yöneticisi",
+            "title_en": "GEO and AI Visibility Lead"
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/ai-arama-gorunurlugu-uzmani",
+            "level": "Uzman",
+            "title_tr": "AI Arama Görünürlüğü Uzmanı",
+            "title_en": "AI Search Visibility Specialist"
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Talep Yaratma Müdürü",
+            "title_en": "Demand Generation Manager"
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/demand-generation-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Demand Generation Yöneticisi",
+            "title_en": "Demand Generation Lead"
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/lead-generation-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lead Generation Uzmanı",
+            "title_en": "Lead Generation Specialist"
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/abm-uzmani",
+            "level": "Uzman",
+            "title_tr": "ABM Uzmanı",
+            "title_en": "ABM Specialist"
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/yeniden-pazarlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yeniden Pazarlama Uzmanı",
+            "title_en": "Remarketing Specialist"
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Web Pazarlama Müdürü",
+            "title_en": "Web Marketing Manager"
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/web-pazarlama-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Web Pazarlama Yöneticisi",
+            "title_en": "Web Marketing Lead"
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/landing-page-uzmani",
+            "level": "Uzman",
+            "title_tr": "Landing Page Uzmanı",
+            "title_en": "Landing Page Specialist"
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dijital Ölçümleme Uzmanı",
+            "title_en": "Digital Measurement Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 11,
+            "max": 21
+          },
+          {
+            "model": "Standart",
+            "min": 21,
+            "max": 49
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 49,
+            "max": 69
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "digital_demand_generation",
+            "title_tr": "Dijital Pazarlama ve Talep Yaratma Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru",
+            "title_tr": "Performans Pazarlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+            "title_tr": "Arama Motoru Reklamları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani",
+            "title_tr": "Ücretli Sosyal Medya Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/medya-planlama-uzmani",
+            "title_tr": "Medya Planlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/performans-pazarlama-muduru/programatik-reklam-uzmani",
+            "title_tr": "Programatik Reklam Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru",
+            "title_tr": "SEO ve GEO Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+            "title_tr": "SEO Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+            "title_tr": "Teknik SEO Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani",
+            "title_tr": "İçerik SEO Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/geo-ve-ai-gorunurluk-yoneticisi",
+            "title_tr": "GEO ve AI Görünürlük Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "digital_demand_generation/seo-ve-geo-muduru/ai-arama-gorunurlugu-uzmani",
+            "title_tr": "AI Arama Görünürlüğü Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru",
+            "title_tr": "Talep Yaratma Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/demand-generation-yoneticisi",
+            "title_tr": "Demand Generation Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/lead-generation-uzmani",
+            "title_tr": "Lead Generation Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/abm-uzmani",
+            "title_tr": "ABM Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/talep-yaratma-muduru/yeniden-pazarlama-uzmani",
+            "title_tr": "Yeniden Pazarlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru",
+            "title_tr": "Web Pazarlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/web-pazarlama-yoneticisi",
+            "title_tr": "Web Pazarlama Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/landing-page-uzmani",
+            "title_tr": "Landing Page Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+            "title_tr": "Dijital Ölçümleme Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "content_marketing",
+        "name_tr": "İçerik Pazarlaması",
+        "responsibilities": [
+          "Editoryal takvimi ve içerik stratejisini hedef kitle ve huni aşamalarına göre oluşturmak",
+          "Blog, rehber, vaka çalışması ve teknik içerikleri üretmek",
+          "Video, podcast ve webinar içeriklerinin kurgusunu ve senaryosunu yönetmek",
+          "İçeriklerin doğruluk, kalite ve marka dili kontrolünü sağlamak",
+          "İçerikleri kanallara dağıtmak ve farklı formatlara dönüştürmek"
+        ],
+        "authorities": [
+          "Editoryal takvimi ve içerik önceliklerini belirler",
+          "Kalite ve doğrulama kontrolünden geçmeyen içeriğin yayınını durdurabilir",
+          "Pazarlama içeriklerinin marka dili ve editoryal uygunluğunu onaylar",
+          "Kurumsal açıklama niteliği taşıyan içerikleri Kurumsal İletişimin onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Video, Fotoğraf ve İçerik Prodüksiyonu",
+            "topic": "Video, fotoğraf ve multimedya içeriklerin prodüksiyonu"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+            "topic": "Kurumsal yayınlar ile pazarlama içeriklerinin mesaj ve dil uyumu"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Dijital Pazarlama ve Talep Yaratma",
+            "topic": "SEO ve GEO öncelikleri ile içeriklerin arama görünürlüğü"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Sosyal Medya Pazarlaması",
+            "topic": "Sosyal medya içerik takvimi ve içerik dağıtımı"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Yönetimi ve Ürün Alanları",
+            "topic": "Teknik içerik ve ürün bilgisinin doğrulanması"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Müşteri Adaptasyonu, Eğitim ve Topluluk",
+            "topic": "Vaka çalışmaları için referans müşteri erişimi"
+          }
+        ],
+        "kpis": [
+          "Editoryal takvime uyum oranı",
+          "İçerik erişimi ve etkileşim oranı",
+          "İçerik kaynaklı lead sayısı",
+          "Organik trafikte içerik payı",
+          "İçerik başına ortalama üretim süresi",
+          "Video ve webinar izlenme tamamlama oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "content_marketing",
+            "level": "Birim Müdürü",
+            "title_tr": "İçerik Pazarlaması Direktörü",
+            "title_en": "Director of Content Marketing"
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Editoryal Yönetim Müdürü",
+            "title_en": "Editorial Management Manager"
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/kidemli-editor",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Editör",
+            "title_en": "Senior Editor"
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/icerik-editoru",
+            "level": "Uzman",
+            "title_tr": "İçerik Editörü",
+            "title_en": "Content Editor"
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/icerik-kalite-ve-dogrulama-uzmani",
+            "level": "Uzman",
+            "title_tr": "İçerik Kalite ve Doğrulama Uzmanı",
+            "title_en": "Content Quality and Verification Specialist"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İçerik Üretimi Müdürü",
+            "title_en": "Content Production Manager"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/icerik-yazari",
+            "level": "Uzman",
+            "title_tr": "İçerik Yazarı",
+            "title_en": "Content Writer"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/copywriter",
+            "level": "Uzman",
+            "title_tr": "Copywriter",
+            "title_en": "Copywriter"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/teknik-icerik-yazari",
+            "level": "Uzman",
+            "title_tr": "Teknik İçerik Yazarı",
+            "title_en": "Technical Content Writer"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/vaka-calismasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Vaka Çalışması Uzmanı",
+            "title_en": "Case Study Specialist"
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/seo-ve-geo-icerik-uzmani",
+            "level": "Uzman",
+            "title_tr": "SEO ve GEO İçerik Uzmanı",
+            "title_en": "SEO and GEO Content Specialist"
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Multimedya İçerik Müdürü",
+            "title_en": "Multimedia Content Manager"
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/video-icerik-yapimcisi",
+            "level": "Uzman",
+            "title_tr": "Video İçerik Yapımcısı",
+            "title_en": "Video Content Producer"
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/podcast-yapimcisi",
+            "level": "Uzman",
+            "title_tr": "Podcast Yapımcısı",
+            "title_en": "Podcast Producer"
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/webinar-icerik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Webinar İçerik Uzmanı",
+            "title_en": "Webinar Content Specialist"
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İçerik Dağıtım Yöneticisi",
+            "title_en": "Content Distribution Lead"
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi/icerik-dagitim-uzmani",
+            "level": "Uzman",
+            "title_tr": "İçerik Dağıtım Uzmanı",
+            "title_en": "Content Distribution Specialist"
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi/icerik-donusturme-uzmani",
+            "level": "Uzman",
+            "title_tr": "İçerik Dönüştürme Uzmanı",
+            "title_en": "Content Repurposing Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 9,
+            "max": 18
+          },
+          {
+            "model": "Standart",
+            "min": 18,
+            "max": 42
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 42,
+            "max": 59
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "content_marketing",
+            "title_tr": "İçerik Pazarlaması Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru",
+            "title_tr": "Editoryal Yönetim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/kidemli-editor",
+            "title_tr": "Kıdemli Editör",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/icerik-editoru",
+            "title_tr": "İçerik Editörü",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/editoryal-yonetim-muduru/icerik-kalite-ve-dogrulama-uzmani",
+            "title_tr": "İçerik Kalite ve Doğrulama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru",
+            "title_tr": "İçerik Üretimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/icerik-yazari",
+            "title_tr": "İçerik Yazarı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/copywriter",
+            "title_tr": "Copywriter",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/teknik-icerik-yazari",
+            "title_tr": "Teknik İçerik Yazarı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/vaka-calismasi-uzmani",
+            "title_tr": "Vaka Çalışması Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-uretimi-muduru/seo-ve-geo-icerik-uzmani",
+            "title_tr": "SEO ve GEO İçerik Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru",
+            "title_tr": "Multimedya İçerik Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/video-icerik-yapimcisi",
+            "title_tr": "Video İçerik Yapımcısı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/podcast-yapimcisi",
+            "title_tr": "Podcast Yapımcısı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "content_marketing/multimedya-icerik-muduru/webinar-icerik-uzmani",
+            "title_tr": "Webinar İçerik Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi",
+            "title_tr": "İçerik Dağıtım Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi/icerik-dagitim-uzmani",
+            "title_tr": "İçerik Dağıtım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "content_marketing/icerik-dagitim-yoneticisi/icerik-donusturme-uzmani",
+            "title_tr": "İçerik Dönüştürme Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "social_media_marketing",
+        "name_tr": "Sosyal Medya Pazarlaması",
+        "responsibilities": [
+          "Sosyal medya kanal stratejisini ve paylaşım takvimini yönetmek",
+          "Marka topluluklarını büyütmek ve moderasyon kurallarını uygulamak",
+          "Influencer ve içerik üreticisi iş birliklerini planlamak ve yürütmek",
+          "Sosyal dinleme ile marka, rakip ve gündem sinyallerini izlemek",
+          "Sosyal medya performansını analiz etmek ve raporlamak"
+        ],
+        "authorities": [
+          "Ürün ve marka sosyal medya hesaplarında kanal bazında paylaşım takvimini ve içerik formatlarını belirler; kurumsal hesaplar Kurumsal İletişimindir",
+          "Moderasyon kurallarına aykırı içerik ve yorumları kaldırabilir",
+          "Onaylı bütçe içinde influencer ve içerik üreticisi iş birliklerini onaylar",
+          "Kriz potansiyeli taşıyan konulardaki sosyal medya yanıtını Kurumsal İletişimin onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "Kriz potansiyeli taşıyan sosyal medya sinyalleri ve yanıt yönetimi"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "Sosyal medyadan gelen şikâyet ve taleplerin yönlendirilmesi"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "İçerik Pazarlaması",
+            "topic": "Sosyal medya içeriklerinin üretimi ve içerik takvimi"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Grafik Tasarım ve Kampanya Kreatifi",
+            "topic": "Sosyal medya görselleri ve kampanya kreatiflerinin üretimi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Influencer sözleşmeleri ve reklam açıklama kurallarına uyum"
+          }
+        ],
+        "kpis": [
+          "Takipçi büyüme oranı",
+          "Etkileşim oranı",
+          "Sosyal medya kaynaklı trafik ve lead",
+          "Influencer iş birliği başına erişim maliyeti",
+          "Marka duyarlılık skoru",
+          "Topluluk yanıt süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "social_media_marketing",
+            "level": "Birim Müdürü",
+            "title_tr": "Sosyal Medya Pazarlaması Müdürü",
+            "title_en": "Social Media Marketing Manager"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kanal Yönetimi Yöneticisi",
+            "title_en": "Channel Management Lead"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani",
+            "level": "Uzman",
+            "title_tr": "LinkedIn Uzmanı",
+            "title_en": "LinkedIn Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/instagram-uzmani",
+            "level": "Uzman",
+            "title_tr": "Instagram Uzmanı",
+            "title_en": "Instagram Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/facebook-uzmani",
+            "level": "Uzman",
+            "title_tr": "Facebook Uzmanı",
+            "title_en": "Facebook Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/youtube-uzmani",
+            "level": "Uzman",
+            "title_tr": "YouTube Uzmanı",
+            "title_en": "YouTube Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+            "level": "Uzman",
+            "title_tr": "TikTok Uzmanı",
+            "title_en": "TikTok Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/x-uzmani",
+            "level": "Uzman",
+            "title_tr": "X Uzmanı",
+            "title_en": "X Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/threads-uzmani",
+            "level": "Uzman",
+            "title_tr": "Threads Uzmanı",
+            "title_en": "Threads Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/whatsapp-uzmani",
+            "level": "Uzman",
+            "title_tr": "WhatsApp Uzmanı",
+            "title_en": "WhatsApp Specialist"
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/telegram-uzmani",
+            "level": "Uzman",
+            "title_tr": "Telegram Uzmanı",
+            "title_en": "Telegram Specialist"
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Topluluk Büyütme Yöneticisi",
+            "title_en": "Community Growth Lead"
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi/topluluk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Topluluk Uzmanı",
+            "title_en": "Community Specialist"
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi/moderasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Moderasyon Uzmanı",
+            "title_en": "Moderation Specialist"
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Influencer ve İçerik Üreticileri Yöneticisi",
+            "title_en": "Influencer and Content Creators Lead"
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi/influencer-pazarlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Influencer Pazarlama Uzmanı",
+            "title_en": "Influencer Marketing Specialist"
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi/icerik-ureticisi-is-birlikleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "İçerik Üreticisi İş Birlikleri Uzmanı",
+            "title_en": "Creator Partnerships Specialist"
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sosyal Dinleme ve Analitik Yöneticisi",
+            "title_en": "Social Listening and Analytics Lead"
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi/sosyal-dinleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sosyal Dinleme Uzmanı",
+            "title_en": "Social Listening Specialist"
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi/sosyal-medya-analisti",
+            "level": "Analist",
+            "title_tr": "Sosyal Medya Analisti",
+            "title_en": "Social Media Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 20,
+            "max": 37
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 35,
+            "max": 49
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "social_media_marketing",
+            "title_tr": "Sosyal Medya Pazarlaması Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi",
+            "title_tr": "Kanal Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani",
+            "title_tr": "LinkedIn Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/instagram-uzmani",
+            "title_tr": "Instagram Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/facebook-uzmani",
+            "title_tr": "Facebook Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/youtube-uzmani",
+            "title_tr": "YouTube Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+            "title_tr": "TikTok Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/x-uzmani",
+            "title_tr": "X Uzmanı",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/threads-uzmani",
+            "title_tr": "Threads Uzmanı",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/whatsapp-uzmani",
+            "title_tr": "WhatsApp Uzmanı",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/kanal-yonetimi-yoneticisi/telegram-uzmani",
+            "title_tr": "Telegram Uzmanı",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi",
+            "title_tr": "Topluluk Büyütme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi/topluluk-uzmani",
+            "title_tr": "Topluluk Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/topluluk-buyutme-yoneticisi/moderasyon-uzmani",
+            "title_tr": "Moderasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi",
+            "title_tr": "Influencer ve İçerik Üreticileri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi/influencer-pazarlama-uzmani",
+            "title_tr": "Influencer Pazarlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/influencer-ve-icerik-ureticileri-yoneticisi/icerik-ureticisi-is-birlikleri-uzmani",
+            "title_tr": "İçerik Üreticisi İş Birlikleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi",
+            "title_tr": "Sosyal Dinleme ve Analitik Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi/sosyal-dinleme-uzmani",
+            "title_tr": "Sosyal Dinleme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "social_media_marketing/sosyal-dinleme-ve-analitik-yoneticisi/sosyal-medya-analisti",
+            "title_tr": "Sosyal Medya Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "product_solution_marketing",
+        "name_tr": "Ürün ve Çözüm Pazarlaması",
+        "responsibilities": [
+          "Ürün ve çözümlerin konumlandırmasını, değer önerisini ve kullanım senaryolarını oluşturmak",
+          "Pazara giriş stratejisini ve ürün lansmanlarını planlamak ve yürütmek",
+          "Satış ekiplerine ürün mesajlarıyla uyumlu satış içeriği ve demo materyali sağlamak",
+          "Rakip ürünleri izlemek ve fiyatlandırma ile paketleme için pazar analizi hazırlamak",
+          "Müşteri referans programlarını ve çapraz satış pazarlamasını yönetmek"
+        ],
+        "authorities": [
+          "Ürün mesajlarını ve değer önerisi anlatısını onaylar",
+          "Lansman pazarlama planını ve lansman hazırlık kriterlerini belirler",
+          "Fiyatlandırma ve paketleme kararlarına rekabet ve pazar verisiyle görüş verir",
+          "Pazarlama kaynaklı satış içeriklerinin ürün mesajlarına uygunluğunu onaylar"
+        ],
+        "collaborations": [
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+            "topic": "Ürün yol haritası, lansman takvimi ve değer önerisi kanıtları"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Etkinliği ve Yetkinlik Gelişimi",
+            "topic": "Satış içerikleri, demo senaryoları ve ürün eğitimleri"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Fiyatlandırma ve Ticari Yönetişim",
+            "topic": "Fiyatlandırma ve paketleme kararları için rekabet ve pazar verisi"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Müşteri Adaptasyonu, Eğitim ve Topluluk",
+            "topic": "Müşteri referans programları ve savunucu müşteri koordinasyonu"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazar Araştırmaları ve Pazarlama Analitiği",
+            "topic": "Rakip, segment ve müşteri içgörüsü analizleri"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Kampanya ve Etkinlik Pazarlaması",
+            "topic": "Lansman kampanyaları ve lansman etkinlikleri"
+          }
+        ],
+        "kpis": [
+          "Lansman hedeflerine ulaşma oranı",
+          "Satış içeriklerinin kullanım oranı",
+          "Rakip karşısında kazanma oranı",
+          "Yeni ürünlerin pipeline katkısı",
+          "Aktif referans müşteri sayısı",
+          "Çapraz satış kampanyası dönüşüm oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "product_solution_marketing",
+            "level": "Birim Müdürü",
+            "title_tr": "Ürün ve Çözüm Pazarlaması Direktörü",
+            "title_en": "Director of Product and Solution Marketing"
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ürün Pazarlaması Müdürü",
+            "title_en": "Product Marketing Manager"
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Ürün Pazarlama Yöneticisi",
+            "title_en": "Product Marketing Lead"
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/deger-onerisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Değer Önerisi Uzmanı",
+            "title_en": "Value Proposition Specialist"
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/persona-ve-kullanim-senaryosu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Persona ve Kullanım Senaryosu Uzmanı",
+            "title_en": "Persona and Use Case Specialist"
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "GTM ve Lansman Müdürü",
+            "title_en": "GTM and Launch Manager"
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/gtm-strateji-uzmani",
+            "level": "Uzman",
+            "title_tr": "GTM Strateji Uzmanı",
+            "title_en": "GTM Strategy Specialist"
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/lansman-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lansman Uzmanı",
+            "title_en": "Launch Specialist"
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/kanal-pazarlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kanal Pazarlama Uzmanı",
+            "title_en": "Channel Marketing Specialist"
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Satış Etkinleştirme Müdürü",
+            "title_en": "Sales Enablement Manager"
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/satis-etkinlestirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Satış Etkinleştirme Uzmanı",
+            "title_en": "Sales Enablement Specialist"
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/satis-icerigi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Satış İçeriği Uzmanı",
+            "title_en": "Sales Content Specialist"
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/demo-ve-egitim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Demo ve Eğitim Uzmanı",
+            "title_en": "Demo and Training Specialist"
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Rekabet İstihbaratı Yöneticisi",
+            "title_en": "Competitive Intelligence Lead"
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi/rekabet-analisti",
+            "level": "Analist",
+            "title_tr": "Rekabet Analisti",
+            "title_en": "Competitive Analyst"
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi/fiyatlandirma-ve-paketleme-analisti",
+            "level": "Analist",
+            "title_tr": "Fiyatlandırma ve Paketleme Analisti",
+            "title_en": "Pricing and Packaging Analyst"
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri Pazarlaması Yöneticisi",
+            "title_en": "Customer Marketing Lead"
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi/musteri-referans-programlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşteri Referans Programları Uzmanı",
+            "title_en": "Customer Reference Programs Specialist"
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi/capraz-satis-pazarlamasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çapraz Satış Pazarlaması Uzmanı",
+            "title_en": "Cross-Sell Marketing Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 10,
+            "max": 19
+          },
+          {
+            "model": "Standart",
+            "min": 19,
+            "max": 42
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 42,
+            "max": 59
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "product_solution_marketing",
+            "title_tr": "Ürün ve Çözüm Pazarlaması Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru",
+            "title_tr": "Ürün Pazarlaması Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi",
+            "title_tr": "Ürün Pazarlama Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/deger-onerisi-uzmani",
+            "title_tr": "Değer Önerisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/urun-pazarlamasi-muduru/persona-ve-kullanim-senaryosu-uzmani",
+            "title_tr": "Persona ve Kullanım Senaryosu Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru",
+            "title_tr": "GTM ve Lansman Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/gtm-strateji-uzmani",
+            "title_tr": "GTM Strateji Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/lansman-uzmani",
+            "title_tr": "Lansman Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/gtm-ve-lansman-muduru/kanal-pazarlama-uzmani",
+            "title_tr": "Kanal Pazarlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru",
+            "title_tr": "Satış Etkinleştirme Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/satis-etkinlestirme-uzmani",
+            "title_tr": "Satış Etkinleştirme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/satis-icerigi-uzmani",
+            "title_tr": "Satış İçeriği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/satis-etkinlestirme-muduru/demo-ve-egitim-uzmani",
+            "title_tr": "Demo ve Eğitim Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi",
+            "title_tr": "Rekabet İstihbaratı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi/rekabet-analisti",
+            "title_tr": "Rekabet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "product_solution_marketing/rekabet-istihbarati-yoneticisi/fiyatlandirma-ve-paketleme-analisti",
+            "title_tr": "Fiyatlandırma ve Paketleme Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi",
+            "title_tr": "Müşteri Pazarlaması Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi/musteri-referans-programlari-uzmani",
+            "title_tr": "Müşteri Referans Programları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "product_solution_marketing/musteri-pazarlamasi-yoneticisi/capraz-satis-pazarlamasi-uzmani",
+            "title_tr": "Çapraz Satış Pazarlaması Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "growth_conversion",
+        "name_tr": "Growth Marketing ve Dönüşüm",
+        "responsibilities": [
+          "Büyüme hipotezlerini ve kanal deneylerini planlamak ve yürütmek",
+          "Dönüşüm hunisini analiz ederek A/B testleri ve dönüşüm optimizasyonu yapmak",
+          "Lead nurturing, elde tutma ve yeniden aktivasyon akışlarını tasarlamak",
+          "Müşteri edinim stratejisini ve referans ile yönlendirme programlarını yönetmek",
+          "Deney sonuçlarını raporlamak ve başarılı uygulamaları ölçeklendirmek"
+        ],
+        "authorities": [
+          "Deney önceliklerini ve test takvimini belirler",
+          "İstatistiksel anlamlılık kriterini karşılamayan deney sonuçlarının yaygınlaştırılmasını durdurabilir",
+          "Nurturing ve yaşam döngüsü iletişim akışlarını onaylar",
+          "Referans ve yönlendirme programı ödül kurallarını direktörün onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Dijital Pazarlama ve Talep Yaratma",
+            "topic": "Landing page testleri ve kanal deneylerinin uygulanması"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Operasyonları, CRM ve MarTech",
+            "topic": "Nurturing akışlarının otomasyon kurulumu ve lead skorlama"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Analitiği, Ticarileştirme ve Değer Yönetimi",
+            "topic": "Ürün içi dönüşüm ve kullanıcı davranışı verisi"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Yenileme, Müşteri Tutundurma ve Değer Yönetimi",
+            "topic": "Elde tutma ve yeniden aktivasyon iletişimlerinin müşteri tutundurma programlarıyla uyumu"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İleri Analitik ve Veri Bilimi",
+            "topic": "Deney tasarımı, istatistiksel anlamlılık ve tahmin modelleri"
+          }
+        ],
+        "kpis": [
+          "Huni aşamaları arası dönüşüm oranı",
+          "Tamamlanan deney sayısı",
+          "Deneylerden elde edilen dönüşüm artışı",
+          "Nurturing akışı dönüşüm oranı",
+          "Yeniden aktive edilen müşteri oranı",
+          "Referans programı kaynaklı yeni müşteri sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "growth_conversion",
+            "level": "Birim Müdürü",
+            "title_tr": "Growth Marketing ve Dönüşüm Direktörü",
+            "title_en": "Director of Growth Marketing and Conversion"
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Growth Marketing Müdürü",
+            "title_en": "Growth Marketing Manager"
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru/buyume-uzmani",
+            "level": "Uzman",
+            "title_tr": "Büyüme Uzmanı",
+            "title_en": "Growth Specialist"
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru/kanal-deneyleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kanal Deneyleri Uzmanı",
+            "title_en": "Channel Experiments Specialist"
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "CRO ve Deney Yönetimi Müdürü",
+            "title_en": "CRO and Experimentation Manager"
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/kullanici-davranisi-analisti",
+            "level": "Analist",
+            "title_tr": "Kullanıcı Davranışı Analisti",
+            "title_en": "User Behavior Analyst"
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/a-b-test-uzmani",
+            "level": "Uzman",
+            "title_tr": "A/B Test Uzmanı",
+            "title_en": "A/B Testing Specialist"
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Funnel Optimizasyon Uzmanı",
+            "title_en": "Funnel Optimization Specialist"
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yaşam Döngüsü Pazarlama Müdürü",
+            "title_en": "Lifecycle Marketing Manager"
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/lead-nurturing-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lead Nurturing Uzmanı",
+            "title_en": "Lead Nurturing Specialist"
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/elde-tutma-pazarlamasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Elde Tutma Pazarlaması Uzmanı",
+            "title_en": "Retention Marketing Specialist"
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/yeniden-aktivasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yeniden Aktivasyon Uzmanı",
+            "title_en": "Reactivation Specialist"
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri Kazanımı Yöneticisi",
+            "title_en": "Customer Acquisition Lead"
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi/edinim-stratejisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Edinim Stratejisi Uzmanı",
+            "title_en": "Acquisition Strategy Specialist"
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi/referans-ve-yonlendirme-programi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Referans ve Yönlendirme Programı Uzmanı",
+            "title_en": "Referral Program Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 15
+          },
+          {
+            "model": "Standart",
+            "min": 15,
+            "max": 34
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 34,
+            "max": 48
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "growth_conversion",
+            "title_tr": "Growth Marketing ve Dönüşüm Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru",
+            "title_tr": "Growth Marketing Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru/buyume-uzmani",
+            "title_tr": "Büyüme Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/growth-marketing-muduru/kanal-deneyleri-uzmani",
+            "title_tr": "Kanal Deneyleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru",
+            "title_tr": "CRO ve Deney Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/kullanici-davranisi-analisti",
+            "title_tr": "Kullanıcı Davranışı Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/a-b-test-uzmani",
+            "title_tr": "A/B Test Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani",
+            "title_tr": "Funnel Optimizasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru",
+            "title_tr": "Yaşam Döngüsü Pazarlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/lead-nurturing-uzmani",
+            "title_tr": "Lead Nurturing Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/elde-tutma-pazarlamasi-uzmani",
+            "title_tr": "Elde Tutma Pazarlaması Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/yasam-dongusu-pazarlama-muduru/yeniden-aktivasyon-uzmani",
+            "title_tr": "Yeniden Aktivasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi",
+            "title_tr": "Müşteri Kazanımı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi/edinim-stratejisi-uzmani",
+            "title_tr": "Edinim Stratejisi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "growth_conversion/musteri-kazanimi-yoneticisi/referans-ve-yonlendirme-programi-uzmani",
+            "title_tr": "Referans ve Yönlendirme Programı Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "marketing_operations_crm_martech",
+        "name_tr": "Pazarlama Operasyonları, CRM ve MarTech",
+        "responsibilities": [
+          "Kampanya kurulumunu, kalite kontrolünü ve yayın operasyonlarını yönetmek",
+          "CRM'de lead yönetimini, lead skorlamayı ve Satışa yönlendirme süreçlerini yürütmek",
+          "E-posta pazarlaması ve pazarlama otomasyonu akışlarını işletmek",
+          "MarTech yığınını, entegrasyonları ve pazarlama sistemlerini yönetmek",
+          "Pazarlama verisini, atıf analitiğini ve dashboard'ları güncel tutmak",
+          "Pazarlama bütçesini ve tedarikçi süreçlerini takip etmek"
+        ],
+        "authorities": [
+          "Lead yönlendirme kurallarını ve pazarlama CRM veri standartlarını belirler",
+          "Kalite kontrolünden geçmeyen kampanyaların yayınını durdurabilir",
+          "MarTech araç seçimi ve entegrasyon ihtiyaçlarını Bilgi Teknolojilerinin onayına sunar",
+          "Onaylı bütçe içinde pazarlama harcama taleplerini onaylar",
+          "Pazarlama tedarikçisi seçimini Satın Alma sürecine uygun biçimde önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Stratejisi ve Gelir Operasyonları",
+            "topic": "Lead devri, CRM süreçleri ve MQL kabul veya ret geri bildirimi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "CRM ve pazarlama sistemlerinin entegrasyonu ve yetkilendirme"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Ticari ileti izinleri, açık rıza ve pazarlama verisinin KVKK uyumu"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Ajans ve MarTech tedarikçilerinin satın alma ve sözleşme süreçleri"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+            "topic": "Pazarlama bütçesi gerçekleşmesi ve harcama raporlaması"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Yönetişimi, Kalitesi ve Ana Veri",
+            "topic": "Müşteri ve lead verisinin kalite ve ana veri standartları"
+          }
+        ],
+        "kpis": [
+          "CRM kayıt doğruluk oranı",
+          "Lead yönlendirme süresi",
+          "Kampanya kurulum hata oranı",
+          "E-posta teslim ve açılma oranı",
+          "Pazarlama bütçesi gerçekleşme oranı",
+          "Dashboard güncellik oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "marketing_operations_crm_martech",
+            "level": "Birim Müdürü",
+            "title_tr": "Pazarlama Operasyonları, CRM ve MarTech Direktörü",
+            "title_en": "Director of Marketing Operations, CRM and MarTech"
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kampanya Operasyonları Müdürü",
+            "title_en": "Campaign Operations Manager"
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru/kampanya-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kampanya Koordinatörü",
+            "title_en": "Campaign Coordinator"
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru/kampanya-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kampanya Kalite Uzmanı",
+            "title_en": "Campaign Quality Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "CRM ve Lead Yönetimi Müdürü",
+            "title_en": "CRM and Lead Management Manager"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/crm-uzmani",
+            "level": "Uzman",
+            "title_tr": "CRM Uzmanı",
+            "title_en": "CRM Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/lead-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lead Yönetimi Uzmanı",
+            "title_en": "Lead Management Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/lead-skorlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Lead Skorlama Uzmanı",
+            "title_en": "Lead Scoring Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/e-posta-pazarlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "E-posta Pazarlama Uzmanı",
+            "title_en": "Email Marketing Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/pazarlama-otomasyonu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Pazarlama Otomasyonu Uzmanı",
+            "title_en": "Marketing Automation Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "MarTech ve Entegrasyon Müdürü",
+            "title_en": "MarTech and Integration Manager"
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-teknolojileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Pazarlama Teknolojileri Uzmanı",
+            "title_en": "Marketing Technology Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/entegrasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Entegrasyon Uzmanı",
+            "title_en": "Integration Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-sistemleri-yoneticisi",
+            "level": "Yönetici",
+            "title_tr": "Pazarlama Sistemleri Yöneticisi",
+            "title_en": "Marketing Systems Lead"
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Pazarlama Verisi ve Raporlama Müdürü",
+            "title_en": "Marketing Data and Reporting Manager"
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/pazarlama-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Pazarlama Veri Analisti",
+            "title_en": "Marketing Data Analyst"
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/bi-ve-dashboard-uzmani",
+            "level": "Uzman",
+            "title_tr": "BI ve Dashboard Uzmanı",
+            "title_en": "BI and Dashboard Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/atif-analitigi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Atıf Analitiği Uzmanı",
+            "title_en": "Attribution Analytics Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/veri-kalitesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri Kalitesi Uzmanı",
+            "title_en": "Data Quality Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bütçe ve Tedarikçi Yönetimi Müdürü",
+            "title_en": "Budget and Vendor Management Manager"
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/butce-ve-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bütçe ve Operasyon Uzmanı",
+            "title_en": "Budget and Operations Specialist"
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/tedarikci-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Yönetimi Uzmanı",
+            "title_en": "Vendor Management Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 11,
+            "max": 22
+          },
+          {
+            "model": "Standart",
+            "min": 22,
+            "max": 51
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 51,
+            "max": 72
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "marketing_operations_crm_martech",
+            "title_tr": "Pazarlama Operasyonları, CRM ve MarTech Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru",
+            "title_tr": "Kampanya Operasyonları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru/kampanya-koordinatoru",
+            "title_tr": "Kampanya Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "marketing_operations_crm_martech/kampanya-operasyonlari-muduru/kampanya-kalite-uzmani",
+            "title_tr": "Kampanya Kalite Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru",
+            "title_tr": "CRM ve Lead Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/crm-uzmani",
+            "title_tr": "CRM Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/lead-yonetimi-uzmani",
+            "title_tr": "Lead Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/lead-skorlama-uzmani",
+            "title_tr": "Lead Skorlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/e-posta-pazarlama-uzmani",
+            "title_tr": "E-posta Pazarlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/crm-ve-lead-yonetimi-muduru/pazarlama-otomasyonu-uzmani",
+            "title_tr": "Pazarlama Otomasyonu Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru",
+            "title_tr": "MarTech ve Entegrasyon Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-teknolojileri-uzmani",
+            "title_tr": "Pazarlama Teknolojileri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/entegrasyon-uzmani",
+            "title_tr": "Entegrasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-sistemleri-yoneticisi",
+            "title_tr": "Pazarlama Sistemleri Yöneticisi",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru",
+            "title_tr": "Pazarlama Verisi ve Raporlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/pazarlama-veri-analisti",
+            "title_tr": "Pazarlama Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/bi-ve-dashboard-uzmani",
+            "title_tr": "BI ve Dashboard Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/atif-analitigi-uzmani",
+            "title_tr": "Atıf Analitiği Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/veri-kalitesi-uzmani",
+            "title_tr": "Veri Kalitesi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru",
+            "title_tr": "Bütçe ve Tedarikçi Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/butce-ve-operasyon-uzmani",
+            "title_tr": "Bütçe ve Operasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/tedarikci-yonetimi-uzmani",
+            "title_tr": "Tedarikçi Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "market_research_analytics",
+        "name_tr": "Pazar Araştırmaları ve Pazarlama Analitiği",
+        "responsibilities": [
+          "Nitel ve nicel pazar araştırmalarını planlamak ve yürütmek",
+          "Pazar büyüklüğü, segment ve talep tahminlerini hazırlamak",
+          "Müşteri içgörülerini, segmentasyonu ve müşterinin sesi bulgularını derlemek",
+          "Rakip, sektör ve fiyat gelişmelerini izlemek ve raporlamak",
+          "Pazarlama yatırım getirisini, kanal katkısını ve gelir etkisini analiz etmek"
+        ],
+        "authorities": [
+          "Araştırma metodolojisini ve örneklem tasarımını belirler",
+          "Pazarlama performans ölçüm yöntemini ve ROI hesaplama standardını belirler",
+          "Araştırma bulgularının paylaşım kapsamını onaylar",
+          "Talep tahminlerini ve pazar büyüklüğü varsayımlarını direktörün onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "Pazarlama raporlaması, veri modeli ve karar destek panoları"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "Müşterinin sesi verisi, şikâyet eğilimleri ve memnuniyet içgörüleri"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı",
+            "topic": "Müşteri araştırmalarının planlanması ve bulguların paylaşımı"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Stratejisi ve Marka Yönetimi",
+            "topic": "Segment, persona ve marka algısı bulgularının stratejiye aktarımı"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Performansı ve Gelir Planlama",
+            "topic": "Pazarlama kaynaklı gelir, pipeline ve talep tahmini uyumu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Pazar ve rekabet analizlerinin kurumsal stratejiye girdi olarak sunulması"
+          }
+        ],
+        "kpis": [
+          "Araştırma projelerinin zamanında tamamlanma oranı",
+          "Araştırma bulgularının aksiyona dönüşme oranı",
+          "Talep tahmini doğruluğu",
+          "Pazarlama ROI ölçüm kapsamı",
+          "Pazar payı değişimi",
+          "Rekabet raporu yayın sıklığı"
+        ],
+        "title_standard": [
+          {
+            "position": "market_research_analytics",
+            "level": "Birim Müdürü",
+            "title_tr": "Pazar Araştırmaları ve Pazarlama Analitiği Direktörü",
+            "title_en": "Director of Market Research and Marketing Analytics"
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Pazar Araştırmaları Müdürü",
+            "title_en": "Market Research Manager"
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/nitel-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Nitel Araştırma Uzmanı",
+            "title_en": "Qualitative Research Specialist"
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/nicel-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Nicel Araştırma Uzmanı",
+            "title_en": "Quantitative Research Specialist"
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/pazar-buyuklugu-analisti",
+            "level": "Analist",
+            "title_tr": "Pazar Büyüklüğü Analisti",
+            "title_en": "Market Sizing Analyst"
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Müşteri İçgörüleri Müdürü",
+            "title_en": "Customer Insights Manager"
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/musteri-icgoruleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşteri İçgörüleri Uzmanı",
+            "title_en": "Customer Insights Specialist"
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/segmentasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Segmentasyon Uzmanı",
+            "title_en": "Segmentation Specialist"
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/musterinin-sesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Müşterinin Sesi Uzmanı",
+            "title_en": "Voice of Customer Specialist"
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Rekabet ve Sektör İstihbaratı Müdürü",
+            "title_en": "Competitive and Industry Intelligence Manager"
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti",
+            "level": "Analist",
+            "title_tr": "Rekabet Analisti",
+            "title_en": "Competitive Analyst"
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/sektor-ve-trend-analisti",
+            "level": "Analist",
+            "title_tr": "Sektör ve Trend Analisti",
+            "title_en": "Industry and Trend Analyst"
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/fiyat-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Fiyat Araştırma Uzmanı",
+            "title_en": "Pricing Research Specialist"
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Pazarlama Analitiği Müdürü",
+            "title_en": "Marketing Analytics Manager"
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/pazarlama-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Pazarlama Veri Analisti",
+            "title_en": "Marketing Data Analyst"
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/roi-ve-gelir-analisti",
+            "level": "Analist",
+            "title_tr": "ROI ve Gelir Analisti",
+            "title_en": "ROI and Revenue Analyst"
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/talep-tahminleme-analisti",
+            "level": "Analist",
+            "title_tr": "Talep Tahminleme Analisti",
+            "title_en": "Demand Forecasting Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 9,
+            "max": 17
+          },
+          {
+            "model": "Standart",
+            "min": 17,
+            "max": 35
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 35,
+            "max": 49
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "market_research_analytics",
+            "title_tr": "Pazar Araştırmaları ve Pazarlama Analitiği Direktörü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru",
+            "title_tr": "Pazar Araştırmaları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/nitel-arastirma-uzmani",
+            "title_tr": "Nitel Araştırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/nicel-arastirma-uzmani",
+            "title_tr": "Nicel Araştırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/pazar-arastirmalari-muduru/pazar-buyuklugu-analisti",
+            "title_tr": "Pazar Büyüklüğü Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru",
+            "title_tr": "Müşteri İçgörüleri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/musteri-icgoruleri-uzmani",
+            "title_tr": "Müşteri İçgörüleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/segmentasyon-uzmani",
+            "title_tr": "Segmentasyon Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/musteri-icgoruleri-muduru/musterinin-sesi-uzmani",
+            "title_tr": "Müşterinin Sesi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru",
+            "title_tr": "Rekabet ve Sektör İstihbaratı Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti",
+            "title_tr": "Rekabet Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/sektor-ve-trend-analisti",
+            "title_tr": "Sektör ve Trend Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/fiyat-arastirma-uzmani",
+            "title_tr": "Fiyat Araştırma Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru",
+            "title_tr": "Pazarlama Analitiği Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/pazarlama-veri-analisti",
+            "title_tr": "Pazarlama Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/roi-ve-gelir-analisti",
+            "title_tr": "ROI ve Gelir Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "market_research_analytics/pazarlama-analitigi-muduru/talep-tahminleme-analisti",
+            "title_tr": "Talep Tahminleme Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "campaign_event_marketing",
+        "name_tr": "Kampanya ve Etkinlik Pazarlaması",
+        "responsibilities": [
+          "Entegre kampanyaları kanallar arası planlamak ve yürütmek",
+          "Kampanya takvimini ve kampanyalar arası önceliklendirmeyi yönetmek",
+          "Webinar ve saha etkinliklerini lead hedefleriyle planlamak ve yürütmek",
+          "Etkinlik lead'lerinin CRM'e aktarımını ve takibini sağlamak",
+          "İş ortaklarıyla ortak kampanya ve kanal pazarlama programlarını yürütmek",
+          "Pazarlama projelerinin iş planını, kaynaklarını ve teslim tarihlerini koordine etmek"
+        ],
+        "authorities": [
+          "Kampanya takvimini ve kampanya kanal karmasını belirler",
+          "Onaylı bütçe içinde etkinlik katılımı ve etkinlik harcamalarını onaylar",
+          "Hazırlık kriterlerini karşılamayan kampanyanın yayın tarihini erteleyebilir",
+          "İş ortağı ortak kampanya planlarını Satışın kanal yönetimiyle birlikte onaylar",
+          "Kurumsal etkinlik ve sponsorluk niteliği taşıyan organizasyonları Kurumsal İletişime yönlendirir"
+        ],
+        "collaborations": [
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Kanal, İş Ortaklıkları ve Ekosistem Satışları",
+            "topic": "İş ortağı ortak kampanyaları ve kanal pazarlama programları"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki",
+            "topic": "Pazarlama etkinlikleri ile kurumsal etkinlik ve sponsorlukların ayrımı"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Seyahat, Konaklama ve Organizasyon Hizmetleri",
+            "topic": "Etkinlik lojistiği, mekân ve organizasyon hizmetleri"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı",
+            "topic": "Etkinlik ve kampanya tasarımları"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Operasyonları, CRM ve MarTech",
+            "topic": "Kampanya kurulumu ve etkinlik lead'lerinin CRM'e aktarımı"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Ürün ve Çözüm Pazarlaması",
+            "topic": "Lansman kampanyaları ve ürün mesajlarının kampanyalara aktarımı"
+          }
+        ],
+        "kpis": [
+          "Kampanya dönüşüm oranı",
+          "Kampanya kaynaklı pipeline",
+          "Etkinlik başına lead sayısı ve maliyeti",
+          "Etkinlik lead'lerinin CRM'e aktarım süresi",
+          "Kampanya takvimine uyum oranı",
+          "Ortak kampanya kaynaklı fırsat sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "campaign_event_marketing",
+            "level": "Birim Müdürü",
+            "title_tr": "Kampanya ve Etkinlik Pazarlaması Müdürü",
+            "title_en": "Campaign and Event Marketing Manager"
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Entegre Kampanya Yöneticisi",
+            "title_en": "Integrated Campaign Lead"
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi/kampanya-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kampanya Uzmanı",
+            "title_en": "Campaign Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi/kampanya-takvimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kampanya Takvimi Uzmanı",
+            "title_en": "Campaign Calendar Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Etkinlik Pazarlaması Yöneticisi",
+            "title_en": "Event Marketing Lead"
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/webinar-pazarlamasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Webinar Pazarlaması Uzmanı",
+            "title_en": "Webinar Marketing Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/saha-etkinlikleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Saha Etkinlikleri Uzmanı",
+            "title_en": "Field Events Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/etkinlik-lead-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etkinlik Lead Yönetimi Uzmanı",
+            "title_en": "Event Lead Management Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Ortaklığı Pazarlaması Yöneticisi",
+            "title_en": "Partner Marketing Lead"
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi/kanal-pazarlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kanal Pazarlama Uzmanı",
+            "title_en": "Channel Marketing Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi/ortak-kampanya-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ortak Kampanya Uzmanı",
+            "title_en": "Co-Marketing Campaign Specialist"
+          },
+          {
+            "position": "campaign_event_marketing/pazarlama-proje-koordinatoru",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Pazarlama Proje Koordinatörü",
+            "title_en": "Marketing Project Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 12
+          },
+          {
+            "model": "Standart",
+            "min": 12,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 26,
+            "max": 37
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "campaign_event_marketing",
+            "title_tr": "Kampanya ve Etkinlik Pazarlaması Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi",
+            "title_tr": "Entegre Kampanya Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi/kampanya-uzmani",
+            "title_tr": "Kampanya Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/entegre-kampanya-yoneticisi/kampanya-takvimi-uzmani",
+            "title_tr": "Kampanya Takvimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi",
+            "title_tr": "Etkinlik Pazarlaması Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/webinar-pazarlamasi-uzmani",
+            "title_tr": "Webinar Pazarlaması Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/saha-etkinlikleri-uzmani",
+            "title_tr": "Saha Etkinlikleri Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/etkinlik-pazarlamasi-yoneticisi/etkinlik-lead-yonetimi-uzmani",
+            "title_tr": "Etkinlik Lead Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi",
+            "title_tr": "İş Ortaklığı Pazarlaması Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi/kanal-pazarlama-uzmani",
+            "title_tr": "Kanal Pazarlama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/is-ortakligi-pazarlamasi-yoneticisi/ortak-kampanya-uzmani",
+            "title_tr": "Ortak Kampanya Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "campaign_event_marketing/pazarlama-proje-koordinatoru",
+            "title_tr": "Pazarlama Proje Koordinatörü",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2499 @@
+# Ajan listesi — şirket organizasyonuna göre
+
+_Uygulamanın verisinden üretildi (`docs/organizasyon/ajan_listesi.py`); projedeki kişisel seçimler (projeye eklenen ajanlar, düzenlemeler) dahil değildir._
+
+## Özet
+
+- 23 departman · 181 birim · 2.342 pozisyon
+- Her pozisyonun bir ajanı var: 2.342 pozisyon ajanı (varsayılan olarak projede değil)
+- Ürün içi görevli: 13 pozisyon ajanı (sitede ya da panelde çalışan yapay zekâ özelliğinden sorumlu)
+- Dosya adı: ajan projeye eklendiğinde `.claude/agents/` altındaki adı (bütün ajanlar eklendiğinde aynı adlılar `-2` alır).
+
+## Ana asistan (orkestra şefi)
+
+- Claude Code'un ana oturumu: isteği okur, departmanı ve sahip birimi belirler, işi o pozisyonun ajanına devreder, sonuçları birleştirir.
+- Ajanlar birbirini çağırmaz; departman içindeki sıra raporlama ve sorumluluk düzenidir.
+
+## Ürün içi görevli pozisyon ajanları
+
+| Pozisyon ajanı | Ürün içi görev | Departman › pozisyon | Dosya |
+|---|---|---|---|
+| Müşteri Adayı Kalifikasyon Uzmanı | Lead Nitelendirme Ajanı | 08 - Satış ve Gelir Yönetimi › KOBİ ve Orta Ölçekli Müşteri Satışları › Müşteri Adayı Kalifikasyon Uzmanı | `08-musteri-adayi-kalifikasyon-uzmani.md` |
+| Pipeline Yönetimi Uzmanı | Satış Takip Hatırlatıcı | 08 - Satış ve Gelir Yönetimi › Satış Stratejisi ve Gelir Operasyonları › Pipeline Yönetimi Uzmanı | `08-pipeline-yonetimi-uzmani.md` |
+| Satış Geliştirme Temsilcisi | Şirket Araştırma (Mining) Ajanı | 08 - Satış ve Gelir Yönetimi › Kurumsal Satış › Satış Geliştirme Temsilcisi | `08-satis-gelistirme-temsilcisi.md` |
+| Teklif Uzmanı | Teklif Taslağı Ajanı | 08 - Satış ve Gelir Yönetimi › Teklif, İhale ve Ticari Sözleşme Yönetimi › Teklif Uzmanı | `08-teklif-uzmani.md` |
+| Atıf Analitiği Uzmanı | Kampanya Performans Analisti | 09 - Pazarlama ve Büyüme › Pazarlama Operasyonları, CRM ve MarTech › Atıf Analitiği Uzmanı | `09-atif-analitigi-uzmani.md` |
+| E-posta Pazarlama Uzmanı | Bülten (E-posta) Ajanı | 09 - Pazarlama ve Büyüme › Pazarlama Operasyonları, CRM ve MarTech › E-posta Pazarlama Uzmanı | `09-e-posta-pazarlama-uzmani.md` |
+| Kanal Yönetimi Yöneticisi | Sosyal Medya İçerik Ajanı | 09 - Pazarlama ve Büyüme › Sosyal Medya Pazarlaması › Kanal Yönetimi Yöneticisi | `09-kanal-yonetimi-yoneticisi.md` |
+| İçerik SEO Uzmanı | SEO İçerik Önerici | 09 - Pazarlama ve Büyüme › Dijital Pazarlama ve Talep Yaratma › İçerik SEO Uzmanı | `09-icerik-seo-uzmani.md` |
+| Medya Takip Uzmanı | Haber Toplama & Özetleme Ajanı | 10 - Kurumsal İletişim ve İtibar Yönetimi › Medya İlişkileri ve Basın Yönetimi › Medya Takip Uzmanı | `10-medya-takip-uzmani.md` |
+| Dijital Destek Uzmanı | Site Sohbet Asistanı | 11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler › Müşteri Destek ve Servis Masası › Dijital Destek Uzmanı | `11-dijital-destek-uzmani.md` |
+| Servis Masası Temsilcisi | Talep Yönlendirme Ajanı | 11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler › Müşteri Destek ve Servis Masası › Servis Masası Temsilcisi | `11-servis-masasi-temsilcisi.md` |
+| KPI ve Raporlama Analisti | Panel Rapor Özetleyici | 17 - Veri, Analitik ve Yapay Zekâ › İş Zekâsı, Raporlama ve Karar Destek › KPI ve Raporlama Analisti | `17-kpi-ve-raporlama-analisti.md` |
+| Dijital Arşiv Uzmanı | Görsel Alt Metin Ajanı | 19 - Tasarım ve Yaratıcı Hizmetler › Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi › Dijital Arşiv Uzmanı | `19-dijital-arsiv-uzmani.md` |
+
+## Departmanlar
+
+Her satır: pozisyon — o pozisyonun ajanı. Girinti raporlama hattını gösterir (birim lideri → ekip yöneticisi → rol).
+
+## 01 - Üst Yönetim ve Kurumsal Yönetişim
+5 birim · 43 pozisyon · katalog ajanlı 0 · pozisyon ajanı 43
+
+- Bağlı olduğu: Genel Kurul
+- **Kurul:** Yönetim Kurulu — pozisyon ajanı `01-yonetim-kurulu.md`
+  - Yönetim Kurulu Başkanı — pozisyon ajanı `01-yonetim-kurulu-baskani.md`
+  - Yönetim Kurulu Başkan Vekili — pozisyon ajanı `01-yonetim-kurulu-baskan-vekili.md`
+  - Yönetim Kurulu Üyesi — pozisyon ajanı `01-yonetim-kurulu-uyesi.md`
+  - Bağımsız Yönetim Kurulu Üyesi — pozisyon ajanı `01-bagimsiz-yonetim-kurulu-uyesi.md`
+  - Komite: Denetim Komitesi (ajanı yok — komite düğümü)
+  - Komite: Risk ve Uyum Komitesi (ajanı yok — komite düğümü)
+  - Komite: Aday Gösterme ve Ücret Komitesi (ajanı yok — komite düğümü)
+  - Komite: Strateji ve Yatırım Komitesi (ajanı yok — komite düğümü)
+  - **Departman lideri:** CEO / Genel Müdür — pozisyon ajanı `01-ceo-genel-mudur.md`
+    - CFO / Mali İşler ve Finans Başkanı _(C-Level)_ — pozisyon ajanı `01-cfo-mali-isler-ve-finans-baskani.md`
+    - Operasyonlardan Sorumlu Genel Müdür Yardımcısı / Operasyon Başkanı _(C-Level)_ — pozisyon ajanı `01-operasyonlardan-sorumlu-genel-mudur-yardimcisi-operasyon-baskani.md`
+    - Ticari İşler Başkanı / CCO _(C-Level)_ — pozisyon ajanı `01-ticari-isler-baskani-cco.md`
+    - Teknolojiden Sorumlu Genel Müdür Yardımcısı / Teknoloji Başkanı _(C-Level)_ — pozisyon ajanı `01-teknolojiden-sorumlu-genel-mudur-yardimcisi-teknoloji-baskani.md`
+    - Üründen Sorumlu Genel Müdür Yardımcısı _(C-Level)_ — pozisyon ajanı `01-urunden-sorumlu-genel-mudur-yardimcisi.md`
+    - **Ara yönetici:** CEO Ofisi Başkanı — pozisyon ajanı `01-ceo-ofisi-baskani.md`
+      - **Birim — Strateji ve Kurumsal Performans Direktörlüğü:** Strateji ve Kurumsal Performans Direktörü — pozisyon ajanı `01-strateji-ve-kurumsal-performans-direktoru.md`
+        - Stratejik Planlama Yöneticisi — pozisyon ajanı `01-stratejik-planlama-yoneticisi.md`
+        - Kurumsal Performans Yöneticisi — pozisyon ajanı `01-kurumsal-performans-yoneticisi.md`
+        - Kıdemli Strateji Uzmanı — pozisyon ajanı `01-kidemli-strateji-uzmani.md` · skill: competitive-analysis, deal-sourcing, sector-overview, value-creation-plan
+        - Kurumsal Performans Uzmanı — pozisyon ajanı `01-kurumsal-performans-uzmani.md` · skill: portfolio-monitoring
+        - Strateji Analisti — pozisyon ajanı `01-strateji-analisti.md` · skill: sector-overview
+      - **Birim — Kurumsal Yönetişim Müdürlüğü:** Kurumsal Yönetişim Müdürü — pozisyon ajanı `01-kurumsal-yonetisim-muduru.md`
+        - Kurumsal Yönetişim Yöneticisi — pozisyon ajanı `01-kurumsal-yonetisim-yoneticisi.md`
+        - Yönetim Kurulu Uyum Uzmanı — pozisyon ajanı `01-yonetim-kurulu-uyum-uzmani.md`
+        - Yetki Matrisi ve Politika Uzmanı — pozisyon ajanı `01-yetki-matrisi-ve-politika-uzmani.md`
+        - Kurumsal Politika Uzmanı — pozisyon ajanı `01-kurumsal-politika-uzmani.md`
+        - Yönetişim Analisti — pozisyon ajanı `01-yonetisim-analisti.md`
+      - **Birim — Stratejik Projeler ve Dönüşüm Ofisi:** Stratejik Projeler ve Dönüşüm Direktörü — pozisyon ajanı `01-stratejik-projeler-ve-donusum-direktoru.md`
+        - Dönüşüm Programları Yöneticisi — pozisyon ajanı `01-donusum-programlari-yoneticisi.md`
+        - Stratejik Proje Portföy Yöneticisi — pozisyon ajanı `01-stratejik-proje-portfoy-yoneticisi.md`
+        - Kıdemli Program Yöneticisi — pozisyon ajanı `01-kidemli-program-yoneticisi.md` · skill: integration-management, project-artifact
+        - Stratejik Proje Yöneticisi — pozisyon ajanı `01-stratejik-proje-yoneticisi.md` · skill: project-artifact
+        - Değişim Yönetimi Uzmanı — pozisyon ajanı `01-degisim-yonetimi-uzmani.md`
+        - PMO Analisti — pozisyon ajanı `01-pmo-analisti.md` · skill: project-artifact
+      - **Birim — İştirakler ve Şirket Performansı Müdürlüğü:** İştirakler ve Şirket Performansı Müdürü — pozisyon ajanı `01-istirakler-ve-sirket-performansi-muduru.md`
+        - İştirak Performans Yöneticisi — pozisyon ajanı `01-istirak-performans-yoneticisi.md` · skill: portfolio-monitoring, value-creation-plan
+        - Kurumsal Performans Raporlama Uzmanı — pozisyon ajanı `01-kurumsal-performans-raporlama-uzmani.md`
+        - İştirak Yönetimi Uzmanı — pozisyon ajanı `01-istirak-yonetimi-uzmani.md` · skill: buyer-list, entity-compliance, integration-management
+        - İş ve Sektör Analisti — pozisyon ajanı `01-is-ve-sektor-analisti.md` · skill: sector-overview
+        - Performans Analisti — pozisyon ajanı `01-performans-analisti.md` · skill: portfolio-monitoring
+      - **Birim — Karar Yönetimi ve Yönetim Raporlama Müdürlüğü:** Karar Yönetimi ve Yönetim Raporlama Müdürü — pozisyon ajanı `01-karar-yonetimi-ve-yonetim-raporlama-muduru.md`
+        - Yönetim Raporlama Yöneticisi — pozisyon ajanı `01-yonetim-raporlama-yoneticisi.md`
+        - Yönetim Raporlama Uzmanı — pozisyon ajanı `01-yonetim-raporlama-uzmani.md` · skill: business-pulse, status-report
+        - Karar ve Aksiyon Takip Uzmanı — pozisyon ajanı `01-karar-ve-aksiyon-takip-uzmani.md`
+        - Yönetim Zekâsı Uzmanı — pozisyon ajanı `01-yonetim-zekasi-uzmani.md`
+        - Raporlama Analisti — pozisyon ajanı `01-raporlama-analisti.md`
+
+## 02 - Muhasebe ve Mali İşler
+8 birim · 85 pozisyon · katalog ajanlı 0 · pozisyon ajanı 85
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Muhasebe ve Mali İşler Direktörü (Accounting Director) — pozisyon ajanı `02-muhasebe-ve-mali-isler-direktoru-accounting-director.md`
+  - **Birim — Genel Muhasebe ve Dönem Kapanışı:** Genel Muhasebe ve Kapanış Müdürü — pozisyon ajanı `02-genel-muhasebe-ve-kapanis-muduru.md`
+    - Genel Muhasebe Yöneticisi — pozisyon ajanı `02-genel-muhasebe-yoneticisi.md`
+      - Kıdemli Genel Muhasebe Uzmanı — pozisyon ajanı `02-kidemli-genel-muhasebe-uzmani.md` · skill: accrual-schedule, gl-recon, journal-entry, variance-commentary
+      - Genel Muhasebe Uzmanı — pozisyon ajanı `02-genel-muhasebe-uzmani.md` · skill: close-month, journal-entry, journal-entry-prep, xlsx-author
+      - Muhasebe Uzman Yardımcısı — pozisyon ajanı `02-muhasebe-uzman-yardimcisi.md`
+    - Dönem Kapanışı ve Mutabakat Yöneticisi — pozisyon ajanı `02-donem-kapanisi-ve-mutabakat-yoneticisi.md` · skill: close-management
+      - Kapanış ve Tahakkuk Uzmanı — pozisyon ajanı `02-kapanis-ve-tahakkuk-uzmani.md` · skill: accrual-schedule, audit-xls, close-management, close-month, journal-entry-prep, month-end-prep, roll-forward, xlsx-author
+      - Hesap Mutabakat Uzmanı — pozisyon ajanı `02-hesap-mutabakat-uzmani.md` · skill: audit-xls, break-trace, gl-recon, month-end-prep, reconciliation, roll-forward, xlsx-author
+    - Muhasebe Kontrol Yöneticisi — pozisyon ajanı `02-muhasebe-kontrol-yoneticisi.md`
+      - Muhasebe Kontrol Uzmanı — pozisyon ajanı `02-muhasebe-kontrol-uzmani.md` · skill: audit-xls, break-trace
+      - Hesap Planı ve Kayıt Standartları Uzmanı — pozisyon ajanı `02-hesap-plani-ve-kayit-standartlari-uzmani.md`
+  - **Birim — Cari Hesaplar ve Borç-Alacak Muhasebesi:** Cari Hesaplar ve Borç-Alacak Muhasebesi Müdürü — pozisyon ajanı `02-cari-hesaplar-ve-borc-alacak-muhasebesi-muduru.md`
+    - Müşteri Cari Hesapları Yöneticisi — pozisyon ajanı `02-musteri-cari-hesaplari-yoneticisi.md`
+      - Alacak Muhasebesi Uzmanı — pozisyon ajanı `02-alacak-muhasebesi-uzmani.md` · skill: invoice-chase
+      - Müşteri Mutabakat Uzmanı — pozisyon ajanı `02-musteri-mutabakat-uzmani.md` · skill: reconciliation
+    - Tedarikçi Cari Hesapları Yöneticisi — pozisyon ajanı `02-tedarikci-cari-hesaplari-yoneticisi.md`
+      - Borç Muhasebesi Uzmanı — pozisyon ajanı `02-borc-muhasebesi-uzmani.md` · skill: ap-processor, pay-the-bills
+      - Tedarikçi Mutabakat Uzmanı — pozisyon ajanı `02-tedarikci-mutabakat-uzmani.md` · skill: ap-processor, reconciliation
+    - Cari Hesap Kontrol ve Yaşlandırma Yöneticisi — pozisyon ajanı `02-cari-hesap-kontrol-ve-yaslandirma-yoneticisi.md`
+      - Cari Hesap Kontrol Uzmanı — pozisyon ajanı `02-cari-hesap-kontrol-uzmani.md`
+      - Borç-Alacak Yaşlandırma Analisti — pozisyon ajanı `02-borc-alacak-yaslandirma-analisti.md`
+  - **Birim — Faturalama ve E-Belge Operasyonları:** Faturalama ve E-Belge Operasyonları Müdürü — pozisyon ajanı `02-faturalama-ve-e-belge-operasyonlari-muduru.md`
+    - Satış Faturalama Yöneticisi — pozisyon ajanı `02-satis-faturalama-yoneticisi.md`
+      - Faturalama Uzmanı — pozisyon ajanı `02-faturalama-uzmani.md`
+      - Fatura Kontrol Uzmanı — pozisyon ajanı `02-fatura-kontrol-uzmani.md`
+    - Alış Faturası ve Belge Kontrol Yöneticisi — pozisyon ajanı `02-alis-faturasi-ve-belge-kontrol-yoneticisi.md`
+      - Alış Faturaları Uzmanı — pozisyon ajanı `02-alis-faturalari-uzmani.md` · skill: ap-processor, pay-the-bills
+      - Belge Uygunluk Uzmanı — pozisyon ajanı `02-belge-uygunluk-uzmani.md` · skill: pdf
+    - E-Fatura ve E-Arşiv Operasyonları Yöneticisi — pozisyon ajanı `02-e-fatura-ve-e-arsiv-operasyonlari-yoneticisi.md`
+      - E-Fatura Uzmanı — pozisyon ajanı `02-e-fatura-uzmani.md`
+      - E-Arşiv ve Entegrasyon Uzmanı — pozisyon ajanı `02-e-arsiv-ve-entegrasyon-uzmani.md`
+  - **Birim — Maliyet Muhasebesi:** Maliyet Muhasebesi Müdürü — pozisyon ajanı `02-maliyet-muhasebesi-muduru.md`
+    - Maliyet Kayıtları Yöneticisi — pozisyon ajanı `02-maliyet-kayitlari-yoneticisi.md`
+      - Maliyet Muhasebesi Uzmanı — pozisyon ajanı `02-maliyet-muhasebesi-uzmani.md`
+      - Gider Dağıtım Uzmanı — pozisyon ajanı `02-gider-dagitim-uzmani.md`
+    - Ürün ve Hizmet Maliyetleri Yöneticisi — pozisyon ajanı `02-urun-ve-hizmet-maliyetleri-yoneticisi.md`
+      - Ürün Maliyet Analisti — pozisyon ajanı `02-urun-maliyet-analisti.md`
+      - Hizmet Maliyet Analisti — pozisyon ajanı `02-hizmet-maliyet-analisti.md`
+    - Stok ve Üretim Muhasebesi Yöneticisi — pozisyon ajanı `02-stok-ve-uretim-muhasebesi-yoneticisi.md`
+      - Stok Muhasebesi Uzmanı — pozisyon ajanı `02-stok-muhasebesi-uzmani.md` · skill: restock
+      - Üretim Maliyetleri Uzmanı — pozisyon ajanı `02-uretim-maliyetleri-uzmani.md`
+  - **Birim — Sabit Kıymet ve Amortisman Muhasebesi:** Sabit Kıymet ve Amortisman Muhasebesi Müdürü — pozisyon ajanı `02-sabit-kiymet-ve-amortisman-muhasebesi-muduru.md`
+    - Sabit Kıymet Kayıtları Yöneticisi — pozisyon ajanı `02-sabit-kiymet-kayitlari-yoneticisi.md`
+      - Sabit Kıymet Muhasebesi Uzmanı — pozisyon ajanı `02-sabit-kiymet-muhasebesi-uzmani.md` · skill: roll-forward
+      - Varlık Envanter ve Mutabakat Uzmanı — pozisyon ajanı `02-varlik-envanter-ve-mutabakat-uzmani.md`
+    - Amortisman ve Değerleme Yöneticisi — pozisyon ajanı `02-amortisman-ve-degerleme-yoneticisi.md`
+      - Amortisman Uzmanı — pozisyon ajanı `02-amortisman-uzmani.md`
+      - Aktifleştirme ve Değerleme Uzmanı — pozisyon ajanı `02-aktiflestirme-ve-degerleme-uzmani.md`
+  - **Birim — Bordro Muhasebesi:** Bordro Muhasebesi Müdürü — pozisyon ajanı `02-bordro-muhasebesi-muduru.md`
+    - Bordro Kayıtları Yöneticisi — pozisyon ajanı `02-bordro-kayitlari-yoneticisi.md`
+      - Bordro Muhasebesi Uzmanı — pozisyon ajanı `02-bordro-muhasebesi-uzmani.md` · skill: plan-payroll
+      - Ücret Tahakkuk Uzmanı — pozisyon ajanı `02-ucret-tahakkuk-uzmani.md` · skill: payroll-prep
+    - Personel Hesapları ve Mutabakat Yöneticisi — pozisyon ajanı `02-personel-hesaplari-ve-mutabakat-yoneticisi.md`
+      - Personel Cari Hesap Uzmanı — pozisyon ajanı `02-personel-cari-hesap-uzmani.md`
+      - Bordro Mutabakat Uzmanı — pozisyon ajanı `02-bordro-mutabakat-uzmani.md`
+    - Bordro Yasal Kayıt Kontrol Yöneticisi — pozisyon ajanı `02-bordro-yasal-kayit-kontrol-yoneticisi.md`
+      - SGK ve Vergi Tahakkuk Kontrol Uzmanı — pozisyon ajanı `02-sgk-ve-vergi-tahakkuk-kontrol-uzmani.md`
+      - Bordro Muhasebe Uyum Uzmanı — pozisyon ajanı `02-bordro-muhasebe-uyum-uzmani.md`
+  - **Birim — Vergi, Beyannameler ve E-Defter Uyum:** Vergi ve Mali Uyum Müdürü — pozisyon ajanı `02-vergi-ve-mali-uyum-muduru.md`
+    - Vergi Muhasebesi Yöneticisi — pozisyon ajanı `02-vergi-muhasebesi-yoneticisi.md`
+      - Vergi Muhasebesi Uzmanı — pozisyon ajanı `02-vergi-muhasebesi-uzmani.md` · skill: tax-prep, tax-season-organizer
+      - Vergi Mutabakat Uzmanı — pozisyon ajanı `02-vergi-mutabakat-uzmani.md`
+    - Beyanname ve Bildirimler Yöneticisi — pozisyon ajanı `02-beyanname-ve-bildirimler-yoneticisi.md`
+      - Beyanname Hazırlık Uzmanı — pozisyon ajanı `02-beyanname-hazirlik-uzmani.md` · skill: tax-prep
+      - Yasal Bildirimler Uzmanı — pozisyon ajanı `02-yasal-bildirimler-uzmani.md`
+    - E-Defter ve Defter Uyum Yöneticisi — pozisyon ajanı `02-e-defter-ve-defter-uyum-yoneticisi.md`
+      - E-Defter Uzmanı — pozisyon ajanı `02-e-defter-uzmani.md`
+      - Yasal Defter ve Saklama Uzmanı — pozisyon ajanı `02-yasal-defter-ve-saklama-uzmani.md`
+    - Vergi İnceleme ve Danışman Koordinasyon Yöneticisi — pozisyon ajanı `02-vergi-inceleme-ve-danisman-koordinasyon-yoneticisi.md`
+      - Vergi İnceleme Dokümantasyon Uzmanı — pozisyon ajanı `02-vergi-inceleme-dokumantasyon-uzmani.md`
+      - Mali Müşavir Koordinasyon Uzmanı — pozisyon ajanı `02-mali-musavir-koordinasyon-uzmani.md` · skill: tax-season-organizer
+  - **Birim — Yasal Finansal Raporlama, Konsolidasyon ve Denetim:** Finansal Raporlama ve Konsolidasyon Müdürü — pozisyon ajanı `02-finansal-raporlama-ve-konsolidasyon-muduru.md`
+    - Yasal Finansal Raporlama Yöneticisi — pozisyon ajanı `02-yasal-finansal-raporlama-yoneticisi.md`
+      - Yasal Finansal Raporlama Uzmanı — pozisyon ajanı `02-yasal-finansal-raporlama-uzmani.md` · skill: financial-statements
+      - Finansal Tablo ve Dipnot Uzmanı — pozisyon ajanı `02-finansal-tablo-ve-dipnot-uzmani.md` · skill: financial-statements
+    - Konsolidasyon Yöneticisi — pozisyon ajanı `02-konsolidasyon-yoneticisi.md`
+      - Konsolidasyon Uzmanı — pozisyon ajanı `02-konsolidasyon-uzmani.md`
+      - Şirketler Arası İşlemler ve Eliminasyon Uzmanı — pozisyon ajanı `02-sirketler-arasi-islemler-ve-eliminasyon-uzmani.md`
+    - Bağımsız Denetim Koordinasyon Yöneticisi — pozisyon ajanı `02-bagimsiz-denetim-koordinasyon-yoneticisi.md`
+      - Denetim Dokümantasyon Uzmanı — pozisyon ajanı `02-denetim-dokumantasyon-uzmani.md` · skill: audit-support
+      - Denetim Bulguları Takip Uzmanı — pozisyon ajanı `02-denetim-bulgulari-takip-uzmani.md`
+    - Raporlama Standartları ve Veri Kalitesi Yöneticisi — pozisyon ajanı `02-raporlama-standartlari-ve-veri-kalitesi-yoneticisi.md`
+      - Muhasebe Veri Kalitesi Uzmanı — pozisyon ajanı `02-muhasebe-veri-kalitesi-uzmani.md`
+      - Raporlama Standartları Uzmanı — pozisyon ajanı `02-raporlama-standartlari-uzmani.md`
+
+## 03 - Finans ve Hazine
+8 birim · 76 pozisyon · katalog ajanlı 0 · pozisyon ajanı 76
+
+- Bağlı olduğu: CFO / Mali İşler ve Finans Başkanı
+- **Departman lideri:** Finans ve Hazine Direktörü — pozisyon ajanı `03-finans-ve-hazine-direktoru.md`
+  - Finans ve Hazine Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `03-finans-ve-hazine-direktor-yardimcisi.md`
+  - Matris rol: Finans İş Ortağı — pozisyon ajanı `03-finans-is-ortagi.md`
+  - **Birim — Finansal Strateji ve Planlama Müdürlüğü:** Finansal Planlama ve Strateji Müdürü — pozisyon ajanı `03-finansal-planlama-ve-strateji-muduru.md`
+    - Ekip — Bütçe ve Tahminleme: Bütçe ve Planlama Takım Lideri — pozisyon ajanı `03-butce-ve-planlama-takim-lideri.md`
+      - Kıdemli Bütçe ve Planlama Uzmanı — pozisyon ajanı `03-kidemli-butce-ve-planlama-uzmani.md`
+      - Bütçe ve Planlama Uzmanı — pozisyon ajanı `03-butce-ve-planlama-uzmani.md`
+      - Finansal Tahminleme Uzmanı — pozisyon ajanı `03-finansal-tahminleme-uzmani.md` · skill: model-update
+      - Bütçe Analisti — pozisyon ajanı `03-butce-analisti.md` · skill: variance-analysis, variance-commentary, xlsx
+    - Ekip — Uzun Vadeli Finansal Planlama: Finansal Strateji Takım Lideri — pozisyon ajanı `03-finansal-strateji-takim-lideri.md`
+      - Kıdemli Finansal Strateji Uzmanı — pozisyon ajanı `03-kidemli-finansal-strateji-uzmani.md` · skill: 3-statement-model
+      - Finansal Modelleme Uzmanı — pozisyon ajanı `03-finansal-modelleme-uzmani.md` · skill: 3-statement-model, audit-xls, dcf-model, financial-forecast, lbo-model, merger-model, model-update, xlsx, xlsx-author
+      - Senaryo Planlama Analisti — pozisyon ajanı `03-senaryo-planlama-analisti.md`
+  - **Birim — Finansal Analiz ve Yönetim Raporlaması Müdürlüğü:** Finansal Analiz ve Raporlama Müdürü — pozisyon ajanı `03-finansal-analiz-ve-raporlama-muduru.md`
+    - Ekip — Finansal Performans Analizi: Finansal Analiz Takım Lideri — pozisyon ajanı `03-finansal-analiz-takim-lideri.md`
+      - Kıdemli Finansal Analist — pozisyon ajanı `03-kidemli-finansal-analist.md` · skill: 3-statement-model, audit-xls, portfolio-monitoring, variance-analysis
+      - Finansal Analist — pozisyon ajanı `03-finansal-analist.md` · skill: datapack-builder, earnings-analysis, financial-statements, variance-analysis, variance-commentary
+      - Kârlılık Analisti — pozisyon ajanı `03-karlilik-analisti.md` · skill: unit-economics
+      - Maliyet ve Verimlilik Analisti — pozisyon ajanı `03-maliyet-ve-verimlilik-analisti.md`
+    - Ekip — Yönetim Raporlaması: Yönetim Raporlama Takım Lideri — pozisyon ajanı `03-yonetim-raporlama-takim-lideri.md`
+      - Kıdemli Yönetim Raporlama Uzmanı — pozisyon ajanı `03-kidemli-yonetim-raporlama-uzmani.md` · skill: deck-refresh
+      - Yönetim Raporlama Uzmanı — pozisyon ajanı `03-yonetim-raporlama-uzmani.md` · skill: business-pulse, close-month, monday-brief, report-pack, xlsx, xlsx-author
+      - Finansal Veri ve BI Uzmanı — pozisyon ajanı `03-finansal-veri-ve-bi-uzmani.md`
+  - **Birim — Hazine ve Nakit Yönetimi Müdürlüğü:** Hazine ve Nakit Yönetimi Müdürü — pozisyon ajanı `03-hazine-ve-nakit-yonetimi-muduru.md`
+    - Ekip — Nakit Akışı ve Likidite: Nakit Yönetimi Takım Lideri — pozisyon ajanı `03-nakit-yonetimi-takim-lideri.md`
+      - Kıdemli Nakit Yönetimi Uzmanı — pozisyon ajanı `03-kidemli-nakit-yonetimi-uzmani.md`
+      - Nakit Akış Planlama Uzmanı — pozisyon ajanı `03-nakit-akis-planlama-uzmani.md` · skill: cash-flow-snapshot, plan-payroll
+      - Likidite Yönetimi Uzmanı — pozisyon ajanı `03-likidite-yonetimi-uzmani.md`
+      - Hazine Analisti — pozisyon ajanı `03-hazine-analisti.md` · skill: cash-flow-snapshot
+    - Ekip — Ödeme ve Hazine Operasyonları: Hazine Operasyonları Takım Lideri — pozisyon ajanı `03-hazine-operasyonlari-takim-lideri.md`
+      - Hazine Operasyonları Uzmanı — pozisyon ajanı `03-hazine-operasyonlari-uzmani.md`
+      - Ödeme Planlama Uzmanı — pozisyon ajanı `03-odeme-planlama-uzmani.md` · skill: pay-the-bills
+      - Banka Operasyonları Uzmanı — pozisyon ajanı `03-banka-operasyonlari-uzmani.md`
+  - **Birim — Banka İlişkileri ve Finansman Müdürlüğü:** Banka İlişkileri ve Finansman Müdürü — pozisyon ajanı `03-banka-iliskileri-ve-finansman-muduru.md`
+    - Ekip — Banka İlişkileri: Banka İlişkileri Takım Lideri — pozisyon ajanı `03-banka-iliskileri-takim-lideri.md`
+      - Kıdemli Banka İlişkileri Uzmanı — pozisyon ajanı `03-kidemli-banka-iliskileri-uzmani.md`
+      - Banka İlişkileri Uzmanı — pozisyon ajanı `03-banka-iliskileri-uzmani.md`
+      - Finansman Operasyonları Uzmanı — pozisyon ajanı `03-finansman-operasyonlari-uzmani.md`
+    - Ekip — Kredi ve Borçlanma: Kurumsal Finansman Takım Lideri — pozisyon ajanı `03-kurumsal-finansman-takim-lideri.md`
+      - Kredi ve Borçlanma Uzmanı — pozisyon ajanı `03-kredi-ve-borclanma-uzmani.md`
+      - Proje Finansmanı Uzmanı — pozisyon ajanı `03-proje-finansmani-uzmani.md` · skill: grant-rfp-writer
+      - Finansman Analisti — pozisyon ajanı `03-finansman-analisti.md`
+  - **Birim — Tahsilat ve Çalışma Sermayesi Müdürlüğü:** Tahsilat ve Çalışma Sermayesi Müdürü — pozisyon ajanı `03-tahsilat-ve-calisma-sermayesi-muduru.md`
+    - Ekip — Tahsilat Planlama ve Takip: Tahsilat Yönetimi Takım Lideri — pozisyon ajanı `03-tahsilat-yonetimi-takim-lideri.md`
+      - Kıdemli Tahsilat Uzmanı — pozisyon ajanı `03-kidemli-tahsilat-uzmani.md`
+      - Tahsilat Takip Uzmanı — pozisyon ajanı `03-tahsilat-takip-uzmani.md` · skill: invoice-chase
+      - Alacak Risk Analisti — pozisyon ajanı `03-alacak-risk-analisti.md`
+    - Ekip — Çalışma Sermayesi Optimizasyonu: Çalışma Sermayesi Takım Lideri — pozisyon ajanı `03-calisma-sermayesi-takim-lideri.md`
+      - Çalışma Sermayesi Uzmanı — pozisyon ajanı `03-calisma-sermayesi-uzmani.md`
+      - Nakit Dönüşüm Döngüsü Analisti — pozisyon ajanı `03-nakit-donusum-dongusu-analisti.md`
+      - Ticari Finans Analisti — pozisyon ajanı `03-ticari-finans-analisti.md`
+  - **Birim — Finansal Risk Yönetimi Müdürlüğü:** Finansal Risk Yönetimi Müdürü — pozisyon ajanı `03-finansal-risk-yonetimi-muduru.md`
+    - Ekip — Piyasa ve Likidite Riski: Piyasa Riski Takım Lideri — pozisyon ajanı `03-piyasa-riski-takim-lideri.md`
+      - Kur ve Faiz Riski Uzmanı — pozisyon ajanı `03-kur-ve-faiz-riski-uzmani.md`
+      - Likidite Riski Uzmanı — pozisyon ajanı `03-likidite-riski-uzmani.md`
+      - Finansal Risk Analisti — pozisyon ajanı `03-finansal-risk-analisti.md`
+    - Ekip — Karşı Taraf Riski ve Finansal Kontroller: Karşı Taraf Riski Takım Lideri — pozisyon ajanı `03-karsi-taraf-riski-takim-lideri.md`
+      - Kredi Riski Uzmanı — pozisyon ajanı `03-kredi-riski-uzmani.md`
+      - Finansal Kontrol ve Limit Uzmanı — pozisyon ajanı `03-finansal-kontrol-ve-limit-uzmani.md`
+      - Risk Modelleme Analisti — pozisyon ajanı `03-risk-modelleme-analisti.md`
+  - **Birim — Yatırım ve Sermaye Yönetimi Müdürlüğü:** Yatırım ve Sermaye Yönetimi Müdürü — pozisyon ajanı `03-yatirim-ve-sermaye-yonetimi-muduru.md`
+    - Ekip — Yatırım Değerlendirme: Yatırım Analizi Takım Lideri — pozisyon ajanı `03-yatirim-analizi-takim-lideri.md`
+      - Kıdemli Yatırım Analisti — pozisyon ajanı `03-kidemli-yatirim-analisti.md` · skill: audit-xls, dcf-model, dd-meeting-prep, ic-memo, initiating-coverage, lbo-model, returns-analysis, thesis-tracker
+      - Yatırım Analisti — pozisyon ajanı `03-yatirim-analisti.md` · skill: comps-analysis, deal-screening, idea-generation, portfolio-monitoring, returns-analysis, sector-overview, xlsx-author
+      - Fizibilite ve Değerleme Uzmanı — pozisyon ajanı `03-fizibilite-ve-degerleme-uzmani.md` · skill: comps-analysis, dcf-model, financial-forecast, ic-memo, returns-analysis, xlsx-author
+    - Ekip — Sermaye Yapısı ve Kaynak Tahsisi: Sermaye Planlama Takım Lideri — pozisyon ajanı `03-sermaye-planlama-takim-lideri.md`
+      - Sermaye Planlama Uzmanı — pozisyon ajanı `03-sermaye-planlama-uzmani.md`
+      - Kurumsal Finans Uzmanı — pozisyon ajanı `03-kurumsal-finans-uzmani.md` · skill: buyer-list, cim-builder, company-portfolio, comps-analysis, datapack-builder, dd-checklist, dd-meeting-prep, deal-activity, deal-screening, deal-sourcing, deal-tracker, fsi-strip-profile, ib-check-deck, ic-memo, lbo-model, merger-model, pitch-deck, process-letter, teaser, trace-financings
+      - Kaynak Tahsisi Analisti — pozisyon ajanı `03-kaynak-tahsisi-analisti.md`
+  - **Birim — Yatırımcı İlişkileri Müdürlüğü:** Yatırımcı İlişkileri Müdürü — pozisyon ajanı `03-yatirimci-iliskileri-muduru.md`
+    - Ekip — Yatırımcı İletişimi ve Bilgilendirme: Yatırımcı İletişimi Takım Lideri — pozisyon ajanı `03-yatirimci-iletisimi-takim-lideri.md`
+      - Yatırımcı İlişkileri Uzmanı — pozisyon ajanı `03-yatirimci-iliskileri-uzmani.md` · skill: earnings-analysis, earnings-preview
+      - Yatırımcı Sunum ve Raporlama Uzmanı — pozisyon ajanı `03-yatirimci-sunum-ve-raporlama-uzmani.md` · skill: cim-builder, deck-refresh, fsi-strip-profile, ib-check-deck, pitch-deck, pptx-author, teaser
+    - Ekip — Sermaye Piyasaları ve Paydaş Analizi (ekip yöneticisi yok; roller birim liderine bağlı)
+      - Sermaye Piyasaları Uzmanı — pozisyon ajanı `03-sermaye-piyasalari-uzmani.md` · skill: catalyst-calendar, earnings-analysis, earnings-preview, funding-landscape, idea-generation, initiating-coverage, morning-note, thesis-tracker, trace-financings
+      - Yatırımcı Veri Analisti — pozisyon ajanı `03-yatirimci-veri-analisti.md` · skill: catalyst-calendar, morning-note
+      - Paydaş Analizi Uzmanı — pozisyon ajanı `03-paydas-analizi-uzmani.md`
+
+## 04 - İnsan Kaynakları ve Organizasyon
+11 birim · 45 pozisyon · katalog ajanlı 0 · pozisyon ajanı 45
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** İnsan Kaynakları ve Organizasyon Direktörü — pozisyon ajanı `04-insan-kaynaklari-ve-organizasyon-direktoru.md`
+  - **Birim — İK Planlama ve Organizasyonel Gelişim:** İK Planlama ve Organizasyonel Gelişim Müdürü — pozisyon ajanı `04-ik-planlama-ve-organizasyonel-gelisim-muduru.md`
+    - Organizasyonel Gelişim Takım Lideri — pozisyon ajanı `04-organizasyonel-gelisim-takim-lideri.md`
+      - İş Gücü Planlama Uzmanı — pozisyon ajanı `04-is-gucu-planlama-uzmani.md` · skill: expansion-kickoff, expansion-update, international-expansion, org-planning
+      - Organizasyonel Gelişim Uzmanı — pozisyon ajanı `04-organizasyonel-gelisim-uzmani.md` · skill: org-planning
+  - **Birim — İşe Alım ve Yetenek Kazanımı:** İşe Alım ve Yetenek Kazanımı Müdürü — pozisyon ajanı `04-ise-alim-ve-yetenek-kazanimi-muduru.md`
+    - İşe Alım Takım Lideri — pozisyon ajanı `04-ise-alim-takim-lideri.md` · skill: recruiting-pipeline
+      - Kıdemli İşe Alım Uzmanı — pozisyon ajanı `04-kidemli-ise-alim-uzmani.md` · skill: interview-prep
+      - İşe Alım Uzmanı — pozisyon ajanı `04-ise-alim-uzmani.md` · skill: draft-offer, hiring-screener, interview-prep, job-post-builder, recruiting-pipeline
+      - İşe Alım Asistanı — pozisyon ajanı `04-ise-alim-asistani.md` · skill: hiring-screener
+  - **Birim — Eğitim ve Gelişim:** Eğitim ve Gelişim Müdürü — pozisyon ajanı `04-egitim-ve-gelisim-muduru.md`
+    - Eğitim ve Gelişim Takım Lideri — pozisyon ajanı `04-egitim-ve-gelisim-takim-lideri.md`
+      - Eğitim Tasarımı Uzmanı — pozisyon ajanı `04-egitim-tasarimi-uzmani.md` · skill: learn-with-coursera
+      - Eğitim ve Gelişim Uzmanı — pozisyon ajanı `04-egitim-ve-gelisim-uzmani.md` · skill: learn-with-coursera, onboarding
+  - **Birim — Performans ve Kariyer Yönetimi:** Performans ve Kariyer Yönetimi Müdürü — pozisyon ajanı `04-performans-ve-kariyer-yonetimi-muduru.md`
+    - Performans Yönetimi Takım Lideri — pozisyon ajanı `04-performans-yonetimi-takim-lideri.md` · skill: performance-review
+      - Performans Yönetimi Uzmanı — pozisyon ajanı `04-performans-yonetimi-uzmani.md` · skill: performance-review
+      - Kariyer Yönetimi Uzmanı — pozisyon ajanı `04-kariyer-yonetimi-uzmani.md`
+  - **Birim — Yetenek ve Yedekleme Yönetimi:** Yetenek ve Yedekleme Yönetimi Müdürü — pozisyon ajanı `04-yetenek-ve-yedekleme-yonetimi-muduru.md`
+    - Yetenek Yönetimi Takım Lideri — pozisyon ajanı `04-yetenek-yonetimi-takim-lideri.md`
+      - Yetenek Yönetimi Uzmanı — pozisyon ajanı `04-yetenek-yonetimi-uzmani.md`
+      - Halefiyet Planlama Uzmanı — pozisyon ajanı `04-halefiyet-planlama-uzmani.md`
+  - **Birim — Ücret ve Yan Haklar:** Ücret ve Yan Haklar Müdürü — pozisyon ajanı `04-ucret-ve-yan-haklar-muduru.md`
+    - Ücret ve Yan Haklar Takım Lideri — pozisyon ajanı `04-ucret-ve-yan-haklar-takim-lideri.md`
+      - Ücretlendirme Uzmanı — pozisyon ajanı `04-ucretlendirme-uzmani.md` · skill: comp-analysis, draft-offer
+      - Yan Haklar Uzmanı — pozisyon ajanı `04-yan-haklar-uzmani.md`
+  - **Birim — Bordro ve Özlük İşleri:** Bordro ve Özlük İşleri Müdürü — pozisyon ajanı `04-bordro-ve-ozluk-isleri-muduru.md`
+    - Bordro ve Özlük İşleri Takım Lideri — pozisyon ajanı `04-bordro-ve-ozluk-isleri-takim-lideri.md`
+      - Bordro Uzmanı — pozisyon ajanı `04-bordro-uzmani.md` · skill: payroll-prep, plan-payroll, wage-hour-qa
+      - Özlük İşleri Uzmanı — pozisyon ajanı `04-ozluk-isleri-uzmani.md` · skill: leave-tracker, log-leave, policy-lookup
+      - Özlük İşleri Asistanı — pozisyon ajanı `04-ozluk-isleri-asistani.md` · skill: log-leave
+  - **Birim — Çalışan Deneyimi ve Bağlılık:** Çalışan Deneyimi ve Bağlılık Müdürü — pozisyon ajanı `04-calisan-deneyimi-ve-baglilik-muduru.md`
+    - Çalışan Deneyimi Takım Lideri — pozisyon ajanı `04-calisan-deneyimi-takim-lideri.md`
+      - Çalışan Deneyimi Uzmanı — pozisyon ajanı `04-calisan-deneyimi-uzmani.md` · skill: onboarding
+      - Çalışan Bağlılığı Uzmanı — pozisyon ajanı `04-calisan-bagliligi-uzmani.md`
+  - **Birim — İşveren Markası ve İç İletişim:** İşveren Markası ve İç İletişim Müdürü — pozisyon ajanı `04-isveren-markasi-ve-ic-iletisim-muduru.md`
+    - İşveren Markası Uzmanı — pozisyon ajanı `04-isveren-markasi-uzmani.md` · skill: job-post-builder
+    - İK İç İletişim Uzmanı — pozisyon ajanı `04-ik-ic-iletisim-uzmani.md`
+  - **Birim — Çalışan İlişkileri:** Çalışan İlişkileri Müdürü — pozisyon ajanı `04-calisan-iliskileri-muduru.md`
+    - Çalışan İlişkileri Takım Lideri — pozisyon ajanı `04-calisan-iliskileri-takim-lideri.md`
+      - Çalışan İlişkileri Uzmanı — pozisyon ajanı `04-calisan-iliskileri-uzmani.md` · skill: handbook-updates, policy-lookup
+  - **Birim — İK Analitiği ve Dijitalleşme:** İK Analitiği ve Dijitalleşme Müdürü — pozisyon ajanı `04-ik-analitigi-ve-dijitallesme-muduru.md`
+    - İK Analitiği Uzmanı — pozisyon ajanı `04-ik-analitigi-uzmani.md` · skill: people-report
+    - İK Sistemleri Uzmanı — pozisyon ajanı `04-ik-sistemleri-uzmani.md`
+    - İK Raporlama Uzmanı — pozisyon ajanı `04-ik-raporlama-uzmani.md` · skill: people-report
+
+## 05 - Hukuk İşleri
+8 birim · 108 pozisyon · katalog ajanlı 0 · pozisyon ajanı 108
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Hukuk İşleri Direktörü — pozisyon ajanı `05-hukuk-isleri-direktoru.md`
+  - Hukuk İşleri Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `05-hukuk-isleri-direktor-yardimcisi.md`
+  - Yönetici Hukuk Müşaviri _(Kritik ve stratejik hukuki konular için opsiyonel)_ — pozisyon ajanı `05-yonetici-hukuk-musaviri.md` · skill: brief, legal-risk-assessment, meeting-briefing
+  - **Birim — Şirketler ve Ticaret Hukuku:** Şirketler ve Ticaret Hukuku Müdürü — pozisyon ajanı `05-sirketler-ve-ticaret-hukuku-muduru.md`
+    - Ekip — Şirketler Hukuku Ekibi: Şirketler Hukuku Yöneticisi — pozisyon ajanı `05-sirketler-hukuku-yoneticisi.md`
+      - Kıdemli Şirketler Hukuku Müşaviri — pozisyon ajanı `05-kidemli-sirketler-hukuku-musaviri.md`
+      - Şirketler Hukuku Müşaviri — pozisyon ajanı `05-sirketler-hukuku-musaviri.md`
+      - Ticaret Sicili ve Kurumsal İşlemler Uzmanı — pozisyon ajanı `05-ticaret-sicili-ve-kurumsal-islemler-uzmani.md` · skill: entity-compliance
+    - Ekip — Kurumsal İşlemler ve Ortaklıklar Ekibi: Kurumsal İşlemler ve Ortaklıklar Yöneticisi — pozisyon ajanı `05-kurumsal-islemler-ve-ortakliklar-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Kurumsal İşlemler Müşaviri — pozisyon ajanı `05-kidemli-kurumsal-islemler-musaviri.md` · skill: ai-tool-handoff, closing-checklist, deal-team-summary, deal-tracker, diligence-issue-extraction, matter-workspace
+      - Birleşme ve Devralma Hukuku Müşaviri — pozisyon ajanı `05-birlesme-ve-devralma-hukuku-musaviri.md` · skill: closing-checklist, dd-checklist, deal-team-summary, diligence-issue-extraction, integration-management, material-contract-schedule, process-letter, tabular-review
+      - Ortaklıklar Hukuku Uzmanı — pozisyon ajanı `05-ortakliklar-hukuku-uzmani.md` · skill: entity-compliance
+    - Ekip — Yönetim Organları Hukuki Destek Ekibi: Yönetim Organları Hukuki Destek Yöneticisi — pozisyon ajanı `05-yonetim-organlari-hukuki-destek-yoneticisi.md`
+      - Yönetim Kurulu Hukuk Müşaviri — pozisyon ajanı `05-yonetim-kurulu-hukuk-musaviri.md` · skill: meeting-briefing, written-consent
+      - Genel Kurul ve Karar Dokümantasyon Uzmanı — pozisyon ajanı `05-genel-kurul-ve-karar-dokumantasyon-uzmani.md` · skill: board-minutes, written-consent
+      - Kurumsal Belge Kontrol Uzmanı — pozisyon ajanı `05-kurumsal-belge-kontrol-uzmani.md`
+  - **Birim — Sözleşmeler ve Ticari Hukuk:** Sözleşmeler ve Ticari Hukuk Müdürü — pozisyon ajanı `05-sozlesmeler-ve-ticari-hukuk-muduru.md`
+    - Ekip — Sözleşme Standartları Ekibi: Sözleşme Standartları Yöneticisi — pozisyon ajanı `05-sozlesme-standartlari-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Sözleşme Hukuku Müşaviri — pozisyon ajanı `05-kidemli-sozlesme-hukuku-musaviri.md` · skill: review-contract, review-proposals
+      - Sözleşme Hukuku Müşaviri — pozisyon ajanı `05-sozlesme-hukuku-musaviri.md` · skill: contract-review, ip-clause-review, nda-review, review, review-contract, stakeholder-summary, triage-nda, vendor-agreement-review
+      - Sözleşme Şablonları Uzmanı — pozisyon ajanı `05-sozlesme-sablonlari-uzmani.md` · skill: review-proposals, triage-nda
+    - Ekip — Ticari Müzakere ve İşlemler Ekibi: Ticari Müzakere ve İşlemler Yöneticisi — pozisyon ajanı `05-ticari-muzakere-ve-islemler-yoneticisi.md`
+      - Kıdemli Ticari Hukuk Müşaviri — pozisyon ajanı `05-kidemli-ticari-hukuk-musaviri.md` · skill: escalation-flagger, legal-risk-assessment
+      - Ticari Hukuk Müşaviri — pozisyon ajanı `05-ticari-hukuk-musaviri.md` · skill: brief, contract-review, escalation-flagger, legal-response, nda-review, review, review-contract, stakeholder-summary
+      - İhale ve Teklif Hukuku Uzmanı — pozisyon ajanı `05-ihale-ve-teklif-hukuku-uzmani.md` · skill: govtribe-proposal-workflows
+    - Ekip — Sözleşme Yaşam Döngüsü Ekibi: Sözleşme Yaşam Döngüsü Yöneticisi — pozisyon ajanı `05-sozlesme-yasam-dongusu-yoneticisi.md`
+      - Sözleşme Operasyonları Uzmanı — pozisyon ajanı `05-sozlesme-operasyonlari-uzmani.md` · skill: amendment-history, renewal-tracker, signature-request, vendor-check
+      - Sözleşme Yükümlülükleri Uzmanı — pozisyon ajanı `05-sozlesme-yukumlulukleri-uzmani.md` · skill: renewal-tracker
+      - Sözleşme Veri ve Arşiv Uzmanı — pozisyon ajanı `05-sozlesme-veri-ve-arsiv-uzmani.md` · skill: amendment-history, material-contract-schedule, tabular-review, vendor-check
+  - **Birim — Dava, İcra ve Uyuşmazlık Yönetimi:** Dava, İcra ve Uyuşmazlık Yönetimi Müdürü — pozisyon ajanı `05-dava-icra-ve-uyusmazlik-yonetimi-muduru.md`
+    - Ekip — Dava ve Alternatif Uyuşmazlık Ekibi: Dava ve Alternatif Uyuşmazlık Yöneticisi — pozisyon ajanı `05-dava-ve-alternatif-uyusmazlik-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Dava Avukatı — pozisyon ajanı `05-kidemli-dava-avukati.md` · skill: brief-section-drafter, deposition-prep, draft, form-generation, legal-writing, matter-briefing, privilege-log-review
+      - Dava Avukatı — pozisyon ajanı `05-dava-avukati.md` · skill: brief-section-drafter, case-brief, chronology, claim-chart, client-intake, client-letter, deadlines, demand-draft, demand-intake, demand-received, deposition-prep, draft, form-generation, legal-hold, legal-writing, memo, plain-language-letters, privilege-log-review, subpoena-triage
+      - Arabuluculuk ve Tahkim Uzmanı — pozisyon ajanı `05-arabuluculuk-ve-tahkim-uzmani.md`
+    - Ekip — İcra ve Alacak Takibi Ekibi: İcra ve Alacak Takibi Yöneticisi — pozisyon ajanı `05-icra-ve-alacak-takibi-yoneticisi.md`
+      - Kıdemli İcra Avukatı — pozisyon ajanı `05-kidemli-icra-avukati.md`
+      - İcra Avukatı — pozisyon ajanı `05-icra-avukati.md` · skill: demand-draft
+      - Hukuki Alacak Takip Uzmanı — pozisyon ajanı `05-hukuki-alacak-takip-uzmani.md` · skill: demand-draft
+    - Ekip — Dış Avukat ve Dosya Koordinasyon Ekibi: Dış Avukat ve Dosya Koordinasyon Yöneticisi — pozisyon ajanı `05-dis-avukat-ve-dosya-koordinasyon-yoneticisi.md`
+      - Dış Avukat Koordinasyon Uzmanı — pozisyon ajanı `05-dis-avukat-koordinasyon-uzmani.md` · skill: oc-status
+      - Dava Dosyaları Takip Uzmanı — pozisyon ajanı `05-dava-dosyalari-takip-uzmani.md` · skill: chronology, client-comms-log, deadlines, demand-received, matter-close, matter-intake, matter-update, matter-workspace, status
+      - Dava Raporlama Analisti — pozisyon ajanı `05-dava-raporlama-analisti.md` · skill: matter-briefing, matter-close, matter-update, portfolio-status, status
+  - **Birim — İş ve Sosyal Güvenlik Hukuku:** İş ve Sosyal Güvenlik Hukuku Müdürü — pozisyon ajanı `05-is-ve-sosyal-guvenlik-hukuku-muduru.md`
+    - Ekip — İş Hukuku Danışmanlığı Ekibi: İş Hukuku Danışmanlığı Yöneticisi — pozisyon ajanı `05-is-hukuku-danismanligi-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli İş Hukuku Müşaviri — pozisyon ajanı `05-kidemli-is-hukuku-musaviri.md` · skill: cold-start-interview, customize, expansion-kickoff, expansion-update, internal-investigation, international-expansion, investigation-memo, investigation-open, investigation-summary, termination-review
+      - İş Hukuku Müşaviri — pozisyon ajanı `05-is-hukuku-musaviri.md` · skill: hiring-review, matter-workspace, policy-drafting, wage-hour-qa
+      - İş Sözleşmeleri Hukuk Uzmanı — pozisyon ajanı `05-is-sozlesmeleri-hukuk-uzmani.md` · skill: hiring-review, worker-classification
+    - Ekip — İş Uyuşmazlıkları Ekibi: İş Uyuşmazlıkları Yöneticisi — pozisyon ajanı `05-is-uyusmazliklari-yoneticisi.md`
+      - Kıdemli İş Davaları Avukatı — pozisyon ajanı `05-kidemli-is-davalari-avukati.md`
+      - İş Davaları Avukatı — pozisyon ajanı `05-is-davalari-avukati.md`
+      - Arabuluculuk ve Fesih Süreçleri Uzmanı — pozisyon ajanı `05-arabuluculuk-ve-fesih-surecleri-uzmani.md` · skill: termination-review
+    - Ekip — Sosyal Güvenlik Hukuku Ekibi: Sosyal Güvenlik Hukuku Yöneticisi — pozisyon ajanı `05-sosyal-guvenlik-hukuku-yoneticisi.md`
+      - Sosyal Güvenlik Hukuku Müşaviri — pozisyon ajanı `05-sosyal-guvenlik-hukuku-musaviri.md` · skill: worker-classification
+      - SGK Uyuşmazlıkları Uzmanı — pozisyon ajanı `05-sgk-uyusmazliklari-uzmani.md`
+      - Çalışma Mevzuatı Uzmanı — pozisyon ajanı `05-calisma-mevzuati-uzmani.md` · skill: handbook-updates, leave-tracker, policy-drafting, wage-hour-qa
+  - **Birim — Mevzuat ve Düzenleyici Hukuk:** Mevzuat ve Düzenleyici Hukuk Müdürü — pozisyon ajanı `05-mevzuat-ve-duzenleyici-hukuk-muduru.md`
+    - Ekip — Mevzuat İzleme ve Hukuki Görüş Ekibi: Mevzuat İzleme ve Hukuki Görüş Yöneticisi — pozisyon ajanı `05-mevzuat-izleme-ve-hukuki-gorus-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Mevzuat Hukuku Müşaviri — pozisyon ajanı `05-kidemli-mevzuat-hukuku-musaviri.md` · skill: cold-start-interview, comments, customize
+      - Mevzuat Hukuku Müşaviri — pozisyon ajanı `05-mevzuat-hukuku-musaviri.md` · skill: gap-surfacer, matter-workspace, memo, policy-diff, policy-redraft, research-start
+      - Mevzuat Araştırma Uzmanı — pozisyon ajanı `05-mevzuat-arastirma-uzmani.md` · skill: case-brief, reg-feed-watcher, research-start
+    - Ekip — Rekabet Hukuku Ekibi: Rekabet Hukuku Yöneticisi — pozisyon ajanı `05-rekabet-hukuku-yoneticisi.md`
+      - Kıdemli Rekabet Hukuku Müşaviri — pozisyon ajanı `05-kidemli-rekabet-hukuku-musaviri.md`
+      - Rekabet Hukuku Müşaviri — pozisyon ajanı `05-rekabet-hukuku-musaviri.md` · skill: marketing-claims-review
+      - Rekabet Hukuku Araştırma Uzmanı — pozisyon ajanı `05-rekabet-hukuku-arastirma-uzmani.md`
+    - Ekip — Resmî Kurum ve Ruhsat Hukuku Ekibi: Resmî Kurum ve Ruhsat Hukuku Yöneticisi — pozisyon ajanı `05-resmi-kurum-ve-ruhsat-hukuku-yoneticisi.md`
+      - İdare Hukuku Müşaviri — pozisyon ajanı `05-idare-hukuku-musaviri.md`
+      - Ruhsat ve İzinler Hukuk Uzmanı — pozisyon ajanı `05-ruhsat-ve-izinler-hukuk-uzmani.md`
+      - Resmî Kurum Yazışmaları Uzmanı — pozisyon ajanı `05-resmi-kurum-yazismalari-uzmani.md` · skill: subpoena-triage
+  - **Birim — KVKK ve Veri Koruma Hukuku:** KVKK ve Veri Koruma Hukuku Müdürü — pozisyon ajanı `05-kvkk-ve-veri-koruma-hukuku-muduru.md`
+    - Ekip — Veri Koruma Danışmanlığı Ekibi: Veri Koruma Danışmanlığı Yöneticisi — pozisyon ajanı `05-veri-koruma-danismanligi-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Veri Koruma Hukuku Müşaviri — pozisyon ajanı `05-kidemli-veri-koruma-hukuku-musaviri.md` · skill: cold-start-interview, customize, reg-gap-analysis
+      - Veri Koruma Hukuku Müşaviri — pozisyon ajanı `05-veri-koruma-hukuku-musaviri.md` · skill: legal-response, matter-workspace
+      - KVKK ve GDPR Hukuk Uzmanı — pozisyon ajanı `05-kvkk-ve-gdpr-hukuk-uzmani.md` · skill: compliance-check, pia-generation, reg-gap-analysis, use-case-triage
+    - Ekip — Veri İhlali ve Başvuru Yönetimi Ekibi: Veri İhlali ve Başvuru Yönetimi Yöneticisi — pozisyon ajanı `05-veri-ihlali-ve-basvuru-yonetimi-yoneticisi.md`
+      - Veri İhlali Hukuk Uzmanı — pozisyon ajanı `05-veri-ihlali-hukuk-uzmani.md`
+      - İlgili Kişi Başvuruları Uzmanı — pozisyon ajanı `05-ilgili-kisi-basvurulari-uzmani.md` · skill: dsar-response
+      - Kurul Kararları ve Bildirim Uzmanı — pozisyon ajanı `05-kurul-kararlari-ve-bildirim-uzmani.md`
+    - Ekip — Veri Sözleşmeleri ve Aktarım Ekibi: Veri Sözleşmeleri ve Aktarım Yöneticisi — pozisyon ajanı `05-veri-sozlesmeleri-ve-aktarim-yoneticisi.md`
+      - Veri İşleme Sözleşmeleri Müşaviri — pozisyon ajanı `05-veri-isleme-sozlesmeleri-musaviri.md` · skill: dpa-review
+      - Uluslararası Veri Aktarımı Uzmanı — pozisyon ajanı `05-uluslararasi-veri-aktarimi-uzmani.md`
+      - Veri Koruma Dokümantasyon Uzmanı — pozisyon ajanı `05-veri-koruma-dokumantasyon-uzmani.md` · skill: policy-monitor
+  - **Birim — Fikrî Mülkiyet ve Teknoloji Hukuku:** Fikrî Mülkiyet ve Teknoloji Hukuku Müdürü — pozisyon ajanı `05-fikri-mulkiyet-ve-teknoloji-hukuku-muduru.md`
+    - Ekip — Fikrî Mülkiyet Hakları Ekibi: Fikrî Mülkiyet Hakları Yöneticisi — pozisyon ajanı `05-fikri-mulkiyet-haklari-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Fikrî Mülkiyet Hukuku Müşaviri — pozisyon ajanı `05-kidemli-fikri-mulkiyet-hukuku-musaviri.md` · skill: cease-desist, claim-chart, cold-start-interview, customize, fto-triage, infringement-triage, invention-intake, ip-clause-review, matter-workspace
+      - Marka ve Tasarım Hukuku Müşaviri — pozisyon ajanı `05-marka-ve-tasarim-hukuku-musaviri.md` · skill: cease-desist, clearance, infringement-triage
+      - Telif Hakları Uzmanı — pozisyon ajanı `05-telif-haklari-uzmani.md` · skill: infringement-triage, takedown
+      - Marka Portföyü ve Yenileme Uzmanı — pozisyon ajanı `05-marka-portfoyu-ve-yenileme-uzmani.md` · skill: clearance, portfolio
+    - Ekip — Teknoloji ve Dijital Ürün Hukuku Ekibi: Teknoloji ve Dijital Ürün Hukuku Yöneticisi — pozisyon ajanı `05-teknoloji-ve-dijital-urun-hukuku-yoneticisi.md` · skill: cold-start-interview, customize
+      - Kıdemli Teknoloji Hukuku Müşaviri — pozisyon ajanı `05-kidemli-teknoloji-hukuku-musaviri.md` · skill: feature-risk-assessment, is-this-a-problem, launch-review
+      - Dijital Ürün Hukuku Müşaviri — pozisyon ajanı `05-dijital-urun-hukuku-musaviri.md` · skill: cold-start-interview, customize, feature-risk-assessment, is-this-a-problem, launch-review, marketing-claims-review, matter-workspace, takedown
+      - Yapay Zekâ Hukuku Uzmanı — pozisyon ajanı `05-yapay-zeka-hukuku-uzmani.md` · skill: ai-inventory, aia-generation, cold-start-interview, customize, matter-workspace, policy-starter, reg-gap-analysis, skills-qa, vendor-ai-review
+    - Ekip — Lisanslama ve SaaS Sözleşmeleri Ekibi: Lisanslama ve SaaS Sözleşmeleri Yöneticisi — pozisyon ajanı `05-lisanslama-ve-saas-sozlesmeleri-yoneticisi.md`
+      - Yazılım Lisansları Müşaviri — pozisyon ajanı `05-yazilim-lisanslari-musaviri.md` · skill: ip-clause-review, oss-review, saas-msa-review
+      - SaaS ve Bulut Sözleşmeleri Uzmanı — pozisyon ajanı `05-saas-ve-bulut-sozlesmeleri-uzmani.md` · skill: saas-msa-review
+      - Teknoloji Tedarik Sözleşmeleri Uzmanı — pozisyon ajanı `05-teknoloji-tedarik-sozlesmeleri-uzmani.md` · skill: vendor-agreement-review, vendor-ai-review
+  - **Birim — Hukuk Operasyonları ve Dış Danışman Yönetimi:** Hukuk Operasyonları Müdürü — pozisyon ajanı `05-hukuk-operasyonlari-muduru.md`
+    - Ekip — Hukuk Operasyonları Ekibi: Hukuk Operasyonları Yöneticisi — pozisyon ajanı `05-hukuk-operasyonlari-yoneticisi.md`
+      - Hukuk Operasyonları Uzmanı — pozisyon ajanı `05-hukuk-operasyonlari-uzmani.md` · skill: cold-start-interview, legal-hold, matter-workspace, registry-browser, related-skills-surfacer
+      - Hukuki İş Talep Yönetimi Uzmanı — pozisyon ajanı `05-hukuki-is-talep-yonetimi-uzmani.md` · skill: client-comms-log, client-intake, demand-intake, legal-response, matter-intake, matter-workspace
+      - Hukuk Dokümantasyon Uzmanı — pozisyon ajanı `05-hukuk-dokumantasyon-uzmani.md` · skill: client-letter, docx, pdf, plain-language-letters, view-pdf
+    - Ekip — Dış Danışman Yönetimi Ekibi: Dış Danışman Yönetimi Yöneticisi — pozisyon ajanı `05-dis-danisman-yonetimi-yoneticisi.md`
+      - Dış Hukuk Büroları Koordinasyon Uzmanı — pozisyon ajanı `05-dis-hukuk-burolari-koordinasyon-uzmani.md` · skill: oc-status
+      - Hukuki Hizmet Satın Alma Uzmanı — pozisyon ajanı `05-hukuki-hizmet-satin-alma-uzmani.md`
+      - Hukuk Bütçesi ve Fatura Kontrol Uzmanı — pozisyon ajanı `05-hukuk-butcesi-ve-fatura-kontrol-uzmani.md`
+    - Ekip — Hukuk Teknolojileri ve Raporlama Ekibi: Hukuk Teknolojileri ve Raporlama Yöneticisi — pozisyon ajanı `05-hukuk-teknolojileri-ve-raporlama-yoneticisi.md`
+      - Hukuk Teknolojileri Uzmanı — pozisyon ajanı `05-hukuk-teknolojileri-uzmani.md` · skill: ai-tool-handoff, auto-updater, cold-start-interview, customize, disable, registry-browser, related-skills-surfacer, skill-installer, skill-manager, skills-qa, uninstall
+      - Hukuk Veri ve Raporlama Analisti — pozisyon ajanı `05-hukuk-veri-ve-raporlama-analisti.md` · skill: portfolio-status
+      - Sözleşme ve Dava Sistemleri Uzmanı — pozisyon ajanı `05-sozlesme-ve-dava-sistemleri-uzmani.md`
+
+## 06 - Uyum, Kurumsal Risk ve İç Kontrol
+8 birim · 119 pozisyon · katalog ajanlı 1 · pozisyon ajanı 118
+
+- Bağlı olduğu: Genel Müdür / CEO · fonksiyonel: Yönetim Kurulu Risk ve Uyum Komitesi
+- **Departman lideri:** Uyum, Kurumsal Risk ve İç Kontrol Direktörü — pozisyon ajanı `06-uyum-kurumsal-risk-ve-ic-kontrol-direktoru.md`
+  - Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `06-direktor-yardimcisi.md`
+  - Baş Uyum Görevlisi _(Direktör rolüyle birleştirilebilir)_ — pozisyon ajanı `06-bas-uyum-gorevlisi.md`
+  - Baş Risk Görevlisi _(Direktör rolüyle birleştirilebilir)_ — pozisyon ajanı `06-bas-risk-gorevlisi.md`
+  - **Birim — Mevzuat Uyum Yönetimi:** Mevzuat Uyum Müdürü — pozisyon ajanı `06-mevzuat-uyum-muduru.md`
+    - Ekip — Mevzuat İzleme ve Etki Analizi: Mevzuat İzleme ve Etki Analizi Yöneticisi — pozisyon ajanı `06-mevzuat-izleme-ve-etki-analizi-yoneticisi.md`
+      - Kıdemli Mevzuat Uyum Uzmanı — pozisyon ajanı `06-kidemli-mevzuat-uyum-uzmani.md`
+      - Mevzuat Uyum Uzmanı — pozisyon ajanı `06-mevzuat-uyum-uzmani.md` · skill: compliance, gaps, reg-feed-watcher
+      - Mevzuat Etki Analisti — pozisyon ajanı `06-mevzuat-etki-analisti.md` · skill: comments, gap-surfacer, policy-diff, reg-gap-analysis
+      - Mevzuat Takip Uzman Yardımcısı — pozisyon ajanı `06-mevzuat-takip-uzman-yardimcisi.md` · skill: reg-feed-watcher
+    - Ekip — Uyum Programları ve Politikalar: Uyum Programları ve Politikalar Yöneticisi — pozisyon ajanı `06-uyum-programlari-ve-politikalar-yoneticisi.md`
+      - Kıdemli Uyum Programı Uzmanı — pozisyon ajanı `06-kidemli-uyum-programi-uzmani.md`
+      - Uyum Politikaları Uzmanı — pozisyon ajanı `06-uyum-politikalari-uzmani.md` · skill: gap-surfacer, policy-redraft, policy-starter
+      - Politika ve Prosedür Yönetişimi Uzmanı — pozisyon ajanı `06-politika-ve-prosedur-yonetisimi-uzmani.md` · skill: policy-diff, policy-monitor, policy-redraft
+    - Ekip — Uyum Eğitimleri ve Farkındalık: Uyum Eğitimleri ve Farkındalık Yöneticisi — pozisyon ajanı `06-uyum-egitimleri-ve-farkindalik-yoneticisi.md`
+      - Uyum Eğitimleri Uzmanı — pozisyon ajanı `06-uyum-egitimleri-uzmani.md`
+      - Etik ve Uyum Farkındalık Uzmanı — pozisyon ajanı `06-etik-ve-uyum-farkindalik-uzmani.md`
+      - Uyum Eğitimleri Analisti — pozisyon ajanı `06-uyum-egitimleri-analisti.md`
+  - **Birim — Kurumsal Risk Yönetimi:** Kurumsal Risk Yönetimi Müdürü — pozisyon ajanı `06-kurumsal-risk-yonetimi-muduru.md`
+    - Ekip — Risk Envanteri ve Değerlendirme: Risk Envanteri ve Değerlendirme Yöneticisi — pozisyon ajanı `06-risk-envanteri-ve-degerlendirme-yoneticisi.md`
+      - Kıdemli Kurumsal Risk Uzmanı — pozisyon ajanı `06-kidemli-kurumsal-risk-uzmani.md`
+      - Kurumsal Risk Uzmanı — pozisyon ajanı `06-kurumsal-risk-uzmani.md`
+      - Risk Değerlendirme Analisti — pozisyon ajanı `06-risk-degerlendirme-analisti.md`
+      - Risk Veri Analisti — pozisyon ajanı `06-risk-veri-analisti.md`
+    - Ekip — Risk İştahı ve Göstergeler: Risk İştahı ve Göstergeler Yöneticisi — pozisyon ajanı `06-risk-istahi-ve-gostergeler-yoneticisi.md`
+      - Risk İştahı Uzmanı — pozisyon ajanı `06-risk-istahi-uzmani.md`
+      - Anahtar Risk Göstergeleri Uzmanı — pozisyon ajanı `06-anahtar-risk-gostergeleri-uzmani.md`
+      - Risk Modelleme Analisti — pozisyon ajanı `06-risk-modelleme-analisti.md`
+    - Ekip — Stratejik ve Operasyonel Risk: Stratejik ve Operasyonel Risk Yöneticisi — pozisyon ajanı `06-stratejik-ve-operasyonel-risk-yoneticisi.md`
+      - Stratejik Risk Uzmanı — pozisyon ajanı `06-stratejik-risk-uzmani.md`
+      - Operasyonel Risk Uzmanı — pozisyon ajanı `06-operasyonel-risk-uzmani.md` · skill: risk-assessment
+      - Proje ve Dönüşüm Riskleri Uzmanı — pozisyon ajanı `06-proje-ve-donusum-riskleri-uzmani.md`
+      - Yeni Ürün ve Hizmet Risk Analisti — pozisyon ajanı `06-yeni-urun-ve-hizmet-risk-analisti.md` · skill: feature-risk-assessment, launch-review
+  - **Birim — İç Kontrol ve Görevler Ayrılığı:** İç Kontrol Müdürü — pozisyon ajanı `06-ic-kontrol-muduru.md`
+    - Ekip — Kontrol Tasarımı ve Test: Kontrol Tasarımı ve Test Yöneticisi — pozisyon ajanı `06-kontrol-tasarimi-ve-test-yoneticisi.md`
+      - Kıdemli İç Kontrol Uzmanı — pozisyon ajanı `06-kidemli-ic-kontrol-uzmani.md`
+      - İç Kontrol Uzmanı — pozisyon ajanı `06-ic-kontrol-uzmani.md` · skill: audit-support, sox-testing
+      - Kontrol Test Analisti — pozisyon ajanı `06-kontrol-test-analisti.md` · skill: sox-testing
+      - Süreç Kontrol Uzmanı — pozisyon ajanı `06-surec-kontrol-uzmani.md`
+    - Ekip — Görevler Ayrılığı ve Yetki Kontrolleri: Görevler Ayrılığı ve Yetki Kontrolleri Yöneticisi — pozisyon ajanı `06-gorevler-ayriligi-ve-yetki-kontrolleri-yoneticisi.md`
+      - Görevler Ayrılığı Uzmanı — pozisyon ajanı `06-gorevler-ayriligi-uzmani.md`
+      - Yetki Matrisi Kontrol Uzmanı — pozisyon ajanı `06-yetki-matrisi-kontrol-uzmani.md`
+      - Erişim ve Rol Kontrolleri Uzmanı — pozisyon ajanı `06-erisim-ve-rol-kontrolleri-uzmani.md`
+      - ERP Kontrol Analisti — pozisyon ajanı `06-erp-kontrol-analisti.md`
+    - Ekip — İç Kontrol Aksiyon Yönetimi: İç Kontrol Aksiyon Yönetimi Yöneticisi — pozisyon ajanı `06-ic-kontrol-aksiyon-yonetimi-yoneticisi.md`
+      - Kontrol İyileştirme Uzmanı — pozisyon ajanı `06-kontrol-iyilestirme-uzmani.md`
+      - Bulgular ve Aksiyon Takip Uzmanı — pozisyon ajanı `06-bulgular-ve-aksiyon-takip-uzmani.md`
+      - Kontrol Dokümantasyon Uzmanı — pozisyon ajanı `06-kontrol-dokumantasyon-uzmani.md`
+  - **Birim — Etik, İhbar ve Suistimal Önleme:** Etik ve Suistimal Önleme Müdürü — pozisyon ajanı `06-etik-ve-suistimal-onleme-muduru.md`
+    - Ekip — Etik ve İhbar Yönetimi: Etik ve İhbar Yönetimi Yöneticisi — pozisyon ajanı `06-etik-ve-ihbar-yonetimi-yoneticisi.md`
+      - Etik ve Uyum Uzmanı — pozisyon ajanı `06-etik-ve-uyum-uzmani.md`
+      - İhbar Hattı Yönetimi Uzmanı — pozisyon ajanı `06-ihbar-hatti-yonetimi-uzmani.md`
+      - Etik Vaka Analisti — pozisyon ajanı `06-etik-vaka-analisti.md` · skill: investigation-add, investigation-query
+    - Ekip — Suistimal Önleme: Suistimal Önleme Yöneticisi — pozisyon ajanı `06-suistimal-onleme-yoneticisi.md`
+      - Kıdemli Suistimal Risk Uzmanı — pozisyon ajanı `06-kidemli-suistimal-risk-uzmani.md`
+      - Suistimal Önleme Uzmanı — pozisyon ajanı `06-suistimal-onleme-uzmani.md`
+      - Suistimal Veri Analisti — pozisyon ajanı `06-suistimal-veri-analisti.md`
+      - Finansal Suistimal Kontrol Uzmanı — pozisyon ajanı `06-finansal-suistimal-kontrol-uzmani.md`
+    - Ekip — Çıkar Çatışması ve Etik İnceleme: Çıkar Çatışması ve Etik İnceleme Yöneticisi — pozisyon ajanı `06-cikar-catismasi-ve-etik-inceleme-yoneticisi.md`
+      - Çıkar Çatışması Uzmanı — pozisyon ajanı `06-cikar-catismasi-uzmani.md`
+      - Hediye ve Ağırlama Kontrol Uzmanı — pozisyon ajanı `06-hediye-ve-agirlama-kontrol-uzmani.md`
+      - Etik İnceleme Uzmanı — pozisyon ajanı `06-etik-inceleme-uzmani.md` · skill: internal-investigation, investigation-memo, investigation-open, investigation-summary
+  - **Birim — Üçüncü Taraf Uyum ve Risk Yönetimi:** Üçüncü Taraf Uyum ve Risk Müdürü — pozisyon ajanı `06-ucuncu-taraf-uyum-ve-risk-muduru.md`
+    - Ekip — Tedarikçi ve İş Ortağı Uyumu: Tedarikçi ve İş Ortağı Uyumu Yöneticisi — pozisyon ajanı `06-tedarikci-ve-is-ortagi-uyumu-yoneticisi.md`
+      - Tedarikçi Uyum Uzmanı — pozisyon ajanı `06-tedarikci-uyum-uzmani.md`
+      - İş Ortağı Uyum Uzmanı — pozisyon ajanı `06-is-ortagi-uyum-uzmani.md`
+      - Bayi ve Aracı Uyum Uzmanı — pozisyon ajanı `06-bayi-ve-araci-uyum-uzmani.md`
+    - Ekip — Uyum Durum Tespiti ve Tarama: Uyum Durum Tespiti ve Tarama Yöneticisi — pozisyon ajanı `06-uyum-durum-tespiti-ve-tarama-yoneticisi.md`
+      - Kıdemli Durum Tespiti Uzmanı — pozisyon ajanı `06-kidemli-durum-tespiti-uzmani.md` · skill: diligence-issue-extraction, kyc-doc-parse
+      - Uyum Tarama Uzmanı — pozisyon ajanı `06-uyum-tarama-uzmani.md` · skill: kyc-doc-parse, kyc-rules, xlsx-author
+      - Yaptırım ve Kısıtlı Taraf Tarama Uzmanı — pozisyon ajanı `06-yaptirim-ve-kisitli-taraf-tarama-uzmani.md` · skill: kyc-rules
+      - Üçüncü Taraf Araştırma Analisti — pozisyon ajanı `06-ucuncu-taraf-arastirma-analisti.md`
+    - Ekip — Üçüncü Taraf Risk İzleme: Üçüncü Taraf Risk İzleme Yöneticisi — pozisyon ajanı `06-ucuncu-taraf-risk-izleme-yoneticisi.md`
+      - Üçüncü Taraf Risk Uzmanı — pozisyon ajanı `06-ucuncu-taraf-risk-uzmani.md`
+      - Tedarikçi Risk Analisti — pozisyon ajanı `06-tedarikci-risk-analisti.md` · skill: vendor-ai-review, vendor-review
+      - Uyum Taahhütleri Takip Uzmanı — pozisyon ajanı `06-uyum-taahhutleri-takip-uzmani.md`
+  - **Birim — KVKK ve Veri Koruma Uyumu:** KVKK ve Veri Koruma Uyum Müdürü — pozisyon ajanı `06-kvkk-ve-veri-koruma-uyum-muduru.md`
+    - Ekip — Veri Koruma Uyum Programı: Veri Koruma Uyum Programı Yöneticisi — pozisyon ajanı `06-veri-koruma-uyum-programi-yoneticisi.md`
+      - Kıdemli Veri Koruma Uyum Uzmanı — pozisyon ajanı `06-kidemli-veri-koruma-uyum-uzmani.md` · skill: pia-generation, policy-monitor
+      - KVKK Uyum Uzmanı — pozisyon ajanı `06-kvkk-uyum-uzmani.md` · skill: compliance-check, use-case-triage
+      - GDPR Uyum Uzmanı — pozisyon ajanı `06-gdpr-uyum-uzmani.md` · skill: reg-gap-analysis
+    - Ekip — Veri Envanteri ve Kontroller: Veri Envanteri ve Kontroller Yöneticisi — pozisyon ajanı `06-veri-envanteri-ve-kontroller-yoneticisi.md`
+      - Veri Envanteri Uzmanı — pozisyon ajanı `06-veri-envanteri-uzmani.md`
+      - Kişisel Veri Süreç Analisti — pozisyon ajanı `06-kisisel-veri-surec-analisti.md` · skill: pia-generation
+      - Saklama ve İmha Kontrol Uzmanı — pozisyon ajanı `06-saklama-ve-imha-kontrol-uzmani.md`
+      - Veri İşleyen Uyum Uzmanı — pozisyon ajanı `06-veri-isleyen-uyum-uzmani.md` · skill: dpa-review
+    - Ekip — Başvuru ve İhlal Koordinasyonu: Başvuru ve İhlal Koordinasyon Yöneticisi — pozisyon ajanı `06-basvuru-ve-ihlal-koordinasyon-yoneticisi.md`
+      - İlgili Kişi Başvuru Koordinasyon Uzmanı — pozisyon ajanı `06-ilgili-kisi-basvuru-koordinasyon-uzmani.md` · skill: dsar-response
+      - Veri İhlali Koordinasyon Uzmanı — pozisyon ajanı `06-veri-ihlali-koordinasyon-uzmani.md`
+      - Veri Koruma Kayıt ve Raporlama Uzmanı — pozisyon ajanı `06-veri-koruma-kayit-ve-raporlama-uzmani.md`
+  - **Birim — İş Sürekliliği ve Kriz Riskleri:** İş Sürekliliği ve Kurumsal Dayanıklılık Müdürü — pozisyon ajanı `06-is-surekliligi-ve-kurumsal-dayaniklilik-muduru.md`
+    - Ekip — İş Etki Analizi: İş Etki Analizi Yöneticisi — pozisyon ajanı `06-is-etki-analizi-yoneticisi.md`
+      - İş Etki Analizi Uzmanı — pozisyon ajanı `06-is-etki-analizi-uzmani.md`
+      - Kritik Süreç Analisti — pozisyon ajanı `06-kritik-surec-analisti.md`
+      - Bağımlılık ve Kaynak Analisti — pozisyon ajanı `06-bagimlilik-ve-kaynak-analisti.md`
+    - Ekip — İş Sürekliliği Yönetimi: İş Sürekliliği Yönetimi Yöneticisi — pozisyon ajanı `06-is-surekliligi-yonetimi-yoneticisi.md`
+      - Kıdemli İş Sürekliliği Uzmanı — pozisyon ajanı `06-kidemli-is-surekliligi-uzmani.md`
+      - İş Sürekliliği Planlama Uzmanı — pozisyon ajanı `06-is-surekliligi-planlama-uzmani.md`
+      - Kurtarma Stratejileri Uzmanı — pozisyon ajanı `06-kurtarma-stratejileri-uzmani.md`
+    - Ekip — Kriz Tatbikatları ve Dayanıklılık: Kriz Tatbikatları ve Dayanıklılık Yöneticisi — pozisyon ajanı `06-kriz-tatbikatlari-ve-dayaniklilik-yoneticisi.md`
+      - Kriz Yönetimi Uzmanı — pozisyon ajanı `06-kriz-yonetimi-uzmani.md`
+      - Tatbikat ve Test Uzmanı — pozisyon ajanı `06-tatbikat-ve-test-uzmani.md`
+      - Kurumsal Dayanıklılık Analisti — pozisyon ajanı `06-kurumsal-dayaniklilik-analisti.md`
+  - **Birim — Uyum Operasyonları, İzleme ve Raporlama:** Uyum Operasyonları ve Raporlama Müdürü — pozisyon ajanı `06-uyum-operasyonlari-ve-raporlama-muduru.md`
+    - Ekip — Uyum İzleme ve Test: Uyum İzleme ve Test Yöneticisi — pozisyon ajanı `06-uyum-izleme-ve-test-yoneticisi.md`
+      - Kıdemli Uyum İzleme Uzmanı — pozisyon ajanı `06-kidemli-uyum-izleme-uzmani.md` · skill: compliance-tracking
+      - Uyum Test Uzmanı — pozisyon ajanı `06-uyum-test-uzmani.md`
+      - Uyum Kontrol Analisti — pozisyon ajanı `06-uyum-kontrol-analisti.md`
+      - Uyum Bulguları Takip Uzmanı — pozisyon ajanı `06-uyum-bulgulari-takip-uzmani.md` · skill: compliance-tracking, gaps
+    - Ekip — Risk ve Uyum Raporlama: Risk ve Uyum Raporlama Yöneticisi — pozisyon ajanı `06-risk-ve-uyum-raporlama-yoneticisi.md`
+      - Risk ve Uyum Raporlama Uzmanı — pozisyon ajanı `06-risk-ve-uyum-raporlama-uzmani.md`
+      - Yönetim Kurulu Raporlama Uzmanı — pozisyon ajanı `06-yonetim-kurulu-raporlama-uzmani.md`
+      - Risk Veri Analisti — pozisyon ajanı `06-risk-veri-analisti-2.md`
+      - KRI ve KPI Raporlama Uzmanı — pozisyon ajanı `06-kri-ve-kpi-raporlama-uzmani.md`
+    - Ekip — GRC Sistemleri ve Veri Yönetimi: GRC Sistemleri ve Veri Yönetimi Yöneticisi — pozisyon ajanı `06-grc-sistemleri-ve-veri-yonetimi-yoneticisi.md`
+      - GRC Sistemleri Uzmanı — pozisyon ajanı `06-grc-sistemleri-uzmani.md`
+      - Risk ve Kontrol Veri Uzmanı — pozisyon ajanı `06-risk-ve-kontrol-veri-uzmani.md`
+      - Uyum Otomasyonu Uzmanı — pozisyon ajanı `06-uyum-otomasyonu-uzmani.md`
+      - GRC Raporlama Analisti — pozisyon ajanı `06-grc-raporlama-analisti.md` · skill: xlsx-author
+
+## 07 - İç Denetim
+8 birim · 131 pozisyon · katalog ajanlı 0 · pozisyon ajanı 131
+
+- Bağlı olduğu: Genel Müdür / CEO · fonksiyonel: Yönetim Kurulu Denetim Komitesi
+- **Departman lideri:** İç Denetim Direktörü — pozisyon ajanı `07-ic-denetim-direktoru.md`
+  - İç Denetim Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `07-ic-denetim-direktor-yardimcisi.md`
+  - Baş Denetçi _(Karmaşık ve yüksek riskli denetimler için opsiyonel)_ — pozisyon ajanı `07-bas-denetci.md`
+  - Denetim Komitesi Raporlama Uzmanı — pozisyon ajanı `07-denetim-komitesi-raporlama-uzmani.md`
+  - **Birim — Denetim Planlama ve Metodoloji:** Denetim Planlama ve Metodoloji Müdürü — pozisyon ajanı `07-denetim-planlama-ve-metodoloji-muduru.md`
+    - Ekip — Risk Değerlendirme ve Planlama: Denetim Risk Değerlendirme ve Planlama Yöneticisi — pozisyon ajanı `07-denetim-risk-degerlendirme-ve-planlama-yoneticisi.md`
+      - Kıdemli Denetim Planlama Uzmanı — pozisyon ajanı `07-kidemli-denetim-planlama-uzmani.md`
+      - Denetim Risk Değerlendirme Uzmanı — pozisyon ajanı `07-denetim-risk-degerlendirme-uzmani.md`
+      - Denetim Evreni ve Kapsam Analisti — pozisyon ajanı `07-denetim-evreni-ve-kapsam-analisti.md`
+      - Kaynak ve Denetim Takvimi Uzmanı — pozisyon ajanı `07-kaynak-ve-denetim-takvimi-uzmani.md`
+    - Ekip — Denetim Metodolojisi: Denetim Metodolojisi Yöneticisi — pozisyon ajanı `07-denetim-metodolojisi-yoneticisi.md`
+      - Kıdemli Denetim Metodolojisi Uzmanı — pozisyon ajanı `07-kidemli-denetim-metodolojisi-uzmani.md`
+      - Denetim Standartları Uzmanı — pozisyon ajanı `07-denetim-standartlari-uzmani.md`
+      - Çalışma Kâğıtları ve Dokümantasyon Uzmanı — pozisyon ajanı `07-calisma-kagitlari-ve-dokumantasyon-uzmani.md`
+    - Ekip — Denetim Analitiği ve Sürekli Denetim: Denetim Analitiği ve Sürekli Denetim Yöneticisi — pozisyon ajanı `07-denetim-analitigi-ve-surekli-denetim-yoneticisi.md`
+      - Kıdemli Denetim Veri Analisti — pozisyon ajanı `07-kidemli-denetim-veri-analisti.md` · skill: xlsx-author
+      - Sürekli Denetim Uzmanı — pozisyon ajanı `07-surekli-denetim-uzmani.md`
+      - Denetim Otomasyonu Uzmanı — pozisyon ajanı `07-denetim-otomasyonu-uzmani.md`
+      - Denetim Analitiği Geliştiricisi — pozisyon ajanı `07-denetim-analitigi-gelistiricisi.md`
+  - **Birim — Finansal Denetim:** Finansal Denetim Müdürü — pozisyon ajanı `07-finansal-denetim-muduru.md`
+    - Ekip — Finansal Raporlama Denetimi: Finansal Raporlama Denetimi Yöneticisi — pozisyon ajanı `07-finansal-raporlama-denetimi-yoneticisi.md`
+      - Kıdemli Finansal Denetçi — pozisyon ajanı `07-kidemli-finansal-denetci.md` · skill: audit-xls
+      - Finansal Denetçi — pozisyon ajanı `07-finansal-denetci.md` · skill: audit-xls, xlsx-author
+      - Konsolidasyon Denetim Uzmanı — pozisyon ajanı `07-konsolidasyon-denetim-uzmani.md`
+      - Finansal Raporlama Kontrol Analisti — pozisyon ajanı `07-finansal-raporlama-kontrol-analisti.md` · skill: audit-support
+    - Ekip — Muhasebe ve Mali Süreçler Denetimi: Muhasebe ve Mali Süreçler Denetimi Yöneticisi — pozisyon ajanı `07-muhasebe-ve-mali-surecler-denetimi-yoneticisi.md`
+      - Kıdemli Muhasebe Süreçleri Denetçisi — pozisyon ajanı `07-kidemli-muhasebe-surecleri-denetcisi.md`
+      - Muhasebe Süreçleri Denetçisi — pozisyon ajanı `07-muhasebe-surecleri-denetcisi.md`
+      - Vergi Süreçleri Denetim Uzmanı — pozisyon ajanı `07-vergi-surecleri-denetim-uzmani.md`
+      - E-Belge ve Mali Sistemler Denetçisi — pozisyon ajanı `07-e-belge-ve-mali-sistemler-denetcisi.md`
+    - Ekip — Hazine ve Finans Denetimi: Hazine ve Finans Denetimi Yöneticisi — pozisyon ajanı `07-hazine-ve-finans-denetimi-yoneticisi.md`
+      - Kıdemli Hazine Denetçisi — pozisyon ajanı `07-kidemli-hazine-denetcisi.md`
+      - Hazine ve Nakit Yönetimi Denetçisi — pozisyon ajanı `07-hazine-ve-nakit-yonetimi-denetcisi.md`
+      - Finansman ve Banka Süreçleri Denetçisi — pozisyon ajanı `07-finansman-ve-banka-surecleri-denetcisi.md`
+      - Finansal Risk Kontrolleri Denetçisi — pozisyon ajanı `07-finansal-risk-kontrolleri-denetcisi.md`
+  - **Birim — Operasyonel Denetim:** Operasyonel Denetim Müdürü — pozisyon ajanı `07-operasyonel-denetim-muduru.md`
+    - Ekip — Süreç ve Operasyon Denetimi: Süreç ve Operasyon Denetimi Yöneticisi — pozisyon ajanı `07-surec-ve-operasyon-denetimi-yoneticisi.md`
+      - Kıdemli Operasyonel Denetçi — pozisyon ajanı `07-kidemli-operasyonel-denetci.md`
+      - Operasyonel Denetçi — pozisyon ajanı `07-operasyonel-denetci.md`
+      - Süreç Verimliliği Denetçisi — pozisyon ajanı `07-surec-verimliligi-denetcisi.md`
+      - SLA ve Hizmet Kalitesi Denetçisi — pozisyon ajanı `07-sla-ve-hizmet-kalitesi-denetcisi.md`
+    - Ekip — Tedarik Zinciri ve Lojistik Denetimi: Tedarik Zinciri ve Lojistik Denetimi Yöneticisi — pozisyon ajanı `07-tedarik-zinciri-ve-lojistik-denetimi-yoneticisi.md`
+      - Kıdemli Tedarik Zinciri Denetçisi — pozisyon ajanı `07-kidemli-tedarik-zinciri-denetcisi.md`
+      - Satın Alma Denetçisi — pozisyon ajanı `07-satin-alma-denetcisi.md`
+      - Stok ve Depo Denetçisi — pozisyon ajanı `07-stok-ve-depo-denetcisi.md`
+      - Lojistik ve Sevkiyat Denetçisi — pozisyon ajanı `07-lojistik-ve-sevkiyat-denetcisi.md`
+    - Ekip — Müşteri ve Ticari Süreçler Denetimi: Müşteri ve Ticari Süreçler Denetimi Yöneticisi — pozisyon ajanı `07-musteri-ve-ticari-surecler-denetimi-yoneticisi.md`
+      - Satış Süreçleri Denetçisi — pozisyon ajanı `07-satis-surecleri-denetcisi.md`
+      - Fiyatlandırma ve İskonto Denetçisi — pozisyon ajanı `07-fiyatlandirma-ve-iskonto-denetcisi.md`
+      - Müşteri ve Tahsilat Süreçleri Denetçisi — pozisyon ajanı `07-musteri-ve-tahsilat-surecleri-denetcisi.md`
+      - Satış Sonrası Hizmetler Denetçisi — pozisyon ajanı `07-satis-sonrasi-hizmetler-denetcisi.md`
+  - **Birim — BT, Siber Güvenlik ve Veri Denetimi:** BT ve Siber Güvenlik Denetim Müdürü — pozisyon ajanı `07-bt-ve-siber-guvenlik-denetim-muduru.md`
+    - Ekip — BT Genel Kontroller Denetimi: BT Genel Kontroller Denetimi Yöneticisi — pozisyon ajanı `07-bt-genel-kontroller-denetimi-yoneticisi.md`
+      - Kıdemli BT Denetçisi — pozisyon ajanı `07-kidemli-bt-denetcisi.md`
+      - BT Genel Kontroller Denetçisi — pozisyon ajanı `07-bt-genel-kontroller-denetcisi.md`
+      - Erişim ve Yetki Denetçisi — pozisyon ajanı `07-erisim-ve-yetki-denetcisi.md`
+      - Değişiklik ve Sürüm Yönetimi Denetçisi — pozisyon ajanı `07-degisiklik-ve-surum-yonetimi-denetcisi.md`
+    - Ekip — Siber Güvenlik Denetimi: Siber Güvenlik Denetimi Yöneticisi — pozisyon ajanı `07-siber-guvenlik-denetimi-yoneticisi.md`
+      - Kıdemli Siber Güvenlik Denetçisi — pozisyon ajanı `07-kidemli-siber-guvenlik-denetcisi.md`
+      - Siber Güvenlik Denetçisi — pozisyon ajanı `07-siber-guvenlik-denetcisi.md`
+      - Bulut Güvenliği Denetçisi — pozisyon ajanı `07-bulut-guvenligi-denetcisi.md`
+      - Olay Müdahale ve SOC Denetçisi — pozisyon ajanı `07-olay-mudahale-ve-soc-denetcisi.md`
+    - Ekip — Veri, Yapay Zekâ ve Dijital Sistemler Denetimi: Veri ve Yapay Zekâ Denetimi Yöneticisi — pozisyon ajanı `07-veri-ve-yapay-zeka-denetimi-yoneticisi.md`
+      - Veri Yönetişimi Denetçisi — pozisyon ajanı `07-veri-yonetisimi-denetcisi.md`
+      - Yapay Zekâ Sistemleri Denetçisi — pozisyon ajanı `07-yapay-zeka-sistemleri-denetcisi.md`
+      - Algoritma ve Model Risk Denetçisi — pozisyon ajanı `07-algoritma-ve-model-risk-denetcisi.md`
+      - Dijital Platformlar Denetçisi — pozisyon ajanı `07-dijital-platformlar-denetcisi.md`
+  - **Birim — Uyum ve Düzenleyici Denetim:** Uyum ve Düzenleyici Denetim Müdürü — pozisyon ajanı `07-uyum-ve-duzenleyici-denetim-muduru.md`
+    - Ekip — Mevzuat ve Uyum Denetimi: Mevzuat ve Uyum Denetimi Yöneticisi — pozisyon ajanı `07-mevzuat-ve-uyum-denetimi-yoneticisi.md`
+      - Kıdemli Uyum Denetçisi — pozisyon ajanı `07-kidemli-uyum-denetcisi.md`
+      - Uyum Denetçisi — pozisyon ajanı `07-uyum-denetcisi.md`
+      - Mevzuat Kontrolleri Denetçisi — pozisyon ajanı `07-mevzuat-kontrolleri-denetcisi.md`
+      - Uyum Programı Etkinlik Analisti — pozisyon ajanı `07-uyum-programi-etkinlik-analisti.md`
+    - Ekip — KVKK ve Veri Koruma Denetimi: Veri Koruma Denetimi Yöneticisi — pozisyon ajanı `07-veri-koruma-denetimi-yoneticisi.md`
+      - Kıdemli Veri Koruma Denetçisi — pozisyon ajanı `07-kidemli-veri-koruma-denetcisi.md`
+      - KVKK Denetçisi — pozisyon ajanı `07-kvkk-denetcisi.md`
+      - GDPR Denetçisi — pozisyon ajanı `07-gdpr-denetcisi.md`
+      - Veri Yaşam Döngüsü Denetçisi — pozisyon ajanı `07-veri-yasam-dongusu-denetcisi.md`
+    - Ekip — Etik ve Üçüncü Taraf Uyum Denetimi: Etik ve Üçüncü Taraf Uyum Denetimi Yöneticisi — pozisyon ajanı `07-etik-ve-ucuncu-taraf-uyum-denetimi-yoneticisi.md`
+      - Etik Program Denetçisi — pozisyon ajanı `07-etik-program-denetcisi.md`
+      - İhbar Mekanizması Denetçisi — pozisyon ajanı `07-ihbar-mekanizmasi-denetcisi.md`
+      - Üçüncü Taraf Uyum Denetçisi — pozisyon ajanı `07-ucuncu-taraf-uyum-denetcisi.md`
+      - Yaptırım ve Durum Tespiti Denetçisi — pozisyon ajanı `07-yaptirim-ve-durum-tespiti-denetcisi.md`
+  - **Birim — Suistimal İncelemeleri ve Özel Denetimler:** Suistimal İncelemeleri ve Özel Denetimler Müdürü — pozisyon ajanı `07-suistimal-incelemeleri-ve-ozel-denetimler-muduru.md`
+    - Ekip — Suistimal İncelemeleri: Suistimal İncelemeleri Yöneticisi — pozisyon ajanı `07-suistimal-incelemeleri-yoneticisi.md`
+      - Kıdemli Suistimal İnceleme Uzmanı — pozisyon ajanı `07-kidemli-suistimal-inceleme-uzmani.md`
+      - Suistimal İnceleme Uzmanı — pozisyon ajanı `07-suistimal-inceleme-uzmani.md`
+      - Finansal Suistimal İnceleme Uzmanı — pozisyon ajanı `07-finansal-suistimal-inceleme-uzmani.md`
+      - Vaka Dokümantasyon Uzmanı — pozisyon ajanı `07-vaka-dokumantasyon-uzmani.md`
+    - Ekip — Özel İncelemeler: Özel İncelemeler Yöneticisi — pozisyon ajanı `07-ozel-incelemeler-yoneticisi.md`
+      - Kıdemli Özel İnceleme Uzmanı — pozisyon ajanı `07-kidemli-ozel-inceleme-uzmani.md`
+      - Özel İnceleme Uzmanı — pozisyon ajanı `07-ozel-inceleme-uzmani.md`
+      - Etik Vaka İnceleme Uzmanı — pozisyon ajanı `07-etik-vaka-inceleme-uzmani.md`
+      - Araştırma ve İstihbarat Analisti — pozisyon ajanı `07-arastirma-ve-istihbarat-analisti.md`
+    - Ekip — Adli Veri Analitiği: Adli Veri Analitiği Yöneticisi — pozisyon ajanı `07-adli-veri-analitigi-yoneticisi.md`
+      - Kıdemli Adli Veri Analisti — pozisyon ajanı `07-kidemli-adli-veri-analisti.md`
+      - Adli Veri Analisti — pozisyon ajanı `07-adli-veri-analisti.md`
+      - Dijital İnceleme Uzmanı — pozisyon ajanı `07-dijital-inceleme-uzmani.md`
+      - Suistimal Analitiği Geliştiricisi — pozisyon ajanı `07-suistimal-analitigi-gelistiricisi.md`
+  - **Birim — Grup Şirketleri ve İştirak Denetimleri:** Grup Şirketleri Denetim Müdürü — pozisyon ajanı `07-grup-sirketleri-denetim-muduru.md`
+    - Ekip — İştirak ve Şirket Denetimleri: İştirak ve Şirket Denetimleri Yöneticisi — pozisyon ajanı `07-istirak-ve-sirket-denetimleri-yoneticisi.md`
+      - Kıdemli İştirak Denetçisi — pozisyon ajanı `07-kidemli-istirak-denetcisi.md`
+      - İştirak Denetçisi — pozisyon ajanı `07-istirak-denetcisi.md`
+      - Grup Politikaları Uyum Denetçisi — pozisyon ajanı `07-grup-politikalari-uyum-denetcisi.md`
+      - İştirak Risk Analisti — pozisyon ajanı `07-istirak-risk-analisti.md`
+    - Ekip — Şube ve Lokasyon Denetimleri: Şube ve Lokasyon Denetimleri Yöneticisi — pozisyon ajanı `07-sube-ve-lokasyon-denetimleri-yoneticisi.md`
+      - Kıdemli Saha Denetçisi — pozisyon ajanı `07-kidemli-saha-denetcisi.md`
+      - Şube Denetçisi — pozisyon ajanı `07-sube-denetcisi.md`
+      - Lokasyon ve Tesis Denetçisi — pozisyon ajanı `07-lokasyon-ve-tesis-denetcisi.md`
+      - Saha Denetim Analisti — pozisyon ajanı `07-saha-denetim-analisti.md`
+    - Ekip — Yurt Dışı Operasyon Denetimleri: Yurt Dışı Operasyon Denetimleri Yöneticisi — pozisyon ajanı `07-yurt-disi-operasyon-denetimleri-yoneticisi.md`
+      - Kıdemli Uluslararası Denetçi — pozisyon ajanı `07-kidemli-uluslararasi-denetci.md`
+      - Uluslararası Operasyon Denetçisi — pozisyon ajanı `07-uluslararasi-operasyon-denetcisi.md`
+      - Yerel Mevzuat Kontrolleri Denetçisi — pozisyon ajanı `07-yerel-mevzuat-kontrolleri-denetcisi.md`
+      - Yurt Dışı İştirak Analisti — pozisyon ajanı `07-yurt-disi-istirak-analisti.md`
+  - **Birim — Kalite Güvence, Bulgular ve Raporlama:** İç Denetim Kalite Güvence ve Raporlama Müdürü — pozisyon ajanı `07-ic-denetim-kalite-guvence-ve-raporlama-muduru.md`
+    - Ekip — Denetim Kalite Güvence: Denetim Kalite Güvence Yöneticisi — pozisyon ajanı `07-denetim-kalite-guvence-yoneticisi.md`
+      - Kıdemli Kalite Güvence Uzmanı — pozisyon ajanı `07-kidemli-kalite-guvence-uzmani.md`
+      - Denetim Kalite Güvence Uzmanı — pozisyon ajanı `07-denetim-kalite-guvence-uzmani.md`
+      - Denetim Dosyası İnceleme Uzmanı — pozisyon ajanı `07-denetim-dosyasi-inceleme-uzmani.md`
+      - Mesleki Standartlar Uzmanı — pozisyon ajanı `07-mesleki-standartlar-uzmani.md`
+    - Ekip — Bulgu ve Aksiyon Takibi: Bulgu ve Aksiyon Takibi Yöneticisi — pozisyon ajanı `07-bulgu-ve-aksiyon-takibi-yoneticisi.md`
+      - Kıdemli Bulgu Takip Uzmanı — pozisyon ajanı `07-kidemli-bulgu-takip-uzmani.md`
+      - Düzeltici Aksiyon Takip Uzmanı — pozisyon ajanı `07-duzeltici-aksiyon-takip-uzmani.md`
+      - Bulgu Doğrulama Denetçisi — pozisyon ajanı `07-bulgu-dogrulama-denetcisi.md`
+      - Gecikmiş Aksiyon Raporlama Analisti — pozisyon ajanı `07-gecikmis-aksiyon-raporlama-analisti.md`
+    - Ekip — Yönetim ve Komite Raporlaması: Yönetim ve Komite Raporlaması Yöneticisi — pozisyon ajanı `07-yonetim-ve-komite-raporlamasi-yoneticisi.md`
+      - Denetim Komitesi Raporlama Uzmanı — pozisyon ajanı `07-denetim-komitesi-raporlama-uzmani-2.md`
+      - Yönetim Raporlama Uzmanı — pozisyon ajanı `07-yonetim-raporlama-uzmani.md`
+      - Denetim Veri ve Dashboard Uzmanı — pozisyon ajanı `07-denetim-veri-ve-dashboard-uzmani.md`
+      - Denetim Portföyü Analisti — pozisyon ajanı `07-denetim-portfoyu-analisti.md`
+
+## 08 - Satış ve Gelir Yönetimi
+8 birim · 132 pozisyon · katalog ajanlı 6 · pozisyon ajanı 126
+
+- Bağlı olduğu: Ticari İşler Başkanı / CCO
+- **Departman lideri:** Satış ve Gelir Yönetimi Direktörü — pozisyon ajanı `08-satis-ve-gelir-yonetimi-direktoru.md`
+  - Satış Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `08-satis-direktor-yardimcisi.md`
+  - Kurumsal Satış Direktörü _(Büyük ölçekli yapılarda opsiyonel)_ — pozisyon ajanı `08-kurumsal-satis-direktoru.md`
+  - Gelir Operasyonları Direktörü _(Büyük ölçekli yapılarda opsiyonel)_ — pozisyon ajanı `08-gelir-operasyonlari-direktoru.md`
+  - **Birim — Satış Stratejisi ve Gelir Operasyonları:** Satış Stratejisi ve Gelir Operasyonları Müdürü — pozisyon ajanı `08-satis-stratejisi-ve-gelir-operasyonlari-muduru.md`
+    - Ekip — CRM ve Pipeline Yönetimi: CRM ve Pipeline Yönetimi Yöneticisi — pozisyon ajanı `08-crm-ve-pipeline-yonetimi-yoneticisi.md` · skill: compliance-check, lead-formu, team-pipeline
+      - Kıdemli CRM Uzmanı — pozisyon ajanı `08-kidemli-crm-uzmani.md` · skill: crm-hygiene-check
+      - CRM Süreç Uzmanı — pozisyon ajanı `08-crm-surec-uzmani.md`
+      - Pipeline Yönetimi Uzmanı — pozisyon ajanı `08-pipeline-yonetimi-uzmani.md` · ürün içi görev: **Satış Takip Hatırlatıcı** · skill: brand-review, crm-autopilot, deal-review, deal-signals, pipeline-review, update-opportunity
+      - CRM Veri Kalitesi Analisti — pozisyon ajanı `08-crm-veri-kalitesi-analisti.md` · skill: crm-autopilot, crm-hygiene-check, enrich-lead
+    - Ekip — Gelir Operasyonları: Gelir Operasyonları Yöneticisi — pozisyon ajanı `08-gelir-operasyonlari-yoneticisi.md`
+      - Kıdemli Gelir Operasyonları Uzmanı — pozisyon ajanı `08-kidemli-gelir-operasyonlari-uzmani.md`
+      - Gelir Operasyonları Uzmanı — pozisyon ajanı `08-gelir-operasyonlari-uzmani.md`
+      - Lead Yönlendirme Uzmanı — pozisyon ajanı `08-lead-yonlendirme-uzmani.md` · skill: lead-formu, lead-triage, route-lead, speed-to-lead
+      - Satış Süreçleri Analisti — pozisyon ajanı `08-satis-surecleri-analisti.md`
+    - Ekip — Satış Veri ve Analitiği: Satış Veri ve Analitiği Yöneticisi — pozisyon ajanı `08-satis-veri-ve-analitigi-yoneticisi.md`
+      - Kıdemli Satış Veri Analisti — pozisyon ajanı `08-kidemli-satis-veri-analisti.md`
+      - Satış Performans Analisti — pozisyon ajanı `08-satis-performans-analisti.md` · skill: win-loss-review
+      - Dönüşüm ve Funnel Analisti — pozisyon ajanı `08-donusum-ve-funnel-analisti.md`
+      - Satış BI Uzmanı — pozisyon ajanı `08-satis-bi-uzmani.md`
+  - **Birim — Kurumsal Satış:** Kurumsal Satış Müdürü — pozisyon ajanı `08-kurumsal-satis-muduru.md`
+    - Ekip — Kurumsal Müşteri Kazanımı: Kurumsal Müşteri Kazanımı Yöneticisi — pozisyon ajanı `08-kurumsal-musteri-kazanimi-yoneticisi.md` · skill: rep-context, team-pipeline
+      - Kıdemli Kurumsal Satış Yöneticisi — pozisyon ajanı `08-kidemli-kurumsal-satis-yoneticisi.md` · skill: close-plan, deal-advance-gap, deal-review, stakeholder-map
+      - Kurumsal Satış Yöneticisi — pozisyon ajanı `08-kurumsal-satis-yoneticisi.md` · skill: call-prep, call-summary, close-plan, competitive-intelligence, daily-briefing, deal-advance-gap, deal-signals, end-of-day, handle-objection, inbox-sweep, update-opportunity, weekly-wrap
+      - Kurumsal Satış Uzmanı — pozisyon ajanı `08-kurumsal-satis-uzmani.md` · skill: account-research, log-activity
+      - Satış Geliştirme Temsilcisi — pozisyon ajanı `08-satis-gelistirme-temsilcisi.md` · ürün içi görev: **Şirket Araştırma (Mining) Ajanı** · skill: account-research, compliance-check, draft-outreach, enrich-lead, lead-finder, outreach-composer, prospect, sequence-load
+    - Ekip — Stratejik Müşteriler: Stratejik Müşteriler Satış Yöneticisi — pozisyon ajanı `08-stratejik-musteriler-satis-yoneticisi.md`
+      - Stratejik Müşteri Direktörü — pozisyon ajanı `08-stratejik-musteri-direktoru.md`
+      - Kıdemli Stratejik Müşteri Yöneticisi — pozisyon ajanı `08-kidemli-stratejik-musteri-yoneticisi.md` · skill: account-plan
+      - Stratejik Müşteri Yöneticisi — pozisyon ajanı `08-stratejik-musteri-yoneticisi.md` · skill: account-context, account-plan, call-prep, daily-briefing, stakeholder-map
+      - Müşteri Ticari Analisti — pozisyon ajanı `08-musteri-ticari-analisti.md` · skill: account-tiering
+    - Ekip — Çapraz Satış ve Yeni Gelir: Çapraz Satış ve Yeni Gelir Yöneticisi — pozisyon ajanı `08-capraz-satis-ve-yeni-gelir-yoneticisi.md`
+      - Kıdemli Çapraz Satış Yöneticisi — pozisyon ajanı `08-kidemli-capraz-satis-yoneticisi.md`
+      - Çapraz Satış Uzmanı — pozisyon ajanı `08-capraz-satis-uzmani.md` · skill: expansion-whitespace
+      - Ek Satış ve Paket Çözümler Uzmanı — pozisyon ajanı `08-ek-satis-ve-paket-cozumler-uzmani.md`
+      - Yeni Gelir Fırsatları Analisti — pozisyon ajanı `08-yeni-gelir-firsatlari-analisti.md` · skill: expansion-whitespace
+  - **Birim — KOBİ ve Orta Ölçekli Müşteri Satışları:** KOBİ ve Orta Ölçekli Müşteri Satışları Müdürü — pozisyon ajanı `08-kobi-ve-orta-olcekli-musteri-satislari-muduru.md`
+    - Ekip — İç Satış: İç Satış Yöneticisi — pozisyon ajanı `08-ic-satis-yoneticisi.md`
+      - Kıdemli İç Satış Temsilcisi — pozisyon ajanı `08-kidemli-ic-satis-temsilcisi.md`
+      - İç Satış Temsilcisi — pozisyon ajanı `08-ic-satis-temsilcisi.md` · skill: call-list, call-summary, end-of-day, handle-objection, inbox-sweep, log-activity, speed-to-lead
+      - Satış Geliştirme Temsilcisi — pozisyon ajanı `08-satis-gelistirme-temsilcisi-2.md` · skill: call-list, draft-outreach, grow-pipeline
+      - Müşteri Adayı Kalifikasyon Uzmanı — pozisyon ajanı `08-musteri-adayi-kalifikasyon-uzmani.md` · ürün içi görev: **Lead Nitelendirme Ajanı** · skill: compliance-check, lead-formu, lead-triage
+    - Ekip — Bölgesel ve Saha Satış: Bölgesel ve Saha Satış Yöneticisi — pozisyon ajanı `08-bolgesel-ve-saha-satis-yoneticisi.md`
+      - Bölge Satış Yöneticisi — pozisyon ajanı `08-bolge-satis-yoneticisi.md`
+      - Kıdemli Saha Satış Temsilcisi — pozisyon ajanı `08-kidemli-saha-satis-temsilcisi.md`
+      - Saha Satış Temsilcisi — pozisyon ajanı `08-saha-satis-temsilcisi.md`
+      - Bölgesel Satış Uzmanı — pozisyon ajanı `08-bolgesel-satis-uzmani.md`
+    - Ekip — Hızlı Satış ve Dönüşüm: Hızlı Satış ve Dönüşüm Yöneticisi — pozisyon ajanı `08-hizli-satis-ve-donusum-yoneticisi.md`
+      - Hızlı Satış Uzmanı — pozisyon ajanı `08-hizli-satis-uzmani.md` · skill: speed-to-lead
+      - Dijital Satış Temsilcisi — pozisyon ajanı `08-dijital-satis-temsilcisi.md`
+      - Satış Dönüşüm Uzmanı — pozisyon ajanı `08-satis-donusum-uzmani.md`
+      - Terk Edilen Fırsatlar Kazanım Uzmanı — pozisyon ajanı `08-terk-edilen-firsatlar-kazanim-uzmani.md`
+  - **Birim — Kanal, İş Ortaklıkları ve Ekosistem Satışları:** Kanal ve İş Ortaklıkları Satış Müdürü — pozisyon ajanı `08-kanal-ve-is-ortakliklari-satis-muduru.md`
+    - Ekip — Kanal Satışları: Kanal Satışları Yöneticisi — pozisyon ajanı `08-kanal-satislari-yoneticisi.md`
+      - Kıdemli Kanal Satış Yöneticisi — pozisyon ajanı `08-kidemli-kanal-satis-yoneticisi.md`
+      - Kanal Satış Yöneticisi — pozisyon ajanı `08-kanal-satis-yoneticisi.md`
+      - Bayi Satış Uzmanı — pozisyon ajanı `08-bayi-satis-uzmani.md`
+      - Kanal Performans Analisti — pozisyon ajanı `08-kanal-performans-analisti.md`
+    - Ekip — İş Ortaklıkları: Stratejik İş Ortaklıkları Yöneticisi — pozisyon ajanı `08-stratejik-is-ortakliklari-yoneticisi.md`
+      - Kıdemli İş Ortaklıkları Yöneticisi — pozisyon ajanı `08-kidemli-is-ortakliklari-yoneticisi.md`
+      - İş Ortaklıkları Yöneticisi — pozisyon ajanı `08-is-ortakliklari-yoneticisi.md`
+      - Ekosistem Satış Uzmanı — pozisyon ajanı `08-ekosistem-satis-uzmani.md`
+      - Ortak Çözüm Geliştirme Uzmanı — pozisyon ajanı `08-ortak-cozum-gelistirme-uzmani.md`
+    - Ekip — Partner Aktivasyonu: Partner Aktivasyonu ve Başarı Yöneticisi — pozisyon ajanı `08-partner-aktivasyonu-ve-basari-yoneticisi.md`
+      - Partner Aktivasyon Uzmanı — pozisyon ajanı `08-partner-aktivasyon-uzmani.md`
+      - Partner Eğitim Uzmanı — pozisyon ajanı `08-partner-egitim-uzmani.md`
+      - Partner Satış Destek Uzmanı — pozisyon ajanı `08-partner-satis-destek-uzmani.md`
+      - Partner Operasyonları Analisti — pozisyon ajanı `08-partner-operasyonlari-analisti.md`
+  - **Birim — Teklif, İhale ve Ticari Sözleşme Yönetimi:** Teklif ve İhale Yönetimi Müdürü — pozisyon ajanı `08-teklif-ve-ihale-yonetimi-muduru.md`
+    - Ekip — Teklif Yönetimi: Teklif Yönetimi Yöneticisi — pozisyon ajanı `08-teklif-yonetimi-yoneticisi.md`
+      - Kıdemli Teklif Yöneticisi — pozisyon ajanı `08-kidemli-teklif-yoneticisi.md`
+      - Teklif Uzmanı — pozisyon ajanı `08-teklif-uzmani.md` · ürün içi görev: **Teklif Taslağı Ajanı** · skill: grant-rfp-writer, proposal-builder
+      - Çözüm Teklifi Uzmanı — pozisyon ajanı `08-cozum-teklifi-uzmani.md` · skill: govtribe-pricing-data
+      - Teklif Dokümantasyon Uzmanı — pozisyon ajanı `08-teklif-dokumantasyon-uzmani.md` · skill: carbone, govtribe-document-editing, govtribe-file-templates, govtribe-govcon-writing, proposal-builder
+    - Ekip — İhale Yönetimi: İhale Yönetimi Yöneticisi — pozisyon ajanı `08-ihale-yonetimi-yoneticisi.md`
+      - Kıdemli İhale Uzmanı — pozisyon ajanı `08-kidemli-ihale-uzmani.md` · skill: govtribe-capture-workflows, govtribe-deep-dive, govtribe-market-intelligence
+      - Kamu İhaleleri Uzmanı — pozisyon ajanı `08-kamu-ihaleleri-uzmani.md` · skill: govtribe-capture-workflows, govtribe-deep-dive, govtribe-govcon-writing, govtribe-market-intelligence, govtribe-pricing-data, govtribe-proposal-workflows, grant-rfp-writer
+      - Özel Sektör İhaleleri Uzmanı — pozisyon ajanı `08-ozel-sektor-ihaleleri-uzmani.md`
+      - İhale Dokümantasyon ve Takip Uzmanı — pozisyon ajanı `08-ihale-dokumantasyon-ve-takip-uzmani.md` · skill: govtribe-document-editing, govtribe-file-templates, govtribe-proposal-workflows
+    - Ekip — Ticari Sözleşme Koordinasyonu: Ticari Sözleşme Koordinasyon Yöneticisi — pozisyon ajanı `08-ticari-sozlesme-koordinasyon-yoneticisi.md`
+      - Ticari Sözleşme Koordinasyon Uzmanı — pozisyon ajanı `08-ticari-sozlesme-koordinasyon-uzmani.md`
+      - Sözleşme Öncesi Kontrol Uzmanı — pozisyon ajanı `08-sozlesme-oncesi-kontrol-uzmani.md`
+      - Ticari Şartlar Uzmanı — pozisyon ajanı `08-ticari-sartlar-uzmani.md`
+      - İmza ve Devir Koordinasyon Uzmanı — pozisyon ajanı `08-imza-ve-devir-koordinasyon-uzmani.md` · skill: signature-request
+  - **Birim — Satış Etkinliği ve Yetkinlik Gelişimi:** Satış Etkinliği ve Yetkinlik Gelişimi Müdürü — pozisyon ajanı `08-satis-etkinligi-ve-yetkinlik-gelisimi-muduru.md`
+    - Ekip — Satış Eğitimleri: Satış Eğitimleri Yöneticisi — pozisyon ajanı `08-satis-egitimleri-yoneticisi.md`
+      - Kıdemli Satış Eğitim Uzmanı — pozisyon ajanı `08-kidemli-satis-egitim-uzmani.md`
+      - Satış Eğitim Uzmanı — pozisyon ajanı `08-satis-egitim-uzmani.md`
+      - Ürün ve Çözüm Eğitim Uzmanı — pozisyon ajanı `08-urun-ve-cozum-egitim-uzmani.md`
+      - Satış Yetkinlik Analisti — pozisyon ajanı `08-satis-yetkinlik-analisti.md`
+    - Ekip — Satış İçeriği ve Araçları: Satış İçeriği ve Araçları Yöneticisi — pozisyon ajanı `08-satis-icerigi-ve-araclari-yoneticisi.md` · skill: brand-review, proposal-builder
+      - Satış İçeriği Uzmanı — pozisyon ajanı `08-satis-icerigi-uzmani.md` · skill: create-an-asset
+      - Satış Sunumları Uzmanı — pozisyon ajanı `08-satis-sunumlari-uzmani.md` · skill: pptx
+      - Satış Araçları Uzmanı — pozisyon ajanı `08-satis-araclari-uzmani.md` · skill: setup
+      - Teklif ve Vaka Kütüphanesi Uzmanı — pozisyon ajanı `08-teklif-ve-vaka-kutuphanesi-uzmani.md`
+    - Ekip — Satış Koçluğu ve Onboarding: Satış Koçluğu ve Onboarding Yöneticisi — pozisyon ajanı `08-satis-koclugu-ve-onboarding-yoneticisi.md`
+      - Satış Koçu — pozisyon ajanı `08-satis-kocu.md` · skill: rep-context
+      - Satış Onboarding Uzmanı — pozisyon ajanı `08-satis-onboarding-uzmani.md`
+      - Görüşme Kalitesi Uzmanı — pozisyon ajanı `08-gorusme-kalitesi-uzmani.md`
+      - Satış Yetkinlik Değerlendirme Uzmanı — pozisyon ajanı `08-satis-yetkinlik-degerlendirme-uzmani.md`
+  - **Birim — Fiyatlandırma ve Ticari Yönetişim:** Fiyatlandırma ve Ticari Yönetişim Müdürü — pozisyon ajanı `08-fiyatlandirma-ve-ticari-yonetisim-muduru.md`
+    - Ekip — Fiyatlandırma Stratejisi: Fiyatlandırma Stratejisi Yöneticisi — pozisyon ajanı `08-fiyatlandirma-stratejisi-yoneticisi.md`
+      - Kıdemli Fiyatlandırma Uzmanı — pozisyon ajanı `08-kidemli-fiyatlandirma-uzmani.md`
+      - Fiyatlandırma Uzmanı — pozisyon ajanı `08-fiyatlandirma-uzmani.md`
+      - Paket ve Tarife Uzmanı — pozisyon ajanı `08-paket-ve-tarife-uzmani.md`
+      - Fiyat Analisti — pozisyon ajanı `08-fiyat-analisti.md` · skill: price-comparison
+    - Ekip — İskonto ve Ticari İstisna: İskonto ve Ticari İstisna Yöneticisi — pozisyon ajanı `08-iskonto-ve-ticari-istisna-yoneticisi.md`
+      - İskonto Yönetimi Uzmanı — pozisyon ajanı `08-iskonto-yonetimi-uzmani.md`
+      - Ticari İstisna Uzmanı — pozisyon ajanı `08-ticari-istisna-uzmani.md`
+      - Teklif Onay Kontrol Uzmanı — pozisyon ajanı `08-teklif-onay-kontrol-uzmani.md`
+      - İskonto Analisti — pozisyon ajanı `08-iskonto-analisti.md`
+    - Ekip — Ticari Kârlılık: Ticari Kârlılık Yöneticisi — pozisyon ajanı `08-ticari-karlilik-yoneticisi.md`
+      - Kıdemli Ticari Finans Analisti — pozisyon ajanı `08-kidemli-ticari-finans-analisti.md`
+      - Müşteri Kârlılık Analisti — pozisyon ajanı `08-musteri-karlilik-analisti.md`
+      - Sözleşme Değer Analisti — pozisyon ajanı `08-sozlesme-deger-analisti.md`
+      - Birim Ekonomi Analisti — pozisyon ajanı `08-birim-ekonomi-analisti.md`
+  - **Birim — Satış Performansı ve Gelir Planlama:** Satış Performansı ve Gelir Planlama Müdürü — pozisyon ajanı `08-satis-performansi-ve-gelir-planlama-muduru.md`
+    - Ekip — Hedef ve Kota Yönetimi: Hedef ve Kota Yönetimi Yöneticisi — pozisyon ajanı `08-hedef-ve-kota-yonetimi-yoneticisi.md`
+      - Satış Hedefleri Uzmanı — pozisyon ajanı `08-satis-hedefleri-uzmani.md`
+      - Kota Planlama Uzmanı — pozisyon ajanı `08-kota-planlama-uzmani.md`
+      - Bölge ve Portföy Planlama Uzmanı — pozisyon ajanı `08-bolge-ve-portfoy-planlama-uzmani.md` · skill: account-tiering
+      - Hedef Dağılım Analisti — pozisyon ajanı `08-hedef-dagilim-analisti.md`
+    - Ekip — Satış Tahminleme ve Gelir Planlama: Satış Tahminleme ve Gelir Planlama Yöneticisi — pozisyon ajanı `08-satis-tahminleme-ve-gelir-planlama-yoneticisi.md`
+      - Kıdemli Satış Tahminleme Uzmanı — pozisyon ajanı `08-kidemli-satis-tahminleme-uzmani.md` · skill: forecast
+      - Gelir Planlama Uzmanı — pozisyon ajanı `08-gelir-planlama-uzmani.md`
+      - Pipeline Tahmin Analisti — pozisyon ajanı `08-pipeline-tahmin-analisti.md` · skill: deal-slip-scenario, forecast, pipeline-review
+      - Gelir Senaryoları Analisti — pozisyon ajanı `08-gelir-senaryolari-analisti.md` · skill: deal-slip-scenario
+    - Ekip — Prim ve Performans Operasyonları: Prim ve Performans Operasyonları Yöneticisi — pozisyon ajanı `08-prim-ve-performans-operasyonlari-yoneticisi.md`
+      - Satış Prim Operasyonları Uzmanı — pozisyon ajanı `08-satis-prim-operasyonlari-uzmani.md`
+      - Satış Performans Uzmanı — pozisyon ajanı `08-satis-performans-uzmani.md`
+      - Prim Hesaplama Kontrol Uzmanı — pozisyon ajanı `08-prim-hesaplama-kontrol-uzmani.md`
+      - Satış Performans Raporlama Analisti — pozisyon ajanı `08-satis-performans-raporlama-analisti.md` · skill: weekly-wrap
+
+## 09 - Pazarlama ve Büyüme
+9 birim · 159 pozisyon · katalog ajanlı 7 · pozisyon ajanı 152
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Pazarlama ve Büyüme Direktörü (CMO) — pozisyon ajanı `09-pazarlama-ve-buyume-direktoru-cmo.md`
+  - **Birim — Pazarlama Stratejisi ve Marka Yönetimi:** Pazarlama Stratejisi ve Marka Yönetimi Direktörü — pozisyon ajanı `09-pazarlama-stratejisi-ve-marka-yonetimi-direktoru.md`
+    - Pazarlama Stratejisi Müdürü — pozisyon ajanı `09-pazarlama-stratejisi-muduru.md`
+      - Pazarlama Stratejisi Uzmanı — pozisyon ajanı `09-pazarlama-stratejisi-uzmani.md` · skill: content-strategy
+      - Segmentasyon ve Persona Uzmanı — pozisyon ajanı `09-segmentasyon-ve-persona-uzmani.md`
+    - Marka Yönetimi Müdürü — pozisyon ajanı `09-marka-yonetimi-muduru.md`
+      - Marka Yöneticisi — pozisyon ajanı `09-marka-yoneticisi.md`
+      - Marka Uzmanı — pozisyon ajanı `09-marka-uzmani.md`
+      - Konumlandırma Uzmanı — pozisyon ajanı `09-konumlandirma-uzmani.md`
+    - Marka Portföyü ve Mimari Müdürü — pozisyon ajanı `09-marka-portfoyu-ve-mimari-muduru.md`
+      - Marka Mimarisi Uzmanı — pozisyon ajanı `09-marka-mimarisi-uzmani.md`
+      - Marka Uyum Uzmanı — pozisyon ajanı `09-marka-uyum-uzmani.md` · skill: brand-review, brand-style, compliance, marketing-claims-review
+    - Stratejik Planlama Yöneticisi — pozisyon ajanı `09-stratejik-planlama-yoneticisi.md`
+      - Pazarlama Planlama Uzmanı — pozisyon ajanı `09-pazarlama-planlama-uzmani.md` · skill: campaign-plan, content-strategy
+      - Talep Planlama Analisti — pozisyon ajanı `09-talep-planlama-analisti.md`
+  - **Birim — Dijital Pazarlama ve Talep Yaratma:** Dijital Pazarlama ve Talep Yaratma Direktörü — pozisyon ajanı `09-dijital-pazarlama-ve-talep-yaratma-direktoru.md`
+    - Performans Pazarlama Müdürü — pozisyon ajanı `09-performans-pazarlama-muduru.md`
+      - Arama Motoru Reklamları Uzmanı — pozisyon ajanı `09-arama-motoru-reklamlari-uzmani.md` · skill: ad-manager
+      - Ücretli Sosyal Medya Uzmanı — pozisyon ajanı `09-ucretli-sosyal-medya-uzmani.md` · skill: ad-manager
+      - Medya Planlama Uzmanı — pozisyon ajanı `09-medya-planlama-uzmani.md`
+      - Programatik Reklam Uzmanı — pozisyon ajanı `09-programatik-reklam-uzmani.md`
+    - SEO ve GEO Müdürü — pozisyon ajanı `09-seo-ve-geo-muduru.md` · skill: seo-audit
+      - SEO Yöneticisi — pozisyon ajanı `09-seo-yoneticisi.md` · skill: keyword-clustering, search, seo-ai-visibility, seo-audit
+      - Teknik SEO Uzmanı — pozisyon ajanı `09-teknik-seo-uzmani.md` · skill: broken-links, internal-linking, schema-markup, seo-audit, technical-seo, web-perf
+      - İçerik SEO Uzmanı — pozisyon ajanı `09-icerik-seo-uzmani.md` · ürün içi görev: **SEO İçerik Önerici** · skill: content-brief, content-strategy, content-translation, internal-linking, keyword-clustering, on-page-seo, seo-audit
+      - GEO ve AI Görünürlük Yöneticisi — pozisyon ajanı `09-geo-ve-ai-gorunurluk-yoneticisi.md` · skill: ai-visibility
+      - AI Arama Görünürlüğü Uzmanı — pozisyon ajanı `09-ai-arama-gorunurlugu-uzmani.md` · skill: ai-visibility, seo-ai-visibility
+    - Talep Yaratma Müdürü — pozisyon ajanı `09-talep-yaratma-muduru.md`
+      - Demand Generation Yöneticisi — pozisyon ajanı `09-demand-generation-yoneticisi.md` · skill: grow-pipeline
+      - Lead Generation Uzmanı — pozisyon ajanı `09-lead-generation-uzmani.md` · skill: grow-pipeline, lead-finder, prospect
+      - ABM Uzmanı — pozisyon ajanı `09-abm-uzmani.md` · skill: outreach-composer, prospect
+      - Yeniden Pazarlama Uzmanı — pozisyon ajanı `09-yeniden-pazarlama-uzmani.md`
+    - Web Pazarlama Müdürü — pozisyon ajanı `09-web-pazarlama-muduru.md`
+      - Web Pazarlama Yöneticisi — pozisyon ajanı `09-web-pazarlama-yoneticisi.md` · skill: broken-links
+      - Landing Page Uzmanı — pozisyon ajanı `09-landing-page-uzmani.md` · skill: form-standardi, modern-web-guidance, on-page-seo
+      - Dijital Ölçümleme Uzmanı — pozisyon ajanı `09-dijital-olcumleme-uzmani.md` · skill: product-tracking-audit-current-tracking, product-tracking-design-tracking-plan, product-tracking-implement-tracking
+  - **Birim — İçerik Pazarlaması:** İçerik Pazarlaması Direktörü — pozisyon ajanı `09-icerik-pazarlamasi-direktoru.md`
+    - Editoryal Yönetim Müdürü — pozisyon ajanı `09-editoryal-yonetim-muduru.md` · skill: content-strategy
+      - Kıdemli Editör — pozisyon ajanı `09-kidemli-editor.md` · skill: brand-review
+      - İçerik Editörü — pozisyon ajanı `09-icerik-editoru.md` · skill: content-translation
+      - İçerik Kalite ve Doğrulama Uzmanı — pozisyon ajanı `09-icerik-kalite-ve-dogrulama-uzmani.md`
+    - İçerik Üretimi Müdürü — pozisyon ajanı `09-icerik-uretimi-muduru.md`
+      - İçerik Yazarı — pozisyon ajanı `09-icerik-yazari.md` · skill: brand-review, content-creation, draft-content, seo-audit
+      - Copywriter — pozisyon ajanı `09-copywriter.md` · skill: brand-review, content-creation, draft-content
+      - Teknik İçerik Yazarı — pozisyon ajanı `09-teknik-icerik-yazari.md`
+      - Vaka Çalışması Uzmanı — pozisyon ajanı `09-vaka-calismasi-uzmani.md`
+      - SEO ve GEO İçerik Uzmanı — pozisyon ajanı `09-seo-ve-geo-icerik-uzmani.md` · skill: content-brief, draft-content
+    - Multimedya İçerik Müdürü — pozisyon ajanı `09-multimedya-icerik-muduru.md`
+      - Video İçerik Yapımcısı — pozisyon ajanı `09-video-icerik-yapimcisi.md`
+      - Podcast Yapımcısı — pozisyon ajanı `09-podcast-yapimcisi.md`
+      - Webinar İçerik Uzmanı — pozisyon ajanı `09-webinar-icerik-uzmani.md`
+    - İçerik Dağıtım Yöneticisi — pozisyon ajanı `09-icerik-dagitim-yoneticisi.md`
+      - İçerik Dağıtım Uzmanı — pozisyon ajanı `09-icerik-dagitim-uzmani.md` · skill: postiz, social-content-engine
+      - İçerik Dönüştürme Uzmanı — pozisyon ajanı `09-icerik-donusturme-uzmani.md` · skill: social-content-engine
+  - **Birim — Sosyal Medya Pazarlaması:** Sosyal Medya Pazarlaması Müdürü — pozisyon ajanı `09-sosyal-medya-pazarlamasi-muduru.md`
+    - Kanal Yönetimi Yöneticisi — pozisyon ajanı `09-kanal-yonetimi-yoneticisi.md` · ürün içi görev: **Sosyal Medya İçerik Ajanı** · skill: brand-review, postiz
+      - LinkedIn Uzmanı — pozisyon ajanı `09-linkedin-uzmani.md`
+      - Instagram Uzmanı — pozisyon ajanı `09-instagram-uzmani.md`
+      - Facebook Uzmanı — pozisyon ajanı `09-facebook-uzmani.md`
+      - YouTube Uzmanı — pozisyon ajanı `09-youtube-uzmani.md`
+      - TikTok Uzmanı — pozisyon ajanı `09-tiktok-uzmani.md`
+      - X Uzmanı — pozisyon ajanı `09-x-uzmani.md`
+      - Threads Uzmanı — pozisyon ajanı `09-threads-uzmani.md`
+      - WhatsApp Uzmanı — pozisyon ajanı `09-whatsapp-uzmani.md`
+      - Telegram Uzmanı — pozisyon ajanı `09-telegram-uzmani.md`
+    - Topluluk Büyütme Yöneticisi — pozisyon ajanı `09-topluluk-buyutme-yoneticisi.md`
+      - Topluluk Uzmanı — pozisyon ajanı `09-topluluk-uzmani.md`
+      - Moderasyon Uzmanı — pozisyon ajanı `09-moderasyon-uzmani.md`
+    - Influencer ve İçerik Üreticileri Yöneticisi — pozisyon ajanı `09-influencer-ve-icerik-ureticileri-yoneticisi.md`
+      - Influencer Pazarlama Uzmanı — pozisyon ajanı `09-influencer-pazarlama-uzmani.md`
+      - İçerik Üreticisi İş Birlikleri Uzmanı — pozisyon ajanı `09-icerik-ureticisi-is-birlikleri-uzmani.md`
+    - Sosyal Dinleme ve Analitik Yöneticisi — pozisyon ajanı `09-sosyal-dinleme-ve-analitik-yoneticisi.md`
+      - Sosyal Dinleme Uzmanı — pozisyon ajanı `09-sosyal-dinleme-uzmani.md` · skill: brand-listening, review-reputation
+      - Sosyal Medya Analisti — pozisyon ajanı `09-sosyal-medya-analisti.md`
+  - **Birim — Ürün ve Çözüm Pazarlaması:** Ürün ve Çözüm Pazarlaması Direktörü — pozisyon ajanı `09-urun-ve-cozum-pazarlamasi-direktoru.md`
+    - Ürün Pazarlaması Müdürü — pozisyon ajanı `09-urun-pazarlamasi-muduru.md`
+      - Ürün Pazarlama Yöneticisi — pozisyon ajanı `09-urun-pazarlama-yoneticisi.md`
+      - Değer Önerisi Uzmanı — pozisyon ajanı `09-deger-onerisi-uzmani.md`
+      - Persona ve Kullanım Senaryosu Uzmanı — pozisyon ajanı `09-persona-ve-kullanim-senaryosu-uzmani.md`
+    - GTM ve Lansman Müdürü — pozisyon ajanı `09-gtm-ve-lansman-muduru.md`
+      - GTM Strateji Uzmanı — pozisyon ajanı `09-gtm-strateji-uzmani.md`
+      - Lansman Uzmanı — pozisyon ajanı `09-lansman-uzmani.md`
+      - Kanal Pazarlama Uzmanı — pozisyon ajanı `09-kanal-pazarlama-uzmani.md`
+    - Satış Etkinleştirme Müdürü — pozisyon ajanı `09-satis-etkinlestirme-muduru.md`
+      - Satış Etkinleştirme Uzmanı — pozisyon ajanı `09-satis-etkinlestirme-uzmani.md`
+      - Satış İçeriği Uzmanı — pozisyon ajanı `09-satis-icerigi-uzmani.md` · skill: create-an-asset
+      - Demo ve Eğitim Uzmanı — pozisyon ajanı `09-demo-ve-egitim-uzmani.md`
+    - Rekabet İstihbaratı Yöneticisi — pozisyon ajanı `09-rekabet-istihbarati-yoneticisi.md`
+      - Rekabet Analisti — pozisyon ajanı `09-rekabet-analisti.md` · skill: competitive-brief, competitive-intel, competitive-intelligence, win-loss-review
+      - Fiyatlandırma ve Paketleme Analisti — pozisyon ajanı `09-fiyatlandirma-ve-paketleme-analisti.md`
+    - Müşteri Pazarlaması Yöneticisi — pozisyon ajanı `09-musteri-pazarlamasi-yoneticisi.md`
+      - Müşteri Referans Programları Uzmanı — pozisyon ajanı `09-musteri-referans-programlari-uzmani.md`
+      - Çapraz Satış Pazarlaması Uzmanı — pozisyon ajanı `09-capraz-satis-pazarlamasi-uzmani.md`
+  - **Birim — Growth Marketing ve Dönüşüm:** Growth Marketing ve Dönüşüm Direktörü — pozisyon ajanı `09-growth-marketing-ve-donusum-direktoru.md`
+    - Growth Marketing Müdürü — pozisyon ajanı `09-growth-marketing-muduru.md` · skill: marketing-monday
+      - Büyüme Uzmanı — pozisyon ajanı `09-buyume-uzmani.md` · skill: growth-pulse
+      - Kanal Deneyleri Uzmanı — pozisyon ajanı `09-kanal-deneyleri-uzmani.md`
+    - CRO ve Deney Yönetimi Müdürü — pozisyon ajanı `09-cro-ve-deney-yonetimi-muduru.md` · skill: form-standardi, product-tracking-design-tracking-plan
+      - Kullanıcı Davranışı Analisti — pozisyon ajanı `09-kullanici-davranisi-analisti.md`
+      - A/B Test Uzmanı — pozisyon ajanı `09-a-b-test-uzmani.md` · skill: statistical-analysis
+      - Funnel Optimizasyon Uzmanı — pozisyon ajanı `09-funnel-optimizasyon-uzmani.md`
+    - Yaşam Döngüsü Pazarlama Müdürü — pozisyon ajanı `09-yasam-dongusu-pazarlama-muduru.md`
+      - Lead Nurturing Uzmanı — pozisyon ajanı `09-lead-nurturing-uzmani.md` · skill: email-sequence
+      - Elde Tutma Pazarlaması Uzmanı — pozisyon ajanı `09-elde-tutma-pazarlamasi-uzmani.md`
+      - Yeniden Aktivasyon Uzmanı — pozisyon ajanı `09-yeniden-aktivasyon-uzmani.md` · skill: reactivate
+    - Müşteri Kazanımı Yöneticisi — pozisyon ajanı `09-musteri-kazanimi-yoneticisi.md`
+      - Edinim Stratejisi Uzmanı — pozisyon ajanı `09-edinim-stratejisi-uzmani.md`
+      - Referans ve Yönlendirme Programı Uzmanı — pozisyon ajanı `09-referans-ve-yonlendirme-programi-uzmani.md`
+  - **Birim — Pazarlama Operasyonları, CRM ve MarTech:** Pazarlama Operasyonları, CRM ve MarTech Direktörü — pozisyon ajanı `09-pazarlama-operasyonlari-crm-ve-martech-direktoru.md`
+    - Kampanya Operasyonları Müdürü — pozisyon ajanı `09-kampanya-operasyonlari-muduru.md`
+      - Kampanya Koordinatörü — pozisyon ajanı `09-kampanya-koordinatoru.md`
+      - Kampanya Kalite Uzmanı — pozisyon ajanı `09-kampanya-kalite-uzmani.md`
+    - CRM ve Lead Yönetimi Müdürü — pozisyon ajanı `09-crm-ve-lead-yonetimi-muduru.md`
+      - CRM Uzmanı — pozisyon ajanı `09-crm-uzmani.md`
+      - Lead Yönetimi Uzmanı — pozisyon ajanı `09-lead-yonetimi-uzmani.md` · skill: enrich-lead, lead-formu
+      - Lead Skorlama Uzmanı — pozisyon ajanı `09-lead-skorlama-uzmani.md` · skill: lead-formu, lead-triage
+      - E-posta Pazarlama Uzmanı — pozisyon ajanı `09-e-posta-pazarlama-uzmani.md` · ürün içi görev: **Bülten (E-posta) Ajanı** · skill: brand-review, compliance-check, email-sequence, orchestrate-journeys
+      - Pazarlama Otomasyonu Uzmanı — pozisyon ajanı `09-pazarlama-otomasyonu-uzmani.md` · skill: email-sequence, orchestrate-journeys, sequence-load
+    - MarTech ve Entegrasyon Müdürü — pozisyon ajanı `09-martech-ve-entegrasyon-muduru.md`
+      - Pazarlama Teknolojileri Uzmanı — pozisyon ajanı `09-pazarlama-teknolojileri-uzmani.md`
+      - Entegrasyon Uzmanı — pozisyon ajanı `09-entegrasyon-uzmani.md`
+      - Pazarlama Sistemleri Yöneticisi — pozisyon ajanı `09-pazarlama-sistemleri-yoneticisi.md`
+    - Pazarlama Verisi ve Raporlama Müdürü — pozisyon ajanı `09-pazarlama-verisi-ve-raporlama-muduru.md`
+      - Pazarlama Veri Analisti — pozisyon ajanı `09-pazarlama-veri-analisti.md`
+      - BI ve Dashboard Uzmanı — pozisyon ajanı `09-bi-ve-dashboard-uzmani.md` · skill: build-dashboard
+      - Atıf Analitiği Uzmanı — pozisyon ajanı `09-atif-analitigi-uzmani.md` · ürün içi görev: **Kampanya Performans Analisti** · skill: product-tracking-design-tracking-plan
+      - Veri Kalitesi Uzmanı — pozisyon ajanı `09-veri-kalitesi-uzmani.md`
+    - Bütçe ve Tedarikçi Yönetimi Müdürü — pozisyon ajanı `09-butce-ve-tedarikci-yonetimi-muduru.md`
+      - Bütçe ve Operasyon Uzmanı — pozisyon ajanı `09-butce-ve-operasyon-uzmani.md`
+      - Tedarikçi Yönetimi Uzmanı — pozisyon ajanı `09-tedarikci-yonetimi-uzmani.md`
+  - **Birim — Pazar Araştırmaları ve Pazarlama Analitiği:** Pazar Araştırmaları ve Pazarlama Analitiği Direktörü — pozisyon ajanı `09-pazar-arastirmalari-ve-pazarlama-analitigi-direktoru.md`
+    - Pazar Araştırmaları Müdürü — pozisyon ajanı `09-pazar-arastirmalari-muduru.md`
+      - Nitel Araştırma Uzmanı — pozisyon ajanı `09-nitel-arastirma-uzmani.md`
+      - Nicel Araştırma Uzmanı — pozisyon ajanı `09-nicel-arastirma-uzmani.md`
+      - Pazar Büyüklüğü Analisti — pozisyon ajanı `09-pazar-buyuklugu-analisti.md` · skill: indication-research, size-market
+    - Müşteri İçgörüleri Müdürü — pozisyon ajanı `09-musteri-icgoruleri-muduru.md`
+      - Müşteri İçgörüleri Uzmanı — pozisyon ajanı `09-musteri-icgoruleri-uzmani.md`
+      - Segmentasyon Uzmanı — pozisyon ajanı `09-segmentasyon-uzmani.md`
+      - Müşterinin Sesi Uzmanı — pozisyon ajanı `09-musterinin-sesi-uzmani.md` · skill: customer-voice
+    - Rekabet ve Sektör İstihbaratı Müdürü — pozisyon ajanı `09-rekabet-ve-sektor-istihbarati-muduru.md`
+      - Rekabet Analisti — pozisyon ajanı `09-rekabet-analisti-2.md` · skill: asset-profile, benchmark-assets, company-portfolio, competitive-analysis, competitive-brief, competitive-intel, competitive-pipeline, deal-activity, enumerate-entities, identify-analogs, profile-entity, scrape, synthesize-evidence, trace-events
+      - Sektör ve Trend Analisti — pozisyon ajanı `09-sektor-ve-trend-analisti.md` · skill: competitive-intel, enumerate-entities, funding-landscape, identify-analogs, live-research, profile-entity, sector-overview, trace-events
+      - Fiyat Araştırma Uzmanı — pozisyon ajanı `09-fiyat-arastirma-uzmani.md` · skill: price-comparison
+    - Pazarlama Analitiği Müdürü — pozisyon ajanı `09-pazarlama-analitigi-muduru.md`
+      - Pazarlama Veri Analisti — pozisyon ajanı `09-pazarlama-veri-analisti-2.md` · skill: marketing-monday, performance-report
+      - ROI ve Gelir Analisti — pozisyon ajanı `09-roi-ve-gelir-analisti.md` · skill: growth-pulse, performance-report
+      - Talep Tahminleme Analisti — pozisyon ajanı `09-talep-tahminleme-analisti.md`
+  - **Birim — Kampanya ve Etkinlik Pazarlaması:** Kampanya ve Etkinlik Pazarlaması Müdürü — pozisyon ajanı `09-kampanya-ve-etkinlik-pazarlamasi-muduru.md`
+    - Entegre Kampanya Yöneticisi — pozisyon ajanı `09-entegre-kampanya-yoneticisi.md`
+      - Kampanya Uzmanı — pozisyon ajanı `09-kampanya-uzmani.md` · skill: campaign-plan, canva-creator
+      - Kampanya Takvimi Uzmanı — pozisyon ajanı `09-kampanya-takvimi-uzmani.md`
+    - Etkinlik Pazarlaması Yöneticisi — pozisyon ajanı `09-etkinlik-pazarlamasi-yoneticisi.md`
+      - Webinar Pazarlaması Uzmanı — pozisyon ajanı `09-webinar-pazarlamasi-uzmani.md`
+      - Saha Etkinlikleri Uzmanı — pozisyon ajanı `09-saha-etkinlikleri-uzmani.md`
+      - Etkinlik Lead Yönetimi Uzmanı — pozisyon ajanı `09-etkinlik-lead-yonetimi-uzmani.md`
+    - İş Ortaklığı Pazarlaması Yöneticisi — pozisyon ajanı `09-is-ortakligi-pazarlamasi-yoneticisi.md`
+      - Kanal Pazarlama Uzmanı — pozisyon ajanı `09-kanal-pazarlama-uzmani-2.md`
+      - Ortak Kampanya Uzmanı — pozisyon ajanı `09-ortak-kampanya-uzmani.md`
+    - Pazarlama Proje Koordinatörü — pozisyon ajanı `09-pazarlama-proje-koordinatoru.md`
+
+## 10 - Kurumsal İletişim ve İtibar Yönetimi
+8 birim · 132 pozisyon · katalog ajanlı 1 · pozisyon ajanı 131
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Kurumsal İletişim ve İtibar Yönetimi Direktörü — pozisyon ajanı `10-kurumsal-iletisim-ve-itibar-yonetimi-direktoru.md`
+  - Kurumsal İletişim Direktör Yardımcısı _(Şirket ölçeğine göre opsiyonel)_ — pozisyon ajanı `10-kurumsal-iletisim-direktor-yardimcisi.md`
+  - İtibar Yönetimi Direktörü _(Büyük ölçekli yapılarda opsiyonel)_ — pozisyon ajanı `10-itibar-yonetimi-direktoru.md`
+  - Kurumsal İletişim Başdanışmanı _(Opsiyonel)_ — pozisyon ajanı `10-kurumsal-iletisim-basdanismani.md`
+  - **Birim — Kurumsal İletişim Stratejisi ve Mesaj Yönetimi:** Kurumsal İletişim Stratejisi Müdürü — pozisyon ajanı `10-kurumsal-iletisim-stratejisi-muduru.md`
+    - Ekip — Kurumsal Anlatı ve Mesaj Mimarisi: Kurumsal Anlatı ve Mesaj Mimarisi Yöneticisi — pozisyon ajanı `10-kurumsal-anlati-ve-mesaj-mimarisi-yoneticisi.md`
+      - Kıdemli Kurumsal Mesaj Uzmanı — pozisyon ajanı `10-kidemli-kurumsal-mesaj-uzmani.md`
+      - Kurumsal Anlatı Uzmanı — pozisyon ajanı `10-kurumsal-anlati-uzmani.md`
+      - Mesaj Mimarisi Uzmanı — pozisyon ajanı `10-mesaj-mimarisi-uzmani.md`
+      - Kurumsal Dil ve Terminoloji Uzmanı — pozisyon ajanı `10-kurumsal-dil-ve-terminoloji-uzmani.md`
+    - Ekip — İletişim Planlama ve Yönetişim: İletişim Planlama ve Yönetişim Yöneticisi — pozisyon ajanı `10-iletisim-planlama-ve-yonetisim-yoneticisi.md`
+      - Kıdemli İletişim Planlama Uzmanı — pozisyon ajanı `10-kidemli-iletisim-planlama-uzmani.md`
+      - İletişim Yönetişimi Uzmanı — pozisyon ajanı `10-iletisim-yonetisimi-uzmani.md`
+      - Grup Şirketleri İletişim Koordinatörü — pozisyon ajanı `10-grup-sirketleri-iletisim-koordinatoru.md`
+      - İletişim Takvimi ve Operasyon Uzmanı — pozisyon ajanı `10-iletisim-takvimi-ve-operasyon-uzmani.md`
+    - Ekip — Araştırma ve İletişim Analitiği: İletişim Araştırmaları ve Analitik Yöneticisi — pozisyon ajanı `10-iletisim-arastirmalari-ve-analitik-yoneticisi.md`
+      - İtibar Araştırmaları Uzmanı — pozisyon ajanı `10-itibar-arastirmalari-uzmani.md`
+      - İletişim Veri Analisti — pozisyon ajanı `10-iletisim-veri-analisti.md`
+      - Paydaş Algı Araştırmaları Uzmanı — pozisyon ajanı `10-paydas-algi-arastirmalari-uzmani.md`
+      - İletişim Performans Analisti — pozisyon ajanı `10-iletisim-performans-analisti.md`
+  - **Birim — Medya İlişkileri ve Basın Yönetimi:** Medya İlişkileri ve Basın Müdürü — pozisyon ajanı `10-medya-iliskileri-ve-basin-muduru.md`
+    - Ekip — Basın ve Medya İlişkileri: Basın ve Medya İlişkileri Yöneticisi — pozisyon ajanı `10-basin-ve-medya-iliskileri-yoneticisi.md`
+      - Kıdemli Medya İlişkileri Uzmanı — pozisyon ajanı `10-kidemli-medya-iliskileri-uzmani.md`
+      - Basın İlişkileri Uzmanı — pozisyon ajanı `10-basin-iliskileri-uzmani.md`
+      - Medya İlişkileri Uzmanı — pozisyon ajanı `10-medya-iliskileri-uzmani.md`
+      - Basın Koordinasyon Uzmanı — pozisyon ajanı `10-basin-koordinasyon-uzmani.md`
+    - Ekip — Basın İçeriği ve Haber Yönetimi: Basın İçeriği ve Haber Yönetimi Yöneticisi — pozisyon ajanı `10-basin-icerigi-ve-haber-yonetimi-yoneticisi.md`
+      - Kıdemli Basın İçeriği Uzmanı — pozisyon ajanı `10-kidemli-basin-icerigi-uzmani.md`
+      - Basın Bülteni Yazarı — pozisyon ajanı `10-basin-bulteni-yazari.md`
+      - Kurumsal Haber Editörü — pozisyon ajanı `10-kurumsal-haber-editoru.md`
+      - Basın Dosyası ve Bilgi Notu Uzmanı — pozisyon ajanı `10-basin-dosyasi-ve-bilgi-notu-uzmani.md`
+    - Ekip — Medya Takibi ve Analizi: Medya Takibi ve Analizi Yöneticisi — pozisyon ajanı `10-medya-takibi-ve-analizi-yoneticisi.md`
+      - Medya Takip Uzmanı — pozisyon ajanı `10-medya-takip-uzmani.md` · ürün içi görev: **Haber Toplama & Özetleme Ajanı** · skill: brand-review
+      - Medya Analisti — pozisyon ajanı `10-medya-analisti.md`
+      - Haber ve Söylem Analisti — pozisyon ajanı `10-haber-ve-soylem-analisti.md`
+      - Medya Raporlama Uzmanı — pozisyon ajanı `10-medya-raporlama-uzmani.md`
+  - **Birim — İtibar, Gündem ve Kriz İletişimi:** İtibar ve Kriz İletişimi Müdürü — pozisyon ajanı `10-itibar-ve-kriz-iletisimi-muduru.md`
+    - Ekip — İtibar Takibi ve Risk Analizi: İtibar Takibi ve Risk Analizi Yöneticisi — pozisyon ajanı `10-itibar-takibi-ve-risk-analizi-yoneticisi.md`
+      - Kıdemli İtibar Yönetimi Uzmanı — pozisyon ajanı `10-kidemli-itibar-yonetimi-uzmani.md`
+      - İtibar Risk Uzmanı — pozisyon ajanı `10-itibar-risk-uzmani.md`
+      - Algı ve Duygu Analisti — pozisyon ajanı `10-algi-ve-duygu-analisti.md`
+      - Erken Uyarı ve Gündem Analisti — pozisyon ajanı `10-erken-uyari-ve-gundem-analisti.md`
+    - Ekip — Gündem ve Konu Yönetimi: Gündem ve Konu Yönetimi Yöneticisi — pozisyon ajanı `10-gundem-ve-konu-yonetimi-yoneticisi.md`
+      - Kıdemli Konu Yönetimi Uzmanı — pozisyon ajanı `10-kidemli-konu-yonetimi-uzmani.md`
+      - Gündem Takip Uzmanı — pozisyon ajanı `10-gundem-takip-uzmani.md`
+      - Hassas Konular İletişim Uzmanı — pozisyon ajanı `10-hassas-konular-iletisim-uzmani.md`
+      - Kurumsal Pozisyonlandırma Uzmanı — pozisyon ajanı `10-kurumsal-pozisyonlandirma-uzmani.md`
+    - Ekip — Kriz İletişimi: Kriz İletişimi Yöneticisi — pozisyon ajanı `10-kriz-iletisimi-yoneticisi.md`
+      - Kıdemli Kriz İletişimi Uzmanı — pozisyon ajanı `10-kidemli-kriz-iletisimi-uzmani.md`
+      - Kriz Senaryoları ve Hazırlık Uzmanı — pozisyon ajanı `10-kriz-senaryolari-ve-hazirlik-uzmani.md`
+      - Kriz İçerik ve Sözcülük Uzmanı — pozisyon ajanı `10-kriz-icerik-ve-sozculuk-uzmani.md`
+      - Kriz İzleme ve Koordinasyon Uzmanı — pozisyon ajanı `10-kriz-izleme-ve-koordinasyon-uzmani.md`
+  - **Birim — Yönetici ve Liderlik İletişimi:** Yönetici ve Liderlik İletişimi Müdürü — pozisyon ajanı `10-yonetici-ve-liderlik-iletisimi-muduru.md`
+    - Ekip — CEO ve Üst Yönetim İletişimi: CEO ve Üst Yönetim İletişimi Yöneticisi — pozisyon ajanı `10-ceo-ve-ust-yonetim-iletisimi-yoneticisi.md`
+      - Kıdemli Yönetici İletişimi Uzmanı — pozisyon ajanı `10-kidemli-yonetici-iletisimi-uzmani.md`
+      - CEO İletişimi Uzmanı — pozisyon ajanı `10-ceo-iletisimi-uzmani.md`
+      - Üst Yönetim İletişimi Uzmanı — pozisyon ajanı `10-ust-yonetim-iletisimi-uzmani.md`
+      - Yönetici İletişim Planlama Uzmanı — pozisyon ajanı `10-yonetici-iletisim-planlama-uzmani.md`
+    - Ekip — Konuşma ve Mesaj Geliştirme: Konuşma ve Mesaj Geliştirme Yöneticisi — pozisyon ajanı `10-konusma-ve-mesaj-gelistirme-yoneticisi.md`
+      - Kıdemli Konuşma Metni Yazarı — pozisyon ajanı `10-kidemli-konusma-metni-yazari.md`
+      - Konuşma Metni Yazarı — pozisyon ajanı `10-konusma-metni-yazari.md`
+      - Yönetici Sunum İçeriği Uzmanı — pozisyon ajanı `10-yonetici-sunum-icerigi-uzmani.md`
+      - Yönetici Bilgi Notu Uzmanı — pozisyon ajanı `10-yonetici-bilgi-notu-uzmani.md` · skill: knowledge-synthesis
+    - Ekip — Lider Görünürlüğü ve Düşünce Liderliği: Düşünce Liderliği Yöneticisi — pozisyon ajanı `10-dusunce-liderligi-yoneticisi.md`
+      - Düşünce Liderliği İçerik Uzmanı — pozisyon ajanı `10-dusunce-liderligi-icerik-uzmani.md`
+      - Yönetici Görünürlüğü Uzmanı — pozisyon ajanı `10-yonetici-gorunurlugu-uzmani.md`
+      - Konferans ve Panel Koordinasyon Uzmanı — pozisyon ajanı `10-konferans-ve-panel-koordinasyon-uzmani.md`
+      - Yönetici Dijital İletişim Uzmanı — pozisyon ajanı `10-yonetici-dijital-iletisim-uzmani.md`
+  - **Birim — İç İletişim ve Çalışan Katılımı:** İç İletişim ve Çalışan Katılımı Müdürü — pozisyon ajanı `10-ic-iletisim-ve-calisan-katilimi-muduru.md`
+    - Ekip — İç İletişim Kanalları: İç İletişim Kanalları Yöneticisi — pozisyon ajanı `10-ic-iletisim-kanallari-yoneticisi.md`
+      - Kıdemli İç İletişim Uzmanı — pozisyon ajanı `10-kidemli-ic-iletisim-uzmani.md`
+      - İç İletişim Uzmanı — pozisyon ajanı `10-ic-iletisim-uzmani.md` · skill: internal-comms, slack-messaging
+      - İntranet ve Dijital Kanallar Uzmanı — pozisyon ajanı `10-intranet-ve-dijital-kanallar-uzmani.md` · skill: slack-gif-creator
+      - Çalışan Bülteni Editörü — pozisyon ajanı `10-calisan-bulteni-editoru.md` · skill: internal-comms
+    - Ekip — Değişim İletişimi: Değişim İletişimi Yöneticisi — pozisyon ajanı `10-degisim-iletisimi-yoneticisi.md`
+      - Kıdemli Değişim İletişimi Uzmanı — pozisyon ajanı `10-kidemli-degisim-iletisimi-uzmani.md`
+      - Dönüşüm Programları İletişim Uzmanı — pozisyon ajanı `10-donusum-programlari-iletisim-uzmani.md`
+      - Değişim Paydaş Analisti — pozisyon ajanı `10-degisim-paydas-analisti.md`
+      - Değişim İçerikleri Uzmanı — pozisyon ajanı `10-degisim-icerikleri-uzmani.md`
+    - Ekip — Çalışan Katılımı ve Kültür İletişimi: Çalışan Katılımı ve Kültür İletişimi Yöneticisi — pozisyon ajanı `10-calisan-katilimi-ve-kultur-iletisimi-yoneticisi.md`
+      - Çalışan Katılımı Uzmanı — pozisyon ajanı `10-calisan-katilimi-uzmani.md`
+      - Kültür İletişimi Uzmanı — pozisyon ajanı `10-kultur-iletisimi-uzmani.md`
+      - Çalışan Etkinlikleri İletişim Uzmanı — pozisyon ajanı `10-calisan-etkinlikleri-iletisim-uzmani.md`
+      - Çalışan Geri Bildirim Analisti — pozisyon ajanı `10-calisan-geri-bildirim-analisti.md`
+  - **Birim — Paydaş, Kamu ve Sektör İletişimi:** Paydaş ve Kamu İletişimi Müdürü — pozisyon ajanı `10-paydas-ve-kamu-iletisimi-muduru.md`
+    - Ekip — Kurumsal Paydaş İletişimi: Kurumsal Paydaş İletişimi Yöneticisi — pozisyon ajanı `10-kurumsal-paydas-iletisimi-yoneticisi.md`
+      - Kıdemli Paydaş İletişimi Uzmanı — pozisyon ajanı `10-kidemli-paydas-iletisimi-uzmani.md`
+      - Paydaş İletişimi Uzmanı — pozisyon ajanı `10-paydas-iletisimi-uzmani.md`
+      - Paydaş Haritalama Analisti — pozisyon ajanı `10-paydas-haritalama-analisti.md`
+      - Kurumsal İlişkiler Koordinatörü — pozisyon ajanı `10-kurumsal-iliskiler-koordinatoru.md`
+    - Ekip — Kamu ve Sektör İletişimi: Kamu ve Sektör İletişimi Yöneticisi — pozisyon ajanı `10-kamu-ve-sektor-iletisimi-yoneticisi.md`
+      - Kamu İletişimi Uzmanı — pozisyon ajanı `10-kamu-iletisimi-uzmani.md`
+      - Sektörel İletişim Uzmanı — pozisyon ajanı `10-sektorel-iletisim-uzmani.md`
+      - Meslek Örgütleri İletişim Uzmanı — pozisyon ajanı `10-meslek-orgutleri-iletisim-uzmani.md`
+      - Kamu Gündemi Analisti — pozisyon ajanı `10-kamu-gundemi-analisti.md`
+    - Ekip — Kurumsal Temsil ve İlişkiler: Kurumsal Temsil ve İlişkiler Yöneticisi — pozisyon ajanı `10-kurumsal-temsil-ve-iliskiler-yoneticisi.md`
+      - Kurumsal Temsil Uzmanı — pozisyon ajanı `10-kurumsal-temsil-uzmani.md`
+      - Protokol İletişimi Uzmanı — pozisyon ajanı `10-protokol-iletisimi-uzmani.md`
+      - Kurumsal Üyelikler Uzmanı — pozisyon ajanı `10-kurumsal-uyelikler-uzmani.md`
+      - Paydaş Toplantıları Koordinatörü — pozisyon ajanı `10-paydas-toplantilari-koordinatoru.md`
+  - **Birim — Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki:** Sponsorluk ve Kurumsal Etkinlikler Müdürü — pozisyon ajanı `10-sponsorluk-ve-kurumsal-etkinlikler-muduru.md`
+    - Ekip — Sponsorluk Yönetimi: Sponsorluk Yönetimi Yöneticisi — pozisyon ajanı `10-sponsorluk-yonetimi-yoneticisi.md`
+      - Kıdemli Sponsorluk Uzmanı — pozisyon ajanı `10-kidemli-sponsorluk-uzmani.md`
+      - Sponsorluk Uzmanı — pozisyon ajanı `10-sponsorluk-uzmani.md`
+      - Sponsorluk Aktivasyon Uzmanı — pozisyon ajanı `10-sponsorluk-aktivasyon-uzmani.md`
+      - Sponsorluk Etki Analisti — pozisyon ajanı `10-sponsorluk-etki-analisti.md`
+    - Ekip — Kurumsal Etkinlikler: Kurumsal Etkinlikler Yöneticisi — pozisyon ajanı `10-kurumsal-etkinlikler-yoneticisi.md`
+      - Kıdemli Kurumsal Etkinlik Uzmanı — pozisyon ajanı `10-kidemli-kurumsal-etkinlik-uzmani.md`
+      - Kurumsal Etkinlik Uzmanı — pozisyon ajanı `10-kurumsal-etkinlik-uzmani.md`
+      - Etkinlik Operasyonları Uzmanı — pozisyon ajanı `10-etkinlik-operasyonlari-uzmani.md`
+      - Etkinlik İletişimi Uzmanı — pozisyon ajanı `10-etkinlik-iletisimi-uzmani.md`
+    - Ekip — Sosyal Etki ve Sürdürülebilirlik İletişimi: Sosyal Etki ve Sürdürülebilirlik İletişimi Yöneticisi — pozisyon ajanı `10-sosyal-etki-ve-surdurulebilirlik-iletisimi-yoneticisi.md`
+      - Sosyal Etki İletişimi Uzmanı — pozisyon ajanı `10-sosyal-etki-iletisimi-uzmani.md`
+      - Sürdürülebilirlik İletişimi Uzmanı — pozisyon ajanı `10-surdurulebilirlik-iletisimi-uzmani.md`
+      - Kurumsal Sosyal Sorumluluk Uzmanı — pozisyon ajanı `10-kurumsal-sosyal-sorumluluk-uzmani.md`
+      - Sosyal Etki Raporlama Analisti — pozisyon ajanı `10-sosyal-etki-raporlama-analisti.md`
+  - **Birim — Kurumsal Yayınlar ve Dijital İletişim Yönetişimi:** Kurumsal Yayınlar ve Dijital İletişim Müdürü — pozisyon ajanı `10-kurumsal-yayinlar-ve-dijital-iletisim-muduru.md`
+    - Ekip — Kurumsal Yayınlar ve Dokümantasyon: Kurumsal Yayınlar Yöneticisi — pozisyon ajanı `10-kurumsal-yayinlar-yoneticisi.md`
+      - Kıdemli Kurumsal Yayınlar Uzmanı — pozisyon ajanı `10-kidemli-kurumsal-yayinlar-uzmani.md`
+      - Kurumsal Yayınlar Uzmanı — pozisyon ajanı `10-kurumsal-yayinlar-uzmani.md`
+      - Faaliyet Raporu Editörü — pozisyon ajanı `10-faaliyet-raporu-editoru.md`
+      - Kurumsal Dokümantasyon Uzmanı — pozisyon ajanı `10-kurumsal-dokumantasyon-uzmani.md`
+    - Ekip — Kurumsal Dijital ve Sosyal Medya: Kurumsal Dijital İletişim Yöneticisi — pozisyon ajanı `10-kurumsal-dijital-iletisim-yoneticisi.md`
+      - Kurumsal Dijital İletişim Uzmanı — pozisyon ajanı `10-kurumsal-dijital-iletisim-uzmani.md`
+      - Kurumsal Sosyal Medya Uzmanı — pozisyon ajanı `10-kurumsal-sosyal-medya-uzmani.md`
+      - Dijital İtibar İzleme Uzmanı — pozisyon ajanı `10-dijital-itibar-izleme-uzmani.md` · skill: brand-listening, review-reputation
+      - Kurumsal Web İçerik Uzmanı — pozisyon ajanı `10-kurumsal-web-icerik-uzmani.md`
+    - Ekip — Kurumsal İçerik ve Editoryal Yönetim: Kurumsal İçerik ve Editoryal Yönetim Yöneticisi — pozisyon ajanı `10-kurumsal-icerik-ve-editoryal-yonetim-yoneticisi.md`
+      - Kıdemli Kurumsal İçerik Editörü — pozisyon ajanı `10-kidemli-kurumsal-icerik-editoru.md`
+      - Kurumsal İçerik Yazarı — pozisyon ajanı `10-kurumsal-icerik-yazari.md`
+      - Editoryal Kalite Uzmanı — pozisyon ajanı `10-editoryal-kalite-uzmani.md`
+      - Kurumsal İçerik Takvimi Uzmanı — pozisyon ajanı `10-kurumsal-icerik-takvimi-uzmani.md`
+
+## 11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler
+8 birim · 105 pozisyon · katalog ajanlı 2 · pozisyon ajanı 103
+
+- Bağlı olduğu: Ticari İşler Başkanı
+- **Departman lideri:** Müşteri Deneyimi ve Satış Sonrası Hizmetler Direktörü — pozisyon ajanı `11-musteri-deneyimi-ve-satis-sonrasi-hizmetler-direktoru.md`
+  - **Birim — Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi:** Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi Müdürü — pozisyon ajanı `11-musteri-deneyimi-stratejisi-ve-yolculuk-yonetimi-muduru.md`
+    - Ekip — Müşteri Yolculuğu Yönetimi: Müşteri Yolculuğu Yöneticisi — pozisyon ajanı `11-musteri-yolculugu-yoneticisi.md`
+      - Kıdemli Müşteri Yolculuğu Uzmanı — pozisyon ajanı `11-kidemli-musteri-yolculugu-uzmani.md`
+      - Müşteri Yolculuğu Uzmanı — pozisyon ajanı `11-musteri-yolculugu-uzmani.md`
+      - Müşteri Deneyimi Analisti — pozisyon ajanı `11-musteri-deneyimi-analisti.md`
+    - Ekip — Servis Tasarımı ve Deneyim Standartları: Servis Tasarımı ve Deneyim Standartları Yöneticisi — pozisyon ajanı `11-servis-tasarimi-ve-deneyim-standartlari-yoneticisi.md`
+      - Kıdemli Servis Tasarımı Uzmanı — pozisyon ajanı `11-kidemli-servis-tasarimi-uzmani.md`
+      - Servis Tasarımı Uzmanı — pozisyon ajanı `11-servis-tasarimi-uzmani.md`
+      - Deneyim Standartları Uzmanı — pozisyon ajanı `11-deneyim-standartlari-uzmani.md`
+    - Ekip — Müşteri Deneyimi Analitiği: Müşteri Deneyimi Analitiği Yöneticisi — pozisyon ajanı `11-musteri-deneyimi-analitigi-yoneticisi.md`
+      - Kıdemli Müşteri Deneyimi Analitiği Uzmanı — pozisyon ajanı `11-kidemli-musteri-deneyimi-analitigi-uzmani.md`
+      - Müşteri Deneyimi Analitiği Uzmanı — pozisyon ajanı `11-musteri-deneyimi-analitigi-uzmani.md`
+      - Müşteri İçgörüleri Analisti — pozisyon ajanı `11-musteri-icgoruleri-analisti.md`
+  - **Birim — Müşteri Onboarding ve Uygulama:** Müşteri Onboarding ve Uygulama Müdürü — pozisyon ajanı `11-musteri-onboarding-ve-uygulama-muduru.md`
+    - Ekip — Satıştan Devir ve Hazırlık: Satıştan Devir ve Hazırlık Yöneticisi — pozisyon ajanı `11-satistan-devir-ve-hazirlik-yoneticisi.md`
+      - Kıdemli Devir ve Hazırlık Uzmanı — pozisyon ajanı `11-kidemli-devir-ve-hazirlik-uzmani.md`
+      - Müşteri Devir Uzmanı — pozisyon ajanı `11-musteri-devir-uzmani.md`
+      - Onboarding Koordinatörü — pozisyon ajanı `11-onboarding-koordinatoru.md`
+    - Ekip — Kurulum ve Uygulama: Kurulum ve Uygulama Yöneticisi — pozisyon ajanı `11-kurulum-ve-uygulama-yoneticisi.md`
+      - Kıdemli Uygulama Uzmanı — pozisyon ajanı `11-kidemli-uygulama-uzmani.md`
+      - Uygulama Uzmanı — pozisyon ajanı `11-uygulama-uzmani.md`
+      - Kurulum Koordinatörü — pozisyon ajanı `11-kurulum-koordinatoru.md`
+    - Ekip — Aktivasyon ve İlk Değer: Aktivasyon ve İlk Değer Yöneticisi — pozisyon ajanı `11-aktivasyon-ve-ilk-deger-yoneticisi.md`
+      - Kıdemli Aktivasyon Uzmanı — pozisyon ajanı `11-kidemli-aktivasyon-uzmani.md`
+      - Aktivasyon Uzmanı — pozisyon ajanı `11-aktivasyon-uzmani.md`
+      - Müşteri Başlangıç Deneyimi Uzmanı — pozisyon ajanı `11-musteri-baslangic-deneyimi-uzmani.md`
+  - **Birim — Müşteri Başarı Yönetimi:** Müşteri Başarı Yönetimi Müdürü — pozisyon ajanı `11-musteri-basari-yonetimi-muduru.md`
+    - Ekip — Portföy ve Müşteri Başarısı: Portföy Müşteri Başarısı Yöneticisi — pozisyon ajanı `11-portfoy-musteri-basarisi-yoneticisi.md`
+      - Kıdemli Müşteri Başarı Yöneticisi — pozisyon ajanı `11-kidemli-musteri-basari-yoneticisi.md`
+      - Müşteri Başarı Yöneticisi — pozisyon ajanı `11-musteri-basari-yoneticisi.md` · skill: account-context, account-health, customer-health
+      - Müşteri Başarı Uzmanı — pozisyon ajanı `11-musteri-basari-uzmani.md`
+    - Ekip — Stratejik Müşteri Başarısı: Stratejik Müşteri Başarısı Yöneticisi — pozisyon ajanı `11-stratejik-musteri-basarisi-yoneticisi.md`
+      - Kıdemli Stratejik Müşteri Başarı Yöneticisi — pozisyon ajanı `11-kidemli-stratejik-musteri-basari-yoneticisi.md`
+      - Stratejik Müşteri Başarı Yöneticisi — pozisyon ajanı `11-stratejik-musteri-basari-yoneticisi.md` · skill: account-plan
+      - Stratejik Müşteri Uzmanı — pozisyon ajanı `11-stratejik-musteri-uzmani.md`
+    - Ekip — Riskli Müşteri ve Kurtarma: Riskli Müşteri ve Kurtarma Yöneticisi — pozisyon ajanı `11-riskli-musteri-ve-kurtarma-yoneticisi.md`
+      - Kıdemli Müşteri Kurtarma Uzmanı — pozisyon ajanı `11-kidemli-musteri-kurtarma-uzmani.md`
+      - Müşteri Kurtarma Uzmanı — pozisyon ajanı `11-musteri-kurtarma-uzmani.md`
+      - Müşteri Risk Analisti — pozisyon ajanı `11-musteri-risk-analisti.md` · skill: account-health, customer-health
+  - **Birim — Müşteri Destek ve Servis Masası:** Müşteri Destek ve Servis Masası Müdürü — pozisyon ajanı `11-musteri-destek-ve-servis-masasi-muduru.md`
+    - Ekip — Birinci Seviye Destek: Birinci Seviye Destek Yöneticisi — pozisyon ajanı `11-birinci-seviye-destek-yoneticisi.md`
+      - Kıdemli Müşteri Destek Uzmanı — pozisyon ajanı `11-kidemli-musteri-destek-uzmani.md`
+      - Müşteri Destek Uzmanı — pozisyon ajanı `11-musteri-destek-uzmani.md` · skill: customer-research, draft-response, ticket-deflector
+      - Servis Masası Temsilcisi — pozisyon ajanı `11-servis-masasi-temsilcisi.md` · ürün içi görev: **Talep Yönlendirme Ajanı** · skill: brand-review, compliance-check, ticket-triage
+    - Ekip — Çok Kanallı Destek: Çok Kanallı Destek Yöneticisi — pozisyon ajanı `11-cok-kanalli-destek-yoneticisi.md`
+      - Kıdemli Çok Kanallı Destek Uzmanı — pozisyon ajanı `11-kidemli-cok-kanalli-destek-uzmani.md`
+      - Dijital Destek Uzmanı — pozisyon ajanı `11-dijital-destek-uzmani.md` · ürün içi görev: **Site Sohbet Asistanı** · skill: brand-review, build-zoom-virtual-agent, compliance-check, ticket-deflector, virtual-agent/android, virtual-agent/ios, virtual-agent/web, zoom-cobrowse-sdk
+      - Müşteri İletişim Uzmanı — pozisyon ajanı `11-musteri-iletisim-uzmani.md` · skill: draft-response
+    - Ekip — Destek Bilgi Yönetimi: Destek Bilgi Yönetimi Yöneticisi — pozisyon ajanı `11-destek-bilgi-yonetimi-yoneticisi.md`
+      - Kıdemli Bilgi Yönetimi Uzmanı — pozisyon ajanı `11-kidemli-bilgi-yonetimi-uzmani.md`
+      - Bilgi Yönetimi Uzmanı — pozisyon ajanı `11-bilgi-yonetimi-uzmani.md` · skill: customer-research, kb-article, knowledge-synthesis, search, search-strategy, slack-search
+      - Destek İçerik Uzmanı — pozisyon ajanı `11-destek-icerik-uzmani.md` · skill: kb-article
+  - **Birim — Servis ve Teknik Destek Koordinasyonu:** Servis ve Teknik Destek Koordinasyonu Müdürü — pozisyon ajanı `11-servis-ve-teknik-destek-koordinasyonu-muduru.md`
+    - Ekip — Teknik Destek Koordinasyonu: Teknik Destek Koordinasyonu Yöneticisi — pozisyon ajanı `11-teknik-destek-koordinasyonu-yoneticisi.md`
+      - Kıdemli Teknik Destek Koordinatörü — pozisyon ajanı `11-kidemli-teknik-destek-koordinatoru.md`
+      - Teknik Destek Koordinatörü — pozisyon ajanı `11-teknik-destek-koordinatoru.md` · skill: customer-escalation
+      - Teknik Eskalasyon Uzmanı — pozisyon ajanı `11-teknik-eskalasyon-uzmani.md` · skill: customer-escalation
+    - Ekip — Servis ve Garanti Yönetimi: Servis ve Garanti Yöneticisi — pozisyon ajanı `11-servis-ve-garanti-yoneticisi.md`
+      - Kıdemli Servis ve Garanti Uzmanı — pozisyon ajanı `11-kidemli-servis-ve-garanti-uzmani.md`
+      - Garanti Uzmanı — pozisyon ajanı `11-garanti-uzmani.md`
+      - Saha Servis Koordinatörü — pozisyon ajanı `11-saha-servis-koordinatoru.md`
+    - Ekip — Problem ve Tekrarlayan Hata Yönetimi: Problem ve Tekrarlayan Hata Yönetimi Yöneticisi — pozisyon ajanı `11-problem-ve-tekrarlayan-hata-yonetimi-yoneticisi.md`
+      - Kıdemli Problem Yönetimi Uzmanı — pozisyon ajanı `11-kidemli-problem-yonetimi-uzmani.md`
+      - Problem Yönetimi Uzmanı — pozisyon ajanı `11-problem-yonetimi-uzmani.md`
+      - Tekrarlayan Hata Analisti — pozisyon ajanı `11-tekrarlayan-hata-analisti.md`
+  - **Birim — Şikâyet, Talep ve Müşterinin Sesi:** Şikâyet, Talep ve Müşterinin Sesi Müdürü — pozisyon ajanı `11-sikayet-talep-ve-musterinin-sesi-muduru.md`
+    - Ekip — Şikâyet ve Talep Yönetimi: Şikâyet ve Talep Yönetimi Yöneticisi — pozisyon ajanı `11-sikayet-ve-talep-yonetimi-yoneticisi.md`
+      - Kıdemli Şikâyet Yönetimi Uzmanı — pozisyon ajanı `11-kidemli-sikayet-yonetimi-uzmani.md`
+      - Şikâyet Yönetimi Uzmanı — pozisyon ajanı `11-sikayet-yonetimi-uzmani.md`
+      - Müşteri Talep Uzmanı — pozisyon ajanı `11-musteri-talep-uzmani.md` · skill: ticket-triage
+    - Ekip — Müşterinin Sesi: Müşterinin Sesi Yöneticisi — pozisyon ajanı `11-musterinin-sesi-yoneticisi.md`
+      - Kıdemli Müşterinin Sesi Uzmanı — pozisyon ajanı `11-kidemli-musterinin-sesi-uzmani.md`
+      - Müşterinin Sesi Uzmanı — pozisyon ajanı `11-musterinin-sesi-uzmani.md` · skill: customer-voice, feedback-analysis, review-reputation
+      - Müşteri Araştırmaları Analisti — pozisyon ajanı `11-musteri-arastirmalari-analisti.md`
+    - Ekip — Kök Neden ve İyileştirme: Kök Neden ve İyileştirme Yöneticisi — pozisyon ajanı `11-kok-neden-ve-iyilestirme-yoneticisi.md`
+      - Kıdemli Sürekli İyileştirme Uzmanı — pozisyon ajanı `11-kidemli-surekli-iyilestirme-uzmani.md`
+      - Kök Neden Analizi Uzmanı — pozisyon ajanı `11-kok-neden-analizi-uzmani.md`
+      - Müşteri Deneyimi İyileştirme Uzmanı — pozisyon ajanı `11-musteri-deneyimi-iyilestirme-uzmani.md`
+  - **Birim — Müşteri Adaptasyonu, Eğitim ve Topluluk:** Müşteri Adaptasyonu, Eğitim ve Topluluk Müdürü — pozisyon ajanı `11-musteri-adaptasyonu-egitim-ve-topluluk-muduru.md`
+    - Ekip — Müşteri Eğitimleri: Müşteri Eğitimleri Yöneticisi — pozisyon ajanı `11-musteri-egitimleri-yoneticisi.md`
+      - Kıdemli Müşteri Eğitim Uzmanı — pozisyon ajanı `11-kidemli-musteri-egitim-uzmani.md`
+      - Müşteri Eğitim Uzmanı — pozisyon ajanı `11-musteri-egitim-uzmani.md`
+      - Eğitim İçerik Geliştirme Uzmanı — pozisyon ajanı `11-egitim-icerik-gelistirme-uzmani.md`
+    - Ekip — Kullanım ve Benimseme: Kullanım ve Benimseme Yöneticisi — pozisyon ajanı `11-kullanim-ve-benimseme-yoneticisi.md`
+      - Kıdemli Müşteri Adaptasyon Uzmanı — pozisyon ajanı `11-kidemli-musteri-adaptasyon-uzmani.md`
+      - Müşteri Adaptasyon Uzmanı — pozisyon ajanı `11-musteri-adaptasyon-uzmani.md`
+      - Kullanım Analisti — pozisyon ajanı `11-kullanim-analisti.md`
+    - Ekip — Müşteri Topluluğu: Müşteri Topluluğu Yöneticisi — pozisyon ajanı `11-musteri-toplulugu-yoneticisi.md`
+      - Kıdemli Topluluk Uzmanı — pozisyon ajanı `11-kidemli-topluluk-uzmani.md`
+      - Müşteri Topluluğu Uzmanı — pozisyon ajanı `11-musteri-toplulugu-uzmani.md`
+      - Müşteri Etkileşim Koordinatörü — pozisyon ajanı `11-musteri-etkilesim-koordinatoru.md`
+  - **Birim — Yenileme, Müşteri Tutundurma ve Değer Yönetimi:** Yenileme, Müşteri Tutundurma ve Değer Yönetimi Müdürü — pozisyon ajanı `11-yenileme-musteri-tutundurma-ve-deger-yonetimi-muduru.md`
+    - Ekip — Yenileme Yönetimi: Yenileme Yönetimi Yöneticisi — pozisyon ajanı `11-yenileme-yonetimi-yoneticisi.md`
+      - Kıdemli Yenileme Uzmanı — pozisyon ajanı `11-kidemli-yenileme-uzmani.md`
+      - Yenileme Uzmanı — pozisyon ajanı `11-yenileme-uzmani.md` · skill: renewal-radar
+      - Yenileme Operasyonları Analisti — pozisyon ajanı `11-yenileme-operasyonlari-analisti.md` · skill: renewal-radar
+    - Ekip — Churn Önleme ve Müşteri Kurtarma: Churn Önleme ve Müşteri Kurtarma Yöneticisi — pozisyon ajanı `11-churn-onleme-ve-musteri-kurtarma-yoneticisi.md`
+      - Kıdemli Müşteri Tutundurma Uzmanı — pozisyon ajanı `11-kidemli-musteri-tutundurma-uzmani.md`
+      - Müşteri Tutundurma Uzmanı — pozisyon ajanı `11-musteri-tutundurma-uzmani.md` · skill: reactivate
+      - Churn Analisti — pozisyon ajanı `11-churn-analisti.md`
+    - Ekip — Müşteri Değeri ve Ticari Fırsat Koordinasyonu: Müşteri Değeri ve Ticari Fırsat Koordinasyonu Yöneticisi — pozisyon ajanı `11-musteri-degeri-ve-ticari-firsat-koordinasyonu-yoneticisi.md`
+      - Kıdemli Müşteri Değeri Uzmanı — pozisyon ajanı `11-kidemli-musteri-degeri-uzmani.md`
+      - Müşteri Değeri Uzmanı — pozisyon ajanı `11-musteri-degeri-uzmani.md` · skill: expansion-whitespace
+      - Ticari Fırsat Koordinatörü — pozisyon ajanı `11-ticari-firsat-koordinatoru.md`
+
+## 12 - Operasyon Yönetimi
+7 birim · 92 pozisyon · katalog ajanlı 0 · pozisyon ajanı 92
+
+- Bağlı olduğu: Operasyonlardan Sorumlu Genel Müdür Yardımcısı / Operasyon Başkanı
+- **Departman lideri:** Operasyon Yönetimi Direktörü — pozisyon ajanı `12-operasyon-yonetimi-direktoru.md`
+  - **Birim — Operasyon Stratejisi, Planlama ve Yönetişim:** Operasyon Stratejisi, Planlama ve Yönetişim Müdürü — pozisyon ajanı `12-operasyon-stratejisi-planlama-ve-yonetisim-muduru.md`
+    - Ekip — Operasyon Stratejisi ve İşletim Modeli: Operasyon Stratejisi ve İşletim Modeli Yöneticisi — pozisyon ajanı `12-operasyon-stratejisi-ve-isletim-modeli-yoneticisi.md`
+      - Kıdemli Operasyon Stratejisi Uzmanı — pozisyon ajanı `12-kidemli-operasyon-stratejisi-uzmani.md`
+      - Operasyon Stratejisi Uzmanı — pozisyon ajanı `12-operasyon-stratejisi-uzmani.md`
+      - İşletim Modeli Analisti — pozisyon ajanı `12-isletim-modeli-analisti.md`
+    - Ekip — Operasyon Planlama ve Bütçe: Operasyon Planlama ve Bütçe Yöneticisi — pozisyon ajanı `12-operasyon-planlama-ve-butce-yoneticisi.md`
+      - Kıdemli Operasyon Planlama Uzmanı — pozisyon ajanı `12-kidemli-operasyon-planlama-uzmani.md`
+      - Operasyon Planlama Uzmanı — pozisyon ajanı `12-operasyon-planlama-uzmani.md`
+      - Operasyon Bütçe Analisti — pozisyon ajanı `12-operasyon-butce-analisti.md`
+    - Ekip — Operasyonel Yönetişim ve Performans: Operasyonel Yönetişim ve Performans Yöneticisi — pozisyon ajanı `12-operasyonel-yonetisim-ve-performans-yoneticisi.md`
+      - Kıdemli Operasyonel Performans Uzmanı — pozisyon ajanı `12-kidemli-operasyonel-performans-uzmani.md`
+      - Operasyonel Yönetişim Uzmanı — pozisyon ajanı `12-operasyonel-yonetisim-uzmani.md`
+      - Operasyon Performans Analisti — pozisyon ajanı `12-operasyon-performans-analisti.md` · skill: status-report
+  - **Birim — Hizmet Teslimatı ve Operasyon Yönetimi:** Hizmet Teslimatı ve Operasyon Yönetimi Müdürü — pozisyon ajanı `12-hizmet-teslimati-ve-operasyon-yonetimi-muduru.md`
+    - Ekip — Hizmet Teslimatı: Hizmet Teslimatı Yöneticisi — pozisyon ajanı `12-hizmet-teslimati-yoneticisi.md`
+      - Kıdemli Hizmet Teslimatı Uzmanı — pozisyon ajanı `12-kidemli-hizmet-teslimati-uzmani.md`
+      - Hizmet Teslimatı Uzmanı — pozisyon ajanı `12-hizmet-teslimati-uzmani.md`
+      - Hizmet Teslimatı Koordinatörü — pozisyon ajanı `12-hizmet-teslimati-koordinatoru.md`
+    - Ekip — Operasyon Kontrol Merkezi: Operasyon Kontrol Merkezi Yöneticisi — pozisyon ajanı `12-operasyon-kontrol-merkezi-yoneticisi.md`
+      - Kıdemli Operasyon Kontrol Uzmanı — pozisyon ajanı `12-kidemli-operasyon-kontrol-uzmani.md`
+      - Operasyon Kontrol Uzmanı — pozisyon ajanı `12-operasyon-kontrol-uzmani.md`
+      - Operasyon İzleme Analisti — pozisyon ajanı `12-operasyon-izleme-analisti.md`
+    - Ekip — İş Emri ve Talep Yönetimi: İş Emri ve Talep Yönetimi Yöneticisi — pozisyon ajanı `12-is-emri-ve-talep-yonetimi-yoneticisi.md`
+      - Kıdemli İş Emri Yönetimi Uzmanı — pozisyon ajanı `12-kidemli-is-emri-yonetimi-uzmani.md`
+      - İş Emri Yönetimi Uzmanı — pozisyon ajanı `12-is-emri-yonetimi-uzmani.md`
+      - Operasyon Talep Koordinatörü — pozisyon ajanı `12-operasyon-talep-koordinatoru.md`
+  - **Birim — Kapasite, Kaynak ve Vardiya Yönetimi:** Kapasite, Kaynak ve Vardiya Yönetimi Müdürü — pozisyon ajanı `12-kapasite-kaynak-ve-vardiya-yonetimi-muduru.md`
+    - Ekip — Talep ve Kapasite Planlama: Talep ve Kapasite Planlama Yöneticisi — pozisyon ajanı `12-talep-ve-kapasite-planlama-yoneticisi.md`
+      - Kıdemli Kapasite Planlama Uzmanı — pozisyon ajanı `12-kidemli-kapasite-planlama-uzmani.md`
+      - Kapasite Planlama Uzmanı — pozisyon ajanı `12-kapasite-planlama-uzmani.md` · skill: capacity-plan
+      - Talep Tahmin Analisti — pozisyon ajanı `12-talep-tahmin-analisti.md`
+    - Ekip — İş Gücü ve Vardiya Planlama: İş Gücü ve Vardiya Planlama Yöneticisi — pozisyon ajanı `12-is-gucu-ve-vardiya-planlama-yoneticisi.md`
+      - Kıdemli İş Gücü Planlama Uzmanı — pozisyon ajanı `12-kidemli-is-gucu-planlama-uzmani.md`
+      - Vardiya Planlama Uzmanı — pozisyon ajanı `12-vardiya-planlama-uzmani.md`
+      - İş Gücü Analisti — pozisyon ajanı `12-is-gucu-analisti.md`
+    - Ekip — Kaynak Tahsis ve Çizelgeleme: Kaynak Tahsis ve Çizelgeleme Yöneticisi — pozisyon ajanı `12-kaynak-tahsis-ve-cizelgeleme-yoneticisi.md`
+      - Kıdemli Kaynak Planlama Uzmanı — pozisyon ajanı `12-kidemli-kaynak-planlama-uzmani.md`
+      - Kaynak Tahsis Uzmanı — pozisyon ajanı `12-kaynak-tahsis-uzmani.md` · skill: capacity-plan
+      - Çizelgeleme Uzmanı — pozisyon ajanı `12-cizelgeleme-uzmani.md`
+  - **Birim — Saha Operasyonları ve Lokasyon Yönetimi:** Saha Operasyonları ve Lokasyon Yönetimi Müdürü — pozisyon ajanı `12-saha-operasyonlari-ve-lokasyon-yonetimi-muduru.md`
+    - Ekip — Saha Operasyonları: Saha Operasyonları Yöneticisi — pozisyon ajanı `12-saha-operasyonlari-yoneticisi.md`
+      - Kıdemli Saha Operasyon Uzmanı — pozisyon ajanı `12-kidemli-saha-operasyon-uzmani.md`
+      - Saha Operasyon Uzmanı — pozisyon ajanı `12-saha-operasyon-uzmani.md`
+      - Saha Operasyon Koordinatörü — pozisyon ajanı `12-saha-operasyon-koordinatoru.md`
+    - Ekip — Lokasyon ve Tesis Operasyonları: Lokasyon ve Tesis Operasyonları Yöneticisi — pozisyon ajanı `12-lokasyon-ve-tesis-operasyonlari-yoneticisi.md`
+      - Kıdemli Lokasyon Operasyon Uzmanı — pozisyon ajanı `12-kidemli-lokasyon-operasyon-uzmani.md`
+      - Tesis Operasyon Uzmanı — pozisyon ajanı `12-tesis-operasyon-uzmani.md`
+      - Lokasyon Koordinatörü — pozisyon ajanı `12-lokasyon-koordinatoru.md`
+    - Ekip — Mobil Ekip ve Rota Yönetimi: Mobil Ekip ve Rota Yönetimi Yöneticisi — pozisyon ajanı `12-mobil-ekip-ve-rota-yonetimi-yoneticisi.md`
+      - Kıdemli Rota Planlama Uzmanı — pozisyon ajanı `12-kidemli-rota-planlama-uzmani.md`
+      - Mobil Ekip Planlama Uzmanı — pozisyon ajanı `12-mobil-ekip-planlama-uzmani.md`
+      - Rota Optimizasyon Analisti — pozisyon ajanı `12-rota-optimizasyon-analisti.md`
+  - **Birim — Süreç Yönetimi ve Operasyonel Mükemmellik:** Süreç Yönetimi ve Operasyonel Mükemmellik Müdürü — pozisyon ajanı `12-surec-yonetimi-ve-operasyonel-mukemmellik-muduru.md`
+    - Ekip — Süreç Tasarımı ve Standardizasyon: Süreç Tasarımı ve Standardizasyon Yöneticisi — pozisyon ajanı `12-surec-tasarimi-ve-standardizasyon-yoneticisi.md`
+      - Kıdemli Süreç Yönetimi Uzmanı — pozisyon ajanı `12-kidemli-surec-yonetimi-uzmani.md`
+      - Süreç Yönetimi Uzmanı — pozisyon ajanı `12-surec-yonetimi-uzmani.md` · skill: process-doc
+      - Süreç Analisti — pozisyon ajanı `12-surec-analisti.md` · skill: process-doc
+    - Ekip — Yalın Operasyon ve Sürekli İyileştirme: Yalın Operasyon ve Sürekli İyileştirme Yöneticisi — pozisyon ajanı `12-yalin-operasyon-ve-surekli-iyilestirme-yoneticisi.md`
+      - Kıdemli Yalın Operasyon Uzmanı — pozisyon ajanı `12-kidemli-yalin-operasyon-uzmani.md`
+      - Sürekli İyileştirme Uzmanı — pozisyon ajanı `12-surekli-iyilestirme-uzmani.md` · skill: process-optimization
+      - Operasyonel Verimlilik Analisti — pozisyon ajanı `12-operasyonel-verimlilik-analisti.md` · skill: process-optimization
+    - Ekip — Operasyon Otomasyonu ve Dijitalleşme: Operasyon Otomasyonu ve Dijitalleşme Yöneticisi — pozisyon ajanı `12-operasyon-otomasyonu-ve-dijitallesme-yoneticisi.md`
+      - Kıdemli Operasyon Otomasyonu Uzmanı — pozisyon ajanı `12-kidemli-operasyon-otomasyonu-uzmani.md`
+      - Operasyon Dijitalleşme Uzmanı — pozisyon ajanı `12-operasyon-dijitallesme-uzmani.md`
+      - İş Süreçleri Otomasyon Analisti — pozisyon ajanı `12-is-surecleri-otomasyon-analisti.md`
+  - **Birim — Hizmet Seviyesi, Kalite ve Operasyonel Güvence:** Hizmet Seviyesi, Kalite ve Operasyonel Güvence Müdürü — pozisyon ajanı `12-hizmet-seviyesi-kalite-ve-operasyonel-guvence-muduru.md`
+    - Ekip — SLA ve Hizmet Seviyesi Yönetimi: SLA ve Hizmet Seviyesi Yönetimi Yöneticisi — pozisyon ajanı `12-sla-ve-hizmet-seviyesi-yonetimi-yoneticisi.md`
+      - Kıdemli Hizmet Seviyesi Uzmanı — pozisyon ajanı `12-kidemli-hizmet-seviyesi-uzmani.md`
+      - SLA Yönetimi Uzmanı — pozisyon ajanı `12-sla-yonetimi-uzmani.md`
+      - Hizmet Seviyesi Analisti — pozisyon ajanı `12-hizmet-seviyesi-analisti.md`
+    - Ekip — Operasyonel Kalite Kontrol: Operasyonel Kalite Kontrol Yöneticisi — pozisyon ajanı `12-operasyonel-kalite-kontrol-yoneticisi.md`
+      - Kıdemli Operasyonel Kalite Uzmanı — pozisyon ajanı `12-kidemli-operasyonel-kalite-uzmani.md`
+      - Operasyonel Kalite Uzmanı — pozisyon ajanı `12-operasyonel-kalite-uzmani.md`
+      - Kalite Kontrol Analisti — pozisyon ajanı `12-kalite-kontrol-analisti.md`
+    - Ekip — Operasyonel Risk, Süreklilik ve Acil Durum: Operasyonel Risk, Süreklilik ve Acil Durum Yöneticisi — pozisyon ajanı `12-operasyonel-risk-sureklilik-ve-acil-durum-yoneticisi.md`
+      - Kıdemli Operasyonel Süreklilik Uzmanı — pozisyon ajanı `12-kidemli-operasyonel-sureklilik-uzmani.md`
+      - Operasyonel Risk Uzmanı — pozisyon ajanı `12-operasyonel-risk-uzmani.md` · skill: risk-assessment
+      - Acil Durum Koordinatörü — pozisyon ajanı `12-acil-durum-koordinatoru.md`
+  - **Birim — Operasyon Analitiği, Maliyet ve Verimlilik:** Operasyon Analitiği, Maliyet ve Verimlilik Müdürü — pozisyon ajanı `12-operasyon-analitigi-maliyet-ve-verimlilik-muduru.md`
+    - Ekip — Operasyon Analitiği ve Raporlama: Operasyon Analitiği ve Raporlama Yöneticisi — pozisyon ajanı `12-operasyon-analitigi-ve-raporlama-yoneticisi.md`
+      - Kıdemli Operasyon Analitiği Uzmanı — pozisyon ajanı `12-kidemli-operasyon-analitigi-uzmani.md`
+      - Operasyon Analitiği Uzmanı — pozisyon ajanı `12-operasyon-analitigi-uzmani.md`
+      - Operasyon Veri Analisti — pozisyon ajanı `12-operasyon-veri-analisti.md`
+    - Ekip — Operasyonel Maliyet Yönetimi: Operasyonel Maliyet Yönetimi Yöneticisi — pozisyon ajanı `12-operasyonel-maliyet-yonetimi-yoneticisi.md`
+      - Kıdemli Operasyonel Maliyet Uzmanı — pozisyon ajanı `12-kidemli-operasyonel-maliyet-uzmani.md`
+      - Operasyonel Maliyet Uzmanı — pozisyon ajanı `12-operasyonel-maliyet-uzmani.md`
+      - Birim Maliyet Analisti — pozisyon ajanı `12-birim-maliyet-analisti.md`
+    - Ekip — Verimlilik ve Benchmark Yönetimi: Verimlilik ve Benchmark Yönetimi Yöneticisi — pozisyon ajanı `12-verimlilik-ve-benchmark-yonetimi-yoneticisi.md`
+      - Kıdemli Verimlilik Uzmanı — pozisyon ajanı `12-kidemli-verimlilik-uzmani.md`
+      - Verimlilik Uzmanı — pozisyon ajanı `12-verimlilik-uzmani.md`
+      - Benchmark Analisti — pozisyon ajanı `12-benchmark-analisti.md`
+
+## 13 - Üretim, Tedarik Zinciri ve Lojistik
+8 birim · 105 pozisyon · katalog ajanlı 0 · pozisyon ajanı 105
+
+- Bağlı olduğu: Operasyonlardan Sorumlu Genel Müdür Yardımcısı / Operasyon Başkanı
+- **Departman lideri:** Üretim, Tedarik Zinciri ve Lojistik Direktörü — pozisyon ajanı `13-uretim-tedarik-zinciri-ve-lojistik-direktoru.md`
+  - **Birim — Entegre İş Planlama ve Tedarik Zinciri Stratejisi:** Entegre İş Planlama ve Tedarik Zinciri Stratejisi Müdürü — pozisyon ajanı `13-entegre-is-planlama-ve-tedarik-zinciri-stratejisi-muduru.md`
+    - Ekip — Tedarik Zinciri Stratejisi ve Ağ Tasarımı: Tedarik Zinciri Stratejisi ve Ağ Tasarımı Yöneticisi — pozisyon ajanı `13-tedarik-zinciri-stratejisi-ve-ag-tasarimi-yoneticisi.md`
+      - Kıdemli Tedarik Zinciri Stratejisi Uzmanı — pozisyon ajanı `13-kidemli-tedarik-zinciri-stratejisi-uzmani.md`
+      - Tedarik Zinciri Stratejisi Uzmanı — pozisyon ajanı `13-tedarik-zinciri-stratejisi-uzmani.md`
+      - Ağ Tasarımı Analisti — pozisyon ajanı `13-ag-tasarimi-analisti.md`
+    - Ekip — Entegre İş Planlama: Entegre İş Planlama Yöneticisi — pozisyon ajanı `13-entegre-is-planlama-yoneticisi.md`
+      - Kıdemli Entegre İş Planlama Uzmanı — pozisyon ajanı `13-kidemli-entegre-is-planlama-uzmani.md`
+      - Entegre İş Planlama Uzmanı — pozisyon ajanı `13-entegre-is-planlama-uzmani.md`
+      - IBP Analisti — pozisyon ajanı `13-ibp-analisti.md`
+    - Ekip — Tedarik Zinciri Risk ve Süreklilik: Tedarik Zinciri Risk ve Süreklilik Yöneticisi — pozisyon ajanı `13-tedarik-zinciri-risk-ve-sureklilik-yoneticisi.md`
+      - Kıdemli Tedarik Zinciri Risk Uzmanı — pozisyon ajanı `13-kidemli-tedarik-zinciri-risk-uzmani.md`
+      - Tedarik Zinciri Süreklilik Uzmanı — pozisyon ajanı `13-tedarik-zinciri-sureklilik-uzmani.md`
+      - Tedarik Riski Analisti — pozisyon ajanı `13-tedarik-riski-analisti.md`
+  - **Birim — Talep, Üretim ve Kapasite Planlama:** Talep, Üretim ve Kapasite Planlama Müdürü — pozisyon ajanı `13-talep-uretim-ve-kapasite-planlama-muduru.md`
+    - Ekip — Talep Planlama: Talep Planlama Yöneticisi — pozisyon ajanı `13-talep-planlama-yoneticisi.md`
+      - Kıdemli Talep Planlama Uzmanı — pozisyon ajanı `13-kidemli-talep-planlama-uzmani.md`
+      - Talep Planlama Uzmanı — pozisyon ajanı `13-talep-planlama-uzmani.md` · skill: inventory-planner
+      - Talep Tahmin Analisti — pozisyon ajanı `13-talep-tahmin-analisti.md`
+    - Ekip — Üretim Planlama ve Çizelgeleme: Üretim Planlama ve Çizelgeleme Yöneticisi — pozisyon ajanı `13-uretim-planlama-ve-cizelgeleme-yoneticisi.md`
+      - Kıdemli Üretim Planlama Uzmanı — pozisyon ajanı `13-kidemli-uretim-planlama-uzmani.md`
+      - Üretim Planlama Uzmanı — pozisyon ajanı `13-uretim-planlama-uzmani.md`
+      - Üretim Çizelgeleme Uzmanı — pozisyon ajanı `13-uretim-cizelgeleme-uzmani.md`
+    - Ekip — Kapasite ve Kaynak Planlama: Kapasite ve Kaynak Planlama Yöneticisi — pozisyon ajanı `13-kapasite-ve-kaynak-planlama-yoneticisi.md`
+      - Kıdemli Kapasite Planlama Uzmanı — pozisyon ajanı `13-kidemli-kapasite-planlama-uzmani.md`
+      - Kapasite Planlama Uzmanı — pozisyon ajanı `13-kapasite-planlama-uzmani.md`
+      - Kaynak Planlama Analisti — pozisyon ajanı `13-kaynak-planlama-analisti.md`
+  - **Birim — Üretim Operasyonları:** Üretim Operasyonları Müdürü — pozisyon ajanı `13-uretim-operasyonlari-muduru.md`
+    - Ekip — Üretim Hatları ve Vardiya Yönetimi: Üretim Hatları ve Vardiya Yönetimi Yöneticisi — pozisyon ajanı `13-uretim-hatlari-ve-vardiya-yonetimi-yoneticisi.md`
+      - Kıdemli Üretim Sorumlusu — pozisyon ajanı `13-kidemli-uretim-sorumlusu.md`
+      - Üretim Sorumlusu — pozisyon ajanı `13-uretim-sorumlusu.md`
+      - Vardiya Amiri — pozisyon ajanı `13-vardiya-amiri.md`
+    - Ekip — Üretim Mühendisliği ve Endüstriyelleştirme: Üretim Mühendisliği ve Endüstriyelleştirme Yöneticisi — pozisyon ajanı `13-uretim-muhendisligi-ve-endustriyellestirme-yoneticisi.md`
+      - Kıdemli Üretim Mühendisi — pozisyon ajanı `13-kidemli-uretim-muhendisi.md`
+      - Üretim Mühendisi — pozisyon ajanı `13-uretim-muhendisi.md`
+      - Endüstriyelleştirme Uzmanı — pozisyon ajanı `13-endustriyellestirme-uzmani.md`
+    - Ekip — Yalın Üretim ve Sürekli İyileştirme: Yalın Üretim ve Sürekli İyileştirme Yöneticisi — pozisyon ajanı `13-yalin-uretim-ve-surekli-iyilestirme-yoneticisi.md`
+      - Kıdemli Yalın Üretim Uzmanı — pozisyon ajanı `13-kidemli-yalin-uretim-uzmani.md`
+      - Sürekli İyileştirme Uzmanı — pozisyon ajanı `13-surekli-iyilestirme-uzmani.md`
+      - Üretim Verimlilik Analisti — pozisyon ajanı `13-uretim-verimlilik-analisti.md`
+  - **Birim — Bakım, Tesis ve Teknik Hizmetler:** Bakım, Tesis ve Teknik Hizmetler Müdürü — pozisyon ajanı `13-bakim-tesis-ve-teknik-hizmetler-muduru.md`
+    - Ekip — Planlı ve Kestirimci Bakım: Planlı ve Kestirimci Bakım Yöneticisi — pozisyon ajanı `13-planli-ve-kestirimci-bakim-yoneticisi.md`
+      - Kıdemli Bakım Mühendisi — pozisyon ajanı `13-kidemli-bakim-muhendisi.md`
+      - Bakım Mühendisi — pozisyon ajanı `13-bakim-muhendisi.md`
+      - Kestirimci Bakım Uzmanı — pozisyon ajanı `13-kestirimci-bakim-uzmani.md`
+    - Ekip — Arıza ve Teknik Müdahale: Arıza ve Teknik Müdahale Yöneticisi — pozisyon ajanı `13-ariza-ve-teknik-mudahale-yoneticisi.md`
+      - Kıdemli Teknik Bakım Uzmanı — pozisyon ajanı `13-kidemli-teknik-bakim-uzmani.md`
+      - Teknik Bakım Uzmanı — pozisyon ajanı `13-teknik-bakim-uzmani.md`
+      - Arıza Müdahale Teknisyeni — pozisyon ajanı `13-ariza-mudahale-teknisyeni.md`
+    - Ekip — Tesis, Enerji ve Yardımcı İşletmeler: Tesis, Enerji ve Yardımcı İşletmeler Yöneticisi — pozisyon ajanı `13-tesis-enerji-ve-yardimci-isletmeler-yoneticisi.md`
+      - Kıdemli Tesis ve Enerji Uzmanı — pozisyon ajanı `13-kidemli-tesis-ve-enerji-uzmani.md`
+      - Tesis Yönetimi Uzmanı — pozisyon ajanı `13-tesis-yonetimi-uzmani.md`
+      - Yardımcı İşletmeler Teknisyeni — pozisyon ajanı `13-yardimci-isletmeler-teknisyeni.md`
+  - **Birim — Satın Alma ve Tedarikçi Yönetimi:** Satın Alma ve Tedarikçi Yönetimi Müdürü — pozisyon ajanı `13-satin-alma-ve-tedarikci-yonetimi-muduru.md`
+    - Ekip — Stratejik Satın Alma ve Kategori Yönetimi: Stratejik Satın Alma ve Kategori Yönetimi Yöneticisi — pozisyon ajanı `13-stratejik-satin-alma-ve-kategori-yonetimi-yoneticisi.md`
+      - Kıdemli Stratejik Satın Alma Uzmanı — pozisyon ajanı `13-kidemli-stratejik-satin-alma-uzmani.md`
+      - Kategori Yönetimi Uzmanı — pozisyon ajanı `13-kategori-yonetimi-uzmani.md`
+      - Satın Alma Analisti — pozisyon ajanı `13-satin-alma-analisti.md` · skill: vendor-review
+    - Ekip — Operasyonel Satın Alma: Operasyonel Satın Alma Yöneticisi — pozisyon ajanı `13-operasyonel-satin-alma-yoneticisi.md`
+      - Kıdemli Satın Alma Uzmanı — pozisyon ajanı `13-kidemli-satin-alma-uzmani.md`
+      - Satın Alma Uzmanı — pozisyon ajanı `13-satin-alma-uzmani.md` · skill: restock
+      - Satın Alma Operasyonları Koordinatörü — pozisyon ajanı `13-satin-alma-operasyonlari-koordinatoru.md`
+    - Ekip — Tedarikçi Performansı ve Geliştirme: Tedarikçi Performansı ve Geliştirme Yöneticisi — pozisyon ajanı `13-tedarikci-performansi-ve-gelistirme-yoneticisi.md`
+      - Kıdemli Tedarikçi Geliştirme Uzmanı — pozisyon ajanı `13-kidemli-tedarikci-gelistirme-uzmani.md`
+      - Tedarikçi Performans Uzmanı — pozisyon ajanı `13-tedarikci-performans-uzmani.md` · skill: vendor-review
+      - Tedarikçi Kalite Analisti — pozisyon ajanı `13-tedarikci-kalite-analisti.md`
+  - **Birim — Malzeme, Stok ve Depo Yönetimi:** Malzeme, Stok ve Depo Yönetimi Müdürü — pozisyon ajanı `13-malzeme-stok-ve-depo-yonetimi-muduru.md`
+    - Ekip — Malzeme İhtiyaç Planlama: Malzeme İhtiyaç Planlama Yöneticisi — pozisyon ajanı `13-malzeme-ihtiyac-planlama-yoneticisi.md`
+      - Kıdemli Malzeme Planlama Uzmanı — pozisyon ajanı `13-kidemli-malzeme-planlama-uzmani.md`
+      - Malzeme Planlama Uzmanı — pozisyon ajanı `13-malzeme-planlama-uzmani.md` · skill: inventory-planner
+      - MRP Analisti — pozisyon ajanı `13-mrp-analisti.md`
+    - Ekip — Stok ve Envanter Yönetimi: Stok ve Envanter Yönetimi Yöneticisi — pozisyon ajanı `13-stok-ve-envanter-yonetimi-yoneticisi.md`
+      - Kıdemli Envanter Yönetimi Uzmanı — pozisyon ajanı `13-kidemli-envanter-yonetimi-uzmani.md`
+      - Stok Yönetimi Uzmanı — pozisyon ajanı `13-stok-yonetimi-uzmani.md` · skill: inventory-planner, restock
+      - Envanter Kontrol Analisti — pozisyon ajanı `13-envanter-kontrol-analisti.md`
+    - Ekip — Depo ve İç Lojistik: Depo ve İç Lojistik Yöneticisi — pozisyon ajanı `13-depo-ve-ic-lojistik-yoneticisi.md`
+      - Kıdemli Depo Operasyon Uzmanı — pozisyon ajanı `13-kidemli-depo-operasyon-uzmani.md`
+      - Depo Operasyon Uzmanı — pozisyon ajanı `13-depo-operasyon-uzmani.md`
+      - İç Lojistik Koordinatörü — pozisyon ajanı `13-ic-lojistik-koordinatoru.md`
+  - **Birim — Lojistik, Dağıtım ve Dış Ticaret:** Lojistik, Dağıtım ve Dış Ticaret Müdürü — pozisyon ajanı `13-lojistik-dagitim-ve-dis-ticaret-muduru.md`
+    - Ekip — Nakliye ve Dağıtım Yönetimi: Nakliye ve Dağıtım Yönetimi Yöneticisi — pozisyon ajanı `13-nakliye-ve-dagitim-yonetimi-yoneticisi.md`
+      - Kıdemli Lojistik Uzmanı — pozisyon ajanı `13-kidemli-lojistik-uzmani.md`
+      - Nakliye ve Dağıtım Uzmanı — pozisyon ajanı `13-nakliye-ve-dagitim-uzmani.md`
+      - Sevkiyat Koordinatörü — pozisyon ajanı `13-sevkiyat-koordinatoru.md`
+    - Ekip — Dış Ticaret ve Gümrük Operasyonları: Dış Ticaret ve Gümrük Operasyonları Yöneticisi — pozisyon ajanı `13-dis-ticaret-ve-gumruk-operasyonlari-yoneticisi.md`
+      - Kıdemli Dış Ticaret Uzmanı — pozisyon ajanı `13-kidemli-dis-ticaret-uzmani.md`
+      - Dış Ticaret Uzmanı — pozisyon ajanı `13-dis-ticaret-uzmani.md`
+      - Gümrük Operasyonları Uzmanı — pozisyon ajanı `13-gumruk-operasyonlari-uzmani.md`
+    - Ekip — Lojistik Hizmet Sağlayıcı Yönetimi: Lojistik Hizmet Sağlayıcı Yönetimi Yöneticisi — pozisyon ajanı `13-lojistik-hizmet-saglayici-yonetimi-yoneticisi.md`
+      - Kıdemli Lojistik Tedarikçi Uzmanı — pozisyon ajanı `13-kidemli-lojistik-tedarikci-uzmani.md`
+      - Lojistik Sözleşme ve Performans Uzmanı — pozisyon ajanı `13-lojistik-sozlesme-ve-performans-uzmani.md`
+      - 3PL Operasyon Analisti — pozisyon ajanı `13-3pl-operasyon-analisti.md`
+  - **Birim — Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik:** Tedarik Zinciri Analitiği, Maliyet ve Sürdürülebilirlik Müdürü — pozisyon ajanı `13-tedarik-zinciri-analitigi-maliyet-ve-surdurulebilirlik-muduru.md`
+    - Ekip — Tedarik Zinciri Analitiği ve Kontrol Kulesi: Tedarik Zinciri Analitiği ve Kontrol Kulesi Yöneticisi — pozisyon ajanı `13-tedarik-zinciri-analitigi-ve-kontrol-kulesi-yoneticisi.md`
+      - Kıdemli Tedarik Zinciri Analitiği Uzmanı — pozisyon ajanı `13-kidemli-tedarik-zinciri-analitigi-uzmani.md`
+      - Tedarik Zinciri Analitiği Uzmanı — pozisyon ajanı `13-tedarik-zinciri-analitigi-uzmani.md`
+      - Kontrol Kulesi Analisti — pozisyon ajanı `13-kontrol-kulesi-analisti.md`
+    - Ekip — Üretim ve Tedarik Zinciri Maliyet Yönetimi: Üretim ve Tedarik Zinciri Maliyet Yönetimi Yöneticisi — pozisyon ajanı `13-uretim-ve-tedarik-zinciri-maliyet-yonetimi-yoneticisi.md`
+      - Kıdemli Tedarik Zinciri Maliyet Uzmanı — pozisyon ajanı `13-kidemli-tedarik-zinciri-maliyet-uzmani.md`
+      - Üretim Maliyet Uzmanı — pozisyon ajanı `13-uretim-maliyet-uzmani.md`
+      - Tedarik Zinciri Maliyet Analisti — pozisyon ajanı `13-tedarik-zinciri-maliyet-analisti.md`
+    - Ekip — Sürdürülebilir Tedarik Zinciri: Sürdürülebilir Tedarik Zinciri Yöneticisi — pozisyon ajanı `13-surdurulebilir-tedarik-zinciri-yoneticisi.md`
+      - Kıdemli Sürdürülebilir Tedarik Zinciri Uzmanı — pozisyon ajanı `13-kidemli-surdurulebilir-tedarik-zinciri-uzmani.md`
+      - Sürdürülebilirlik Uzmanı — pozisyon ajanı `13-surdurulebilirlik-uzmani.md`
+      - Karbon ve Kaynak Verimliliği Analisti — pozisyon ajanı `13-karbon-ve-kaynak-verimliligi-analisti.md`
+
+## 14 - Kalite Yönetimi
+8 birim · 105 pozisyon · katalog ajanlı 0 · pozisyon ajanı 105
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Kalite Yönetimi Direktörü — pozisyon ajanı `14-kalite-yonetimi-direktoru.md`
+  - **Birim — Kalite Yönetim Sistemi ve Strateji:** Kalite Yönetim Sistemi ve Strateji Müdürü — pozisyon ajanı `14-kalite-yonetim-sistemi-ve-strateji-muduru.md`
+    - Ekip — Kalite Stratejisi ve Yönetişim: Kalite Stratejisi ve Yönetişim Yöneticisi — pozisyon ajanı `14-kalite-stratejisi-ve-yonetisim-yoneticisi.md`
+      - Kıdemli Kalite Stratejisi Uzmanı — pozisyon ajanı `14-kidemli-kalite-stratejisi-uzmani.md`
+      - Kalite Stratejisi Uzmanı — pozisyon ajanı `14-kalite-stratejisi-uzmani.md`
+      - Kalite Yönetişim Analisti — pozisyon ajanı `14-kalite-yonetisim-analisti.md`
+    - Ekip — Kalite Yönetim Sistemi: Kalite Yönetim Sistemi Yöneticisi — pozisyon ajanı `14-kalite-yonetim-sistemi-yoneticisi.md`
+      - Kıdemli Kalite Sistemleri Uzmanı — pozisyon ajanı `14-kidemli-kalite-sistemleri-uzmani.md`
+      - Kalite Sistemleri Uzmanı — pozisyon ajanı `14-kalite-sistemleri-uzmani.md`
+      - QMS Analisti — pozisyon ajanı `14-qms-analisti.md`
+    - Ekip — Doküman ve Kayıt Kontrolü: Doküman ve Kayıt Kontrolü Yöneticisi — pozisyon ajanı `14-dokuman-ve-kayit-kontrolu-yoneticisi.md`
+      - Kıdemli Doküman Kontrol Uzmanı — pozisyon ajanı `14-kidemli-dokuman-kontrol-uzmani.md`
+      - Doküman Kontrol Uzmanı — pozisyon ajanı `14-dokuman-kontrol-uzmani.md`
+      - Kalite Kayıtları Koordinatörü — pozisyon ajanı `14-kalite-kayitlari-koordinatoru.md`
+  - **Birim — Kalite Güvence ve Standartlar:** Kalite Güvence ve Standartlar Müdürü — pozisyon ajanı `14-kalite-guvence-ve-standartlar-muduru.md`
+    - Ekip — Kalite Güvence: Kalite Güvence Yöneticisi — pozisyon ajanı `14-kalite-guvence-yoneticisi.md`
+      - Kıdemli Kalite Güvence Uzmanı — pozisyon ajanı `14-kidemli-kalite-guvence-uzmani.md`
+      - Kalite Güvence Uzmanı — pozisyon ajanı `14-kalite-guvence-uzmani.md`
+      - Kalite Güvence Analisti — pozisyon ajanı `14-kalite-guvence-analisti.md`
+    - Ekip — Standartlar ve Sertifikasyon: Standartlar ve Sertifikasyon Yöneticisi — pozisyon ajanı `14-standartlar-ve-sertifikasyon-yoneticisi.md`
+      - Kıdemli Standartlar Uzmanı — pozisyon ajanı `14-kidemli-standartlar-uzmani.md`
+      - Sertifikasyon Uzmanı — pozisyon ajanı `14-sertifikasyon-uzmani.md`
+      - Kalite Standartları Analisti — pozisyon ajanı `14-kalite-standartlari-analisti.md`
+    - Ekip — Kalite Risk Yönetimi: Kalite Risk Yönetimi Yöneticisi — pozisyon ajanı `14-kalite-risk-yonetimi-yoneticisi.md`
+      - Kıdemli Kalite Risk Uzmanı — pozisyon ajanı `14-kidemli-kalite-risk-uzmani.md`
+      - Kalite Risk Uzmanı — pozisyon ajanı `14-kalite-risk-uzmani.md`
+      - FMEA Analisti — pozisyon ajanı `14-fmea-analisti.md`
+  - **Birim — Operasyonel Kalite Kontrol:** Operasyonel Kalite Kontrol Müdürü — pozisyon ajanı `14-operasyonel-kalite-kontrol-muduru.md`
+    - Ekip — Girdi ve Mal Kabul Kalite Kontrol: Girdi ve Mal Kabul Kalite Kontrol Yöneticisi — pozisyon ajanı `14-girdi-ve-mal-kabul-kalite-kontrol-yoneticisi.md`
+      - Kıdemli Girdi Kalite Uzmanı — pozisyon ajanı `14-kidemli-girdi-kalite-uzmani.md`
+      - Girdi Kalite Kontrol Uzmanı — pozisyon ajanı `14-girdi-kalite-kontrol-uzmani.md`
+      - Mal Kabul Kalite Kontrolörü — pozisyon ajanı `14-mal-kabul-kalite-kontroloru.md`
+    - Ekip — Süreç İçi Kalite Kontrol: Süreç İçi Kalite Kontrol Yöneticisi — pozisyon ajanı `14-surec-ici-kalite-kontrol-yoneticisi.md`
+      - Kıdemli Proses Kalite Uzmanı — pozisyon ajanı `14-kidemli-proses-kalite-uzmani.md`
+      - Proses Kalite Kontrol Uzmanı — pozisyon ajanı `14-proses-kalite-kontrol-uzmani.md`
+      - Süreç Kalite Kontrolörü — pozisyon ajanı `14-surec-kalite-kontroloru.md`
+    - Ekip — Nihai Ürün ve Hizmet Kalite Kontrol: Nihai Ürün ve Hizmet Kalite Kontrol Yöneticisi — pozisyon ajanı `14-nihai-urun-ve-hizmet-kalite-kontrol-yoneticisi.md`
+      - Kıdemli Nihai Kalite Uzmanı — pozisyon ajanı `14-kidemli-nihai-kalite-uzmani.md`
+      - Nihai Kalite Kontrol Uzmanı — pozisyon ajanı `14-nihai-kalite-kontrol-uzmani.md`
+      - Ürün ve Hizmet Kalite Kontrolörü — pozisyon ajanı `14-urun-ve-hizmet-kalite-kontroloru.md`
+  - **Birim — Tedarikçi Kalitesi:** Tedarikçi Kalitesi Müdürü — pozisyon ajanı `14-tedarikci-kalitesi-muduru.md`
+    - Ekip — Tedarikçi Kalifikasyonu: Tedarikçi Kalifikasyonu Yöneticisi — pozisyon ajanı `14-tedarikci-kalifikasyonu-yoneticisi.md`
+      - Kıdemli Tedarikçi Kalifikasyon Uzmanı — pozisyon ajanı `14-kidemli-tedarikci-kalifikasyon-uzmani.md`
+      - Tedarikçi Kalifikasyon Uzmanı — pozisyon ajanı `14-tedarikci-kalifikasyon-uzmani.md`
+      - Tedarikçi Risk Analisti — pozisyon ajanı `14-tedarikci-risk-analisti.md`
+    - Ekip — Tedarikçi Kalite Güvence: Tedarikçi Kalite Güvence Yöneticisi — pozisyon ajanı `14-tedarikci-kalite-guvence-yoneticisi.md`
+      - Kıdemli Tedarikçi Kalite Mühendisi — pozisyon ajanı `14-kidemli-tedarikci-kalite-muhendisi.md`
+      - Tedarikçi Kalite Uzmanı — pozisyon ajanı `14-tedarikci-kalite-uzmani.md`
+      - Tedarikçi Denetim Uzmanı — pozisyon ajanı `14-tedarikci-denetim-uzmani.md`
+    - Ekip — Tedarikçi Uygunsuzluk ve İyileştirme: Tedarikçi Uygunsuzluk ve İyileştirme Yöneticisi — pozisyon ajanı `14-tedarikci-uygunsuzluk-ve-iyilestirme-yoneticisi.md`
+      - Kıdemli Tedarikçi İyileştirme Uzmanı — pozisyon ajanı `14-kidemli-tedarikci-iyilestirme-uzmani.md`
+      - Tedarikçi Uygunsuzluk Uzmanı — pozisyon ajanı `14-tedarikci-uygunsuzluk-uzmani.md`
+      - SCAR Koordinatörü — pozisyon ajanı `14-scar-koordinatoru.md`
+  - **Birim — Müşteri Kalitesi ve Geri Bildirim:** Müşteri Kalitesi ve Geri Bildirim Müdürü — pozisyon ajanı `14-musteri-kalitesi-ve-geri-bildirim-muduru.md`
+    - Ekip — Müşteri Kalite Gereklilikleri: Müşteri Kalite Gereklilikleri Yöneticisi — pozisyon ajanı `14-musteri-kalite-gereklilikleri-yoneticisi.md`
+      - Kıdemli Müşteri Kalite Uzmanı — pozisyon ajanı `14-kidemli-musteri-kalite-uzmani.md`
+      - Müşteri Kalite Uzmanı — pozisyon ajanı `14-musteri-kalite-uzmani.md`
+      - Kalite Gereklilikleri Analisti — pozisyon ajanı `14-kalite-gereklilikleri-analisti.md`
+    - Ekip — Müşteri Şikâyetleri ve Kalite Vakaları: Müşteri Şikâyetleri ve Kalite Vakaları Yöneticisi — pozisyon ajanı `14-musteri-sikayetleri-ve-kalite-vakalari-yoneticisi.md`
+      - Kıdemli Müşteri Kalite Vakası Uzmanı — pozisyon ajanı `14-kidemli-musteri-kalite-vakasi-uzmani.md`
+      - Müşteri Şikâyet Kalite Uzmanı — pozisyon ajanı `14-musteri-sikayet-kalite-uzmani.md`
+      - Kalite Vakası Koordinatörü — pozisyon ajanı `14-kalite-vakasi-koordinatoru.md`
+    - Ekip — Saha Kalitesi ve Garanti Analitiği: Saha Kalitesi ve Garanti Analitiği Yöneticisi — pozisyon ajanı `14-saha-kalitesi-ve-garanti-analitigi-yoneticisi.md`
+      - Kıdemli Saha Kalite Uzmanı — pozisyon ajanı `14-kidemli-saha-kalite-uzmani.md`
+      - Saha Kalite Uzmanı — pozisyon ajanı `14-saha-kalite-uzmani.md`
+      - Garanti Kalite Analisti — pozisyon ajanı `14-garanti-kalite-analisti.md`
+  - **Birim — Uygunsuzluk, CAPA ve Sürekli İyileştirme:** Uygunsuzluk, CAPA ve Sürekli İyileştirme Müdürü — pozisyon ajanı `14-uygunsuzluk-capa-ve-surekli-iyilestirme-muduru.md`
+    - Ekip — Uygunsuzluk Yönetimi: Uygunsuzluk Yönetimi Yöneticisi — pozisyon ajanı `14-uygunsuzluk-yonetimi-yoneticisi.md`
+      - Kıdemli Uygunsuzluk Yönetimi Uzmanı — pozisyon ajanı `14-kidemli-uygunsuzluk-yonetimi-uzmani.md`
+      - Uygunsuzluk Yönetimi Uzmanı — pozisyon ajanı `14-uygunsuzluk-yonetimi-uzmani.md`
+      - Uygunsuzluk Analisti — pozisyon ajanı `14-uygunsuzluk-analisti.md`
+    - Ekip — Kök Neden ve CAPA Yönetimi: Kök Neden ve CAPA Yönetimi Yöneticisi — pozisyon ajanı `14-kok-neden-ve-capa-yonetimi-yoneticisi.md`
+      - Kıdemli CAPA Uzmanı — pozisyon ajanı `14-kidemli-capa-uzmani.md`
+      - Kök Neden Analizi Uzmanı — pozisyon ajanı `14-kok-neden-analizi-uzmani.md`
+      - CAPA Koordinatörü — pozisyon ajanı `14-capa-koordinatoru.md`
+    - Ekip — Kalite İyileştirme Programları: Kalite İyileştirme Programları Yöneticisi — pozisyon ajanı `14-kalite-iyilestirme-programlari-yoneticisi.md`
+      - Kıdemli Kalite İyileştirme Uzmanı — pozisyon ajanı `14-kidemli-kalite-iyilestirme-uzmani.md`
+      - Kalite İyileştirme Uzmanı — pozisyon ajanı `14-kalite-iyilestirme-uzmani.md`
+      - Six Sigma Analisti — pozisyon ajanı `14-six-sigma-analisti.md`
+  - **Birim — Kalite Denetimleri ve Uygunluk Değerlendirme:** Kalite Denetimleri ve Uygunluk Değerlendirme Müdürü — pozisyon ajanı `14-kalite-denetimleri-ve-uygunluk-degerlendirme-muduru.md`
+    - Ekip — İç Kalite Denetimleri: İç Kalite Denetimleri Yöneticisi — pozisyon ajanı `14-ic-kalite-denetimleri-yoneticisi.md`
+      - Kıdemli İç Kalite Denetçisi — pozisyon ajanı `14-kidemli-ic-kalite-denetcisi.md`
+      - İç Kalite Denetçisi — pozisyon ajanı `14-ic-kalite-denetcisi.md`
+      - Kalite Denetim Koordinatörü — pozisyon ajanı `14-kalite-denetim-koordinatoru.md`
+    - Ekip — Dış Denetim ve Sertifikasyon Koordinasyonu: Dış Denetim ve Sertifikasyon Koordinasyonu Yöneticisi — pozisyon ajanı `14-dis-denetim-ve-sertifikasyon-koordinasyonu-yoneticisi.md`
+      - Kıdemli Sertifikasyon Koordinatörü — pozisyon ajanı `14-kidemli-sertifikasyon-koordinatoru.md`
+      - Dış Denetim Koordinatörü — pozisyon ajanı `14-dis-denetim-koordinatoru.md`
+      - Sertifika Yönetimi Uzmanı — pozisyon ajanı `14-sertifika-yonetimi-uzmani.md`
+    - Ekip — Ürün ve Hizmet Uygunluk Değerlendirme: Ürün ve Hizmet Uygunluk Değerlendirme Yöneticisi — pozisyon ajanı `14-urun-ve-hizmet-uygunluk-degerlendirme-yoneticisi.md`
+      - Kıdemli Uygunluk Değerlendirme Uzmanı — pozisyon ajanı `14-kidemli-uygunluk-degerlendirme-uzmani.md`
+      - Uygunluk Değerlendirme Uzmanı — pozisyon ajanı `14-uygunluk-degerlendirme-uzmani.md`
+      - Teknik Dosya Analisti — pozisyon ajanı `14-teknik-dosya-analisti.md`
+  - **Birim — Laboratuvar, Metroloji ve Kalite Analitiği:** Laboratuvar, Metroloji ve Kalite Analitiği Müdürü — pozisyon ajanı `14-laboratuvar-metroloji-ve-kalite-analitigi-muduru.md`
+    - Ekip — Test ve Laboratuvar Yönetimi: Test ve Laboratuvar Yönetimi Yöneticisi — pozisyon ajanı `14-test-ve-laboratuvar-yonetimi-yoneticisi.md`
+      - Kıdemli Laboratuvar Uzmanı — pozisyon ajanı `14-kidemli-laboratuvar-uzmani.md`
+      - Test ve Laboratuvar Uzmanı — pozisyon ajanı `14-test-ve-laboratuvar-uzmani.md` · skill: instrument-data-to-allotrope
+      - Laboratuvar Teknisyeni — pozisyon ajanı `14-laboratuvar-teknisyeni.md`
+    - Ekip — Metroloji ve Kalibrasyon: Metroloji ve Kalibrasyon Yöneticisi — pozisyon ajanı `14-metroloji-ve-kalibrasyon-yoneticisi.md`
+      - Kıdemli Metroloji Uzmanı — pozisyon ajanı `14-kidemli-metroloji-uzmani.md`
+      - Kalibrasyon Uzmanı — pozisyon ajanı `14-kalibrasyon-uzmani.md`
+      - Ölçüm Sistemleri Teknisyeni — pozisyon ajanı `14-olcum-sistemleri-teknisyeni.md`
+    - Ekip — Kalite Analitiği ve Kalite Maliyeti: Kalite Analitiği ve Kalite Maliyeti Yöneticisi — pozisyon ajanı `14-kalite-analitigi-ve-kalite-maliyeti-yoneticisi.md`
+      - Kıdemli Kalite Analitiği Uzmanı — pozisyon ajanı `14-kidemli-kalite-analitigi-uzmani.md`
+      - Kalite Veri Analisti — pozisyon ajanı `14-kalite-veri-analisti.md` · skill: instrument-data-to-allotrope
+      - Kalite Maliyeti Analisti — pozisyon ajanı `14-kalite-maliyeti-analisti.md`
+
+## 15 - Bilgi Teknolojileri
+6 birim · 88 pozisyon · katalog ajanlı 11 · pozisyon ajanı 77
+
+- Bağlı olduğu: Teknolojiden Sorumlu Genel Müdür Yardımcısı / Teknoloji Başkanı
+- **Departman lideri:** Bilgi Teknolojileri Direktörü — pozisyon ajanı `15-bilgi-teknolojileri-direktoru.md`
+  - **Birim — BT Stratejisi, Yönetişim ve Kurumsal Mimari:** BT Stratejisi, Yönetişim ve Kurumsal Mimari Müdürü — pozisyon ajanı `15-bt-stratejisi-yonetisim-ve-kurumsal-mimari-muduru.md`
+    - Ekip — BT Stratejisi ve Teknoloji Yol Haritası: BT Stratejisi ve Teknoloji Yol Haritası Yöneticisi — pozisyon ajanı `15-bt-stratejisi-ve-teknoloji-yol-haritasi-yoneticisi.md`
+      - Kıdemli BT Stratejisi Uzmanı — pozisyon ajanı `15-kidemli-bt-stratejisi-uzmani.md`
+      - BT Stratejisi Uzmanı — pozisyon ajanı `15-bt-stratejisi-uzmani.md`
+      - Teknoloji Araştırma Analisti — pozisyon ajanı `15-teknoloji-arastirma-analisti.md` · skill: live-research
+    - Ekip — BT Yönetişimi ve Portföy Yönetimi: BT Yönetişimi ve Portföy Yönetimi Yöneticisi — pozisyon ajanı `15-bt-yonetisimi-ve-portfoy-yonetimi-yoneticisi.md`
+      - Kıdemli BT Yönetişim Uzmanı — pozisyon ajanı `15-kidemli-bt-yonetisim-uzmani.md`
+      - BT Portföy Uzmanı — pozisyon ajanı `15-bt-portfoy-uzmani.md`
+      - BT Performans Analisti — pozisyon ajanı `15-bt-performans-analisti.md`
+    - Ekip — Kurumsal ve Çözüm Mimarisi: Kurumsal ve Çözüm Mimarisi Yöneticisi — pozisyon ajanı `15-kurumsal-ve-cozum-mimarisi-yoneticisi.md`
+      - Kıdemli Kurumsal Mimar — pozisyon ajanı `15-kidemli-kurumsal-mimar.md` · skill: system-design
+      - Çözüm Mimarı — pozisyon ajanı `15-cozum-mimari.md` · skill: architecture, choose-zoom-approach, designing-multi-region-applications, fastly-reference-architectures, figma-generate-diagram, miro-code-explain-on-board, miro-code-spec, plan-zoom-integration, plan-zoom-product, qdrant-multitenancy, qdrant-tenant-scaling, start, system-design
+      - Mimari Yönetişim Uzmanı — pozisyon ajanı `15-mimari-yonetisim-uzmani.md` · skill: architecture, tech-debt
+  - **Birim — Altyapı, Bulut ve Platform Operasyonları:** Altyapı, Bulut ve Platform Operasyonları Müdürü — pozisyon ajanı `15-altyapi-bulut-ve-platform-operasyonlari-muduru.md`
+    - Ekip — Sunucu, Sanallaştırma ve İşletim Sistemleri: Sunucu, Sanallaştırma ve İşletim Sistemleri Yöneticisi — pozisyon ajanı `15-sunucu-sanallastirma-ve-isletim-sistemleri-yoneticisi.md`
+      - Kıdemli Sistem Mühendisi — pozisyon ajanı `15-kidemli-sistem-muhendisi.md`
+      - Sistem Mühendisi — pozisyon ajanı `15-sistem-muhendisi.md`
+      - Sistem Operasyon Uzmanı — pozisyon ajanı `15-sistem-operasyon-uzmani.md` · skill: runbook
+    - Ekip — Bulut Platformları ve FinOps: Bulut Platformları ve FinOps Yöneticisi — pozisyon ajanı `15-bulut-platformlari-ve-finops-yoneticisi.md`
+      - Kıdemli Bulut Mühendisi — pozisyon ajanı `15-kidemli-bulut-muhendisi.md` · skill: configuring-private-connectivity, fastly-reference-architectures, fix-test, managing-cluster-capacity, provisioning-cluster-for-production, qdrant-deployment-options, qdrant-horizontal-scaling, qdrant-hybrid-cloud-setup, qdrant-scaling, qdrant-scaling-data-volume, qdrant-scaling-qps, qdrant-scaling-query-volume, qdrant-vertical-scaling, test-remediation
+      - Bulut Platform Uzmanı — pozisyon ajanı `15-bulut-platform-uzmani.md` · skill: falco, fastly, fastly-cli, fastly-fiddle, fastly-stats, xvcl
+      - FinOps Analisti — pozisyon ajanı `15-finops-analisti.md` · skill: fastly-stats, qdrant-sizing, signoz-reducing-telemetry-cost
+    - Ekip — Yedekleme, Depolama ve Felaket Kurtarma: Yedekleme, Depolama ve Felaket Kurtarma Yöneticisi — pozisyon ajanı `15-yedekleme-depolama-ve-felaket-kurtarma-yoneticisi.md`
+      - Kıdemli Depolama ve Yedekleme Uzmanı — pozisyon ajanı `15-kidemli-depolama-ve-yedekleme-uzmani.md`
+      - Felaket Kurtarma Uzmanı — pozisyon ajanı `15-felaket-kurtarma-uzmani.md`
+      - Altyapı Süreklilik Analisti — pozisyon ajanı `15-altyapi-sureklilik-analisti.md`
+    - Ekip — Veritabanı Yönetimi: Veritabanı Yönetimi Yöneticisi — pozisyon ajanı `15-veritabani-yonetimi-yoneticisi.md`
+      - Kıdemli Veritabanı Yöneticisi — pozisyon ajanı `15-kidemli-veritabani-yoneticisi.md` · skill: analyzing-range-distribution, analyzing-schema-change-storage-risk, auditing-cis-benchmark, auditing-cloud-cluster-security, auditing-table-statistics, benchmarking-transaction-patterns, designing-application-transactions, designing-multi-region-applications, enabling-cmek-encryption, hardening-user-privileges, managing-cluster-capacity, managing-cluster-settings, migration-guvenligi, molt-fetch, molt-replicator, molt-verify, profiling-statement-fingerprints, profiling-transaction-fingerprints, provisioning-cluster-for-production, upgrading-cluster-version
+      - Veritabanı Yöneticisi — pozisyon ajanı `15-veritabani-yoneticisi.md` · skill: analyzing-range-distribution, analyzing-schema-change-storage-risk, auditing-table-statistics, cockroachdb-sql, configuring-audit-logging, configuring-ip-allowlists, enforcing-password-policies, managing-certificates-and-encryption, managing-cluster-settings, managing-tls-certificates, migration-guvenligi, monitoring-background-jobs, performing-cluster-maintenance, profiling-statement-fingerprints, profiling-transaction-fingerprints, reviewing-cluster-health, setting-up-local-cluster, triaging-live-sql-activity, upgrading-cluster-version
+      - Veritabanı Operasyon Uzmanı — pozisyon ajanı `15-veritabani-operasyon-uzmani.md` · skill: configuring-log-export, monitoring-background-jobs, performing-cluster-maintenance, reviewing-cluster-health, triaging-live-sql-activity
+  - **Birim — Ağ, İletişim ve Dijital İşyeri:** Ağ, İletişim ve Dijital İşyeri Müdürü — pozisyon ajanı `15-ag-iletisim-ve-dijital-isyeri-muduru.md`
+    - Ekip — Ağ ve Bağlantı Hizmetleri: Ağ ve Bağlantı Hizmetleri Yöneticisi — pozisyon ajanı `15-ag-ve-baglanti-hizmetleri-yoneticisi.md`
+      - Kıdemli Ağ Mühendisi — pozisyon ajanı `15-kidemli-ag-muhendisi.md` · skill: configuring-private-connectivity
+      - Ağ Mühendisi — pozisyon ajanı `15-ag-muhendisi.md` · skill: fastly, fastly-cli
+      - Ağ Operasyon Uzmanı — pozisyon ajanı `15-ag-operasyon-uzmani.md` · skill: probe-sdk
+    - Ekip — İletişim ve Birleşik İletişim Sistemleri: İletişim ve Birleşik İletişim Sistemleri Yöneticisi — pozisyon ajanı `15-iletisim-ve-birlesik-iletisim-sistemleri-yoneticisi.md`
+      - Kıdemli İletişim Sistemleri Uzmanı — pozisyon ajanı `15-kidemli-iletisim-sistemleri-uzmani.md`
+      - Birleşik İletişim Uzmanı — pozisyon ajanı `15-birlesik-iletisim-uzmani.md` · skill: access, build-zoom-meeting-app, build-zoom-phone-integration, build-zoom-team-chat-app, choose-zoom-approach, configure, debug-zoom, design-mcp-workflow, probe-sdk, setup-zoom-mcp, start, zoom-general, zoom-mcp, zoom-mcp/whiteboard
+      - Telekom Operasyon Uzmanı — pozisyon ajanı `15-telekom-operasyon-uzmani.md` · skill: build-zoom-phone-integration
+    - Ekip — Dijital İşyeri ve Uç Nokta Yönetimi: Dijital İşyeri ve Uç Nokta Yönetimi Yöneticisi — pozisyon ajanı `15-dijital-isyeri-ve-uc-nokta-yonetimi-yoneticisi.md`
+      - Kıdemli Dijital İşyeri Uzmanı — pozisyon ajanı `15-kidemli-dijital-isyeri-uzmani.md`
+      - Uç Nokta Yönetimi Uzmanı — pozisyon ajanı `15-uc-nokta-yonetimi-uzmani.md`
+      - Masaüstü Sistemleri Uzmanı — pozisyon ajanı `15-masaustu-sistemleri-uzmani.md`
+  - **Birim — Kurumsal Uygulamalar ve İş Sistemleri:** Kurumsal Uygulamalar ve İş Sistemleri Müdürü — pozisyon ajanı `15-kurumsal-uygulamalar-ve-is-sistemleri-muduru.md`
+    - Ekip — ERP ve Finans Sistemleri: ERP ve Finans Sistemleri Yöneticisi — pozisyon ajanı `15-erp-ve-finans-sistemleri-yoneticisi.md`
+      - Kıdemli ERP Uygulama Uzmanı — pozisyon ajanı `15-kidemli-erp-uygulama-uzmani.md`
+      - ERP Uygulama Uzmanı — pozisyon ajanı `15-erp-uygulama-uzmani.md`
+      - Finans Sistemleri Analisti — pozisyon ajanı `15-finans-sistemleri-analisti.md`
+    - Ekip — CRM, Satış ve Müşteri Sistemleri: CRM, Satış ve Müşteri Sistemleri Yöneticisi — pozisyon ajanı `15-crm-satis-ve-musteri-sistemleri-yoneticisi.md`
+      - Kıdemli CRM Uygulama Uzmanı — pozisyon ajanı `15-kidemli-crm-uygulama-uzmani.md`
+      - CRM Uygulama Uzmanı — pozisyon ajanı `15-crm-uygulama-uzmani.md` · skill: setup
+      - Müşteri Sistemleri Analisti — pozisyon ajanı `15-musteri-sistemleri-analisti.md` · skill: build-zoom-contact-center-app
+    - Ekip — İK, Operasyon ve Destek Sistemleri: İK, Operasyon ve Destek Sistemleri Yöneticisi — pozisyon ajanı `15-ik-operasyon-ve-destek-sistemleri-yoneticisi.md`
+      - Kıdemli İş Uygulamaları Uzmanı — pozisyon ajanı `15-kidemli-is-uygulamalari-uzmani.md`
+      - İş Uygulamaları Uzmanı — pozisyon ajanı `15-is-uygulamalari-uzmani.md` · skill: carbone, smb-onboard
+      - İş Sistemleri Analisti — pozisyon ajanı `15-is-sistemleri-analisti.md`
+  - **Birim — Yazılım Mühendisliği, Entegrasyon ve DevOps:** Yazılım Mühendisliği, Entegrasyon ve DevOps Müdürü — pozisyon ajanı `15-yazilim-muhendisligi-entegrasyon-ve-devops-muduru.md`
+    - Ekip — Kurumsal Yazılım Geliştirme: Kurumsal Yazılım Geliştirme Yöneticisi — pozisyon ajanı `15-kurumsal-yazilim-gelistirme-yoneticisi.md`
+      - Kıdemli Yazılım Mühendisi — pozisyon ajanı `15-kidemli-yazilim-muhendisi.md` · skill: api-standartlari, benchmarking-transaction-patterns, build-zoom-contact-center-app, build-zoom-video-sdk-app, build-zoom-virtual-agent, claude-automation-recommender, code-review, contact-center/android, contact-center/ios, contact-center/web, debug, designing-application-transactions, guvenli-kod, log-standardi, migration-guvenligi, miro-code-review, miro-code-spec, odeme-akisi, oss-review, tech-debt, video-sdk/linux, video-sdk/web, video-sdk/windows, virtual-agent/android, virtual-agent/ios, virtual-agent/web, zoom-video-sdk-android, zoom-video-sdk-flutter, zoom-video-sdk-ios, zoom-video-sdk-macos, zoom-video-sdk-react-native
+      - Yazılım Mühendisi — pozisyon ajanı `15-yazilim-muhendisi.md` · skill: brightdata-sdk-js, build-mcp-app, build-zoom-bot, build-zoom-rest-api-app, build-zoom-team-chat-app, chrome-extensions, cockroachdb-sql, code-review, datadog-app, debug-zoom, debug-zoom-integration, fastlike, figma-design-to-code, meeting-sdk/linux, modern-web-guidance, product-tracking-generate-implementation-guide, product-tracking-implement-tracking, qdrant-clients-sdk, replay-triage, rivet-sdk, setting-up-local-cluster, standup, testing-strategy, viceroy, zoom-general, zoom-meeting-sdk-unreal, zoom-rtms, zoom-video-sdk-unity
+      - Uygulama Geliştirme Uzmanı — pozisyon ajanı `15-uygulama-gelistirme-uzmani.md` · skill: accessibility-review, base44-cli, base44-sandbox, base44-sdk, base44-troubleshooter, build-zoom-meeting-app, build-zoom-meeting-sdk-app, carbone, chrome-extensions, design-mirror, design-system, figma-code-connect, figma-design-to-code, figma-implement-motion, figma-swiftui, form-standardi, frontend-design, modern-web-guidance, ui-toolkit/web, web-artifacts-builder, web-perf, zoom-apps-sdk, zoom-cobrowse-sdk, zoom-meeting-sdk-android, zoom-meeting-sdk-electron, zoom-meeting-sdk-ios, zoom-meeting-sdk-macos, zoom-meeting-sdk-react-native, zoom-meeting-sdk-web, zoom-meeting-sdk-web-client-view, zoom-meeting-sdk-web-component-view, zoom-meeting-sdk-windows
+    - Ekip — Entegrasyon ve API Yönetimi: Entegrasyon ve API Yönetimi Yöneticisi — pozisyon ajanı `15-entegrasyon-ve-api-yonetimi-yoneticisi.md`
+      - Kıdemli Entegrasyon Mühendisi — pozisyon ajanı `15-kidemli-entegrasyon-muhendisi.md` · skill: api-standartlari, build-connector, odeme-akisi, setup-zoom-webhooks, setup-zoom-websockets
+      - API ve Entegrasyon Uzmanı — pozisyon ajanı `15-api-ve-entegrasyon-uzmani.md` · skill: api-standartlari, bright-data-best-practices, build-connector, build-mcp-server, build-zoom-phone-integration, build-zoom-rest-api-app, debug-zoom, debug-zoom-integration, guvenli-kod, mcp-builder, mcp-integration, odeme-akisi, plan-zoom-integration, rivet-sdk, setup-zoom-mcp, setup-zoom-oauth, setup-zoom-webhooks, setup-zoom-websockets, source-management, zoom-mcp, zoom-mcp/whiteboard, zoom-oauth
+      - Entegrasyon Analisti — pozisyon ajanı `15-entegrasyon-analisti.md`
+    - Ekip — DevOps, SRE ve Yayın Yönetimi: DevOps, SRE ve Yayın Yönetimi Yöneticisi — pozisyon ajanı `15-devops-sre-ve-yayin-yonetimi-yoneticisi.md`
+      - Kıdemli DevOps Mühendisi — pozisyon ajanı `15-kidemli-devops-muhendisi.md` · skill: ddconfig, ddsetup, ddtoolsets, deploy-checklist, falco, fastlike, fastly, fastly-cli, fastly-fiddle, signoz-creating-alerts, signoz-mcp-setup, signoz-searching-docs, signoz-setting-up-observability, signoz-writing-clickhouse-queries, viceroy, xvcl
+      - Site Güvenilirlik Mühendisi — pozisyon ajanı `15-site-guvenilirlik-muhendisi.md` · skill: base44-troubleshooter, configuring-log-export, datadog-app, ddconfig, ddsetup, ddtoolsets, ddviz, fastly-stats, grafana-assistant-cli, incident-response, log-standardi, qdrant-monitoring, qdrant-monitoring-debugging, qdrant-monitoring-setup, runbook, signoz-creating-alerts, signoz-creating-dashboards, signoz-explaining-alerts, signoz-explaining-dashboards, signoz-generating-queries, signoz-investigating-alerts, signoz-managing-views, signoz-mcp-setup, signoz-modifying-dashboards, signoz-reducing-telemetry-cost, signoz-searching-docs, signoz-setting-up-observability, signoz-writing-clickhouse-queries, web-perf
+      - Yayın Yönetimi Uzmanı — pozisyon ajanı `15-yayin-yonetimi-uzmani.md` · skill: build-mcpb, deploy-checklist
+    - Ekip — Yazılım Kalitesi, Test ve Dokümantasyon: Yazılım Kalitesi, Test ve Dokümantasyon Yöneticisi — pozisyon ajanı `15-yazilim-kalitesi-test-ve-dokumantasyon-yoneticisi.md`
+      - Kod İnceleme Uzmanı — pozisyon ajanı `15-kod-inceleme-uzmani.md` · skill: accessibility-review, code-review, guvenli-kod, miro-code-review
+      - Statik Analiz ve Hata Tespit Uzmanı — pozisyon ajanı `15-statik-analiz-ve-hata-tespit-uzmani.md` · skill: debug, testing-strategy
+      - Test Otomasyon Mühendisi — pozisyon ajanı `15-test-otomasyon-muhendisi.md` · skill: testing-strategy, webapp-testing
+      - Teknik Dokümantasyon Uzmanı — pozisyon ajanı `15-teknik-dokumantasyon-uzmani.md` · skill: architecture, claude-md-improver, doc-coauthoring, documentation, docx, miro-code-explain-on-board
+  - **Birim — BT Hizmet Yönetimi ve Kullanıcı Destek:** BT Hizmet Yönetimi ve Kullanıcı Destek Müdürü — pozisyon ajanı `15-bt-hizmet-yonetimi-ve-kullanici-destek-muduru.md`
+    - Ekip — Servis Masası ve Kullanıcı Destek: Servis Masası ve Kullanıcı Destek Yöneticisi — pozisyon ajanı `15-servis-masasi-ve-kullanici-destek-yoneticisi.md`
+      - Kıdemli BT Destek Uzmanı — pozisyon ajanı `15-kidemli-bt-destek-uzmani.md`
+      - BT Destek Uzmanı — pozisyon ajanı `15-bt-destek-uzmani.md`
+      - Servis Masası Temsilcisi — pozisyon ajanı `15-servis-masasi-temsilcisi.md`
+    - Ekip — Olay, Problem ve Değişiklik Yönetimi: Olay, Problem ve Değişiklik Yönetimi Yöneticisi — pozisyon ajanı `15-olay-problem-ve-degisiklik-yonetimi-yoneticisi.md`
+      - Kıdemli BT Hizmet Yönetimi Uzmanı — pozisyon ajanı `15-kidemli-bt-hizmet-yonetimi-uzmani.md`
+      - Olay ve Problem Yönetimi Uzmanı — pozisyon ajanı `15-olay-ve-problem-yonetimi-uzmani.md` · skill: grafana-assistant-cli, incident-response, signoz-explaining-alerts, signoz-investigating-alerts
+      - Değişiklik Yönetimi Uzmanı — pozisyon ajanı `15-degisiklik-yonetimi-uzmani.md` · skill: change-request
+    - Ekip — Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi: Varlık, Konfigürasyon ve Hizmet Seviyesi Yönetimi Yöneticisi — pozisyon ajanı `15-varlik-konfigurasyon-ve-hizmet-seviyesi-yonetimi-yoneticisi.md`
+      - Kıdemli BT Varlık Yönetimi Uzmanı — pozisyon ajanı `15-kidemli-bt-varlik-yonetimi-uzmani.md`
+      - Konfigürasyon Yönetimi Uzmanı — pozisyon ajanı `15-konfigurasyon-yonetimi-uzmani.md`
+      - Hizmet Seviyesi Analisti — pozisyon ajanı `15-hizmet-seviyesi-analisti.md` · skill: signoz-explaining-dashboards
+
+## 16 - Siber Güvenlik ve Bilgi Güvenliği
+8 birim · 105 pozisyon · katalog ajanlı 1 · pozisyon ajanı 104
+
+- Bağlı olduğu: Genel Müdür / CEO · fonksiyonel: Yönetim Kurulu Risk Komitesi, Denetim Komitesi, İcra Kurulu
+- **Departman lideri:** Siber Güvenlik ve Bilgi Güvenliği Direktörü — pozisyon ajanı `16-siber-guvenlik-ve-bilgi-guvenligi-direktoru.md`
+  - **Birim — Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum:** Bilgi Güvenliği Stratejisi, Yönetişim ve Uyum Müdürü — pozisyon ajanı `16-bilgi-guvenligi-stratejisi-yonetisim-ve-uyum-muduru.md`
+    - Ekip — Bilgi Güvenliği Stratejisi ve Yönetişim: Bilgi Güvenliği Stratejisi ve Yönetişim Yöneticisi — pozisyon ajanı `16-bilgi-guvenligi-stratejisi-ve-yonetisim-yoneticisi.md`
+      - Kıdemli Bilgi Güvenliği Stratejisi Uzmanı — pozisyon ajanı `16-kidemli-bilgi-guvenligi-stratejisi-uzmani.md`
+      - Bilgi Güvenliği Yönetişim Uzmanı — pozisyon ajanı `16-bilgi-guvenligi-yonetisim-uzmani.md`
+      - Siber Güvenlik Performans Analisti — pozisyon ajanı `16-siber-guvenlik-performans-analisti.md`
+    - Ekip — Bilgi Güvenliği Yönetim Sistemi: Bilgi Güvenliği Yönetim Sistemi Yöneticisi — pozisyon ajanı `16-bilgi-guvenligi-yonetim-sistemi-yoneticisi.md`
+      - Kıdemli BGYS Uzmanı — pozisyon ajanı `16-kidemli-bgys-uzmani.md`
+      - BGYS Uzmanı — pozisyon ajanı `16-bgys-uzmani.md`
+      - Bilgi Güvenliği Dokümantasyon Uzmanı — pozisyon ajanı `16-bilgi-guvenligi-dokumantasyon-uzmani.md` · skill: preparing-compliance-documentation
+    - Ekip — Güvenlik Uyum ve Kontrol Güvencesi: Güvenlik Uyum ve Kontrol Güvencesi Yöneticisi — pozisyon ajanı `16-guvenlik-uyum-ve-kontrol-guvencesi-yoneticisi.md`
+      - Kıdemli Güvenlik Uyum Uzmanı — pozisyon ajanı `16-kidemli-guvenlik-uyum-uzmani.md` · skill: preparing-compliance-documentation
+      - Güvenlik Kontrol Güvence Uzmanı — pozisyon ajanı `16-guvenlik-kontrol-guvence-uzmani.md` · skill: auditing-cis-benchmark
+      - Güvenlik Uyum Analisti — pozisyon ajanı `16-guvenlik-uyum-analisti.md` · skill: compliance-tracking, fix-test, list-tests, test-remediation
+  - **Birim — Siber Risk, Varlık ve Üçüncü Taraf Güvenliği:** Siber Risk, Varlık ve Üçüncü Taraf Güvenliği Müdürü — pozisyon ajanı `16-siber-risk-varlik-ve-ucuncu-taraf-guvenligi-muduru.md`
+    - Ekip — Siber Risk Yönetimi: Siber Risk Yönetimi Yöneticisi — pozisyon ajanı `16-siber-risk-yonetimi-yoneticisi.md`
+      - Kıdemli Siber Risk Uzmanı — pozisyon ajanı `16-kidemli-siber-risk-uzmani.md`
+      - Siber Risk Uzmanı — pozisyon ajanı `16-siber-risk-uzmani.md`
+      - Siber Risk Analisti — pozisyon ajanı `16-siber-risk-analisti.md`
+    - Ekip — Bilgi Varlığı ve Güvenlik Sınıflandırma: Bilgi Varlığı ve Güvenlik Sınıflandırma Yöneticisi — pozisyon ajanı `16-bilgi-varligi-ve-guvenlik-siniflandirma-yoneticisi.md`
+      - Kıdemli Bilgi Varlığı Uzmanı — pozisyon ajanı `16-kidemli-bilgi-varligi-uzmani.md`
+      - Bilgi Sınıflandırma Uzmanı — pozisyon ajanı `16-bilgi-siniflandirma-uzmani.md`
+      - Varlık Risk Analisti — pozisyon ajanı `16-varlik-risk-analisti.md`
+    - Ekip — Tedarikçi ve Üçüncü Taraf Güvenliği: Tedarikçi ve Üçüncü Taraf Güvenliği Yöneticisi — pozisyon ajanı `16-tedarikci-ve-ucuncu-taraf-guvenligi-yoneticisi.md`
+      - Kıdemli Üçüncü Taraf Güvenlik Uzmanı — pozisyon ajanı `16-kidemli-ucuncu-taraf-guvenlik-uzmani.md`
+      - Tedarikçi Güvenliği Uzmanı — pozisyon ajanı `16-tedarikci-guvenligi-uzmani.md`
+      - Üçüncü Taraf Risk Analisti — pozisyon ajanı `16-ucuncu-taraf-risk-analisti.md`
+  - **Birim — Güvenlik Mimarisi ve Mühendisliği:** Güvenlik Mimarisi ve Mühendisliği Müdürü — pozisyon ajanı `16-guvenlik-mimarisi-ve-muhendisligi-muduru.md`
+    - Ekip — Kurumsal Güvenlik Mimarisi: Kurumsal Güvenlik Mimarisi Yöneticisi — pozisyon ajanı `16-kurumsal-guvenlik-mimarisi-yoneticisi.md`
+      - Kıdemli Güvenlik Mimarı — pozisyon ajanı `16-kidemli-guvenlik-mimari.md`
+      - Güvenlik Mimarı — pozisyon ajanı `16-guvenlik-mimari.md`
+      - Güvenlik Tasarım Uzmanı — pozisyon ajanı `16-guvenlik-tasarim-uzmani.md`
+    - Ekip — Ağ, Bulut ve Uç Nokta Güvenliği: Ağ, Bulut ve Uç Nokta Güvenliği Yöneticisi — pozisyon ajanı `16-ag-bulut-ve-uc-nokta-guvenligi-yoneticisi.md`
+      - Kıdemli Güvenlik Mühendisi — pozisyon ajanı `16-kidemli-guvenlik-muhendisi.md` · skill: fastly-ngwaf
+      - Bulut Güvenliği Uzmanı — pozisyon ajanı `16-bulut-guvenligi-uzmani.md` · skill: auditing-cloud-cluster-security, configuring-ip-allowlists, fastly-ngwaf
+      - Uç Nokta Güvenliği Uzmanı — pozisyon ajanı `16-uc-nokta-guvenligi-uzmani.md`
+    - Ekip — Güvenlik Platformları ve Otomasyon: Güvenlik Platformları ve Otomasyon Yöneticisi — pozisyon ajanı `16-guvenlik-platformlari-ve-otomasyon-yoneticisi.md`
+      - Kıdemli Güvenlik Platform Mühendisi — pozisyon ajanı `16-kidemli-guvenlik-platform-muhendisi.md`
+      - Güvenlik Otomasyon Uzmanı — pozisyon ajanı `16-guvenlik-otomasyon-uzmani.md`
+      - SOAR Mühendisi — pozisyon ajanı `16-soar-muhendisi.md`
+  - **Birim — Güvenlik Operasyonları ve Olay Müdahale:** Güvenlik Operasyonları ve Olay Müdahale Müdürü — pozisyon ajanı `16-guvenlik-operasyonlari-ve-olay-mudahale-muduru.md`
+    - Ekip — Güvenlik Operasyon Merkezi: Güvenlik Operasyon Merkezi Yöneticisi — pozisyon ajanı `16-guvenlik-operasyon-merkezi-yoneticisi.md`
+      - Kıdemli SOC Analisti — pozisyon ajanı `16-kidemli-soc-analisti.md`
+      - SOC Analisti — pozisyon ajanı `16-soc-analisti.md`
+      - Güvenlik İzleme Uzmanı — pozisyon ajanı `16-guvenlik-izleme-uzmani.md` · skill: configuring-audit-logging
+    - Ekip — Siber Olay Müdahale ve Dijital Adli İnceleme: Siber Olay Müdahale ve Dijital Adli İnceleme Yöneticisi — pozisyon ajanı `16-siber-olay-mudahale-ve-dijital-adli-inceleme-yoneticisi.md`
+      - Kıdemli Olay Müdahale Uzmanı — pozisyon ajanı `16-kidemli-olay-mudahale-uzmani.md`
+      - Dijital Adli İnceleme Uzmanı — pozisyon ajanı `16-dijital-adli-inceleme-uzmani.md`
+      - Siber Olay Koordinatörü — pozisyon ajanı `16-siber-olay-koordinatoru.md`
+    - Ekip — Tehdit Avcılığı ve Tespit Mühendisliği: Tehdit Avcılığı ve Tespit Mühendisliği Yöneticisi — pozisyon ajanı `16-tehdit-avciligi-ve-tespit-muhendisligi-yoneticisi.md`
+      - Kıdemli Tehdit Avcısı — pozisyon ajanı `16-kidemli-tehdit-avcisi.md`
+      - Tespit Mühendisi — pozisyon ajanı `16-tespit-muhendisi.md`
+      - Siber Tehdit Analisti — pozisyon ajanı `16-siber-tehdit-analisti.md`
+  - **Birim — Kimlik ve Erişim Güvenliği:** Kimlik ve Erişim Güvenliği Müdürü — pozisyon ajanı `16-kimlik-ve-erisim-guvenligi-muduru.md`
+    - Ekip — Kimlik ve Erişim Yönetişimi: Kimlik ve Erişim Yönetişimi Yöneticisi — pozisyon ajanı `16-kimlik-ve-erisim-yonetisimi-yoneticisi.md`
+      - Kıdemli Kimlik ve Erişim Uzmanı — pozisyon ajanı `16-kidemli-kimlik-ve-erisim-uzmani.md` · skill: configuring-sso-and-scim
+      - Erişim Yönetişimi Uzmanı — pozisyon ajanı `16-erisim-yonetisimi-uzmani.md` · skill: access
+      - Yetki Analisti — pozisyon ajanı `16-yetki-analisti.md`
+    - Ekip — Ayrıcalıklı Erişim ve Kimlik Güvenliği: Ayrıcalıklı Erişim ve Kimlik Güvenliği Yöneticisi — pozisyon ajanı `16-ayricalikli-erisim-ve-kimlik-guvenligi-yoneticisi.md`
+      - Kıdemli PAM Uzmanı — pozisyon ajanı `16-kidemli-pam-uzmani.md`
+      - Ayrıcalıklı Erişim Uzmanı — pozisyon ajanı `16-ayricalikli-erisim-uzmani.md` · skill: hardening-user-privileges
+      - Kimlik Güvenliği Analisti — pozisyon ajanı `16-kimlik-guvenligi-analisti.md`
+    - Ekip — Kimlik Doğrulama ve Müşteri Kimliği Güvenliği: Kimlik Doğrulama ve Müşteri Kimliği Güvenliği Yöneticisi — pozisyon ajanı `16-kimlik-dogrulama-ve-musteri-kimligi-guvenligi-yoneticisi.md`
+      - Kıdemli Kimlik Doğrulama Uzmanı — pozisyon ajanı `16-kidemli-kimlik-dogrulama-uzmani.md` · skill: enforcing-password-policies
+      - CIAM Güvenliği Uzmanı — pozisyon ajanı `16-ciam-guvenligi-uzmani.md`
+      - Federasyon ve SSO Uzmanı — pozisyon ajanı `16-federasyon-ve-sso-uzmani.md` · skill: configuring-sso-and-scim, setup-zoom-oauth, zoom-oauth
+  - **Birim — Uygulama Güvenliği ve DevSecOps:** Uygulama Güvenliği ve DevSecOps Müdürü — pozisyon ajanı `16-uygulama-guvenligi-ve-devsecops-muduru.md`
+    - Ekip — Güvenli Yazılım Geliştirme Yaşam Döngüsü: Güvenli Yazılım Geliştirme Yaşam Döngüsü Yöneticisi — pozisyon ajanı `16-guvenli-yazilim-gelistirme-yasam-dongusu-yoneticisi.md`
+      - Kıdemli Uygulama Güvenliği Uzmanı — pozisyon ajanı `16-kidemli-uygulama-guvenligi-uzmani.md` · skill: claude-security
+      - Güvenli Yazılım Geliştirme Uzmanı — pozisyon ajanı `16-guvenli-yazilim-gelistirme-uzmani.md` · skill: guvenli-kod
+      - SSDLC Analisti — pozisyon ajanı `16-ssdlc-analisti.md`
+    - Ekip — DevSecOps ve Kod Güvenliği: DevSecOps ve Kod Güvenliği Yöneticisi — pozisyon ajanı `16-devsecops-ve-kod-guvenligi-yoneticisi.md`
+      - Kıdemli DevSecOps Mühendisi — pozisyon ajanı `16-kidemli-devsecops-muhendisi.md` · skill: fix-test, list-tests, test-remediation
+      - Kod Güvenliği Uzmanı — pozisyon ajanı `16-kod-guvenligi-uzmani.md` · skill: claude-security, guvenli-kod
+      - Yazılım Tedarik Zinciri Güvenliği Uzmanı — pozisyon ajanı `16-yazilim-tedarik-zinciri-guvenligi-uzmani.md`
+    - Ekip — Uygulama ve API Güvenlik Testleri: Uygulama ve API Güvenlik Testleri Yöneticisi — pozisyon ajanı `16-uygulama-ve-api-guvenlik-testleri-yoneticisi.md`
+      - Kıdemli Sızma Testi Uzmanı — pozisyon ajanı `16-kidemli-sizma-testi-uzmani.md`
+      - Uygulama Güvenlik Test Uzmanı — pozisyon ajanı `16-uygulama-guvenlik-test-uzmani.md` · skill: claude-security
+      - API Güvenlik Analisti — pozisyon ajanı `16-api-guvenlik-analisti.md`
+  - **Birim — Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi:** Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi Müdürü — pozisyon ajanı `16-veri-guvenligi-gizlilik-teknolojileri-ve-kriptografi-muduru.md`
+    - Ekip — Veri Güvenliği ve Kayıp Önleme: Veri Güvenliği ve Kayıp Önleme Yöneticisi — pozisyon ajanı `16-veri-guvenligi-ve-kayip-onleme-yoneticisi.md`
+      - Kıdemli Veri Güvenliği Uzmanı — pozisyon ajanı `16-kidemli-veri-guvenligi-uzmani.md`
+      - DLP Uzmanı — pozisyon ajanı `16-dlp-uzmani.md`
+      - Veri Güvenliği Analisti — pozisyon ajanı `16-veri-guvenligi-analisti.md`
+    - Ekip — Gizlilik Mühendisliği ve Teknik Kontroller: Gizlilik Mühendisliği ve Teknik Kontroller Yöneticisi — pozisyon ajanı `16-gizlilik-muhendisligi-ve-teknik-kontroller-yoneticisi.md`
+      - Kıdemli Gizlilik Mühendisliği Uzmanı — pozisyon ajanı `16-kidemli-gizlilik-muhendisligi-uzmani.md`
+      - Gizlilik Teknolojileri Uzmanı — pozisyon ajanı `16-gizlilik-teknolojileri-uzmani.md` · skill: compliance-check
+      - Teknik Gizlilik Analisti — pozisyon ajanı `16-teknik-gizlilik-analisti.md`
+    - Ekip — Kriptografi ve Anahtar Yönetimi: Kriptografi ve Anahtar Yönetimi Yöneticisi — pozisyon ajanı `16-kriptografi-ve-anahtar-yonetimi-yoneticisi.md`
+      - Kıdemli Kriptografi Uzmanı — pozisyon ajanı `16-kidemli-kriptografi-uzmani.md`
+      - Anahtar Yönetimi Uzmanı — pozisyon ajanı `16-anahtar-yonetimi-uzmani.md` · skill: enabling-cmek-encryption
+      - PKI Güvenliği Uzmanı — pozisyon ajanı `16-pki-guvenligi-uzmani.md` · skill: managing-certificates-and-encryption, managing-tls-certificates
+  - **Birim — Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı:** Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı Müdürü — pozisyon ajanı `16-guvenlik-acigi-tehdit-istihbarati-ve-guvenlik-farkindaligi-muduru.md`
+    - Ekip — Güvenlik Açığı ve Maruziyet Yönetimi: Güvenlik Açığı ve Maruziyet Yönetimi Yöneticisi — pozisyon ajanı `16-guvenlik-acigi-ve-maruziyet-yonetimi-yoneticisi.md`
+      - Kıdemli Güvenlik Açığı Uzmanı — pozisyon ajanı `16-kidemli-guvenlik-acigi-uzmani.md`
+      - Maruziyet Yönetimi Uzmanı — pozisyon ajanı `16-maruziyet-yonetimi-uzmani.md`
+      - Zafiyet Analisti — pozisyon ajanı `16-zafiyet-analisti.md`
+    - Ekip — Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi: Tehdit İstihbaratı ve Saldırı Yüzeyi Yönetimi Yöneticisi — pozisyon ajanı `16-tehdit-istihbarati-ve-saldiri-yuzeyi-yonetimi-yoneticisi.md`
+      - Kıdemli Tehdit İstihbaratı Uzmanı — pozisyon ajanı `16-kidemli-tehdit-istihbarati-uzmani.md`
+      - Saldırı Yüzeyi Yönetimi Uzmanı — pozisyon ajanı `16-saldiri-yuzeyi-yonetimi-uzmani.md`
+      - Dijital Risk Analisti — pozisyon ajanı `16-dijital-risk-analisti.md`
+    - Ekip — Güvenlik Kültürü, Farkındalık ve Tatbikat: Güvenlik Kültürü, Farkındalık ve Tatbikat Yöneticisi — pozisyon ajanı `16-guvenlik-kulturu-farkindalik-ve-tatbikat-yoneticisi.md`
+      - Kıdemli Güvenlik Farkındalık Uzmanı — pozisyon ajanı `16-kidemli-guvenlik-farkindalik-uzmani.md`
+      - Güvenlik Kültürü Uzmanı — pozisyon ajanı `16-guvenlik-kulturu-uzmani.md`
+      - Siber Tatbikat Koordinatörü — pozisyon ajanı `16-siber-tatbikat-koordinatoru.md`
+
+## 17 - Veri, Analitik ve Yapay Zekâ
+8 birim · 105 pozisyon · katalog ajanlı 2 · pozisyon ajanı 103
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Veri, Analitik ve Yapay Zekâ Direktörü — pozisyon ajanı `17-veri-analitik-ve-yapay-zeka-direktoru.md`
+  - **Birim — Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy:** Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy Müdürü — pozisyon ajanı `17-veri-ve-yapay-zeka-stratejisi-yonetisim-ve-portfoy-muduru.md`
+    - Ekip — Veri ve Yapay Zekâ Stratejisi: Veri ve Yapay Zekâ Stratejisi Yöneticisi — pozisyon ajanı `17-veri-ve-yapay-zeka-stratejisi-yoneticisi.md`
+      - Kıdemli Veri ve Yapay Zekâ Stratejisi Uzmanı — pozisyon ajanı `17-kidemli-veri-ve-yapay-zeka-stratejisi-uzmani.md`
+      - Veri Stratejisi Uzmanı — pozisyon ajanı `17-veri-stratejisi-uzmani.md`
+      - Yapay Zekâ Stratejisi Analisti — pozisyon ajanı `17-yapay-zeka-stratejisi-analisti.md` · skill: ai-readiness
+    - Ekip — Veri ve Yapay Zekâ Portföy Yönetimi: Veri ve Yapay Zekâ Portföy Yönetimi Yöneticisi — pozisyon ajanı `17-veri-ve-yapay-zeka-portfoy-yonetimi-yoneticisi.md`
+      - Kıdemli Veri Portföy Uzmanı — pozisyon ajanı `17-kidemli-veri-portfoy-uzmani.md`
+      - Yapay Zekâ Portföy Uzmanı — pozisyon ajanı `17-yapay-zeka-portfoy-uzmani.md` · skill: ai-readiness
+      - Fayda Gerçekleştirme Analisti — pozisyon ajanı `17-fayda-gerceklestirme-analisti.md`
+    - Ekip — Veri ve Yapay Zekâ İş Ortaklığı: Veri ve Yapay Zekâ İş Ortaklığı Yöneticisi — pozisyon ajanı `17-veri-ve-yapay-zeka-is-ortakligi-yoneticisi.md`
+      - Kıdemli Veri İş Ortağı — pozisyon ajanı `17-kidemli-veri-is-ortagi.md`
+      - Analitik İş Ortağı — pozisyon ajanı `17-analitik-is-ortagi.md`
+      - Yapay Zekâ İş Analisti — pozisyon ajanı `17-yapay-zeka-is-analisti.md` · skill: smb-onboard, use-case-triage
+  - **Birim — Veri Yönetişimi, Kalitesi ve Ana Veri:** Veri Yönetişimi, Kalitesi ve Ana Veri Müdürü — pozisyon ajanı `17-veri-yonetisimi-kalitesi-ve-ana-veri-muduru.md`
+    - Ekip — Veri Yönetişimi ve Veri Sahipliği: Veri Yönetişimi ve Veri Sahipliği Yöneticisi — pozisyon ajanı `17-veri-yonetisimi-ve-veri-sahipligi-yoneticisi.md`
+      - Kıdemli Veri Yönetişimi Uzmanı — pozisyon ajanı `17-kidemli-veri-yonetisimi-uzmani.md`
+      - Veri Yönetişimi Uzmanı — pozisyon ajanı `17-veri-yonetisimi-uzmani.md` · skill: catalog-and-data-discovery
+      - Veri Sorumluluğu Koordinatörü — pozisyon ajanı `17-veri-sorumlulugu-koordinatoru.md`
+    - Ekip — Veri Kalitesi ve Gözlemlenebilirlik: Veri Kalitesi ve Gözlemlenebilirlik Yöneticisi — pozisyon ajanı `17-veri-kalitesi-ve-gozlemlenebilirlik-yoneticisi.md`
+      - Kıdemli Veri Kalitesi Uzmanı — pozisyon ajanı `17-kidemli-veri-kalitesi-uzmani.md`
+      - Veri Kalitesi Uzmanı — pozisyon ajanı `17-veri-kalitesi-uzmani.md` · skill: explore-data
+      - Veri Gözlemlenebilirlik Analisti — pozisyon ajanı `17-veri-gozlemlenebilirlik-analisti.md`
+    - Ekip — Ana Veri, Referans Veri ve Metadata: Ana Veri, Referans Veri ve Metadata Yöneticisi — pozisyon ajanı `17-ana-veri-referans-veri-ve-metadata-yoneticisi.md`
+      - Kıdemli Ana Veri Uzmanı — pozisyon ajanı `17-kidemli-ana-veri-uzmani.md`
+      - Metadata Yönetimi Uzmanı — pozisyon ajanı `17-metadata-yonetimi-uzmani.md` · skill: catalog-and-data-discovery, data-context-extractor, search-strategy
+      - Veri Kataloğu Analisti — pozisyon ajanı `17-veri-katalogu-analisti.md` · skill: catalog-and-data-discovery, data-context-extractor
+  - **Birim — Veri Mühendisliği ve Platformları:** Veri Mühendisliği ve Platformları Müdürü — pozisyon ajanı `17-veri-muhendisligi-ve-platformlari-muduru.md`
+    - Ekip — Veri Platformu Mimarisi: Veri Platformu Mimarisi Yöneticisi — pozisyon ajanı `17-veri-platformu-mimarisi-yoneticisi.md`
+      - Kıdemli Veri Mimarı — pozisyon ajanı `17-kidemli-veri-mimari.md`
+      - Veri Platformu Mimarı — pozisyon ajanı `17-veri-platformu-mimari.md` · skill: designing-multi-region-applications
+      - Bulut Veri Mimarisi Uzmanı — pozisyon ajanı `17-bulut-veri-mimarisi-uzmani.md`
+    - Ekip — Veri Hatları ve Entegrasyon Mühendisliği: Veri Hatları ve Entegrasyon Mühendisliği Yöneticisi — pozisyon ajanı `17-veri-hatlari-ve-entegrasyon-muhendisligi-yoneticisi.md`
+      - Kıdemli Veri Mühendisi — pozisyon ajanı `17-kidemli-veri-muhendisi.md` · skill: molt-fetch, molt-replicator, molt-verify, qdrant-migration-tool, sql-queries
+      - Veri Mühendisi — pozisyon ajanı `17-veri-muhendisi.md` · skill: brd-browser-debug, bright-data-best-practices, bright-data-mcp, brightdata-cli, brightdata-proxy, brightdata-sdk, brightdata-sdk-js, data-feeds, qdrant-sliding-time-window, scrape, scraper-builder, scraper-studio, search, sql-queries, write-query
+      - ETL/ELT Geliştirme Uzmanı — pozisyon ajanı `17-etl-elt-gelistirme-uzmani.md` · skill: brightdata-cli, data-feeds, scraper-builder, scraper-studio
+    - Ekip — DataOps ve Veri Platform Operasyonları: DataOps ve Veri Platform Operasyonları Yöneticisi — pozisyon ajanı `17-dataops-ve-veri-platform-operasyonlari-yoneticisi.md`
+      - Kıdemli DataOps Mühendisi — pozisyon ajanı `17-kidemli-dataops-muhendisi.md`
+      - DataOps Mühendisi — pozisyon ajanı `17-dataops-muhendisi.md`
+      - Veri Platform Operasyon Uzmanı — pozisyon ajanı `17-veri-platform-operasyon-uzmani.md`
+  - **Birim — İş Zekâsı, Raporlama ve Karar Destek:** İş Zekâsı, Raporlama ve Karar Destek Müdürü — pozisyon ajanı `17-is-zekasi-raporlama-ve-karar-destek-muduru.md`
+    - Ekip — Kurumsal Raporlama ve KPI Yönetimi: Kurumsal Raporlama ve KPI Yönetimi Yöneticisi — pozisyon ajanı `17-kurumsal-raporlama-ve-kpi-yonetimi-yoneticisi.md`
+      - Kıdemli İş Zekâsı Uzmanı — pozisyon ajanı `17-kidemli-is-zekasi-uzmani.md`
+      - İş Zekâsı Uzmanı — pozisyon ajanı `17-is-zekasi-uzmani.md` · skill: analyze, write-query
+      - KPI ve Raporlama Analisti — pozisyon ajanı `17-kpi-ve-raporlama-analisti.md` · ürün içi görev: **Panel Rapor Özetleyici** · skill: compliance-check, product-tracking-design-tracking-plan, report-builder, report-pack
+    - Ekip — Self-Servis Analitik ve Veri Görselleştirme: Self-Servis Analitik ve Veri Görselleştirme Yöneticisi — pozisyon ajanı `17-self-servis-analitik-ve-veri-gorsellestirme-yoneticisi.md`
+      - Kıdemli Veri Görselleştirme Uzmanı — pozisyon ajanı `17-kidemli-veri-gorsellestirme-uzmani.md` · skill: create-viz, data-visualization
+      - Self-Servis Analitik Uzmanı — pozisyon ajanı `17-self-servis-analitik-uzmani.md` · skill: analyze, report-builder
+      - Dashboard Geliştirme Uzmanı — pozisyon ajanı `17-dashboard-gelistirme-uzmani.md` · skill: build-dashboard
+    - Ekip — Finansal ve Operasyonel Karar Destek: Finansal ve Operasyonel Karar Destek Yöneticisi — pozisyon ajanı `17-finansal-ve-operasyonel-karar-destek-yoneticisi.md`
+      - Kıdemli Karar Destek Analisti — pozisyon ajanı `17-kidemli-karar-destek-analisti.md` · skill: validate-data
+      - Operasyonel Analitik Uzmanı — pozisyon ajanı `17-operasyonel-analitik-uzmani.md`
+      - Finansal Analitik Uzmanı — pozisyon ajanı `17-finansal-analitik-uzmani.md`
+  - **Birim — İleri Analitik ve Veri Bilimi:** İleri Analitik ve Veri Bilimi Müdürü — pozisyon ajanı `17-ileri-analitik-ve-veri-bilimi-muduru.md`
+    - Ekip — Tahmine Dayalı Analitik ve Makine Öğrenmesi: Tahmine Dayalı Analitik ve Makine Öğrenmesi Yöneticisi — pozisyon ajanı `17-tahmine-dayali-analitik-ve-makine-ogrenmesi-yoneticisi.md`
+      - Kıdemli Veri Bilimci — pozisyon ajanı `17-kidemli-veri-bilimci.md` · skill: statistical-analysis, validate-data
+      - Veri Bilimci — pozisyon ajanı `17-veri-bilimci.md` · skill: create-viz, data-visualization, explore-data, statistical-analysis
+      - Makine Öğrenmesi Uzmanı — pozisyon ajanı `17-makine-ogrenmesi-uzmani.md`
+    - Ekip — Müşteri, Pazarlama ve Gelir Analitiği: Müşteri, Pazarlama ve Gelir Analitiği Yöneticisi — pozisyon ajanı `17-musteri-pazarlama-ve-gelir-analitigi-yoneticisi.md`
+      - Kıdemli Müşteri Analitiği Uzmanı — pozisyon ajanı `17-kidemli-musteri-analitigi-uzmani.md`
+      - Pazarlama Analitiği Uzmanı — pozisyon ajanı `17-pazarlama-analitigi-uzmani.md` · skill: compliance-check, product-tracking-design-tracking-plan
+      - Gelir Analitiği Uzmanı — pozisyon ajanı `17-gelir-analitigi-uzmani.md`
+    - Ekip — Operasyon, Risk ve Optimizasyon Analitiği: Operasyon, Risk ve Optimizasyon Analitiği Yöneticisi — pozisyon ajanı `17-operasyon-risk-ve-optimizasyon-analitigi-yoneticisi.md`
+      - Kıdemli Optimizasyon Uzmanı — pozisyon ajanı `17-kidemli-optimizasyon-uzmani.md`
+      - Operasyon Analitiği Uzmanı — pozisyon ajanı `17-operasyon-analitigi-uzmani.md`
+      - Risk Modelleme Uzmanı — pozisyon ajanı `17-risk-modelleme-uzmani.md`
+  - **Birim — Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon:** Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon Müdürü — pozisyon ajanı `17-yapay-zeka-uretken-yapay-zeka-ve-otomasyon-muduru.md`
+    - Ekip — Üretken Yapay Zekâ Çözümleri: Üretken Yapay Zekâ Çözümleri Yöneticisi — pozisyon ajanı `17-uretken-yapay-zeka-cozumleri-yoneticisi.md`
+      - Kıdemli Üretken Yapay Zekâ Mühendisi — pozisyon ajanı `17-kidemli-uretken-yapay-zeka-muhendisi.md` · skill: qdrant-hybrid-search, qdrant-hybrid-search-combining, qdrant-hybrid-search-prefetches, qdrant-indexing-performance-optimization, qdrant-memory-usage-optimization, qdrant-minimize-latency, qdrant-performance-optimization, qdrant-relevance-feedback, qdrant-search-quality, qdrant-search-quality-diagnosis, qdrant-search-speed-optimization, qdrant-search-strategies
+      - Üretken Yapay Zekâ Mühendisi — pozisyon ajanı `17-uretken-yapay-zeka-muhendisi.md` · skill: claude-api, claude-opus-4-5-migration, discover-api, qdrant-clients-sdk, qdrant-edge, qdrant-hybrid-search, qdrant-hybrid-search-combining, qdrant-hybrid-search-prefetches, qdrant-model-migration, qdrant-relevance-feedback, qdrant-search-quality, qdrant-search-quality-diagnosis, qdrant-search-strategies, rag-pipeline
+      - Prompt ve Bağlam Mühendisi — pozisyon ajanı `17-prompt-ve-baglam-muhendisi.md` · skill: claude-api, claude-automation-recommender, claude-md-improver, claude-opus-4-5-migration, command-development, playground, rag-pipeline, skill-creator, skill-development
+    - Ekip — Akıllı Otomasyon ve Yapay Zekâ Ajanları: Akıllı Otomasyon ve Yapay Zekâ Ajanları Yöneticisi — pozisyon ajanı `17-akilli-otomasyon-ve-yapay-zeka-ajanlari-yoneticisi.md`
+      - Kıdemli Akıllı Otomasyon Mühendisi — pozisyon ajanı `17-kidemli-akilli-otomasyon-muhendisi.md` · skill: agent-development, cowork-plugin-customizer, create-cowork-plugin
+      - Yapay Zekâ Ajanları Mühendisi — pozisyon ajanı `17-yapay-zeka-ajanlari-muhendisi.md` · skill: agent-development, agent-onboarding, bright-data-mcp, build-agent, build-connector, build-mcp-app, build-mcp-server, build-mcpb, build-zoom-virtual-agent, claude-automation-recommender, command-development, configure, cowork-plugin-customizer, create-cowork-plugin, design-mcp-workflow, discover-api, hook-development, mcp-builder, mcp-integration, plugin-settings, plugin-structure, setup-zoom-mcp, skill-creator, skill-development, virtual-agent/android, virtual-agent/ios, virtual-agent/web, writing-hookify-rules, zoom-mcp, zoom-mcp/whiteboard
+      - RPA ve Süreç Otomasyon Uzmanı — pozisyon ajanı `17-rpa-ve-surec-otomasyon-uzmani.md` · skill: build-agent
+    - Ekip — Doğal Dil, Görüntü ve Konuşma Yapay Zekâsı: Doğal Dil, Görüntü ve Konuşma Yapay Zekâsı Yöneticisi — pozisyon ajanı `17-dogal-dil-goruntu-ve-konusma-yapay-zekasi-yoneticisi.md`
+      - Kıdemli Yapay Zekâ Mühendisi — pozisyon ajanı `17-kidemli-yapay-zeka-muhendisi.md`
+      - NLP Uzmanı — pozisyon ajanı `17-nlp-uzmani.md` · skill: qdrant-hybrid-search, qdrant-hybrid-search-combining, qdrant-hybrid-search-prefetches, qdrant-relevance-feedback, qdrant-search-quality, qdrant-search-quality-diagnosis, qdrant-search-strategies, scribe
+      - Görüntü ve Konuşma Yapay Zekâsı Uzmanı — pozisyon ajanı `17-goruntu-ve-konusma-yapay-zekasi-uzmani.md` · skill: build-zoom-bot, meeting-sdk/linux, scribe, zoom-rtms
+  - **Birim — MLOps, Model Platformları ve Yapay Zekâ Güvenilirliği:** MLOps, Model Platformları ve Yapay Zekâ Güvenilirliği Müdürü — pozisyon ajanı `17-mlops-model-platformlari-ve-yapay-zeka-guvenilirligi-muduru.md`
+    - Ekip — MLOps ve Model Yaşam Döngüsü: MLOps ve Model Yaşam Döngüsü Yöneticisi — pozisyon ajanı `17-mlops-ve-model-yasam-dongusu-yoneticisi.md`
+      - Kıdemli MLOps Mühendisi — pozisyon ajanı `17-kidemli-mlops-muhendisi.md`
+      - MLOps Mühendisi — pozisyon ajanı `17-mlops-muhendisi.md` · skill: qdrant-model-migration, qdrant-version-upgrade
+      - Model Yayınlama Uzmanı — pozisyon ajanı `17-model-yayinlama-uzmani.md`
+    - Ekip — Model İzleme ve Yapay Zekâ Güvenilirliği: Model İzleme ve Yapay Zekâ Güvenilirliği Yöneticisi — pozisyon ajanı `17-model-izleme-ve-yapay-zeka-guvenilirligi-yoneticisi.md`
+      - Kıdemli Model İzleme Uzmanı — pozisyon ajanı `17-kidemli-model-izleme-uzmani.md`
+      - Yapay Zekâ Güvenilirlik Mühendisi — pozisyon ajanı `17-yapay-zeka-guvenilirlik-muhendisi.md`
+      - Model Performans Analisti — pozisyon ajanı `17-model-performans-analisti.md`
+    - Ekip — Yapay Zekâ Platformu ve Hesaplama Altyapısı: Yapay Zekâ Platformu ve Hesaplama Altyapısı Yöneticisi — pozisyon ajanı `17-yapay-zeka-platformu-ve-hesaplama-altyapisi-yoneticisi.md`
+      - Kıdemli Yapay Zekâ Platform Mühendisi — pozisyon ajanı `17-kidemli-yapay-zeka-platform-muhendisi.md` · skill: qdrant-deployment-options, qdrant-horizontal-scaling, qdrant-hybrid-cloud-setup, qdrant-scaling, qdrant-scaling-data-volume, qdrant-scaling-qps, qdrant-scaling-query-volume, qdrant-vertical-scaling
+      - Yapay Zekâ Platform Mühendisi — pozisyon ajanı `17-yapay-zeka-platform-muhendisi.md` · skill: claude-opus-4-5-migration, hook-development, mcp-integration, plugin-settings, plugin-structure, qdrant-edge, qdrant-horizontal-scaling, qdrant-indexing-performance-optimization, qdrant-memory-usage-optimization, qdrant-migration-tool, qdrant-minimize-latency, qdrant-monitoring, qdrant-monitoring-debugging, qdrant-monitoring-setup, qdrant-multitenancy, qdrant-performance-optimization, qdrant-scaling, qdrant-scaling-data-volume, qdrant-scaling-qps, qdrant-scaling-query-volume, qdrant-search-speed-optimization, qdrant-sizing, qdrant-sliding-time-window, qdrant-tenant-scaling, qdrant-version-upgrade, qdrant-vertical-scaling, source-management, writing-hookify-rules
+      - GPU ve Hesaplama Kaynakları Uzmanı — pozisyon ajanı `17-gpu-ve-hesaplama-kaynaklari-uzmani.md` · skill: qdrant-sizing
+  - **Birim — Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi:** Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi Müdürü — pozisyon ajanı `17-veri-urunleri-sorumlu-yapay-zeka-ve-deger-yonetimi-muduru.md`
+    - Ekip — Veri Ürünleri Yönetimi: Veri Ürünleri Yönetimi Yöneticisi — pozisyon ajanı `17-veri-urunleri-yonetimi-yoneticisi.md`
+      - Kıdemli Veri Ürünü Yöneticisi — pozisyon ajanı `17-kidemli-veri-urunu-yoneticisi.md`
+      - Veri Ürünü Yöneticisi — pozisyon ajanı `17-veri-urunu-yoneticisi.md`
+      - Veri Ürünü Analisti — pozisyon ajanı `17-veri-urunu-analisti.md`
+    - Ekip — Sorumlu Yapay Zekâ ve Model Risk Yönetimi: Sorumlu Yapay Zekâ ve Model Risk Yönetimi Yöneticisi — pozisyon ajanı `17-sorumlu-yapay-zeka-ve-model-risk-yonetimi-yoneticisi.md` · skill: cold-start-interview
+      - Kıdemli Sorumlu Yapay Zekâ Uzmanı — pozisyon ajanı `17-kidemli-sorumlu-yapay-zeka-uzmani.md` · skill: aia-generation, policy-starter
+      - Model Risk Uzmanı — pozisyon ajanı `17-model-risk-uzmani.md` · skill: ai-inventory
+      - Yapay Zekâ Etik ve Uyum Analisti — pozisyon ajanı `17-yapay-zeka-etik-ve-uyum-analisti.md` · skill: ai-inventory, policy-monitor, use-case-triage
+    - Ekip — Veri ve Yapay Zekâ Değer Ölçümü: Veri ve Yapay Zekâ Değer Ölçümü Yöneticisi — pozisyon ajanı `17-veri-ve-yapay-zeka-deger-olcumu-yoneticisi.md`
+      - Kıdemli Yapay Zekâ Değer Uzmanı — pozisyon ajanı `17-kidemli-yapay-zeka-deger-uzmani.md`
+      - Analitik Değer Uzmanı — pozisyon ajanı `17-analitik-deger-uzmani.md`
+      - Veri ve Yapay Zekâ Ekonomisi Analisti — pozisyon ajanı `17-veri-ve-yapay-zeka-ekonomisi-analisti.md`
+
+## 18 - Ürün Yönetimi ve Ar-Ge
+8 birim · 105 pozisyon · katalog ajanlı 0 · pozisyon ajanı 105
+
+- Bağlı olduğu: Genel Müdür / CEO
+- **Departman lideri:** Ürün Yönetimi ve Ar-Ge Direktörü — pozisyon ajanı `18-urun-yonetimi-ve-ar-ge-direktoru.md`
+  - **Birim — Ürün Stratejisi, Portföy ve Yönetişim:** Ürün Stratejisi, Portföy ve Yönetişim Müdürü — pozisyon ajanı `18-urun-stratejisi-portfoy-ve-yonetisim-muduru.md`
+    - Ekip — Ürün Stratejisi ve Vizyon: Ürün Stratejisi ve Vizyon Yöneticisi — pozisyon ajanı `18-urun-stratejisi-ve-vizyon-yoneticisi.md`
+      - Kıdemli Ürün Stratejisi Uzmanı — pozisyon ajanı `18-kidemli-urun-stratejisi-uzmani.md`
+      - Ürün Stratejisi Uzmanı — pozisyon ajanı `18-urun-stratejisi-uzmani.md`
+      - Ürün Strateji Analisti — pozisyon ajanı `18-urun-strateji-analisti.md` · skill: competitive-brief
+    - Ekip — Ürün Portföyü ve Yatırım Yönetimi: Ürün Portföyü ve Yatırım Yönetimi Yöneticisi — pozisyon ajanı `18-urun-portfoyu-ve-yatirim-yonetimi-yoneticisi.md`
+      - Kıdemli Ürün Portföy Uzmanı — pozisyon ajanı `18-kidemli-urun-portfoy-uzmani.md`
+      - Ürün Portföy Uzmanı — pozisyon ajanı `18-urun-portfoy-uzmani.md` · skill: competitive-pipeline
+      - Ürün Yatırım Analisti — pozisyon ajanı `18-urun-yatirim-analisti.md`
+    - Ekip — Ürün Yönetişimi ve Karar Sistemleri: Ürün Yönetişimi ve Karar Sistemleri Yöneticisi — pozisyon ajanı `18-urun-yonetisimi-ve-karar-sistemleri-yoneticisi.md`
+      - Kıdemli Ürün Yönetişimi Uzmanı — pozisyon ajanı `18-kidemli-urun-yonetisimi-uzmani.md`
+      - Ürün Yönetişimi Uzmanı — pozisyon ajanı `18-urun-yonetisimi-uzmani.md`
+      - Ürün Karar Analisti — pozisyon ajanı `18-urun-karar-analisti.md`
+  - **Birim — Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı:** Ürün Keşfi, Müşteri Araştırmaları ve Fırsat Tasarımı Müdürü — pozisyon ajanı `18-urun-kesfi-musteri-arastirmalari-ve-firsat-tasarimi-muduru.md`
+    - Ekip — Müşteri ve Kullanıcı Araştırmaları: Müşteri ve Kullanıcı Araştırmaları Yöneticisi — pozisyon ajanı `18-musteri-ve-kullanici-arastirmalari-yoneticisi.md`
+      - Kıdemli Kullanıcı Araştırmacısı — pozisyon ajanı `18-kidemli-kullanici-arastirmacisi.md` · skill: user-research
+      - Kullanıcı Araştırmacısı — pozisyon ajanı `18-kullanici-arastirmacisi.md` · skill: research-synthesis, synthesize-research, user-research
+      - Müşteri İçgörüleri Analisti — pozisyon ajanı `18-musteri-icgoruleri-analisti.md` · skill: feedback-analysis, research-synthesis, synthesize-research
+    - Ekip — Problem Keşfi ve Fırsat Haritalama: Problem Keşfi ve Fırsat Haritalama Yöneticisi — pozisyon ajanı `18-problem-kesfi-ve-firsat-haritalama-yoneticisi.md`
+      - Kıdemli Ürün Keşif Uzmanı — pozisyon ajanı `18-kidemli-urun-kesif-uzmani.md`
+      - Ürün Keşif Uzmanı — pozisyon ajanı `18-urun-kesif-uzmani.md` · skill: figma-use-figjam, product-brainstorming
+      - Fırsat Analisti — pozisyon ajanı `18-firsat-analisti.md` · skill: indication-research, size-market
+    - Ekip — Konsept Testi ve Ürün Doğrulama: Konsept Testi ve Ürün Doğrulama Yöneticisi — pozisyon ajanı `18-konsept-testi-ve-urun-dogrulama-yoneticisi.md`
+      - Kıdemli Ürün Doğrulama Uzmanı — pozisyon ajanı `18-kidemli-urun-dogrulama-uzmani.md`
+      - Konsept Test Uzmanı — pozisyon ajanı `18-konsept-test-uzmani.md`
+      - Deney Tasarımı Analisti — pozisyon ajanı `18-deney-tasarimi-analisti.md`
+  - **Birim — Ürün Yönetimi ve Ürün Alanları:** Ürün Yönetimi ve Ürün Alanları Müdürü — pozisyon ajanı `18-urun-yonetimi-ve-urun-alanlari-muduru.md`
+    - Ekip — Dijital Ürün Yönetimi: Dijital Ürün Yönetimi Yöneticisi — pozisyon ajanı `18-dijital-urun-yonetimi-yoneticisi.md`
+      - Kıdemli Ürün Yöneticisi — pozisyon ajanı `18-kidemli-urun-yoneticisi.md` · skill: app-health, roadmap-update, write-spec
+      - Ürün Yöneticisi — pozisyon ajanı `18-urun-yoneticisi.md` · skill: data-informed-planning, doc-coauthoring, miro-code-spec, plan-zoom-product, product-brainstorming, product-tracking-business-case, product-tracking-instrument-new-feature, product-tracking-model-product, stakeholder-update, write-spec
+      - Ürün Uzmanı — pozisyon ajanı `18-urun-uzmani.md`
+    - Ekip — Platform ve Ekosistem Ürünleri: Platform ve Ekosistem Ürünleri Yöneticisi — pozisyon ajanı `18-platform-ve-ekosistem-urunleri-yoneticisi.md`
+      - Kıdemli Platform Ürün Yöneticisi — pozisyon ajanı `18-kidemli-platform-urun-yoneticisi.md`
+      - Platform Ürün Yöneticisi — pozisyon ajanı `18-platform-urun-yoneticisi.md`
+      - Ekosistem Ürün Uzmanı — pozisyon ajanı `18-ekosistem-urun-uzmani.md`
+    - Ekip — İç Ürünler ve Kurumsal Yetkinlikler: İç Ürünler ve Kurumsal Yetkinlikler Yöneticisi — pozisyon ajanı `18-ic-urunler-ve-kurumsal-yetkinlikler-yoneticisi.md`
+      - Kıdemli İç Ürün Yöneticisi — pozisyon ajanı `18-kidemli-ic-urun-yoneticisi.md`
+      - İç Ürün Yöneticisi — pozisyon ajanı `18-ic-urun-yoneticisi.md`
+      - Kurumsal Ürün Analisti — pozisyon ajanı `18-kurumsal-urun-analisti.md`
+  - **Birim — Ürün Operasyonları ve Yaşam Döngüsü:** Ürün Operasyonları ve Yaşam Döngüsü Müdürü — pozisyon ajanı `18-urun-operasyonlari-ve-yasam-dongusu-muduru.md`
+    - Ekip — Ürün Operasyonları ve Metodoloji: Ürün Operasyonları ve Metodoloji Yöneticisi — pozisyon ajanı `18-urun-operasyonlari-ve-metodoloji-yoneticisi.md`
+      - Kıdemli Ürün Operasyonları Uzmanı — pozisyon ajanı `18-kidemli-urun-operasyonlari-uzmani.md`
+      - Ürün Operasyonları Uzmanı — pozisyon ajanı `18-urun-operasyonlari-uzmani.md`
+      - Ürün Metodoloji Analisti — pozisyon ajanı `18-urun-metodoloji-analisti.md`
+    - Ekip — Yol Haritası, Backlog ve Teslimat Koordinasyonu: Yol Haritası, Backlog ve Teslimat Koordinasyonu Yöneticisi — pozisyon ajanı `18-yol-haritasi-backlog-ve-teslimat-koordinasyonu-yoneticisi.md` · skill: roadmap-update
+      - Kıdemli Ürün Teslimat Uzmanı — pozisyon ajanı `18-kidemli-urun-teslimat-uzmani.md` · skill: stakeholder-update
+      - Ürün Teslimat Uzmanı — pozisyon ajanı `18-urun-teslimat-uzmani.md` · skill: sprint-planning, standup
+      - Backlog Koordinatörü — pozisyon ajanı `18-backlog-koordinatoru.md` · skill: sprint-planning
+    - Ekip — Lansman, Benimseme ve Ürün Yaşam Döngüsü: Lansman, Benimseme ve Ürün Yaşam Döngüsü Yöneticisi — pozisyon ajanı `18-lansman-benimseme-ve-urun-yasam-dongusu-yoneticisi.md`
+      - Kıdemli Ürün Lansman Uzmanı — pozisyon ajanı `18-kidemli-urun-lansman-uzmani.md`
+      - Ürün Benimseme Uzmanı — pozisyon ajanı `18-urun-benimseme-uzmani.md` · skill: feature-adoption, pendo-guide-creator
+      - Ürün Yaşam Döngüsü Analisti — pozisyon ajanı `18-urun-yasam-dongusu-analisti.md`
+  - **Birim — Kullanıcı Deneyimi ve Ürün Tasarımı:** Kullanıcı Deneyimi ve Ürün Tasarımı Müdürü — pozisyon ajanı `18-kullanici-deneyimi-ve-urun-tasarimi-muduru.md`
+    - Ekip — Ürün Deneyimi ve Etkileşim Tasarımı: Ürün Deneyimi ve Etkileşim Tasarımı Yöneticisi — pozisyon ajanı `18-urun-deneyimi-ve-etkilesim-tasarimi-yoneticisi.md`
+      - Kıdemli Ürün Tasarımcısı — pozisyon ajanı `18-kidemli-urun-tasarimcisi.md` · skill: design-critique
+      - Ürün Tasarımcısı — pozisyon ajanı `18-urun-tasarimcisi.md` · skill: figma-create-new-file, figma-generate-design, figma-spec, figma-use
+      - Etkileşim Tasarımcısı — pozisyon ajanı `18-etkilesim-tasarimcisi.md` · skill: figma-use-motion
+    - Ekip — Tasarım Sistemi ve İçerik Tasarımı: Tasarım Sistemi ve İçerik Tasarımı Yöneticisi — pozisyon ajanı `18-tasarim-sistemi-ve-icerik-tasarimi-yoneticisi.md`
+      - Kıdemli Tasarım Sistemi Uzmanı — pozisyon ajanı `18-kidemli-tasarim-sistemi-uzmani.md` · skill: design-handoff, design-system
+      - UI Tasarımcısı — pozisyon ajanı `18-ui-tasarimcisi.md` · skill: design-handoff, figma-code-connect, figma-code-workflows, figma-generate-design, figma-generate-library, figma-spec, figma-swiftui, figma-use
+      - UX İçerik Tasarımcısı — pozisyon ajanı `18-ux-icerik-tasarimcisi.md` · skill: pendo-guide-creator, ux-copy
+    - Ekip — Servis Tasarımı ve Erişilebilirlik: Servis Tasarımı ve Erişilebilirlik Yöneticisi — pozisyon ajanı `18-servis-tasarimi-ve-erisilebilirlik-yoneticisi.md`
+      - Kıdemli Servis Tasarımcısı — pozisyon ajanı `18-kidemli-servis-tasarimcisi.md`
+      - Servis Tasarımcısı — pozisyon ajanı `18-servis-tasarimcisi.md` · skill: figma-generate-diagram, figma-use-figjam
+      - Dijital Erişilebilirlik Uzmanı — pozisyon ajanı `18-dijital-erisilebilirlik-uzmani.md` · skill: accessibility-review
+  - **Birim — Ar-Ge, Teknoloji Araştırmaları ve İnovasyon:** Ar-Ge, Teknoloji Araştırmaları ve İnovasyon Müdürü — pozisyon ajanı `18-ar-ge-teknoloji-arastirmalari-ve-inovasyon-muduru.md`
+    - Ekip — Teknoloji Araştırmaları ve Gelecek Öngörüsü: Teknoloji Araştırmaları ve Gelecek Öngörüsü Yöneticisi — pozisyon ajanı `18-teknoloji-arastirmalari-ve-gelecek-ongorusu-yoneticisi.md`
+      - Kıdemli Teknoloji Araştırmacısı — pozisyon ajanı `18-kidemli-teknoloji-arastirmacisi.md` · skill: benchmark-assets, synthesize-evidence
+      - Teknoloji Araştırmacısı — pozisyon ajanı `18-teknoloji-arastirmacisi.md` · skill: asset-profile, scientific-problem-selection
+      - Gelecek Öngörüsü Analisti — pozisyon ajanı `18-gelecek-ongorusu-analisti.md`
+    - Ekip — Uygulamalı Ar-Ge ve Deneysel Geliştirme: Uygulamalı Ar-Ge ve Deneysel Geliştirme Yöneticisi — pozisyon ajanı `18-uygulamali-ar-ge-ve-deneysel-gelistirme-yoneticisi.md`
+      - Kıdemli Ar-Ge Mühendisi — pozisyon ajanı `18-kidemli-ar-ge-muhendisi.md` · skill: fto-triage, invention-intake
+      - Ar-Ge Mühendisi — pozisyon ajanı `18-ar-ge-muhendisi.md` · skill: scientific-problem-selection
+      - Deneysel Geliştirme Uzmanı — pozisyon ajanı `18-deneysel-gelistirme-uzmani.md`
+    - Ekip — Açık İnovasyon ve Akademik İş Birlikleri: Açık İnovasyon ve Akademik İş Birlikleri Yöneticisi — pozisyon ajanı `18-acik-inovasyon-ve-akademik-is-birlikleri-yoneticisi.md`
+      - Kıdemli Açık İnovasyon Uzmanı — pozisyon ajanı `18-kidemli-acik-inovasyon-uzmani.md`
+      - Akademik İş Birlikleri Uzmanı — pozisyon ajanı `18-akademik-is-birlikleri-uzmani.md`
+      - İnovasyon Ekosistemi Koordinatörü — pozisyon ajanı `18-inovasyon-ekosistemi-koordinatoru.md`
+  - **Birim — Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama:** Prototipleme, Ürün Mühendisliği ve Teknik Doğrulama Müdürü — pozisyon ajanı `18-prototipleme-urun-muhendisligi-ve-teknik-dogrulama-muduru.md`
+    - Ekip — Hızlı Prototipleme ve Kanıt Çalışmaları: Hızlı Prototipleme ve Kanıt Çalışmaları Yöneticisi — pozisyon ajanı `18-hizli-prototipleme-ve-kanit-calismalari-yoneticisi.md`
+      - Kıdemli Prototipleme Mühendisi — pozisyon ajanı `18-kidemli-prototipleme-muhendisi.md`
+      - Prototipleme Mühendisi — pozisyon ajanı `18-prototipleme-muhendisi.md` · skill: base44-cli, base44-sandbox, base44-sdk, frontend-design, m5-onboard, playground, web-artifacts-builder, zoom-video-sdk-unity
+      - PoC Geliştirme Uzmanı — pozisyon ajanı `18-poc-gelistirme-uzmani.md` · skill: base44-cli, base44-sandbox, base44-sdk, m5-onboard
+    - Ekip — Ürün Mühendisliği ve Endüstriyelleştirme Koordinasyonu: Ürün Mühendisliği ve Endüstriyelleştirme Koordinasyonu Yöneticisi — pozisyon ajanı `18-urun-muhendisligi-ve-endustriyellestirme-koordinasyonu-yoneticisi.md`
+      - Kıdemli Ürün Mühendisi — pozisyon ajanı `18-kidemli-urun-muhendisi.md`
+      - Ürün Mühendisi — pozisyon ajanı `18-urun-muhendisi.md`
+      - Endüstriyelleştirme Koordinatörü — pozisyon ajanı `18-endustriyellestirme-koordinatoru.md`
+    - Ekip — Teknik Doğrulama, Test ve Ürün Güvenilirliği: Teknik Doğrulama, Test ve Ürün Güvenilirliği Yöneticisi — pozisyon ajanı `18-teknik-dogrulama-test-ve-urun-guvenilirligi-yoneticisi.md`
+      - Kıdemli Doğrulama Mühendisi — pozisyon ajanı `18-kidemli-dogrulama-muhendisi.md`
+      - Ürün Test Mühendisi — pozisyon ajanı `18-urun-test-muhendisi.md`
+      - Ürün Güvenilirliği Uzmanı — pozisyon ajanı `18-urun-guvenilirligi-uzmani.md`
+  - **Birim — Ürün Analitiği, Ticarileştirme ve Değer Yönetimi:** Ürün Analitiği, Ticarileştirme ve Değer Yönetimi Müdürü — pozisyon ajanı `18-urun-analitigi-ticarilestirme-ve-deger-yonetimi-muduru.md`
+    - Ekip — Ürün Analitiği ve Deney Yönetimi: Ürün Analitiği ve Deney Yönetimi Yöneticisi — pozisyon ajanı `18-urun-analitigi-ve-deney-yonetimi-yoneticisi.md`
+      - Kıdemli Ürün Analitiği Uzmanı — pozisyon ajanı `18-kidemli-urun-analitigi-uzmani.md` · skill: metrics-review, product-tracking-business-case
+      - Ürün Analitiği Uzmanı — pozisyon ajanı `18-urun-analitigi-uzmani.md` · skill: app-health, data-informed-planning, feature-adoption, metrics-review, product-tracking-audit-current-tracking, product-tracking-design-tracking-plan, product-tracking-generate-implementation-guide, product-tracking-implement-tracking, product-tracking-instrument-new-feature, product-tracking-model-product, replay-triage
+      - Ürün Deneyleri Analisti — pozisyon ajanı `18-urun-deneyleri-analisti.md`
+    - Ekip — Ürün Ekonomisi, Fiyatlandırma ve İş Modeli: Ürün Ekonomisi, Fiyatlandırma ve İş Modeli Yöneticisi — pozisyon ajanı `18-urun-ekonomisi-fiyatlandirma-ve-is-modeli-yoneticisi.md`
+      - Kıdemli Ürün Ekonomisi Uzmanı — pozisyon ajanı `18-kidemli-urun-ekonomisi-uzmani.md`
+      - Ürün Fiyatlandırma Uzmanı — pozisyon ajanı `18-urun-fiyatlandirma-uzmani.md`
+      - İş Modeli Analisti — pozisyon ajanı `18-is-modeli-analisti.md` · skill: unit-economics
+    - Ekip — Ticarileştirme ve Ürün Değer Gerçekleşmesi: Ticarileştirme ve Ürün Değer Gerçekleşmesi Yöneticisi — pozisyon ajanı `18-ticarilestirme-ve-urun-deger-gerceklesmesi-yoneticisi.md`
+      - Kıdemli Ürün Ticarileştirme Uzmanı — pozisyon ajanı `18-kidemli-urun-ticarilestirme-uzmani.md`
+      - Ürün Değer Yönetimi Uzmanı — pozisyon ajanı `18-urun-deger-yonetimi-uzmani.md`
+      - Go-to-Market Koordinatörü — pozisyon ajanı `18-go-to-market-koordinatoru.md`
+
+## 19 - Tasarım ve Yaratıcı Hizmetler
+8 birim · 101 pozisyon · katalog ajanlı 1 · pozisyon ajanı 100
+
+- Bağlı olduğu: Pazarlama ve Büyüme Direktörü (CMO)
+- **Departman lideri:** Tasarım ve Yaratıcı Hizmetler Direktörü — pozisyon ajanı `19-tasarim-ve-yaratici-hizmetler-direktoru.md`
+  - **Birim — Yaratıcı Strateji ve Tasarım Yönetişimi:** Yaratıcı Strateji ve Tasarım Yönetişimi Müdürü — pozisyon ajanı `19-yaratici-strateji-ve-tasarim-yonetisimi-muduru.md`
+    - Ekip — Yaratıcı Strateji ve Konsept Geliştirme: Yaratıcı Strateji ve Konsept Geliştirme Yöneticisi — pozisyon ajanı `19-yaratici-strateji-ve-konsept-gelistirme-yoneticisi.md`
+      - Kıdemli Yaratıcı Stratejist — pozisyon ajanı `19-kidemli-yaratici-stratejist.md`
+      - Yaratıcı Stratejist — pozisyon ajanı `19-yaratici-stratejist.md`
+      - Konsept Geliştirme Uzmanı — pozisyon ajanı `19-konsept-gelistirme-uzmani.md`
+    - Ekip — Tasarım Yönetişimi ve Standartlar: Tasarım Yönetişimi ve Standartlar Yöneticisi — pozisyon ajanı `19-tasarim-yonetisimi-ve-standartlar-yoneticisi.md`
+      - Kıdemli Tasarım Yönetişimi Uzmanı — pozisyon ajanı `19-kidemli-tasarim-yonetisimi-uzmani.md`
+      - Tasarım Standartları Uzmanı — pozisyon ajanı `19-tasarim-standartlari-uzmani.md` · skill: figma-generate-library
+      - Tasarım Kalite Analisti — pozisyon ajanı `19-tasarim-kalite-analisti.md` · skill: design-critique
+    - Ekip — Yaratıcı Araştırma ve Trendler: Yaratıcı Araştırma ve Trendler Yöneticisi — pozisyon ajanı `19-yaratici-arastirma-ve-trendler-yoneticisi.md`
+      - Kıdemli Yaratıcı Araştırmacı — pozisyon ajanı `19-kidemli-yaratici-arastirmaci.md`
+      - Tasarım Trendleri Uzmanı — pozisyon ajanı `19-tasarim-trendleri-uzmani.md`
+      - Görsel Kültür Analisti — pozisyon ajanı `19-gorsel-kultur-analisti.md`
+  - **Birim — Marka Kimliği ve Kurumsal Tasarım:** Marka Kimliği ve Kurumsal Tasarım Müdürü — pozisyon ajanı `19-marka-kimligi-ve-kurumsal-tasarim-muduru.md`
+    - Ekip — Marka Kimliği Tasarımı: Marka Kimliği Tasarımı Yöneticisi — pozisyon ajanı `19-marka-kimligi-tasarimi-yoneticisi.md`
+      - Kıdemli Marka Tasarımcısı — pozisyon ajanı `19-kidemli-marka-tasarimcisi.md`
+      - Marka Tasarımcısı — pozisyon ajanı `19-marka-tasarimcisi.md`
+      - Görsel Kimlik Uzmanı — pozisyon ajanı `19-gorsel-kimlik-uzmani.md`
+    - Ekip — Kurumsal Kimlik Uygulamaları: Kurumsal Kimlik Uygulamaları Yöneticisi — pozisyon ajanı `19-kurumsal-kimlik-uygulamalari-yoneticisi.md`
+      - Kıdemli Kurumsal Tasarımcı — pozisyon ajanı `19-kidemli-kurumsal-tasarimci.md`
+      - Kurumsal Tasarımcı — pozisyon ajanı `19-kurumsal-tasarimci.md`
+      - Kurumsal Kimlik Uygulama Uzmanı — pozisyon ajanı `19-kurumsal-kimlik-uygulama-uzmani.md`
+    - Ekip — Marka Rehberi ve Varlık Yönetimi: Marka Rehberi ve Varlık Yönetimi Yöneticisi — pozisyon ajanı `19-marka-rehberi-ve-varlik-yonetimi-yoneticisi.md`
+      - Kıdemli Marka Rehberi Uzmanı — pozisyon ajanı `19-kidemli-marka-rehberi-uzmani.md` · skill: brand-style
+      - Dijital Varlık Yönetimi Uzmanı — pozisyon ajanı `19-dijital-varlik-yonetimi-uzmani.md`
+      - Marka Varlıkları Koordinatörü — pozisyon ajanı `19-marka-varliklari-koordinatoru.md`
+  - **Birim — Grafik Tasarım ve Kampanya Kreatifi:** Grafik Tasarım ve Kampanya Kreatifi Müdürü — pozisyon ajanı `19-grafik-tasarim-ve-kampanya-kreatifi-muduru.md`
+    - Ekip — Kampanya ve Reklam Tasarımı: Kampanya ve Reklam Tasarımı Yöneticisi — pozisyon ajanı `19-kampanya-ve-reklam-tasarimi-yoneticisi.md`
+      - Kıdemli Art Direktör — pozisyon ajanı `19-kidemli-art-direktor.md`
+      - Art Direktör — pozisyon ajanı `19-art-direktor.md` · skill: canvas-design
+      - Reklam Tasarımcısı — pozisyon ajanı `19-reklam-tasarimcisi.md`
+    - Ekip — Dijital ve Sosyal Medya Tasarımı: Dijital ve Sosyal Medya Tasarımı Yöneticisi — pozisyon ajanı `19-dijital-ve-sosyal-medya-tasarimi-yoneticisi.md`
+      - Kıdemli Dijital Tasarımcı — pozisyon ajanı `19-kidemli-dijital-tasarimci.md`
+      - Dijital Tasarımcı — pozisyon ajanı `19-dijital-tasarimci.md`
+      - Sosyal Medya Tasarımcısı — pozisyon ajanı `19-sosyal-medya-tasarimcisi.md` · skill: canva-creator, social-content-engine
+    - Ekip — Basılı Materyal ve Yayın Tasarımı: Basılı Materyal ve Yayın Tasarımı Yöneticisi — pozisyon ajanı `19-basili-materyal-ve-yayin-tasarimi-yoneticisi.md`
+      - Kıdemli Grafik Tasarımcı — pozisyon ajanı `19-kidemli-grafik-tasarimci.md`
+      - Grafik Tasarımcı — pozisyon ajanı `19-grafik-tasarimci.md` · skill: canvas-design
+      - Mizanpaj ve Baskı Uzmanı — pozisyon ajanı `19-mizanpaj-ve-baski-uzmani.md`
+  - **Birim — Dijital Deneyim ve Arayüz Tasarımı:** Dijital Deneyim ve Arayüz Tasarımı Müdürü — pozisyon ajanı `19-dijital-deneyim-ve-arayuz-tasarimi-muduru.md`
+    - Ekip — Web ve Arayüz Görsel Tasarımı: Web ve Arayüz Görsel Tasarımı Yöneticisi — pozisyon ajanı `19-web-ve-arayuz-gorsel-tasarimi-yoneticisi.md`
+      - Kıdemli UI Tasarımcısı — pozisyon ajanı `19-kidemli-ui-tasarimcisi.md` · skill: frontend-design
+      - UI Tasarımcısı — pozisyon ajanı `19-ui-tasarimcisi.md` · skill: design-system, figma-create-new-file, figma-use
+      - Web Görsel Tasarımcısı — pozisyon ajanı `19-web-gorsel-tasarimcisi.md` · skill: design-mirror, figma-code-workflows
+    - Ekip — Landing Page ve Dönüşüm Tasarımı: Landing Page ve Dönüşüm Tasarımı Yöneticisi — pozisyon ajanı `19-landing-page-ve-donusum-tasarimi-yoneticisi.md`
+      - Kıdemli Dönüşüm Tasarımcısı — pozisyon ajanı `19-kidemli-donusum-tasarimcisi.md`
+      - Landing Page Tasarımcısı — pozisyon ajanı `19-landing-page-tasarimcisi.md`
+      - Dijital Deneyim Tasarımcısı — pozisyon ajanı `19-dijital-deneyim-tasarimcisi.md`
+  - **Birim — Video, Fotoğraf ve İçerik Prodüksiyonu:** Video, Fotoğraf ve İçerik Prodüksiyonu Müdürü — pozisyon ajanı `19-video-fotograf-ve-icerik-produksiyonu-muduru.md`
+    - Ekip — Video Prodüksiyon: Video Prodüksiyon Yöneticisi — pozisyon ajanı `19-video-produksiyon-yoneticisi.md`
+      - Kıdemli Video Prodüktörü — pozisyon ajanı `19-kidemli-video-produktoru.md`
+      - Video Prodüktörü — pozisyon ajanı `19-video-produktoru.md`
+      - Görüntü Yönetmeni — pozisyon ajanı `19-goruntu-yonetmeni.md`
+    - Ekip — Fotoğraf ve Görsel İçerik: Fotoğraf ve Görsel İçerik Yöneticisi — pozisyon ajanı `19-fotograf-ve-gorsel-icerik-yoneticisi.md`
+      - Kıdemli Fotoğrafçı — pozisyon ajanı `19-kidemli-fotografci.md`
+      - Fotoğrafçı — pozisyon ajanı `19-fotografci.md`
+      - Görsel İçerik Prodüktörü — pozisyon ajanı `19-gorsel-icerik-produktoru.md`
+    - Ekip — Kurgu, Post Prodüksiyon ve Ses: Kurgu, Post Prodüksiyon ve Ses Yöneticisi — pozisyon ajanı `19-kurgu-post-produksiyon-ve-ses-yoneticisi.md`
+      - Kıdemli Video Editörü — pozisyon ajanı `19-kidemli-video-editoru.md`
+      - Video Editörü — pozisyon ajanı `19-video-editoru.md`
+      - Ses Tasarımı ve Post Prodüksiyon Uzmanı — pozisyon ajanı `19-ses-tasarimi-ve-post-produksiyon-uzmani.md`
+  - **Birim — Hareketli Tasarım, 3D ve Yaratıcı Teknoloji:** Hareketli Tasarım, 3D ve Yaratıcı Teknoloji Müdürü — pozisyon ajanı `19-hareketli-tasarim-3d-ve-yaratici-teknoloji-muduru.md`
+    - Ekip — Motion Graphics ve Animasyon: Motion Graphics ve Animasyon Yöneticisi — pozisyon ajanı `19-motion-graphics-ve-animasyon-yoneticisi.md`
+      - Kıdemli Motion Designer — pozisyon ajanı `19-kidemli-motion-designer.md`
+      - Motion Designer — pozisyon ajanı `19-motion-designer.md` · skill: figma-shaders, figma-use-motion
+      - 2D Animasyon Uzmanı — pozisyon ajanı `19-2d-animasyon-uzmani.md` · skill: slack-gif-creator
+    - Ekip — 3D Tasarım ve Görselleştirme: 3D Tasarım ve Görselleştirme Yöneticisi — pozisyon ajanı `19-3d-tasarim-ve-gorsellestirme-yoneticisi.md`
+      - Kıdemli 3D Tasarımcı — pozisyon ajanı `19-kidemli-3d-tasarimci.md`
+      - 3D Tasarımcı — pozisyon ajanı `19-3d-tasarimci.md`
+      - Render ve Görselleştirme Uzmanı — pozisyon ajanı `19-render-ve-gorsellestirme-uzmani.md`
+    - Ekip — Yaratıcı Teknoloji ve Üretken Yapay Zekâ: Yaratıcı Teknoloji ve Üretken Yapay Zekâ Yöneticisi — pozisyon ajanı `19-yaratici-teknoloji-ve-uretken-yapay-zeka-yoneticisi.md`
+      - Kıdemli Yaratıcı Teknoloji Uzmanı — pozisyon ajanı `19-kidemli-yaratici-teknoloji-uzmani.md` · skill: algorithmic-art
+      - Üretken Yapay Zekâ Tasarım Uzmanı — pozisyon ajanı `19-uretken-yapay-zeka-tasarim-uzmani.md` · skill: figma-generative-plugins
+      - Etkileşimli Medya Geliştiricisi — pozisyon ajanı `19-etkilesimli-medya-gelistiricisi.md` · skill: algorithmic-art, figma-generative-plugins, figma-implement-motion, figma-shaders, playground, zoom-meeting-sdk-unreal
+  - **Birim — Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı:** Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı Müdürü — pozisyon ajanı `19-kurumsal-yayinlar-sunum-ve-etkinlik-tasarimi-muduru.md`
+    - Ekip — Kurumsal Yayın ve Rapor Tasarımı: Kurumsal Yayın ve Rapor Tasarımı Yöneticisi — pozisyon ajanı `19-kurumsal-yayin-ve-rapor-tasarimi-yoneticisi.md`
+      - Kıdemli Editoryal Tasarımcı — pozisyon ajanı `19-kidemli-editoryal-tasarimci.md`
+      - Editoryal Tasarımcı — pozisyon ajanı `19-editoryal-tasarimci.md`
+      - Rapor Tasarım Uzmanı — pozisyon ajanı `19-rapor-tasarim-uzmani.md` · skill: theme-factory
+    - Ekip — Sunum Tasarımı ve Yönetici İletişimi: Sunum Tasarımı ve Yönetici İletişimi Yöneticisi — pozisyon ajanı `19-sunum-tasarimi-ve-yonetici-iletisimi-yoneticisi.md`
+      - Kıdemli Sunum Tasarımcısı — pozisyon ajanı `19-kidemli-sunum-tasarimcisi.md`
+      - Sunum Tasarımcısı — pozisyon ajanı `19-sunum-tasarimcisi.md` · skill: figma-use-slides, pptx, pptx-author, theme-factory
+      - Yönetici Görsel İletişim Uzmanı — pozisyon ajanı `19-yonetici-gorsel-iletisim-uzmani.md` · skill: figma-use-slides
+    - Ekip — Etkinlik, Fuar ve Mekânsal Tasarım: Etkinlik, Fuar ve Mekânsal Tasarım Yöneticisi — pozisyon ajanı `19-etkinlik-fuar-ve-mekansal-tasarim-yoneticisi.md`
+      - Kıdemli Etkinlik Tasarımcısı — pozisyon ajanı `19-kidemli-etkinlik-tasarimcisi.md`
+      - Fuar ve Mekân Tasarımcısı — pozisyon ajanı `19-fuar-ve-mekan-tasarimcisi.md`
+      - Etkinlik Görsel Uygulama Uzmanı — pozisyon ajanı `19-etkinlik-gorsel-uygulama-uzmani.md`
+  - **Birim — Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi:** Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi Müdürü — pozisyon ajanı `19-tasarim-operasyonlari-studyo-ve-uretim-yonetimi-muduru.md`
+    - Ekip — Yaratıcı Proje ve Kaynak Yönetimi: Yaratıcı Proje ve Kaynak Yönetimi Yöneticisi — pozisyon ajanı `19-yaratici-proje-ve-kaynak-yonetimi-yoneticisi.md`
+      - Kıdemli Yaratıcı Proje Yöneticisi — pozisyon ajanı `19-kidemli-yaratici-proje-yoneticisi.md`
+      - Yaratıcı Proje Yöneticisi — pozisyon ajanı `19-yaratici-proje-yoneticisi.md`
+      - Kaynak Planlama Uzmanı — pozisyon ajanı `19-kaynak-planlama-uzmani.md`
+    - Ekip — Stüdyo, Prodüksiyon ve Tedarikçi Yönetimi: Stüdyo, Prodüksiyon ve Tedarikçi Yönetimi Yöneticisi — pozisyon ajanı `19-studyo-produksiyon-ve-tedarikci-yonetimi-yoneticisi.md`
+      - Kıdemli Prodüksiyon Yöneticisi — pozisyon ajanı `19-kidemli-produksiyon-yoneticisi.md`
+      - Stüdyo Operasyon Uzmanı — pozisyon ajanı `19-studyo-operasyon-uzmani.md`
+      - Yaratıcı Tedarikçi Koordinatörü — pozisyon ajanı `19-yaratici-tedarikci-koordinatoru.md`
+    - Ekip — Yaratıcı Varlık, Telif ve Arşiv Yönetimi: Yaratıcı Varlık, Telif ve Arşiv Yönetimi Yöneticisi — pozisyon ajanı `19-yaratici-varlik-telif-ve-arsiv-yonetimi-yoneticisi.md`
+      - Kıdemli Yaratıcı Varlık Uzmanı — pozisyon ajanı `19-kidemli-yaratici-varlik-uzmani.md`
+      - Telif ve Lisans Koordinatörü — pozisyon ajanı `19-telif-ve-lisans-koordinatoru.md`
+      - Dijital Arşiv Uzmanı — pozisyon ajanı `19-dijital-arsiv-uzmani.md` · ürün içi görev: **Görsel Alt Metin Ajanı** · skill: accessibility-review
+
+## 20 - İdari İşler ve Destek Hizmetleri
+8 birim · 101 pozisyon · katalog ajanlı 0 · pozisyon ajanı 101
+
+- Bağlı olduğu: İnsan Kaynakları ve Organizasyon Direktörü
+- **Departman lideri:** İdari İşler ve Destek Hizmetleri Direktörü — pozisyon ajanı `20-idari-isler-ve-destek-hizmetleri-direktoru.md`
+  - **Birim — İdari İşler Stratejisi ve Hizmet Yönetişimi:** İdari İşler Stratejisi ve Hizmet Yönetişimi Müdürü — pozisyon ajanı `20-idari-isler-stratejisi-ve-hizmet-yonetisimi-muduru.md`
+    - Ekip — İdari Hizmet Stratejisi ve Planlama: İdari Hizmet Stratejisi ve Planlama Yöneticisi — pozisyon ajanı `20-idari-hizmet-stratejisi-ve-planlama-yoneticisi.md`
+      - Kıdemli İdari Hizmetler Uzmanı — pozisyon ajanı `20-kidemli-idari-hizmetler-uzmani.md`
+      - İdari Hizmetler Planlama Uzmanı — pozisyon ajanı `20-idari-hizmetler-planlama-uzmani.md`
+      - İdari Bütçe Analisti — pozisyon ajanı `20-idari-butce-analisti.md`
+    - Ekip — Hizmet Seviyesi ve İdari Performans: Hizmet Seviyesi ve İdari Performans Yöneticisi — pozisyon ajanı `20-hizmet-seviyesi-ve-idari-performans-yoneticisi.md`
+      - Kıdemli İdari Performans Uzmanı — pozisyon ajanı `20-kidemli-idari-performans-uzmani.md`
+      - Hizmet Seviyesi Uzmanı — pozisyon ajanı `20-hizmet-seviyesi-uzmani.md`
+      - İdari Raporlama Analisti — pozisyon ajanı `20-idari-raporlama-analisti.md`
+    - Ekip — İdari Süreçler ve Sürekli İyileştirme: İdari Süreçler ve Sürekli İyileştirme Yöneticisi — pozisyon ajanı `20-idari-surecler-ve-surekli-iyilestirme-yoneticisi.md`
+      - Kıdemli İdari Süreç Uzmanı — pozisyon ajanı `20-kidemli-idari-surec-uzmani.md`
+      - İdari Süreç Uzmanı — pozisyon ajanı `20-idari-surec-uzmani.md`
+      - Sürekli İyileştirme Analisti — pozisyon ajanı `20-surekli-iyilestirme-analisti.md`
+  - **Birim — Tesis, Bina ve Teknik İşletme:** Tesis, Bina ve Teknik İşletme Müdürü — pozisyon ajanı `20-tesis-bina-ve-teknik-isletme-muduru.md`
+    - Ekip — Tesis ve Bina Yönetimi: Tesis ve Bina Yönetimi Yöneticisi — pozisyon ajanı `20-tesis-ve-bina-yonetimi-yoneticisi.md`
+      - Kıdemli Tesis Yönetimi Uzmanı — pozisyon ajanı `20-kidemli-tesis-yonetimi-uzmani.md`
+      - Tesis Yönetimi Uzmanı — pozisyon ajanı `20-tesis-yonetimi-uzmani.md`
+      - Bina Operasyon Koordinatörü — pozisyon ajanı `20-bina-operasyon-koordinatoru.md`
+    - Ekip — Teknik Bakım ve Yardımcı Sistemler: Teknik Bakım ve Yardımcı Sistemler Yöneticisi — pozisyon ajanı `20-teknik-bakim-ve-yardimci-sistemler-yoneticisi.md`
+      - Kıdemli Teknik Tesis Uzmanı — pozisyon ajanı `20-kidemli-teknik-tesis-uzmani.md`
+      - Teknik Bakım Uzmanı — pozisyon ajanı `20-teknik-bakim-uzmani.md`
+      - Tesis Teknisyeni — pozisyon ajanı `20-tesis-teknisyeni.md`
+    - Ekip — Alan, Taşınma ve Yerleşim Yönetimi: Alan, Taşınma ve Yerleşim Yönetimi Yöneticisi — pozisyon ajanı `20-alan-tasinma-ve-yerlesim-yonetimi-yoneticisi.md`
+      - Kıdemli İşyeri Planlama Uzmanı — pozisyon ajanı `20-kidemli-isyeri-planlama-uzmani.md`
+      - Alan ve Yerleşim Uzmanı — pozisyon ajanı `20-alan-ve-yerlesim-uzmani.md`
+      - Taşınma Koordinatörü — pozisyon ajanı `20-tasinma-koordinatoru.md`
+  - **Birim — Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri:** Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri Müdürü — pozisyon ajanı `20-ofis-calisma-ortami-ve-calisan-destek-hizmetleri-muduru.md`
+    - Ekip — Ofis Operasyonları ve Sarf Yönetimi: Ofis Operasyonları ve Sarf Yönetimi Yöneticisi — pozisyon ajanı `20-ofis-operasyonlari-ve-sarf-yonetimi-yoneticisi.md`
+      - Kıdemli Ofis Operasyon Uzmanı — pozisyon ajanı `20-kidemli-ofis-operasyon-uzmani.md`
+      - Ofis Operasyon Uzmanı — pozisyon ajanı `20-ofis-operasyon-uzmani.md`
+      - Ofis Destek Görevlisi — pozisyon ajanı `20-ofis-destek-gorevlisi.md`
+    - Ekip — Toplantı, Etkinlik ve Misafir Hizmetleri: Toplantı, Etkinlik ve Misafir Hizmetleri Yöneticisi — pozisyon ajanı `20-toplanti-etkinlik-ve-misafir-hizmetleri-yoneticisi.md`
+      - Kıdemli Misafir Hizmetleri Uzmanı — pozisyon ajanı `20-kidemli-misafir-hizmetleri-uzmani.md`
+      - Toplantı ve Etkinlik Koordinatörü — pozisyon ajanı `20-toplanti-ve-etkinlik-koordinatoru.md`
+      - Kurumsal Ağırlama Uzmanı — pozisyon ajanı `20-kurumsal-agirlama-uzmani.md`
+    - Ekip — Çalışan İdari Destek Masası: Çalışan İdari Destek Masası Yöneticisi — pozisyon ajanı `20-calisan-idari-destek-masasi-yoneticisi.md`
+      - Kıdemli İdari Destek Uzmanı — pozisyon ajanı `20-kidemli-idari-destek-uzmani.md`
+      - İdari Destek Uzmanı — pozisyon ajanı `20-idari-destek-uzmani.md`
+      - İdari Talep Koordinatörü — pozisyon ajanı `20-idari-talep-koordinatoru.md`
+  - **Birim — Filo, Ulaşım ve Araç Yönetimi:** Filo, Ulaşım ve Araç Yönetimi Müdürü — pozisyon ajanı `20-filo-ulasim-ve-arac-yonetimi-muduru.md`
+    - Ekip — Filo Planlama ve Araç Tahsisi: Filo Planlama ve Araç Tahsisi Yöneticisi — pozisyon ajanı `20-filo-planlama-ve-arac-tahsisi-yoneticisi.md`
+      - Kıdemli Filo Yönetimi Uzmanı — pozisyon ajanı `20-kidemli-filo-yonetimi-uzmani.md`
+      - Filo Planlama Uzmanı — pozisyon ajanı `20-filo-planlama-uzmani.md`
+      - Araç Tahsis Koordinatörü — pozisyon ajanı `20-arac-tahsis-koordinatoru.md`
+    - Ekip — Araç Operasyonları ve Bakım: Araç Operasyonları ve Bakım Yöneticisi — pozisyon ajanı `20-arac-operasyonlari-ve-bakim-yoneticisi.md`
+      - Kıdemli Araç Operasyon Uzmanı — pozisyon ajanı `20-kidemli-arac-operasyon-uzmani.md`
+      - Araç Bakım ve Hasar Uzmanı — pozisyon ajanı `20-arac-bakim-ve-hasar-uzmani.md`
+      - Filo Operasyon Koordinatörü — pozisyon ajanı `20-filo-operasyon-koordinatoru.md`
+    - Ekip — Servis, Transfer ve Ulaşım Hizmetleri: Servis, Transfer ve Ulaşım Hizmetleri Yöneticisi — pozisyon ajanı `20-servis-transfer-ve-ulasim-hizmetleri-yoneticisi.md`
+      - Kıdemli Ulaşım Hizmetleri Uzmanı — pozisyon ajanı `20-kidemli-ulasim-hizmetleri-uzmani.md`
+      - Personel Servisleri Uzmanı — pozisyon ajanı `20-personel-servisleri-uzmani.md`
+      - Transfer Koordinatörü — pozisyon ajanı `20-transfer-koordinatoru.md`
+  - **Birim — Seyahat, Konaklama ve Organizasyon Hizmetleri:** Seyahat, Konaklama ve Organizasyon Hizmetleri Müdürü — pozisyon ajanı `20-seyahat-konaklama-ve-organizasyon-hizmetleri-muduru.md`
+    - Ekip — Kurumsal Seyahat Yönetimi: Kurumsal Seyahat Yönetimi Yöneticisi — pozisyon ajanı `20-kurumsal-seyahat-yonetimi-yoneticisi.md`
+      - Kıdemli Kurumsal Seyahat Uzmanı — pozisyon ajanı `20-kidemli-kurumsal-seyahat-uzmani.md`
+      - Kurumsal Seyahat Uzmanı — pozisyon ajanı `20-kurumsal-seyahat-uzmani.md`
+      - Seyahat Rezervasyon Koordinatörü — pozisyon ajanı `20-seyahat-rezervasyon-koordinatoru.md`
+    - Ekip — Konaklama ve Vize Operasyonları: Konaklama ve Vize Operasyonları Yöneticisi — pozisyon ajanı `20-konaklama-ve-vize-operasyonlari-yoneticisi.md`
+      - Kıdemli Konaklama Operasyon Uzmanı — pozisyon ajanı `20-kidemli-konaklama-operasyon-uzmani.md`
+      - Vize ve Seyahat Evrakı Uzmanı — pozisyon ajanı `20-vize-ve-seyahat-evraki-uzmani.md`
+      - Konaklama Koordinatörü — pozisyon ajanı `20-konaklama-koordinatoru.md`
+    - Ekip — Kurumsal Organizasyon Lojistiği: Kurumsal Organizasyon Lojistiği Yöneticisi — pozisyon ajanı `20-kurumsal-organizasyon-lojistigi-yoneticisi.md`
+      - Kıdemli Organizasyon Lojistiği Uzmanı — pozisyon ajanı `20-kidemli-organizasyon-lojistigi-uzmani.md`
+      - Organizasyon Operasyon Uzmanı — pozisyon ajanı `20-organizasyon-operasyon-uzmani.md`
+      - Etkinlik Lojistik Koordinatörü — pozisyon ajanı `20-etkinlik-lojistik-koordinatoru.md`
+  - **Birim — Resepsiyon ve Acil Durum Destek:** Resepsiyon ve Acil Durum Destek Müdürü — pozisyon ajanı `20-resepsiyon-ve-acil-durum-destek-muduru.md`
+    - Ekip — Resepsiyon, Santral ve Ziyaretçi Yönetimi: Resepsiyon, Santral ve Ziyaretçi Yönetimi Yöneticisi — pozisyon ajanı `20-resepsiyon-santral-ve-ziyaretci-yonetimi-yoneticisi.md`
+      - Kıdemli Resepsiyon Uzmanı — pozisyon ajanı `20-kidemli-resepsiyon-uzmani.md`
+      - Resepsiyon ve Santral Görevlisi — pozisyon ajanı `20-resepsiyon-ve-santral-gorevlisi.md`
+      - Ziyaretçi Hizmetleri Uzmanı — pozisyon ajanı `20-ziyaretci-hizmetleri-uzmani.md`
+    - Ekip — Acil Durum ve Tahliye Destek Hizmetleri: Acil Durum ve Tahliye Destek Hizmetleri Yöneticisi — pozisyon ajanı `20-acil-durum-ve-tahliye-destek-hizmetleri-yoneticisi.md`
+      - Kıdemli Acil Durum Destek Uzmanı — pozisyon ajanı `20-kidemli-acil-durum-destek-uzmani.md`
+      - Tahliye ve Tatbikat Koordinatörü — pozisyon ajanı `20-tahliye-ve-tatbikat-koordinatoru.md`
+      - Acil Durum Ekipman Sorumlusu — pozisyon ajanı `20-acil-durum-ekipman-sorumlusu.md`
+  - **Birim — Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri:** Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri Müdürü — pozisyon ajanı `20-evrak-arsiv-posta-ve-kurumsal-kayit-hizmetleri-muduru.md`
+    - Ekip — Gelen-Giden Evrak ve Posta: Gelen-Giden Evrak ve Posta Yöneticisi — pozisyon ajanı `20-gelen-giden-evrak-ve-posta-yoneticisi.md`
+      - Kıdemli Evrak Yönetimi Uzmanı — pozisyon ajanı `20-kidemli-evrak-yonetimi-uzmani.md`
+      - Evrak ve Posta Uzmanı — pozisyon ajanı `20-evrak-ve-posta-uzmani.md`
+      - Kurye Operasyon Koordinatörü — pozisyon ajanı `20-kurye-operasyon-koordinatoru.md`
+    - Ekip — Fiziksel ve Dijital Arşiv Operasyonları: Fiziksel ve Dijital Arşiv Operasyonları Yöneticisi — pozisyon ajanı `20-fiziksel-ve-dijital-arsiv-operasyonlari-yoneticisi.md`
+      - Kıdemli Arşiv Uzmanı — pozisyon ajanı `20-kidemli-arsiv-uzmani.md`
+      - Arşiv Uzmanı — pozisyon ajanı `20-arsiv-uzmani.md`
+      - Dijital Arşiv Operatörü — pozisyon ajanı `20-dijital-arsiv-operatoru.md` · skill: pdf, view-pdf
+    - Ekip — Saklama, İmha ve Kayıt Uyumu: Saklama, İmha ve Kayıt Uyumu Yöneticisi — pozisyon ajanı `20-saklama-imha-ve-kayit-uyumu-yoneticisi.md`
+      - Kıdemli Kayıt Yönetimi Uzmanı — pozisyon ajanı `20-kidemli-kayit-yonetimi-uzmani.md`
+      - Saklama ve İmha Uzmanı — pozisyon ajanı `20-saklama-ve-imha-uzmani.md`
+      - Kayıt Uyumu Analisti — pozisyon ajanı `20-kayit-uyumu-analisti.md`
+  - **Birim — Temizlik, İkram ve İdari Tedarikçi Yönetimi:** Temizlik, İkram ve İdari Tedarikçi Yönetimi Müdürü — pozisyon ajanı `20-temizlik-ikram-ve-idari-tedarikci-yonetimi-muduru.md`
+    - Ekip — Temizlik ve Hijyen Hizmetleri: Temizlik ve Hijyen Hizmetleri Yöneticisi — pozisyon ajanı `20-temizlik-ve-hijyen-hizmetleri-yoneticisi.md`
+      - Kıdemli Temizlik Hizmetleri Uzmanı — pozisyon ajanı `20-kidemli-temizlik-hizmetleri-uzmani.md`
+      - Hijyen Hizmetleri Uzmanı — pozisyon ajanı `20-hijyen-hizmetleri-uzmani.md`
+      - Temizlik Saha Koordinatörü — pozisyon ajanı `20-temizlik-saha-koordinatoru.md`
+    - Ekip — Yemek, İkram ve Otomat Hizmetleri: Yemek, İkram ve Otomat Hizmetleri Yöneticisi — pozisyon ajanı `20-yemek-ikram-ve-otomat-hizmetleri-yoneticisi.md`
+      - Kıdemli İkram Hizmetleri Uzmanı — pozisyon ajanı `20-kidemli-ikram-hizmetleri-uzmani.md`
+      - Yemek ve İkram Uzmanı — pozisyon ajanı `20-yemek-ve-ikram-uzmani.md`
+      - Otomat Hizmetleri Koordinatörü — pozisyon ajanı `20-otomat-hizmetleri-koordinatoru.md`
+    - Ekip — İdari Tedarikçi ve Sözleşme Operasyonları: İdari Tedarikçi ve Sözleşme Operasyonları Yöneticisi — pozisyon ajanı `20-idari-tedarikci-ve-sozlesme-operasyonlari-yoneticisi.md`
+      - Kıdemli İdari Tedarikçi Uzmanı — pozisyon ajanı `20-kidemli-idari-tedarikci-uzmani.md`
+      - İdari Sözleşme Operasyon Uzmanı — pozisyon ajanı `20-idari-sozlesme-operasyon-uzmani.md`
+      - Tedarikçi Performans Analisti — pozisyon ajanı `20-tedarikci-performans-analisti.md`
+
+## 21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik
+8 birim · 105 pozisyon · katalog ajanlı 0 · pozisyon ajanı 105
+
+- Bağlı olduğu: Genel Müdür / CEO · fonksiyonel: Yönetim Kurulu Risk Komitesi, Sürdürülebilirlik Komitesi
+- **Departman lideri:** İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik Direktörü — pozisyon ajanı `21-is-sagligi-guvenligi-cevre-ve-surdurulebilirlik-direktoru.md`
+  - **Birim — EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler:** EHS ve Sürdürülebilirlik Stratejisi, Yönetişim ve Sistemler Müdürü — pozisyon ajanı `21-ehs-ve-surdurulebilirlik-stratejisi-yonetisim-ve-sistemler-muduru.md`
+    - Ekip — EHS ve Sürdürülebilirlik Stratejisi: EHS ve Sürdürülebilirlik Stratejisi Yöneticisi — pozisyon ajanı `21-ehs-ve-surdurulebilirlik-stratejisi-yoneticisi.md`
+      - Kıdemli EHS Stratejisi Uzmanı — pozisyon ajanı `21-kidemli-ehs-stratejisi-uzmani.md`
+      - Sürdürülebilirlik Stratejisi Uzmanı — pozisyon ajanı `21-surdurulebilirlik-stratejisi-uzmani.md`
+      - EHS Performans Analisti — pozisyon ajanı `21-ehs-performans-analisti.md`
+    - Ekip — EHS Yönetim Sistemleri ve Standartlar: EHS Yönetim Sistemleri ve Standartlar Yöneticisi — pozisyon ajanı `21-ehs-yonetim-sistemleri-ve-standartlar-yoneticisi.md`
+      - Kıdemli EHS Sistemleri Uzmanı — pozisyon ajanı `21-kidemli-ehs-sistemleri-uzmani.md`
+      - ISO 45001 ve 14001 Uzmanı — pozisyon ajanı `21-iso-45001-ve-14001-uzmani.md`
+      - EHS Dokümantasyon Uzmanı — pozisyon ajanı `21-ehs-dokumantasyon-uzmani.md`
+    - Ekip — EHS Veri, Raporlama ve Dijital Sistemler: EHS Veri, Raporlama ve Dijital Sistemler Yöneticisi — pozisyon ajanı `21-ehs-veri-raporlama-ve-dijital-sistemler-yoneticisi.md`
+      - Kıdemli EHS Raporlama Uzmanı — pozisyon ajanı `21-kidemli-ehs-raporlama-uzmani.md`
+      - EHS Veri Analisti — pozisyon ajanı `21-ehs-veri-analisti.md`
+      - EHS Dijital Sistemler Uzmanı — pozisyon ajanı `21-ehs-dijital-sistemler-uzmani.md`
+  - **Birim — İş Sağlığı ve Güvenliği Yönetimi:** İş Sağlığı ve Güvenliği Yönetimi Müdürü — pozisyon ajanı `21-is-sagligi-ve-guvenligi-yonetimi-muduru.md`
+    - Ekip — İSG Risk Değerlendirme ve Saha Güvenliği: İSG Risk Değerlendirme ve Saha Güvenliği Yöneticisi — pozisyon ajanı `21-isg-risk-degerlendirme-ve-saha-guvenligi-yoneticisi.md`
+      - Kıdemli İş Güvenliği Uzmanı — pozisyon ajanı `21-kidemli-is-guvenligi-uzmani.md`
+      - İş Güvenliği Uzmanı — pozisyon ajanı `21-is-guvenligi-uzmani.md`
+      - Saha Güvenliği Uzmanı — pozisyon ajanı `21-saha-guvenligi-uzmani.md`
+    - Ekip — İş İzinleri ve Yüksek Riskli Çalışmalar: İş İzinleri ve Yüksek Riskli Çalışmalar Yöneticisi — pozisyon ajanı `21-is-izinleri-ve-yuksek-riskli-calismalar-yoneticisi.md`
+      - Kıdemli İş İzni Uzmanı — pozisyon ajanı `21-kidemli-is-izni-uzmani.md`
+      - Yüksek Riskli İşler Uzmanı — pozisyon ajanı `21-yuksek-riskli-isler-uzmani.md`
+      - İSG Saha Kontrolörü — pozisyon ajanı `21-isg-saha-kontroloru.md`
+    - Ekip — İSG Eğitim, Kültür ve Davranış Güvenliği: İSG Eğitim, Kültür ve Davranış Güvenliği Yöneticisi — pozisyon ajanı `21-isg-egitim-kultur-ve-davranis-guvenligi-yoneticisi.md`
+      - Kıdemli İSG Eğitim Uzmanı — pozisyon ajanı `21-kidemli-isg-egitim-uzmani.md`
+      - Davranış Güvenliği Uzmanı — pozisyon ajanı `21-davranis-guvenligi-uzmani.md`
+      - İSG Kültür Analisti — pozisyon ajanı `21-isg-kultur-analisti.md`
+  - **Birim — İş Sağlığı, Hijyen ve Ergonomi:** İş Sağlığı, Hijyen ve Ergonomi Müdürü — pozisyon ajanı `21-is-sagligi-hijyen-ve-ergonomi-muduru.md`
+    - Ekip — İşyeri Sağlığı ve Sağlık Gözetimi: İşyeri Sağlığı ve Sağlık Gözetimi Yöneticisi — pozisyon ajanı `21-isyeri-sagligi-ve-saglik-gozetimi-yoneticisi.md`
+      - İşyeri Hekimi — pozisyon ajanı `21-isyeri-hekimi.md`
+      - İşyeri Sağlık Uzmanı — pozisyon ajanı `21-isyeri-saglik-uzmani.md`
+      - İşyeri Hemşiresi — pozisyon ajanı `21-isyeri-hemsiresi.md`
+    - Ekip — Endüstriyel Hijyen ve Maruziyet Yönetimi: Endüstriyel Hijyen ve Maruziyet Yönetimi Yöneticisi — pozisyon ajanı `21-endustriyel-hijyen-ve-maruziyet-yonetimi-yoneticisi.md`
+      - Kıdemli Endüstriyel Hijyen Uzmanı — pozisyon ajanı `21-kidemli-endustriyel-hijyen-uzmani.md`
+      - Endüstriyel Hijyen Uzmanı — pozisyon ajanı `21-endustriyel-hijyen-uzmani.md`
+      - Maruziyet Ölçüm Uzmanı — pozisyon ajanı `21-maruziyet-olcum-uzmani.md`
+    - Ekip — Ergonomi ve Çalışan İyilik Hali: Ergonomi ve Çalışan İyilik Hali Yöneticisi — pozisyon ajanı `21-ergonomi-ve-calisan-iyilik-hali-yoneticisi.md`
+      - Kıdemli Ergonomi Uzmanı — pozisyon ajanı `21-kidemli-ergonomi-uzmani.md`
+      - Ergonomi Uzmanı — pozisyon ajanı `21-ergonomi-uzmani.md`
+      - Çalışan İyilik Hali Koordinatörü — pozisyon ajanı `21-calisan-iyilik-hali-koordinatoru.md`
+  - **Birim — Proses Güvenliği, Yüklenici ve Olay Yönetimi:** Proses Güvenliği, Yüklenici ve Olay Yönetimi Müdürü — pozisyon ajanı `21-proses-guvenligi-yuklenici-ve-olay-yonetimi-muduru.md`
+    - Ekip — Proses ve Makine Güvenliği: Proses ve Makine Güvenliği Yöneticisi — pozisyon ajanı `21-proses-ve-makine-guvenligi-yoneticisi.md`
+      - Kıdemli Proses Güvenliği Mühendisi — pozisyon ajanı `21-kidemli-proses-guvenligi-muhendisi.md`
+      - Proses Güvenliği Uzmanı — pozisyon ajanı `21-proses-guvenligi-uzmani.md`
+      - Makine Güvenliği Uzmanı — pozisyon ajanı `21-makine-guvenligi-uzmani.md`
+    - Ekip — Yüklenici ve Tedarikçi EHS Yönetimi: Yüklenici ve Tedarikçi EHS Yönetimi Yöneticisi — pozisyon ajanı `21-yuklenici-ve-tedarikci-ehs-yonetimi-yoneticisi.md`
+      - Kıdemli Yüklenici EHS Uzmanı — pozisyon ajanı `21-kidemli-yuklenici-ehs-uzmani.md`
+      - Tedarikçi EHS Uzmanı — pozisyon ajanı `21-tedarikci-ehs-uzmani.md`
+      - Yüklenici Saha Koordinatörü — pozisyon ajanı `21-yuklenici-saha-koordinatoru.md`
+    - Ekip — İş Kazası, Ramak Kala ve Kök Neden: İş Kazası, Ramak Kala ve Kök Neden Yöneticisi — pozisyon ajanı `21-is-kazasi-ramak-kala-ve-kok-neden-yoneticisi.md`
+      - Kıdemli Olay Araştırma Uzmanı — pozisyon ajanı `21-kidemli-olay-arastirma-uzmani.md`
+      - İş Kazası Araştırma Uzmanı — pozisyon ajanı `21-is-kazasi-arastirma-uzmani.md`
+      - Kök Neden Analisti — pozisyon ajanı `21-kok-neden-analisti.md`
+  - **Birim — Çevre Yönetimi ve Döngüsel Ekonomi:** Çevre Yönetimi ve Döngüsel Ekonomi Müdürü — pozisyon ajanı `21-cevre-yonetimi-ve-dongusel-ekonomi-muduru.md`
+    - Ekip — Çevre Uyum, İzin ve Lisanslar: Çevre Uyum, İzin ve Lisanslar Yöneticisi — pozisyon ajanı `21-cevre-uyum-izin-ve-lisanslar-yoneticisi.md`
+      - Kıdemli Çevre Uzmanı — pozisyon ajanı `21-kidemli-cevre-uzmani.md`
+      - Çevre Uyum Uzmanı — pozisyon ajanı `21-cevre-uyum-uzmani.md`
+      - Çevre İzinleri Uzmanı — pozisyon ajanı `21-cevre-izinleri-uzmani.md`
+    - Ekip — Atık, Su ve Kirlilik Önleme: Atık, Su ve Kirlilik Önleme Yöneticisi — pozisyon ajanı `21-atik-su-ve-kirlilik-onleme-yoneticisi.md`
+      - Kıdemli Atık Yönetimi Uzmanı — pozisyon ajanı `21-kidemli-atik-yonetimi-uzmani.md`
+      - Su ve Atıksu Uzmanı — pozisyon ajanı `21-su-ve-atiksu-uzmani.md`
+      - Kirlilik Önleme Analisti — pozisyon ajanı `21-kirlilik-onleme-analisti.md`
+    - Ekip — Biyoçeşitlilik ve Doğal Kaynaklar: Biyoçeşitlilik ve Doğal Kaynaklar Yöneticisi — pozisyon ajanı `21-biyocesitlilik-ve-dogal-kaynaklar-yoneticisi.md`
+      - Kıdemli Biyoçeşitlilik Uzmanı — pozisyon ajanı `21-kidemli-biyocesitlilik-uzmani.md`
+      - Doğal Kaynak Yönetimi Uzmanı — pozisyon ajanı `21-dogal-kaynak-yonetimi-uzmani.md`
+      - Çevresel Etki Analisti — pozisyon ajanı `21-cevresel-etki-analisti.md`
+  - **Birim — Enerji, İklim ve Karbon Yönetimi:** Enerji, İklim ve Karbon Yönetimi Müdürü — pozisyon ajanı `21-enerji-iklim-ve-karbon-yonetimi-muduru.md`
+    - Ekip — Enerji Yönetimi ve Verimlilik: Enerji Yönetimi ve Verimlilik Yöneticisi — pozisyon ajanı `21-enerji-yonetimi-ve-verimlilik-yoneticisi.md`
+      - Kıdemli Enerji Yöneticisi — pozisyon ajanı `21-kidemli-enerji-yoneticisi.md`
+      - Enerji Verimliliği Uzmanı — pozisyon ajanı `21-enerji-verimliligi-uzmani.md`
+      - Enerji Analisti — pozisyon ajanı `21-enerji-analisti.md`
+    - Ekip — Karbon Envanteri ve Emisyon Azaltımı: Karbon Envanteri ve Emisyon Azaltımı Yöneticisi — pozisyon ajanı `21-karbon-envanteri-ve-emisyon-azaltimi-yoneticisi.md`
+      - Kıdemli Karbon Yönetimi Uzmanı — pozisyon ajanı `21-kidemli-karbon-yonetimi-uzmani.md`
+      - Sera Gazı Envanteri Uzmanı — pozisyon ajanı `21-sera-gazi-envanteri-uzmani.md`
+      - Emisyon Azaltım Analisti — pozisyon ajanı `21-emisyon-azaltim-analisti.md`
+    - Ekip — İklim Riski ve Uyum: İklim Riski ve Uyum Yöneticisi — pozisyon ajanı `21-iklim-riski-ve-uyum-yoneticisi.md`
+      - Kıdemli İklim Riski Uzmanı — pozisyon ajanı `21-kidemli-iklim-riski-uzmani.md`
+      - İklim Uyum Uzmanı — pozisyon ajanı `21-iklim-uyum-uzmani.md`
+      - İklim Senaryo Analisti — pozisyon ajanı `21-iklim-senaryo-analisti.md`
+  - **Birim — Kurumsal Sürdürülebilirlik ve ESG:** Kurumsal Sürdürülebilirlik ve ESG Müdürü — pozisyon ajanı `21-kurumsal-surdurulebilirlik-ve-esg-muduru.md`
+    - Ekip — Sürdürülebilirlik Programları ve Etki: Sürdürülebilirlik Programları ve Etki Yöneticisi — pozisyon ajanı `21-surdurulebilirlik-programlari-ve-etki-yoneticisi.md`
+      - Kıdemli Sürdürülebilirlik Uzmanı — pozisyon ajanı `21-kidemli-surdurulebilirlik-uzmani.md`
+      - Sürdürülebilirlik Program Uzmanı — pozisyon ajanı `21-surdurulebilirlik-program-uzmani.md`
+      - Etki Ölçüm Analisti — pozisyon ajanı `21-etki-olcum-analisti.md`
+    - Ekip — ESG Raporlama ve Paydaş Talepleri: ESG Raporlama ve Paydaş Talepleri Yöneticisi — pozisyon ajanı `21-esg-raporlama-ve-paydas-talepleri-yoneticisi.md`
+      - Kıdemli ESG Raporlama Uzmanı — pozisyon ajanı `21-kidemli-esg-raporlama-uzmani.md`
+      - ESG Raporlama Uzmanı — pozisyon ajanı `21-esg-raporlama-uzmani.md`
+      - Sürdürülebilirlik Veri Analisti — pozisyon ajanı `21-surdurulebilirlik-veri-analisti.md`
+    - Ekip — Sosyal Etki ve Sorumlu Değer Zinciri: Sosyal Etki ve Sorumlu Değer Zinciri Yöneticisi — pozisyon ajanı `21-sosyal-etki-ve-sorumlu-deger-zinciri-yoneticisi.md`
+      - Kıdemli Sosyal Etki Uzmanı — pozisyon ajanı `21-kidemli-sosyal-etki-uzmani.md`
+      - Sorumlu Tedarik Uzmanı — pozisyon ajanı `21-sorumlu-tedarik-uzmani.md`
+      - İnsan Hakları Durum Tespiti Analisti — pozisyon ajanı `21-insan-haklari-durum-tespiti-analisti.md`
+  - **Birim — Acil Durum, Yangın Güvenliği ve EHS Güvence:** Acil Durum, Yangın Güvenliği ve EHS Güvence Müdürü — pozisyon ajanı `21-acil-durum-yangin-guvenligi-ve-ehs-guvence-muduru.md`
+    - Ekip — Acil Durum ve Kriz Hazırlığı: Acil Durum ve Kriz Hazırlığı Yöneticisi — pozisyon ajanı `21-acil-durum-ve-kriz-hazirligi-yoneticisi.md`
+      - Kıdemli Acil Durum Uzmanı — pozisyon ajanı `21-kidemli-acil-durum-uzmani.md`
+      - Acil Durum Planlama Uzmanı — pozisyon ajanı `21-acil-durum-planlama-uzmani.md`
+      - Tatbikat Koordinatörü — pozisyon ajanı `21-tatbikat-koordinatoru.md`
+    - Ekip — Yangın Güvenliği ve Kurtarma: Yangın Güvenliği ve Kurtarma Yöneticisi — pozisyon ajanı `21-yangin-guvenligi-ve-kurtarma-yoneticisi.md`
+      - Kıdemli Yangın Güvenliği Uzmanı — pozisyon ajanı `21-kidemli-yangin-guvenligi-uzmani.md`
+      - Yangın Güvenliği Uzmanı — pozisyon ajanı `21-yangin-guvenligi-uzmani.md`
+      - Kurtarma ve Müdahale Koordinatörü — pozisyon ajanı `21-kurtarma-ve-mudahale-koordinatoru.md`
+    - Ekip — EHS Denetim ve Güvence: EHS Denetim ve Güvence Yöneticisi — pozisyon ajanı `21-ehs-denetim-ve-guvence-yoneticisi.md`
+      - Kıdemli EHS Denetçisi — pozisyon ajanı `21-kidemli-ehs-denetcisi.md`
+      - EHS Denetçisi — pozisyon ajanı `21-ehs-denetcisi.md`
+      - EHS Güvence Analisti — pozisyon ajanı `21-ehs-guvence-analisti.md`
+
+## 22 - Kurumsal Güvenlik
+7 birim · 96 pozisyon · katalog ajanlı 0 · pozisyon ajanı 96
+
+- Bağlı olduğu: İcra Kurulu Başkanı / CEO
+- **Departman lideri:** Kurumsal Güvenlik Direktörü — pozisyon ajanı `22-kurumsal-guvenlik-direktoru.md`
+  - **Birim — Güvenlik Stratejisi, Yönetişim ve Risk:** Güvenlik Stratejisi, Yönetişim ve Risk Müdürü — pozisyon ajanı `22-guvenlik-stratejisi-yonetisim-ve-risk-muduru.md`
+    - Ekip — Güvenlik Stratejisi ve Politikalar: Güvenlik Stratejisi ve Politikalar Takım Lideri — pozisyon ajanı `22-guvenlik-stratejisi-ve-politikalar-takim-lideri.md`
+      - Kurumsal Güvenlik Stratejisi Uzmanı — pozisyon ajanı `22-kurumsal-guvenlik-stratejisi-uzmani.md`
+      - Güvenlik Politikaları Uzmanı — pozisyon ajanı `22-guvenlik-politikalari-uzmani.md`
+      - Güvenlik Portföy ve Bütçe Uzmanı — pozisyon ajanı `22-guvenlik-portfoy-ve-butce-uzmani.md`
+    - Ekip — Güvenlik Risk ve Tehdit Değerlendirme: Güvenlik Risk ve Tehdit Değerlendirme Takım Lideri — pozisyon ajanı `22-guvenlik-risk-ve-tehdit-degerlendirme-takim-lideri.md`
+      - Güvenlik Risk Uzmanı — pozisyon ajanı `22-guvenlik-risk-uzmani.md`
+      - Tehdit Değerlendirme Analisti — pozisyon ajanı `22-tehdit-degerlendirme-analisti.md`
+      - Ülke ve Lokasyon Risk Analisti — pozisyon ajanı `22-ulke-ve-lokasyon-risk-analisti.md`
+    - Ekip — Güvenlik Uyum, Güvence ve Performans: Güvenlik Uyum, Güvence ve Performans Takım Lideri — pozisyon ajanı `22-guvenlik-uyum-guvence-ve-performans-takim-lideri.md`
+      - Güvenlik Uyum Uzmanı — pozisyon ajanı `22-guvenlik-uyum-uzmani.md`
+      - Güvenlik Güvence Uzmanı — pozisyon ajanı `22-guvenlik-guvence-uzmani.md`
+      - Güvenlik Performans ve Raporlama Uzmanı — pozisyon ajanı `22-guvenlik-performans-ve-raporlama-uzmani.md`
+  - **Birim — Fiziksel Güvenlik ve Tesis Koruma:** Fiziksel Güvenlik ve Tesis Koruma Müdürü — pozisyon ajanı `22-fiziksel-guvenlik-ve-tesis-koruma-muduru.md`
+    - Ekip — Tesis ve Çevre Güvenliği: Tesis ve Çevre Güvenliği Takım Lideri — pozisyon ajanı `22-tesis-ve-cevre-guvenligi-takim-lideri.md`
+      - Tesis Güvenliği Uzmanı — pozisyon ajanı `22-tesis-guvenligi-uzmani.md`
+      - Çevre ve Perimetre Güvenliği Uzmanı — pozisyon ajanı `22-cevre-ve-perimetre-guvenligi-uzmani.md`
+      - Fiziksel Güvenlik Tasarım Uzmanı — pozisyon ajanı `22-fiziksel-guvenlik-tasarim-uzmani.md`
+    - Ekip — Erişim Kontrolü ve Ziyaretçi Güvenliği: Erişim Kontrolü ve Ziyaretçi Güvenliği Takım Lideri — pozisyon ajanı `22-erisim-kontrolu-ve-ziyaretci-guvenligi-takim-lideri.md`
+      - Erişim Kontrol Uzmanı — pozisyon ajanı `22-erisim-kontrol-uzmani.md`
+      - Kimlik ve Yetkilendirme Uzmanı — pozisyon ajanı `22-kimlik-ve-yetkilendirme-uzmani.md`
+      - Ziyaretçi ve Resepsiyon Güvenliği Uzmanı — pozisyon ajanı `22-ziyaretci-ve-resepsiyon-guvenligi-uzmani.md`
+    - Ekip — Kritik Varlık ve Operasyon Koruma: Kritik Varlık ve Operasyon Koruma Takım Lideri — pozisyon ajanı `22-kritik-varlik-ve-operasyon-koruma-takim-lideri.md`
+      - Kritik Varlık Koruma Uzmanı — pozisyon ajanı `22-kritik-varlik-koruma-uzmani.md`
+      - Depo ve Lojistik Güvenliği Uzmanı — pozisyon ajanı `22-depo-ve-lojistik-guvenligi-uzmani.md`
+      - Kayıp Önleme Uzmanı — pozisyon ajanı `22-kayip-onleme-uzmani.md`
+  - **Birim — Güvenlik Operasyonları ve Kontrol Merkezi:** Güvenlik Operasyonları ve Kontrol Merkezi Müdürü — pozisyon ajanı `22-guvenlik-operasyonlari-ve-kontrol-merkezi-muduru.md`
+    - Ekip — Güvenlik Operasyon Merkezi: Güvenlik Operasyon Merkezi Takım Lideri — pozisyon ajanı `22-guvenlik-operasyon-merkezi-takim-lideri.md`
+      - Güvenlik Operasyon Merkezi Kıdemli Operatörü — pozisyon ajanı `22-guvenlik-operasyon-merkezi-kidemli-operatoru.md`
+      - Güvenlik İzleme Operatörü — pozisyon ajanı `22-guvenlik-izleme-operatoru.md`
+      - Alarm ve Olay Yönetimi Uzmanı — pozisyon ajanı `22-alarm-ve-olay-yonetimi-uzmani.md`
+    - Ekip — Saha Güvenlik Operasyonları: Saha Güvenlik Operasyonları Takım Lideri — pozisyon ajanı `22-saha-guvenlik-operasyonlari-takim-lideri.md`
+      - Bölge Güvenlik Sorumlusu — pozisyon ajanı `22-bolge-guvenlik-sorumlusu.md`
+      - Saha Güvenlik Sorumlusu — pozisyon ajanı `22-saha-guvenlik-sorumlusu.md`
+      - Güvenlik Vardiya Amiri — pozisyon ajanı `22-guvenlik-vardiya-amiri.md`
+    - Ekip — Olay Komuta ve Müdahale: Olay Komuta ve Müdahale Takım Lideri — pozisyon ajanı `22-olay-komuta-ve-mudahale-takim-lideri.md`
+      - Güvenlik Olay Müdahale Uzmanı — pozisyon ajanı `22-guvenlik-olay-mudahale-uzmani.md`
+      - Olay Komuta Koordinatörü — pozisyon ajanı `22-olay-komuta-koordinatoru.md`
+      - Kriz Haberleşme Koordinatörü — pozisyon ajanı `22-kriz-haberlesme-koordinatoru.md`
+    - Ekip — Kriz Güvenliği ve İş Sürekliliği Koordinasyonu: Kriz Güvenliği ve İş Sürekliliği Koordinasyon Takım Lideri — pozisyon ajanı `22-kriz-guvenligi-ve-is-surekliligi-koordinasyon-takim-lideri.md`
+      - Kriz Güvenliği Uzmanı — pozisyon ajanı `22-kriz-guvenligi-uzmani.md`
+      - İş Sürekliliği Güvenlik Koordinatörü — pozisyon ajanı `22-is-surekliligi-guvenlik-koordinatoru.md`
+      - Kurtarma ve Alternatif Lokasyon Güvenliği Uzmanı — pozisyon ajanı `22-kurtarma-ve-alternatif-lokasyon-guvenligi-uzmani.md`
+  - **Birim — Güvenlik İstihbaratı ve Soruşturmalar:** Güvenlik İstihbaratı ve Soruşturmalar Müdürü — pozisyon ajanı `22-guvenlik-istihbarati-ve-sorusturmalar-muduru.md`
+    - Ekip — Güvenlik İstihbaratı ve Erken Uyarı: Güvenlik İstihbaratı ve Erken Uyarı Takım Lideri — pozisyon ajanı `22-guvenlik-istihbarati-ve-erken-uyari-takim-lideri.md`
+      - Güvenlik İstihbarat Analisti — pozisyon ajanı `22-guvenlik-istihbarat-analisti.md`
+      - Açık Kaynak İstihbarat Analisti — pozisyon ajanı `22-acik-kaynak-istihbarat-analisti.md`
+      - Erken Uyarı ve İzleme Uzmanı — pozisyon ajanı `22-erken-uyari-ve-izleme-uzmani.md`
+    - Ekip — Kurumsal Soruşturmalar: Kurumsal Soruşturmalar Takım Lideri — pozisyon ajanı `22-kurumsal-sorusturmalar-takim-lideri.md`
+      - Kurumsal Soruşturma Uzmanı — pozisyon ajanı `22-kurumsal-sorusturma-uzmani.md` · skill: internal-investigation, investigation-add, investigation-open
+      - Suistimal ve Varlık Kaybı Araştırma Uzmanı — pozisyon ajanı `22-suistimal-ve-varlik-kaybi-arastirma-uzmani.md`
+      - Görüşme ve Vaka Analizi Uzmanı — pozisyon ajanı `22-gorusme-ve-vaka-analizi-uzmani.md` · skill: investigation-add, investigation-query
+    - Ekip — Adli Delil ve Vaka Yönetimi: Adli Delil ve Vaka Yönetimi Takım Lideri — pozisyon ajanı `22-adli-delil-ve-vaka-yonetimi-takim-lideri.md`
+      - Fiziksel Delil Yönetimi Uzmanı — pozisyon ajanı `22-fiziksel-delil-yonetimi-uzmani.md`
+      - Vaka Yönetimi Uzmanı — pozisyon ajanı `22-vaka-yonetimi-uzmani.md`
+      - Adli İnceleme Koordinatörü — pozisyon ajanı `22-adli-inceleme-koordinatoru.md`
+  - **Birim — Yönetici, Seyahat ve Etkinlik Güvenliği:** Yönetici, Seyahat ve Etkinlik Güvenliği Müdürü — pozisyon ajanı `22-yonetici-seyahat-ve-etkinlik-guvenligi-muduru.md`
+    - Ekip — Yönetici Koruma: Yönetici Koruma Takım Lideri — pozisyon ajanı `22-yonetici-koruma-takim-lideri.md`
+      - Yakın Koruma Uzmanı — pozisyon ajanı `22-yakin-koruma-uzmani.md`
+      - Koruma Planlama Uzmanı — pozisyon ajanı `22-koruma-planlama-uzmani.md`
+      - Güvenli Sürüş ve Ulaşım Uzmanı — pozisyon ajanı `22-guvenli-surus-ve-ulasim-uzmani.md`
+    - Ekip — Seyahat Güvenliği: Seyahat Güvenliği Takım Lideri — pozisyon ajanı `22-seyahat-guvenligi-takim-lideri.md`
+      - Seyahat Güvenliği Uzmanı — pozisyon ajanı `22-seyahat-guvenligi-uzmani.md`
+      - Seyahat Risk Analisti — pozisyon ajanı `22-seyahat-risk-analisti.md`
+      - Yolcu Destek ve Acil Müdahale Koordinatörü — pozisyon ajanı `22-yolcu-destek-ve-acil-mudahale-koordinatoru.md`
+    - Ekip — Etkinlik ve Toplantı Güvenliği: Etkinlik ve Toplantı Güvenliği Takım Lideri — pozisyon ajanı `22-etkinlik-ve-toplanti-guvenligi-takim-lideri.md`
+      - Etkinlik Güvenliği Uzmanı — pozisyon ajanı `22-etkinlik-guvenligi-uzmani.md`
+      - Mekân Risk Değerlendirme Uzmanı — pozisyon ajanı `22-mekan-risk-degerlendirme-uzmani.md`
+      - Kalabalık ve Giriş Yönetimi Uzmanı — pozisyon ajanı `22-kalabalik-ve-giris-yonetimi-uzmani.md`
+  - **Birim — Güvenlik Teknolojileri ve Sistemleri:** Güvenlik Teknolojileri ve Sistemleri Müdürü — pozisyon ajanı `22-guvenlik-teknolojileri-ve-sistemleri-muduru.md`
+    - Ekip — Video Gözetim ve Analitik: Video Gözetim ve Analitik Takım Lideri — pozisyon ajanı `22-video-gozetim-ve-analitik-takim-lideri.md`
+      - CCTV Sistemleri Uzmanı — pozisyon ajanı `22-cctv-sistemleri-uzmani.md`
+      - Video Analitik Uzmanı — pozisyon ajanı `22-video-analitik-uzmani.md`
+      - Görüntü Kayıt ve Delil Sistemleri Uzmanı — pozisyon ajanı `22-goruntu-kayit-ve-delil-sistemleri-uzmani.md`
+    - Ekip — Erişim, Alarm ve Entegre Güvenlik Sistemleri: Erişim, Alarm ve Entegre Güvenlik Sistemleri Takım Lideri — pozisyon ajanı `22-erisim-alarm-ve-entegre-guvenlik-sistemleri-takim-lideri.md`
+      - Elektronik Erişim Sistemleri Uzmanı — pozisyon ajanı `22-elektronik-erisim-sistemleri-uzmani.md`
+      - Alarm ve Sensör Sistemleri Uzmanı — pozisyon ajanı `22-alarm-ve-sensor-sistemleri-uzmani.md`
+      - Güvenlik Sistemleri Entegrasyon Uzmanı — pozisyon ajanı `22-guvenlik-sistemleri-entegrasyon-uzmani.md`
+    - Ekip — Güvenlik Teknolojisi Mimarisi ve Yaşam Döngüsü: Güvenlik Teknolojisi Mimarisi ve Yaşam Döngüsü Takım Lideri — pozisyon ajanı `22-guvenlik-teknolojisi-mimarisi-ve-yasam-dongusu-takim-lideri.md`
+      - Fiziksel Güvenlik Teknolojisi Mimarı — pozisyon ajanı `22-fiziksel-guvenlik-teknolojisi-mimari.md`
+      - Güvenlik Sistemleri Proje Uzmanı — pozisyon ajanı `22-guvenlik-sistemleri-proje-uzmani.md`
+      - Bakım ve Yaşam Döngüsü Uzmanı — pozisyon ajanı `22-bakim-ve-yasam-dongusu-uzmani.md`
+  - **Birim — Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği:** Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği Müdürü — pozisyon ajanı `22-ucuncu-taraf-tedarik-zinciri-ve-personel-guvenligi-muduru.md`
+    - Ekip — Özel Güvenlik Hizmetleri Yönetimi: Özel Güvenlik Hizmetleri Yönetimi Takım Lideri — pozisyon ajanı `22-ozel-guvenlik-hizmetleri-yonetimi-takim-lideri.md`
+      - Özel Güvenlik Hizmetleri Uzmanı — pozisyon ajanı `22-ozel-guvenlik-hizmetleri-uzmani.md`
+      - Hizmet Seviyesi ve Kalite Uzmanı — pozisyon ajanı `22-hizmet-seviyesi-ve-kalite-uzmani.md`
+      - Güvenlik Tedarikçi Performans Uzmanı — pozisyon ajanı `22-guvenlik-tedarikci-performans-uzmani.md`
+    - Ekip — Tedarik Zinciri ve Üçüncü Taraf Güvenliği: Tedarik Zinciri ve Üçüncü Taraf Güvenliği Takım Lideri — pozisyon ajanı `22-tedarik-zinciri-ve-ucuncu-taraf-guvenligi-takim-lideri.md`
+      - Tedarik Zinciri Güvenliği Uzmanı — pozisyon ajanı `22-tedarik-zinciri-guvenligi-uzmani.md`
+      - Üçüncü Taraf Güvenlik Risk Uzmanı — pozisyon ajanı `22-ucuncu-taraf-guvenlik-risk-uzmani.md`
+      - Kargo ve Nakliye Güvenliği Uzmanı — pozisyon ajanı `22-kargo-ve-nakliye-guvenligi-uzmani.md`
+    - Ekip — Personel Güvenliği ve Güvenlik Farkındalığı: Personel Güvenliği ve Güvenlik Farkındalığı Takım Lideri — pozisyon ajanı `22-personel-guvenligi-ve-guvenlik-farkindaligi-takim-lideri.md`
+      - Personel Güvenliği Uzmanı — pozisyon ajanı `22-personel-guvenligi-uzmani.md`
+      - Güvenlik Farkındalık ve Eğitim Uzmanı — pozisyon ajanı `22-guvenlik-farkindalik-ve-egitim-uzmani.md`
+      - İç Tehdit Risk Analisti — pozisyon ajanı `22-ic-tehdit-risk-analisti.md`
+
+## 23 - Sekreterya, Yönetici Destek ve Protokol
+8 birim · 99 pozisyon · katalog ajanlı 0 · pozisyon ajanı 99
+
+- Bağlı olduğu: Genel Müdür / CEO · fonksiyonel: CEO Ofisi
+- **Departman lideri:** Sekreterya, Yönetici Destek ve Protokol Direktörü — pozisyon ajanı `23-sekreterya-yonetici-destek-ve-protokol-direktoru.md`
+  - **Birim — Yönetim Kurulu ve Komite Sekreteryası:** Yönetim Kurulu ve Komite Sekreteryası Müdürü — pozisyon ajanı `23-yonetim-kurulu-ve-komite-sekreteryasi-muduru.md`
+    - Ekip — Yönetim Kurulu Sekreteryası: Yönetim Kurulu Sekreteryası Takım Lideri — pozisyon ajanı `23-yonetim-kurulu-sekreteryasi-takim-lideri.md`
+      - Yönetim Kurulu Sekreteri — pozisyon ajanı `23-yonetim-kurulu-sekreteri.md` · skill: board-minutes
+      - Yönetim Kurulu Operasyon Uzmanı — pozisyon ajanı `23-yonetim-kurulu-operasyon-uzmani.md`
+      - Yönetim Kurulu Bilgi Paketi Uzmanı — pozisyon ajanı `23-yonetim-kurulu-bilgi-paketi-uzmani.md`
+    - Ekip — Komite Sekreteryası: Komite Sekreteryası Takım Lideri — pozisyon ajanı `23-komite-sekreteryasi-takim-lideri.md`
+      - Komite Sekreteri — pozisyon ajanı `23-komite-sekreteri.md`
+      - Komite Gündem ve Tutanak Uzmanı — pozisyon ajanı `23-komite-gundem-ve-tutanak-uzmani.md` · skill: board-minutes
+      - Komite Takip Uzmanı — pozisyon ajanı `23-komite-takip-uzmani.md`
+    - Ekip — Karar, Tutanak ve Aksiyon Takibi: Karar, Tutanak ve Aksiyon Takibi Takım Lideri — pozisyon ajanı `23-karar-tutanak-ve-aksiyon-takibi-takim-lideri.md`
+      - Yönetim Kararları Uzmanı — pozisyon ajanı `23-yonetim-kararlari-uzmani.md` · skill: written-consent
+      - Tutanak ve Kayıt Uzmanı — pozisyon ajanı `23-tutanak-ve-kayit-uzmani.md`
+      - Aksiyon Takip ve Raporlama Uzmanı — pozisyon ajanı `23-aksiyon-takip-ve-raporlama-uzmani.md`
+  - **Birim — İcra Kurulu ve Üst Yönetim Sekreteryası:** İcra Kurulu ve Üst Yönetim Sekreteryası Müdürü — pozisyon ajanı `23-icra-kurulu-ve-ust-yonetim-sekreteryasi-muduru.md`
+    - Ekip — İcra Kurulu Sekreteryası: İcra Kurulu Sekreteryası Takım Lideri — pozisyon ajanı `23-icra-kurulu-sekreteryasi-takim-lideri.md`
+      - İcra Kurulu Sekreteri — pozisyon ajanı `23-icra-kurulu-sekreteri.md`
+      - İcra Kurulu Gündem Uzmanı — pozisyon ajanı `23-icra-kurulu-gundem-uzmani.md`
+      - İcra Kurulu Karar Takip Uzmanı — pozisyon ajanı `23-icra-kurulu-karar-takip-uzmani.md`
+    - Ekip — CEO Sekreteryası: CEO Sekreteryası Takım Lideri — pozisyon ajanı `23-ceo-sekreteryasi-takim-lideri.md`
+      - CEO Baş Asistanı — pozisyon ajanı `23-ceo-bas-asistani.md` · skill: monday-brief
+      - CEO Ofisi Koordinatörü — pozisyon ajanı `23-ceo-ofisi-koordinatoru.md`
+      - CEO Gündem ve Brifing Uzmanı — pozisyon ajanı `23-ceo-gundem-ve-brifing-uzmani.md`
+    - Ekip — Üst Yönetim Koordinasyonu: Üst Yönetim Koordinasyonu Takım Lideri — pozisyon ajanı `23-ust-yonetim-koordinasyonu-takim-lideri.md`
+      - Üst Yönetim Koordinatörü — pozisyon ajanı `23-ust-yonetim-koordinatoru.md`
+      - Yönetim Takvimi Uzmanı — pozisyon ajanı `23-yonetim-takvimi-uzmani.md`
+      - Yönetim Bilgi Akışı Uzmanı — pozisyon ajanı `23-yonetim-bilgi-akisi-uzmani.md`
+  - **Birim — Yönetici Destek Hizmetleri:** Yönetici Destek Hizmetleri Müdürü — pozisyon ajanı `23-yonetici-destek-hizmetleri-muduru.md`
+    - Ekip — C-Seviye Yönetici Asistanlığı: C-Seviye Yönetici Asistanlığı Takım Lideri — pozisyon ajanı `23-c-seviye-yonetici-asistanligi-takim-lideri.md`
+      - Kıdemli Yönetici Asistanı — pozisyon ajanı `23-kidemli-yonetici-asistani.md`
+      - Yönetici Asistanı — pozisyon ajanı `23-yonetici-asistani.md` · skill: digest, inbox-manager, schedule-meeting, search, slack-messaging, slack-search, task-management, update
+      - Yönetici Destek Koordinatörü — pozisyon ajanı `23-yonetici-destek-koordinatoru.md`
+    - Ekip — Direktörlük ve Birim Yönetici Desteği: Direktörlük ve Birim Yönetici Desteği Takım Lideri — pozisyon ajanı `23-direktorluk-ve-birim-yonetici-destegi-takim-lideri.md`
+      - Birim Yönetici Asistanı — pozisyon ajanı `23-birim-yonetici-asistani.md`
+      - Ortak Yönetici Destek Uzmanı — pozisyon ajanı `23-ortak-yonetici-destek-uzmani.md`
+      - İdari Koordinasyon Uzmanı — pozisyon ajanı `23-idari-koordinasyon-uzmani.md`
+    - Ekip — Yönetici Destek Kaynak ve Kalite Yönetimi: Yönetici Destek Kaynak ve Kalite Yönetimi Takım Lideri — pozisyon ajanı `23-yonetici-destek-kaynak-ve-kalite-yonetimi-takim-lideri.md`
+      - Yönetici Destek Kaynak Planlama Uzmanı — pozisyon ajanı `23-yonetici-destek-kaynak-planlama-uzmani.md`
+      - Hizmet Kalitesi Uzmanı — pozisyon ajanı `23-hizmet-kalitesi-uzmani.md`
+      - Yedekleme ve Süreklilik Koordinatörü — pozisyon ajanı `23-yedekleme-ve-sureklilik-koordinatoru.md`
+  - **Birim — Takvim, Toplantı ve Gündem Yönetimi:** Takvim, Toplantı ve Gündem Yönetimi Müdürü — pozisyon ajanı `23-takvim-toplanti-ve-gundem-yonetimi-muduru.md`
+    - Ekip — Stratejik Takvim ve Önceliklendirme: Stratejik Takvim ve Önceliklendirme Takım Lideri — pozisyon ajanı `23-stratejik-takvim-ve-onceliklendirme-takim-lideri.md`
+      - Stratejik Takvim Uzmanı — pozisyon ajanı `23-stratejik-takvim-uzmani.md`
+      - Yönetici Zaman Planlama Uzmanı — pozisyon ajanı `23-yonetici-zaman-planlama-uzmani.md`
+      - Öncelik ve Çakışma Yönetimi Uzmanı — pozisyon ajanı `23-oncelik-ve-cakisma-yonetimi-uzmani.md`
+    - Ekip — Toplantı Operasyonları: Toplantı Operasyonları Takım Lideri — pozisyon ajanı `23-toplanti-operasyonlari-takim-lideri.md`
+      - Toplantı Operasyon Uzmanı — pozisyon ajanı `23-toplanti-operasyon-uzmani.md` · skill: schedule-meeting
+      - Toplantı Teknolojileri Koordinatörü — pozisyon ajanı `23-toplanti-teknolojileri-koordinatoru.md`
+      - Salon ve Katılımcı Koordinatörü — pozisyon ajanı `23-salon-ve-katilimci-koordinatoru.md`
+    - Ekip — Gündem, Brifing ve Toplantı Sonrası Takip: Gündem, Brifing ve Toplantı Sonrası Takip Takım Lideri — pozisyon ajanı `23-gundem-brifing-ve-toplanti-sonrasi-takip-takim-lideri.md`
+      - Gündem Yönetimi Uzmanı — pozisyon ajanı `23-gundem-yonetimi-uzmani.md`
+      - Yönetici Brifing Uzmanı — pozisyon ajanı `23-yonetici-brifing-uzmani.md`
+      - Toplantı Sonrası Takip Uzmanı — pozisyon ajanı `23-toplanti-sonrasi-takip-uzmani.md` · skill: task-management, update
+  - **Birim — Kurumsal Protokol ve Temsil:** Kurumsal Protokol ve Temsil Müdürü — pozisyon ajanı `23-kurumsal-protokol-ve-temsil-muduru.md`
+    - Ekip — Resmî ve Kurumsal Protokol: Resmî ve Kurumsal Protokol Takım Lideri — pozisyon ajanı `23-resmi-ve-kurumsal-protokol-takim-lideri.md`
+      - Kurumsal Protokol Uzmanı — pozisyon ajanı `23-kurumsal-protokol-uzmani.md`
+      - Resmî Protokol Uzmanı — pozisyon ajanı `23-resmi-protokol-uzmani.md`
+      - Protokol Sıralama ve Uygulama Uzmanı — pozisyon ajanı `23-protokol-siralama-ve-uygulama-uzmani.md`
+    - Ekip — VIP Karşılama ve Ağırlama: VIP Karşılama ve Ağırlama Takım Lideri — pozisyon ajanı `23-vip-karsilama-ve-agirlama-takim-lideri.md`
+      - VIP İlişkileri Uzmanı — pozisyon ajanı `23-vip-iliskileri-uzmani.md`
+      - Karşılama ve Ağırlama Koordinatörü — pozisyon ajanı `23-karsilama-ve-agirlama-koordinatoru.md`
+      - Konuk Deneyimi Uzmanı — pozisyon ajanı `23-konuk-deneyimi-uzmani.md`
+    - Ekip — Tören, İmza ve Üst Düzey Etkinlik Protokolü: Tören, İmza ve Üst Düzey Etkinlik Protokolü Takım Lideri — pozisyon ajanı `23-toren-imza-ve-ust-duzey-etkinlik-protokolu-takim-lideri.md`
+      - Tören ve İmza Organizasyonu Uzmanı — pozisyon ajanı `23-toren-ve-imza-organizasyonu-uzmani.md`
+      - Üst Düzey Etkinlik Protokol Uzmanı — pozisyon ajanı `23-ust-duzey-etkinlik-protokol-uzmani.md`
+      - Sahne ve Oturma Düzeni Uzmanı — pozisyon ajanı `23-sahne-ve-oturma-duzeni-uzmani.md`
+  - **Birim — Yönetici Seyahat Koordinasyonu:** Yönetici Seyahat Koordinasyonu Müdürü — pozisyon ajanı `23-yonetici-seyahat-koordinasyonu-muduru.md`
+    - Ekip — Yönetici Seyahat Planlama: Yönetici Seyahat Planlama Takım Lideri — pozisyon ajanı `23-yonetici-seyahat-planlama-takim-lideri.md`
+      - Yönetici Seyahat Uzmanı — pozisyon ajanı `23-yonetici-seyahat-uzmani.md`
+    - Ekip — Seyahat Programı ve Harcama Koordinasyonu: Seyahat Programı ve Harcama Koordinasyonu Takım Lideri — pozisyon ajanı `23-seyahat-programi-ve-harcama-koordinasyonu-takim-lideri.md`
+      - Seyahat Programı Uzmanı — pozisyon ajanı `23-seyahat-programi-uzmani.md`
+      - Seyahat Harcama Koordinatörü — pozisyon ajanı `23-seyahat-harcama-koordinatoru.md`
+      - Seyahat Tedarikçi İlişkileri Uzmanı — pozisyon ajanı `23-seyahat-tedarikci-iliskileri-uzmani.md`
+  - **Birim — Kurumsal Yazışma, Belge ve İletişim Koordinasyonu:** Kurumsal Yazışma, Belge ve İletişim Koordinasyonu Müdürü — pozisyon ajanı `23-kurumsal-yazisma-belge-ve-iletisim-koordinasyonu-muduru.md`
+    - Ekip — Yönetim Yazışmaları: Yönetim Yazışmaları Takım Lideri — pozisyon ajanı `23-yonetim-yazismalari-takim-lideri.md`
+      - Yönetim Yazışmaları Uzmanı — pozisyon ajanı `23-yonetim-yazismalari-uzmani.md` · skill: doc-coauthoring, docx
+      - Resmî Yazışma Uzmanı — pozisyon ajanı `23-resmi-yazisma-uzmani.md`
+      - Metin ve Biçim Kontrol Uzmanı — pozisyon ajanı `23-metin-ve-bicim-kontrol-uzmani.md`
+    - Ekip — Gizli Belge ve Kayıt Koordinasyonu: Gizli Belge ve Kayıt Koordinasyonu Takım Lideri — pozisyon ajanı `23-gizli-belge-ve-kayit-koordinasyonu-takim-lideri.md`
+      - Gizli Belge Koordinatörü — pozisyon ajanı `23-gizli-belge-koordinatoru.md`
+      - Yönetim Kayıtları Uzmanı — pozisyon ajanı `23-yonetim-kayitlari-uzmani.md`
+      - Belge Dağıtım ve Erişim Kontrol Uzmanı — pozisyon ajanı `23-belge-dagitim-ve-erisim-kontrol-uzmani.md`
+    - Ekip — Yönetim İletişim Trafiği Koordinasyonu: Yönetim İletişim Trafiği Koordinasyonu Takım Lideri — pozisyon ajanı `23-yonetim-iletisim-trafigi-koordinasyonu-takim-lideri.md`
+      - Yönetim İletişim Koordinatörü — pozisyon ajanı `23-yonetim-iletisim-koordinatoru.md` · skill: digest
+      - Çağrı ve Mesaj Trafiği Uzmanı — pozisyon ajanı `23-cagri-ve-mesaj-trafigi-uzmani.md` · skill: inbox-manager
+      - Paydaş İletişim Takip Uzmanı — pozisyon ajanı `23-paydas-iletisim-takip-uzmani.md`
+  - **Birim — Hizmet Tasarımı, Dijitalleşme ve Kalite:** Hizmet Tasarımı, Dijitalleşme ve Kalite Müdürü — pozisyon ajanı `23-hizmet-tasarimi-dijitallesme-ve-kalite-muduru.md`
+    - Ekip — Sekreterya Süreç ve Hizmet Tasarımı: Sekreterya Süreç ve Hizmet Tasarımı Takım Lideri — pozisyon ajanı `23-sekreterya-surec-ve-hizmet-tasarimi-takim-lideri.md`
+      - Sekreterya Süreç Tasarım Uzmanı — pozisyon ajanı `23-sekreterya-surec-tasarim-uzmani.md`
+      - Hizmet Kataloğu Uzmanı — pozisyon ajanı `23-hizmet-katalogu-uzmani.md`
+      - Süreç İyileştirme Uzmanı — pozisyon ajanı `23-surec-iyilestirme-uzmani.md`
+    - Ekip — Dijital Yönetim Ofisi Araçları: Dijital Yönetim Ofisi Araçları Takım Lideri — pozisyon ajanı `23-dijital-yonetim-ofisi-araclari-takim-lideri.md`
+      - Yönetim Ofisi Dijital Çözümler Uzmanı — pozisyon ajanı `23-yonetim-ofisi-dijital-cozumler-uzmani.md`
+      - Toplantı ve Karar Platformları Uzmanı — pozisyon ajanı `23-toplanti-ve-karar-platformlari-uzmani.md`
+      - Otomasyon ve İş Akışı Uzmanı — pozisyon ajanı `23-otomasyon-ve-is-akisi-uzmani.md`
+    - Ekip — Kalite, Performans ve Yetkinlik Gelişimi: Kalite, Performans ve Yetkinlik Gelişimi Takım Lideri — pozisyon ajanı `23-kalite-performans-ve-yetkinlik-gelisimi-takim-lideri.md`
+      - Hizmet Kalitesi ve Performans Uzmanı — pozisyon ajanı `23-hizmet-kalitesi-ve-performans-uzmani.md`
+      - Sekreterya Yetkinlik Gelişim Uzmanı — pozisyon ajanı `23-sekreterya-yetkinlik-gelisim-uzmani.md`
+      - Denetim ve Standart Uyum Uzmanı — pozisyon ajanı `23-denetim-ve-standart-uyum-uzmani.md`

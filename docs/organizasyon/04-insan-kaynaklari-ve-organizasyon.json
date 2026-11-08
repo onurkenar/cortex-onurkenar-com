@@ -1,0 +1,1507 @@
+{
+  "departman_kodu": "04",
+  "departman": "İnsan Kaynakları ve Organizasyon",
+  "ust_bagli": "Genel Müdür / CEO",
+  "direktor": {"title_tr": "İnsan Kaynakları ve Organizasyon Direktörü", "title_en": "HR & Organization Director"},
+  "birimler": [
+    {"ad":"İK Planlama ve Organizasyonel Gelişim","mudur":"İK Planlama ve Organizasyonel Gelişim Müdürü","pozisyonlar":["Organizasyonel Gelişim Takım Lideri","İş Gücü Planlama Uzmanı","Organizasyonel Gelişim Uzmanı"]},
+    {"ad":"İşe Alım ve Yetenek Kazanımı","mudur":"İşe Alım ve Yetenek Kazanımı Müdürü","pozisyonlar":["İşe Alım Takım Lideri","Kıdemli İşe Alım Uzmanı","İşe Alım Uzmanı","İşe Alım Asistanı"]},
+    {"ad":"Eğitim ve Gelişim","mudur":"Eğitim ve Gelişim Müdürü","pozisyonlar":["Eğitim ve Gelişim Takım Lideri","Eğitim Tasarımı Uzmanı","Eğitim ve Gelişim Uzmanı"]},
+    {"ad":"Performans ve Kariyer Yönetimi","mudur":"Performans ve Kariyer Yönetimi Müdürü","pozisyonlar":["Performans Yönetimi Takım Lideri","Performans Yönetimi Uzmanı","Kariyer Yönetimi Uzmanı"]},
+    {"ad":"Yetenek ve Yedekleme Yönetimi","mudur":"Yetenek ve Yedekleme Yönetimi Müdürü","pozisyonlar":["Yetenek Yönetimi Takım Lideri","Yetenek Yönetimi Uzmanı","Halefiyet Planlama Uzmanı"]},
+    {"ad":"Ücret ve Yan Haklar","mudur":"Ücret ve Yan Haklar Müdürü","pozisyonlar":["Ücret ve Yan Haklar Takım Lideri","Ücretlendirme Uzmanı","Yan Haklar Uzmanı"]},
+    {"ad":"Bordro ve Özlük İşleri","mudur":"Bordro ve Özlük İşleri Müdürü","pozisyonlar":["Bordro ve Özlük İşleri Takım Lideri","Bordro Uzmanı","Özlük İşleri Uzmanı","Özlük İşleri Asistanı"]},
+    {"ad":"Çalışan Deneyimi ve Bağlılık","mudur":"Çalışan Deneyimi ve Bağlılık Müdürü","pozisyonlar":["Çalışan Deneyimi Takım Lideri","Çalışan Deneyimi Uzmanı","Çalışan Bağlılığı Uzmanı"]},
+    {"ad":"İşveren Markası ve İç İletişim","mudur":"İşveren Markası ve İç İletişim Müdürü","pozisyonlar":["İşveren Markası Uzmanı","İK İç İletişim Uzmanı"]},
+    {"ad":"Çalışan İlişkileri","mudur":"Çalışan İlişkileri Müdürü","pozisyonlar":["Çalışan İlişkileri Takım Lideri","Çalışan İlişkileri Uzmanı"]},
+    {"ad":"İK Analitiği ve Dijitalleşme","mudur":"İK Analitiği ve Dijitalleşme Müdürü","pozisyonlar":["İK Analitiği Uzmanı","İK Sistemleri Uzmanı","İK Raporlama Uzmanı"]}
+  ],
+  "gorev_sinirlari": {
+    "hukuk":"İş hukuku danışmanlığı, hukuki görüş ve uyuşmazlık yönetimi Hukuk departmanına aittir.",
+    "muhasebe":"Bordro muhasebe kayıtları ve yasal mali raporlama Muhasebe ve Mali İşler departmanına aittir.",
+    "finans":"Ödemelerin icrası, nakit yönetimi ve banka işlemleri Finans ve Hazine departmanına aittir.",
+    "iletisim":"Kurumsal duyuru, medya ve kurumsal iletişim uygulamaları ilgili iletişim departmanına aittir.",
+    "tasarim":"Kreatif tasarım ve görsel üretim Tasarım ve Yaratıcı Hizmetler departmanına aittir."
+  },
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "İş gücü planlamasını ve organizasyon yapısını iş stratejisiyle uyumlu yönetmek",
+        "İşe alım ve yetenek kazanımı süreçlerini ihtiyaç duyulan nitelik ve sürede yürütmek",
+        "Eğitim ve gelişim programlarını yetkinlik ihtiyaçlarına göre tasarlamak ve uygulamak",
+        "Performans, kariyer, yetenek ve yedekleme süreçlerini işletmek",
+        "Ücret ve yan hak politikalarını iç denge ve piyasa rekabetçiliğini gözeterek yönetmek",
+        "Bordro hesaplamasını ve özlük işlemlerini mevzuata uygun ve zamanında yürütmek",
+        "Çalışan deneyimini, bağlılığı ve çalışan ilişkilerini güçlendirmek",
+        "İK süreçlerini dijitalleştirmek ve İK analitiğiyle yönetime karar desteği sağlamak"
+      ],
+      "authorities": [
+        "İK prosedürlerini ve süreç standartlarını belirler, İK politikalarını CEO onayına sunar",
+        "Organizasyon yapısı ve kadro planı değişikliklerini değerlendirir ve üst yönetim onayına sunar",
+        "Onaylı kadro planı dışındaki işe alım taleplerini durdurabilir",
+        "Onaylı bütçe ve ücret politikası sınırları içinde iş tekliflerini onaylar",
+        "Ücret skalalarını, yan hak paketini ve yıllık ücret artış önerisini üst yönetim onayına sunar",
+        "Performans değerlendirme takvimini, yöntemini ve kalibrasyon kurallarını belirler",
+        "Disiplin ve fesih süreçlerinde Hukuk İşlerinin görüşünü alarak karar önerisini yönetime sunar"
+      ],
+      "collaborations": [
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "İş ve Sosyal Güvenlik Hukuku",
+          "topic": "İş hukuku danışmanlığı, hukuki görüş ve iş uyuşmazlıklarının yönetimi"
+        },
+        {
+          "department": "02 - Muhasebe ve Mali İşler",
+          "unit": "Bordro Muhasebesi",
+          "topic": "Bordro sonuçlarının muhasebe kaydı ve mutabakatı"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+          "topic": "Ücret ve yan hak ödemelerinin icrası"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+          "topic": "Kadro planı ve personel maliyeti bütçesi"
+        },
+        {
+          "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+          "unit": "İç İletişim ve Çalışan Katılımı",
+          "topic": "Kurumsal duyurular, iç iletişim kanalları ve çalışan katılımı"
+        },
+        {
+          "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+          "unit": "Grafik Tasarım ve Kampanya Kreatifi",
+          "topic": "İşveren markası ve İK iletişimi için kreatif tasarım ve görsel üretim"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "KVKK ve Veri Koruma Uyumu",
+          "topic": "Çalışan ve aday kişisel verilerinin KVKK uyumlu işlenmesi"
+        },
+        {
+          "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+          "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+          "topic": "Kurumsal hedeflerin bireysel performans hedeflerine yayılması"
+        },
+        {
+          "department": "15 - Bilgi Teknolojileri",
+          "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+          "topic": "İK sistemleri ve entegrasyonlarının işletimi"
+        }
+      ],
+      "kpis": [
+        "Pozisyon doldurma süresi",
+        "Deneme süresini tamamlayan yeni çalışan oranı",
+        "İlk yıl içinde ayrılan çalışan oranı",
+        "Gönüllü personel devir oranı",
+        "Çalışan başına eğitim saati",
+        "Eğitim etkinlik değerlendirme puanı",
+        "Performans değerlendirmelerinin zamanında tamamlanma oranı",
+        "Kritik pozisyonlarda hazır halef oranı",
+        "Piyasa ücret konumlanma oranı",
+        "Bordro hata oranı",
+        "Bordronun zamanında tamamlanma oranı",
+        "Çalışan bağlılığı endeksi",
+        "Çalışan net tavsiye skoru (eNPS)",
+        "Çalışan şikâyetlerinin ortalama çözüm süresi",
+        "Dijitalleştirilmiş İK süreç oranı"
+      ],
+      "title_standard": [
+        {
+          "level": "Departman Direktörü",
+          "title_tr": "Direktör",
+          "title_en": "Director"
+        },
+        {
+          "level": "Birim Müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip Yöneticisi",
+          "title_tr": "Takım Lideri",
+          "title_en": "Team Lead"
+        },
+        {
+          "level": "Kıdemli Uzman",
+          "title_tr": "Kıdemli Uzman",
+          "title_en": "Senior Specialist"
+        },
+        {
+          "level": "Uzman",
+          "title_tr": "Uzman",
+          "title_en": "Specialist"
+        },
+        {
+          "level": "Asistan",
+          "title_tr": "Asistan",
+          "title_en": "Assistant"
+        }
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 25,
+          "max": 38
+        },
+        {
+          "model": "Standart",
+          "min": 45,
+          "max": 73
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 73,
+          "max": 97
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 45,
+        "total_max": 73,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "role_group": "Uzman",
+            "min": 21,
+            "max": 46
+          },
+          {
+            "role_group": "Destek",
+            "min": 2,
+            "max": 4
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "ik-planlama-ve-organizasyonel-gelisim",
+        "name_tr": "İK Planlama ve Organizasyonel Gelişim",
+        "responsibilities": [
+          "Yıllık iş gücü ve kadro planını iş planları ve bütçeyle uyumlu hazırlamak",
+          "Organizasyon yapısını, pozisyonları ve raporlama hatlarını tasarlamak",
+          "Görev tanımlarını ve pozisyon envanterini güncel tutmak",
+          "Organizasyonel değişim ve yeniden yapılanma süreçlerini desteklemek",
+          "İş gücü verimliliğini ve kadro kullanımını izlemek"
+        ],
+        "authorities": [
+          "Kadro planı ve organizasyon yapısı değişikliklerini direktör onayına sunar",
+          "Pozisyon ve görev tanımı standardını belirler",
+          "Onaylı kadro planına uymayan pozisyon açma taleplerini revizyon için iade eder",
+          "Yeniden yapılanma projelerinde organizasyon tasarımı önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Stratejik Projeler ve Dönüşüm Ofisi",
+            "topic": "Dönüşüm programlarında organizasyon tasarımı ve değişim yönetimi"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Organizasyon yapısının yetki matrisi ve yönetişim modeliyle uyumu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+            "topic": "Kadro planı ve personel maliyeti bütçesi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İşe Alım ve Yetenek Kazanımı",
+            "topic": "Onaylı kadro planının işe alım planına dönüştürülmesi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Analitiği ve Dijitalleşme",
+            "topic": "Kadro, devir ve verimlilik verilerinin analizi"
+          }
+        ],
+        "kpis": [
+          "Kadro planı gerçekleşme oranı",
+          "Güncel görev tanımı bulunan pozisyon oranı",
+          "İş gücü verimlilik endeksi",
+          "Yönetici başına bağlı çalışan sayısı",
+          "Organizasyon değişikliklerinin planlanan sürede tamamlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim",
+            "level": "Birim Müdürü",
+            "title_tr": "İK Planlama ve Organizasyonel Gelişim Müdürü",
+            "title_en": "HR Planning and Organizational Development Manager"
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Organizasyonel Gelişim Takım Lideri",
+            "title_en": "Organizational Development Team Lead"
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri/is-gucu-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Gücü Planlama Uzmanı",
+            "title_en": "Workforce Planning Specialist"
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri/organizasyonel-gelisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Organizasyonel Gelişim Uzmanı",
+            "title_en": "Organizational Development Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 6,
+            "max": 8
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim",
+            "title_tr": "İK Planlama ve Organizasyonel Gelişim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri",
+            "title_tr": "Organizasyonel Gelişim Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri/is-gucu-planlama-uzmani",
+            "title_tr": "İş Gücü Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "ik-planlama-ve-organizasyonel-gelisim/organizasyonel-gelisim-takim-lideri/organizasyonel-gelisim-uzmani",
+            "title_tr": "Organizasyonel Gelişim Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "ise-alim-ve-yetenek-kazanimi",
+        "name_tr": "İşe Alım ve Yetenek Kazanımı",
+        "responsibilities": [
+          "Onaylı kadro planına göre işe alım planını hazırlamak ve uygulamak",
+          "Aday kaynaklarını, iş ilanlarını ve aday havuzunu yönetmek",
+          "Ön eleme, mülakat ve değerlendirme süreçlerini yetkinlik bazlı yürütmek",
+          "İş teklifi ve işe başlama süreçlerini ilgili birimlerle koordine etmek",
+          "Aday deneyimini ve işe alım kalitesini izlemek"
+        ],
+        "authorities": [
+          "İşe alım yöntemini, değerlendirme araçlarını ve mülakat standardını belirler",
+          "Onaylı ücret aralığı içindeki iş teklifi önerisini direktör onayına sunar",
+          "Yetkinlik kriterlerini karşılamayan adayların sürece devamını durdurur",
+          "Dış işe alım danışmanı kullanımı için gerekçeli öneri sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Ücret ve Yan Haklar",
+            "topic": "İş teklifi ücret ve yan hak koşullarının belirlenmesi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İşveren Markası ve İç İletişim",
+            "topic": "İşe alım kampanyaları ve aday çekim kanallarında işveren markası"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "İşe giriş evrakı, özlük dosyası ve SGK girişlerinin tamamlanması"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Üçüncü Taraf, Tedarik Zinciri ve Personel Güvenliği",
+            "topic": "Kritik pozisyonlarda işe alım öncesi personel güvenliği taraması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Aday kişisel verilerinin KVKK uyumlu işlenmesi"
+          }
+        ],
+        "kpis": [
+          "Pozisyon doldurma süresi",
+          "İşe alım başına maliyet",
+          "Deneme süresini tamamlayan yeni çalışan oranı",
+          "İş teklifi kabul oranı",
+          "Aday deneyimi memnuniyet puanı"
+        ],
+        "title_standard": [
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi",
+            "level": "Birim Müdürü",
+            "title_tr": "İşe Alım ve Yetenek Kazanımı Müdürü",
+            "title_en": "Recruitment and Talent Acquisition Manager"
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İşe Alım Takım Lideri",
+            "title_en": "Recruitment Team Lead"
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/kidemli-ise-alim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İşe Alım Uzmanı",
+            "title_en": "Senior Recruitment Specialist"
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/ise-alim-uzmani",
+            "level": "Uzman",
+            "title_tr": "İşe Alım Uzmanı",
+            "title_en": "Recruitment Specialist"
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/ise-alim-asistani",
+            "level": "Destek",
+            "title_tr": "İşe Alım Asistanı",
+            "title_en": "Recruitment Assistant"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "model": "Standart",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 9,
+            "max": 12
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi",
+            "title_tr": "İşe Alım ve Yetenek Kazanımı Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri",
+            "title_tr": "İşe Alım Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/kidemli-ise-alim-uzmani",
+            "title_tr": "Kıdemli İşe Alım Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/ise-alim-uzmani",
+            "title_tr": "İşe Alım Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/ise-alim-asistani",
+            "title_tr": "İşe Alım Asistanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "egitim-ve-gelisim",
+        "name_tr": "Eğitim ve Gelişim",
+        "responsibilities": [
+          "Eğitim ihtiyaç analizini yetkinlik modeli ve iş hedeflerine göre yapmak",
+          "Yıllık eğitim planını ve eğitim bütçesini hazırlamak ve uygulamak",
+          "Eğitim içeriklerini ve öğrenme programlarını tasarlamak",
+          "Liderlik ve mesleki gelişim programlarını yürütmek",
+          "Eğitim etkinliğini ölçmek ve sonuçları raporlamak"
+        ],
+        "authorities": [
+          "Yıllık eğitim planını ve eğitim bütçesi önerisini direktör onayına sunar",
+          "İç ve dış eğitim sağlayıcılarının seçim ölçütlerini belirler",
+          "Bütçe sınırları içinde eğitim katılım taleplerini onaylar",
+          "Zorunlu eğitimleri tamamlamayan çalışanlar için yöneticilerden aksiyon ister"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Performans ve Kariyer Yönetimi",
+            "topic": "Performans sonuçlarından gelişim ihtiyaçlarının belirlenmesi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Yetenek ve Yedekleme Yönetimi",
+            "topic": "Yetenek havuzu ve halef adayları için gelişim programları"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı ve Güvenliği Yönetimi",
+            "topic": "Zorunlu iş sağlığı ve güvenliği eğitimlerinin planlanması ve takibi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Uyum Operasyonları, İzleme ve Raporlama",
+            "topic": "Uyum ve etik eğitimlerinin planlanması ve tamamlanma takibi"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Açığı, Tehdit İstihbaratı ve Güvenlik Farkındalığı",
+            "topic": "Bilgi güvenliği farkındalık eğitimlerinin yürütülmesi"
+          }
+        ],
+        "kpis": [
+          "Çalışan başına eğitim saati",
+          "Eğitim planı gerçekleşme oranı",
+          "Zorunlu eğitim tamamlama oranı",
+          "Eğitim etkinlik değerlendirme puanı",
+          "Eğitim bütçesi kullanım oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "egitim-ve-gelisim",
+            "level": "Birim Müdürü",
+            "title_tr": "Eğitim ve Gelişim Müdürü",
+            "title_en": "Learning and Development Manager"
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Eğitim ve Gelişim Takım Lideri",
+            "title_en": "Learning and Development Team Lead"
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri/egitim-tasarimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Eğitim Tasarımı Uzmanı",
+            "title_en": "Training Design Specialist"
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri/egitim-ve-gelisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Eğitim ve Gelişim Uzmanı",
+            "title_en": "Learning and Development Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 7,
+            "max": 9
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "egitim-ve-gelisim",
+            "title_tr": "Eğitim ve Gelişim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri",
+            "title_tr": "Eğitim ve Gelişim Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri/egitim-tasarimi-uzmani",
+            "title_tr": "Eğitim Tasarımı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "egitim-ve-gelisim/egitim-ve-gelisim-takim-lideri/egitim-ve-gelisim-uzmani",
+            "title_tr": "Eğitim ve Gelişim Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "performans-ve-kariyer-yonetimi",
+        "name_tr": "Performans ve Kariyer Yönetimi",
+        "responsibilities": [
+          "Performans yönetim sistemini, hedef belirleme ve değerlendirme döngüsünü işletmek",
+          "Kurumsal hedeflerin bireysel hedeflere yayılmasını koordine etmek",
+          "Performans kalibrasyon süreçlerini yürütmek ve sonuçları raporlamak",
+          "Kariyer yollarını, terfi kriterlerini ve kariyer gelişim süreçlerini tasarlamak",
+          "Terfi ve rotasyon süreçlerini kriterlere uygun yürütmek"
+        ],
+        "authorities": [
+          "Performans değerlendirme takvimini, formlarını ve derecelendirme ölçeğini belirler",
+          "Kalibrasyon sonuçlarını ve dağılım önerilerini direktör onayına sunar",
+          "Terfi kriterlerini karşılamayan terfi önerilerini gerekçesiyle iade eder",
+          "Performansa dayalı ücret artışı ve prim uygulamalarına girdi verir"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Kurumsal hedeflerin bireysel performans hedeflerine yayılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Ücret ve Yan Haklar",
+            "topic": "Performans sonuçlarının ücret artışı ve prim kararlarına yansıtılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Performans sonuçlarına dayalı bireysel gelişim planları"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Yetenek ve Yedekleme Yönetimi",
+            "topic": "Performans ve potansiyel verisinin yetenek değerlendirmesinde kullanılması"
+          }
+        ],
+        "kpis": [
+          "Performans değerlendirmelerinin zamanında tamamlanma oranı",
+          "Hedefi sisteme girilmiş çalışan oranı",
+          "İç terfi oranı",
+          "Kariyer planı bulunan çalışan oranı",
+          "Performans sürecine çalışan güven puanı"
+        ],
+        "title_standard": [
+          {
+            "position": "performans-ve-kariyer-yonetimi",
+            "level": "Birim Müdürü",
+            "title_tr": "Performans ve Kariyer Yönetimi Müdürü",
+            "title_en": "Performance and Career Management Manager"
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Performans Yönetimi Takım Lideri",
+            "title_en": "Performance Management Team Lead"
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri/performans-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Performans Yönetimi Uzmanı",
+            "title_en": "Performance Management Specialist"
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri/kariyer-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kariyer Yönetimi Uzmanı",
+            "title_en": "Career Management Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 6,
+            "max": 8
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "performans-ve-kariyer-yonetimi",
+            "title_tr": "Performans ve Kariyer Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri",
+            "title_tr": "Performans Yönetimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri/performans-yonetimi-uzmani",
+            "title_tr": "Performans Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "performans-ve-kariyer-yonetimi/performans-yonetimi-takim-lideri/kariyer-yonetimi-uzmani",
+            "title_tr": "Kariyer Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "yetenek-ve-yedekleme-yonetimi",
+        "name_tr": "Yetenek ve Yedekleme Yönetimi",
+        "responsibilities": [
+          "Kritik pozisyonları ve kritik yetenekleri belirlemek",
+          "Yetenek değerlendirme ve potansiyel belirleme süreçlerini yürütmek",
+          "Kritik pozisyonlar için halefiyet planlarını hazırlamak ve güncellemek",
+          "Yüksek potansiyelli çalışanlar için gelişim ve elde tutma programlarını yönetmek",
+          "Yetenek havuzunun gelişimini izlemek ve üst yönetime raporlamak"
+        ],
+        "authorities": [
+          "Yetenek değerlendirme yöntemini ve potansiyel kriterlerini belirler",
+          "Kritik pozisyon listesini ve halefiyet planlarını direktör aracılığıyla üst yönetim onayına sunar",
+          "Kritik yetenekler için elde tutma aksiyonu önerir",
+          "Yönetici atamalarında halef adaylarına ilişkin görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Performans ve Kariyer Yönetimi",
+            "topic": "Performans ve potansiyel verisiyle yetenek havuzunun oluşturulması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Halef adayları için liderlik gelişim programları"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Ücret ve Yan Haklar",
+            "topic": "Kritik yetenekler için elde tutma ve ödüllendirme uygulamaları"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Stratejik hedeflere göre kritik pozisyon ve yetkinlik ihtiyaçlarının belirlenmesi"
+          }
+        ],
+        "kpis": [
+          "Kritik pozisyonlarda hazır halef oranı",
+          "Kritik yetenek kayıp oranı",
+          "Yönetici pozisyonlarının içeriden doldurulma oranı",
+          "Halefiyet planı güncel olan kritik pozisyon oranı",
+          "Yetenek havuzunda gelişim planını tamamlayan çalışan oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi",
+            "level": "Birim Müdürü",
+            "title_tr": "Yetenek ve Yedekleme Yönetimi Müdürü",
+            "title_en": "Talent and Succession Management Manager"
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yetenek Yönetimi Takım Lideri",
+            "title_en": "Talent Management Team Lead"
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri/yetenek-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yetenek Yönetimi Uzmanı",
+            "title_en": "Talent Management Specialist"
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri/halefiyet-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Halefiyet Planlama Uzmanı",
+            "title_en": "Succession Planning Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 6,
+            "max": 8
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi",
+            "title_tr": "Yetenek ve Yedekleme Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri",
+            "title_tr": "Yetenek Yönetimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri/yetenek-yonetimi-uzmani",
+            "title_tr": "Yetenek Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "yetenek-ve-yedekleme-yonetimi/yetenek-yonetimi-takim-lideri/halefiyet-planlama-uzmani",
+            "title_tr": "Halefiyet Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "ucret-ve-yan-haklar",
+        "name_tr": "Ücret ve Yan Haklar",
+        "responsibilities": [
+          "Ücret politikasını, ücret yapısını ve kademe skalalarını oluşturmak",
+          "Pozisyon değerlemesi ve piyasa ücret araştırmalarını yürütmek",
+          "Yıllık ücret artışı ve prim süreçlerini planlamak ve uygulamak",
+          "Yan hak paketlerini tasarlamak ve sağlayıcılarla uygulamasını yönetmek",
+          "Personel maliyetlerini ve ücret dengesini izlemek ve analiz etmek"
+        ],
+        "authorities": [
+          "Ücret skalası, yan hak paketi ve yıllık artış önerisini direktör onayına sunar",
+          "Pozisyon değerleme yöntemini ve kademe yerleşim kurallarını belirler",
+          "Ücret politikası dışındaki bireysel ücret taleplerine görüş verir",
+          "Yan hak sağlayıcılarının seçimi için teknik değerlendirme ve öneri sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+            "topic": "Personel maliyeti bütçesi ve ücret artış senaryoları"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Bordro Muhasebesi",
+            "topic": "Yan hak ve prim uygulamalarının muhasebe etkisi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "Ücret değişikliklerinin ve yan hakların bordroya doğru yansıtılması"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Yan hak sağlayıcılarının seçimi ve satın alma süreci"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "Ücret ve yan hak uygulamalarının iş hukukuna uygunluğu"
+          }
+        ],
+        "kpis": [
+          "Piyasa ücret konumlanma oranı",
+          "Ücret artış sürecinin zamanında tamamlanma oranı",
+          "Personel maliyeti bütçe sapma oranı",
+          "Pozisyon değerlemesi yapılmış pozisyon oranı",
+          "Yan hak memnuniyet puanı"
+        ],
+        "title_standard": [
+          {
+            "position": "ucret-ve-yan-haklar",
+            "level": "Birim Müdürü",
+            "title_tr": "Ücret ve Yan Haklar Müdürü",
+            "title_en": "Compensation and Benefits Manager"
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ücret ve Yan Haklar Takım Lideri",
+            "title_en": "Compensation and Benefits Team Lead"
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri/ucretlendirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ücretlendirme Uzmanı",
+            "title_en": "Compensation Specialist"
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri/yan-haklar-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yan Haklar Uzmanı",
+            "title_en": "Benefits Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 6,
+            "max": 8
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "ucret-ve-yan-haklar",
+            "title_tr": "Ücret ve Yan Haklar Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri",
+            "title_tr": "Ücret ve Yan Haklar Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri/ucretlendirme-uzmani",
+            "title_tr": "Ücretlendirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "ucret-ve-yan-haklar/ucret-ve-yan-haklar-takim-lideri/yan-haklar-uzmani",
+            "title_tr": "Yan Haklar Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "bordro-ve-ozluk-isleri",
+        "name_tr": "Bordro ve Özlük İşleri",
+        "responsibilities": [
+          "Aylık bordroyu puantaj, ücret ve kesinti verilerine göre hesaplamak",
+          "İşe giriş, çıkış ve personel hareketlerinin özlük ve SGK işlemlerini yürütmek",
+          "Özlük dosyalarını ve personel kayıtlarını eksiksiz ve güncel tutmak",
+          "Bordro sonuçlarını muhasebe kaydı ve ödeme için ilgili departmanlara aktarmak",
+          "SGK ve vergi bildirimlerine esas bordro verilerini zamanında hazırlamak"
+        ],
+        "authorities": [
+          "Bordro kesim takvimini ve puantaj teslim kurallarını belirler",
+          "Onaysız veya eksik belgeli personel hareketlerinin bordroya işlenmesini bekletir",
+          "Kontrol edilen bordro ödeme listesini ödeme için Finans ve Hazineye iletir",
+          "Bordro ve özlük uygulamalarındaki hukuki konularda Hukuk İşlerinden görüş ister"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Bordro Muhasebesi",
+            "topic": "Bordro tahakkuklarının muhasebe kayıtlarıyla doğrulanması ve mutabakatı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Ücret ödemelerinin ödeme takvimine alınması ve icrası"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "İş ve sosyal güvenlik mevzuatına ilişkin hukuki görüş"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Analitiği ve Dijitalleşme",
+            "topic": "Bordro ve özlük sistemlerinin işletimi ve veri kalitesi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Özlük dosyalarındaki kişisel verilerin saklama ve erişim kuralları"
+          }
+        ],
+        "kpis": [
+          "Bordro hata oranı",
+          "Bordronun zamanında tamamlanma oranı",
+          "SGK bildirimlerinin zamanında yapılma oranı",
+          "Eksiksiz özlük dosyası oranı",
+          "Bordro kaynaklı çalışan talebi sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "bordro-ve-ozluk-isleri",
+            "level": "Birim Müdürü",
+            "title_tr": "Bordro ve Özlük İşleri Müdürü",
+            "title_en": "Payroll and Personnel Records Manager"
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bordro ve Özlük İşleri Takım Lideri",
+            "title_en": "Payroll and Personnel Records Team Lead"
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/bordro-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bordro Uzmanı",
+            "title_en": "Payroll Specialist"
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/ozluk-isleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Özlük İşleri Uzmanı",
+            "title_en": "Personnel Records Specialist"
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/ozluk-isleri-asistani",
+            "level": "Destek",
+            "title_tr": "Özlük İşleri Asistanı",
+            "title_en": "Personnel Records Assistant"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "model": "Standart",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 9,
+            "max": 12
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "bordro-ve-ozluk-isleri",
+            "title_tr": "Bordro ve Özlük İşleri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri",
+            "title_tr": "Bordro ve Özlük İşleri Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/bordro-uzmani",
+            "title_tr": "Bordro Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/ozluk-isleri-uzmani",
+            "title_tr": "Özlük İşleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "bordro-ve-ozluk-isleri/bordro-ve-ozluk-isleri-takim-lideri/ozluk-isleri-asistani",
+            "title_tr": "Özlük İşleri Asistanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "calisan-deneyimi-ve-baglilik",
+        "name_tr": "Çalışan Deneyimi ve Bağlılık",
+        "responsibilities": [
+          "Çalışan yolculuğunu işe başlangıçtan ayrılışa kadar tasarlamak ve iyileştirmek",
+          "Çalışan bağlılığı ve memnuniyeti anketlerini yürütmek ve sonuçlarını analiz etmek",
+          "Anket sonuçlarına dayalı aksiyon planlarını yöneticilerle hazırlamak ve takip etmek",
+          "İşe uyum programını yürütmek",
+          "Çalışan takdir, refah ve sosyal programlarını yönetmek"
+        ],
+        "authorities": [
+          "Bağlılık anketi yöntemini, takvimini ve raporlama standardını belirler",
+          "Düşük bağlılık sonuçlarında ilgili yöneticilerden aksiyon planı ister",
+          "Takdir ve refah programlarını bütçe sınırları içinde onaylar",
+          "Ayrılış görüşmesi bulgularına dayalı iyileştirme önerilerini direktöre sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İç İletişim ve Çalışan Katılımı",
+            "topic": "Çalışan katılımı programları ve iç iletişim kanalları"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İşveren Markası ve İç İletişim",
+            "topic": "Çalışan deneyimi içeriklerinin iç iletişimde kullanılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan İlişkileri",
+            "topic": "Çalışan geri bildirimlerinin ve şikâyet eğilimlerinin ortak değerlendirilmesi"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Ofis, Çalışma Ortamı ve Çalışan Destek Hizmetleri",
+            "topic": "Çalışma ortamı ve çalışan destek hizmetlerinin deneyime etkisi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Analitiği ve Dijitalleşme",
+            "topic": "Anket ve çalışan deneyimi verilerinin analizi"
+          }
+        ],
+        "kpis": [
+          "Çalışan bağlılığı endeksi",
+          "Çalışan net tavsiye skoru (eNPS)",
+          "Anket katılım oranı",
+          "Tamamlanan anket aksiyonu oranı",
+          "İşe uyum programı memnuniyet puanı"
+        ],
+        "title_standard": [
+          {
+            "position": "calisan-deneyimi-ve-baglilik",
+            "level": "Birim Müdürü",
+            "title_tr": "Çalışan Deneyimi ve Bağlılık Müdürü",
+            "title_en": "Employee Experience and Engagement Manager"
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çalışan Deneyimi Takım Lideri",
+            "title_en": "Employee Experience Team Lead"
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri/calisan-deneyimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışan Deneyimi Uzmanı",
+            "title_en": "Employee Experience Specialist"
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri/calisan-bagliligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışan Bağlılığı Uzmanı",
+            "title_en": "Employee Engagement Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 6,
+            "max": 8
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "calisan-deneyimi-ve-baglilik",
+            "title_tr": "Çalışan Deneyimi ve Bağlılık Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri",
+            "title_tr": "Çalışan Deneyimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri/calisan-deneyimi-uzmani",
+            "title_tr": "Çalışan Deneyimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "calisan-deneyimi-ve-baglilik/calisan-deneyimi-takim-lideri/calisan-bagliligi-uzmani",
+            "title_tr": "Çalışan Bağlılığı Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "isveren-markasi-ve-ic-iletisim",
+        "name_tr": "İşveren Markası ve İç İletişim",
+        "responsibilities": [
+          "İşveren markası stratejisini ve işveren değer önermesini oluşturmak",
+          "Kariyer sayfası içeriklerini, kariyer etkinliklerini ve üniversite ilişkilerini yönetmek",
+          "İK duyurularının ve çalışan iletişim içeriklerinin metnini hazırlamak",
+          "İşveren markası algısını ve aday kanallarının etkinliğini ölçmek"
+        ],
+        "authorities": [
+          "İşveren markası mesajlarını ve işveren değer önermesini direktör onayına sunar",
+          "İK duyurularını Kurumsal İletişimin kanal ve onay sürecine sunar",
+          "İşveren markası kreatif ihtiyaçlarını Tasarım ve Yaratıcı Hizmetlerden talep eder",
+          "Kariyer etkinliği ve üniversite iş birliği önceliklerini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İç İletişim ve Çalışan Katılımı",
+            "topic": "İK duyurularının iç iletişim kanallarında yayımlanması"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+            "topic": "Kariyer sayfası ve dijital kanallarda kurumsal iletişim standartlarına uyum"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Grafik Tasarım ve Kampanya Kreatifi",
+            "topic": "İşveren markası kampanyaları için kreatif tasarım ve görsel üretim"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Sosyal Medya Pazarlaması",
+            "topic": "İşveren markası içeriklerinin sosyal medya planına alınması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İşe Alım ve Yetenek Kazanımı",
+            "topic": "Aday çekim kanalları ve işe alım kampanyaları"
+          }
+        ],
+        "kpis": [
+          "Kariyer sayfası başvuru dönüşüm oranı",
+          "İşveren markası algı puanı",
+          "Kariyer etkinliği başına nitelikli aday sayısı",
+          "İK duyurularının zamanında yayımlanma oranı",
+          "İç iletişim içeriklerine erişim oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "isveren-markasi-ve-ic-iletisim",
+            "level": "Birim Müdürü",
+            "title_tr": "İşveren Markası ve İç İletişim Müdürü",
+            "title_en": "Employer Brand and Internal Communications Manager"
+          },
+          {
+            "position": "isveren-markasi-ve-ic-iletisim/isveren-markasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İşveren Markası Uzmanı",
+            "title_en": "Employer Brand Specialist"
+          },
+          {
+            "position": "isveren-markasi-ve-ic-iletisim/ik-ic-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "İK İç İletişim Uzmanı",
+            "title_en": "HR Internal Communications Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 5,
+            "max": 7
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "isveren-markasi-ve-ic-iletisim",
+            "title_tr": "İşveren Markası ve İç İletişim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "isveren-markasi-ve-ic-iletisim/isveren-markasi-uzmani",
+            "title_tr": "İşveren Markası Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "isveren-markasi-ve-ic-iletisim/ik-ic-iletisim-uzmani",
+            "title_tr": "İK İç İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "calisan-iliskileri",
+        "name_tr": "Çalışan İlişkileri",
+        "responsibilities": [
+          "Çalışan talep, şikâyet ve geri bildirimlerini kayıt altına alarak çözüme kavuşturmak",
+          "Disiplin süreçlerini prosedüre uygun yürütmek ve kayıt altına almak",
+          "Yöneticilere çalışan ilişkileri konularında rehberlik etmek",
+          "Çalışan temsilcileriyle düzenli iletişim ve danışma süreçlerini yürütmek",
+          "İşten ayrılış süreçlerini ve ayrılış görüşmelerini yönetmek"
+        ],
+        "authorities": [
+          "Disiplin kurulu gündemini hazırlar ve yaptırım önerisini kurula sunar",
+          "Fesih ve disiplin süreçlerinde karar öncesinde Hukuk İşlerinden görüş alır",
+          "Çalışan şikâyetleri için inceleme başlatır ve ilgili yöneticiden bilgi ister",
+          "Etik ihlal şüphesi taşıyan bildirimleri Etik ve İhbar birimine yönlendirir"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "Disiplin, fesih ve iş uyuşmazlıklarında hukuki görüş"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Etik, İhbar ve Suistimal Önleme",
+            "topic": "Etik ihlal ve ihbar bildirimlerinin yönlendirilmesi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan Deneyimi ve Bağlılık",
+            "topic": "Şikâyet eğilimlerinin çalışan deneyimi aksiyonlarına aktarılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "Disiplin kararlarının ve ayrılış işlemlerinin özlük kayıtlarına işlenmesi"
+          }
+        ],
+        "kpis": [
+          "Çalışan şikâyetlerinin ortalama çözüm süresi",
+          "Prosedüre uygun tamamlanan disiplin süreci oranı",
+          "Çalışanlar tarafından açılan iş davası sayısı",
+          "Ayrılış görüşmesi yapılma oranı",
+          "Tekrarlayan şikâyet oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "calisan-iliskileri",
+            "level": "Birim Müdürü",
+            "title_tr": "Çalışan İlişkileri Müdürü",
+            "title_en": "Employee Relations Manager"
+          },
+          {
+            "position": "calisan-iliskileri/calisan-iliskileri-takim-lideri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çalışan İlişkileri Takım Lideri",
+            "title_en": "Employee Relations Team Lead"
+          },
+          {
+            "position": "calisan-iliskileri/calisan-iliskileri-takim-lideri/calisan-iliskileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışan İlişkileri Uzmanı",
+            "title_en": "Employee Relations Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "model": "Standart",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 5,
+            "max": 7
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "calisan-iliskileri",
+            "title_tr": "Çalışan İlişkileri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "calisan-iliskileri/calisan-iliskileri-takim-lideri",
+            "title_tr": "Çalışan İlişkileri Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "calisan-iliskileri/calisan-iliskileri-takim-lideri/calisan-iliskileri-uzmani",
+            "title_tr": "Çalışan İlişkileri Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "ik-analitigi-ve-dijitallesme",
+        "name_tr": "İK Analitiği ve Dijitalleşme",
+        "responsibilities": [
+          "İK sistemlerini ve süreç otomasyonlarını yönetmek ve geliştirmek",
+          "İK verilerinin doğruluğunu, bütünlüğünü ve erişim yetkilerini yönetmek",
+          "İK göstergelerini ve dönemsel İK raporlarını hazırlamak",
+          "Devir, maliyet ve verimlilik analizleriyle karar desteği sağlamak",
+          "Çalışan self servis uygulamalarını yaygınlaştırmak"
+        ],
+        "authorities": [
+          "İK raporlama standardını ve gösterge tanımlarını belirler",
+          "İK sistemlerindeki rol ve erişim taleplerini veri sahibi onayıyla onaylar",
+          "İK sistemi geliştirme ve entegrasyon ihtiyaçlarını Bilgi Teknolojilerine talep olarak iletir",
+          "İK dijitalleşme yol haritasını direktör onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "İK sistemleri, entegrasyonlar ve değişiklik talepleri"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "İK gösterge panelleri ve raporlama veri altyapısı"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Kimlik ve Erişim Güvenliği",
+            "topic": "İK sistemlerinde kimlik ve erişim yetkisi yönetimi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Çalışan kişisel verilerinin işlenmesinde KVKK uyumu"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "Bordro ve özlük verilerinin sistemler arası tutarlılığı"
+          }
+        ],
+        "kpis": [
+          "İK verisi doğruluk oranı",
+          "Dijitalleştirilmiş İK süreç oranı",
+          "Self servis kullanım oranı",
+          "İK raporlarının zamanında yayımlanma oranı",
+          "İK sistemi kullanılabilirlik oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "ik-analitigi-ve-dijitallesme",
+            "level": "Birim Müdürü",
+            "title_tr": "İK Analitiği ve Dijitalleşme Müdürü",
+            "title_en": "HR Analytics and Digitalization Manager"
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-analitigi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İK Analitiği Uzmanı",
+            "title_en": "HR Analytics Specialist"
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-sistemleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "İK Sistemleri Uzmanı",
+            "title_en": "HR Systems Specialist"
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "İK Raporlama Uzmanı",
+            "title_en": "HR Reporting Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "model": "Standart",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 7,
+            "max": 9
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "ik-analitigi-ve-dijitallesme",
+            "title_tr": "İK Analitiği ve Dijitalleşme Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-analitigi-uzmani",
+            "title_tr": "İK Analitiği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-sistemleri-uzmani",
+            "title_tr": "İK Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "ik-analitigi-ve-dijitallesme/ik-raporlama-uzmani",
+            "title_tr": "İK Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2371 @@
+{
+  "version": "2026-11-05",
+  "group": "SEO Denetimi",
+  "agents": {
+    "M": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru",
+    "Y": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+    "T": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+    "C": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani",
+    "G": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/geo-ve-ai-gorunurluk-yoneticisi",
+    "O": "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+    "S": "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi"
+  },
+  "access": {
+    "gsc": "Google Search Console",
+    "ga4": "Google Analytics 4",
+    "bwt": "Bing Webmaster Tools",
+    "crawl": "tarama aracı çıktısı",
+    "links": "bağlantı analizi aracı",
+    "cms": "CMS / kaynak kod erişimi",
+    "logs": "sunucu erişim kayıtları",
+    "gbp": "Google İşletme Profili yönetimi"
+  },
+  "sections": [
+    {
+      "id": "au_scope",
+      "name": "Denetim Kapsamı",
+      "en": "Audit Scope",
+      "icon": "⌕",
+      "desc": "Denetlenecek yayındaki siteyi, sayfa kapsamını, denetim derinliğini, arama motorlarını, erişilebilen veri kaynaklarını ve denetimin yapılacağı ortamı belirler; hedef pazar ve diller Ortak Bilgiler › İşletme & Pazar'dan gelir",
+      "agents": [
+        "M"
+      ],
+      "guide": {
+        "purpose": "SEO Denetimi, yayına alınmış bir sitenin arama motorlarında ve yapay zekâ aramalarında ne kadar iyi bulunduğunu, taranıp dizine eklendiğini ve gösterildiğini kanıta dayalı olarak inceler. Bu bölüm denetimin sınırlarını çizer: hangi site, hangi sayfalar, ne kadar derin, hangi veriyle. Sonraki bölümlerde denetlenecek konuları seçersiniz; son bölümde bütün seçimler Claude'a verilecek tek bir denetim promptuna dönüşür.",
+        "criteria": [
+          "Denetimin amacı ne: genel sağlık kontrolü mü, trafik düşüşünün nedeni mi, yeni sitenin yayın sonrası kontrolü mü? Amaç kapsamı ve derinliği belirler.",
+          "Sorunların çoğu şablon düzeyindedir: ana sayfa ve her sayfa türünden birkaç örnek, binlerce sayfayı tek tek incelemekten daha hızlı ve çoğu zaman yeterli sonuç verir.",
+          "Search Console erişimi denetimin kalitesini en çok artıran veridir; Google'ın kendi dizine ekleme ve performans verisini yalnız orada görürsünüz.",
+          "Denetimi yapacak ortamı doğru seçin: Claude Code sayfaları komut satırından ham HTML ve başlıklarıyla çekebilir, Lighthouse çalıştırabilir; claude.ai'da çoğu veri dosya olarak yüklenir.",
+          "Erişimi olmayan verinin tahminle doldurulmaması gerekir; prompt bu kuralı kendiliğinden ekler."
+        ],
+        "pitfalls": [
+          "Yayındaki sitede tarama hızını sınırlamadan binlerce istek göndermek siteyi yavaşlatabilir ya da güvenlik duvarına takılabilir.",
+          "Üçüncü taraf araçların trafik ve otorite puanlarını Google verisi gibi sunmak; Google bu araçların kendi iç verisine erişmediğini açıkça belirtir.",
+          "Yalnız ana sayfayı denetleyip sonucu bütün siteye genellemek; kategori, ürün ya da blog şablonlarındaki sorunlar gözden kaçar.",
+          "Denetim sırasında form göndermek, sepete ürün eklemek ya da yönetim paneline girmek; denetim yalnız okuma işidir."
+        ],
+        "resources": [
+          {
+            "title": "Google Arama'nın İşleyiş Şekli",
+            "url": "https://developers.google.com/search/docs/fundamentals/how-search-works?hl=tr",
+            "note": "Tarama, dizine ekleme ve sonuç gösterme aşamalarını resmî olarak anlatır; denetim bölümleri bu üç aşamaya göre düşünülür."
+          },
+          {
+            "title": "Üçüncü taraf SEO araçları, hizmetleri ve tavsiyeleri",
+            "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo?hl=tr",
+            "note": "Google'ın üçüncü taraf araç verisini ve “AEO / GEO” tavsiyelerini nasıl değerlendirmeniz gerektiğine dair 2026 rehberi."
+          },
+          {
+            "title": "SEO'ya mı ihtiyacınız var?",
+            "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=tr",
+            "note": "Bir SEO uzmanından ya da denetimden neler beklenebileceğini ve neyin vaat edilemeyeceğini anlatır."
+          },
+          {
+            "title": "Google Search Console",
+            "url": "https://search.google.com/search-console/about",
+            "note": "Sitenin Google'daki dizine ekleme, performans ve sorun verisini veren ücretsiz resmî araç."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_site",
+          "label": "Denetlenecek Site",
+          "en": "Site to Audit",
+          "type": "select",
+          "rule": "Denetlenecek site: {label}.",
+          "explanation": "Denetimin hangi sitede yapılacağını belirler. Varsayılan, bu projenin Ortak Bilgiler › Kimlik & İletişim bölümündeki canlı site adresidir; adres burada yeniden yazılmaz.",
+          "scenario": "Kendi sitenizi denetliyorsanız varsayılanı bırakın; bir müşteri adayının, rakibin ya da başka bir projenin sitesini denetleyecekseniz “Başka bir site”yi seçip adresini yazın.",
+          "example": "Varsayılanda Ortak Bilgiler'e https://www.ornekklinik.com.tr yazılmışsa denetim bu adresten başlar; adres değişirse yalnız Ortak Bilgiler'de güncellenir.",
+          "options": [
+            {
+              "value": "own",
+              "label": "Bu projenin canlı sitesi (önerilen)",
+              "explanation": "Ortak Bilgiler › Canlı Site Adresi'ndeki adres denetlenir.",
+              "scenario": "Projenin kendi yayındaki sitesi denetlenecekse.",
+              "example": "Canlı Site Adresi https://www.ornek.com ise prompt bu adresi kullanır."
+            },
+            {
+              "value": "other",
+              "label": "Başka bir site",
+              "explanation": "Proje dışındaki bir site denetlenir; adresi bir alt kararda yazılır. Ortak Bilgiler'deki adres değişmez.",
+              "scenario": "Müşteri adayı ön denetimi, rakip sitesinin incelenmesi ya da başka bir projenin sitesi.",
+              "example": "Teklif öncesi bir müşteri adayının https://www.adayfirma.com sitesi denetlenir."
+            }
+          ]
+        },
+        {
+          "id": "au_url",
+          "label": "Başka Sitenin Adresi",
+          "en": "Other Site Address",
+          "type": "url",
+          "placeholder": "https://www.ornek.com",
+          "rule": "Denetlenecek site: {value}. Denetim bu adresin yayındaki (canlı) sürümünde yapılır.",
+          "explanation": "“Başka bir site” seçildiğinde denetlenecek sitenin ana adresi. Projenin kendi adresi Ortak Bilgiler'de tutulur, burada yazılmaz.",
+          "scenario": "Sitenin tercih edilen sürümünü (https, www'lu ya da www'suz) yazın; diğer varyantların bu adrese yönlenip yönlenmediği denetimde ayrıca kontrol edilir.",
+          "example": "https://www.adayfirma.com yazılırsa denetim bu adresten başlar; projenin kendi canlı site adresi değişmez.",
+          "showIf": [
+            {
+              "field": "au_site",
+              "in": [
+                "other"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "au_pages",
+          "label": "Sayfa Kapsamı",
+          "en": "Page Scope",
+          "type": "select",
+          "rule": "Sayfa kapsamı: {label}.",
+          "explanation": "Denetimde hangi sayfaların inceleneceğini belirler. Site geneli dosyalar (robots.txt, site haritası, yönlendirmeler) her seçenekte kontrol edilir.",
+          "scenario": "Sitenin büyüklüğüne, zamanınıza ve denetimin amacına göre seçin; şablon örneklemesi çoğu site için en verimli yoldur.",
+          "example": "200 sayfalık bir kurumsal sitede ana sayfa, 3 hizmet, 3 blog yazısı, iletişim ve hakkımızda sayfası incelenir; hizmet şablonundaki bir sorun bütün hizmet sayfaları için tek bulgu olarak yazılır.",
+          "options": [
+            {
+              "value": "templates",
+              "label": "Ana sayfa ve şablon örnekleri (önerilen)",
+              "explanation": "Ana sayfa ile her sayfa türünden (kategori, ürün, hizmet, blog yazısı, iletişim …) 2–3 temsilî sayfa incelenir. Sorunların çoğu şablon düzeyinde olduğu için az sayfayla güvenilir sonuç verir.",
+              "scenario": "Küçük ve orta ölçekli siteler, ilk denetimler ve düzenli sağlık kontrolleri için.",
+              "example": "Bir e-ticaret sitesinde ana sayfa, iki kategori, üç ürün, sepet dışı bilgi sayfaları ve blog örneklenir.",
+              "ruleDetail": "Önce site haritası ve menüden sitedeki sayfa türlerini çıkar; her türden 2–3 temsilî sayfa seç ve seçilen adresleri raporun yöntem bölümüne yaz. Şablondan kaynaklanan sorunu şablon düzeyinde tek bulgu olarak raporla, etkilenen sayfa sayısını tahmin değil sayımla ver; sayamıyorsan “sayılamadı” yaz."
+            },
+            {
+              "value": "list",
+              "label": "Yalnız verilen sayfalar",
+              "explanation": "Yalnız Öncelikli Sayfalar alanına yazdığınız adresler incelenir. Belirli açılış sayfalarını ya da trafiği düşen sayfaları incelemek için uygundur.",
+              "scenario": "Reklam açılış sayfaları, en çok gelir getiren sayfalar ya da trafiği düşen birkaç sayfa incelenecekse.",
+              "example": "Trafiği düşen 8 blog yazısının adresi verilir; denetim yalnız bu sayfalara ve site geneli dosyalara bakar.",
+              "ruleDetail": "Yalnız Öncelikli Sayfalar listesindeki adresleri sayfa düzeyinde denetle; listede olmayan sayfalar için sayfa düzeyinde bulgu yazma. robots.txt, site haritası ve yönlendirme kuralları gibi site geneli dosyaları yine kontrol et."
+            },
+            {
+              "value": "section",
+              "label": "Belirli bir bölüm ya da dizin",
+              "explanation": "Sitenin bir bölümü (ör. /blog/ ya da /en/) denetlenir. Büyük sitelerde bölümleri sırayla denetlemek için uygundur.",
+              "scenario": "Yeni açılan bir dil sürümü, yeniden tasarlanan bir bölüm ya da sorunlu olduğu bilinen bir kategori için.",
+              "example": "Yalnız /blog/ altındaki yazılar incelenir; blog şablonu, kategori sayfaları ve yazı içi bağlantılar denetlenir.",
+              "ruleDetail": "Öncelikli Sayfalar alanındaki dizin ya da bölümün altındaki sayfaları denetle; bölümün sayfalarını site haritasından ve bölüm içi bağlantılardan bul, bölüm dışındaki sayfalar için bulgu yazma."
+            },
+            {
+              "value": "crawl",
+              "label": "Tüm site taraması",
+              "explanation": "Site ana sayfadan başlayarak bağlantılar ve site haritası üzerinden taranır; kırık bağlantı, yetim sayfa ve kopya içerik gibi site geneli sorunları bulmanın en güvenilir yolu budur.",
+              "scenario": "Taşınan ya da yeniden tasarlanan siteler, büyük kataloglar ve kapsamlı denetimler için.",
+              "example": "Tarama 500 adresle sınırlanır; 37 kırık iç bağlantı, 12 yönlendirme zinciri ve site haritasında olup bağlantı almayan 20 sayfa bulunur.",
+              "ruleDetail": "Siteyi ana sayfadan başlayarak iç bağlantılar ve site haritası üzerinden tara; Tarama Sınırı'na ve robots.txt'ye uy. Taranan adres sayısını, taramanın nerede durduğunu ve taranamayan bölümleri raporda belirt."
+            }
+          ]
+        },
+        {
+          "id": "au_crawl_limit",
+          "label": "Tarama Sınırı",
+          "en": "Crawl Limit",
+          "type": "select",
+          "showIf": [
+            {
+              "field": "au_pages",
+              "in": [
+                "crawl"
+              ]
+            }
+          ],
+          "rule": "Tarama sınırı: {label}.",
+          "explanation": "Tam taramada en çok kaç adresin, hangi hızla isteneceğini belirler. Yayındaki siteye yük bindirmemek ve güvenlik duvarına takılmamak için sınır gerekir.",
+          "scenario": "Paylaşımlı barındırmada ya da küçük sunucularda düşük hız seçin; büyük sitelerde tarama aracı çıktısı daha verimlidir.",
+          "example": "500 adres sınırıyla taranan bir site yaklaşık 10 dakikada biter ve sunucu yanıt sürelerinde bir değişiklik görülmez.",
+          "options": [
+            {
+              "value": "s100",
+              "label": "En fazla 100 adres, saniyede 1 istek",
+              "explanation": "Kısa ve güvenli tarama. Küçük siteler ya da hızlı kontrol için yeterlidir.",
+              "scenario": "50–100 sayfalık siteler ya da zayıf sunucular.",
+              "example": "Bir avukatlık bürosunun 60 sayfalık sitesi birkaç dakikada taranır."
+            },
+            {
+              "value": "s500",
+              "label": "En fazla 500 adres, saniyede 1 istek (önerilen)",
+              "explanation": "Çoğu kurumsal sitenin tamamını ya da büyük sitelerin temsilî bir bölümünü kapsar.",
+              "scenario": "Orta ölçekli kurumsal siteler ve bloglar.",
+              "example": "300 sayfalık bir eğitim kurumu sitesinin tamamı taranır."
+            },
+            {
+              "value": "s2000",
+              "label": "En fazla 2.000 adres, saniyede 2 istek",
+              "explanation": "Büyük siteler için daha geniş tarama; sunucunun bu yükü kaldırdığından emin olun.",
+              "scenario": "Ürün kataloğu ya da çok sayıda yazısı olan siteler.",
+              "example": "1.500 ürünlü bir mağazanın kategori ve ürün sayfaları taranır."
+            },
+            {
+              "value": "tool",
+              "label": "Tarama aracının çıktısı kullanılır",
+              "explanation": "Screaming Frog, Sitebulb gibi bir araçla yapılmış taramanın dışa aktarımı Claude'a verilir; Claude ayrıca toplu tarama yapmaz, yalnız örnek sayfaları doğrular.",
+              "scenario": "Binlerce sayfalık siteler ya da tarama yapılmasına izin verilmeyen ortamlar.",
+              "example": "Tarama aracının iç adresler, yanıt kodları ve kanonik dışa aktarımları CSV olarak yüklenir.",
+              "ruleDetail": "Toplu tarama yapma; kullanıcının verdiği tarama aracı dışa aktarımını kullan ve bulguları örnek sayfalarda doğrula. Dışa aktarım yoksa iste."
+            }
+          ]
+        },
+        {
+          "id": "au_page_list",
+          "label": "Öncelikli Sayfalar",
+          "en": "Priority Pages",
+          "type": "textarea",
+          "placeholder": "https://www.ornek.com/hizmetler/\nhttps://www.ornek.com/blog/ornek-yazi/",
+          "rule": "Öncelikli sayfalar: {value}",
+          "explanation": "Denetimde özellikle bakılacak sayfa adresleri ya da dizin. Her satıra bir adres yazın. “Yalnız verilen sayfalar” ve “Belirli bir bölüm” kapsamlarında zorunludur; diğerlerinde bu sayfalar önce incelenir.",
+          "scenario": "En çok gelir ya da talep getiren sayfalar, reklam açılış sayfaları, trafiği düşen sayfalar ve yeni yayımlanan sayfalar.",
+          "example": "/implant-tedavisi/, /fiyatlar/ ve /iletisim/ yazılırsa bulgular önce bu sayfalarda aranır ve raporda ayrı bir başlıkta özetlenir."
+        },
+        {
+          "id": "au_depth",
+          "label": "Denetim Derinliği",
+          "en": "Audit Depth",
+          "type": "select",
+          "rule": "Denetim derinliği: {label}.",
+          "explanation": "Denetimin ne kadar ayrıntılı olacağını belirler. Seçiminize göre sonraki bölümlerde hangi kontrollerin önerileceği değişir; öneriler yalnız “Öneriyi uygula” ile eklenir.",
+          "scenario": "İlk kez denetlenen sitede standart denetim, yayın sonrası hızlı kontrolde hızlı denetim, trafik düşüşü ya da site taşımasında kapsamlı denetim uygundur.",
+          "example": "Hızlı denetim seçilince Tarama bölümünde robots.txt, site haritası, durum kodları, yönlendirmeler, kanonik ve dizine eklenebilirlik önerilir.",
+          "options": [
+            {
+              "value": "quick",
+              "label": "Hızlı kontrol",
+              "explanation": "Siteyi aramadan düşürebilecek kritik sorunlara (engellenmiş tarama, yanlış noindex, sunucu hataları, kırık yönlendirmeler) odaklanır.",
+              "scenario": "Yeni yayına alınan site, tasarım değişikliği ya da sunucu taşımasından hemen sonra.",
+              "example": "Yayın sonrası kontrolde test ortamından kalan “Disallow: /” satırı ve bütün sayfalardaki noindex etiketi bulunur.",
+              "ruleDetail": "Yalnız seçili kontrolleri yap ve P0–P1 düzeyindeki bulgulara odaklan; ayrıntılı iyileştirme önerilerini kısa tut."
+            },
+            {
+              "value": "standard",
+              "label": "Standart denetim (önerilen)",
+              "explanation": "Teknik, sayfa içi, yapısal veri, performans ve yapay zekâ aramalarındaki görünürlüğü dengeli biçimde inceler.",
+              "scenario": "İlk kapsamlı denetim ve yılda bir ya da iki kez yapılan düzenli denetimler.",
+              "example": "Rapor 25–40 bulgu, hızlı kazanımlar listesi ve öncelikli düzeltme sırası içerir.",
+              "ruleDetail": "Seçili bütün kontrolleri yap; her bölümde en önemli bulguları kanıtıyla, diğerlerini özet tabloda ver."
+            },
+            {
+              "value": "deep",
+              "label": "Kapsamlı denetim",
+              "explanation": "Sunucu kayıtları, bağlantı profili, rakip karşılaştırması ve yapay zekâ yanıt testleri dahil bütün kontroller yapılır; daha çok veri ve zaman ister.",
+              "scenario": "Trafik düşüşü teşhisi, site taşıması öncesi ve sonrası, büyük kataloglar ve rekabetin yüksek olduğu pazarlar.",
+              "example": "Rapor, 16 aylık Search Console verisini Google güncelleme tarihleriyle karşılaştırır ve rakiplerle konu boşluğu tablosu verir.",
+              "ruleDetail": "Seçili bütün kontrolleri ayrıntılı yap; her bulguda kök nedeni, etkilenen sayfa sayısını ve doğrulama yöntemini yaz; veriye dayalı karşılaştırmaları (dönem, rakip, şablon) tablo olarak ver."
+            }
+          ]
+        },
+        {
+          "id": "au_engines",
+          "label": "Hedef Arama Motorları",
+          "en": "Target Search Engines",
+          "type": "multiselect",
+          "rule": "Görünürlüğü denetlenecek arama motorları: {labels}.",
+          "explanation": "Denetimin hangi arama motorları ve yapay zekâ aramaları için yapılacağını belirler. Google temel alınır; diğerleri için ek kontroller önerilir.",
+          "scenario": "Türkiye'de Google baskındır; Yandex ve Bing'in payı sektöre ve kitleye göre değişir. Yapay zekâ aramaları seçilirse AI Arama bölümünde ilgili kontroller önerilir.",
+          "example": "Google ve yapay zekâ aramaları seçilen bir sitede AI tarayıcı erişimi ve yapay zekâ yanıtlarında görünürlük testi de yapılır.",
+          "options": [
+            {
+              "value": "google",
+              "label": "Google",
+              "explanation": "Google Arama, Görseller, Haberler, AI Overviews ve AI Mode.",
+              "scenario": "Hemen her site için temel hedef.",
+              "example": "Denetim Google'ın resmî belgeleri ve Search Console verisiyle yapılır."
+            },
+            {
+              "value": "bing",
+              "label": "Bing",
+              "explanation": "Bing Arama ve Bing dizinini kullanan hizmetler (ör. Microsoft Copilot).",
+              "scenario": "Kurumsal kullanıcılar, masaüstü trafiği yüksek B2B siteler ve Copilot görünürlüğü önemli olduğunda.",
+              "example": "Bing Webmaster Tools'taki tarama hataları ve IndexNow desteği kontrol edilir.",
+              "ruleDetail": "Bing için dizine ekleme durumunu, Bing Webmaster Tools verisini (erişim varsa) ve IndexNow desteğini kontrol et."
+            },
+            {
+              "value": "yandex",
+              "label": "Yandex",
+              "explanation": "Yandex Arama; Türkiye'de belirli kitlelerde kullanılır.",
+              "scenario": "Yandex'ten anlamlı trafik alan ya da Rusça konuşan kitleye hitap eden siteler.",
+              "example": "Yandex'te marka ve hizmet sorgularında sitenin görünümü örneklenir.",
+              "ruleDetail": "Yandex için marka ve öncelikli sorgularda sitenin görünümünü örnekle; Yandex Webmaster erişimi varsa dizine ekleme ve tarama hatalarını incele."
+            },
+            {
+              "value": "ai",
+              "label": "Yapay zekâ aramaları",
+              "explanation": "ChatGPT, Claude, Perplexity, Gemini, Copilot ve Google AI Overviews / AI Mode gibi yanıt üreten aramalar.",
+              "scenario": "Kullanıcıların karar vermeden önce yapay zekâ asistanlarına danıştığı hizmet, yazılım ve eğitim sektörleri.",
+              "example": "“İstanbul'da en iyi implant kliniği” sorusuna verilen yanıtlarda markanın anılıp anılmadığı test edilir.",
+              "ruleDetail": "Yapay zekâ aramaları için AI Arama (GEO / AIO) bölümündeki kontrolleri uygula; yanıtların kişiye ve zamana göre değiştiğini, tek denemenin kesin sonuç olmadığını belirt."
+            }
+          ]
+        },
+        {
+          "id": "au_access",
+          "label": "Erişilebilen Veri ve Araçlar",
+          "en": "Available Data and Tools",
+          "type": "multiselect",
+          "rule": "Denetimde kullanılabilecek veri ve araçlar: {labels}. Listede olmayan bir veriye gerek duyulursa tahmin yürütülmez; bulgu “veri yok” olarak işaretlenir ve verinin nasıl alınacağı yazılır.",
+          "explanation": "Claude'un denetimde hangi verilere erişebileceğini belirler. Herkese açık sayfa, PageSpeed Insights ve arama sonuçları her zaman kullanılabilir; aşağıdakiler ancak siz erişim verir ya da dışa aktarım yüklerseniz kullanılır.",
+          "scenario": "Erişimi olmayan bir veriye dayanan kontrol seçerseniz Denetim Raporu & Prompt bölümünde uyarı çıkar; prompt bu kontrolleri “veri yok” olarak işaretlemesini ister.",
+          "example": "Search Console seçilmezse dizine ekleme ve performans raporu kontrolleri yapılmaz; rapor bu kontrolleri “Search Console erişimiyle doğrulanır” notuyla listeler.",
+          "options": [
+            {
+              "value": "public",
+              "label": "Yalnız herkese açık site",
+              "exclusive": true,
+              "explanation": "Hiçbir hesap ya da dışa aktarım verilmez; denetim yalnız herkese açık sayfalar ve ücretsiz araçlarla yapılır.",
+              "scenario": "Rakip ya da müşteri adayı sitesinin ön denetimi, erişimin henüz alınmadığı ilk görüşmeler.",
+              "example": "Denetim ham HTML, robots.txt, site haritası, PageSpeed Insights ve arama sonuçlarıyla yapılır.",
+              "ruleDetail": "Yalnız herkese açık kaynakları kullan; hesap verisi gerektiren kontrolleri “veri yok” olarak işaretle ve hangi erişimle doğrulanacağını yaz."
+            },
+            {
+              "value": "gsc",
+              "label": "Google Search Console",
+              "explanation": "Performans, sayfa dizine ekleme, Core Web Vitals, site haritaları, manuel işlemler ve güvenlik sorunları raporları.",
+              "scenario": "Sitenin sahibi ya da yetkili kullanıcısıysanız mutlaka ekleyin; Google'ın kendi verisi yalnız buradadır.",
+              "example": "Performans raporundaki sorgu ve sayfa tabloları ile dizine eklenmeyen sayfa örnekleri dışa aktarılıp yüklenir.",
+              "ruleDetail": "Search Console verisi (ya da dışa aktarımı): performans (sorgu, sayfa, ülke, cihaz), sayfa dizine ekleme, Core Web Vitals, site haritaları, manuel işlemler ve güvenlik sorunları raporları."
+            },
+            {
+              "value": "ga4",
+              "label": "Google Analytics 4",
+              "explanation": "Organik trafiğin açılış sayfaları, etkileşim, anahtar etkinlikler ve yapay zekâ kaynaklı yönlendirmeler.",
+              "scenario": "Trafiğin dönüşüme katkısını ve yapay zekâ kaynaklı ziyaretleri görmek istiyorsanız.",
+              "example": "Organik arama kanalının açılış sayfası raporu son 3 ay için dışa aktarılır.",
+              "ruleDetail": "GA4 verisi (ya da dışa aktarımı): kanal, açılış sayfası, anahtar etkinlik ve yönlendiren kaynak raporları."
+            },
+            {
+              "value": "bwt",
+              "label": "Bing Webmaster Tools",
+              "explanation": "Bing'deki dizine ekleme, tarama hataları ve Bing'in SEO önerileri.",
+              "scenario": "Bing ya da Copilot görünürlüğü hedefleniyorsa.",
+              "example": "Site tarama raporu ve dizine ekleme durumu dışa aktarılır.",
+              "ruleDetail": "Bing Webmaster Tools verisi (ya da dışa aktarımı): dizine ekleme, tarama hataları, site haritaları ve SEO raporları."
+            },
+            {
+              "value": "crawl",
+              "label": "Tarama aracı çıktısı",
+              "explanation": "Screaming Frog, Sitebulb gibi bir tarayıcının site taraması: bütün adresler, yanıt kodları, başlıklar, kanonikler, bağlantılar.",
+              "scenario": "Büyük siteler ya da tarama yapılmasına izin verilmeyen ortamlar.",
+              "example": "İç adresler ve yanıt kodları dışa aktarımı CSV olarak yüklenir.",
+              "ruleDetail": "Tarama aracı dışa aktarımı: iç adresler, yanıt kodları, başlık ve açıklamalar, kanonikler, iç bağlantılar ve tarama derinliği."
+            },
+            {
+              "value": "links",
+              "label": "Bağlantı analizi aracı",
+              "explanation": "Ahrefs, Semrush, Majestic gibi bir aracın geri bağlantı ve rakip verisi. Bu veriler tahmindir; Google verisi değildir.",
+              "scenario": "Bağlantı profili, kayıp bağlantılar ya da rakip karşılaştırması isteniyorsa.",
+              "example": "Yönlendiren alan adları ve en çok bağlantı alan sayfalar raporu yüklenir.",
+              "ruleDetail": "Bağlantı analizi aracı verisi: yönlendiren alan adları, bağlantı metinleri, en çok bağlantı alan sayfalar ve rakip görünürlüğü — hepsi aracın tahmini olarak raporlanır."
+            },
+            {
+              "value": "cms",
+              "label": "CMS / kaynak kod erişimi",
+              "explanation": "Sitenin kaynak koduna ya da yönetim paneline okuma erişimi; bulguların kök nedenini şablon düzeyinde bulmayı sağlar.",
+              "scenario": "Siteyi kendi ekibiniz geliştirdiyse ya da düzeltmeler de istenecekse.",
+              "example": "Başlık etiketinin hangi şablonda boş üretildiği kaynak koddan bulunur.",
+              "ruleDetail": "Kaynak kod ya da CMS erişimi: bulguların kök nedenini şablon, eklenti ya da ayar düzeyinde göster; okuma dışında işlem yapma."
+            },
+            {
+              "value": "logs",
+              "label": "Sunucu erişim kayıtları",
+              "explanation": "Arama motoru tarayıcılarının siteyi gerçekte nasıl taradığını gösteren sunucu kayıtları.",
+              "scenario": "Büyük siteler, tarama bütçesi sorunları ve dizine eklenmeyen sayfa şikâyetleri.",
+              "example": "Son 30 günün erişim kayıtları kişisel veriler (IP) maskelenerek verilir.",
+              "ruleDetail": "Sunucu erişim kayıtları: arama tarayıcılarının taradığı adresler, sıklık ve yanıt kodları; kayıtlardaki kişisel verileri rapora taşıma."
+            },
+            {
+              "value": "gbp",
+              "label": "Google İşletme Profili yönetimi",
+              "explanation": "İşletme Profili'nin yönetim paneli; performans, yorumlar ve profil bilgileri.",
+              "scenario": "Yerel işletmeler ve şubeli yapılar.",
+              "example": "Profil performansı (arama, harita görüntülemeleri, aramalar, yol tarifleri) dışa aktarılır.",
+              "ruleDetail": "Google İşletme Profili yönetim verisi: profil bilgileri, performans, yorumlar ve yanıtlar."
+            }
+          ]
+        },
+        {
+          "id": "au_env",
+          "label": "Denetimin Yapılacağı Ortam",
+          "en": "Audit Environment",
+          "type": "select",
+          "rule": "Denetim ortamı: {label}.",
+          "explanation": "Promptun hangi Claude ortamında çalıştırılacağını belirler; ortama göre veri toplama yöntemi (komut satırı, web erişimi, tarayıcı) prompta yazılır.",
+          "scenario": "Ham HTML, HTTP başlıkları ve Lighthouse ölçümü gerekiyorsa Claude Code en kapsamlı sonucu verir.",
+          "example": "Claude Code seçilince prompt, sayfaların curl ile başlıklarıyla çekilmesini ve çıktıların bir denetim klasörüne kaydedilmesini ister.",
+          "options": [
+            {
+              "value": "code",
+              "label": "Claude Code (komut satırı) (önerilen)",
+              "explanation": "Claude sayfaları komut satırından çeker, HTTP başlıklarını ve yönlendirmeleri görür, başsız tarayıcı ve Lighthouse çalıştırabilir, çıktıları dosyaya kaydeder.",
+              "scenario": "Teknik denetim, tam tarama ve tekrarlanabilir ölçüm için.",
+              "example": "Prompt bir proje klasöründe Claude Code'a yapıştırılır; bulgular ve ham çıktılar seo-denetimi/ klasörüne yazılır.",
+              "ruleDetail": "Veri toplamayı komut satırıyla yap: başlık ve yönlendirmeler için curl -sIL, ham HTML için curl -sL, işlenmiş DOM için başsız Chrome ya da Playwright, laboratuvar ölçümü için npx lighthouse (mobil ayar), saha verisi için PageSpeed Insights API. Ham çıktıları ve raporu seo-denetimi/ klasörüne kaydet; kullandığın komutları yöntem bölümüne yaz."
+            },
+            {
+              "value": "web",
+              "label": "claude.ai ya da Claude masaüstü (web erişimiyle)",
+              "explanation": "Claude sayfaları web erişimiyle okur; HTTP başlıkları ve ham HTML her zaman görünmeyebilir. Hesap verileri dosya olarak yüklenir.",
+              "scenario": "Komut satırı kullanmayan pazarlama ekipleri ve içerik ağırlıklı denetimler.",
+              "example": "Search Console dışa aktarımları sohbete yüklenir; Claude sayfaları web erişimiyle inceler.",
+              "ruleDetail": "Sayfaları web erişimiyle incele; ham HTML, HTTP başlığı ya da yönlendirme zincirini göremediğin kontrollerde bunu belirt ve kullanıcıdan araç çıktısı (ör. sayfa kaynağı, başlık kontrol aracı, PageSpeed Insights sonucu) iste. Hesap verilerini yalnız yüklenen dosyalardan kullan."
+            },
+            {
+              "value": "browser",
+              "label": "Claude tarayıcı uzantısıyla",
+              "explanation": "Claude kullanıcının tarayıcısında sayfaları açar, geliştirici araçlarını ve oturum açılmış araçları (Search Console gibi) okuyabilir.",
+              "scenario": "Search Console ve GA4 ekranlarının doğrudan incelenmesi gerektiğinde.",
+              "example": "Claude Search Console'un sayfa dizine ekleme raporunu açıp nedenleri örnek adreslerle not eder.",
+              "ruleDetail": "Tarayıcıda yalnız okuma işlemi yap: ayar değiştirme, kaydetme, gönderme ya da onaylama düğmelerine basma; hesap sayfalarında gördüğün kişisel verileri rapora taşıma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_crawl",
+      "name": "Tarama & Dizine Ekleme",
+      "en": "Crawling & Indexing",
+      "icon": "⤳",
+      "desc": "Arama motorlarının siteyi tarayıp dizine ekleyebilmesi için robots.txt, site haritası, durum kodları, yönlendirmeler, kanonik adresler, dizine eklenebilirlik, kopya içerik ve JavaScript kontrollerinden hangilerinin yapılacağını belirler",
+      "agents": [
+        "T"
+      ],
+      "guide": {
+        "purpose": "Bir sayfa taranamaz ya da dizine eklenemezse içeriği ne kadar iyi olursa olsun aramada görünmez. Bu bölüm, sitenin teknik olarak keşfedilebilir ve dizine eklenebilir olup olmadığını denetleyen kontrolleri seçtirir. Bulunan sorunlar genellikle en yüksek önceliği alır.",
+        "criteria": [
+          "Önce “görünmezlik” sorunlarına bakın: yanlış noindex, robots.txt engeli, sunucu hataları ve kırık yönlendirmeler bütün siteyi etkileyebilir.",
+          "Kanonik, yönlendirme ve site haritası birbiriyle tutarlı olmalı: üçü de aynı tercih edilen adresi göstermeli.",
+          "Site JavaScript çerçevesiyle (React, Vue, Next.js …) yapıldıysa ham HTML ile işlenmiş sayfa mutlaka karşılaştırılmalı.",
+          "Search Console erişimi varsa dizine eklenmeyen sayfa nedenleri tahminin yerine kanıt sağlar."
+        ],
+        "pitfalls": [
+          "robots.txt'yi dizinden çıkarma aracı sanmak: robots.txt ile engellenen sayfa noindex'i göremez ve bağlantı alıyorsa yine dizinde görünebilir.",
+          "Her sayfayı site haritasına eklemek: yönlenen, 404 ya da noindex'li adresler site haritasında yer almamalı.",
+          "Kalıcı taşımalarda geçici (302) yönlendirme kullanmak ya da zincir halinde birden çok yönlendirme bırakmak.",
+          "site: sorgusundaki sayı ile dizindeki sayfa sayısını aynı sanmak; bu sayı tahminidir, Search Console kullanılmalıdır."
+        ],
+        "resources": [
+          {
+            "title": "robots.txt'ye giriş",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=tr",
+            "note": "robots.txt'nin ne işe yaradığı, sınırları ve noindex ile farkı."
+          },
+          {
+            "title": "Site haritası nedir?",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=tr",
+            "note": "Site haritasının ne zaman gerektiği, biçimleri ve sınırları."
+          },
+          {
+            "title": "Standart (kanonik) URL belirtme",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=tr",
+            "note": "rel=canonical ve diğer yöntemlerle kopya adreslerin birleştirilmesi."
+          },
+          {
+            "title": "Yönlendirmeler ve Google Arama",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects?hl=tr",
+            "note": "Kalıcı ve geçici yönlendirme türleri, sunucu ve meta yönlendirmeler."
+          },
+          {
+            "title": "JavaScript SEO'nun temelleri",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=tr",
+            "note": "Google'ın JavaScript'i nasıl işlediği ve JavaScript sitelerinde sık yapılan hatalar."
+          },
+          {
+            "title": "Sayfa dizine ekleme raporu",
+            "url": "https://support.google.com/webmasters/answer/7440203?hl=tr",
+            "note": "Search Console'da dizine eklenmeyen sayfa nedenlerinin anlamı ve ne yapılacağı."
+          },
+          {
+            "title": "Robots meta etiketi teknik özellikleri",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=tr",
+            "note": "noindex, nofollow, nosnippet ve X-Robots-Tag kuralları."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_crawl_checks",
+          "label": "Tarama ve Dizine Ekleme Kontrolleri",
+          "en": "Crawling and Indexing Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Tarama ve dizine ekleme denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Sitenin taranabilirliğini ve dizine eklenebilirliğini denetleyen kontrolleri seçin. Her kontrolün neye bakacağı prompta ayrıntısıyla yazılır.",
+          "scenario": "Denetim Derinliği'ne göre önerilen kontrolleri “Öneriyi uygula” ile ekleyebilir, sonra çıkarabilir ya da ekleyebilirsiniz.",
+          "example": "Hızlı kontrolde robots.txt, site haritası, durum kodları, yönlendirmeler, alan adı birliği, kanonik ve dizine eklenebilirlik seçilir.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "robots",
+                "sitemap",
+                "status",
+                "redirects",
+                "hosts",
+                "canonical",
+                "indexability"
+              ],
+              "standard": [
+                "robots",
+                "sitemap",
+                "status",
+                "redirects",
+                "hosts",
+                "canonical",
+                "indexability",
+                "duplicates",
+                "params",
+                "depth",
+                "js",
+                "gsc_index"
+              ],
+              "deep": [
+                "robots",
+                "sitemap",
+                "status",
+                "redirects",
+                "hosts",
+                "canonical",
+                "indexability",
+                "duplicates",
+                "params",
+                "depth",
+                "js",
+                "gsc_index",
+                "logs"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "robots",
+              "label": "robots.txt",
+              "explanation": "Tarayıcılara hangi adreslerin taranmayacağını söyleyen dosya. Tek bir hatalı satır bütün siteyi taramaya kapatabilir.",
+              "scenario": "Her denetimde; özellikle yayın, taşıma ve tasarım değişikliğinden sonra.",
+              "example": "Test ortamından kalan “Disallow: /” satırı bulunur ve P0 olarak raporlanır.",
+              "ruleDetail": "/robots.txt 200 dönüyor mu; önemli sayfaları, CSS, JavaScript ve görselleri engelliyor mu; Sitemap satırı doğru ve mutlak mı; test ortamından kalma “Disallow: /” var mı; söz dizimi RFC 9309'a uygun mu. noindex'li sayfaların robots.txt ile engellenmemesi gerektiğini ve robots.txt'nin güvenlik önlemi olmadığını dikkate al."
+            },
+            {
+              "value": "sitemap",
+              "label": "XML site haritası",
+              "explanation": "Sitenin dizine eklenmesini istediği adresleri arama motorlarına bildiren dosya.",
+              "scenario": "Her denetimde; özellikle büyük, yeni ya da iç bağlantısı zayıf sitelerde.",
+              "example": "Site haritasındaki 1.200 adresin 140'ının yönlendiği, 35'inin noindex olduğu bulunur.",
+              "ruleDetail": "Site haritası ve site haritası dizini geçerli XML mi; yalnız 200 dönen, kanonik ve dizine eklenebilir adresleri mi içeriyor; yönlenen, 404, noindex ya da kanoniği başka adrese işaret eden adres var mı; lastmod gerçek değişiklik tarihini mi gösteriyor; 50.000 adres / 50 MB sınırı aşılıyor mu; robots.txt'de ve (erişim varsa) Search Console'da bildirilmiş mi; site haritası ile taramada bulunan adreslerin farkı."
+            },
+            {
+              "value": "status",
+              "label": "HTTP durum kodları",
+              "explanation": "Sayfaların 200, 3xx, 4xx ya da 5xx yanıt verip vermediği. Hata veren sayfalar dizinden düşer, iç bağlantılar boşa gider.",
+              "scenario": "Her denetimde.",
+              "example": "Menüdeki “Kampanyalar” bağlantısının 404 döndüğü ve 210 sayfadan bağlantı aldığı bulunur.",
+              "ruleDetail": "İç bağlantılardan ve site haritasından ulaşılan adreslerin durum kodları: 4xx, 5xx ve zaman aşımı; içeriği olmayan ya da “bulunamadı” yazan ama 200 dönen (soft 404) sayfalar; özel 404 sayfasının gerçekten 404 kodu döndürmesi ve kullanıcıya yol göstermesi."
+            },
+            {
+              "value": "redirects",
+              "label": "Yönlendirmeler",
+              "explanation": "Bir adresten diğerine yönlendirmelerin türü, uzunluğu ve doğruluğu.",
+              "scenario": "Site taşıması, adres yapısı değişikliği ya da https geçişinden sonra mutlaka.",
+              "example": "Eski /urunler/ adreslerinin önce /products/'a, sonra /tr/urunler/'e iki adımda yönlendiği bulunur.",
+              "ruleDetail": "Yönlendirme zincirleri (birden çok adım) ve döngüler; kalıcı taşımada 302 / 307 kullanımı; meta refresh ve JavaScript yönlendirmeleri; iç bağlantıların yönlenen adres yerine son adrese gitmesi; eski adreslerin (varsa eski site) en yakın yeni karşılığına 301 ile yönlenmesi, toplu olarak ana sayfaya yönlendirilmemesi."
+            },
+            {
+              "value": "hosts",
+              "label": "Protokol ve alan adı birliği",
+              "explanation": "Sitenin http / https, www'lu / www'suz ve sondaki eğik çizgi varyantlarının tek bir adreste birleşmesi.",
+              "scenario": "Her denetimde; birkaç dakikalık kontrolle kritik bir sorun bulunabilir.",
+              "example": "http://ornek.com'un önce https://ornek.com'a, sonra https://www.ornek.com'a iki adımda yönlendiği bulunur.",
+              "ruleDetail": "http → https, www ↔ www'suz, sondaki eğik çizgi ve büyük-küçük harf varyantları tercih edilen tek sürüme tek adımda 301 ile mi yönleniyor; aynı içerik birden çok host ya da adreste 200 dönüyor mu; test ya da eski alan adları dizinde mi."
+            },
+            {
+              "value": "canonical",
+              "label": "Kanonik adresler",
+              "explanation": "Kopya ya da benzer adreslerden hangisinin asıl olduğunu arama motorlarına söyleyen rel=canonical etiketi.",
+              "scenario": "Parametreli adres, filtre, sayfalama ya da birden çok kategori yolu olan sitelerde mutlaka.",
+              "example": "Ürün sayfalarının kanoniğinin bütün ürünlerde kategori sayfasını gösterdiği bulunur.",
+              "ruleDetail": "Her dizine eklenebilir sayfada kendi adresini gösteren mutlak rel=canonical var mı; kanonik 200 dönen, dizine eklenebilir ve site haritasıyla tutarlı adrese mi işaret ediyor; HTML ile HTTP başlığındaki kanonik çelişiyor mu; birden çok kanonik etiket var mı; sayfalama, filtre ve parametreli sayfalarda kanonik doğru mu; kanonik JavaScript ile mi değiştiriliyor."
+            },
+            {
+              "value": "indexability",
+              "label": "Dizine eklenebilirlik",
+              "explanation": "Sayfaların noindex gibi bir yönergeyle dizinden çıkarılıp çıkarılmadığı.",
+              "scenario": "Her denetimde; özellikle yayın sonrası ve eklenti / tema değişikliklerinden sonra.",
+              "example": "WordPress'te “arama motorlarının siteyi dizine eklemesini engelle” ayarının açık kaldığı bulunur.",
+              "ruleDetail": "meta robots ve X-Robots-Tag başlığında yanlışlıkla noindex, nofollow ya da none; önemli sayfaların dizine eklenebilir olması; noindex'in ham HTML'de mi JavaScript ile mi eklendiği; parola, oturum ya da bölge kısıtıyla arama tarayıcısına kapalı içerik; dizine eklenmesi istenmeyen sayfaların (teşekkür, sepet, arama sonucu) kapalı olması."
+            },
+            {
+              "value": "duplicates",
+              "label": "Kopya ve ince içerik",
+              "explanation": "Aynı ya da çok benzer içeriği taşıyan sayfalar ve içeriği çok az olan sayfalar.",
+              "scenario": "Etiket, arşiv, filtre ve çok dilli yapıları olan sitelerde.",
+              "example": "Aynı içeriğin /hizmet/ ve /hizmetlerimiz/ adreslerinde yayında olduğu bulunur.",
+              "ruleDetail": "Aynı ya da çok benzer içerikli sayfalar, aynı başlık ve meta açıklamayı paylaşan sayfalar; etiket, arşiv, yazar ve site içi arama sonucu sayfaları; içeriği çok az sayfalar. Her grup için hangi sayfanın tutulacağını, hangilerinin birleştirileceğini (301), kanonikleştirileceğini ya da noindex yapılacağını öner."
+            },
+            {
+              "value": "params",
+              "label": "Parametreli adresler ve filtreler",
+              "explanation": "Sıralama, filtre, oturum ve izleme parametrelerinin sonsuz sayıda adres üretip tarama bütçesini tüketmesi.",
+              "scenario": "E-ticaret, ilan, rezervasyon ve arama özelliği olan siteler.",
+              "example": "Renk, beden ve sıralama filtrelerinin birleşimiyle 40.000 taranabilir adres üretildiği bulunur.",
+              "ruleDetail": "Sıralama, filtre, sayfa başına ürün, oturum ve izleme (utm_ …) parametreleri taranabilir adres üretiyor mu; iç bağlantılarda parametreli adres kullanılıyor mu; filtre birleşimleri sonsuz adres alanı oluşturuyor mu; bu adreslerin kanonik, noindex ya da robots.txt ile nasıl yönetildiği ve tutarlılığı."
+            },
+            {
+              "value": "depth",
+              "label": "Tarama derinliği ve yetim sayfalar",
+              "explanation": "Önemli sayfalara kaç tıkla ulaşıldığı ve hiç iç bağlantı almayan sayfalar.",
+              "scenario": "Büyük siteler, bloglar ve kategorisi derin e-ticaret siteleri.",
+              "example": "En çok satan ürünlerin ana sayfadan 6 tık uzakta olduğu, 45 blog yazısının hiç iç bağlantı almadığı bulunur.",
+              "ruleDetail": "Önemli sayfalar ana sayfadan en fazla 3 tıkla erişilebilir mi; site haritasında olup hiç iç bağlantı almayan (yetim) sayfalar; menü, alt bilgi ve sayfalama bağlantılarının taranabilir <a href> ile verilmesi; sonsuz kaydırma ya da “daha fazla yükle” arkasında kalan içeriğe bağlantıyla da ulaşılabilmesi."
+            },
+            {
+              "value": "js",
+              "label": "JavaScript ile oluşturulan içerik",
+              "explanation": "İçeriğin, bağlantıların ve SEO etiketlerinin JavaScript çalışmadan da sayfada bulunup bulunmadığı.",
+              "scenario": "React, Vue, Angular, Next.js, Nuxt gibi çerçevelerle yapılmış siteler ve tek sayfa uygulamaları.",
+              "example": "Ürün açıklamalarının ham HTML'de olmadığı, yalnız tarayıcıda yüklendiği bulunur.",
+              "ruleDetail": "Ham HTML (JavaScript çalışmadan) ile işlenmiş (render edilmiş) sayfayı karşılaştır: ana içerik, başlık, meta açıklama, kanonik, robots etiketi, iç bağlantılar ve yapısal veri ham HTML'de var mı, işlendikten sonra değişiyor mu; içerik yalnız kullanıcı etkileşimiyle mi yükleniyor; bağlantılar onclick yerine href ile mi verilmiş; JavaScript ve API kaynakları robots.txt ile engellenmiş mi."
+            },
+            {
+              "value": "gsc_index",
+              "label": "Search Console dizine ekleme raporu",
+              "needs": [
+                "gsc"
+              ],
+              "explanation": "Google'ın hangi sayfaları neden dizine eklemediğini gösteren resmî rapor.",
+              "scenario": "Search Console erişimi varsa her denetimde.",
+              "example": "“Tarandı – şu anda dizine eklenmemiş” durumundaki 300 sayfanın çoğunun ince etiket sayfaları olduğu bulunur.",
+              "ruleDetail": "Sayfa dizine ekleme raporundaki nedenleri (Tarandı – şu anda dizine eklenmemiş, Keşfedildi – şu anda dizine eklenmemiş, Kopya, Uygun standart etikete sahip alternatif sayfa, Bulunamadı (404), robots.txt tarafından engellendi …) adres örnekleriyle değerlendir; önemli sayfaları URL Denetleme aracıyla kontrol et; dizindeki sayfa sayısının zaman içindeki değişimini yorumla."
+            },
+            {
+              "value": "logs",
+              "label": "Sunucu kayıtlarında tarayıcı davranışı",
+              "needs": [
+                "logs"
+              ],
+              "explanation": "Googlebot ve diğer arama tarayıcılarının siteyi gerçekte nasıl taradığı.",
+              "scenario": "Büyük siteler, tarama bütçesi ve dizine eklenmeyen sayfa sorunları.",
+              "example": "Googlebot isteklerinin %60'ının filtre adreslerine gittiği, yeni ürün sayfalarının haftalarca taranmadığı bulunur.",
+              "ruleDetail": "Arama tarayıcılarının hangi adresleri ne sıklıkla taradığı, 3xx / 4xx / 5xx yanıt oranları, önemsiz adreslere harcanan tarama, önemli sayfaların son taranma tarihi; Googlebot kimliğinin ters DNS ya da Google'ın yayımladığı IP aralıklarıyla doğrulanması. Kayıtlardaki IP gibi kişisel verileri rapora taşıma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_onpage",
+      "name": "Sayfa İçi SEO & İçerik",
+      "en": "On-Page SEO & Content",
+      "icon": "¶",
+      "desc": "Başlık ve meta açıklama, başlık hiyerarşisi, arama niyeti, içerik kalitesi ve güvenilirlik, iç bağlantılar, görseller ve adres yapısından hangilerinin denetleneceğini belirler; hedef sorgular Ortak Bilgiler › Hedef Sorgular'dan gelir",
+      "agents": [
+        "C"
+      ],
+      "guide": {
+        "purpose": "Sayfa içi denetim, dizine eklenen sayfaların doğru sorgularla eşleşip eşleşmediğini, arama sonucunda tıklanmaya değer görünüp görünmediğini ve ziyaretçiye gerçekten yardımcı olup olmadığını inceler. Google'ın faydalı içerik ilkeleri ve arama sonucunda gösterilen başlık ve açıklama kuralları temel alınır.",
+        "criteria": [
+          "Her öncelikli sayfanın bir amacı ve hedef sorgusu olmalı; Ortak Bilgiler › Hedef Sorgular listesini doldurmak denetimi belirgin biçimde iyileştirir.",
+          "Karakter sayıları kesin kural değildir; asıl ölçüt başlığın ve açıklamanın sayfayı doğru ve benzersiz anlatmasıdır.",
+          "İçerik kalitesi, sayfanın ziyaretçinin sorusunu yanıtlayıp yanıtlamadığına ve özgün bilgi, deneyim ya da uzmanlık taşıyıp taşımadığına göre değerlendirilir.",
+          "İç bağlantılar hem arama motorunun sayfaları bulmasını hem de önemli sayfalara değer aktarılmasını sağlar."
+        ],
+        "pitfalls": [
+          "Anahtar kelimeyi başlıkta ve metinde doğal olmayan sıklıkta tekrarlamak; Google bunu spam politikasında anahtar kelime doldurma olarak tanımlar.",
+          "Birden çok H1'i tek başına hata saymak; yapı anlaşılır olduğu sürece sorun değildir.",
+          "Aynı konuyu hedefleyen çok sayıda sayfa üretmek; sayfalar birbirinin sıralamasını böler.",
+          "Yapay zekâyla toplu içerik üretip kontrol etmeden yayımlamak; ölçekli içerik kötüye kullanımı spam sayılır."
+        ],
+        "resources": [
+          {
+            "title": "Başlık bağlantılarını etkileme",
+            "url": "https://developers.google.com/search/docs/appearance/title-link?hl=tr",
+            "note": "Google'ın arama sonucundaki başlığı nasıl seçtiği ve iyi başlık yazma kuralları."
+          },
+          {
+            "title": "Meta tanımlar nasıl yazılır?",
+            "url": "https://developers.google.com/search/docs/appearance/snippet?hl=tr",
+            "note": "Arama sonucu açıklamasının (snippet) nasıl oluşturulduğu ve meta açıklama önerileri."
+          },
+          {
+            "title": "Kullanıcı odaklı, faydalı ve güvenilir içerik",
+            "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=tr",
+            "note": "İçerik kalitesini değerlendirmek için Google'ın sorduğu sorular; E-E-A-T'nin resmî açıklaması."
+          },
+          {
+            "title": "SEO bağlantı en iyi uygulamaları",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable?hl=tr",
+            "note": "Taranabilir bağlantı ve iyi bağlantı metni kuralları."
+          },
+          {
+            "title": "Resim SEO en iyi uygulamaları",
+            "url": "https://developers.google.com/search/docs/appearance/google-images?hl=tr",
+            "note": "Alt metin, dosya adı, biçim ve görsel site haritası önerileri."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_onpage_checks",
+          "label": "Sayfa İçi ve İçerik Kontrolleri",
+          "en": "On-Page and Content Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Sayfa içi ve içerik denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Sayfaların arama sonucundaki görünümünü, konu eşleşmesini ve içerik kalitesini denetleyen kontrolleri seçin.",
+          "scenario": "İçerik ağırlıklı sitelerde (blog, haber, eğitim) içerik kalitesi ve güncellik kontrolleri öne çıkar; katalog sitelerinde başlık, görsel ve adres yapısı.",
+          "example": "Standart denetimde başlık, meta açıklama, başlık hiyerarşisi, arama niyeti, içerik kalitesi, güncellik, iç bağlantılar, görseller, adres yapısı, kırıntı ve dil kontrolleri yapılır.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "title",
+                "meta",
+                "headings",
+                "internal",
+                "images"
+              ],
+              "standard": [
+                "title",
+                "meta",
+                "headings",
+                "intent",
+                "quality",
+                "freshness",
+                "internal",
+                "images",
+                "urls",
+                "breadcrumbs",
+                "lang"
+              ],
+              "deep": [
+                "title",
+                "meta",
+                "headings",
+                "intent",
+                "quality",
+                "freshness",
+                "internal",
+                "images",
+                "urls",
+                "breadcrumbs",
+                "outbound",
+                "lang"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "title",
+              "label": "Başlık etiketi (title)",
+              "explanation": "Arama sonucunda tıklanan başlığın kaynağı olan <title> etiketi.",
+              "scenario": "Her denetimde.",
+              "example": "Bütün hizmet sayfalarının başlığının yalnız firma adı olduğu bulunur.",
+              "ruleDetail": "Her sayfada tek, boş olmayan, sayfaya özgü ve içeriği anlatan bir <title> var mı; şablondan kalma (“Ana Sayfa”, “Untitled”, yalnız marka adı) başlıklar, aynı başlığı paylaşan sayfalar, anahtar kelime doldurulmuş ya da gereğinden uzun başlıklar. Karakter sayısını kesin kural olarak değil bilgi olarak raporla; arama sonucunda Google'ın başlığı farklı gösterdiği örnekleri not et."
+            },
+            {
+              "value": "meta",
+              "label": "Meta açıklama",
+              "explanation": "Arama sonucundaki açıklama metninin kaynağı olabilen meta description etiketi.",
+              "scenario": "Her denetimde; özellikle tıklama oranı düşük sayfalarda.",
+              "example": "Blog yazılarının hepsinde aynı genel açıklamanın kullanıldığı bulunur.",
+              "ruleDetail": "Sayfaya özgü ve sayfanın içeriğini özetleyen meta açıklama var mı; eksik, çift ya da sayfayla ilgisiz açıklamalar. Meta açıklamanın sıralama etkeni olmadığını, Google'ın açıklamayı sorguya göre sayfa metninden yeniden oluşturabileceğini, ancak tıklama oranını etkilediğini belirt."
+            },
+            {
+              "value": "headings",
+              "label": "Başlık hiyerarşisi (H1–H6)",
+              "explanation": "Sayfanın ana başlığının ve alt başlıklarının içeriği mantıklı bölümlere ayırması.",
+              "scenario": "İçerik sayfaları, hizmet ve ürün sayfaları.",
+              "example": "Logonun H1, sayfa başlığının ise yalnız kalın metin olduğu bulunur.",
+              "ruleDetail": "Sayfanın ana konusunu anlatan görünür bir ana başlık var mı; H2 ve H3'ler içeriği mantıklı bölümlere ayırıyor mu; görsel stil için başlık etiketi kullanımı, boş ya da gizli başlıklar. Birden çok H1'i tek başına hata sayma; yapı anlaşılmıyorsa bulgu yaz."
+            },
+            {
+              "value": "intent",
+              "label": "Arama niyeti ve hedef sorgu",
+              "explanation": "Sayfanın hedeflediği sorgunun niyetine (bilgi, karşılaştırma, satın alma, yerel) uygun olup olmadığı ve aynı sorguyu hedefleyen sayfalar.",
+              "scenario": "Trafiği beklenenden düşük sayfalar ve büyüyen içerik arşivleri.",
+              "example": "“İmplant fiyatları” sorgusunu hem hizmet sayfası hem üç blog yazısının hedeflediği, hiçbirinin fiyat bilgisi vermediği bulunur.",
+              "ruleDetail": "Her öncelikli sayfanın hangi sorguyu ya da konuyu hedeflediği belirgin mi; içerik o sorgunun niyetine ve arama sonucunda üst sıralardaki sayfa türlerine uyuyor mu; aynı sorguyu hedefleyen birden çok sayfa (yamyamlaşma) var mı. Ortak Bilgiler › Hedef Sorgular verildiyse onlara göre, verilmediyse sayfa içeriğinden ve (erişim varsa) Search Console sorgularından çıkararak değerlendir."
+            },
+            {
+              "value": "quality",
+              "label": "İçerik kalitesi ve güvenilirlik (E-E-A-T)",
+              "explanation": "İçeriğin özgün, yararlı ve güvenilir olup olmadığı; deneyim, uzmanlık, yetkinlik ve güven sinyalleri.",
+              "scenario": "Sağlık, finans, hukuk gibi kişinin hayatını ya da parasını etkileyen konular ve içerik ağırlıklı siteler.",
+              "example": "Sağlık yazılarında yazar, hekim onayı ve kaynak bulunmadığı, bilgilerin genel geçer olduğu bulunur.",
+              "ruleDetail": "Google'ın faydalı içerik sorularına göre değerlendir: özgün bilgi, birinci elden deneyim ve veri var mı; yazar ya da uzman bilgisi, kaynak gösterimi, yayın ve güncelleme tarihi; hakkımızda, iletişim ve şirket bilgileri; sağlık, finans, hukuk gibi konularda uzman doğrulaması. Yüzeysel, tekrar eden ya da toplu üretilmiş görünen içerikleri örnekleriyle belirt; içeriğin yapay zekâyla üretilip üretilmediğini değil, ziyaretçiye değer katıp katmadığını değerlendir."
+            },
+            {
+              "value": "freshness",
+              "label": "Güncellik ve ince içerik",
+              "explanation": "Eski bilgi taşıyan ya da çok az içerikli sayfalar.",
+              "scenario": "Fiyat, kampanya, mevzuat ya da tarih bilgisi içeren siteler ve uzun süredir güncellenmeyen bloglar.",
+              "example": "2023 kampanya sayfalarının hâlâ dizinde olduğu ve menüden bağlantı aldığı bulunur.",
+              "ruleDetail": "Eski fiyat, tarih, kampanya ya da mevzuat bilgisi içeren sayfalar; çok az içerikli sayfalar; güncellenmesi, birleştirilmesi ya da kaldırılması gereken içerikler. Kaldırılacak sayfalar için 301 (karşılığı varsa) ya da 410 öner; yalnız tarihi değiştirip içeriği güncellememenin yanıltıcı olduğunu belirt."
+            },
+            {
+              "value": "internal",
+              "label": "İç bağlantılar ve bağlantı metni",
+              "explanation": "Sayfalar arasındaki bağlantıların yeterliliği ve bağlantı metinlerinin hedef sayfayı anlatması.",
+              "scenario": "Her denetimde; özellikle bloglar ve büyük kataloglar.",
+              "example": "Blog yazılarından hizmet sayfalarına hiç bağlantı verilmediği, bağlantı metinlerinin “tıklayın” olduğu bulunur.",
+              "ruleDetail": "Önemli sayfalara yeterli iç bağlantı var mı; bağlantı metinleri hedef sayfayı anlatıyor mu (“tıklayın”, “devamı”, “buraya” yerine); kırık iç bağlantılar; iç bağlantıda gereksiz nofollow; ilgili içerikler arasında bağlantı fırsatları — her fırsat için kaynak ve hedef adres öner."
+            },
+            {
+              "value": "images",
+              "label": "Görseller",
+              "explanation": "Görsellerin alt metni, dosya adı, biçimi, boyutu ve yüklenme biçimi.",
+              "scenario": "Görsel ağırlıklı siteler, e-ticaret, portfolyo ve görsel aramadan trafik beklenen siteler.",
+              "example": "Ürün görsellerinin alt metninin boş, dosya adlarının “IMG_4532.jpg” olduğu, ana görselin 2,4 MB olduğu bulunur.",
+              "ruleDetail": "Anlamlı görsellerde açıklayıcı alt metin, süs görsellerinde boş alt; açıklayıcı dosya adları; modern biçim (WebP / AVIF) ve gösterim boyutuna uygun çözünürlük; width / height belirtilmiş mi; ekran dışı görseller geç yükleniyor, ilk ekrandaki ana görsel (LCP) geç yüklenmiyor mu; önemli görsellerin CSS arka planı yerine <img> ile verilmesi."
+            },
+            {
+              "value": "urls",
+              "label": "Adres yapısı",
+              "explanation": "Adreslerin okunabilir, kısa ve tutarlı olması.",
+              "scenario": "Yeni siteler, taşınan siteler ve çok dilli yapılar.",
+              "example": "Ürün adreslerinin “/index.php?id=4821” biçiminde olduğu bulunur.",
+              "ruleDetail": "Okunabilir, kısa, küçük harfli, kelimeleri tire ile ayıran adresler; anlamsız kimlik ve parametreler; Türkçe karakterlerin tutarlı yazımı (ı, ş, ğ, ü, ö, ç ya Latin karşılığıyla ya da kodlanmış olarak, ama hep aynı biçimde); dil ve kategori yapısının adreste tutarlı olması. Yalnız adres güzelleştirmek için yönlendirme gerektiren değişiklikleri düşük öncelikli öner."
+            },
+            {
+              "value": "breadcrumbs",
+              "label": "Kırıntı (breadcrumb) gezinme",
+              "explanation": "Kullanıcının sitedeki konumunu gösteren “Ana Sayfa › Kategori › Sayfa” yolu.",
+              "scenario": "Kategorisi olan siteler, e-ticaret, bilgi bankası ve bloglar.",
+              "example": "Ürün sayfalarında kırıntı bulunmadığı, kategori sayfalarına iç bağlantının yalnız menüden geldiği bulunur.",
+              "ruleDetail": "Derin sayfalarda konumu gösteren bağlantılı kırıntı gezinmesi var mı; kırıntı adımları gerçek sayfalara mı bağlanıyor; BreadcrumbList yapısal verisi görünür kırıntıyla tutarlı mı."
+            },
+            {
+              "value": "outbound",
+              "label": "Dış bağlantılar",
+              "explanation": "Siteden başka sitelere verilen bağlantıların durumu ve niteliği.",
+              "scenario": "Blog, haber, kaynak gösteren ve sponsorlu içerik yayımlayan siteler.",
+              "example": "Sponsorlu tanıtım yazılarındaki bağlantılarda rel=sponsored bulunmadığı bulunur.",
+              "ruleDetail": "Kırık dış bağlantılar; ücretli, sponsorlu ya da reklam bağlantılarında rel=sponsored, kullanıcı içeriğinde (yorum, forum) rel=ugc kullanımı; güvenilir kaynaklara bağlantı."
+            },
+            {
+              "value": "lang",
+              "label": "Dil ve karakter kodlaması",
+              "explanation": "Sayfanın dilinin doğru bildirilmesi ve Türkçe karakterlerin doğru görünmesi.",
+              "scenario": "Her denetimde; çok dilli sitelerde mutlaka.",
+              "example": "Türkçe sayfalarda html lang=\"en\" yazdığı bulunur.",
+              "ruleDetail": "html lang özniteliği sayfa diline uygun mu; karakter kodlaması UTF-8 mi; başlık, açıklama ve içerikte bozuk Türkçe karakter; aynı sayfada karışık dil."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_serp",
+      "name": "Yapısal Veri & Arama Görünümü",
+      "en": "Structured Data & Search Appearance",
+      "icon": "❏",
+      "desc": "Yapısal verinin varlığı, geçerliliği ve görünür içerikle tutarlılığı, zengin sonuç desteğinin güncelliği, arama sonucu görünümü, önizleme denetimleri ve paylaşım önizlemesinden hangilerinin denetleneceğini belirler",
+      "agents": [
+        "T"
+      ],
+      "guide": {
+        "purpose": "Yapısal veri (schema.org) arama motorlarının sayfadaki varlıkları — kurum, ürün, yazı, şube, video — doğru anlamasına ve uygun sayfalarda zengin sonuç gösterilmesine yardım eder. Bu bölüm işaretlemenin doğru, geçerli ve görünür içerikle tutarlı olduğunu; ayrıca sitenin arama sonucunda ve sosyal paylaşımlarda nasıl göründüğünü denetler.",
+        "criteria": [
+          "Önce sayfa türüne uygun işaretleme var mı ona bakın: kurum ve site bilgisi ana sayfada, kırıntı iç sayfalarda, ürün ürün sayfasında.",
+          "İşaretlemedeki her bilgi sayfada görünmeli; görünmeyen fiyat, puan ya da soru işaretlemek yönergelere aykırıdır.",
+          "Zengin sonuç türleri değişir: Google HowTo'yu 2023'te, FAQ zengin sonucunu 7 Mayıs 2026'da kaldırdı; denetimde güncel desteklenen türler esas alınır.",
+          "Google'a göre yapısal veri yapay zekâ özelliklerinde görünmek için şart değildir; yine de varlıkların doğru anlaşılmasına yardım eder."
+        ],
+        "pitfalls": [
+          "Zengin sonuç garantisi beklemek: geçerli işaretleme, gösterimi garanti etmez.",
+          "Eklenti ya da tema tarafından eklenen işaretlemeyle elle eklenen işaretlemenin aynı varlığı çelişen bilgilerle iki kez tanımlaması.",
+          "İşletmenin kendi sitesinde kendisi hakkındaki yorumlara yıldız işaretlemesi eklemek; Google bunları zengin sonuç olarak göstermez.",
+          "Paylaşım görselini (og:image) yalnız ana sayfada tanımlayıp bütün sayfalarda aynı görseli kullanmak."
+        ],
+        "resources": [
+          {
+            "title": "Yapılandırılmış veri işaretlemeye giriş",
+            "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=tr",
+            "note": "Yapısal verinin nasıl çalıştığı ve hangi biçimlerin desteklendiği."
+          },
+          {
+            "title": "Genel yapılandırılmış veri yönergeleri",
+            "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies?hl=tr",
+            "note": "İşaretlemenin görünür içerikle tutarlılığı ve manuel işleme yol açan ihlaller."
+          },
+          {
+            "title": "Zengin Sonuçlar Testi",
+            "url": "https://search.google.com/test/rich-results?hl=tr",
+            "note": "Bir sayfanın Google zengin sonuçlarına uygunluğunu ve hatalarını gösteren resmî araç."
+          },
+          {
+            "title": "Schema Markup Validator",
+            "url": "https://validator.schema.org/",
+            "note": "Google'a özgü olmayan, bütün schema.org işaretlemesini doğrulayan araç."
+          },
+          {
+            "title": "Arama sonuçlarında site simgesi",
+            "url": "https://developers.google.com/search/docs/appearance/favicon-in-search?hl=tr",
+            "note": "Favicon'un boyut, oran ve adres şartları."
+          },
+          {
+            "title": "Google Arama'daki site adları",
+            "url": "https://developers.google.com/search/docs/appearance/site-names?hl=tr",
+            "note": "Arama sonucunda görünen site adının WebSite yapısal verisiyle belirtilmesi."
+          },
+          {
+            "title": "The Open Graph protocol",
+            "url": "https://ogp.me/",
+            "note": "Sosyal paylaşım önizlemesini belirleyen og: etiketlerinin resmî tanımı (İngilizce)."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_serp_checks",
+          "label": "Yapısal Veri ve Görünüm Kontrolleri",
+          "en": "Structured Data and Appearance Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Yapısal veri ve arama görünümü denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Yapısal verinin ve sitenin arama sonucu ile paylaşımlardaki görünümünün hangi açılardan denetleneceğini seçin.",
+          "scenario": "E-ticaret, yerel işletme, haber ve tarif gibi zengin sonuçtan yararlanan sitelerde bütün kontroller önemlidir; kurumsal sitelerde varlık ve geçerlilik kontrolleri yeterli olabilir.",
+          "example": "Standart denetimde yapısal veri türleri, geçerlilik, tutarlılık, zengin sonuç desteği, arama sonucu görünümü, önizleme denetimleri ve paylaşım önizlemesi kontrol edilir.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "sd_presence",
+                "sd_valid",
+                "snippet"
+              ],
+              "standard": [
+                "sd_presence",
+                "sd_valid",
+                "sd_match",
+                "sd_support",
+                "snippet",
+                "preview_ctrl",
+                "social"
+              ],
+              "deep": [
+                "sd_presence",
+                "sd_valid",
+                "sd_match",
+                "sd_support",
+                "snippet",
+                "preview_ctrl",
+                "social",
+                "media"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "sd_presence",
+              "label": "Yapısal veri türleri",
+              "explanation": "Sayfalarda hangi schema.org türlerinin bulunduğu ve sayfa türüne uygun olup olmadığı.",
+              "scenario": "Her denetimde.",
+              "example": "Ana sayfada Organization ve WebSite işaretlemesi bulunmadığı, ürünlerde Product işaretlemesinde fiyat olmadığı bulunur.",
+              "ruleDetail": "Sayfalardaki schema.org türlerini (JSON-LD, Microdata, RDFa) çıkar ve sayfa türüne uygunluğunu değerlendir: ana sayfada Organization (ya da LocalBusiness) ve WebSite, iç sayfalarda BreadcrumbList, yazılarda Article / BlogPosting, ürünlerde Product ve Offer, şubelerde LocalBusiness, videolarda VideoObject. Eksik ve sayfayla ilgisiz türleri listele."
+            },
+            {
+              "value": "sd_valid",
+              "label": "Geçerlilik ve zorunlu alanlar",
+              "explanation": "İşaretlemenin söz dizimi ve zorunlu / önerilen alanları.",
+              "scenario": "Her denetimde; özellikle eklentiyle işaretleme yapan sitelerde.",
+              "example": "JSON-LD'de kapanmamış bir parantez nedeniyle bütün işaretlemenin okunamadığı bulunur.",
+              "ruleDetail": "Zengin Sonuçlar Testi ve Schema Markup Validator ile söz dizimi hataları, eksik zorunlu ve önerilen alanlar; işaretlemenin ham HTML'de mi JavaScript ile mi eklendiği; aynı varlık için birden çok ve çelişen işaretleme (tema + eklenti + elle). Komut satırında bu araçlara erişemiyorsan JSON-LD'yi ayrıştırıp alanları schema.org ve Google belgelerine göre kontrol et, testlerin kullanıcı tarafından yapılmasını öner."
+            },
+            {
+              "value": "sd_match",
+              "label": "Görünür içerikle tutarlılık",
+              "explanation": "İşaretlemedeki bilgilerin sayfada görünen bilgiyle aynı olması.",
+              "scenario": "Fiyat, stok, puan, adres ya da çalışma saati işaretleyen siteler.",
+              "example": "İşaretlemede 4,9 puan ve 1.200 yorum yazdığı, sayfada hiç yorum gösterilmediği bulunur.",
+              "ruleDetail": "İşaretlemedeki fiyat, para birimi, stok, puan, yorum, adres, çalışma saati, soru-cevap gibi bilgiler sayfada görünüyor ve aynı mı; sayfada olmayan bilgiyi işaretlemek Google'ın yapılandırılmış veri yönergelerine aykırıdır ve manuel işleme yol açabilir. İşletmenin kendi sitesinde kendisi hakkındaki yorumlara yıldız işaretlemesinin zengin sonuç üretmediğini dikkate al."
+            },
+            {
+              "value": "sd_support",
+              "label": "Zengin sonuç desteğinin güncelliği",
+              "explanation": "Kullanılan işaretleme türlerinin Google'da hâlâ zengin sonuç üretip üretmediği.",
+              "scenario": "Eski bir SEO çalışmasıyla FAQ, HowTo ya da benzeri işaretlemeler eklenmiş siteler.",
+              "example": "Bütün hizmet sayfalarına FAQPage işaretlemesi eklendiği, ancak Google'ın FAQ zengin sonucunu 7 Mayıs 2026'da kaldırdığı bilgi notu olarak yazılır.",
+              "ruleDetail": "Kullanılan türlerin Google Arama'da hâlâ zengin sonuç üretip üretmediğini Google'ın güncel belgeleri ve belge güncelleme günlüğüyle doğrula. HowTo zengin sonucu 2023'te, FAQ zengin sonucu 7 Mayıs 2026'da Google Arama'dan kaldırıldı; bu işaretlemeler zarar vermez ama zengin sonuç beklentisiyle raporlanmaz ve kaldırılmaları zorunlu değildir. Bu bulguları P3 bilgi notu olarak yaz; Bing ve diğer hizmetlerin kullanımını ayrıca belirt."
+            },
+            {
+              "value": "snippet",
+              "label": "Arama sonucu görünümü",
+              "explanation": "Sitenin arama sonucundaki başlık, açıklama, site adı, site simgesi ve tarih görünümü.",
+              "scenario": "Her denetimde; marka sorgularında mutlaka.",
+              "example": "Marka aramasında site adı yerine alan adının, site simgesi yerine genel dünya simgesinin göründüğü bulunur.",
+              "ruleDetail": "Marka ve öncelikli sorgularda başlık bağlantısı ve açıklama nasıl görünüyor; site adı (WebSite yapısal verisi ve tutarlı ad kullanımı); site simgesi (favicon: kare, en az 8×8 piksel, 48×48'den büyük önerilir, sabit ve taranabilir adres); tarih gösterimi sayfadaki tarihle tutarlı mı. Arama sonucunu göremediğin ortamda kullanıcıdan ekran görüntüsü iste ya da kontrolü “doğrulanamadı” olarak işaretle."
+            },
+            {
+              "value": "preview_ctrl",
+              "label": "Önizleme denetimleri",
+              "explanation": "nosnippet, max-snippet gibi arama sonucu önizlemesini kısıtlayan etiketler.",
+              "scenario": "Eklenti ya da CDN ayarlarıyla robots etiketleri eklenmiş siteler.",
+              "example": "Bütün sayfalarda max-snippet:0 bulunduğu ve sitenin AI Overviews'da hiç gösterilmediği bulunur.",
+              "ruleDetail": "nosnippet, max-snippet, max-image-preview, max-video-preview, data-nosnippet ve noarchive kullanımı; önizlemeyi ya da büyük görsel önizlemesini yanlışlıkla kısıtlayan etiketler. Bu denetimlerin Google'ın AI Overviews ve AI Mode'daki görünürlüğü de belirlediğini belirt."
+            },
+            {
+              "value": "social",
+              "label": "Paylaşım önizlemesi (Open Graph / X)",
+              "explanation": "Sayfa sosyal medyada ya da mesajlaşma uygulamalarında paylaşıldığında görünen başlık, açıklama ve görsel.",
+              "scenario": "Sosyal medyadan trafik alan siteler, bloglar ve kampanya sayfaları.",
+              "example": "Bütün sayfaların paylaşımda logo ve ana sayfa başlığıyla göründüğü bulunur.",
+              "ruleDetail": "og:title, og:description, og:image (1200×630 önerilir, mutlak ve erişilebilir adres), og:url, og:type ve twitter:card etiketleri var mı ve sayfaya özgü mü. Sıralama etkeni olmadığını, tıklanma ve marka görünümü için raporlandığını belirt."
+            },
+            {
+              "value": "media",
+              "label": "Görsel ve video aramaları",
+              "explanation": "Görsellerin ve videoların Google Görseller ve video sonuçlarında bulunabilmesi.",
+              "scenario": "Ürün, portfolyo, tarif, eğitim ve video içeriği yoğun siteler.",
+              "example": "Videoların yalnız YouTube gömmesi olarak ana sayfada durduğu, kendi izleme sayfası olmadığı bulunur.",
+              "ruleDetail": "Önemli görsellerin taranabilir <img> ile verilmesi ve görsel site haritası; videolar için ayrı izleme sayfası, VideoObject işaretlemesi, küçük resim ve video site haritası."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_perf",
+      "name": "Performans & Sayfa Deneyimi",
+      "en": "Performance & Page Experience",
+      "icon": "ϟ",
+      "desc": "Core Web Vitals saha verisi, Lighthouse ölçümü, kaynak ağırlığı ve önbellek, üçüncü taraf betikler, mobil uyumluluk, HTTPS, açılır pencereler ve temel erişilebilirlikten hangilerinin denetleneceğini ve ölçüm önceliğini belirler",
+      "agents": [
+        "T",
+        "S"
+      ],
+      "guide": {
+        "purpose": "Sayfa deneyimi, ziyaretçinin sayfayı ne kadar hızlı görüp kullanabildiğini ve sayfanın mobilde, güvenli bağlantıyla, rahatsız edici öğeler olmadan çalışıp çalışmadığını kapsar. Google, iyi Core Web Vitals değerlerinin sıralama sistemlerinin ödüllendirmek istediği şeyle uyumlu olduğunu belirtir; ancak bu tek başına üst sıralamayı garanti etmez.",
+        "criteria": [
+          "Saha verisi (gerçek kullanıcılar, CrUX) asıl ölçüttür; Lighthouse gibi laboratuvar ölçümleri nedeni bulmak içindir.",
+          "Eşikler: LCP 2,5 saniye, INP 200 milisaniye, CLS 0,1 — 75. yüzdelikte, mobil ve masaüstü ayrı.",
+          "Google siteyi mobil sürümünden dizine ekler; mobil sürümde içerik, yapısal veri ve bağlantılar eksik olmamalı.",
+          "Hız sorunlarının çoğu birkaç kaynaktan gelir: büyük görseller, üçüncü taraf betikler, önbelleklenmeyen kaynaklar."
+        ],
+        "pitfalls": [
+          "Tek bir Lighthouse puanını kesin sonuç gibi raporlamak; ölçüm ağ ve cihaza göre değişir, birkaç çalıştırmanın ortancası alınmalı.",
+          "Saha verisi yetersiz olan sayfalar için CWV sonucu uydurmak; bu durumda “yeterli veri yok” yazılmalı.",
+          "Performans için içerik ya da işlev kaldırmayı önermek; önce aynı işi daha hafif yapmanın yolları aranmalı.",
+          "Erişilebilirlik denetimini birkaç otomatik kontrolle tamamlanmış saymak; otomatik araçlar sorunların ancak bir kısmını bulur."
+        ],
+        "resources": [
+          {
+            "title": "Core Web Vitals ve Google arama sonuçları",
+            "url": "https://developers.google.com/search/docs/appearance/core-web-vitals?hl=tr",
+            "note": "LCP, INP ve CLS eşikleri ve aramayla ilişkisi."
+          },
+          {
+            "title": "Google sayfa deneyimini anlama",
+            "url": "https://developers.google.com/search/docs/appearance/page-experience?hl=tr",
+            "note": "Sayfa deneyiminin hangi unsurlardan oluştuğu ve nasıl değerlendirildiği."
+          },
+          {
+            "title": "Web Vitals",
+            "url": "https://web.dev/articles/vitals?hl=tr",
+            "note": "Metriklerin tanımları, ölçüm araçları ve saha / laboratuvar farkı."
+          },
+          {
+            "title": "PageSpeed Insights",
+            "url": "https://pagespeed.web.dev/",
+            "note": "Bir sayfanın saha verisini (CrUX) ve Lighthouse ölçümünü birlikte veren ücretsiz araç."
+          },
+          {
+            "title": "Mobil öncelikli dizine ekleme",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing?hl=tr",
+            "note": "Mobil sürümde içerik, yapısal veri ve meta verinin masaüstüyle eşdeğer olması."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_perf_checks",
+          "label": "Performans ve Deneyim Kontrolleri",
+          "en": "Performance and Experience Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Performans ve sayfa deneyimi denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Hız, mobil uyumluluk, güvenlik ve kullanılabilirlik kontrollerinden hangilerinin yapılacağını seçin.",
+          "scenario": "Saha verisi her denetimde önerilir; Lighthouse ve kaynak ağırlığı kontrolleri sorunun nedenini bulmak için eklenir.",
+          "example": "Hızlı kontrolde Core Web Vitals saha verisi, mobil uyumluluk ve HTTPS kontrol edilir.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "cwv_field",
+                "mobile",
+                "https"
+              ],
+              "standard": [
+                "cwv_field",
+                "lab",
+                "weight",
+                "third",
+                "mobile",
+                "https",
+                "interstitial"
+              ],
+              "deep": [
+                "cwv_field",
+                "lab",
+                "weight",
+                "third",
+                "mobile",
+                "https",
+                "interstitial",
+                "a11y"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "cwv_field",
+              "label": "Core Web Vitals saha verisi",
+              "explanation": "Gerçek kullanıcıların deneyimlediği yükleme (LCP), etkileşim (INP) ve görsel kararlılık (CLS) değerleri.",
+              "scenario": "Her denetimde.",
+              "example": "Mobilde LCP'nin 4,1 saniye olduğu, masaüstünde iyi olduğu bulunur.",
+              "ruleDetail": "PageSpeed Insights / CrUX'ten (ve erişim varsa Search Console Core Web Vitals raporundan) gerçek kullanıcı verisi: LCP ≤ 2,5 sn, INP ≤ 200 ms, CLS ≤ 0,1 — 75. yüzdelikte, mobil ve masaüstü ayrı; sayfa ve kaynak (origin) düzeyi. Saha verisi yetersizse bunu açıkça belirt, laboratuvar sonucunu saha verisi gibi sunma."
+            },
+            {
+              "value": "lab",
+              "label": "Laboratuvar ölçümü (Lighthouse)",
+              "explanation": "Kontrollü ortamda yapılan ölçüm; sorunların nedenini gösterir.",
+              "scenario": "Saha verisinde sorun görülen ya da saha verisi olmayan sayfalar.",
+              "example": "LCP öğesinin geç yüklenen bir arka plan görseli olduğu ve 1,2 saniye oluşturmayı engelleyen CSS bulunduğu görülür.",
+              "ruleDetail": "Öncelikli sayfaları ve her şablondan bir örneği mobil ayarda Lighthouse ile ölç (en az 3 çalıştırmanın ortancası): Performans, Erişilebilirlik, En İyi Uygulamalar ve SEO puanları; TTFB, FCP, LCP öğesi, TBT ve CLS kaynakları. Ölçüm koşullarını (araç sürümü, cihaz ayarı, tarih) yaz; laboratuvar sonucunun saha verisinin yerine geçmediğini belirt."
+            },
+            {
+              "value": "weight",
+              "label": "Kaynak ağırlığı ve önbellek",
+              "explanation": "Sayfanın indirdiği dosyaların boyutu, sıkıştırılması ve önbelleklenmesi.",
+              "scenario": "Yavaş sayfalar ve görsel ağırlıklı siteler.",
+              "example": "Sayfa başına 6 MB indirildiği, görsellerin önbellek süresinin 0 olduğu bulunur.",
+              "ruleDetail": "Sayfa ağırlığı, büyük görseller, kullanılmayan JavaScript ve CSS, oluşturmayı engelleyen kaynaklar, metin sıkıştırma (Brotli / gzip), Cache-Control süreleri, CDN kullanımı, HTTP/2 ya da HTTP/3, yazı tipi yükleme (font-display, önceden yükleme, gereksiz ağırlıklar)."
+            },
+            {
+              "value": "third",
+              "label": "Üçüncü taraf betikler",
+              "explanation": "Etiket yöneticisi, canlı sohbet, reklam, harita, video ve analitik betiklerinin hıza etkisi.",
+              "scenario": "Çok sayıda pazarlama aracı kullanan siteler.",
+              "example": "Üç ayrı analitik aracının ve iki sohbet betiğinin aynı anda yüklendiği, INP'yi bozduğu bulunur.",
+              "ruleDetail": "Üçüncü taraf betiklerin listesi, yükleme süresine ve ana iş parçacığına (INP) etkisi; gereksiz, çift ya da kullanılmayan etiketler; geciktirilebilecek ya da etkileşimle yüklenebilecek betikler."
+            },
+            {
+              "value": "mobile",
+              "label": "Mobil uyumluluk ve mobil öncelikli dizine ekleme",
+              "explanation": "Sayfanın mobilde rahat kullanılması ve mobil sürümün masaüstüyle aynı içeriği taşıması.",
+              "scenario": "Her denetimde.",
+              "example": "Mobilde ürün açıklamalarının gizlendiği ve yapısal verinin yalnız masaüstü şablonunda olduğu bulunur.",
+              "ruleDetail": "viewport etiketi, okunabilir yazı boyutu, dokunma hedeflerinin boyutu ve aralığı, yatay kaydırma; mobil sürümde masaüstüyle aynı ana içerik, başlıklar, yapısal veri, meta etiketler ve iç bağlantılar var mı (Google siteyi mobil sürümünden dizine ekler)."
+            },
+            {
+              "value": "https",
+              "label": "HTTPS ve güvenlik",
+              "explanation": "Güvenli bağlantı ve sitenin hacklenmiş ya da zararlı içerik barındırmaması.",
+              "scenario": "Her denetimde.",
+              "example": "Sertifikanın 9 gün içinde sona ereceği ve blogda http görseller yüklendiği bulunur.",
+              "ruleDetail": "Geçerli ve süresi yakında dolmayan sertifika, karışık içerik (https sayfada http kaynak), HSTS; güvenlik başlıkları (Content-Security-Policy, X-Content-Type-Options, Referrer-Policy) bilgi notu olarak; hacklenmiş içerik izleri (sitede olmaması gereken spam sayfalar, beklenmeyen yönlendirmeler, gizli bağlantılar). Güvenlik açığı taraması yapma; şüpheli bulguyu yalnız raporla."
+            },
+            {
+              "value": "interstitial",
+              "label": "Müdahaleci açılır pencereler",
+              "explanation": "İçeriği kapatan açılır pencere, uygulama yükleme bandı ya da abonelik kutuları.",
+              "scenario": "Kampanya, bülten ya da çerez bandı kullanan siteler.",
+              "example": "Mobilde sayfa açılır açılmaz tam ekran bülten penceresi çıktığı bulunur.",
+              "ruleDetail": "Mobilde içeriği kapatan tam ekran açılır pencere, uygulama yükleme bandı ya da abonelik kutusu; çerez onay bandının içeriği gereğinden fazla örtmesi; yasal zorunluluk olan pencerelerin (çerez rızası, yaş doğrulaması) ayrı değerlendirilmesi."
+            },
+            {
+              "value": "a11y",
+              "label": "Temel erişilebilirlik",
+              "explanation": "Sitenin engelli kullanıcılar ve yardımcı teknolojilerle kullanılabilirliğinin aramayla kesişen kısmı.",
+              "scenario": "Kamu, eğitim, sağlık ve geniş kitleye hitap eden siteler.",
+              "example": "Form alanlarının etiketsiz, düğmelerin yalnız simgeden oluştuğu ve metin kontrastının yetersiz olduğu bulunur.",
+              "ruleDetail": "WCAG 2.2 AA'nın arama ve kullanılabilirlikle kesişen kısmı: görsel alt metinleri, form etiketleri, renk kontrastı, klavyeyle gezinme ve görünür odak, sayfa bölgeleri (landmark), anlamlı bağlantı ve düğme metinleri. Bunun tam bir erişilebilirlik denetimi olmadığını, kapsam dışı kalan konuları raporda belirt."
+            }
+          ]
+        },
+        {
+          "id": "au_perf_device",
+          "label": "Ölçüm Önceliği",
+          "en": "Measurement Priority",
+          "type": "select",
+          "rule": "Performans ölçüm önceliği: {label}.",
+          "explanation": "Performans ve deneyim bulgularında hangi cihaz türünün öncelikli değerlendirileceğini belirler. Ortak Bilgiler › Kitlenin Cihaz Kullanımı seçiliyse bu karar oradan kendiliğinden türetilir.",
+          "scenario": "Trafiğin çoğu mobilden geliyorsa (Türkiye'de çoğu sitede öyledir) mobil öncelik seçin; B2B yazılım ve kurumsal araçlarda masaüstü payı yüksek olabilir.",
+          "example": "Mobil öncelikli denetimde bulguların öncelik düzeyi mobil sonuçlara göre verilir, masaüstü sonuçları karşılaştırma için tabloda yer alır.",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Önce mobil (önerilen)",
+              "explanation": "Bulgular mobil ölçümlere göre önceliklendirilir; Google'ın mobil öncelikli dizine eklemesiyle de uyumludur.",
+              "scenario": "Çoğu site için.",
+              "example": "Mobil LCP 3,8 sn olan sayfa P1, masaüstünde iyi olsa da öyle kalır.",
+              "ruleDetail": "Bulguların önceliğini mobil ölçümlere göre ver; masaüstü sonuçlarını karşılaştırma için tabloda göster."
+            },
+            {
+              "value": "both",
+              "label": "Mobil ve masaüstü eşit",
+              "explanation": "İki cihaz türü ayrı ayrı değerlendirilir ve en kötü sonuç önceliği belirler.",
+              "scenario": "Trafiği iki cihazda dengeli dağılan siteler.",
+              "example": "Masaüstünde CLS sorunu olan sayfa mobilde iyi olsa da P1 alır.",
+              "ruleDetail": "Mobil ve masaüstünü ayrı ayrı değerlendir; önceliği iki sonuçtan kötü olana göre ver."
+            },
+            {
+              "value": "desktop",
+              "label": "Önce masaüstü",
+              "explanation": "Bulgular masaüstü ölçümlerine göre önceliklendirilir.",
+              "scenario": "Ziyaretçilerin büyük çoğunluğu masaüstü kullanan B2B ve kurumsal araçlar.",
+              "example": "Yönetim yazılımı tanıtım sitesinde masaüstü sonuçları önceliklidir; mobil sonuçlar yine raporlanır.",
+              "ruleDetail": "Bulguların önceliğini masaüstü ölçümlerine göre ver; Google'ın mobil sürümü dizine eklediğini ve mobil sorunların görünürlüğü yine etkileyebileceğini not et."
+            }
+          ],
+          "derive": {
+            "from": "mk_device",
+            "map": {
+              "mobile": "mobile",
+              "desktop": "desktop",
+              "mixed": "both"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "au_intl",
+      "name": "Uluslararası & Yerel SEO",
+      "en": "International & Local SEO",
+      "icon": "⊕",
+      "desc": "Çok dilli sitelerde hreflang, dil yapısı ve çeviri; yerel işletmelerde Google İşletme Profili, ad-adres-telefon tutarlılığı, şube sayfaları, yerel yapısal veri ve yorumlardan hangilerinin denetleneceğini belirler",
+      "agents": [
+        "Y"
+      ],
+      "guide": {
+        "purpose": "Bu bölüm iki farklı ihtiyaca hizmet eder: birden çok dil ya da ülkeye hitap eden sitelerin doğru kullanıcıya doğru sürümle gösterilmesi ve fiziksel konumu ya da hizmet bölgesi olan işletmelerin yerel aramalarda ve haritalarda bulunması. Sitenize uymayan kontrolleri seçmeyin; proje kararlarınıza (Çok Dillilik, Yerel SEO) göre öneriler çıkar.",
+        "criteria": [
+          "Çok dilli sitede her sürüm diğerlerini hreflang ile karşılıklı göstermeli; tek yönlü hreflang yok sayılır.",
+          "Yerel aramada İşletme Profili çoğu zaman siteden daha önce görülür; profil bilgileri siteyle birebir aynı olmalı.",
+          "Şube sayfaları her şube için gerçekten farklı ve yararlı bilgi taşımalı.",
+          "Google, yerel sıralamanın alaka, uzaklık ve bilinirlik etkenlerine dayandığını belirtir; uzaklığı değiştiremezsiniz, diğer ikisini iyileştirebilirsiniz."
+        ],
+        "pitfalls": [
+          "Ziyaretçiyi IP'ye ya da tarayıcı diline göre zorla yönlendirmek; arama tarayıcıları diğer dil sürümlerini göremez.",
+          "Yalnız şehir adı değiştirilmiş kopya sayfalar (kapı sayfaları) üretmek; Google spam politikasına aykırıdır.",
+          "İşletme adına anahtar kelime eklemek ya da sahte yorum toplamak; profil askıya alınabilir.",
+          "Makine çevirisini düzeltmeden yayımlamak ve menü, başlık, meta açıklama gibi alanları çevirmeden bırakmak."
+        ],
+        "resources": [
+          {
+            "title": "Sayfalarınızın yerelleştirilmiş sürümleri",
+            "url": "https://developers.google.com/search/docs/specialty/international/localized-versions?hl=tr",
+            "note": "hreflang'in HTML, HTTP başlığı ve site haritasıyla doğru kullanımı."
+          },
+          {
+            "title": "Çok bölgeli ve çok dilli siteleri yönetme",
+            "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites?hl=tr",
+            "note": "Dil ve ülke adres yapısı seçenekleri ve otomatik yönlendirme uyarısı."
+          },
+          {
+            "title": "Google'daki yerel sıralamanızı yükseltme",
+            "url": "https://support.google.com/business/answer/7091?hl=tr",
+            "note": "İşletme Profili'nin yerel sıralama etkenleri ve profil bilgilerinin yönetimi."
+          },
+          {
+            "title": "Yerel işletme (LocalBusiness) yapılandırılmış verisi",
+            "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business?hl=tr",
+            "note": "Şube bilgilerinin işaretlenmesi için zorunlu ve önerilen alanlar."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_intl_checks",
+          "label": "Uluslararası ve Yerel SEO Kontrolleri",
+          "en": "International and Local SEO Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Uluslararası ve yerel SEO denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Sitenin dil ve bölge yapısına ya da yerel işletme olmasına göre yapılacak kontrolleri seçin. Siteye uymayan kontrolleri boş bırakın.",
+          "scenario": "Çok dilli sitede ilk üç kontrol, yerel işletmede İşletme Profili ve sonrası önerilir; proje kararlarınız buna göre öneri üretir.",
+          "example": "Tek şubeli bir diş kliniğinde İşletme Profili, NAP tutarlılığı, yerel yapısal veri ve yorumlar seçilir.",
+          "recommend": [
+            {
+              "field": "operating_region",
+              "map": {
+                "international": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ]
+              }
+            },
+            {
+              "field": "mk_languages",
+              "map": {
+                "en": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ],
+                "ar": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ],
+                "de": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ],
+                "ru": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ],
+                "other": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ]
+              }
+            },
+            {
+              "field": "locales",
+              "map": {
+                "Multi Language": [
+                  "hreflang",
+                  "lang_struct",
+                  "translation"
+                ]
+              }
+            },
+            {
+              "field": "local_seo",
+              "map": {
+                "true": [
+                  "gbp",
+                  "nap",
+                  "loc_schema",
+                  "reviews"
+                ]
+              }
+            },
+            {
+              "field": "location_pages",
+              "map": {
+                "true": [
+                  "loc_pages"
+                ]
+              }
+            }
+          ],
+          "options": [
+            {
+              "value": "hreflang",
+              "label": "hreflang etiketleri",
+              "explanation": "Dil ve bölge sürümlerinin birbirini göstermesi; arama motorunun kullanıcıya doğru sürümü göstermesini sağlar.",
+              "scenario": "Birden çok dil ya da ülke sürümü olan her site.",
+              "example": "İngilizce sayfaların Türkçe sürümleri gösterdiği, Türkçe sayfaların ise İngilizceyi göstermediği bulunur.",
+              "ruleDetail": "Her dil / bölge sürümünde karşılıklı (iki yönlü) hreflang, kendine referans ve x-default; geçerli ISO dil ve bölge kodları (tr, tr-TR, en-GB …); hreflang adreslerinin 200 dönen, kanonik ve dizine eklenebilir adresler olması; HTML, HTTP başlığı ya da site haritası yöntemlerinden birinin tutarlı kullanılması."
+            },
+            {
+              "value": "lang_struct",
+              "label": "Dil ve bölge adres yapısı",
+              "explanation": "Dil sürümlerinin alt dizin, alt alan adı ya da ülke uzantısıyla tutarlı ayrılması ve dil seçimi.",
+              "scenario": "Çok dilli ve çok ülkeli siteler.",
+              "example": "Ziyaretçinin tarayıcı diline göre zorunlu yönlendirildiği, Googlebot'un İngilizce sürümü hiç göremediği bulunur.",
+              "ruleDetail": "Alt dizin, alt alan adı ya da ülke uzantısı tutarlı mı; her dil sürümü kendi kalıcı adresinde mi; dil seçimi bağlantıyla yapılabiliyor mu; IP'ye ya da tarayıcı diline göre zorunlu otomatik yönlendirme var mı (arama tarayıcıları diğer sürümleri göremez; öneri gösteren bant yeterlidir)."
+            },
+            {
+              "value": "translation",
+              "label": "Çeviri tamlığı",
+              "explanation": "Dil sürümlerindeki içeriğin, menülerin ve SEO etiketlerinin gerçekten çevrilmiş olması.",
+              "scenario": "Çeviri eklentisi ya da makine çevirisiyle hazırlanmış sürümler.",
+              "example": "Almanca sayfaların başlık ve meta açıklamalarının Türkçe kaldığı bulunur.",
+              "ruleDetail": "Çevrilmemiş menü, başlık, meta açıklama, alt metin, yapısal veri ve düğme metinleri; aynı sayfada karışık dil; düzeltilmeden yayımlanmış makine çevirisi izleri; dil sürümleri arasında içerik eşdeğerliği."
+            },
+            {
+              "value": "gbp",
+              "label": "Google İşletme Profili",
+              "explanation": "İşletmenin Google Arama ve Haritalar'daki profili.",
+              "scenario": "Fiziksel konumu ya da hizmet bölgesi olan her işletme.",
+              "example": "Profilde eski telefon numarası, web sitesi bağlantısının da http adresi olduğu bulunur.",
+              "ruleDetail": "Profil var ve doğrulanmış mı; birincil ve ek kategoriler, adres ya da hizmet bölgesi, telefon, çalışma ve özel gün saatleri, web sitesi bağlantısı (tercih edilen adres; izleme parametresi), fotoğraflar, ürün / hizmetler, güncel paylaşımlar; yorumlara yanıt. Yönetim erişimi yoksa herkese açık profilden kontrol et; işletme adına anahtar kelime eklenmesini spam olarak işaretle."
+            },
+            {
+              "value": "nap",
+              "label": "Ad, adres, telefon (NAP) tutarlılığı",
+              "explanation": "İşletme adı, adresi ve telefonunun her yerde aynı yazılması.",
+              "scenario": "Yerel işletmeler; özellikle adres ya da telefon değiştirenler.",
+              "example": "Sitede, İşletme Profili'nde ve Yandex Haritalar'da üç farklı telefon numarası bulunur.",
+              "ruleDetail": "İşletme adı, adres ve telefonun sitede (alt bilgi, iletişim sayfası, yapısal veri), İşletme Profili'nde, haritalarda (Apple, Bing, Yandex) ve önemli sektör rehberlerinde aynı yazılması; telefonun tıklanabilir (tel:) bağlantı olması; eski adres ve numaraların izleri."
+            },
+            {
+              "value": "loc_pages",
+              "label": "Şube ve hizmet bölgesi sayfaları",
+              "explanation": "Her şube ya da hizmet bölgesi için ayrı ve yararlı sayfa.",
+              "scenario": "Birden çok şubesi ya da belirli bölgelere hizmet veren işletmeler.",
+              "example": "15 ilçe sayfasının yalnız ilçe adı değiştirilmiş aynı metin olduğu bulunur.",
+              "ruleDetail": "Her şube için adres, harita, çalışma saatleri, yol tarifi, şubeye özgü ekip, hizmet ve fotoğraf barındıran ayrı sayfa var mı; sayfalar menüden ya da şube listesinden bağlantı alıyor mu; yalnız yer adı değiştirilmiş kopya sayfaları (kapı sayfaları) Google spam politikasına göre işaretle."
+            },
+            {
+              "value": "loc_schema",
+              "label": "Yerel işletme yapısal verisi",
+              "explanation": "Şube bilgilerinin LocalBusiness işaretlemesiyle verilmesi.",
+              "scenario": "Yerel işletmeler ve şubeli yapılar.",
+              "example": "İşaretlemede çalışma saatlerinin eksik, adresin sayfadakinden farklı olduğu bulunur.",
+              "ruleDetail": "LocalBusiness ya da uygun alt türü (Dentist, Restaurant, LegalService …) ad, adres, telefon, çalışma saatleri, geo ve url ile; birden çok şubede her şube sayfasında kendi işaretlemesi; görünür bilgiyle ve İşletme Profili'yle tutarlılık."
+            },
+            {
+              "value": "reviews",
+              "label": "Yorumlar ve itibar",
+              "explanation": "İşletme hakkındaki yorumların sayısı, puanı ve yanıtlanması.",
+              "scenario": "Müşteri kararında yorumların belirleyici olduğu hizmet sektörleri.",
+              "example": "Son 6 ayda gelen 40 yorumun yalnız 3'üne yanıt verildiği bulunur.",
+              "ruleDetail": "İşletme Profili ve sektör platformlarındaki puan, yorum sayısı ve gelişimi, yanıt oranı ve süresi, olumsuz yorumlara yanıtın niteliği; sitede yorum gösteriliyorsa kaynağı. Sahte yorum toplama ya da yorum karşılığı indirim gibi uygulamaları risk olarak işaretle; yorumlardaki kişisel verileri rapora taşıma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_geo",
+      "name": "AI Arama (GEO / AIO) Görünürlüğü",
+      "en": "AI Search (GEO / AIO) Visibility",
+      "icon": "✺",
+      "desc": "Yapay zekâ tarayıcılarının erişimi, Google AI özelliklerine uygunluk, ham HTML'de okunabilir içerik, özgün ve yanıtlanabilir içerik, marka tutarlılığı, Bing dizini, llms.txt, yapay zekâ yanıtlarında görünürlük testi ve yapay zekâ kaynaklı trafikten hangilerinin denetleneceğini belirler",
+      "agents": [
+        "G"
+      ],
+      "guide": {
+        "purpose": "Kullanıcılar giderek daha çok ChatGPT, Claude, Perplexity, Gemini, Copilot ve Google'ın AI Overviews / AI Mode gibi yanıt üreten aramalarını kullanıyor. Bu bölüm sitenin bu sistemlere açık olup olmadığını, içeriğinin kaynak gösterilmeye uygun olup olmadığını ve markanın yanıtlarda nasıl yer aldığını denetler. Google'a göre üretken yapay zekâ aramasında başarılı olmanın yolu yine temel SEO'dur; ayrı bir “GEO hilesi” yoktur.",
+        "criteria": [
+          "Google AI Overviews ve AI Mode için ek şart yoktur: sayfa dizine eklenmiş ve snippet ile gösterilebilir olmalı; önizleme kısıtları bu özellikleri de etkiler.",
+          "Diğer yapay zekâ aramalarında arama tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot) ile eğitim tarayıcıları (GPTBot, ClaudeBot) ayrıdır; birini engelleyip diğerine izin verebilirsiniz.",
+          "Google dışındaki tarayıcıların önemli bir kısmının JavaScript çalıştırmadığı bilinir; önemli bilgi ham HTML'de olmalı.",
+          "Özgün, birinci elden deneyim ve veri taşıyan içerik, herkesin yazabileceği genel içerikten daha çok kaynak gösterilir."
+        ],
+        "pitfalls": [
+          "llms.txt'yi zorunlu sanmak: Google Arama bu dosyayı kullanmaz; varlığı Google'da görünürlüğü ne artırır ne azaltır.",
+          "Her sorgu varyasyonu için ayrı sayfa üretmek ya da içeriği yapay zekâ için parçalara bölmek; Google bunun gerekmediğini, ölçekli üretimin spam sayılabileceğini belirtir.",
+          "Sahte forum yorumları ya da satın alınmış “anmalar” üretmek; hem etkisizdir hem itibar riskidir.",
+          "Tek bir yapay zekâ yanıtını kesin sonuç saymak; yanıtlar kişiye, konuma ve zamana göre değişir."
+        ],
+        "resources": [
+          {
+            "title": "Yapay zekâ özellikleri ve web siteniz",
+            "url": "https://developers.google.com/search/docs/appearance/ai-features?hl=tr",
+            "note": "AI Overviews ve AI Mode'un nasıl çalıştığı ve önizleme denetimleriyle nasıl yönetildiği."
+          },
+          {
+            "title": "Google'da üretken yapay zekâ özellikleri için optimizasyon",
+            "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=tr",
+            "note": "Google'ın 2026 rehberi: neyin önemli olduğu ve llms.txt, içerik parçalama gibi gerekmeyen uygulamalar."
+          },
+          {
+            "title": "Google'ın genel tarayıcıları",
+            "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers?hl=tr",
+            "note": "Googlebot ve Google-Extended kontrol simgesinin ne işe yaradığı."
+          },
+          {
+            "title": "OpenAI tarayıcıları",
+            "url": "https://developers.openai.com/api/docs/bots",
+            "note": "OAI-SearchBot, GPTBot ve ChatGPT-User'ın görevleri ve robots.txt ile ayrı ayrı yönetimi (İngilizce)."
+          },
+          {
+            "title": "Anthropic tarayıcıları ve engelleme",
+            "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "note": "ClaudeBot, Claude-User ve Claude-SearchBot'un görevleri ve engellemenin etkisi (İngilizce)."
+          },
+          {
+            "title": "IndexNow",
+            "url": "https://www.indexnow.org/",
+            "note": "İçerik değişikliklerini Bing gibi katılımcı arama motorlarına anında bildirme protokolü (İngilizce)."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_geo_checks",
+          "label": "AI Arama Görünürlüğü Kontrolleri",
+          "en": "AI Search Visibility Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Yapay zekâ aramalarında görünürlük denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Sitenin yapay zekâ aramalarına erişilebilirliğini, içeriğinin kaynak gösterilmeye uygunluğunu ve markanın yanıtlarda yer alışını denetleyen kontrolleri seçin.",
+          "scenario": "Hedef Arama Motorları'nda yapay zekâ aramaları seçildiyse temel kontroller önerilir; görünürlük testi ve trafik analizi kapsamlı denetimde öne çıkar.",
+          "example": "Standart denetimde tarayıcı erişimi, Google AI uygunluğu, ham HTML, özgün içerik, marka tutarlılığı, Bing dizini ve llms.txt kontrol edilir.",
+          "recommend": [
+            {
+              "field": "au_depth",
+              "map": {
+                "quick": [
+                  "ai_bots",
+                  "ai_eligibility",
+                  "raw_html"
+                ],
+                "standard": [
+                  "ai_bots",
+                  "ai_eligibility",
+                  "raw_html",
+                  "non_commodity",
+                  "entity",
+                  "bing",
+                  "llms"
+                ],
+                "deep": [
+                  "ai_bots",
+                  "ai_eligibility",
+                  "raw_html",
+                  "non_commodity",
+                  "entity",
+                  "bing",
+                  "llms",
+                  "ai_test",
+                  "ai_traffic"
+                ]
+              }
+            },
+            {
+              "field": "au_engines",
+              "map": {
+                "ai": [
+                  "ai_bots",
+                  "ai_eligibility",
+                  "raw_html",
+                  "ai_test"
+                ]
+              }
+            }
+          ],
+          "options": [
+            {
+              "value": "ai_bots",
+              "label": "Yapay zekâ tarayıcı erişimi",
+              "explanation": "robots.txt ve güvenlik duvarı / CDN kurallarının yapay zekâ arama ve eğitim tarayıcılarına izin verip vermediği.",
+              "scenario": "Her denetimde; özellikle Cloudflare gibi bot yönetimi olan sitelerde.",
+              "example": "robots.txt her şeye izin verirken Cloudflare'in yapay zekâ botlarını engelleme ayarının OAI-SearchBot ve Claude-SearchBot'u da engellediği bulunur.",
+              "ruleDetail": "robots.txt ile CDN / güvenlik duvarı kurallarını birlikte incele: arama için kullanılan OAI-SearchBot, Claude-SearchBot ve PerplexityBot ile kullanıcı isteğiyle gelen ChatGPT-User ve Claude-User erişebiliyor mu; eğitim tarayıcıları (GPTBot, ClaudeBot) ve Google-Extended kontrol simgesi için sitenin tercihi bilinçli ve tutarlı mı. Google-Extended'ın Google Arama'yı ve AI Overviews'u etkilemediğini, arama ve eğitim tarayıcılarının ayrı yönetilebildiğini belirt; tercih iş kararıdır, engelin kendisini değil tutarsızlığı ve istenmeyen etkiyi bulgu olarak yaz. Güvenlik duvarı ayarını göremiyorsan ilgili kullanıcı aracılarıyla örnek istek sonuçlarını (ör. 403) kanıt olarak kullan."
+            },
+            {
+              "value": "ai_eligibility",
+              "label": "Google AI özelliklerine uygunluk",
+              "explanation": "Sayfaların AI Overviews ve AI Mode'da gösterilmeye teknik olarak uygun olması.",
+              "scenario": "Google'dan trafik alan her site.",
+              "example": "Blog şablonunda data-nosnippet ile ana içeriğin işaretlendiği ve yazıların AI Overviews'da hiç kaynak gösterilmediği bulunur.",
+              "ruleDetail": "AI Overviews ve AI Mode için ek şart olmadığını esas al: sayfa dizine eklenmiş ve snippet ile gösterilebilir olmalı. nosnippet, max-snippet, data-nosnippet kısıtlarını, noindex ve robots.txt engellerini ve (erişim varsa) Search Console'da sitenin Google Arama'nın üretken yapay zekâ özelliklerine dahil olup olmadığını kontrol et."
+            },
+            {
+              "value": "raw_html",
+              "label": "Ham HTML'de okunabilir içerik",
+              "explanation": "Önemli bilgilerin JavaScript çalışmadan da sayfada bulunması.",
+              "scenario": "JavaScript çerçevesiyle yapılmış siteler, sekme / akordeon içerikleri ve görsel ağırlıklı sayfalar.",
+              "example": "Fiyat tablosunun yalnız tarayıcıda JavaScript ile yüklendiği, ham HTML'de boş olduğu bulunur.",
+              "ruleDetail": "Ana içerik, fiyat, iletişim, ürün / hizmet bilgileri ve SSS yanıtları JavaScript çalışmadan ham HTML'de var mı; önemli bilginin yalnız görselde, PDF'te ya da JavaScript ile yüklenen sekme / akordeon arkasında olması. Google dışındaki yapay zekâ tarayıcılarının önemli bir kısmının JavaScript çalıştırmadığını dikkate al."
+            },
+            {
+              "value": "non_commodity",
+              "label": "Özgün ve yanıtlanabilir içerik",
+              "explanation": "İçeriğin sorulara açık yanıt vermesi ve herkesin yazabileceği genel bilginin ötesinde değer taşıması.",
+              "scenario": "Bilgi, hizmet ve karşılaştırma içerikleri.",
+              "example": "Hizmet sayfalarının “kaliteli hizmet, uzman kadro” gibi genel ifadelerden oluştuğu, fiyat, süre ve süreç bilgisi vermediği bulunur.",
+              "ruleDetail": "Sayfalar ziyaretçinin sorularına açık ve doğrudan yanıt veriyor mu; içerik genel geçer bilgi mi yoksa birinci elden deneyim, veri, fiyat aralığı, süreç, örnek ve uzman görüşü içeren özgün içerik mi; başlıklar ve paragraflarla düzenli yapı. Google'ın belirttiği gibi içeriği yalnız yapay zekâ için parçalamak ya da her sorgu varyasyonu için sayfa üretmek gerekmez; ölçekli üretimi risk olarak işaretle."
+            },
+            {
+              "value": "entity",
+              "label": "Marka ve varlık tutarlılığı",
+              "explanation": "Marka, kurum ve uzmanlar hakkındaki bilgilerin sitede ve dış kaynaklarda tutarlı olması.",
+              "scenario": "Marka bilinirliği önemli olan bütün siteler.",
+              "example": "Kuruluş yılının sitede 2008, LinkedIn'de 2010 yazdığı, Organization işaretlemesinde sosyal profillerin olmadığı bulunur.",
+              "ruleDetail": "Marka adı, logo, kuruluş bilgileri, kurucular / uzmanlar ve iletişim bilgileri sitede, Organization yapısal verisinde (sameAs ile resmî profiller), İşletme Profili'nde ve sosyal hesaplarda tutarlı mı; hakkımızda ve yazar / uzman sayfaları var mı; markanın bilinen yanlış ya da eski bilgileri dış kaynaklarda dolaşıyor mu."
+            },
+            {
+              "value": "bing",
+              "label": "Bing dizini ve IndexNow",
+              "explanation": "Sitenin Bing'de dizine eklenmesi ve değişikliklerin hızlı bildirilmesi.",
+              "scenario": "Microsoft Copilot gibi Bing tabanlı deneyimlerde görünmek isteyen siteler.",
+              "example": "Sitenin Bing'de yalnız ana sayfasının dizinde olduğu, site haritasının Bing'e hiç gönderilmediği bulunur.",
+              "ruleDetail": "Sitenin Bing'de dizine eklenmesi (Bing Webmaster Tools erişimi varsa site haritası durumu, tarama hataları); içerik değişikliklerini bildirmek için IndexNow desteği; robots.txt'de Bingbot'un engellenmemesi."
+            },
+            {
+              "value": "llms",
+              "label": "llms.txt",
+              "explanation": "Yapay zekâ sistemleri için site özeti sunmayı amaçlayan, standart olmayan bir dosya önerisi.",
+              "scenario": "Dosyası olan ya da eklemeyi düşünen siteler.",
+              "example": "llms.txt'de kaldırılmış hizmetlerin hâlâ listelendiği bulunur.",
+              "ruleDetail": "Dosya varsa güncel ve doğru mu kontrol et. Google Arama'nın llms.txt'yi kullanmadığını, varlığının Google'da görünürlüğü ne artırıp ne azalttığını belirt; yokluğu bulgu değildir, başka hizmetler için isteğe bağlı bir öneri olarak en fazla P3 yaz."
+            },
+            {
+              "value": "ai_test",
+              "label": "Yapay zekâ yanıtlarında görünürlük testi",
+              "explanation": "Hedef sorulara yapay zekâ asistanlarının verdiği yanıtlarda markanın ve sitenin yer alıp almadığı.",
+              "scenario": "Kullanıcıların karar öncesi yapay zekâya danıştığı sektörler ve kapsamlı denetimler.",
+              "example": "“Ankara'da kurumsal eğitim firmaları” sorusunda iki asistanın markayı andığı, birinin eski adresi verdiği, ikisinin rakipleri kaynak gösterdiği bulunur.",
+              "ruleDetail": "AI Test Sorguları'nı Google AI Overviews / AI Mode, ChatGPT, Claude, Perplexity, Gemini ve Copilot'ta sor; marka anılıyor mu, siteye kaynak bağlantısı veriliyor mu, bilgiler doğru mu, hangi rakipler ve kaynaklar anılıyor — tarih, araç, konum ve sorgu metniyle tabloya kaydet. Bu ortamdan asistanları sorgulayamıyorsan test sorgularını ve boş kayıt tablosunu hazırla, testin kullanıcı tarafından yapılmasını iste. Yanıtlar kişiye ve zamana göre değiştiği için tek denemeyi kesin sonuç sayma."
+            },
+            {
+              "value": "ai_traffic",
+              "label": "Yapay zekâ kaynaklı trafik",
+              "needs": [
+                "ga4"
+              ],
+              "explanation": "Yapay zekâ asistanlarından siteye gelen ziyaretlerin miktarı ve niteliği.",
+              "scenario": "GA4 erişimi olan ve bu kanalın büyüklüğünü görmek isteyen siteler.",
+              "example": "Son 3 ayda chatgpt.com kaynaklı ziyaretlerin 4 kat arttığı ve dönüşüm oranının organik aramadan yüksek olduğu bulunur.",
+              "ruleDetail": "GA4'te chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com, claude.ai gibi yönlendiren kaynaklardan gelen oturumlar, açılış sayfaları ve anahtar etkinlikler; bu kaynakları ayıran bir kanal grubu önerisi. Search Console'un AI Overviews ve AI Mode tıklamalarını ayrı gösterip göstermediğini güncel rapordan kontrol et, göstermiyorsa bunu belirt."
+            }
+          ]
+        },
+        {
+          "id": "au_geo_queries",
+          "label": "AI Test Sorguları",
+          "en": "AI Test Queries",
+          "type": "textarea",
+          "showIf": [
+            {
+              "field": "au_geo_checks",
+              "in": [
+                "ai_test"
+              ]
+            }
+          ],
+          "placeholder": "İstanbul'da implant tedavisi yapan en iyi klinikler hangileri?\nİmplant tedavisi kaç seans sürer?",
+          "rule": "Yapay zekâ yanıt testlerinde kullanılacak sorgular: {value}",
+          "explanation": "Yapay zekâ asistanlarına sorulacak, müşterilerinizin gerçekten sorabileceği sorular. Her satıra bir soru yazın; 5–15 soru yeterlidir.",
+          "scenario": "Karar aşamasındaki (“en iyi …”, “… mı … mı”, “… fiyatı”) ve bilgi aşamasındaki soruları karıştırın; marka adınızı içeren bir iki soru da ekleyin.",
+          "example": "“Kurumsal web sitesi yaptırırken nelere dikkat edilmeli?” ve “<Marka> güvenilir mi?” soruları yazılır; her yanıtta markanın anılıp anılmadığı ve kaynak bağlantısı kaydedilir."
+        }
+      ]
+    },
+    {
+      "id": "au_offpage",
+      "name": "Otorite, Bağlantı & Rakip",
+      "en": "Authority, Links & Competitors",
+      "icon": "⇗",
+      "desc": "Geri bağlantı profili, bağlantı riskleri, kırık sayfalara gelen bağlantılar, marka anmaları, rakip karşılaştırması, içerik boşluğu ve arama sonucu özelliklerinden hangilerinin denetleneceğini ve karşılaştırılacak rakipleri belirler",
+      "agents": [
+        "Y"
+      ],
+      "guide": {
+        "purpose": "Site dışı denetim, sitenin web'deki itibarını ve rakiplerine göre konumunu inceler: hangi siteler bağlantı veriyor, riskli bağlantı kalıpları var mı, rakipler hangi konularda ve neden daha görünür. Bağlantı verisi yalnız üçüncü taraf araçlardan gelir ve tahmindir; bu bölümün kontrolleri çoğunlukla bir bağlantı analizi aracı ister.",
+        "criteria": [
+          "Bağlantıların sayısından çok konu uyumu ve güvenilirliği önemlidir.",
+          "Rakip karşılaştırması aynı sorgularda sıralanan sitelerle yapılmalı; iş rakibiniz arama rakibinizle aynı olmayabilir.",
+          "Dış bağlantı alan ama 404 dönen sayfalar, en hızlı kazanılabilecek değer kaybıdır.",
+          "İçerik boşluğu analizi, rakiplerin görünür olduğu ama sizin içeriğiniz olmayan konuları gösterir; her boşluk için içerik üretmek gerekmez, iş hedefiyle örtüşenler seçilir."
+        ],
+        "pitfalls": [
+          "Bağlantı satın almak, bağlantı takası yapmak ya da bağlantı ağlarına katılmak; Google spam politikasında bağlantı spam'i olarak tanımlanır.",
+          "Gereksiz yere bağlantı reddetme (disavow) dosyası göndermek; Google çoğu sitenin buna ihtiyacı olmadığını belirtir.",
+          "Araçların “otorite puanını” Google'ın kullandığı bir değer gibi sunmak.",
+          "Rakip sitelere zarar verecek ya da hizmet şartlarını ihlal edecek yoğunlukta tarama yapmak."
+        ],
+        "resources": [
+          {
+            "title": "Google spam politikaları",
+            "url": "https://developers.google.com/search/docs/essentials/spam-policies?hl=tr",
+            "note": "Bağlantı spam'i, ölçekli içerik kötüye kullanımı, kapı sayfaları ve diğer ihlaller."
+          },
+          {
+            "title": "Giden bağlantıları uygun hale getirme",
+            "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links?hl=tr",
+            "note": "rel=sponsored, rel=ugc ve rel=nofollow'un doğru kullanımı."
+          },
+          {
+            "title": "Sitenize bağlantıları reddetme",
+            "url": "https://support.google.com/webmasters/answer/2648487?hl=tr",
+            "note": "Bağlantı reddetme aracının ne zaman gerektiği ve ne zaman gerekmediği."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_off_checks",
+          "label": "Otorite, Bağlantı ve Rakip Kontrolleri",
+          "en": "Authority, Link and Competitor Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Otorite, bağlantı ve rakip denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Sitenin bağlantı profilini, web'deki itibarını ve rakiplerine göre konumunu inceleyen kontrolleri seçin.",
+          "scenario": "Bağlantı analizi aracı yoksa bağlantı kontrolleri “veri yok” olarak işaretlenir; rakip karşılaştırması ve arama sonucu özellikleri herkese açık bilgiyle yapılabilir.",
+          "example": "Standart denetimde rakip karşılaştırması, geri bağlantı profili, bağlantı riskleri, kırık sayfalara gelen bağlantılar, içerik boşluğu ve arama sonucu özellikleri incelenir.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "competitors"
+              ],
+              "standard": [
+                "backlinks",
+                "link_risk",
+                "lost",
+                "competitors",
+                "gap",
+                "serp"
+              ],
+              "deep": [
+                "backlinks",
+                "link_risk",
+                "lost",
+                "mentions",
+                "competitors",
+                "gap",
+                "serp"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "backlinks",
+              "label": "Geri bağlantı profili",
+              "needs": [
+                "links"
+              ],
+              "explanation": "Siteye bağlantı veren alan adlarının sayısı, niteliği ve gelişimi.",
+              "scenario": "Sıralama kaybı yaşayan ya da rekabetin yüksek olduğu pazarlardaki siteler.",
+              "example": "Bağlantıların %70'inin tek bir dizin sitesinden geldiği, sektör yayınlarından neredeyse hiç bağlantı olmadığı bulunur.",
+              "ruleDetail": "Yönlendiren alan adı sayısı ve zaman içindeki gelişimi, en değerli bağlantılar, konu uyumu, bağlantı metni dağılımı, nofollow / sponsored oranı, bağlantı alan sayfaların dağılımı. Araçların otorite puanlarını Google verisi gibi sunma; verinin hangi araçtan ve hangi tarihte alındığını yaz."
+            },
+            {
+              "value": "link_risk",
+              "label": "Bağlantı riskleri",
+              "needs": [
+                "links"
+              ],
+              "explanation": "Satın alınmış ya da yapay bağlantı kalıpları ve olası manuel işlem riski.",
+              "scenario": "Geçmişte bağlantı satın alınmış ya da SEO firmasıyla çalışılmış siteler.",
+              "example": "Konu dışı 30 blogdan aynı tam eşleşmeli bağlantı metniyle bağlantı geldiği bulunur.",
+              "ruleDetail": "Satın alınmış ya da takas bağlantı kalıpları, alakasız siteler ağı, aşırı tam eşleşmeli bağlantı metinleri, hacklenmiş sitelerden gelen bağlantılar. Google'ın çoğu sitenin bağlantı reddetmeye ihtiyacı olmadığını belirttiğini dikkate al; reddetme dosyasını yalnız manuel işlem varsa ya da açık bir bağlantı şeması biliniyorsa öner."
+            },
+            {
+              "value": "lost",
+              "label": "Kırık sayfalara gelen dış bağlantılar",
+              "needs": [
+                "links"
+              ],
+              "explanation": "Dış bağlantı alan ama artık 404 ya da 410 dönen sayfalar.",
+              "scenario": "Taşınmış, adres yapısı değişmiş ya da içerik silmiş siteler.",
+              "example": "Eski kampanya sayfasının 12 haber sitesinden bağlantı aldığı ve 404 döndüğü bulunur.",
+              "ruleDetail": "Dış bağlantı alan ama 404 / 410 dönen ya da yönlendirme zincirine düşen sayfalar; her biri için en yakın içerik karşılığına 301 önerisi."
+            },
+            {
+              "value": "mentions",
+              "label": "Marka anmaları",
+              "explanation": "Markanın web'de bağlantısız ya da bağlantılı olarak anıldığı yerler.",
+              "scenario": "Basında, forumlarda ve topluluklarda konuşulan markalar.",
+              "example": "Markanın 8 sektör haberinde bağlantısız anıldığı bulunur.",
+              "ruleDetail": "Bağlantısız marka anmaları, basın ve sektör yayınlarında yer alma, forum ve topluluklardaki tartışmalar ve bunların tonu; bağlantı istemeye uygun anmalar. Sahte anma üretmenin fayda sağlamadığını belirt."
+            },
+            {
+              "value": "competitors",
+              "label": "Rakip karşılaştırması",
+              "explanation": "Hedef sorgularda üst sıralardaki rakiplerle içerik, teknik ve otorite karşılaştırması.",
+              "scenario": "Rakiplerin neden daha görünür olduğunu anlamak isteyen her site.",
+              "example": "Rakiplerin hizmet sayfalarında fiyat aralığı, süreç ve uzman bilgisi verdiği, sitenin vermediği bulunur.",
+              "ruleDetail": "Hedef sorgularda üst sıralarda çıkan rakipleri (Ortak Bilgiler › Rakipler listesindekiler ve arama sonuçlarından bulunanlar) içerik derinliği, sayfa türleri, yapısal veri, hız, iç bağlantı ve (erişim varsa) bağlantı profiliyle karşılaştır; yalnız herkese açık bilgiyle, kaynak ve tarihle; rakip sitelerde yoğun tarama yapma."
+            },
+            {
+              "value": "gap",
+              "label": "İçerik ve konu boşluğu",
+              "explanation": "Rakiplerin görünür olduğu ama sitenin içeriği olmayan ya da zayıf kaldığı konular.",
+              "scenario": "İçerik planı hazırlanacak ya da blog büyütülecek siteler.",
+              "example": "Rakiplerin “implant sonrası beslenme” ve “implant garanti süresi” konularında trafik aldığı, sitede bu konuların olmadığı bulunur.",
+              "ruleDetail": "Rakiplerin görünür olduğu, sitenin hiç içeriği olmayan ya da zayıf kaldığı konular; (erişim varsa) Search Console'da gösterim alıp karşılık gelen sayfası olmayan sorgular. Her boşluğu iş hedefiyle ilişkisine göre önceliklendir; her boşluk için içerik üretmeyi önerme."
+            },
+            {
+              "value": "serp",
+              "label": "Arama sonucu özellikleri",
+              "explanation": "Hedef sorgulardaki yerel paket, görseller, videolar, “Diğer kullanıcılar şunları da sordu” ve AI Overviews gibi alanlar.",
+              "scenario": "Klasik mavi bağlantıların aşağı itildiği sorgularda görünmek isteyen siteler.",
+              "example": "Hedef sorguların yarısında video sonuçları çıktığı, sitenin hiç videosu olmadığı bulunur.",
+              "ruleDetail": "Öncelikli sorgulardaki arama sonucu özellikleri (yerel paket, görseller, videolar, alışveriş, “Diğer kullanıcılar şunları da sordu”, AI Overviews) ve sitenin bunlarda görünme fırsatı; arama sonucunu göremediğin ortamda kullanıcıdan ekran görüntüsü iste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_data",
+      "name": "Ölçüm & Search Console Verisi",
+      "en": "Measurement & Search Console Data",
+      "icon": "◫",
+      "desc": "Search Console kurulumu ve performans analizi, trafik düşüşü teşhisi, manuel işlemler, analitik kurulumu, çerez rızası, organik dönüşümler ve Bing Webmaster Tools kontrollerinden hangilerinin yapılacağını ve veri dönemini belirler",
+      "agents": [
+        "O"
+      ],
+      "guide": {
+        "purpose": "Ölçüm denetimi iki soruyu yanıtlar: sitenin aramadaki gerçek performansı ne ve bu performans doğru ölçülüyor mu? Search Console Google'ın kendi verisini, GA4 ise ziyaretçilerin sitedeki davranışını ve dönüşümleri gösterir. Bu verilerin çoğu erişim ister; erişim yoksa kontroller “veri yok” olarak raporlanır.",
+        "criteria": [
+          "Karşılaştırmalı dönem seçin: tek dönem verisi eğilimi göstermez; mevsimsel işlerde geçen yılın aynı dönemiyle karşılaştırın.",
+          "Trafik düşüşünde önce teknik sorun ve manuel işlem olasılığını eleyin, sonra Google güncellemesi tarihlerine ve talep değişimine bakın.",
+          "Marka ve marka dışı sorguları ayırın; marka sorgularındaki değişim SEO'dan çok bilinirliği yansıtır.",
+          "Analitik etiketi rıza alınmadan çalışıyorsa veri ve hukuk sorunu birlikte vardır."
+        ],
+        "pitfalls": [
+          "Search Console ile GA4 sayılarını birebir eşleşmesi gereken veriler sanmak; ikisi farklı şeyleri ölçer.",
+          "Ortalama konumu tek başına başarı ölçütü saymak; gösterimi artan yeni sorgular ortalamayı düşürebilir.",
+          "Rapordaki kişisel verileri (e-posta, telefon, IP) denetim raporuna kopyalamak.",
+          "Rıza bandının hukuki değerlendirmesini SEO denetimiyle tamamlanmış saymak; şüpheli durumlar uyum ekibine yönlendirilmeli."
+        ],
+        "resources": [
+          {
+            "title": "Performans raporu (Arama sonuçları)",
+            "url": "https://support.google.com/webmasters/answer/7576553?hl=tr",
+            "note": "Tıklama, gösterim, tıklama oranı ve konum metriklerinin anlamı ve filtreleri."
+          },
+          {
+            "title": "SEO için Search Console ve Google Analytics verileri",
+            "url": "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console?hl=tr",
+            "note": "İki aracın farkı ve birlikte nasıl kullanılacağı."
+          },
+          {
+            "title": "Google Arama trafiğindeki düşüşlerde hata ayıklama",
+            "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops?hl=tr",
+            "note": "Düşüş nedenlerini ayırt etme yöntemi."
+          },
+          {
+            "title": "Google Search Status Dashboard",
+            "url": "https://status.search.google.com/",
+            "note": "Google'ın sıralama güncellemelerinin ve olaylarının tarihleri."
+          },
+          {
+            "title": "Manuel işlemler raporu",
+            "url": "https://support.google.com/webmasters/answer/9044175?hl=tr",
+            "note": "Manuel işlem türleri ve yeniden inceleme isteği."
+          },
+          {
+            "title": "Web sitelerinde izin modunu ayarlama",
+            "url": "https://developers.google.com/tag-platform/security/guides/consent?hl=tr",
+            "note": "Google izin modu (consent mode) sinyalleri ve kurulumu."
+          },
+          {
+            "title": "Bing Webmaster Tools",
+            "url": "https://www.bing.com/webmasters/about",
+            "note": "Bing'deki dizine ekleme ve tarama verisini veren resmî araç (İngilizce)."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_data_checks",
+          "label": "Ölçüm ve Veri Kontrolleri",
+          "en": "Measurement and Data Checks",
+          "type": "multiselect",
+          "auList": true,
+          "rule": "Ölçüm ve arama verisi denetiminde şu kontroller yapılır: {labels}.",
+          "explanation": "Arama performansını ve ölçüm kurulumunu inceleyen kontrolleri seçin. Çoğu kontrol Search Console ya da GA4 erişimi ister.",
+          "scenario": "Erişim varsa standart denetimde performans analizi ve trafik düşüşü teşhisi önerilir; erişim yoksa analitik etiketinin ve rıza bandının herkese açık kontrolü yine yapılabilir.",
+          "example": "Hızlı kontrolde Search Console kurulumu, manuel işlemler ve analitik kurulumu incelenir.",
+          "recommend": {
+            "field": "au_depth",
+            "map": {
+              "quick": [
+                "gsc_setup",
+                "manual",
+                "analytics"
+              ],
+              "standard": [
+                "gsc_setup",
+                "gsc_perf",
+                "drops",
+                "manual",
+                "analytics",
+                "consent",
+                "conversions"
+              ],
+              "deep": [
+                "gsc_setup",
+                "gsc_perf",
+                "drops",
+                "manual",
+                "analytics",
+                "consent",
+                "conversions",
+                "bwt"
+              ]
+            }
+          },
+          "options": [
+            {
+              "value": "gsc_setup",
+              "label": "Search Console kurulumu",
+              "needs": [
+                "gsc"
+              ],
+              "explanation": "Sitenin Search Console'da doğru mülk türüyle doğrulanması ve site haritasının gönderilmesi.",
+              "scenario": "Her denetimde; yeni siteler ve alan adı değiştiren siteler için mutlaka.",
+              "example": "Yalnız https://www mülkünün doğrulandığı, alan adı mülkü olmadığı ve site haritasının hiç gönderilmediği bulunur.",
+              "ruleDetail": "Alan adı mülkü (bütün protokol ve alt alan adlarını kapsar) doğrulanmış mı; site haritası gönderilmiş ve başarıyla okunmuş mu; yetkili kullanıcılar güncel mi (ayrılmış çalışanlar, eski ajanslar); e-posta bildirimleri açık mı."
+            },
+            {
+              "value": "gsc_perf",
+              "label": "Arama performansı analizi",
+              "needs": [
+                "gsc"
+              ],
+              "explanation": "Tıklama, gösterim, tıklama oranı ve konumun sayfa ve sorgu bazında incelenmesi.",
+              "scenario": "Erişim varsa her denetimde.",
+              "example": "Gösterimi yüksek ama tıklama oranı %0,8 olan 10 sayfa ve 4–20. sıradaki 60 fırsat sorgusu bulunur.",
+              "ruleDetail": "Veri Dönemi'ndeki tıklama, gösterim, tıklama oranı ve ortalama konum; önceki dönem ve (mevsimsellik varsa) geçen yılla karşılaştırma; en çok trafik getiren ve en çok düşen sayfa / sorgular; gösterimi yüksek, tıklama oranı düşük sayfalar; 4–20. sıradaki fırsat sorguları; marka ve marka dışı sorgu ayrımı; cihaz ve ülke kırılımı."
+            },
+            {
+              "value": "drops",
+              "label": "Trafik düşüşü teşhisi",
+              "needs": [
+                "gsc"
+              ],
+              "explanation": "Trafik düşüşünün nedeninin Google'ın önerdiği yöntemle ayırt edilmesi.",
+              "scenario": "Trafiği düşen siteler; düşüş yoksa kısa bir eğilim notu yeterlidir.",
+              "example": "Düşüşün bir Google çekirdek güncellemesiyle aynı tarihte başladığı ve yalnız blog yazılarını etkilediği bulunur.",
+              "ruleDetail": "Düşüş varsa Google'ın trafik düşüşü rehberine göre ayır: teknik sorun (dizine eklenme, sunucu, robots), manuel işlem ya da güvenlik sorunu, algoritma güncellemesi (Google Search Status Dashboard'daki tarihlerle karşılaştır), mevsimsellik ya da arama talebindeki değişim, raporlama değişikliği; hangi sayfa, cihaz, ülke ve arama türünde olduğu. Nedeni kanıtlanamıyorsa olasılıkları sıralayıp doğrulama yöntemini yaz."
+            },
+            {
+              "value": "manual",
+              "label": "Manuel işlemler ve güvenlik sorunları",
+              "needs": [
+                "gsc"
+              ],
+              "explanation": "Google'ın siteye uyguladığı manuel işlem ya da tespit ettiği güvenlik sorunu.",
+              "scenario": "Her denetimde; ani ve büyük düşüşlerde ilk bakılacak yer.",
+              "example": "Yapay bağlantılar nedeniyle kısmi manuel işlem uygulandığı bulunur.",
+              "ruleDetail": "Search Console'daki Manuel işlemler ve Güvenlik sorunları raporları; varsa nedeni, etkilenen bölüm, gereken düzeltme ve yeniden inceleme süreci. Bulgu varsa P0 olarak raporla."
+            },
+            {
+              "value": "analytics",
+              "label": "Analitik kurulumu",
+              "explanation": "GA4 / Etiket Yöneticisi etiketinin doğru ve tek kez çalışması, organik trafiğin doğru sınıflanması.",
+              "scenario": "Her denetimde; etiketin varlığı herkese açık sayfadan da kontrol edilebilir.",
+              "example": "GA4 etiketinin hem tema hem Etiket Yöneticisi tarafından yüklendiği ve oturumların iki kez sayıldığı bulunur.",
+              "ruleDetail": "GA4 / Etiket Yöneticisi etiketi her sayfada bir kez mi yükleniyor (çift sayım); organik arama trafiği doğru kanalda mı; iç trafik ve test ortamı filtrelenmiş mi; anahtar etkinlikler (form, arama, satın alma, telefon ve WhatsApp tıklaması) tanımlı mı. Etiketin varlığını herkese açık sayfadan, raporları yalnız GA4 erişimiyle kontrol et."
+            },
+            {
+              "value": "consent",
+              "label": "Çerez rızası ve onay modu",
+              "explanation": "Analitik ve reklam etiketlerinin rızadan önce çalışıp çalışmadığı ve Google onay modu sinyalleri.",
+              "scenario": "Analitik ya da reklam etiketi kullanan her site.",
+              "example": "Çerez bandında “Reddet” seçilse bile GA4 ve Meta pikselinin çerez yazdığı bulunur.",
+              "ruleDetail": "Rıza alınmadan analitik ve reklam etiketleri çerez yazıyor ya da istek gönderiyor mu; Google onay modu v2 sinyalleri (ad_storage, analytics_storage, ad_user_data, ad_personalization) doğru gönderiliyor mu; rıza bandında reddetme seçeneği kabul etmek kadar kolay mı. Bunun hukuki değerlendirme olmadığını, şüpheli bulguların KVKK / uyum ekibine yönlendirilmesi gerektiğini belirt."
+            },
+            {
+              "value": "conversions",
+              "label": "Organik dönüşümler",
+              "needs": [
+                "ga4"
+              ],
+              "explanation": "Organik trafiğin açılış sayfalarına göre dönüşüm ve gelir katkısı.",
+              "scenario": "Trafiğin işe katkısını görmek isteyen siteler.",
+              "example": "En çok organik trafik alan 5 blog yazısının hiç form dönüşümü getirmediği, ilgili hizmet sayfasına bağlantı vermediği bulunur.",
+              "ruleDetail": "Organik arama kanalında açılış sayfalarına göre oturum, etkileşim, anahtar etkinlik ve gelir; dönüşümü düşük, trafiği yüksek sayfalar ve bunlar için iç bağlantı ya da çağrı (CTA) önerileri."
+            },
+            {
+              "value": "bwt",
+              "label": "Bing Webmaster Tools",
+              "needs": [
+                "bwt"
+              ],
+              "explanation": "Bing'deki dizine ekleme ve tarama verisi.",
+              "scenario": "Bing ya da Copilot görünürlüğü hedefleniyorsa.",
+              "example": "Bing'in 120 sayfayı “keşfedildi ama taranmadı” durumunda tuttuğu bulunur.",
+              "ruleDetail": "Bing'de dizine ekleme durumu, tarama hataları, site haritası durumu ve Bing'in SEO raporundaki öneriler."
+            }
+          ]
+        },
+        {
+          "id": "au_period",
+          "label": "Veri Dönemi",
+          "en": "Data Period",
+          "type": "select",
+          "rule": "Performans verisi dönemi: {label}.",
+          "explanation": "Search Console ve GA4 verilerinin hangi dönem için inceleneceğini ve neyle karşılaştırılacağını belirler.",
+          "scenario": "Mevsimsel işlerde (turizm, eğitim, perakende) yıllık karşılaştırma; düzenli kontrolde 3 aylık karşılaştırma uygundur.",
+          "example": "Son 3 ay ve önceki 3 ay seçilince her bulgu iki dönemin farkıyla birlikte verilir.",
+          "options": [
+            {
+              "value": "d28",
+              "label": "Son 28 gün ve önceki 28 gün",
+              "explanation": "Yakın dönemdeki değişiklikleri hızlı görmek için.",
+              "scenario": "Yayın, taşıma ya da büyük değişiklik sonrası kontrol.",
+              "example": "Taşımadan sonraki 28 gün önceki 28 günle karşılaştırılır.",
+              "ruleDetail": "Son 28 günü önceki 28 günle karşılaştır; kısa dönemin dalgalanmaya açık olduğunu belirt."
+            },
+            {
+              "value": "m3",
+              "label": "Son 3 ay ve önceki 3 ay (önerilen)",
+              "explanation": "Düzenli denetimler için dengeli dönem.",
+              "scenario": "Çoğu site için.",
+              "example": "Ağustos–Ekim, Mayıs–Temmuz ile karşılaştırılır.",
+              "ruleDetail": "Son 3 ayı önceki 3 ayla karşılaştır; mevsimsellik şüphesi varsa geçen yılın aynı dönemini de kontrol et."
+            },
+            {
+              "value": "m12",
+              "label": "Son 12 ay ve önceki yıl",
+              "explanation": "Mevsimselliği ayırmak ve uzun dönem eğilimini görmek için.",
+              "scenario": "Mevsimsel işler ve yıllık değerlendirmeler.",
+              "example": "Bu yılın her ayı geçen yılın aynı ayıyla karşılaştırılır.",
+              "ruleDetail": "Son 12 ayı aylık olarak önceki yılın aynı aylarıyla karşılaştır; mevsimsel ve kalıcı değişimleri ayır."
+            },
+            {
+              "value": "m16",
+              "label": "Search Console'daki 16 ayın tamamı",
+              "explanation": "Search Console'un sakladığı en uzun dönem; güncelleme etkilerini görmek için.",
+              "scenario": "Trafik düşüşü teşhisi ve kapsamlı denetimler.",
+              "example": "16 aylık eğri Google güncelleme tarihleriyle üst üste konur.",
+              "ruleDetail": "Search Console'daki 16 aylık veriyi haftalık eğilim olarak incele; değişim noktalarını Google güncelleme tarihleri ve site değişiklikleriyle eşleştir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "au_report",
+      "name": "Denetim Raporu & Prompt",
+      "en": "Audit Report & Prompt",
+      "icon": "✓",
+      "desc": "Denetim raporunun çıktılarını, önceliklendirme yöntemini, düzeltme ayrıntısını, okuyucusunu ve dilini, yol haritası ve puanlamayı, proje kararlarıyla karşılaştırmayı ve yeniden denetimi belirler; seçimlerden denetim promptunu üretir",
+      "agents": [
+        "M"
+      ],
+      "guide": {
+        "purpose": "Bu bölüm denetimin sonucunun nasıl teslim edileceğini belirler ve bütün SEO Denetimi seçimlerinizi Claude'a verilecek tek bir denetim promptuna dönüştürür. Promptu kopyalayıp Claude Code'a ya da claude.ai'a yapıştırın; Claude yalnız okuma yaparak siteyi denetler ve seçtiğiniz biçimde rapor verir. Denetim seçimleri Proje Kuralları'na ve ana Claude promptuna eklenmez; yalnız bu promptta kullanılır.",
+        "criteria": [
+          "Raporu kim okuyacak? Geliştirici için kod örnekleri, yönetici için iş etkisi ve öncelik önemlidir.",
+          "Önceliklendirme bulguları iş planına çevirir: önce görünürlüğü bütünüyle etkileyen sorunlar, sonra önemli sayfalar, sonra iyileştirmeler.",
+          "Proje bu araçla planlandıysa “Proje Kararlarıyla Karşılaştır” ile sitenin baştaki SEO kararlarına uyup uymadığı da denetlenir.",
+          "Düzeltmelerden sonra kısa bir doğrulama denetimi, sorunların gerçekten kapandığını kanıtlar."
+        ],
+        "pitfalls": [
+          "Yüzlerce bulguyu önceliksiz bir liste halinde teslim etmek; ekip nereden başlayacağını bilemez.",
+          "Puanı (0–100) mutlak bir kalite ölçüsü gibi sunmak; puan yalnız aynı yöntemle yapılan denetimleri karşılaştırmaya yarar.",
+          "Claude'un yayındaki siteye doğrudan müdahale etmesine izin vermek; düzeltmeler test ortamı ve normal yayın süreciyle canlıya alınmalı.",
+          "Promptu bir kez kullanıp seçimleri güncellememek; site değiştikçe denetim kapsamı da değişir."
+        ],
+        "resources": [
+          {
+            "title": "SEO başlangıç kılavuzu",
+            "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=tr",
+            "note": "Rapordaki önerilerin dayandırılabileceği temel Google rehberi."
+          },
+          {
+            "title": "Google Arama temel ilkeleri",
+            "url": "https://developers.google.com/search/docs/essentials?hl=tr",
+            "note": "Teknik şartlar, spam politikaları ve temel en iyi uygulamalar; P0–P1 bulguların çoğu bunlarla ilişkilidir."
+          },
+          {
+            "title": "Bing Webmaster yönergeleri",
+            "url": "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+            "note": "Bing'in tarama, dizine ekleme ve içerik yönergeleri (İngilizce)."
+          }
+        ]
+      },
+      "fields": [
+        {
+          "id": "au_format",
+          "label": "Rapor Çıktıları",
+          "en": "Report Outputs",
+          "type": "multiselect",
+          "rule": "Denetim çıktıları: {labels}.",
+          "explanation": "Denetimin sonunda hangi belgelerin teslim edileceğini belirler.",
+          "scenario": "Ekip bulguları bir iş takip aracına aktaracaksa bulgu tablosu; yönetime sunulacaksa yönetici özeti ekleyin.",
+          "example": "Markdown rapor ve bulgu tablosu seçilince Claude seo-denetimi/rapor.md ve seo-denetimi/bulgular.csv dosyalarını üretir.",
+          "options": [
+            {
+              "value": "md",
+              "label": "Markdown denetim raporu (önerilen)",
+              "explanation": "Bütün bulguları, kanıtları ve önerileri içeren ayrıntılı rapor.",
+              "scenario": "Her denetim için temel çıktı.",
+              "example": "Rapor yönetici özeti, yöntem, bölüm bölüm bulgular ve yol haritasından oluşur.",
+              "ruleDetail": "Ayrıntılı raporu Markdown olarak yaz (Claude Code'da seo-denetimi/rapor.md): yönetici özeti, kapsam ve yöntem, bölüm bölüm bulgular, hızlı kazanımlar, doğrulanamayan kontroller ve gereken erişimler."
+            },
+            {
+              "value": "table",
+              "label": "Bulgu tablosu (CSV)",
+              "explanation": "Her bulgunun bir satır olduğu, iş takip aracına aktarılabilir tablo.",
+              "scenario": "Bulgular Jira, Trello, Asana gibi bir araca aktarılacaksa.",
+              "example": "Tablo kimlik, bölüm, bulgu, kanıt, öncelik, çaba, öneri ve etkilenen adres sayısı sütunlarını içerir.",
+              "ruleDetail": "Bulguları CSV tablo olarak da ver (seo-denetimi/bulgular.csv; UTF-8): Kimlik (SEO-001 …), Bölüm, Bulgu, Kanıt, Etkilenen adres sayısı, Örnek adresler, Etki, Öncelik, Çaba, Öneri, Doğrulama yöntemi."
+            },
+            {
+              "value": "exec",
+              "label": "Yönetici özeti (tek sayfa)",
+              "explanation": "Teknik olmayan okuyucu için en önemli 5–7 bulgu, iş etkisi ve önerilen ilk adımlar.",
+              "scenario": "Sonuç yönetime ya da müşteriye sunulacaksa.",
+              "example": "Özet “sitenin %40'ı dizinde değil; ilk hafta yapılacak 3 düzeltme” gibi bir girişle başlar.",
+              "ruleDetail": "Tek sayfalık yönetici özeti yaz: genel durum, en önemli 5–7 bulgu ve iş etkisi, ilk 30 günde yapılacaklar, gereken kaynak; teknik terimleri açıkla."
+            },
+            {
+              "value": "json",
+              "label": "Makine okunur bulgu listesi (JSON)",
+              "explanation": "Bulguların başka bir araçta ya da sonraki denetimde karşılaştırılabilmesi için yapılandırılmış liste.",
+              "scenario": "Denetimler düzenli tekrarlanacak ya da bir panoya aktarılacaksa.",
+              "example": "Sonraki denetimde aynı kimlikli bulguların kapanıp kapanmadığı otomatik karşılaştırılır.",
+              "ruleDetail": "Bulguları JSON olarak da ver (seo-denetimi/bulgular.json): her bulgu için id, bolum, baslik, kanit, oncelik, caba, oneri, adresler, durum alanları; aynı sorun sonraki denetimde aynı kimliği almalı."
+            },
+            {
+              "value": "checklist",
+              "label": "Yeniden denetim kontrol listesi",
+              "explanation": "Düzeltmelerden sonra her bulgunun kapandığını doğrulamak için adım adım liste.",
+              "scenario": "Düzeltmeleri başka bir ekip yapacaksa.",
+              "example": "“/robots.txt'de Disallow: / satırı yok — curl -s https://… /robots.txt ile kontrol et” gibi maddeler.",
+              "ruleDetail": "Her bulgu için düzeltildiğini kanıtlayacak kısa bir doğrulama adımı (komut, araç ya da kontrol edilecek ekran) içeren yeniden denetim kontrol listesi yaz."
+            }
+          ]
+        },
+        {
+          "id": "au_priority",
+          "label": "Önceliklendirme Yöntemi",
+          "en": "Prioritization Method",
+          "type": "select",
+          "rule": "Önceliklendirme yöntemi: {label}.",
+          "explanation": "Bulguların hangi ölçüyle sıralanacağını belirler.",
+          "scenario": "Teknik ekiple çalışılıyorsa P0–P3; sınırlı kaynakla en hızlı sonucu almak isteniyorsa etki × çaba matrisi uygundur.",
+          "example": "P0–P3 yönteminde bütün siteyi dizinden düşüren noindex P0, eksik meta açıklamalar P2 olur.",
+          "options": [
+            {
+              "value": "p03",
+              "label": "P0–P3 öncelik, etki ve çaba (önerilen)",
+              "explanation": "Her bulguya P0 (acil) – P3 (bilgi) önceliği, ayrıca etki ve çaba tahmini verilir.",
+              "scenario": "Çoğu denetim için.",
+              "example": "“P1 · Etki: yüksek · Çaba: düşük” etiketli bulgu hızlı kazanımlar listesine girer.",
+              "ruleDetail": "Her bulguya öncelik ver: P0 — siteyi ya da önemli bir bölümü aramadan düşüren veya düşürebilecek sorun (yanlış noindex, robots.txt engeli, sunucu hataları, manuel işlem, hacklenmiş içerik); P1 — önemli sayfaların görünürlüğünü ya da dönüşümünü doğrudan düşüren sorun; P2 — iyileştirme; P3 — bilgi notu ve iyi uygulama. Ayrıca etki (yüksek / orta / düşük) ve çaba (düşük / orta / yüksek) yaz; etkisi yüksek, çabası düşük olanları “Hızlı kazanımlar” başlığında topla."
+            },
+            {
+              "value": "matrix",
+              "label": "Etki × çaba matrisi",
+              "explanation": "Bulgular dört gruba ayrılır: hızlı kazanımlar, büyük projeler, küçük işler, ertelenebilirler.",
+              "scenario": "Kaynağı sınırlı ekipler ve pazarlama odaklı raporlar.",
+              "example": "Başlık düzeltmeleri “hızlı kazanım”, site taşıması “büyük proje” grubuna düşer.",
+              "ruleDetail": "Her bulgunun etkisini ve çabasını yüksek / düşük olarak değerlendir ve dört gruba ayır: Hızlı kazanımlar (yüksek etki, düşük çaba), Büyük projeler (yüksek etki, yüksek çaba), Küçük işler (düşük etki, düşük çaba), Ertelenebilirler (düşük etki, yüksek çaba). Aramadan düşmeye yol açan sorunları ayrıca “Acil” olarak en başta göster."
+            },
+            {
+              "value": "severity",
+              "label": "Kritik / Yüksek / Orta / Düşük",
+              "explanation": "Bulgular yalnız ciddiyet derecesine göre sınıflandırılır.",
+              "scenario": "Kurum içi raporlama biçimi böyle olan ekipler.",
+              "example": "Kırık yönlendirme zinciri “Yüksek”, eksik alt metin “Düşük” olarak sınıflanır.",
+              "ruleDetail": "Her bulguyu Kritik (aramadan düşme ya da düşme riski), Yüksek (önemli sayfaların görünürlüğünü düşürür), Orta (iyileştirme), Düşük (bilgi notu) olarak sınıflandır ve her sınıfta etkiye göre sırala."
+            }
+          ]
+        },
+        {
+          "id": "au_fix",
+          "label": "Düzeltme Ayrıntısı",
+          "en": "Fix Detail",
+          "type": "select",
+          "rule": "Düzeltme ayrıntısı: {label}.",
+          "explanation": "Raporun yalnız sorunları mı söyleyeceğini, nasıl düzeltileceğini örnekle mi göstereceğini, yoksa kaynak kod erişimi varsa düzeltmeleri de mi yapacağını belirler.",
+          "scenario": "Siteyi kendi ekibiniz geliştiriyorsa kod örnekleri; ajans ya da tedarikçi geliştiriyorsa sorun ve öneri yeterli olabilir.",
+          "example": "Kod örnekli seçenekte kanonik sorunu için doğru <link rel=\"canonical\"> etiketi ve şablondaki yeri gösterilir.",
+          "options": [
+            {
+              "value": "report",
+              "label": "Sorun ve öneri",
+              "explanation": "Her bulgu için ne olduğu, neden önemli olduğu ve ne yapılması gerektiği yazılır.",
+              "scenario": "Düzeltmeyi başka bir ekip ya da ajans yapacaksa.",
+              "example": "“Ürün sayfalarına kendini gösteren kanonik ekleyin” önerisi yazılır.",
+              "ruleDetail": "Her bulgu için sorunun ne olduğunu, neden önemli olduğunu ve ne yapılması gerektiğini yaz; kod örneği verme."
+            },
+            {
+              "value": "snippets",
+              "label": "Öneri ve örnek kod / yapılandırma (önerilen)",
+              "explanation": "Önerilere örnek kod, yapılandırma satırı ya da ayar yolu eklenir.",
+              "scenario": "Siteyi kendi ekibiniz ya da yakın çalıştığınız bir geliştirici yönetiyorsa.",
+              "example": "robots.txt için düzeltilmiş dosya, yönlendirme için sunucu kuralı, yapısal veri için JSON-LD örneği verilir.",
+              "ruleDetail": "Her bulgunun önerisine uygulanabilir örnek ekle: düzeltilmiş etiket, JSON-LD, robots.txt satırı, sunucu / CDN yönlendirme kuralı ya da CMS ayar yolu. Örneklerin sitenin altyapısına göre uyarlanması gerektiğini belirt; altyapıyı bilmiyorsan genel örnek ver ve bunu söyle."
+            },
+            {
+              "value": "apply",
+              "label": "Kaynak kod erişimi varsa onaylı düzeltme",
+              "explanation": "Claude raporu teslim eder, onayınızdan sonra düzeltmeleri kaynak kodda küçük adımlarla yapar.",
+              "scenario": "Claude Code'u sitenin kaynak kodunda çalıştırıyorsanız.",
+              "example": "Rapor onaylanınca Claude P0 bulgusundan başlayarak şablondaki noindex'i kaldırır ve testleri çalıştırır.",
+              "ruleDetail": "Önce yalnız raporu teslim et; kullanıcı açıkça onaylamadan hiçbir dosyayı değiştirme. Onaydan sonra düzeltmeleri P0'dan başlayarak küçük, geri alınabilir adımlarla kaynak kodda yap, her adımı test et ve değişikliği bulgunun kimliğiyle ilişkilendir. Yayındaki siteye, sunucuya, CDN'e ya da Search Console ayarlarına doğrudan müdahale etme; değişiklikler test ortamı ve normal yayın süreciyle canlıya alınır."
+            }
+          ]
+        },
+        {
+          "id": "au_audience",
+          "label": "Rapor Okuyucusu",
+          "en": "Report Audience",
+          "type": "select",
+          "rule": "Raporun okuyucusu: {label}.",
+          "explanation": "Raporun dilinin ve ayrıntı düzeyinin kime göre ayarlanacağını belirler.",
+          "scenario": "Rapor birden çok kişiye gidecekse karma okuyucu seçin; yönetici özeti çıktısıyla birlikte kullanılabilir.",
+          "example": "Karma okuyucuda her bulgu önce bir cümlelik sade açıklamayla, sonra teknik ayrıntıyla verilir.",
+          "options": [
+            {
+              "value": "tech",
+              "label": "Geliştirici ve teknik ekip",
+              "explanation": "Teknik terimler açıklanmadan kullanılır; kanıt ve kod ayrıntısı önceliklidir.",
+              "scenario": "Raporu doğrudan geliştiriciler uygulayacaksa.",
+              "example": "Bulgular HTTP yanıtı ve kod alıntısıyla başlar.",
+              "ruleDetail": "Raporu teknik ekip için yaz: terimleri açıklamadan kullan, kanıtı ve uygulama ayrıntısını öne çıkar."
+            },
+            {
+              "value": "mixed",
+              "label": "Pazarlama ve teknik ekip birlikte (önerilen)",
+              "explanation": "Her bulgu önce sade dille, sonra teknik ayrıntıyla anlatılır.",
+              "scenario": "Pazarlama ve geliştirme ekiplerinin birlikte okuyacağı raporlar.",
+              "example": "“Google bu sayfaları göremiyor (neden: …)” cümlesinin altında teknik kanıt yer alır.",
+              "ruleDetail": "Her bulguyu önce bir iki cümlelik sade açıklama ve iş etkisiyle, sonra teknik kanıt ve uygulama ayrıntısıyla yaz; ilk geçtiği yerde terimleri açıkla."
+            },
+            {
+              "value": "exec",
+              "label": "Yönetici ve işletme sahibi",
+              "explanation": "Teknik ayrıntı en aza indirilir; iş etkisi, maliyet ve öncelik öne çıkar.",
+              "scenario": "Karar vericiye sunulacak raporlar.",
+              "example": "Rapor “bu ay yapılırsa beklenen etki” başlığıyla ilerler; teknik ayrıntılar ekte durur.",
+              "ruleDetail": "Raporu karar verici için yaz: iş etkisi, gereken kaynak ve öncelik önde; teknik kanıt ve ayrıntıları ek bölümde topla."
+            }
+          ]
+        },
+        {
+          "id": "au_lang",
+          "label": "Rapor Dili",
+          "en": "Report Language",
+          "type": "select",
+          "rule": "Rapor dili: {label}.",
+          "explanation": "Raporun hangi dilde yazılacağını belirler.",
+          "scenario": "Rapor yurt dışındaki bir ekiple ya da yabancı bir geliştiriciyle paylaşılacaksa İngilizce seçin.",
+          "example": "Türkçe raporda teknik terimler ilk geçtiği yerde İngilizce karşılığıyla birlikte verilir.",
+          "options": [
+            {
+              "value": "tr",
+              "label": "Türkçe",
+              "explanation": "Rapor Türkçe yazılır; teknik terimlerin İngilizcesi ilk geçtiği yerde parantez içinde verilir.",
+              "scenario": "Türkiye'deki ekipler.",
+              "example": "“Kanonik adres (canonical URL)”.",
+              "ruleDetail": "Raporu Türkçe yaz; teknik terimlerin İngilizcesini ilk geçtiği yerde parantez içinde ver; kod, komut ve etiketleri olduğu gibi bırak."
+            },
+            {
+              "value": "en",
+              "label": "İngilizce",
+              "explanation": "Rapor İngilizce yazılır.",
+              "scenario": "Uluslararası ekipler ve yabancı tedarikçiler.",
+              "example": "Bulgular “Finding / Evidence / Recommendation” başlıklarıyla verilir.",
+              "ruleDetail": "Raporu İngilizce yaz."
+            },
+            {
+              "value": "both",
+              "label": "Türkçe rapor, İngilizce bulgu tablosu",
+              "explanation": "Rapor Türkçe, iş takip aracına aktarılacak bulgu tablosu İngilizcedir.",
+              "scenario": "Türk yönetim ekibi ve yabancı geliştirici ekibiyle çalışanlar.",
+              "example": "rapor.md Türkçe, bulgular.csv İngilizce üretilir.",
+              "ruleDetail": "Raporu ve yönetici özetini Türkçe, bulgu tablosunu ve makine okunur listeyi İngilizce yaz; bulgu kimlikleri iki dilde aynı olsun."
+            }
+          ]
+        },
+        {
+          "id": "au_roadmap",
+          "label": "Uygulama Yol Haritası",
+          "en": "Implementation Roadmap",
+          "type": "boolean",
+          "rule": "Raporda uygulama yol haritası {booltext}.",
+          "promptYes": "Raporun sonunda 30 / 60 / 90 günlük uygulama yol haritası ver: her dönemde yapılacak işler, sorumlu rol (geliştirici, içerik, pazarlama), bağımlılıklar ve beklenen etki.",
+          "promptNo": "Ayrı bir uygulama yol haritası yazma; öncelik sırası yeterlidir.",
+          "explanation": "Raporun sonunda bulguların zamana yayılmış bir uygulama planına dönüştürülüp dönüştürülmeyeceğini belirler.",
+          "scenario": "Bulgular birden çok ekibe ve aya yayılacaksa yol haritası işin takibini kolaylaştırır.",
+          "example": "İlk 30 gün P0–P1 teknik düzeltmeler, 60. güne kadar içerik iyileştirmeleri, 90. güne kadar yerel SEO ve bağlantı çalışmaları planlanır.",
+          "yes": {
+            "scenario": "Kapsamlı denetimler, birden çok ekibin çalışacağı düzeltmeler ve yönetime sunulacak raporlar.",
+            "example": "Yol haritasında her iş için sorumlu rol ve bağımlılık (ör. “şablon düzeltmesi bitmeden içerik güncellemesi başlamaz”) yazılır."
+          },
+          "no": {
+            "scenario": "Hızlı kontroller ya da bulgu sayısı az olan denetimler.",
+            "example": "Rapor öncelik sırasıyla biter; ekip işi kendi planına aktarır."
+          }
+        },
+        {
+          "id": "au_score",
+          "label": "Bölüm Puanı",
+          "en": "Section Score",
+          "type": "boolean",
+          "rule": "Raporda bölüm puanı {booltext}.",
+          "promptYes": "Her denetim bölümü için 0–100 arası bir sağlık puanı ver; puanın nasıl hesaplandığını (ör. kontrol başına geçti / kısmen / kaldı ağırlıkları) yöntem bölümünde açıkla ve puanın yalnız aynı yöntemle yapılan denetimleri karşılaştırmaya yaradığını belirt.",
+          "promptNo": "Puan verme; bulguları öncelikleriyle raporla.",
+          "explanation": "Her denetim bölümüne 0–100 arası bir sağlık puanı verilip verilmeyeceğini belirler.",
+          "scenario": "Denetimler düzenli tekrarlanacak ve gelişim izlenecekse puan karşılaştırmayı kolaylaştırır.",
+          "example": "Tarama 62, Sayfa İçi 78, Performans 45 puan alır; üç ay sonraki denetimde aynı yöntemle yeniden hesaplanır.",
+          "yes": {
+            "scenario": "Düzenli denetimler ve yönetime gelişim raporu sunulan projeler.",
+            "example": "Yönetici özetinde bölüm puanları önceki denetimle yan yana gösterilir."
+          },
+          "no": {
+            "scenario": "Tek seferlik denetimler ya da puanın yanlış yorumlanabileceği okuyucular.",
+            "example": "Rapor yalnız bulgular ve önceliklerle ilerler."
+          }
+        },
+        {
+          "id": "au_compare",
+          "label": "Proje Kararlarıyla Karşılaştır",
+          "en": "Compare with Project Decisions",
+          "type": "boolean",
+          "rule": "Denetimde proje kararlarıyla karşılaştırma {booltext}.",
+          "promptYes": "PROJE KARARLARI bölümündeki her kuralın sitede uygulanıp uygulanmadığını ayrı bir tabloda “Uygulandı / Kısmen / Uygulanmadı / Doğrulanamadı” olarak işaretle ve kanıtını yaz.",
+          "promptNo": "",
+          "explanation": "Site bu araçla planlandıysa, projenin SEO, yapısal veri, AI arama, yerel SEO, analitik, performans, çok dillilik ve erişilebilirlik kararlarının prompta eklenip sitede uygulanıp uygulanmadığının denetlenmesini sağlar.",
+          "scenario": "Proje bölümündeki kararları verdiyseniz ve site bu kararlarla geliştirildiyse açın; başka bir siteyi denetliyorsanız kapatın.",
+          "example": "Projede “robots.txt'de yapay zekâ arama tarayıcılarına izin” kararı varsa denetim bunun canlı sitede uygulanıp uygulanmadığını işaretler.",
+          "yes": {
+            "scenario": "Bu araçla planlanıp geliştirilmiş ve yayına alınmış siteler.",
+            "example": "Rapora “Proje kararlarına uyum” tablosu eklenir: 24 kuraldan 19'u uygulandı, 3'ü kısmen, 2'si uygulanmadı."
+          },
+          "no": {
+            "scenario": "Rakip, müşteri adayı ya da başka bir ekibin geliştirdiği siteler.",
+            "example": "Denetim yalnız seçilen kontrollere ve genel en iyi uygulamalara göre yapılır."
+          }
+        },
+        {
+          "id": "au_recheck",
+          "label": "Yeniden Denetim",
+          "en": "Re-audit",
+          "type": "select",
+          "rule": "Yeniden denetim: {label}.",
+          "explanation": "Denetimin ne zaman tekrarlanacağını ve raporda bunun için ne hazırlanacağını belirler.",
+          "scenario": "Düzeltmeler yapılacaksa doğrulama denetimi; sürekli içerik üreten sitelerde düzenli denetim önerilir.",
+          "example": "Düzeltmelerden sonra doğrulama seçilince rapor her bulgu için kontrol adımını ve önerilen tarihi içerir.",
+          "options": [
+            {
+              "value": "none",
+              "label": "Planlanmadı",
+              "explanation": "Tek seferlik denetim.",
+              "scenario": "Ön değerlendirme ya da teklif öncesi denetimler.",
+              "example": "Rapor yalnız mevcut durumu verir.",
+              "ruleDetail": "Yeniden denetim planı yazma."
+            },
+            {
+              "value": "after",
+              "label": "Düzeltmelerden sonra doğrulama denetimi (önerilen)",
+              "explanation": "P0–P1 düzeltmeleri yapıldıktan sonra yalnız ilgili kontroller tekrarlanır.",
+              "scenario": "Düzeltmelerin yapılacağı her denetim.",
+              "example": "İki hafta sonra yalnız 12 P0–P1 bulgu yeniden kontrol edilir.",
+              "ruleDetail": "Düzeltmelerden sonra yapılacak doğrulama denetimi için her P0–P1 bulgusunun kontrol adımını yaz; Google'ın değişiklikleri yeniden taraması zaman alacağı için hangi sonuçların hemen, hangilerinin haftalar içinde görüleceğini belirt."
+            },
+            {
+              "value": "monthly",
+              "label": "Aylık hafif denetim",
+              "explanation": "Her ay kritik kontroller (tarama, dizine ekleme, Core Web Vitals, Search Console uyarıları) tekrarlanır.",
+              "scenario": "Sık içerik yayımlayan, kampanya ya da ürün değişikliği yoğun siteler.",
+              "example": "Her ayın ilk haftası 15 dakikalık kontrol listesi uygulanır.",
+              "ruleDetail": "Aylık tekrarlanacak kısa bir kontrol listesi hazırla (tarama ve dizine ekleme, durum kodları, Core Web Vitals, Search Console uyarıları, öncelikli sayfaların görünümü)."
+            },
+            {
+              "value": "quarterly",
+              "label": "Üç ayda bir tam denetim",
+              "explanation": "Aynı seçimlerle denetim üç ayda bir tekrarlanır ve bulgular karşılaştırılır.",
+              "scenario": "Rekabetçi pazarlar ve SEO'nun ana kanal olduğu işletmeler.",
+              "example": "Her denetimde önceki dönemin bulgularının durumu (kapandı / sürüyor / yeni) gösterilir.",
+              "ruleDetail": "Denetimin üç ayda bir aynı kapsamla tekrarlanacağını dikkate al: bulgulara kalıcı kimlik ver ve bir sonraki denetimde karşılaştırılabilecek bir özet tablo bırak."
+            }
+          ]
+        },
+        {
+          "id": "au_notes",
+          "label": "Ek Notlar ve Bilinen Sorunlar",
+          "en": "Additional Notes and Known Issues",
+          "type": "textarea",
+          "placeholder": "Ekim'de site WordPress'ten Next.js'e taşındı.\nBlog trafiği taşımadan sonra %35 düştü.",
+          "rule": "Ek notlar: {value}",
+          "explanation": "Claude'un bilmesi gereken bağlam: yakın zamandaki değişiklikler, bilinen sorunlar, kapsam dışı bırakılacak bölümler, özel istekler.",
+          "scenario": "Site taşıması, tasarım değişikliği, alan adı değişikliği, trafik düşüşü ya da devam eden bir çalışma varsa mutlaka yazın.",
+          "example": "“Mart'ta alan adı değişti; eski alan adındaki yönlendirmeleri de kontrol et” notu denetimin ilk bakacağı yeri belirler."
+        }
+      ]
+    }
+  ]
+}

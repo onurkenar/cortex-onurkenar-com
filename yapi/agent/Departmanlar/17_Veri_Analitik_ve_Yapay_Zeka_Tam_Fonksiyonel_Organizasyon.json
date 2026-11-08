@@ -1,0 +1,1093 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "17 - Veri, Analitik ve Yapay Zekâ Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "17",
+    "name_tr": "Veri, Analitik ve Yapay Zekâ",
+    "name_en": "Data, Analytics and Artificial Intelligence",
+    "organization_model": "Tam Fonksiyonel CDO/CAIO Modeli",
+    "purpose": "Kurumsal veriyi güvenilir, erişilebilir ve değer üreten bir varlığa dönüştürmek; analitik ve yapay zekâ çözümleriyle karar kalitesini, müşteri değerini, verimliliği ve yenilik kapasitesini artırmak.",
+    "reports_to": {
+      "title_tr": "Genel Müdür / Strateji veya Teknoloji Başkanı",
+      "title_en": "Chief Executive Officer / Chief Strategy Officer / Chief Technology Officer"
+    },
+    "head": {
+      "position_code": "17.00.001",
+      "title_tr": "Veri, Analitik ve Yapay Zekâ Direktörü",
+      "title_en": "Data, Analytics and Artificial Intelligence Director",
+      "alternative_executive_titles": [
+        "Chief Data Officer (CDO)",
+        "Chief Data and Analytics Officer (CDAO)",
+        "Chief AI Officer (CAIO)"
+      ],
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "17.01",
+        "17.02",
+        "17.03",
+        "17.04",
+        "17.05",
+        "17.06",
+        "17.07",
+        "17.08"
+      ],
+      "accountabilities": [
+        "Veri, analitik ve yapay zekâ stratejisini oluşturmak",
+        "Veri sahipliği, kalitesi, metadata ve ana veri yönetişimini kurmak",
+        "Veri platformları, analitik ürünler ve yapay zekâ çözümlerini geliştirmek",
+        "MLOps, model güvenilirliği ve sorumlu yapay zekâ kontrollerini yönetmek",
+        "Veri ve yapay zekâ yatırımlarının ölçülebilir iş değerini gerçekleştirmek"
+      ]
+    },
+    "operating_principle": "Merkezi standartlar ve platformlar; iş alanlarına yakın veri ürünü ekipleriyle federatif biçimde çalışır. İş birimleri veri anlamı ve karar sahipliğini, departman ise veri yönetişimi, platform, analitik uzmanlık ve model yaşam döngüsünü üstlenir.",
+    "hierarchy_standard": [
+      "Departman Direktörü / CDAO",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "17.01",
+        "name_tr": "Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy",
+        "name_en": "Data and AI Strategy, Governance and Portfolio",
+        "manager": {
+          "position_code": "17.01.001",
+          "title_tr": "Veri ve Yapay Zekâ Stratejisi, Yönetişim ve Portföy Müdürü",
+          "title_en": "Data and AI Strategy, Governance and Portfolio Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.01.01",
+            "name_tr": "Veri ve Yapay Zekâ Stratejisi",
+            "name_en": "Data and AI Strategy",
+            "lead": {
+              "position_code": "17.01.01.001",
+              "title_tr": "Veri ve Yapay Zekâ Stratejisi Yöneticisi",
+              "title_en": "Data and AI Strategy Manager",
+              "reports_to": "17.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.01.01.002",
+                "title_tr": "Kıdemli Veri ve Yapay Zekâ Stratejisi Uzmanı",
+                "title_en": "Senior Data and AI Strategy Specialist",
+                "reports_to": "17.01.01.001"
+              },
+              {
+                "position_code": "17.01.01.003",
+                "title_tr": "Veri Stratejisi Uzmanı",
+                "title_en": "Data Strategy Specialist",
+                "reports_to": "17.01.01.001"
+              },
+              {
+                "position_code": "17.01.01.004",
+                "title_tr": "Yapay Zekâ Stratejisi Analisti",
+                "title_en": "AI Strategy Analyst",
+                "reports_to": "17.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kurumsal veri ve yapay zekâ stratejisini oluşturmak",
+              "Yetkinlik, teknoloji ve organizasyon yol haritasını yönetmek",
+              "Veri ve yapay zekâ olgunluğunu ve stratejik hedefleri izlemek"
+            ]
+          },
+          {
+            "team_code": "17.01.02",
+            "name_tr": "Veri ve Yapay Zekâ Portföy Yönetimi",
+            "name_en": "Data and AI Portfolio Management",
+            "lead": {
+              "position_code": "17.01.02.001",
+              "title_tr": "Veri ve Yapay Zekâ Portföy Yönetimi Yöneticisi",
+              "title_en": "Data and AI Portfolio Management Manager",
+              "reports_to": "17.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.01.02.002",
+                "title_tr": "Kıdemli Veri Portföy Uzmanı",
+                "title_en": "Senior Data Portfolio Specialist",
+                "reports_to": "17.01.02.001"
+              },
+              {
+                "position_code": "17.01.02.003",
+                "title_tr": "Yapay Zekâ Portföy Uzmanı",
+                "title_en": "AI Portfolio Specialist",
+                "reports_to": "17.01.02.001"
+              },
+              {
+                "position_code": "17.01.02.004",
+                "title_tr": "Fayda Gerçekleştirme Analisti",
+                "title_en": "Benefits Realization Analyst",
+                "reports_to": "17.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Analitik, veri ürünü ve yapay zekâ taleplerini önceliklendirmek",
+              "Yatırım, kaynak, bağımlılık ve fayda portföyünü yönetmek",
+              "İş değeri ve risk bazlı aşama kapılarını işletmek"
+            ]
+          },
+          {
+            "team_code": "17.01.03",
+            "name_tr": "Veri ve Yapay Zekâ İş Ortaklığı",
+            "name_en": "Data and AI Business Partnership",
+            "lead": {
+              "position_code": "17.01.03.001",
+              "title_tr": "Veri ve Yapay Zekâ İş Ortaklığı Yöneticisi",
+              "title_en": "Data and AI Business Partnership Manager",
+              "reports_to": "17.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.01.03.002",
+                "title_tr": "Kıdemli Veri İş Ortağı",
+                "title_en": "Senior Data Business Partner",
+                "reports_to": "17.01.03.001"
+              },
+              {
+                "position_code": "17.01.03.003",
+                "title_tr": "Analitik İş Ortağı",
+                "title_en": "Analytics Business Partner",
+                "reports_to": "17.01.03.001"
+              },
+              {
+                "position_code": "17.01.03.004",
+                "title_tr": "Yapay Zekâ İş Analisti",
+                "title_en": "AI Business Analyst",
+                "reports_to": "17.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İş birimlerinin veri ve yapay zekâ ihtiyaçlarını keşfetmek",
+              "Problemleri ölçülebilir analitik kullanım senaryolarına dönüştürmek",
+              "Benimseme, değişim ve değer gerçekleşmesini koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.02",
+        "name_tr": "Veri Yönetişimi, Kalitesi ve Ana Veri",
+        "name_en": "Data Governance, Quality and Master Data",
+        "manager": {
+          "position_code": "17.02.001",
+          "title_tr": "Veri Yönetişimi, Kalitesi ve Ana Veri Müdürü",
+          "title_en": "Data Governance, Quality and Master Data Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.02.01",
+            "name_tr": "Veri Yönetişimi ve Veri Sahipliği",
+            "name_en": "Data Governance and Data Ownership",
+            "lead": {
+              "position_code": "17.02.01.001",
+              "title_tr": "Veri Yönetişimi ve Veri Sahipliği Yöneticisi",
+              "title_en": "Data Governance and Data Ownership Manager",
+              "reports_to": "17.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.02.01.002",
+                "title_tr": "Kıdemli Veri Yönetişimi Uzmanı",
+                "title_en": "Senior Data Governance Specialist",
+                "reports_to": "17.02.01.001"
+              },
+              {
+                "position_code": "17.02.01.003",
+                "title_tr": "Veri Yönetişimi Uzmanı",
+                "title_en": "Data Governance Specialist",
+                "reports_to": "17.02.01.001"
+              },
+              {
+                "position_code": "17.02.01.004",
+                "title_tr": "Veri Sorumluluğu Koordinatörü",
+                "title_en": "Data Stewardship Coordinator",
+                "reports_to": "17.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri sahipliği, sorumluluk ve karar haklarını tanımlamak",
+              "Veri kurulları, politika ve standartları işletmek",
+              "Veri alanı ve veri sorumlusu ağını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "17.02.02",
+            "name_tr": "Veri Kalitesi ve Gözlemlenebilirlik",
+            "name_en": "Data Quality and Observability",
+            "lead": {
+              "position_code": "17.02.02.001",
+              "title_tr": "Veri Kalitesi ve Gözlemlenebilirlik Yöneticisi",
+              "title_en": "Data Quality and Observability Manager",
+              "reports_to": "17.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.02.02.002",
+                "title_tr": "Kıdemli Veri Kalitesi Uzmanı",
+                "title_en": "Senior Data Quality Specialist",
+                "reports_to": "17.02.02.001"
+              },
+              {
+                "position_code": "17.02.02.003",
+                "title_tr": "Veri Kalitesi Uzmanı",
+                "title_en": "Data Quality Specialist",
+                "reports_to": "17.02.02.001"
+              },
+              {
+                "position_code": "17.02.02.004",
+                "title_tr": "Veri Gözlemlenebilirlik Analisti",
+                "title_en": "Data Observability Analyst",
+                "reports_to": "17.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri kalite boyutları, kuralları ve eşiklerini tanımlamak",
+              "Kalite sorunlarını izlemek, kök neden ve düzeltme süreçlerini yönetmek",
+              "Veri hattı ve veri ürünlerinin güvenilirliğini ölçmek"
+            ]
+          },
+          {
+            "team_code": "17.02.03",
+            "name_tr": "Ana Veri, Referans Veri ve Metadata",
+            "name_en": "Master Data, Reference Data and Metadata",
+            "lead": {
+              "position_code": "17.02.03.001",
+              "title_tr": "Ana Veri, Referans Veri ve Metadata Yöneticisi",
+              "title_en": "Master Data, Reference Data and Metadata Manager",
+              "reports_to": "17.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.02.03.002",
+                "title_tr": "Kıdemli Ana Veri Uzmanı",
+                "title_en": "Senior Master Data Specialist",
+                "reports_to": "17.02.03.001"
+              },
+              {
+                "position_code": "17.02.03.003",
+                "title_tr": "Metadata Yönetimi Uzmanı",
+                "title_en": "Metadata Management Specialist",
+                "reports_to": "17.02.03.001"
+              },
+              {
+                "position_code": "17.02.03.004",
+                "title_tr": "Veri Kataloğu Analisti",
+                "title_en": "Data Catalog Analyst",
+                "reports_to": "17.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ana ve referans veri standartlarını yönetmek",
+              "Veri kataloğu, iş sözlüğü ve teknik metadata'yı geliştirmek",
+              "Veri soy ağacı ve veri keşfedilebilirliğini güvence altına almak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.03",
+        "name_tr": "Veri Mühendisliği ve Platformları",
+        "name_en": "Data Engineering and Platforms",
+        "manager": {
+          "position_code": "17.03.001",
+          "title_tr": "Veri Mühendisliği ve Platformları Müdürü",
+          "title_en": "Data Engineering and Platforms Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.03.01",
+            "name_tr": "Veri Platformu Mimarisi",
+            "name_en": "Data Platform Architecture",
+            "lead": {
+              "position_code": "17.03.01.001",
+              "title_tr": "Veri Platformu Mimarisi Yöneticisi",
+              "title_en": "Data Platform Architecture Manager",
+              "reports_to": "17.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.03.01.002",
+                "title_tr": "Kıdemli Veri Mimarı",
+                "title_en": "Senior Data Architect",
+                "reports_to": "17.03.01.001"
+              },
+              {
+                "position_code": "17.03.01.003",
+                "title_tr": "Veri Platformu Mimarı",
+                "title_en": "Data Platform Architect",
+                "reports_to": "17.03.01.001"
+              },
+              {
+                "position_code": "17.03.01.004",
+                "title_tr": "Bulut Veri Mimarisi Uzmanı",
+                "title_en": "Cloud Data Architecture Specialist",
+                "reports_to": "17.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri gölü, ambarı, lakehouse ve gerçek zamanlı platform mimarisini tasarlamak",
+              "Veri modelleme ve teknoloji standartlarını belirlemek",
+              "Ölçeklenebilirlik, performans, güvenlik ve maliyet mimarisini yönetmek"
+            ]
+          },
+          {
+            "team_code": "17.03.02",
+            "name_tr": "Veri Hatları ve Entegrasyon Mühendisliği",
+            "name_en": "Data Pipeline and Integration Engineering",
+            "lead": {
+              "position_code": "17.03.02.001",
+              "title_tr": "Veri Hatları ve Entegrasyon Mühendisliği Yöneticisi",
+              "title_en": "Data Pipeline and Integration Engineering Manager",
+              "reports_to": "17.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.03.02.002",
+                "title_tr": "Kıdemli Veri Mühendisi",
+                "title_en": "Senior Data Engineer",
+                "reports_to": "17.03.02.001"
+              },
+              {
+                "position_code": "17.03.02.003",
+                "title_tr": "Veri Mühendisi",
+                "title_en": "Data Engineer",
+                "reports_to": "17.03.02.001"
+              },
+              {
+                "position_code": "17.03.02.004",
+                "title_tr": "ETL/ELT Geliştirme Uzmanı",
+                "title_en": "ETL/ELT Development Specialist",
+                "reports_to": "17.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Toplu ve gerçek zamanlı veri hatlarını geliştirmek",
+              "Kaynak sistem entegrasyonu, dönüşüm ve orkestrasyonu yönetmek",
+              "Veri hattı performansı, hata ve yeniden işleme süreçlerini izlemek"
+            ]
+          },
+          {
+            "team_code": "17.03.03",
+            "name_tr": "DataOps ve Veri Platform Operasyonları",
+            "name_en": "DataOps and Data Platform Operations",
+            "lead": {
+              "position_code": "17.03.03.001",
+              "title_tr": "DataOps ve Veri Platform Operasyonları Yöneticisi",
+              "title_en": "DataOps and Data Platform Operations Manager",
+              "reports_to": "17.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.03.03.002",
+                "title_tr": "Kıdemli DataOps Mühendisi",
+                "title_en": "Senior DataOps Engineer",
+                "reports_to": "17.03.03.001"
+              },
+              {
+                "position_code": "17.03.03.003",
+                "title_tr": "DataOps Mühendisi",
+                "title_en": "DataOps Engineer",
+                "reports_to": "17.03.03.001"
+              },
+              {
+                "position_code": "17.03.03.004",
+                "title_tr": "Veri Platform Operasyon Uzmanı",
+                "title_en": "Data Platform Operations Specialist",
+                "reports_to": "17.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri dağıtım, test ve ortam otomasyonunu yönetmek",
+              "Platform kapasitesi, erişilebilirlik ve maliyetini izlemek",
+              "Veri hizmetleri için olay, değişiklik ve sürüm yönetimini yürütmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.04",
+        "name_tr": "İş Zekâsı, Raporlama ve Karar Destek",
+        "name_en": "Business Intelligence, Reporting and Decision Support",
+        "manager": {
+          "position_code": "17.04.001",
+          "title_tr": "İş Zekâsı, Raporlama ve Karar Destek Müdürü",
+          "title_en": "Business Intelligence, Reporting and Decision Support Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.04.01",
+            "name_tr": "Kurumsal Raporlama ve KPI Yönetimi",
+            "name_en": "Enterprise Reporting and KPI Management",
+            "lead": {
+              "position_code": "17.04.01.001",
+              "title_tr": "Kurumsal Raporlama ve KPI Yönetimi Yöneticisi",
+              "title_en": "Enterprise Reporting and KPI Management Manager",
+              "reports_to": "17.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.04.01.002",
+                "title_tr": "Kıdemli İş Zekâsı Uzmanı",
+                "title_en": "Senior Business Intelligence Specialist",
+                "reports_to": "17.04.01.001"
+              },
+              {
+                "position_code": "17.04.01.003",
+                "title_tr": "İş Zekâsı Uzmanı",
+                "title_en": "Business Intelligence Specialist",
+                "reports_to": "17.04.01.001"
+              },
+              {
+                "position_code": "17.04.01.004",
+                "title_tr": "KPI ve Raporlama Analisti",
+                "title_en": "KPI and Reporting Analyst",
+                "reports_to": "17.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kurumsal KPI sözlüğü ve yönetim raporlarını geliştirmek",
+              "Tek doğru veri kaynağı prensibini raporlamaya uygulamak",
+              "Rapor doğruluğu, kullanım ve güncelliğini izlemek"
+            ]
+          },
+          {
+            "team_code": "17.04.02",
+            "name_tr": "Self-Servis Analitik ve Veri Görselleştirme",
+            "name_en": "Self-Service Analytics and Data Visualization",
+            "lead": {
+              "position_code": "17.04.02.001",
+              "title_tr": "Self-Servis Analitik ve Veri Görselleştirme Yöneticisi",
+              "title_en": "Self-Service Analytics and Data Visualization Manager",
+              "reports_to": "17.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.04.02.002",
+                "title_tr": "Kıdemli Veri Görselleştirme Uzmanı",
+                "title_en": "Senior Data Visualization Specialist",
+                "reports_to": "17.04.02.001"
+              },
+              {
+                "position_code": "17.04.02.003",
+                "title_tr": "Self-Servis Analitik Uzmanı",
+                "title_en": "Self-Service Analytics Specialist",
+                "reports_to": "17.04.02.001"
+              },
+              {
+                "position_code": "17.04.02.004",
+                "title_tr": "Dashboard Geliştirme Uzmanı",
+                "title_en": "Dashboard Development Specialist",
+                "reports_to": "17.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Self-servis analitik standart ve çalışma alanlarını yönetmek",
+              "Gösterge paneli, görselleştirme ve kullanıcı deneyimini geliştirmek",
+              "Kullanıcı yetkinliği, benimseme ve içerik yaşam döngüsünü izlemek"
+            ]
+          },
+          {
+            "team_code": "17.04.03",
+            "name_tr": "Finansal ve Operasyonel Karar Destek",
+            "name_en": "Financial and Operational Decision Support",
+            "lead": {
+              "position_code": "17.04.03.001",
+              "title_tr": "Finansal ve Operasyonel Karar Destek Yöneticisi",
+              "title_en": "Financial and Operational Decision Support Manager",
+              "reports_to": "17.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.04.03.002",
+                "title_tr": "Kıdemli Karar Destek Analisti",
+                "title_en": "Senior Decision Support Analyst",
+                "reports_to": "17.04.03.001"
+              },
+              {
+                "position_code": "17.04.03.003",
+                "title_tr": "Operasyonel Analitik Uzmanı",
+                "title_en": "Operational Analytics Specialist",
+                "reports_to": "17.04.03.001"
+              },
+              {
+                "position_code": "17.04.03.004",
+                "title_tr": "Finansal Analitik Uzmanı",
+                "title_en": "Financial Analytics Specialist",
+                "reports_to": "17.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Finansal ve operasyonel karar modelleri geliştirmek",
+              "Senaryo, tahmin ve sapma analizleri üretmek",
+              "Yönetim kararlarını ölçülebilir veri içgörüleriyle desteklemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.05",
+        "name_tr": "İleri Analitik ve Veri Bilimi",
+        "name_en": "Advanced Analytics and Data Science",
+        "manager": {
+          "position_code": "17.05.001",
+          "title_tr": "İleri Analitik ve Veri Bilimi Müdürü",
+          "title_en": "Advanced Analytics and Data Science Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.05.01",
+            "name_tr": "Tahmine Dayalı Analitik ve Makine Öğrenmesi",
+            "name_en": "Predictive Analytics and Machine Learning",
+            "lead": {
+              "position_code": "17.05.01.001",
+              "title_tr": "Tahmine Dayalı Analitik ve Makine Öğrenmesi Yöneticisi",
+              "title_en": "Predictive Analytics and Machine Learning Manager",
+              "reports_to": "17.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.05.01.002",
+                "title_tr": "Kıdemli Veri Bilimci",
+                "title_en": "Senior Data Scientist",
+                "reports_to": "17.05.01.001"
+              },
+              {
+                "position_code": "17.05.01.003",
+                "title_tr": "Veri Bilimci",
+                "title_en": "Data Scientist",
+                "reports_to": "17.05.01.001"
+              },
+              {
+                "position_code": "17.05.01.004",
+                "title_tr": "Makine Öğrenmesi Uzmanı",
+                "title_en": "Machine Learning Specialist",
+                "reports_to": "17.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Tahmin, sınıflandırma ve optimizasyon modelleri geliştirmek",
+              "Özellik mühendisliği, deney ve model doğrulama süreçlerini yürütmek",
+              "Model performansı ve iş etkisini ölçmek"
+            ]
+          },
+          {
+            "team_code": "17.05.02",
+            "name_tr": "Müşteri, Pazarlama ve Gelir Analitiği",
+            "name_en": "Customer, Marketing and Revenue Analytics",
+            "lead": {
+              "position_code": "17.05.02.001",
+              "title_tr": "Müşteri, Pazarlama ve Gelir Analitiği Yöneticisi",
+              "title_en": "Customer, Marketing and Revenue Analytics Manager",
+              "reports_to": "17.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.05.02.002",
+                "title_tr": "Kıdemli Müşteri Analitiği Uzmanı",
+                "title_en": "Senior Customer Analytics Specialist",
+                "reports_to": "17.05.02.001"
+              },
+              {
+                "position_code": "17.05.02.003",
+                "title_tr": "Pazarlama Analitiği Uzmanı",
+                "title_en": "Marketing Analytics Specialist",
+                "reports_to": "17.05.02.001"
+              },
+              {
+                "position_code": "17.05.02.004",
+                "title_tr": "Gelir Analitiği Uzmanı",
+                "title_en": "Revenue Analytics Specialist",
+                "reports_to": "17.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Segmentasyon, yaşam boyu değer ve kayıp modelleri geliştirmek",
+              "Kampanya, kanal ve dönüşüm etkisini analiz etmek",
+              "Fiyat, talep ve gelir optimizasyonunu desteklemek"
+            ]
+          },
+          {
+            "team_code": "17.05.03",
+            "name_tr": "Operasyon, Risk ve Optimizasyon Analitiği",
+            "name_en": "Operations, Risk and Optimization Analytics",
+            "lead": {
+              "position_code": "17.05.03.001",
+              "title_tr": "Operasyon, Risk ve Optimizasyon Analitiği Yöneticisi",
+              "title_en": "Operations, Risk and Optimization Analytics Manager",
+              "reports_to": "17.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.05.03.002",
+                "title_tr": "Kıdemli Optimizasyon Uzmanı",
+                "title_en": "Senior Optimization Specialist",
+                "reports_to": "17.05.03.001"
+              },
+              {
+                "position_code": "17.05.03.003",
+                "title_tr": "Operasyon Analitiği Uzmanı",
+                "title_en": "Operations Analytics Specialist",
+                "reports_to": "17.05.03.001"
+              },
+              {
+                "position_code": "17.05.03.004",
+                "title_tr": "Risk Modelleme Uzmanı",
+                "title_en": "Risk Modeling Specialist",
+                "reports_to": "17.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Kapasite, rota, stok ve kaynak optimizasyon modelleri geliştirmek",
+              "Risk skorlama ve erken uyarı modellerini oluşturmak",
+              "Simülasyon ve yöneylem araştırması tekniklerini iş süreçlerine uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.06",
+        "name_tr": "Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon",
+        "name_en": "Artificial Intelligence, Generative AI and Automation",
+        "manager": {
+          "position_code": "17.06.001",
+          "title_tr": "Yapay Zekâ, Üretken Yapay Zekâ ve Otomasyon Müdürü",
+          "title_en": "Artificial Intelligence, Generative AI and Automation Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.06.01",
+            "name_tr": "Üretken Yapay Zekâ Çözümleri",
+            "name_en": "Generative AI Solutions",
+            "lead": {
+              "position_code": "17.06.01.001",
+              "title_tr": "Üretken Yapay Zekâ Çözümleri Yöneticisi",
+              "title_en": "Generative AI Solutions Manager",
+              "reports_to": "17.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.06.01.002",
+                "title_tr": "Kıdemli Üretken Yapay Zekâ Mühendisi",
+                "title_en": "Senior Generative AI Engineer",
+                "reports_to": "17.06.01.001"
+              },
+              {
+                "position_code": "17.06.01.003",
+                "title_tr": "Üretken Yapay Zekâ Mühendisi",
+                "title_en": "Generative AI Engineer",
+                "reports_to": "17.06.01.001"
+              },
+              {
+                "position_code": "17.06.01.004",
+                "title_tr": "Prompt ve Bağlam Mühendisi",
+                "title_en": "Prompt and Context Engineer",
+                "reports_to": "17.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "LLM, RAG ve çok modlu yapay zekâ çözümleri geliştirmek",
+              "Bilgi erişimi, bağlam, değerlendirme ve güvenlik katmanlarını tasarlamak",
+              "Kullanım, kalite, maliyet ve halüsinasyon göstergelerini izlemek"
+            ]
+          },
+          {
+            "team_code": "17.06.02",
+            "name_tr": "Akıllı Otomasyon ve Yapay Zekâ Ajanları",
+            "name_en": "Intelligent Automation and AI Agents",
+            "lead": {
+              "position_code": "17.06.02.001",
+              "title_tr": "Akıllı Otomasyon ve Yapay Zekâ Ajanları Yöneticisi",
+              "title_en": "Intelligent Automation and AI Agents Manager",
+              "reports_to": "17.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.06.02.002",
+                "title_tr": "Kıdemli Akıllı Otomasyon Mühendisi",
+                "title_en": "Senior Intelligent Automation Engineer",
+                "reports_to": "17.06.02.001"
+              },
+              {
+                "position_code": "17.06.02.003",
+                "title_tr": "Yapay Zekâ Ajanları Mühendisi",
+                "title_en": "AI Agents Engineer",
+                "reports_to": "17.06.02.001"
+              },
+              {
+                "position_code": "17.06.02.004",
+                "title_tr": "RPA ve Süreç Otomasyon Uzmanı",
+                "title_en": "RPA and Process Automation Specialist",
+                "reports_to": "17.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "İş akışı, RPA ve ajan tabanlı otomasyon çözümleri geliştirmek",
+              "İnsan onayı, araç erişimi ve güvenli yürütme kontrollerini tasarlamak",
+              "Otomasyon faydası, hata ve istisna performansını izlemek"
+            ]
+          },
+          {
+            "team_code": "17.06.03",
+            "name_tr": "Doğal Dil, Görüntü ve Konuşma Yapay Zekâsı",
+            "name_en": "NLP, Computer Vision and Speech AI",
+            "lead": {
+              "position_code": "17.06.03.001",
+              "title_tr": "Doğal Dil, Görüntü ve Konuşma Yapay Zekâsı Yöneticisi",
+              "title_en": "NLP, Computer Vision and Speech AI Manager",
+              "reports_to": "17.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.06.03.002",
+                "title_tr": "Kıdemli Yapay Zekâ Mühendisi",
+                "title_en": "Senior AI Engineer",
+                "reports_to": "17.06.03.001"
+              },
+              {
+                "position_code": "17.06.03.003",
+                "title_tr": "NLP Uzmanı",
+                "title_en": "NLP Specialist",
+                "reports_to": "17.06.03.001"
+              },
+              {
+                "position_code": "17.06.03.004",
+                "title_tr": "Görüntü ve Konuşma Yapay Zekâsı Uzmanı",
+                "title_en": "Vision and Speech AI Specialist",
+                "reports_to": "17.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Doğal dil, görüntü ve konuşma modelleri geliştirmek",
+              "Model seçimi, uyarlama ve görev bazlı değerlendirmeleri yürütmek",
+              "Gerçek zamanlı yapay zekâ servislerini ürün ve süreçlere entegre etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.07",
+        "name_tr": "MLOps, Model Platformları ve Yapay Zekâ Güvenilirliği",
+        "name_en": "MLOps, Model Platforms and AI Reliability",
+        "manager": {
+          "position_code": "17.07.001",
+          "title_tr": "MLOps, Model Platformları ve Yapay Zekâ Güvenilirliği Müdürü",
+          "title_en": "MLOps, Model Platforms and AI Reliability Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.07.01",
+            "name_tr": "MLOps ve Model Yaşam Döngüsü",
+            "name_en": "MLOps and Model Lifecycle",
+            "lead": {
+              "position_code": "17.07.01.001",
+              "title_tr": "MLOps ve Model Yaşam Döngüsü Yöneticisi",
+              "title_en": "MLOps and Model Lifecycle Manager",
+              "reports_to": "17.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.07.01.002",
+                "title_tr": "Kıdemli MLOps Mühendisi",
+                "title_en": "Senior MLOps Engineer",
+                "reports_to": "17.07.01.001"
+              },
+              {
+                "position_code": "17.07.01.003",
+                "title_tr": "MLOps Mühendisi",
+                "title_en": "MLOps Engineer",
+                "reports_to": "17.07.01.001"
+              },
+              {
+                "position_code": "17.07.01.004",
+                "title_tr": "Model Yayınlama Uzmanı",
+                "title_en": "Model Deployment Specialist",
+                "reports_to": "17.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Model geliştirme, kayıt, onay ve yayın süreçlerini otomatikleştirmek",
+              "Model versiyonlama, deney takibi ve yeniden üretilebilirliği sağlamak",
+              "CI/CD/CT ve model geri alma mekanizmalarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "17.07.02",
+            "name_tr": "Model İzleme ve Yapay Zekâ Güvenilirliği",
+            "name_en": "Model Monitoring and AI Reliability",
+            "lead": {
+              "position_code": "17.07.02.001",
+              "title_tr": "Model İzleme ve Yapay Zekâ Güvenilirliği Yöneticisi",
+              "title_en": "Model Monitoring and AI Reliability Manager",
+              "reports_to": "17.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.07.02.002",
+                "title_tr": "Kıdemli Model İzleme Uzmanı",
+                "title_en": "Senior Model Monitoring Specialist",
+                "reports_to": "17.07.02.001"
+              },
+              {
+                "position_code": "17.07.02.003",
+                "title_tr": "Yapay Zekâ Güvenilirlik Mühendisi",
+                "title_en": "AI Reliability Engineer",
+                "reports_to": "17.07.02.001"
+              },
+              {
+                "position_code": "17.07.02.004",
+                "title_tr": "Model Performans Analisti",
+                "title_en": "Model Performance Analyst",
+                "reports_to": "17.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Model performansı, sapma, veri kayması ve hizmet seviyelerini izlemek",
+              "Alarm, yeniden eğitim ve devreden çıkarma eşiklerini yönetmek",
+              "Model olayları ve üretim hatalarının kök neden analizini yürütmek"
+            ]
+          },
+          {
+            "team_code": "17.07.03",
+            "name_tr": "Yapay Zekâ Platformu ve Hesaplama Altyapısı",
+            "name_en": "AI Platform and Compute Infrastructure",
+            "lead": {
+              "position_code": "17.07.03.001",
+              "title_tr": "Yapay Zekâ Platformu ve Hesaplama Altyapısı Yöneticisi",
+              "title_en": "AI Platform and Compute Infrastructure Manager",
+              "reports_to": "17.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.07.03.002",
+                "title_tr": "Kıdemli Yapay Zekâ Platform Mühendisi",
+                "title_en": "Senior AI Platform Engineer",
+                "reports_to": "17.07.03.001"
+              },
+              {
+                "position_code": "17.07.03.003",
+                "title_tr": "Yapay Zekâ Platform Mühendisi",
+                "title_en": "AI Platform Engineer",
+                "reports_to": "17.07.03.001"
+              },
+              {
+                "position_code": "17.07.03.004",
+                "title_tr": "GPU ve Hesaplama Kaynakları Uzmanı",
+                "title_en": "GPU and Compute Resources Specialist",
+                "reports_to": "17.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Model geliştirme ve çıkarım platformlarını yönetmek",
+              "GPU, CPU, depolama ve model servis kapasitesini optimize etmek",
+              "Yapay zekâ platformu güvenlik, erişim ve maliyet kontrollerini uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "17.08",
+        "name_tr": "Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi",
+        "name_en": "Data Products, Responsible AI and Value Management",
+        "manager": {
+          "position_code": "17.08.001",
+          "title_tr": "Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi Müdürü",
+          "title_en": "Data Products, Responsible AI and Value Management Manager",
+          "reports_to": "17.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "17.08.01",
+            "name_tr": "Veri Ürünleri Yönetimi",
+            "name_en": "Data Product Management",
+            "lead": {
+              "position_code": "17.08.01.001",
+              "title_tr": "Veri Ürünleri Yönetimi Yöneticisi",
+              "title_en": "Data Product Management Manager",
+              "reports_to": "17.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.08.01.002",
+                "title_tr": "Kıdemli Veri Ürünü Yöneticisi",
+                "title_en": "Senior Data Product Manager",
+                "reports_to": "17.08.01.001"
+              },
+              {
+                "position_code": "17.08.01.003",
+                "title_tr": "Veri Ürünü Yöneticisi",
+                "title_en": "Data Product Manager",
+                "reports_to": "17.08.01.001"
+              },
+              {
+                "position_code": "17.08.01.004",
+                "title_tr": "Veri Ürünü Analisti",
+                "title_en": "Data Product Analyst",
+                "reports_to": "17.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri ürünlerinin vizyon, yol haritası ve hizmet seviyelerini yönetmek",
+              "Kullanıcı, kalite, erişim ve yaşam döngüsü gereksinimlerini tanımlamak",
+              "Veri ürünlerinin benimsenme ve iş değerini izlemek"
+            ]
+          },
+          {
+            "team_code": "17.08.02",
+            "name_tr": "Sorumlu Yapay Zekâ ve Model Risk Yönetimi",
+            "name_en": "Responsible AI and Model Risk Management",
+            "lead": {
+              "position_code": "17.08.02.001",
+              "title_tr": "Sorumlu Yapay Zekâ ve Model Risk Yönetimi Yöneticisi",
+              "title_en": "Responsible AI and Model Risk Management Manager",
+              "reports_to": "17.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.08.02.002",
+                "title_tr": "Kıdemli Sorumlu Yapay Zekâ Uzmanı",
+                "title_en": "Senior Responsible AI Specialist",
+                "reports_to": "17.08.02.001"
+              },
+              {
+                "position_code": "17.08.02.003",
+                "title_tr": "Model Risk Uzmanı",
+                "title_en": "Model Risk Specialist",
+                "reports_to": "17.08.02.001"
+              },
+              {
+                "position_code": "17.08.02.004",
+                "title_tr": "Yapay Zekâ Etik ve Uyum Analisti",
+                "title_en": "AI Ethics and Compliance Analyst",
+                "reports_to": "17.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Adillik, açıklanabilirlik, şeffaflık ve insan gözetimi ilkelerini uygulamak",
+              "Yapay zekâ kullanım senaryolarını risk bazında sınıflandırmak",
+              "Model kartları, etki değerlendirmeleri ve onay kayıtlarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "17.08.03",
+            "name_tr": "Veri ve Yapay Zekâ Değer Ölçümü",
+            "name_en": "Data and AI Value Measurement",
+            "lead": {
+              "position_code": "17.08.03.001",
+              "title_tr": "Veri ve Yapay Zekâ Değer Ölçümü Yöneticisi",
+              "title_en": "Data and AI Value Measurement Manager",
+              "reports_to": "17.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "17.08.03.002",
+                "title_tr": "Kıdemli Yapay Zekâ Değer Uzmanı",
+                "title_en": "Senior AI Value Specialist",
+                "reports_to": "17.08.03.001"
+              },
+              {
+                "position_code": "17.08.03.003",
+                "title_tr": "Analitik Değer Uzmanı",
+                "title_en": "Analytics Value Specialist",
+                "reports_to": "17.08.03.001"
+              },
+              {
+                "position_code": "17.08.03.004",
+                "title_tr": "Veri ve Yapay Zekâ Ekonomisi Analisti",
+                "title_en": "Data and AI Economics Analyst",
+                "reports_to": "17.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Veri ve yapay zekâ yatırımlarının iş vakalarını oluşturmak",
+              "Gelir, maliyet, risk ve verimlilik faydalarını ölçmek",
+              "Model ve veri ürünleri için toplam sahip olma maliyetini izlemek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Kritik Veri Kalitesi Skoru",
+        "Veri Sahipliği Atama Oranı",
+        "Veri Kataloğu Kapsama Oranı",
+        "Veri Hattı SLA Uyum Oranı",
+        "Rapor Tekilleştirme Oranı",
+        "Self-Servis Analitik Aktif Kullanım Oranı",
+        "Model Üretime Alma Süresi",
+        "Model Performans ve Sapma Uyum Oranı",
+        "Yapay Zekâ Çözümü Benimseme Oranı",
+        "Veri Ürünü SLA Uyum Oranı",
+        "Veri ve Yapay Zekâ Fayda Gerçekleşme Oranı",
+        "Analitik Proje Zamanında Teslim Oranı",
+        "Sorumlu Yapay Zekâ Değerlendirme Kapsama Oranı",
+        "Birim Model Çalıştırma Maliyeti",
+        "Veri Platformu Birim Maliyeti"
+      ],
+      "cadence": [
+        {
+          "forum": "Haftalık Veri ve Yapay Zekâ Portföy Toplantısı",
+          "focus": "Talepler, teslimatlar, riskler, model ve veri ürünü durumu"
+        },
+        {
+          "forum": "Aylık Veri Yönetişim Kurulu",
+          "focus": "Veri sahipliği, kalite, metadata, erişim ve politika kararları"
+        },
+        {
+          "forum": "Aylık Model Risk ve Sorumlu Yapay Zekâ Kurulu",
+          "focus": "Yüksek riskli kullanım senaryoları, model onayı, izleme ve olaylar"
+        },
+        {
+          "forum": "Çeyreklik Veri ve Yapay Zekâ Strateji Kurulu",
+          "focus": "Yol haritası, yatırım, değer gerçekleşmesi, platform ve yetkinlik gelişimi"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "information_technology": "BT altyapı, veritabanı işletimi, kurumsal entegrasyon ve teknoloji sürekliliğinin; Veri/AI departmanı veri yönetişimi, veri ürünleri, analitik modeller ve yapay zekâ yaşam döngüsünün sahibidir.",
+      "business_units": "İş birimleri veri anlamı, veri sahipliği, karar ve iş sonucu sorumluluğunu taşır. Veri/AI departmanı metodoloji, platform, uzmanlık ve çözüm teslimatını sağlar.",
+      "product": "Ürün Yönetimi müşteri problemi ve ürün yol haritasının; Veri/AI veri ürünü, analitik yetenek ve model bileşenlerinin sahibidir. Müşteriye dönük AI özellikleri ortak ürün ekipleriyle geliştirilir.",
+      "cybersecurity": "Siber Güvenlik erişim güvenliği, veri koruma teknik kontrolleri ve AI güvenlik standartlarının; Veri/AI departmanı veri kullanımı, model yaşam döngüsü ve analitik platform uygulamalarının sahibidir.",
+      "legal_privacy": "Hukuk/KVKK hukuki yorum, veri işleme şartları ve ilgili kişi yükümlülüklerinin; Veri/AI departmanı veri minimizasyonu, teknik uygulama ve model etki kayıtlarının sahibidir.",
+      "compliance_risk": "Uyum ve Kurumsal Risk politika/mevzuat gözetimi ile kurumsal risk metodolojisinin; Veri/AI model risk değerlendirmesi, sorumlu AI kontrolleri ve izleme kanıtlarının sahibidir.",
+      "finance": "Finans yatırım onayı ve mali kontrolün; Veri/AI iş vakası, kullanım maliyeti ve fayda ölçümünün sahibidir.",
+      "marketing_sales": "Pazarlama ve Satış ticari strateji, kampanya ve müşteri kararlarının; Veri/AI segmentasyon, tahmin ve optimizasyon modellerinin metodolojik ve teknik sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; veri kaynağı ve veri ürünü sayısı, veri hacmi, analitik talep, model portföyü, gerçek zamanlı gereksinim, yapay zekâ kullanım senaryoları, regülasyon ve self-servis analitik kullanıcı sayısına göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; veri mühendisi, veri bilimci, analist, AI mühendisi ve ürün kadroları iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Veri kaynağı ve entegrasyon sayısı",
+        "Veri hacmi ve işlem sıklığı",
+        "Aktif rapor ve dashboard sayısı",
+        "Üretimdeki model ve AI çözümü sayısı",
+        "Veri ürünü ve veri alanı sayısı",
+        "Gerçek zamanlı analitik ihtiyacı",
+        "Self-servis analitik kullanıcı sayısı",
+        "Model risk ve regülasyon seviyesi"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Veri bir yan ürün değil kurumsal bir varlık; yapay zekâ ise yalnızca teknoloji deneyi değil, güvenilir veri ve sorumlu yönetişim üzerinde ölçülebilir değer üreten bir işletme yetkinliğidir."
+    }
+  }
+}

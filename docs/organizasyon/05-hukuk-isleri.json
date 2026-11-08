@@ -1,0 +1,2283 @@
+{
+  "schema_version": "2.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "05",
+    "name_tr": "Hukuk İşleri",
+    "name_en": "Legal Affairs",
+    "model": "Tam fonksiyonel ve katmanlı organizasyon",
+    "mission": "Şirketin hukuki haklarını korumak; faaliyetlerin, işlemlerin ve kararların hukuk güvenliği içerisinde yürütülmesini sağlamak.",
+    "reporting_to": {"title_tr": "Genel Müdür / CEO", "title_en": "Chief Executive Officer"},
+    "department_head": {"title_tr": "Hukuk İşleri Direktörü", "title_en": "Legal Affairs Director / General Counsel"},
+    "hierarchy_standard": ["Departman lideri", "Birim müdürü", "Ekip yöneticisi", "Uzman pozisyon"]
+  },
+  "organization_chart": {
+    "root": {
+      "id": "CEO",
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer",
+      "children": [
+        {
+          "id": "LEGAL-DIR",
+          "title_tr": "Hukuk İşleri Direktörü",
+          "title_en": "Legal Affairs Director / General Counsel",
+          "children": [
+            {"unit_ref": "05.01"}, {"unit_ref": "05.02"}, {"unit_ref": "05.03"}, {"unit_ref": "05.04"},
+            {"unit_ref": "05.05"}, {"unit_ref": "05.06"}, {"unit_ref": "05.07"}, {"unit_ref": "05.08"}
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {
+      "id": "LEGAL-DIR",
+      "title_tr": "Hukuk İşleri Direktörü",
+      "title_en": "Legal Affairs Director / General Counsel",
+      "level": "director",
+      "reports_to": "CEO",
+      "responsibilities": ["Grup hukuk stratejisini ve hukuki hizmet önceliklerini belirlemek", "Yönetim Kurulu ve CEO'ya hukuki danışmanlık sağlamak", "Kritik sözleşme, uyuşmazlık ve yatırımları gözetmek", "Hukuki riskleri üst yönetime raporlamak", "Birimler arasında iş yükü ve kaynak dağılımı yapmak", "Dış hukuk bürolarını ve hukuk bütçesini yönetmek", "Hukuki görüş ve doküman standartlarını belirlemek"]
+    },
+    {"id": "LEGAL-DEPUTY", "title_tr": "Hukuk İşleri Direktör Yardımcısı", "title_en": "Deputy Legal Affairs Director / Deputy General Counsel", "level": "deputy_director", "reports_to": "LEGAL-DIR", "status": "Şirket ölçeğine göre opsiyonel"},
+    {"id": "LEGAL-EXEC-COUNSEL", "title_tr": "Yönetici Hukuk Müşaviri", "title_en": "Executive Legal Counsel", "level": "executive_counsel", "reports_to": "LEGAL-DIR", "status": "Kritik ve stratejik hukuki konular için opsiyonel"}
+  ],
+  "units": [
+    {
+      "id": "05.01",
+      "name_tr": "Şirketler ve Ticaret Hukuku",
+      "name_en": "Corporate and Commercial Law",
+      "manager": {"title_tr": "Şirketler ve Ticaret Hukuku Müdürü", "title_en": "Corporate and Commercial Law Manager"},
+      "teams": [
+        {"name_tr": "Şirketler Hukuku Ekibi", "name_en": "Corporate Law Team", "lead": {"title_tr": "Şirketler Hukuku Yöneticisi", "title_en": "Corporate Law Lead"}, "positions": [
+          {"title_tr": "Kıdemli Şirketler Hukuku Müşaviri", "title_en": "Senior Corporate Counsel"},
+          {"title_tr": "Şirketler Hukuku Müşaviri", "title_en": "Corporate Counsel"},
+          {"title_tr": "Ticaret Sicili ve Kurumsal İşlemler Uzmanı", "title_en": "Trade Registry and Corporate Affairs Specialist"}]},
+        {"name_tr": "Kurumsal İşlemler ve Ortaklıklar Ekibi", "name_en": "Corporate Transactions and Partnerships Team", "lead": {"title_tr": "Kurumsal İşlemler ve Ortaklıklar Yöneticisi", "title_en": "Corporate Transactions and Partnerships Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal İşlemler Müşaviri", "title_en": "Senior Corporate Transactions Counsel"},
+          {"title_tr": "Birleşme ve Devralma Hukuku Müşaviri", "title_en": "M&A Counsel"},
+          {"title_tr": "Ortaklıklar Hukuku Uzmanı", "title_en": "Partnerships Legal Specialist"}]},
+        {"name_tr": "Yönetim Organları Hukuki Destek Ekibi", "name_en": "Corporate Governance Legal Support Team", "lead": {"title_tr": "Yönetim Organları Hukuki Destek Yöneticisi", "title_en": "Corporate Governance Legal Support Lead"}, "positions": [
+          {"title_tr": "Yönetim Kurulu Hukuk Müşaviri", "title_en": "Board Legal Counsel"},
+          {"title_tr": "Genel Kurul ve Karar Dokümantasyon Uzmanı", "title_en": "General Assembly and Resolutions Specialist"},
+          {"title_tr": "Kurumsal Belge Kontrol Uzmanı", "title_en": "Corporate Documentation Specialist"}]}
+      ],
+      "responsibilities": ["Şirket kuruluşları ve yapısal değişiklikler", "Ticaret sicili işlemleri", "Esas sözleşme değişiklikleri", "Genel kurul ve yönetim kurulu kararları", "Sermaye artırımı ve azaltımı", "Birleşme, bölünme, devralma ve ortaklık işlemleri", "İştiraklerin kurumsal hukuk süreçleri"]
+    },
+    {
+      "id": "05.02",
+      "name_tr": "Sözleşmeler ve Ticari Hukuk",
+      "name_en": "Contracts and Commercial Law",
+      "manager": {"title_tr": "Sözleşmeler ve Ticari Hukuk Müdürü", "title_en": "Contracts and Commercial Law Manager"},
+      "teams": [
+        {"name_tr": "Sözleşme Standartları Ekibi", "name_en": "Contract Standards Team", "lead": {"title_tr": "Sözleşme Standartları Yöneticisi", "title_en": "Contract Standards Lead"}, "positions": [
+          {"title_tr": "Kıdemli Sözleşme Hukuku Müşaviri", "title_en": "Senior Contracts Counsel"},
+          {"title_tr": "Sözleşme Hukuku Müşaviri", "title_en": "Contracts Counsel"},
+          {"title_tr": "Sözleşme Şablonları Uzmanı", "title_en": "Contract Templates Specialist"}]},
+        {"name_tr": "Ticari Müzakere ve İşlemler Ekibi", "name_en": "Commercial Negotiations and Transactions Team", "lead": {"title_tr": "Ticari Müzakere ve İşlemler Yöneticisi", "title_en": "Commercial Negotiations and Transactions Lead"}, "positions": [
+          {"title_tr": "Kıdemli Ticari Hukuk Müşaviri", "title_en": "Senior Commercial Counsel"},
+          {"title_tr": "Ticari Hukuk Müşaviri", "title_en": "Commercial Counsel"},
+          {"title_tr": "İhale ve Teklif Hukuku Uzmanı", "title_en": "Tender and Proposal Legal Specialist"}]},
+        {"name_tr": "Sözleşme Yaşam Döngüsü Ekibi", "name_en": "Contract Lifecycle Management Team", "lead": {"title_tr": "Sözleşme Yaşam Döngüsü Yöneticisi", "title_en": "Contract Lifecycle Management Lead"}, "positions": [
+          {"title_tr": "Sözleşme Operasyonları Uzmanı", "title_en": "Contract Operations Specialist"},
+          {"title_tr": "Sözleşme Yükümlülükleri Uzmanı", "title_en": "Contract Obligations Specialist"},
+          {"title_tr": "Sözleşme Veri ve Arşiv Uzmanı", "title_en": "Contract Data and Records Specialist"}]}
+      ],
+      "responsibilities": ["Müşteri, tedarikçi ve iş ortaklığı sözleşmeleri", "NDA, taahhütname ve protokoller", "Sözleşme müzakereleri", "Standart sözleşme ve madde kütüphanesi", "Sözleşme risk puanlaması", "Yenileme, sona erme ve yükümlülük takibi", "Sözleşme yaşam döngüsü yönetimi"]
+    },
+    {
+      "id": "05.03",
+      "name_tr": "Dava, İcra ve Uyuşmazlık Yönetimi",
+      "name_en": "Litigation, Enforcement and Dispute Resolution",
+      "manager": {"title_tr": "Dava, İcra ve Uyuşmazlık Yönetimi Müdürü", "title_en": "Litigation, Enforcement and Dispute Resolution Manager"},
+      "teams": [
+        {"name_tr": "Dava ve Alternatif Uyuşmazlık Ekibi", "name_en": "Litigation and Alternative Dispute Resolution Team", "lead": {"title_tr": "Dava ve Alternatif Uyuşmazlık Yöneticisi", "title_en": "Litigation and Alternative Dispute Resolution Lead"}, "positions": [
+          {"title_tr": "Kıdemli Dava Avukatı", "title_en": "Senior Litigation Counsel"},
+          {"title_tr": "Dava Avukatı", "title_en": "Litigation Counsel"},
+          {"title_tr": "Arabuluculuk ve Tahkim Uzmanı", "title_en": "Mediation and Arbitration Specialist"}]},
+        {"name_tr": "İcra ve Alacak Takibi Ekibi", "name_en": "Enforcement and Legal Collections Team", "lead": {"title_tr": "İcra ve Alacak Takibi Yöneticisi", "title_en": "Enforcement and Legal Collections Lead"}, "positions": [
+          {"title_tr": "Kıdemli İcra Avukatı", "title_en": "Senior Enforcement Counsel"},
+          {"title_tr": "İcra Avukatı", "title_en": "Enforcement Counsel"},
+          {"title_tr": "Hukuki Alacak Takip Uzmanı", "title_en": "Legal Collections Specialist"}]},
+        {"name_tr": "Dış Avukat ve Dosya Koordinasyon Ekibi", "name_en": "External Counsel and Case Coordination Team", "lead": {"title_tr": "Dış Avukat ve Dosya Koordinasyon Yöneticisi", "title_en": "External Counsel and Case Coordination Lead"}, "positions": [
+          {"title_tr": "Dış Avukat Koordinasyon Uzmanı", "title_en": "External Counsel Coordination Specialist"},
+          {"title_tr": "Dava Dosyaları Takip Uzmanı", "title_en": "Litigation Case Tracking Specialist"},
+          {"title_tr": "Dava Raporlama Analisti", "title_en": "Litigation Reporting Analyst"}]}
+      ],
+      "responsibilities": ["Dava ve icra dosyalarının yönetimi", "Dava stratejisinin belirlenmesi", "Arabuluculuk, tahkim ve uzlaşma", "Hukuki alacak takibi", "Dış avukat görevlendirmeleri", "Dava karşılıkları için finans ve muhasebe koordinasyonu", "Dosya performansı, süre ve maliyet takibi"]
+    },
+    {
+      "id": "05.04",
+      "name_tr": "İş ve Sosyal Güvenlik Hukuku",
+      "name_en": "Employment and Social Security Law",
+      "manager": {"title_tr": "İş ve Sosyal Güvenlik Hukuku Müdürü", "title_en": "Employment and Social Security Law Manager"},
+      "teams": [
+        {"name_tr": "İş Hukuku Danışmanlığı Ekibi", "name_en": "Employment Legal Advisory Team", "lead": {"title_tr": "İş Hukuku Danışmanlığı Yöneticisi", "title_en": "Employment Legal Advisory Lead"}, "positions": [
+          {"title_tr": "Kıdemli İş Hukuku Müşaviri", "title_en": "Senior Employment Counsel"},
+          {"title_tr": "İş Hukuku Müşaviri", "title_en": "Employment Counsel"},
+          {"title_tr": "İş Sözleşmeleri Hukuk Uzmanı", "title_en": "Employment Contracts Legal Specialist"}]},
+        {"name_tr": "İş Uyuşmazlıkları Ekibi", "name_en": "Employment Disputes Team", "lead": {"title_tr": "İş Uyuşmazlıkları Yöneticisi", "title_en": "Employment Disputes Lead"}, "positions": [
+          {"title_tr": "Kıdemli İş Davaları Avukatı", "title_en": "Senior Employment Litigation Counsel"},
+          {"title_tr": "İş Davaları Avukatı", "title_en": "Employment Litigation Counsel"},
+          {"title_tr": "Arabuluculuk ve Fesih Süreçleri Uzmanı", "title_en": "Mediation and Termination Specialist"}]},
+        {"name_tr": "Sosyal Güvenlik Hukuku Ekibi", "name_en": "Social Security Law Team", "lead": {"title_tr": "Sosyal Güvenlik Hukuku Yöneticisi", "title_en": "Social Security Law Lead"}, "positions": [
+          {"title_tr": "Sosyal Güvenlik Hukuku Müşaviri", "title_en": "Social Security Counsel"},
+          {"title_tr": "SGK Uyuşmazlıkları Uzmanı", "title_en": "Social Security Disputes Specialist"},
+          {"title_tr": "Çalışma Mevzuatı Uzmanı", "title_en": "Labour Regulations Specialist"}]}
+      ],
+      "responsibilities": ["İş sözleşmelerinin hukuki kontrolü", "Fesih ve disiplin süreçlerinde hukuki görüş", "İşe iade, alacak ve tazminat davaları", "Arabuluculuk süreçleri", "Toplu iş hukuku", "SGK uyuşmazlıkları", "İnsan Kaynaklarına hukuki danışmanlık"]
+    },
+    {
+      "id": "05.05",
+      "name_tr": "Mevzuat ve Düzenleyici Hukuk",
+      "name_en": "Regulatory Law",
+      "manager": {"title_tr": "Mevzuat ve Düzenleyici Hukuk Müdürü", "title_en": "Regulatory Law Manager"},
+      "teams": [
+        {"name_tr": "Mevzuat İzleme ve Hukuki Görüş Ekibi", "name_en": "Regulatory Monitoring and Legal Opinions Team", "lead": {"title_tr": "Mevzuat İzleme ve Hukuki Görüş Yöneticisi", "title_en": "Regulatory Monitoring and Legal Opinions Lead"}, "positions": [
+          {"title_tr": "Kıdemli Mevzuat Hukuku Müşaviri", "title_en": "Senior Regulatory Counsel"},
+          {"title_tr": "Mevzuat Hukuku Müşaviri", "title_en": "Regulatory Counsel"},
+          {"title_tr": "Mevzuat Araştırma Uzmanı", "title_en": "Regulatory Research Specialist"}]},
+        {"name_tr": "Rekabet Hukuku Ekibi", "name_en": "Competition Law Team", "lead": {"title_tr": "Rekabet Hukuku Yöneticisi", "title_en": "Competition Law Lead"}, "positions": [
+          {"title_tr": "Kıdemli Rekabet Hukuku Müşaviri", "title_en": "Senior Competition Counsel"},
+          {"title_tr": "Rekabet Hukuku Müşaviri", "title_en": "Competition Counsel"},
+          {"title_tr": "Rekabet Hukuku Araştırma Uzmanı", "title_en": "Competition Law Research Specialist"}]},
+        {"name_tr": "Resmî Kurum ve Ruhsat Hukuku Ekibi", "name_en": "Public Authorities and Licensing Legal Team", "lead": {"title_tr": "Resmî Kurum ve Ruhsat Hukuku Yöneticisi", "title_en": "Public Authorities and Licensing Legal Lead"}, "positions": [
+          {"title_tr": "İdare Hukuku Müşaviri", "title_en": "Administrative Law Counsel"},
+          {"title_tr": "Ruhsat ve İzinler Hukuk Uzmanı", "title_en": "Licensing and Permits Legal Specialist"},
+          {"title_tr": "Resmî Kurum Yazışmaları Uzmanı", "title_en": "Public Authority Correspondence Specialist"}]}
+      ],
+      "responsibilities": ["Mevzuat değişikliklerinin hukuki yorumlanması", "Rekabet hukuku değerlendirmeleri", "Resmî kurum ve düzenleyici otorite işlemleri", "Ruhsat, izin ve lisans süreçleri", "Yeni iş modellerinin mevzuat analizi", "Departmanlara hukuki görüş sunulması"]
+    },
+    {
+      "id": "05.06",
+      "name_tr": "KVKK ve Veri Koruma Hukuku",
+      "name_en": "Data Privacy Law",
+      "manager": {"title_tr": "KVKK ve Veri Koruma Hukuku Müdürü", "title_en": "Data Privacy Law Manager"},
+      "teams": [
+        {"name_tr": "Veri Koruma Danışmanlığı Ekibi", "name_en": "Data Privacy Advisory Team", "lead": {"title_tr": "Veri Koruma Danışmanlığı Yöneticisi", "title_en": "Data Privacy Advisory Lead"}, "positions": [
+          {"title_tr": "Kıdemli Veri Koruma Hukuku Müşaviri", "title_en": "Senior Privacy Counsel"},
+          {"title_tr": "Veri Koruma Hukuku Müşaviri", "title_en": "Privacy Counsel"},
+          {"title_tr": "KVKK ve GDPR Hukuk Uzmanı", "title_en": "KVKK and GDPR Legal Specialist"}]},
+        {"name_tr": "Veri İhlali ve Başvuru Yönetimi Ekibi", "name_en": "Data Breach and Data Subject Requests Team", "lead": {"title_tr": "Veri İhlali ve Başvuru Yönetimi Yöneticisi", "title_en": "Data Breach and Data Subject Requests Lead"}, "positions": [
+          {"title_tr": "Veri İhlali Hukuk Uzmanı", "title_en": "Data Breach Legal Specialist"},
+          {"title_tr": "İlgili Kişi Başvuruları Uzmanı", "title_en": "Data Subject Requests Specialist"},
+          {"title_tr": "Kurul Kararları ve Bildirim Uzmanı", "title_en": "Authority Decisions and Notifications Specialist"}]},
+        {"name_tr": "Veri Sözleşmeleri ve Aktarım Ekibi", "name_en": "Data Agreements and Transfers Team", "lead": {"title_tr": "Veri Sözleşmeleri ve Aktarım Yöneticisi", "title_en": "Data Agreements and Transfers Lead"}, "positions": [
+          {"title_tr": "Veri İşleme Sözleşmeleri Müşaviri", "title_en": "Data Processing Agreements Counsel"},
+          {"title_tr": "Uluslararası Veri Aktarımı Uzmanı", "title_en": "International Data Transfers Specialist"},
+          {"title_tr": "Veri Koruma Dokümantasyon Uzmanı", "title_en": "Privacy Documentation Specialist"}]}
+      ],
+      "responsibilities": ["KVKK ve GDPR hukuki görüşleri", "Aydınlatma ve açık rıza metinleri", "Veri işleme sözleşmeleri", "Uluslararası veri aktarımı", "Veri ihlallerinde hukuki değerlendirme", "İlgili kişi başvuruları", "Kurul kararları ve resmî bildirimler"]
+    },
+    {
+      "id": "05.07",
+      "name_tr": "Fikrî Mülkiyet ve Teknoloji Hukuku",
+      "name_en": "Intellectual Property and Technology Law",
+      "manager": {"title_tr": "Fikrî Mülkiyet ve Teknoloji Hukuku Müdürü", "title_en": "Intellectual Property and Technology Law Manager"},
+      "teams": [
+        {"name_tr": "Fikrî Mülkiyet Hakları Ekibi", "name_en": "Intellectual Property Rights Team", "lead": {"title_tr": "Fikrî Mülkiyet Hakları Yöneticisi", "title_en": "Intellectual Property Rights Lead"}, "positions": [
+          {"title_tr": "Kıdemli Fikrî Mülkiyet Hukuku Müşaviri", "title_en": "Senior IP Counsel"},
+          {"title_tr": "Marka ve Tasarım Hukuku Müşaviri", "title_en": "Trademark and Design Counsel"},
+          {"title_tr": "Telif Hakları Uzmanı", "title_en": "Copyright Specialist"},
+          {"title_tr": "Marka Portföyü ve Yenileme Uzmanı", "title_en": "Trademark Portfolio and Renewals Specialist"}]},
+        {"name_tr": "Teknoloji ve Dijital Ürün Hukuku Ekibi", "name_en": "Technology and Digital Product Law Team", "lead": {"title_tr": "Teknoloji ve Dijital Ürün Hukuku Yöneticisi", "title_en": "Technology and Digital Product Law Lead"}, "positions": [
+          {"title_tr": "Kıdemli Teknoloji Hukuku Müşaviri", "title_en": "Senior Technology Counsel"},
+          {"title_tr": "Dijital Ürün Hukuku Müşaviri", "title_en": "Digital Product Counsel"},
+          {"title_tr": "Yapay Zekâ Hukuku Uzmanı", "title_en": "Artificial Intelligence Law Specialist"}]},
+        {"name_tr": "Lisanslama ve SaaS Sözleşmeleri Ekibi", "name_en": "Licensing and SaaS Agreements Team", "lead": {"title_tr": "Lisanslama ve SaaS Sözleşmeleri Yöneticisi", "title_en": "Licensing and SaaS Agreements Lead"}, "positions": [
+          {"title_tr": "Yazılım Lisansları Müşaviri", "title_en": "Software Licensing Counsel"},
+          {"title_tr": "SaaS ve Bulut Sözleşmeleri Uzmanı", "title_en": "SaaS and Cloud Agreements Specialist"},
+          {"title_tr": "Teknoloji Tedarik Sözleşmeleri Uzmanı", "title_en": "Technology Procurement Contracts Specialist"}]}
+      ],
+      "responsibilities": ["Marka, patent, tasarım ve telif hakları", "Marka portföyü ve yenilemeler", "Yazılım lisansları", "SaaS ve bulut hizmet sözleşmeleri", "Dijital ürün ve platformların hukuki incelemesi", "Yapay zekâ uygulamalarının hukuki değerlendirmesi", "Teknoloji tedarik sözleşmeleri", "Fikrî mülkiyet ihlalleri"]
+    },
+    {
+      "id": "05.08",
+      "name_tr": "Hukuk Operasyonları ve Dış Danışman Yönetimi",
+      "name_en": "Legal Operations and External Counsel Management",
+      "manager": {"title_tr": "Hukuk Operasyonları Müdürü", "title_en": "Legal Operations Manager"},
+      "teams": [
+        {"name_tr": "Hukuk Operasyonları Ekibi", "name_en": "Legal Operations Team", "lead": {"title_tr": "Hukuk Operasyonları Yöneticisi", "title_en": "Legal Operations Lead"}, "positions": [
+          {"title_tr": "Hukuk Operasyonları Uzmanı", "title_en": "Legal Operations Specialist"},
+          {"title_tr": "Hukuki İş Talep Yönetimi Uzmanı", "title_en": "Legal Intake Specialist"},
+          {"title_tr": "Hukuk Dokümantasyon Uzmanı", "title_en": "Legal Documentation Specialist"}]},
+        {"name_tr": "Dış Danışman Yönetimi Ekibi", "name_en": "External Counsel Management Team", "lead": {"title_tr": "Dış Danışman Yönetimi Yöneticisi", "title_en": "External Counsel Management Lead"}, "positions": [
+          {"title_tr": "Dış Hukuk Büroları Koordinasyon Uzmanı", "title_en": "External Law Firms Coordinator"},
+          {"title_tr": "Hukuki Hizmet Satın Alma Uzmanı", "title_en": "Legal Procurement Specialist"},
+          {"title_tr": "Hukuk Bütçesi ve Fatura Kontrol Uzmanı", "title_en": "Legal Budget and Billing Specialist"}]},
+        {"name_tr": "Hukuk Teknolojileri ve Raporlama Ekibi", "name_en": "Legal Technology and Reporting Team", "lead": {"title_tr": "Hukuk Teknolojileri ve Raporlama Yöneticisi", "title_en": "Legal Technology and Reporting Lead"}, "positions": [
+          {"title_tr": "Hukuk Teknolojileri Uzmanı", "title_en": "Legal Technology Specialist"},
+          {"title_tr": "Hukuk Veri ve Raporlama Analisti", "title_en": "Legal Data and Reporting Analyst"},
+          {"title_tr": "Sözleşme ve Dava Sistemleri Uzmanı", "title_en": "Contract and Litigation Systems Specialist"}]}
+      ],
+      "responsibilities": ["Hukuki iş taleplerinin alınması ve yönlendirilmesi", "İş yükü, SLA ve termin takibi", "Hukuk bütçesi ve dış danışman faturaları", "Dış hukuk bürolarının performansı", "Sözleşme ve dava yönetim sistemleri", "Doküman, arşiv ve bilgi yönetimi", "Hukuk dashboardları ve yönetim raporları", "Hukuk teknolojileri ve otomasyon"]
+    }
+  ],
+  "organization_summary": {
+    "department_heads": 1,
+    "unit_count": 8,
+    "unit_manager_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "staffing_note": "Uzman pozisyonların gerçek kadro sayıları şirket ölçeği, iş hacmi ve dış kaynak kullanımına göre belirlenir."
+  },
+  "staffing_models": [
+    {"model": "Yalın yapı", "recommended_structure": "1 direktör, 3-4 birim yöneticisi, 5-8 hukuk müşaviri/uzman"},
+    {"model": "Orta ölçekli yapı", "recommended_structure": "1 direktör, 6-8 müdür, 12-20 hukuk müşaviri/uzman"},
+    {"model": "Holding yapısı", "recommended_structure": "1 direktör, 1 direktör yardımcısı, 8 müdür, seçili ekip yöneticileri ve uzman kadroları"},
+    {"model": "Tam fonksiyonel yapı", "recommended_structure": "8 müdürlük ve 24 fonksiyonel ekibin ayrı kadrolanması"}
+  ],
+  "department_boundaries": [
+    {"interface_department": "06 - Uyum, Kurumsal Risk ve İç Kontrol", "legal_affairs_owns": "Mevzuatın hukuki yorumu, hukuki görüş ve uyuşmazlık yönetimi", "other_department_owns": "Günlük uyum kontrolleri, uyum programı ve kurumsal risk envanteri"},
+    {"interface_department": "04 - İnsan Kaynakları ve Organizasyon", "legal_affairs_owns": "İş hukuku görüşü, fesih risk analizi ve iş uyuşmazlıkları", "other_department_owns": "Personel kararları, özlük ve çalışma ilişkileri operasyonu"},
+    {"interface_department": "03 - Finans ve Hazine", "legal_affairs_owns": "Finansman sözleşmelerinin hukuki incelemesi ve hukuki alacak takibi", "other_department_owns": "Nakit, finansman, tahsilat politikası ve ödeme kararları"},
+    {"interface_department": "09 - Pazarlama ve Büyüme", "legal_affairs_owns": "Marka tescili, fikrî mülkiyet koruması ve reklam hukuku görüşü", "other_department_owns": "Marka stratejisi, kampanya hedefleri ve pazarlama uygulamaları"},
+    {"interface_department": "16 - Siber Güvenlik ve Bilgi Güvenliği", "legal_affairs_owns": "Veri ihlali, KVKK ve sözleşmesel güvenlik yükümlülüklerinin hukuki değerlendirmesi", "other_department_owns": "Teknik güvenlik kontrolleri, olay müdahalesi ve güvenlik operasyonları"}
+  ],
+  "scope_exclusions": [
+    "İş kararını ilgili departman adına vermek",
+    "Ticari fiyat ve satış koşullarını belirlemek",
+    "Günlük mevzuat uyum kontrol sistemini işletmek",
+    "Kurumsal risk envanterinin sahipliğini üstlenmek",
+    "Tahsilat politikasını ve nakit kararlarını yönetmek",
+    "Personel ve işe alım kararlarını vermek",
+    "Teknik bilgi güvenliği kontrollerini işletmek",
+    "Marka ve pazarlama stratejisini belirlemek"
+  ],
+  "notes": [
+    "Bu dosya hedef organizasyon modelini tanımlar; her pozisyon zorunlu mevcut kadro anlamına gelmez.",
+    "Avukatlık yetkisi gerektiren görevlerde mesleki yetki ve yürürlükteki mevzuat esas alınır.",
+    "Mavi etiket veya proje statüsü gibi uygulama göstergeleri, organizasyon uygulamasında ayrıca tanımlanabilir.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; ancak görev sahipliği ve görevler ayrılığı korunmalıdır."
+  ],
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Grup hukuk stratejisini ve hukuki hizmet önceliklerini belirlemek",
+        "Yönetim Kurulu, CEO ve departmanlara hukuki danışmanlık ve görüş sağlamak",
+        "Şirketin işlem ve kararlarındaki hukuki riskleri önceden değerlendirmek",
+        "Dava, icra ve uyuşmazlık süreçlerini şirketin haklarını koruyacak şekilde yönetmek",
+        "Şirket ve iştiraklerin kurumsal hukuk işlemlerini mevzuata uygun yürütmek",
+        "Standart sözleşme, hukuki görüş ve doküman standartlarını oluşturmak",
+        "Dış hukuk bürolarını, hukuk bütçesini ve hukuk operasyonlarını yönetmek",
+        "Hukuki riskleri ve kritik dosyaları üst yönetime düzenli raporlamak"
+      ],
+      "authorities": [
+        "Şirketi bağlayan hukuki görüşleri ve standart sözleşme şablonlarını onaylar",
+        "Kritik dava ve uyuşmazlıklarda strateji belirler, sulh ve feragat önerilerini üst yönetimin onayına sunar",
+        "Dış hukuk bürolarının seçimini ve görevlendirilmesini onaylar",
+        "Hukuk bütçesini hazırlar ve bütçe kapsamındaki hukuki hizmet harcamalarını onaylar",
+        "Birimler arasında hukuki iş yükü ve kaynak dağılımını belirler",
+        "Hukuki riski yüksek sözleşme ve işlemler için imza öncesi hukuki uygunluk görüşü verir",
+        "Ticari, personel, finansman ve uyum kararlarında hukuki görüş verir; karar ilgili departmanda kalır"
+      ],
+      "collaborations": [
+        {
+          "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+          "unit": "Kurumsal Yönetişim Müdürlüğü",
+          "topic": "Yönetim kurulu ve genel kurul kararlarının hukuki hazırlığı ve yönetişim belgeleri"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "",
+          "topic": "Mevzuatın hukuki yorumu, uyum programına hukuki görüş ve kurumsal risk değerlendirmesi"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Çalışan İlişkileri",
+          "topic": "İş hukuku görüşü, fesih risk analizi ve iş uyuşmazlıkları"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "",
+          "topic": "Finansman sözleşmelerinin hukuki incelemesi ve hukuki alacak takibi"
+        },
+        {
+          "department": "09 - Pazarlama ve Büyüme",
+          "unit": "",
+          "topic": "Marka tescili, fikrî mülkiyet koruması ve reklam hukuku görüşü"
+        },
+        {
+          "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+          "unit": "",
+          "topic": "Veri ihlali, KVKK ve sözleşmesel güvenlik yükümlülüklerinin hukuki değerlendirmesi"
+        },
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+          "topic": "Teklif, ihale ve müşteri sözleşmelerinin hukuki incelemesi"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Tedarikçi sözleşmeleri ve satın alma şartlarının hukuki standardı"
+        },
+        {
+          "department": "02 - Muhasebe ve Mali İşler",
+          "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+          "topic": "Dava karşılıkları ve koşullu yükümlülüklerin finansal raporlamaya yansıtılması"
+        }
+      ],
+      "kpis": [
+        "Hukuki görüş ortalama yanıt süresi",
+        "Sözleşme incelemelerinde SLA'ya uyum oranı",
+        "Standart şablonla imzalanan sözleşme oranı",
+        "Lehe sonuçlanan dava oranı",
+        "Sulh ve alternatif çözümle kapanan uyuşmazlık oranı",
+        "Kaçırılan yasal süre ve hak düşürücü süre sayısı",
+        "Hukuki alacak tahsil oranı",
+        "Hukuk harcamalarının bütçeye uyum oranı",
+        "Dış danışman maliyetinin toplam hukuk harcaması içindeki payı",
+        "Marka ve patent yenileme süresine uyum oranı",
+        "İlgili kişi başvurularının yasal sürede yanıtlanma oranı",
+        "Mevzuat değişikliklerinin etki analizine alınma süresi",
+        "Düzenleyici idari para cezası ve yaptırım sayısı",
+        "İç müşteri memnuniyet puanı"
+      ],
+      "title_standard": [
+        {
+          "level": "Departman lideri",
+          "title_tr": "Direktör",
+          "title_en": "Director / General Counsel"
+        },
+        {
+          "level": "Birim müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Lead"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Kıdemli Hukuk Müşaviri / Kıdemli Avukat",
+          "title_en": "Senior Legal Counsel / Senior Attorney"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Hukuk Müşaviri / Avukat",
+          "title_en": "Legal Counsel / Attorney"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Uzman",
+          "title_en": "Specialist"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Analist",
+          "title_en": "Analyst"
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 106,
+        "total_max": 190,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "role_group": "Uzman",
+            "min": 58,
+            "max": 125
+          },
+          {
+            "role_group": "Analist",
+            "min": 2,
+            "max": 4
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "05.01",
+        "name_tr": "Şirketler ve Ticaret Hukuku",
+        "responsibilities": [
+          "Şirket kuruluşları, yapısal değişiklikler ve esas sözleşme değişikliklerini hukuken yürütmek",
+          "Ticaret sicili işlemlerini ve kurumsal belge setini güncel tutmak",
+          "Genel kurul ve yönetim kurulu kararlarının hukuki hazırlığını ve kontrolünü yapmak",
+          "Sermaye artırımı, azaltımı, birleşme, bölünme ve devralma işlemlerini hukuken yönetmek",
+          "İştiraklerin kurumsal hukuk süreçlerini koordine etmek"
+        ],
+        "authorities": [
+          "Yönetim organı karar taslaklarının hukuki uygunluğunu onaylar",
+          "Ticaret sicili başvuru ve tescil belgelerinin hukuki içeriğini onaylar",
+          "Birleşme ve devralma işlemlerinde hukuki inceleme kapsamını belirler",
+          "Kurumsal işlem yapısına ilişkin hukuki seçenekleri direktöre önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Yönetim kurulu ve genel kurul gündemleri, karar taslakları ve yönetişim belgeleri"
+          },
+          {
+            "department": "23 - Sekreterya, Yönetici Destek ve Protokol",
+            "unit": "Yönetim Kurulu ve Komite Sekreteryası",
+            "topic": "Yönetim kurulu ve komite tutanakları ile karar defteri kayıtları"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "İştirakler ve Şirket Performansı Müdürlüğü",
+            "topic": "İştiraklerin kurumsal hukuk işlemleri ve yapısal değişiklikleri"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+            "topic": "Sermaye artırımı, birleşme ve devralma işlemlerinin finansal ve hukuki koordinasyonu"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Birleşme ve devralmalarda rekabet hukuku izin değerlendirmesi"
+          }
+        ],
+        "kpis": [
+          "Ticaret sicili işlemlerinin zamanında tamamlanma oranı",
+          "Yönetim organı kararlarında hukuki düzeltme veya iade sayısı",
+          "Kurumsal belge setinin güncellik oranı",
+          "Kurumsal işlem hukuki incelemelerinin termine uyumu",
+          "İştirak kurumsal hukuk işlemlerinin süresinde tamamlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Şirketler ve Ticaret Hukuku Müdürü",
+            "title_en": "Corporate and Commercial Law Manager"
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Şirketler Hukuku Yöneticisi",
+            "title_en": "Corporate Law Lead"
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/kidemli-sirketler-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Şirketler Hukuku Müşaviri",
+            "title_en": "Senior Corporate Counsel"
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/sirketler-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Şirketler Hukuku Müşaviri",
+            "title_en": "Corporate Counsel"
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/ticaret-sicili-ve-kurumsal-islemler-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ticaret Sicili ve Kurumsal İşlemler Uzmanı",
+            "title_en": "Trade Registry and Corporate Affairs Specialist"
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal İşlemler ve Ortaklıklar Yöneticisi",
+            "title_en": "Corporate Transactions and Partnerships Lead"
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/kidemli-kurumsal-islemler-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal İşlemler Müşaviri",
+            "title_en": "Senior Corporate Transactions Counsel"
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/birlesme-ve-devralma-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Birleşme ve Devralma Hukuku Müşaviri",
+            "title_en": "M&A Counsel"
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/ortakliklar-hukuku-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ortaklıklar Hukuku Uzmanı",
+            "title_en": "Partnerships Legal Specialist"
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yönetim Organları Hukuki Destek Yöneticisi",
+            "title_en": "Corporate Governance Legal Support Lead"
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/yonetim-kurulu-hukuk-musaviri",
+            "level": "Uzman",
+            "title_tr": "Yönetim Kurulu Hukuk Müşaviri",
+            "title_en": "Board Legal Counsel"
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/genel-kurul-ve-karar-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Genel Kurul ve Karar Dokümantasyon Uzmanı",
+            "title_en": "General Assembly and Resolutions Specialist"
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/kurumsal-belge-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Belge Kontrol Uzmanı",
+            "title_en": "Corporate Documentation Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 22
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 29
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.01",
+            "title_tr": "Şirketler ve Ticaret Hukuku Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi",
+            "title_tr": "Şirketler Hukuku Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/kidemli-sirketler-hukuku-musaviri",
+            "title_tr": "Kıdemli Şirketler Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/sirketler-hukuku-musaviri",
+            "title_tr": "Şirketler Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/sirketler-hukuku-ekibi/ticaret-sicili-ve-kurumsal-islemler-uzmani",
+            "title_tr": "Ticaret Sicili ve Kurumsal İşlemler Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi",
+            "title_tr": "Kurumsal İşlemler ve Ortaklıklar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/kidemli-kurumsal-islemler-musaviri",
+            "title_tr": "Kıdemli Kurumsal İşlemler Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/birlesme-ve-devralma-hukuku-musaviri",
+            "title_tr": "Birleşme ve Devralma Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/kurumsal-islemler-ve-ortakliklar-ekibi/ortakliklar-hukuku-uzmani",
+            "title_tr": "Ortaklıklar Hukuku Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi",
+            "title_tr": "Yönetim Organları Hukuki Destek Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/yonetim-kurulu-hukuk-musaviri",
+            "title_tr": "Yönetim Kurulu Hukuk Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/genel-kurul-ve-karar-dokumantasyon-uzmani",
+            "title_tr": "Genel Kurul ve Karar Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.01/yonetim-organlari-hukuki-destek-ekibi/kurumsal-belge-kontrol-uzmani",
+            "title_tr": "Kurumsal Belge Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.02",
+        "name_tr": "Sözleşmeler ve Ticari Hukuk",
+        "responsibilities": [
+          "Müşteri, tedarikçi ve iş ortaklığı sözleşmelerini hazırlamak ve incelemek",
+          "NDA, taahhütname ve protokolleri standart kalıplara uygun hazırlamak",
+          "Ticari sözleşme müzakerelerine hukuki destek vermek",
+          "Standart sözleşme ve madde kütüphanesini güncel tutmak",
+          "Sözleşme risk puanlamasını uygulamak ve yüksek riskli sözleşmeleri raporlamak",
+          "Yenileme, sona erme ve yükümlülük takibiyle sözleşme yaşam döngüsünü yönetmek"
+        ],
+        "authorities": [
+          "Standart sözleşme şablonları ve madde kütüphanesindeki değişiklikleri direktörün onayına sunar",
+          "Standart dışı sözleşme maddeleri için hukuki risk görüşü verir",
+          "Sözleşme risk puanına göre hukuki inceleme seviyesini belirler",
+          "Fiyat ve ticari koşullarda hukuki görüş verir; ticari karar ilgili departmanda kalır"
+        ],
+        "collaborations": [
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+            "topic": "Teklif, ihale ve müşteri sözleşmelerinin hukuki incelemesi ve müzakeresi"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Kanal, İş Ortaklıkları ve Ekosistem Satışları",
+            "topic": "İş ortaklığı, bayi ve kanal sözleşmelerinin hukuki hazırlığı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi sözleşmeleri ve satın alma genel şartlarının hukuki standardı"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Hukuk Operasyonları ve Dış Danışman Yönetimi",
+            "topic": "Sözleşme yönetim sistemi, arşiv ve yükümlülük takibi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "KVKK ve Veri Koruma Hukuku",
+            "topic": "Müşteri ve tedarikçi sözleşmelerine veri koruma hükümlerinin eklenmesi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+            "topic": "Üçüncü taraf uyum maddeleri ve sözleşme öncesi risk değerlendirmesi"
+          }
+        ],
+        "kpis": [
+          "Sözleşme inceleme ortalama dönüş süresi",
+          "Standart şablonla imzalanan sözleşme oranı",
+          "Yüksek riskli sözleşme oranı",
+          "Kaçırılan yenileme ve sona erme tarihi sayısı",
+          "Sözleşme yükümlülüklerinin zamanında yerine getirilme oranı",
+          "Sözleşme kaynaklı uyuşmazlık sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Sözleşmeler ve Ticari Hukuk Müdürü",
+            "title_en": "Contracts and Commercial Law Manager"
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sözleşme Standartları Yöneticisi",
+            "title_en": "Contract Standards Lead"
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/kidemli-sozlesme-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sözleşme Hukuku Müşaviri",
+            "title_en": "Senior Contracts Counsel"
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/sozlesme-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Sözleşme Hukuku Müşaviri",
+            "title_en": "Contracts Counsel"
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/sozlesme-sablonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sözleşme Şablonları Uzmanı",
+            "title_en": "Contract Templates Specialist"
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Ticari Müzakere ve İşlemler Yöneticisi",
+            "title_en": "Commercial Negotiations and Transactions Lead"
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/kidemli-ticari-hukuk-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Ticari Hukuk Müşaviri",
+            "title_en": "Senior Commercial Counsel"
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/ticari-hukuk-musaviri",
+            "level": "Uzman",
+            "title_tr": "Ticari Hukuk Müşaviri",
+            "title_en": "Commercial Counsel"
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/ihale-ve-teklif-hukuku-uzmani",
+            "level": "Uzman",
+            "title_tr": "İhale ve Teklif Hukuku Uzmanı",
+            "title_en": "Tender and Proposal Legal Specialist"
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sözleşme Yaşam Döngüsü Yöneticisi",
+            "title_en": "Contract Lifecycle Management Lead"
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sözleşme Operasyonları Uzmanı",
+            "title_en": "Contract Operations Specialist"
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-yukumlulukleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sözleşme Yükümlülükleri Uzmanı",
+            "title_en": "Contract Obligations Specialist"
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-veri-ve-arsiv-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sözleşme Veri ve Arşiv Uzmanı",
+            "title_en": "Contract Data and Records Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 24
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 32
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.02",
+            "title_tr": "Sözleşmeler ve Ticari Hukuk Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi",
+            "title_tr": "Sözleşme Standartları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/kidemli-sozlesme-hukuku-musaviri",
+            "title_tr": "Kıdemli Sözleşme Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/sozlesme-hukuku-musaviri",
+            "title_tr": "Sözleşme Hukuku Müşaviri",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.02/sozlesme-standartlari-ekibi/sozlesme-sablonlari-uzmani",
+            "title_tr": "Sözleşme Şablonları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi",
+            "title_tr": "Ticari Müzakere ve İşlemler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/kidemli-ticari-hukuk-musaviri",
+            "title_tr": "Kıdemli Ticari Hukuk Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/ticari-hukuk-musaviri",
+            "title_tr": "Ticari Hukuk Müşaviri",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.02/ticari-muzakere-ve-islemler-ekibi/ihale-ve-teklif-hukuku-uzmani",
+            "title_tr": "İhale ve Teklif Hukuku Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi",
+            "title_tr": "Sözleşme Yaşam Döngüsü Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-operasyonlari-uzmani",
+            "title_tr": "Sözleşme Operasyonları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-yukumlulukleri-uzmani",
+            "title_tr": "Sözleşme Yükümlülükleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.02/sozlesme-yasam-dongusu-ekibi/sozlesme-veri-ve-arsiv-uzmani",
+            "title_tr": "Sözleşme Veri ve Arşiv Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.03",
+        "name_tr": "Dava, İcra ve Uyuşmazlık Yönetimi",
+        "responsibilities": [
+          "Dava ve icra dosyalarını yasal sürelere uygun yönetmek",
+          "Dosya bazında dava stratejisini ve hukuki risk değerlendirmesini hazırlamak",
+          "Arabuluculuk, tahkim ve uzlaşma süreçlerini yürütmek",
+          "Hukuki alacak takibini ve icra işlemlerini yürütmek",
+          "Dış avukat görevlendirmelerini ve dosya performansını izlemek",
+          "Dava karşılıkları için finans ve muhasebeye dosya bazlı risk bilgisi sağlamak"
+        ],
+        "authorities": [
+          "Dosya bazında dava stratejisini belirler ve kritik dosyaları direktörün onayına sunar",
+          "Sulh, feragat ve kabul önerilerini değerlendirir ve onaya sunar",
+          "Dış avukat görevlendirme ihtiyacını direktöre önerir",
+          "Dava karşılıkları için dosya bazlı hukuki risk görüşü verir",
+          "Hukuki alacak takibinde hukuki yolu önerir; tahsilat politikası Finans ve Hazinede kalır"
+        ],
+        "collaborations": [
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+            "topic": "Hukuki takibe devredilen alacaklar ve tahsilat durumu"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Dava karşılıkları ve koşullu yükümlülüklerin finansal raporlamaya yansıtılması"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Hukuk Operasyonları ve Dış Danışman Yönetimi",
+            "topic": "Dış avukat görevlendirmeleri, fatura kontrolü ve dava yönetim sistemi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "İş davaları ve arabuluculuk süreçlerinde dosya koordinasyonu"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "Uyuşmazlığa dönüşen müşteri şikâyetlerinin hukuki değerlendirmesi"
+          }
+        ],
+        "kpis": [
+          "Lehe sonuçlanan dava oranı",
+          "Sulh ve alternatif çözümle kapanan dosya oranı",
+          "Kaçırılan yasal süre sayısı",
+          "Hukuki alacak tahsil oranı",
+          "Dosya başına ortalama hukuk maliyeti",
+          "Ortalama dosya kapanma süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "05.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Dava, İcra ve Uyuşmazlık Yönetimi Müdürü",
+            "title_en": "Litigation, Enforcement and Dispute Resolution Manager"
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dava ve Alternatif Uyuşmazlık Yöneticisi",
+            "title_en": "Litigation and Alternative Dispute Resolution Lead"
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/kidemli-dava-avukati",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Dava Avukatı",
+            "title_en": "Senior Litigation Counsel"
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/dava-avukati",
+            "level": "Uzman",
+            "title_tr": "Dava Avukatı",
+            "title_en": "Litigation Counsel"
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/arabuluculuk-ve-tahkim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Arabuluculuk ve Tahkim Uzmanı",
+            "title_en": "Mediation and Arbitration Specialist"
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İcra ve Alacak Takibi Yöneticisi",
+            "title_en": "Enforcement and Legal Collections Lead"
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/kidemli-icra-avukati",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İcra Avukatı",
+            "title_en": "Senior Enforcement Counsel"
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/icra-avukati",
+            "level": "Uzman",
+            "title_tr": "İcra Avukatı",
+            "title_en": "Enforcement Counsel"
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/hukuki-alacak-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuki Alacak Takip Uzmanı",
+            "title_en": "Legal Collections Specialist"
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dış Avukat ve Dosya Koordinasyon Yöneticisi",
+            "title_en": "External Counsel and Case Coordination Lead"
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dis-avukat-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dış Avukat Koordinasyon Uzmanı",
+            "title_en": "External Counsel Coordination Specialist"
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dava-dosyalari-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dava Dosyaları Takip Uzmanı",
+            "title_en": "Litigation Case Tracking Specialist"
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dava-raporlama-analisti",
+            "level": "Analist",
+            "title_tr": "Dava Raporlama Analisti",
+            "title_en": "Litigation Reporting Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 34
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.03",
+            "title_tr": "Dava, İcra ve Uyuşmazlık Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi",
+            "title_tr": "Dava ve Alternatif Uyuşmazlık Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/kidemli-dava-avukati",
+            "title_tr": "Kıdemli Dava Avukatı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/dava-avukati",
+            "title_tr": "Dava Avukatı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.03/dava-ve-alternatif-uyusmazlik-ekibi/arabuluculuk-ve-tahkim-uzmani",
+            "title_tr": "Arabuluculuk ve Tahkim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi",
+            "title_tr": "İcra ve Alacak Takibi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/kidemli-icra-avukati",
+            "title_tr": "Kıdemli İcra Avukatı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/icra-avukati",
+            "title_tr": "İcra Avukatı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.03/icra-ve-alacak-takibi-ekibi/hukuki-alacak-takip-uzmani",
+            "title_tr": "Hukuki Alacak Takip Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi",
+            "title_tr": "Dış Avukat ve Dosya Koordinasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dis-avukat-koordinasyon-uzmani",
+            "title_tr": "Dış Avukat Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dava-dosyalari-takip-uzmani",
+            "title_tr": "Dava Dosyaları Takip Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.03/dis-avukat-ve-dosya-koordinasyon-ekibi/dava-raporlama-analisti",
+            "title_tr": "Dava Raporlama Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.04",
+        "name_tr": "İş ve Sosyal Güvenlik Hukuku",
+        "responsibilities": [
+          "İş sözleşmeleri ve çalışma politikalarının hukuki kontrolünü yapmak",
+          "Fesih ve disiplin süreçlerinde hukuki görüş ve risk analizi sunmak",
+          "İşe iade, işçilik alacağı ve tazminat davalarını yönetmek",
+          "İş uyuşmazlıklarında arabuluculuk süreçlerini yürütmek",
+          "Toplu iş hukuku ve SGK uyuşmazlıklarında hukuki destek sağlamak",
+          "İnsan Kaynaklarına çalışma mevzuatı konusunda danışmanlık vermek"
+        ],
+        "authorities": [
+          "İş sözleşmesi ve ek protokol şablonlarının hukuki uygunluğunu onaylar",
+          "Fesih ve disiplin kararlarında hukuki görüş verir; personel kararı İnsan Kaynaklarında kalır",
+          "Arabuluculuk sürecinde uzlaşma sınırlarını önerir ve onaya sunar",
+          "İş davalarında savunma stratejisini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan İlişkileri",
+            "topic": "Fesih, disiplin ve iş uyuşmazlıklarının hukuki risk analizi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "İşçilik alacakları, özlük kayıtları ve SGK bildirimlerine ilişkin dosya bilgisi"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Bordro Muhasebesi",
+            "topic": "İşe iade ve tazminat ödemelerinin bordro muhasebesine yansıtılması"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+            "topic": "İş davalarında dava yönetim sistemi ve dış avukat koordinasyonu"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "İş Sağlığı ve Güvenliği Yönetimi",
+            "topic": "İş kazası ve meslek hastalığı kaynaklı uyuşmazlıkların hukuki değerlendirmesi"
+          }
+        ],
+        "kpis": [
+          "Lehe sonuçlanan iş davası oranı",
+          "Arabuluculukta uzlaşmayla kapanan başvuru oranı",
+          "Fesih öncesi hukuki görüş alınan dosya oranı",
+          "İş hukuku görüşlerinin ortalama yanıt süresi",
+          "SGK uyuşmazlıklarının süresinde sonuçlandırılma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.04",
+            "level": "Birim Müdürü",
+            "title_tr": "İş ve Sosyal Güvenlik Hukuku Müdürü",
+            "title_en": "Employment and Social Security Law Manager"
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Hukuku Danışmanlığı Yöneticisi",
+            "title_en": "Employment Legal Advisory Lead"
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/kidemli-is-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş Hukuku Müşaviri",
+            "title_en": "Senior Employment Counsel"
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/is-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "İş Hukuku Müşaviri",
+            "title_en": "Employment Counsel"
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/is-sozlesmeleri-hukuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Sözleşmeleri Hukuk Uzmanı",
+            "title_en": "Employment Contracts Legal Specialist"
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Uyuşmazlıkları Yöneticisi",
+            "title_en": "Employment Disputes Lead"
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/kidemli-is-davalari-avukati",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş Davaları Avukatı",
+            "title_en": "Senior Employment Litigation Counsel"
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/is-davalari-avukati",
+            "level": "Uzman",
+            "title_tr": "İş Davaları Avukatı",
+            "title_en": "Employment Litigation Counsel"
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/arabuluculuk-ve-fesih-surecleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Arabuluculuk ve Fesih Süreçleri Uzmanı",
+            "title_en": "Mediation and Termination Specialist"
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sosyal Güvenlik Hukuku Yöneticisi",
+            "title_en": "Social Security Law Lead"
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/sosyal-guvenlik-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Sosyal Güvenlik Hukuku Müşaviri",
+            "title_en": "Social Security Counsel"
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/sgk-uyusmazliklari-uzmani",
+            "level": "Uzman",
+            "title_tr": "SGK Uyuşmazlıkları Uzmanı",
+            "title_en": "Social Security Disputes Specialist"
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/calisma-mevzuati-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışma Mevzuatı Uzmanı",
+            "title_en": "Labour Regulations Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 23
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 30
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.04",
+            "title_tr": "İş ve Sosyal Güvenlik Hukuku Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi",
+            "title_tr": "İş Hukuku Danışmanlığı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/kidemli-is-hukuku-musaviri",
+            "title_tr": "Kıdemli İş Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/is-hukuku-musaviri",
+            "title_tr": "İş Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/is-hukuku-danismanligi-ekibi/is-sozlesmeleri-hukuk-uzmani",
+            "title_tr": "İş Sözleşmeleri Hukuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi",
+            "title_tr": "İş Uyuşmazlıkları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/kidemli-is-davalari-avukati",
+            "title_tr": "Kıdemli İş Davaları Avukatı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/is-davalari-avukati",
+            "title_tr": "İş Davaları Avukatı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.04/is-uyusmazliklari-ekibi/arabuluculuk-ve-fesih-surecleri-uzmani",
+            "title_tr": "Arabuluculuk ve Fesih Süreçleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi",
+            "title_tr": "Sosyal Güvenlik Hukuku Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/sosyal-guvenlik-hukuku-musaviri",
+            "title_tr": "Sosyal Güvenlik Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/sgk-uyusmazliklari-uzmani",
+            "title_tr": "SGK Uyuşmazlıkları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.04/sosyal-guvenlik-hukuku-ekibi/calisma-mevzuati-uzmani",
+            "title_tr": "Çalışma Mevzuatı Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.05",
+        "name_tr": "Mevzuat ve Düzenleyici Hukuk",
+        "responsibilities": [
+          "Mevzuat değişikliklerini izlemek ve hukuki yorumunu yapmak",
+          "Rekabet hukuku değerlendirmelerini ve izin süreçlerini yürütmek",
+          "Resmî kurum ve düzenleyici otorite işlemlerini hukuken yönetmek",
+          "Ruhsat, izin ve lisans süreçlerinin hukuki takibini yapmak",
+          "Yeni iş modelleri için mevzuat analizi hazırlamak",
+          "Departmanlara düzenleyici konularda hukuki görüş sunmak"
+        ],
+        "authorities": [
+          "Mevzuat değişikliklerinin şirkete etkisine ilişkin hukuki yorumu onaylar",
+          "Rekabet hukuku riski taşıyan anlaşma ve uygulamalar için düzeltme önerir",
+          "Resmî kurumlara verilecek hukuki yanıt ve başvuruların içeriğini onaylar",
+          "Uyum kontrollerinin tasarımı ve işletiminde hukuki görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Mevzuat Uyum Yönetimi",
+            "topic": "Mevzuat değişikliklerinin hukuki yorumu ve uyum programına aktarılması"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Fiyatlandırma ve Ticari Yönetişim",
+            "topic": "Fiyatlama ve ticari uygulamaların rekabet hukuku değerlendirmesi"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+            "topic": "Yeni iş modelleri ve ürünlerin mevzuat analizi"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Tesis, Bina ve Teknik İşletme",
+            "topic": "Tesis, bina ve işletme ruhsatlarının hukuki takibi"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Paydaş, Kamu ve Sektör İletişimi",
+            "topic": "Düzenleyici otoriteler ve kamu kurumlarıyla ilişkilerde hukuki pozisyon"
+          }
+        ],
+        "kpis": [
+          "Mevzuat değişikliklerinin etki analizine alınma süresi",
+          "Ruhsat ve izinlerin süresinde yenilenme oranı",
+          "Resmî kurum taleplerine süresinde yanıt oranı",
+          "Rekabet hukuku ön değerlendirmesinden geçen anlaşma oranı",
+          "Düzenleyici idari para cezası ve yaptırım sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Mevzuat ve Düzenleyici Hukuk Müdürü",
+            "title_en": "Regulatory Law Manager"
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Mevzuat İzleme ve Hukuki Görüş Yöneticisi",
+            "title_en": "Regulatory Monitoring and Legal Opinions Lead"
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/kidemli-mevzuat-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Mevzuat Hukuku Müşaviri",
+            "title_en": "Senior Regulatory Counsel"
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/mevzuat-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Mevzuat Hukuku Müşaviri",
+            "title_en": "Regulatory Counsel"
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/mevzuat-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Mevzuat Araştırma Uzmanı",
+            "title_en": "Regulatory Research Specialist"
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Rekabet Hukuku Yöneticisi",
+            "title_en": "Competition Law Lead"
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/kidemli-rekabet-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Rekabet Hukuku Müşaviri",
+            "title_en": "Senior Competition Counsel"
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/rekabet-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Rekabet Hukuku Müşaviri",
+            "title_en": "Competition Counsel"
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/rekabet-hukuku-arastirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Rekabet Hukuku Araştırma Uzmanı",
+            "title_en": "Competition Law Research Specialist"
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Resmî Kurum ve Ruhsat Hukuku Yöneticisi",
+            "title_en": "Public Authorities and Licensing Legal Lead"
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/idare-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "İdare Hukuku Müşaviri",
+            "title_en": "Administrative Law Counsel"
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/ruhsat-ve-izinler-hukuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ruhsat ve İzinler Hukuk Uzmanı",
+            "title_en": "Licensing and Permits Legal Specialist"
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/resmi-kurum-yazismalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Resmî Kurum Yazışmaları Uzmanı",
+            "title_en": "Public Authority Correspondence Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 22
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 29
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.05",
+            "title_tr": "Mevzuat ve Düzenleyici Hukuk Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi",
+            "title_tr": "Mevzuat İzleme ve Hukuki Görüş Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/kidemli-mevzuat-hukuku-musaviri",
+            "title_tr": "Kıdemli Mevzuat Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/mevzuat-hukuku-musaviri",
+            "title_tr": "Mevzuat Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/mevzuat-izleme-ve-hukuki-gorus-ekibi/mevzuat-arastirma-uzmani",
+            "title_tr": "Mevzuat Araştırma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi",
+            "title_tr": "Rekabet Hukuku Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/kidemli-rekabet-hukuku-musaviri",
+            "title_tr": "Kıdemli Rekabet Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/rekabet-hukuku-musaviri",
+            "title_tr": "Rekabet Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/rekabet-hukuku-ekibi/rekabet-hukuku-arastirma-uzmani",
+            "title_tr": "Rekabet Hukuku Araştırma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi",
+            "title_tr": "Resmî Kurum ve Ruhsat Hukuku Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/idare-hukuku-musaviri",
+            "title_tr": "İdare Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/ruhsat-ve-izinler-hukuk-uzmani",
+            "title_tr": "Ruhsat ve İzinler Hukuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.05/resmi-kurum-ve-ruhsat-hukuku-ekibi/resmi-kurum-yazismalari-uzmani",
+            "title_tr": "Resmî Kurum Yazışmaları Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.06",
+        "name_tr": "KVKK ve Veri Koruma Hukuku",
+        "responsibilities": [
+          "KVKK ve GDPR kapsamında hukuki görüş hazırlamak",
+          "Aydınlatma ve açık rıza metinlerini hazırlamak ve güncel tutmak",
+          "Veri işleme sözleşmelerini ve uluslararası veri aktarım belgelerini hazırlamak",
+          "Veri ihlallerinde hukuki değerlendirme yapmak ve bildirim içeriğini hazırlamak",
+          "İlgili kişi başvurularını hukuki açıdan değerlendirip yanıtlamak",
+          "Kurul kararlarını izlemek ve resmî bildirimleri yürütmek"
+        ],
+        "authorities": [
+          "Aydınlatma, açık rıza ve veri işleme sözleşmesi metinlerini hukuken onaylar",
+          "Veri ihlalinin Kurula ve ilgili kişilere bildirimine ilişkin hukuki değerlendirmeyi direktörün onayına sunar",
+          "İlgili kişi başvurularına verilecek yanıtların hukuki içeriğini onaylar",
+          "Teknik güvenlik kontrollerinde hukuki yükümlülük görüşü verir"
+        ],
+        "collaborations": [
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "KVKK uyum programı, veri envanteri ve VERBİS kayıtlarının hukuki dayanağı"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi",
+            "topic": "Kişisel verilerin teknik korunmasına ilişkin hukuki yükümlülükler"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Güvenlik olaylarında veri ihlali değerlendirmesi ve bildirim süresinin yönetimi"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Operasyonları, CRM ve MarTech",
+            "topic": "Ticari elektronik ileti izinleri ve çerez kullanımına ilişkin hukuki metinler"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "İlgili kişi başvurularının müşteri kanallarından alınması ve yönlendirilmesi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Müşteri ve tedarikçi sözleşmelerine veri koruma hükümlerinin eklenmesi"
+          }
+        ],
+        "kpis": [
+          "İlgili kişi başvurularının yasal sürede yanıtlanma oranı",
+          "Veri ihlali bildirimlerinin yasal sürede yapılma oranı",
+          "Güncel aydınlatma metni bulunan süreç oranı",
+          "Veri işleme sözleşmesi imzalanmış tedarikçi oranı",
+          "Hukuki dayanağı belgelenmiş yurt dışı veri aktarımı oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.06",
+            "level": "Birim Müdürü",
+            "title_tr": "KVKK ve Veri Koruma Hukuku Müdürü",
+            "title_en": "Data Privacy Law Manager"
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri Koruma Danışmanlığı Yöneticisi",
+            "title_en": "Data Privacy Advisory Lead"
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/kidemli-veri-koruma-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Veri Koruma Hukuku Müşaviri",
+            "title_en": "Senior Privacy Counsel"
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/veri-koruma-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Veri Koruma Hukuku Müşaviri",
+            "title_en": "Privacy Counsel"
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/kvkk-ve-gdpr-hukuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "KVKK ve GDPR Hukuk Uzmanı",
+            "title_en": "KVKK and GDPR Legal Specialist"
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri İhlali ve Başvuru Yönetimi Yöneticisi",
+            "title_en": "Data Breach and Data Subject Requests Lead"
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/veri-ihlali-hukuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri İhlali Hukuk Uzmanı",
+            "title_en": "Data Breach Legal Specialist"
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/ilgili-kisi-basvurulari-uzmani",
+            "level": "Uzman",
+            "title_tr": "İlgili Kişi Başvuruları Uzmanı",
+            "title_en": "Data Subject Requests Specialist"
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/kurul-kararlari-ve-bildirim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurul Kararları ve Bildirim Uzmanı",
+            "title_en": "Authority Decisions and Notifications Specialist"
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri Sözleşmeleri ve Aktarım Yöneticisi",
+            "title_en": "Data Agreements and Transfers Lead"
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/veri-isleme-sozlesmeleri-musaviri",
+            "level": "Uzman",
+            "title_tr": "Veri İşleme Sözleşmeleri Müşaviri",
+            "title_en": "Data Processing Agreements Counsel"
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/uluslararasi-veri-aktarimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uluslararası Veri Aktarımı Uzmanı",
+            "title_en": "International Data Transfers Specialist"
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/veri-koruma-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri Koruma Dokümantasyon Uzmanı",
+            "title_en": "Privacy Documentation Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 23
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 30
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.06",
+            "title_tr": "KVKK ve Veri Koruma Hukuku Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi",
+            "title_tr": "Veri Koruma Danışmanlığı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/kidemli-veri-koruma-hukuku-musaviri",
+            "title_tr": "Kıdemli Veri Koruma Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/veri-koruma-hukuku-musaviri",
+            "title_tr": "Veri Koruma Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-koruma-danismanligi-ekibi/kvkk-ve-gdpr-hukuk-uzmani",
+            "title_tr": "KVKK ve GDPR Hukuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi",
+            "title_tr": "Veri İhlali ve Başvuru Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/veri-ihlali-hukuk-uzmani",
+            "title_tr": "Veri İhlali Hukuk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/ilgili-kisi-basvurulari-uzmani",
+            "title_tr": "İlgili Kişi Başvuruları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.06/veri-ihlali-ve-basvuru-yonetimi-ekibi/kurul-kararlari-ve-bildirim-uzmani",
+            "title_tr": "Kurul Kararları ve Bildirim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi",
+            "title_tr": "Veri Sözleşmeleri ve Aktarım Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/veri-isleme-sozlesmeleri-musaviri",
+            "title_tr": "Veri İşleme Sözleşmeleri Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/uluslararasi-veri-aktarimi-uzmani",
+            "title_tr": "Uluslararası Veri Aktarımı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.06/veri-sozlesmeleri-ve-aktarim-ekibi/veri-koruma-dokumantasyon-uzmani",
+            "title_tr": "Veri Koruma Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.07",
+        "name_tr": "Fikrî Mülkiyet ve Teknoloji Hukuku",
+        "responsibilities": [
+          "Marka, patent, tasarım ve telif haklarını tescil ve koruma altına almak",
+          "Marka portföyünü ve yenileme tarihlerini yönetmek",
+          "Yazılım lisansları, SaaS ve bulut hizmet sözleşmelerini hazırlamak ve incelemek",
+          "Dijital ürün, platform ve yapay zekâ uygulamalarının hukuki değerlendirmesini yapmak",
+          "Teknoloji tedarik sözleşmelerinin hukuki incelemesini yürütmek",
+          "Fikrî mülkiyet ihlallerine karşı hukuki süreçleri başlatmak ve izlemek"
+        ],
+        "authorities": [
+          "Marka, patent ve tasarım tescil başvurularının hukuki içeriğini onaylar",
+          "Fikrî mülkiyet ihlallerine karşı ihtar ve hukuki işlem başlatılmasını direktöre önerir",
+          "Lisans, SaaS ve teknoloji tedarik sözleşmelerinin hukuki uygunluğunu onaylar",
+          "Marka stratejisinde tescil edilebilirlik ve hak ihlali görüşü verir"
+        ],
+        "collaborations": [
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Stratejisi ve Marka Yönetimi",
+            "topic": "Marka tescili, marka kullanımı ve reklam hukuku görüşü"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ar-Ge, Teknoloji Araştırmaları ve İnovasyon",
+            "topic": "Ar-Ge çıktılarının patent ve tasarım koruması"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Yazılım lisansları ve SaaS sözleşmelerinin hukuki incelemesi"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Ürünleri, Sorumlu Yapay Zekâ ve Değer Yönetimi",
+            "topic": "Yapay zekâ uygulamalarının hukuki değerlendirmesi ve sorumlu kullanım ilkeleri"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Marka Kimliği ve Kurumsal Tasarım",
+            "topic": "Logo, kurumsal tasarım ve yaratıcı içeriklerin telif ve tescil koruması"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "KVKK ve Veri Koruma Hukuku",
+            "topic": "Dijital ürün ve platformlarda kişisel veri işleme hükümleri"
+          }
+        ],
+        "kpis": [
+          "Marka ve patent yenileme süresine uyum oranı",
+          "Tescil başvurularının olumlu sonuçlanma oranı",
+          "Tespit edilen fikrî mülkiyet ihlallerine müdahale süresi",
+          "Teknoloji sözleşmeleri inceleme ortalama dönüş süresi",
+          "Hukuki değerlendirmeden geçen yapay zekâ uygulaması oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Fikrî Mülkiyet ve Teknoloji Hukuku Müdürü",
+            "title_en": "Intellectual Property and Technology Law Manager"
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Fikrî Mülkiyet Hakları Yöneticisi",
+            "title_en": "Intellectual Property Rights Lead"
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/kidemli-fikri-mulkiyet-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Fikrî Mülkiyet Hukuku Müşaviri",
+            "title_en": "Senior IP Counsel"
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/marka-ve-tasarim-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Marka ve Tasarım Hukuku Müşaviri",
+            "title_en": "Trademark and Design Counsel"
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/telif-haklari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Telif Hakları Uzmanı",
+            "title_en": "Copyright Specialist"
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/marka-portfoyu-ve-yenileme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Marka Portföyü ve Yenileme Uzmanı",
+            "title_en": "Trademark Portfolio and Renewals Specialist"
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Teknoloji ve Dijital Ürün Hukuku Yöneticisi",
+            "title_en": "Technology and Digital Product Law Lead"
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/kidemli-teknoloji-hukuku-musaviri",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Teknoloji Hukuku Müşaviri",
+            "title_en": "Senior Technology Counsel"
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/dijital-urun-hukuku-musaviri",
+            "level": "Uzman",
+            "title_tr": "Dijital Ürün Hukuku Müşaviri",
+            "title_en": "Digital Product Counsel"
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/yapay-zeka-hukuku-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yapay Zekâ Hukuku Uzmanı",
+            "title_en": "Artificial Intelligence Law Specialist"
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Lisanslama ve SaaS Sözleşmeleri Yöneticisi",
+            "title_en": "Licensing and SaaS Agreements Lead"
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/yazilim-lisanslari-musaviri",
+            "level": "Uzman",
+            "title_tr": "Yazılım Lisansları Müşaviri",
+            "title_en": "Software Licensing Counsel"
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/saas-ve-bulut-sozlesmeleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "SaaS ve Bulut Sözleşmeleri Uzmanı",
+            "title_en": "SaaS and Cloud Agreements Specialist"
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/teknoloji-tedarik-sozlesmeleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Teknoloji Tedarik Sözleşmeleri Uzmanı",
+            "title_en": "Technology Procurement Contracts Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 24
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 32
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.07",
+            "title_tr": "Fikrî Mülkiyet ve Teknoloji Hukuku Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi",
+            "title_tr": "Fikrî Mülkiyet Hakları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/kidemli-fikri-mulkiyet-hukuku-musaviri",
+            "title_tr": "Kıdemli Fikrî Mülkiyet Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/marka-ve-tasarim-hukuku-musaviri",
+            "title_tr": "Marka ve Tasarım Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/telif-haklari-uzmani",
+            "title_tr": "Telif Hakları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/fikri-mulkiyet-haklari-ekibi/marka-portfoyu-ve-yenileme-uzmani",
+            "title_tr": "Marka Portföyü ve Yenileme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi",
+            "title_tr": "Teknoloji ve Dijital Ürün Hukuku Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/kidemli-teknoloji-hukuku-musaviri",
+            "title_tr": "Kıdemli Teknoloji Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/dijital-urun-hukuku-musaviri",
+            "title_tr": "Dijital Ürün Hukuku Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/yapay-zeka-hukuku-uzmani",
+            "title_tr": "Yapay Zekâ Hukuku Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi",
+            "title_tr": "Lisanslama ve SaaS Sözleşmeleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/yazilim-lisanslari-musaviri",
+            "title_tr": "Yazılım Lisansları Müşaviri",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/saas-ve-bulut-sozlesmeleri-uzmani",
+            "title_tr": "SaaS ve Bulut Sözleşmeleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.07/lisanslama-ve-saas-sozlesmeleri-ekibi/teknoloji-tedarik-sozlesmeleri-uzmani",
+            "title_tr": "Teknoloji Tedarik Sözleşmeleri Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "05.08",
+        "name_tr": "Hukuk Operasyonları ve Dış Danışman Yönetimi",
+        "responsibilities": [
+          "Hukuki iş taleplerini almak, sınıflandırmak ve ilgili birime yönlendirmek",
+          "Hukuki iş yükü, SLA ve termin takibini yapmak",
+          "Hukuk bütçesini ve dış danışman faturalarını kontrol etmek",
+          "Dış hukuk bürolarının performansını değerlendirmek",
+          "Sözleşme ve dava yönetim sistemleri ile hukuk teknolojilerini işletmek",
+          "Hukuk doküman arşivini, dashboardları ve yönetim raporlarını hazırlamak"
+        ],
+        "authorities": [
+          "Hukuki iş taleplerinin önceliğini ve yönlendirileceği birimi belirler",
+          "Dış danışman faturalarının sözleşme ve bütçeye uygunluğunu onaylar",
+          "Dış hukuk bürosu seçim ve performans değerlendirme sonuçlarını direktöre sunar",
+          "Hukuk teknolojisi ve otomasyon ihtiyaçlarını önceliklendirir ve onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Hukuki hizmet satın alma süreçleri ve dış büro sözleşmeleri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Dış danışman faturalarının ödeme ve muhasebe kaydı"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Sözleşme ve dava yönetim sistemlerinin kurulumu ve iş sistemleri entegrasyonu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Strateji ve Planlama Müdürlüğü",
+            "topic": "Hukuk bütçesinin hazırlanması ve bütçe gerçekleşme takibi"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Evrak, Arşiv, Posta ve Kurumsal Kayıt Hizmetleri",
+            "topic": "Hukuk dosyaları ve sözleşme asıllarının fiziksel arşivlenmesi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+            "topic": "Dava dosyaları, dış avukat performansı ve maliyet verisi"
+          }
+        ],
+        "kpis": [
+          "Hukuki taleplerin SLA içinde tamamlanma oranı",
+          "Hukuk harcamalarının bütçeye uyum oranı",
+          "Dış danışman faturalarında düzeltme ve itiraz oranı",
+          "Dış hukuk bürosu performans puanı",
+          "Sistemde kayıtlı sözleşme ve dava dosyası oranı",
+          "Hukuk hizmetleri iç müşteri memnuniyet puanı"
+        ],
+        "title_standard": [
+          {
+            "position": "05.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Hukuk Operasyonları Müdürü",
+            "title_en": "Legal Operations Manager"
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Hukuk Operasyonları Yöneticisi",
+            "title_en": "Legal Operations Lead"
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuk-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuk Operasyonları Uzmanı",
+            "title_en": "Legal Operations Specialist"
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuki-is-talep-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuki İş Talep Yönetimi Uzmanı",
+            "title_en": "Legal Intake Specialist"
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuk-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuk Dokümantasyon Uzmanı",
+            "title_en": "Legal Documentation Specialist"
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Dış Danışman Yönetimi Yöneticisi",
+            "title_en": "External Counsel Management Lead"
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/dis-hukuk-burolari-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dış Hukuk Büroları Koordinasyon Uzmanı",
+            "title_en": "External Law Firms Coordinator"
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/hukuki-hizmet-satin-alma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuki Hizmet Satın Alma Uzmanı",
+            "title_en": "Legal Procurement Specialist"
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/hukuk-butcesi-ve-fatura-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuk Bütçesi ve Fatura Kontrol Uzmanı",
+            "title_en": "Legal Budget and Billing Specialist"
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Hukuk Teknolojileri ve Raporlama Yöneticisi",
+            "title_en": "Legal Technology and Reporting Lead"
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/hukuk-teknolojileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hukuk Teknolojileri Uzmanı",
+            "title_en": "Legal Technology Specialist"
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/hukuk-veri-ve-raporlama-analisti",
+            "level": "Analist",
+            "title_tr": "Hukuk Veri ve Raporlama Analisti",
+            "title_en": "Legal Data and Reporting Analyst"
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/sozlesme-ve-dava-sistemleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sözleşme ve Dava Sistemleri Uzmanı",
+            "title_en": "Contract and Litigation Systems Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 23
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 30
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "05.08",
+            "title_tr": "Hukuk Operasyonları Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi",
+            "title_tr": "Hukuk Operasyonları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuk-operasyonlari-uzmani",
+            "title_tr": "Hukuk Operasyonları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuki-is-talep-yonetimi-uzmani",
+            "title_tr": "Hukuki İş Talep Yönetimi Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "05.08/hukuk-operasyonlari-ekibi/hukuk-dokumantasyon-uzmani",
+            "title_tr": "Hukuk Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi",
+            "title_tr": "Dış Danışman Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/dis-hukuk-burolari-koordinasyon-uzmani",
+            "title_tr": "Dış Hukuk Büroları Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/hukuki-hizmet-satin-alma-uzmani",
+            "title_tr": "Hukuki Hizmet Satın Alma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/dis-danisman-yonetimi-ekibi/hukuk-butcesi-ve-fatura-kontrol-uzmani",
+            "title_tr": "Hukuk Bütçesi ve Fatura Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi",
+            "title_tr": "Hukuk Teknolojileri ve Raporlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/hukuk-teknolojileri-uzmani",
+            "title_tr": "Hukuk Teknolojileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/hukuk-veri-ve-raporlama-analisti",
+            "title_tr": "Hukuk Veri ve Raporlama Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "05.08/hukuk-teknolojileri-ve-raporlama-ekibi/sozlesme-ve-dava-sistemleri-uzmani",
+            "title_tr": "Sözleşme ve Dava Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

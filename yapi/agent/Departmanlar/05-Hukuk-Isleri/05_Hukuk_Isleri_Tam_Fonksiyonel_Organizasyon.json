@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department_code": "05",
+  "department_name_tr": "Hukuk İşleri",
+  "department_name_en": "Legal Affairs",
+  "model": "Tam fonksiyonel yapı",
+  "headcount": 28,
+  "headcount_excludes": [
+    "CEO",
+    "dış hukuk büroları ve hizmet sağlayıcıları"
+  ],
+  "reporting_line": "CEO -> Hukuk İşleri Direktörü -> 8 alt birim müdürü + Hukuk Operasyonları Yöneticisi",
+  "positions": [
+    {
+      "id": "CEO",
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer",
+      "level": "executive",
+      "headcount": 1,
+      "reports_to": null,
+      "responsibilities": [
+        "Hukuk departmanının üst yönetim raporlama makamı; departman kadrosuna dahil değildir"
+      ]
+    },
+    {
+      "id": "LEGAL-DIR",
+      "title_tr": "Hukuk İşleri Direktörü",
+      "title_en": "Legal Director / Head of Legal",
+      "level": "director",
+      "headcount": 1,
+      "reports_to": "CEO",
+      "responsibilities": [
+        "Grup hukuk stratejisi ve hukuki hizmet öncelikleri",
+        "Kritik uyuşmazlık, sözleşme ve yatırımlarda hukuki gözetim",
+        "Yönetim kuruluna ve icra kuruluna hukuki raporlama"
+      ]
+    },
+    {
+      "id": "LEGAL-OPS-MGR",
+      "title_tr": "Hukuk Operasyonları Yöneticisi",
+      "title_en": "Legal Operations Manager",
+      "level": "manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "responsibilities": [
+        "Hukuki iş talep ve doküman yönetimi",
+        "Dava/sözleşme takvimlerinin operasyonel takibi",
+        "Hukuk teknolojisi ve dış danışman koordinasyonu"
+      ]
+    },
+    {
+      "id": "LEGAL-01-MGR",
+      "title_tr": "Şirketler Hukuku Müdürü",
+      "title_en": "Corporate Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "01",
+      "responsibilities": [
+        "Şirket kuruluşları ve ticaret sicili",
+        "Genel kurul ve yönetim kurulu kararlarına hukuki destek",
+        "Birleşme, devralma ve ortaklık hukuku"
+      ]
+    },
+    {
+      "id": "LEGAL-01-SEN",
+      "title_tr": "Kıdemli Şirketler Hukuku Müşaviri",
+      "title_en": "Senior Corporate Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-01-MGR",
+      "unit_id": "01",
+      "responsibilities": [
+        "Şirket kuruluşları ve ticaret sicili",
+        "Genel kurul ve yönetim kurulu kararlarına hukuki destek",
+        "Birleşme, devralma ve ortaklık hukuku"
+      ]
+    },
+    {
+      "id": "LEGAL-01-COUNSEL",
+      "title_tr": "Şirketler Hukuku Müşaviri",
+      "title_en": "Corporate Legal Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-01-MGR",
+      "unit_id": "01",
+      "responsibilities": [
+        "Şirket kuruluşları ve ticaret sicili",
+        "Genel kurul ve yönetim kurulu kararlarına hukuki destek",
+        "Birleşme, devralma ve ortaklık hukuku"
+      ]
+    },
+    {
+      "id": "LEGAL-02-MGR",
+      "title_tr": "Sözleşmeler ve Ticari Hukuk Müdürü",
+      "title_en": "Contracts & Commercial Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "02",
+      "responsibilities": [
+        "Ticari sözleşme hazırlığı ve müzakereleri",
+        "Sözleşme şablonları ve hukuki inceleme",
+        "Ticari yükümlülük ve risk değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-02-SEN",
+      "title_tr": "Kıdemli Sözleşme Hukuku Müşaviri",
+      "title_en": "Senior Contracts Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-02-MGR",
+      "unit_id": "02",
+      "responsibilities": [
+        "Ticari sözleşme hazırlığı ve müzakereleri",
+        "Sözleşme şablonları ve hukuki inceleme",
+        "Ticari yükümlülük ve risk değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-02-COUNSEL",
+      "title_tr": "Sözleşme Hukuku Müşaviri",
+      "title_en": "Contracts Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-02-MGR",
+      "unit_id": "02",
+      "responsibilities": [
+        "Ticari sözleşme hazırlığı ve müzakereleri",
+        "Sözleşme şablonları ve hukuki inceleme",
+        "Ticari yükümlülük ve risk değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-03-MGR",
+      "title_tr": "Dava ve Uyuşmazlık Yönetimi Müdürü",
+      "title_en": "Litigation Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "03",
+      "responsibilities": [
+        "Dava ve icra dosyalarının hukuki yönetimi",
+        "Arabuluculuk, tahkim ve uzlaşma",
+        "Dış avukat ve dava stratejisi koordinasyonu"
+      ]
+    },
+    {
+      "id": "LEGAL-03-SEN",
+      "title_tr": "Kıdemli Dava Avukatı",
+      "title_en": "Senior Litigation Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-03-MGR",
+      "unit_id": "03",
+      "responsibilities": [
+        "Dava ve icra dosyalarının hukuki yönetimi",
+        "Arabuluculuk, tahkim ve uzlaşma",
+        "Dış avukat ve dava stratejisi koordinasyonu"
+      ]
+    },
+    {
+      "id": "LEGAL-03-COUNSEL",
+      "title_tr": "Dava Avukatı",
+      "title_en": "Litigation Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-03-MGR",
+      "unit_id": "03",
+      "responsibilities": [
+        "Dava ve icra dosyalarının hukuki yönetimi",
+        "Arabuluculuk, tahkim ve uzlaşma",
+        "Dış avukat ve dava stratejisi koordinasyonu"
+      ]
+    },
+    {
+      "id": "LEGAL-04-MGR",
+      "title_tr": "İş Hukuku Müdürü",
+      "title_en": "Employment Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "04",
+      "responsibilities": [
+        "İş sözleşmeleri ve hukuki görüşler",
+        "Fesih süreçlerinde hukuki değerlendirme",
+        "İş uyuşmazlıkları ve SGK hukuki ihtilafları"
+      ]
+    },
+    {
+      "id": "LEGAL-04-SEN",
+      "title_tr": "Kıdemli İş Hukuku Müşaviri",
+      "title_en": "Senior Employment Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-04-MGR",
+      "unit_id": "04",
+      "responsibilities": [
+        "İş sözleşmeleri ve hukuki görüşler",
+        "Fesih süreçlerinde hukuki değerlendirme",
+        "İş uyuşmazlıkları ve SGK hukuki ihtilafları"
+      ]
+    },
+    {
+      "id": "LEGAL-04-COUNSEL",
+      "title_tr": "İş Hukuku Müşaviri",
+      "title_en": "Employment Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-04-MGR",
+      "unit_id": "04",
+      "responsibilities": [
+        "İş sözleşmeleri ve hukuki görüşler",
+        "Fesih süreçlerinde hukuki değerlendirme",
+        "İş uyuşmazlıkları ve SGK hukuki ihtilafları"
+      ]
+    },
+    {
+      "id": "LEGAL-05-MGR",
+      "title_tr": "Mevzuat ve Hukuki Danışmanlık Müdürü",
+      "title_en": "Regulatory Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "05",
+      "responsibilities": [
+        "Mevzuat değişikliklerinin hukuki yorumlanması",
+        "Rekabet ve düzenleyici hukuk değerlendirmeleri",
+        "Resmi kurum süreçlerinde hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-05-SEN",
+      "title_tr": "Kıdemli Mevzuat Hukuku Müşaviri",
+      "title_en": "Senior Regulatory Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-05-MGR",
+      "unit_id": "05",
+      "responsibilities": [
+        "Mevzuat değişikliklerinin hukuki yorumlanması",
+        "Rekabet ve düzenleyici hukuk değerlendirmeleri",
+        "Resmi kurum süreçlerinde hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-05-COUNSEL",
+      "title_tr": "Mevzuat Hukuku Müşaviri",
+      "title_en": "Regulatory Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-05-MGR",
+      "unit_id": "05",
+      "responsibilities": [
+        "Mevzuat değişikliklerinin hukuki yorumlanması",
+        "Rekabet ve düzenleyici hukuk değerlendirmeleri",
+        "Resmi kurum süreçlerinde hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-06-MGR",
+      "title_tr": "Veri Koruma Hukuku Müdürü",
+      "title_en": "Data Privacy Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "06",
+      "responsibilities": [
+        "KVKK/GDPR hukuki görüşleri",
+        "Aydınlatma metinleri ve veri işleme sözleşmeleri",
+        "Veri ihlali ve veri aktarımında hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-06-SEN",
+      "title_tr": "Kıdemli Veri Koruma Hukuku Müşaviri",
+      "title_en": "Senior Privacy Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-06-MGR",
+      "unit_id": "06",
+      "responsibilities": [
+        "KVKK/GDPR hukuki görüşleri",
+        "Aydınlatma metinleri ve veri işleme sözleşmeleri",
+        "Veri ihlali ve veri aktarımında hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-06-COUNSEL",
+      "title_tr": "Veri Koruma Hukuku Müşaviri",
+      "title_en": "Privacy Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-06-MGR",
+      "unit_id": "06",
+      "responsibilities": [
+        "KVKK/GDPR hukuki görüşleri",
+        "Aydınlatma metinleri ve veri işleme sözleşmeleri",
+        "Veri ihlali ve veri aktarımında hukuki danışmanlık"
+      ]
+    },
+    {
+      "id": "LEGAL-07-MGR",
+      "title_tr": "Fikri Mülkiyet ve Teknoloji Hukuku Müdürü",
+      "title_en": "IP & Technology Legal Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "07",
+      "responsibilities": [
+        "Marka, telif ve fikri mülkiyet hakları",
+        "Yazılım lisansları ve SaaS sözleşmeleri",
+        "Dijital ürünlerin hukuki değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-07-SEN",
+      "title_tr": "Kıdemli Teknoloji Hukuku Müşaviri",
+      "title_en": "Senior Technology Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-07-MGR",
+      "unit_id": "07",
+      "responsibilities": [
+        "Marka, telif ve fikri mülkiyet hakları",
+        "Yazılım lisansları ve SaaS sözleşmeleri",
+        "Dijital ürünlerin hukuki değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-07-COUNSEL",
+      "title_tr": "Fikri Mülkiyet Hukuku Müşaviri",
+      "title_en": "IP Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-07-MGR",
+      "unit_id": "07",
+      "responsibilities": [
+        "Marka, telif ve fikri mülkiyet hakları",
+        "Yazılım lisansları ve SaaS sözleşmeleri",
+        "Dijital ürünlerin hukuki değerlendirmesi"
+      ]
+    },
+    {
+      "id": "LEGAL-08-MGR",
+      "title_tr": "Hukuki Risk ve Danışmanlık Müdürü",
+      "title_en": "Legal Risk & Advisory Manager",
+      "level": "unit_manager",
+      "headcount": 1,
+      "reports_to": "LEGAL-DIR",
+      "unit_id": "08",
+      "responsibilities": [
+        "Yatırım ve stratejik ortaklıklarda hukuki görüş",
+        "Yeni iş modeli ve pazarların hukuki analizi",
+        "Yönetim kararlarına hukuki risk danışmanlığı"
+      ]
+    },
+    {
+      "id": "LEGAL-08-SEN",
+      "title_tr": "Kıdemli Stratejik Hukuk Müşaviri",
+      "title_en": "Senior Strategic Legal Counsel",
+      "level": "senior_counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-08-MGR",
+      "unit_id": "08",
+      "responsibilities": [
+        "Yatırım ve stratejik ortaklıklarda hukuki görüş",
+        "Yeni iş modeli ve pazarların hukuki analizi",
+        "Yönetim kararlarına hukuki risk danışmanlığı"
+      ]
+    },
+    {
+      "id": "LEGAL-08-COUNSEL",
+      "title_tr": "Stratejik Hukuk Müşaviri",
+      "title_en": "Strategic Legal Counsel",
+      "level": "counsel",
+      "headcount": 1,
+      "reports_to": "LEGAL-08-MGR",
+      "unit_id": "08",
+      "responsibilities": [
+        "Yatırım ve stratejik ortaklıklarda hukuki görüş",
+        "Yeni iş modeli ve pazarların hukuki analizi",
+        "Yönetim kararlarına hukuki risk danışmanlığı"
+      ]
+    },
+    {
+      "id": "LEGAL-OPS-SPEC",
+      "title_tr": "Hukuk Operasyonları Uzmanı",
+      "title_en": "Legal Operations Specialist",
+      "level": "specialist",
+      "headcount": 1,
+      "reports_to": "LEGAL-OPS-MGR",
+      "responsibilities": [
+        "Dosya kaydı ve raporlama",
+        "Sözleşme ve dava takip kayıtları"
+      ]
+    },
+    {
+      "id": "LEGAL-OPS-ASST",
+      "title_tr": "Hukuk Dokümantasyon ve Destek Uzmanı",
+      "title_en": "Legal Documentation & Support Specialist",
+      "level": "specialist",
+      "headcount": 1,
+      "reports_to": "LEGAL-OPS-MGR",
+      "responsibilities": [
+        "Dokümantasyon ve arşiv",
+        "İmza ve onay iş akışlarının desteklenmesi"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "01",
+      "name_tr": "Şirketler ve Ticaret Hukuku",
+      "name_en": "Corporate Legal",
+      "position_ids": [
+        "LEGAL-01-MGR",
+        "LEGAL-01-SEN",
+        "LEGAL-01-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "02",
+      "name_tr": "Sözleşmeler ve Ticari Hukuk",
+      "name_en": "Contracts & Commercial Legal",
+      "position_ids": [
+        "LEGAL-02-MGR",
+        "LEGAL-02-SEN",
+        "LEGAL-02-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "03",
+      "name_tr": "Dava, İcra ve Uyuşmazlık Yönetimi",
+      "name_en": "Litigation & Dispute Resolution",
+      "position_ids": [
+        "LEGAL-03-MGR",
+        "LEGAL-03-SEN",
+        "LEGAL-03-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "04",
+      "name_tr": "İş ve Sosyal Güvenlik Hukuku",
+      "name_en": "Employment & Labor Law",
+      "position_ids": [
+        "LEGAL-04-MGR",
+        "LEGAL-04-SEN",
+        "LEGAL-04-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "05",
+      "name_tr": "Mevzuat ve Hukuki Danışmanlık",
+      "name_en": "Regulatory Legal Advisory",
+      "position_ids": [
+        "LEGAL-05-MGR",
+        "LEGAL-05-SEN",
+        "LEGAL-05-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "06",
+      "name_tr": "KVKK ve Veri Koruma Hukuku",
+      "name_en": "Data Privacy Legal",
+      "position_ids": [
+        "LEGAL-06-MGR",
+        "LEGAL-06-SEN",
+        "LEGAL-06-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "07",
+      "name_tr": "Fikri Mülkiyet ve Teknoloji Hukuku",
+      "name_en": "IP & Technology Legal",
+      "position_ids": [
+        "LEGAL-07-MGR",
+        "LEGAL-07-SEN",
+        "LEGAL-07-COUNSEL"
+      ],
+      "headcount": 3
+    },
+    {
+      "unit_id": "08",
+      "name_tr": "Hukuki Risk ve Stratejik Danışmanlık",
+      "name_en": "Legal Risk & Strategic Advisory",
+      "position_ids": [
+        "LEGAL-08-MGR",
+        "LEGAL-08-SEN",
+        "LEGAL-08-COUNSEL"
+      ],
+      "headcount": 3
+    }
+  ],
+  "department_boundaries": {
+    "legal_affairs": "Hukuki görüş, hukuki belge, sözleşme, uyuşmazlık ve hukuki temsil.",
+    "compliance": "Günlük mevzuat ve politika uyumunun operasyonel yönetimi ve gözetimi; Hukuktan görüş alır.",
+    "enterprise_risk_internal_control": "Kurumsal risk envanteri ve iç kontrollerin tasarımı; Hukuk hukuki risk boyutuna danışmanlık sağlar.",
+    "internal_audit": "Bağımsız güvence ve denetim.",
+    "human_resources": "Personel ve işe alım süreçlerinin operasyonel yürütümü.",
+    "finance": "Finansman, nakit ve ödeme kararları.",
+    "accounting": "Yasal mali kayıtlar ve vergi süreçleri."
+  },
+  "notes": [
+    "Pozisyon sayıları önerilen kadro planıdır, mevcut çalışan sayısı değildir.",
+    "Avukat ve avukatlık yetkisi gerektiren işlerde mesleki yetki ve yerel mevzuat esas alınır.",
+    "CEO raporlama şemasında bulunur ancak 28 kişilik departman kadrosuna dahil edilmez.",
+    "Mevzuat/Hukuki Danışmanlık ile Uyum; Hukuki Risk Danışmanlığı ile Kurumsal Risk fonksiyonları ayrı tutulur."
+  ]
+}

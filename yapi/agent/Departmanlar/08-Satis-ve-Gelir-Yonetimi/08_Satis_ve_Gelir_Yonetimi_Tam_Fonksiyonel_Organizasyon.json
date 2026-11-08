@@ -1,0 +1,1025 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "08",
+    "name_tr": "Satış ve Gelir Yönetimi",
+    "name_en": "Sales and Revenue Management",
+    "mission": "Pazarlama tarafından üretilen talep ve lead'leri ticari fırsata, sözleşmeye ve sürdürülebilir gelire dönüştürmek; satış kanallarının performansını yönetmek.",
+    "reporting_to": {
+      "title_tr": "Ticari İşler Başkanı / CCO",
+      "title_en": "Chief Commercial Officer"
+    },
+    "department_head": {
+      "title_tr": "Satış ve Gelir Yönetimi Direktörü",
+      "title_en": "Sales and Revenue Management Director / Chief Sales Officer"
+    },
+    "hierarchy_standard": [
+      "Departman lideri",
+      "Birim müdürü",
+      "Ekip yöneticisi",
+      "Uzman pozisyon"
+    ]
+  },
+  "organization_chart": {
+    "root": {
+      "id": "CCO",
+      "title_tr": "Ticari İşler Başkanı",
+      "title_en": "Chief Commercial Officer",
+      "children": [
+        {
+          "id": "SALES-DIR",
+          "title_tr": "Satış ve Gelir Yönetimi Direktörü",
+          "title_en": "Sales and Revenue Management Director / Chief Sales Officer",
+          "children": [
+            {
+              "unit_ref": "08.01"
+            },
+            {
+              "unit_ref": "08.02"
+            },
+            {
+              "unit_ref": "08.03"
+            },
+            {
+              "unit_ref": "08.04"
+            },
+            {
+              "unit_ref": "08.05"
+            },
+            {
+              "unit_ref": "08.06"
+            },
+            {
+              "unit_ref": "08.07"
+            },
+            {
+              "unit_ref": "08.08"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {
+      "id": "SALES-DIR",
+      "title_tr": "Satış ve Gelir Yönetimi Direktörü",
+      "title_en": "Sales and Revenue Management Director / Chief Sales Officer",
+      "reports_to": "CCO"
+    },
+    {
+      "id": "DEPUTY-SALES-DIR",
+      "title_tr": "Satış Direktör Yardımcısı",
+      "title_en": "Deputy Sales Director",
+      "reports_to": "SALES-DIR",
+      "status": "Şirket ölçeğine göre opsiyonel"
+    },
+    {
+      "id": "ENTERPRISE-SALES-DIR",
+      "title_tr": "Kurumsal Satış Direktörü",
+      "title_en": "Enterprise Sales Director",
+      "reports_to": "SALES-DIR",
+      "status": "Büyük ölçekli yapılarda opsiyonel"
+    },
+    {
+      "id": "REVOPS-DIR",
+      "title_tr": "Gelir Operasyonları Direktörü",
+      "title_en": "Revenue Operations Director",
+      "reports_to": "SALES-DIR",
+      "status": "Büyük ölçekli yapılarda opsiyonel"
+    }
+  ],
+  "units": [
+    {
+      "id": "08.01",
+      "name_tr": "Satış Stratejisi ve Gelir Operasyonları",
+      "name_en": "Sales Strategy and Revenue Operations",
+      "manager": {
+        "title_tr": "Satış Stratejisi ve Gelir Operasyonları Müdürü",
+        "title_en": "Sales Strategy and Revenue Operations Manager"
+      },
+      "responsibilities": [
+        "CRM satış süreçlerini ve pipeline aşamalarını yönetmek",
+        "Lead ve fırsat yönlendirme kurallarını uygulamak",
+        "Satış hunisi, dönüşüm ve CRM veri kalitesini izlemek",
+        "Satış otomasyonu ve gelir operasyonları yönetişimini geliştirmek",
+        "Satış dashboardları ve analitik raporlar üretmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "CRM ve Pipeline Yönetimi",
+          "name_en": "CRM and Pipeline Management",
+          "lead": {
+            "title_tr": "CRM ve Pipeline Yönetimi Yöneticisi",
+            "title_en": "CRM and Pipeline Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli CRM Uzmanı",
+              "title_en": "Senior CRM Specialist"
+            },
+            {
+              "title_tr": "CRM Süreç Uzmanı",
+              "title_en": "CRM Process Specialist"
+            },
+            {
+              "title_tr": "Pipeline Yönetimi Uzmanı",
+              "title_en": "Pipeline Management Specialist"
+            },
+            {
+              "title_tr": "CRM Veri Kalitesi Analisti",
+              "title_en": "CRM Data Quality Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Gelir Operasyonları",
+          "name_en": "Revenue Operations",
+          "lead": {
+            "title_tr": "Gelir Operasyonları Yöneticisi",
+            "title_en": "Revenue Operations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Gelir Operasyonları Uzmanı",
+              "title_en": "Senior Revenue Operations Specialist"
+            },
+            {
+              "title_tr": "Gelir Operasyonları Uzmanı",
+              "title_en": "Revenue Operations Specialist"
+            },
+            {
+              "title_tr": "Lead Yönlendirme Uzmanı",
+              "title_en": "Lead Routing Specialist"
+            },
+            {
+              "title_tr": "Satış Süreçleri Analisti",
+              "title_en": "Sales Process Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Satış Veri ve Analitiği",
+          "name_en": "Sales Data and Analytics",
+          "lead": {
+            "title_tr": "Satış Veri ve Analitiği Yöneticisi",
+            "title_en": "Sales Data and Analytics Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Satış Veri Analisti",
+              "title_en": "Senior Sales Data Analyst"
+            },
+            {
+              "title_tr": "Satış Performans Analisti",
+              "title_en": "Sales Performance Analyst"
+            },
+            {
+              "title_tr": "Dönüşüm ve Funnel Analisti",
+              "title_en": "Conversion and Funnel Analyst"
+            },
+            {
+              "title_tr": "Satış BI Uzmanı",
+              "title_en": "Sales BI Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.02",
+      "name_tr": "Kurumsal Satış",
+      "name_en": "Enterprise Sales",
+      "manager": {
+        "title_tr": "Kurumsal Satış Müdürü",
+        "title_en": "Enterprise Sales Manager"
+      },
+      "responsibilities": [
+        "Büyük ölçekli kurumsal müşteri kazanımını yönetmek",
+        "Stratejik müşteri portföyünü geliştirmek",
+        "Kompleks ve çözüm odaklı satışları yürütmek",
+        "Çapraz satış ve ek satış fırsatları yaratmak",
+        "Kritik müşteri görüşme ve müzakerelerine liderlik etmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Kurumsal Müşteri Kazanımı",
+          "name_en": "Enterprise Customer Acquisition",
+          "lead": {
+            "title_tr": "Kurumsal Müşteri Kazanımı Yöneticisi",
+            "title_en": "Enterprise Acquisition Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kurumsal Satış Yöneticisi",
+              "title_en": "Senior Enterprise Account Executive"
+            },
+            {
+              "title_tr": "Kurumsal Satış Yöneticisi",
+              "title_en": "Enterprise Account Executive"
+            },
+            {
+              "title_tr": "Kurumsal Satış Uzmanı",
+              "title_en": "Enterprise Sales Specialist"
+            },
+            {
+              "title_tr": "Satış Geliştirme Temsilcisi",
+              "title_en": "Sales Development Representative"
+            }
+          ]
+        },
+        {
+          "name_tr": "Stratejik Müşteriler",
+          "name_en": "Strategic Accounts",
+          "lead": {
+            "title_tr": "Stratejik Müşteriler Satış Yöneticisi",
+            "title_en": "Strategic Accounts Sales Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Stratejik Müşteri Direktörü",
+              "title_en": "Strategic Account Director"
+            },
+            {
+              "title_tr": "Kıdemli Stratejik Müşteri Yöneticisi",
+              "title_en": "Senior Strategic Account Manager"
+            },
+            {
+              "title_tr": "Stratejik Müşteri Yöneticisi",
+              "title_en": "Strategic Account Manager"
+            },
+            {
+              "title_tr": "Müşteri Ticari Analisti",
+              "title_en": "Account Commercial Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Çapraz Satış ve Yeni Gelir",
+          "name_en": "Cross-Sell and New Revenue",
+          "lead": {
+            "title_tr": "Çapraz Satış ve Yeni Gelir Yöneticisi",
+            "title_en": "Cross-Sell and New Revenue Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Çapraz Satış Yöneticisi",
+              "title_en": "Senior Cross-Sell Manager"
+            },
+            {
+              "title_tr": "Çapraz Satış Uzmanı",
+              "title_en": "Cross-Sell Specialist"
+            },
+            {
+              "title_tr": "Ek Satış ve Paket Çözümler Uzmanı",
+              "title_en": "Upsell and Bundled Solutions Specialist"
+            },
+            {
+              "title_tr": "Yeni Gelir Fırsatları Analisti",
+              "title_en": "New Revenue Opportunities Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.03",
+      "name_tr": "KOBİ ve Orta Ölçekli Müşteri Satışları",
+      "name_en": "SMB and Mid-Market Sales",
+      "manager": {
+        "title_tr": "KOBİ ve Orta Ölçekli Müşteri Satışları Müdürü",
+        "title_en": "SMB and Mid-Market Sales Manager"
+      },
+      "responsibilities": [
+        "KOBİ ve orta ölçekli müşteri kazanımını yönetmek",
+        "Telefon, çevrim içi ve saha satış kanallarını işletmek",
+        "Lead kalifikasyonu ve standart çözüm satışlarını yürütmek",
+        "Bölge ve sektör bazlı satış performansını yönetmek",
+        "Bekleyen veya terk edilen fırsatları yeniden kazanmak"
+      ],
+      "teams": [
+        {
+          "name_tr": "İç Satış",
+          "name_en": "Inside Sales",
+          "lead": {
+            "title_tr": "İç Satış Yöneticisi",
+            "title_en": "Inside Sales Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İç Satış Temsilcisi",
+              "title_en": "Senior Inside Sales Representative"
+            },
+            {
+              "title_tr": "İç Satış Temsilcisi",
+              "title_en": "Inside Sales Representative"
+            },
+            {
+              "title_tr": "Satış Geliştirme Temsilcisi",
+              "title_en": "Sales Development Representative"
+            },
+            {
+              "title_tr": "Müşteri Adayı Kalifikasyon Uzmanı",
+              "title_en": "Lead Qualification Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Bölgesel ve Saha Satış",
+          "name_en": "Regional and Field Sales",
+          "lead": {
+            "title_tr": "Bölgesel ve Saha Satış Yöneticisi",
+            "title_en": "Regional and Field Sales Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Bölge Satış Yöneticisi",
+              "title_en": "Regional Sales Manager"
+            },
+            {
+              "title_tr": "Kıdemli Saha Satış Temsilcisi",
+              "title_en": "Senior Field Sales Representative"
+            },
+            {
+              "title_tr": "Saha Satış Temsilcisi",
+              "title_en": "Field Sales Representative"
+            },
+            {
+              "title_tr": "Bölgesel Satış Uzmanı",
+              "title_en": "Regional Sales Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Hızlı Satış ve Dönüşüm",
+          "name_en": "Velocity Sales and Conversion",
+          "lead": {
+            "title_tr": "Hızlı Satış ve Dönüşüm Yöneticisi",
+            "title_en": "Velocity Sales and Conversion Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Hızlı Satış Uzmanı",
+              "title_en": "Velocity Sales Specialist"
+            },
+            {
+              "title_tr": "Dijital Satış Temsilcisi",
+              "title_en": "Digital Sales Representative"
+            },
+            {
+              "title_tr": "Satış Dönüşüm Uzmanı",
+              "title_en": "Sales Conversion Specialist"
+            },
+            {
+              "title_tr": "Terk Edilen Fırsatlar Kazanım Uzmanı",
+              "title_en": "Opportunity Recovery Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.04",
+      "name_tr": "Kanal, İş Ortaklıkları ve Ekosistem Satışları",
+      "name_en": "Channel, Partnerships and Ecosystem Sales",
+      "manager": {
+        "title_tr": "Kanal ve İş Ortaklıkları Satış Müdürü",
+        "title_en": "Channel and Partnerships Sales Manager"
+      },
+      "responsibilities": [
+        "Bayi, acente ve satış kanallarını yönetmek",
+        "Stratejik iş ortaklıkları ve ortak satış modelleri geliştirmek",
+        "Partner onboarding ve aktivasyon süreçlerini yürütmek",
+        "Kanal hedefleri, komisyonları ve performansını izlemek",
+        "Kanal çatışmalarını ve ekosistem gelirlerini yönetmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Kanal Satışları",
+          "name_en": "Channel Sales",
+          "lead": {
+            "title_tr": "Kanal Satışları Yöneticisi",
+            "title_en": "Channel Sales Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kanal Satış Yöneticisi",
+              "title_en": "Senior Channel Sales Manager"
+            },
+            {
+              "title_tr": "Kanal Satış Yöneticisi",
+              "title_en": "Channel Sales Manager"
+            },
+            {
+              "title_tr": "Bayi Satış Uzmanı",
+              "title_en": "Dealer Sales Specialist"
+            },
+            {
+              "title_tr": "Kanal Performans Analisti",
+              "title_en": "Channel Performance Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "İş Ortaklıkları",
+          "name_en": "Strategic Partnerships",
+          "lead": {
+            "title_tr": "Stratejik İş Ortaklıkları Yöneticisi",
+            "title_en": "Strategic Partnerships Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İş Ortaklıkları Yöneticisi",
+              "title_en": "Senior Partnerships Manager"
+            },
+            {
+              "title_tr": "İş Ortaklıkları Yöneticisi",
+              "title_en": "Partnerships Manager"
+            },
+            {
+              "title_tr": "Ekosistem Satış Uzmanı",
+              "title_en": "Ecosystem Sales Specialist"
+            },
+            {
+              "title_tr": "Ortak Çözüm Geliştirme Uzmanı",
+              "title_en": "Joint Solution Development Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Partner Aktivasyonu",
+          "name_en": "Partner Enablement",
+          "lead": {
+            "title_tr": "Partner Aktivasyonu ve Başarı Yöneticisi",
+            "title_en": "Partner Enablement and Success Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Partner Aktivasyon Uzmanı",
+              "title_en": "Partner Enablement Specialist"
+            },
+            {
+              "title_tr": "Partner Eğitim Uzmanı",
+              "title_en": "Partner Training Specialist"
+            },
+            {
+              "title_tr": "Partner Satış Destek Uzmanı",
+              "title_en": "Partner Sales Support Specialist"
+            },
+            {
+              "title_tr": "Partner Operasyonları Analisti",
+              "title_en": "Partner Operations Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.05",
+      "name_tr": "Teklif, İhale ve Ticari Sözleşme Yönetimi",
+      "name_en": "Proposal, Tender and Commercial Contract Management",
+      "manager": {
+        "title_tr": "Teklif ve İhale Yönetimi Müdürü",
+        "title_en": "Proposal and Tender Management Manager"
+      },
+      "responsibilities": [
+        "Teklif hazırlama ve onay süreçlerini koordine etmek",
+        "Teknik, mali ve ticari teklif girdilerini birleştirmek",
+        "Kamu ve özel sektör ihalelerini yönetmek",
+        "Ticari şartları ve sözleşme öncesi kontrolleri yürütmek",
+        "İmza, operasyon devri ve kazanma-kaybetme analizlerini yönetmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Teklif Yönetimi",
+          "name_en": "Proposal Management",
+          "lead": {
+            "title_tr": "Teklif Yönetimi Yöneticisi",
+            "title_en": "Proposal Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Teklif Yöneticisi",
+              "title_en": "Senior Proposal Manager"
+            },
+            {
+              "title_tr": "Teklif Uzmanı",
+              "title_en": "Proposal Specialist"
+            },
+            {
+              "title_tr": "Çözüm Teklifi Uzmanı",
+              "title_en": "Solution Proposal Specialist"
+            },
+            {
+              "title_tr": "Teklif Dokümantasyon Uzmanı",
+              "title_en": "Proposal Documentation Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "İhale Yönetimi",
+          "name_en": "Tender Management",
+          "lead": {
+            "title_tr": "İhale Yönetimi Yöneticisi",
+            "title_en": "Tender Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İhale Uzmanı",
+              "title_en": "Senior Tender Specialist"
+            },
+            {
+              "title_tr": "Kamu İhaleleri Uzmanı",
+              "title_en": "Public Tenders Specialist"
+            },
+            {
+              "title_tr": "Özel Sektör İhaleleri Uzmanı",
+              "title_en": "Private Sector Tenders Specialist"
+            },
+            {
+              "title_tr": "İhale Dokümantasyon ve Takip Uzmanı",
+              "title_en": "Tender Documentation and Tracking Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Ticari Sözleşme Koordinasyonu",
+          "name_en": "Commercial Contract Coordination",
+          "lead": {
+            "title_tr": "Ticari Sözleşme Koordinasyon Yöneticisi",
+            "title_en": "Commercial Contract Coordination Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Ticari Sözleşme Koordinasyon Uzmanı",
+              "title_en": "Commercial Contract Coordination Specialist"
+            },
+            {
+              "title_tr": "Sözleşme Öncesi Kontrol Uzmanı",
+              "title_en": "Pre-Contract Review Specialist"
+            },
+            {
+              "title_tr": "Ticari Şartlar Uzmanı",
+              "title_en": "Commercial Terms Specialist"
+            },
+            {
+              "title_tr": "İmza ve Devir Koordinasyon Uzmanı",
+              "title_en": "Signature and Handover Coordinator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.06",
+      "name_tr": "Satış Etkinliği ve Yetkinlik Gelişimi",
+      "name_en": "Sales Enablement and Capability Development",
+      "manager": {
+        "title_tr": "Satış Etkinliği ve Yetkinlik Gelişimi Müdürü",
+        "title_en": "Sales Enablement and Capability Development Manager"
+      },
+      "responsibilities": [
+        "Satış metodolojisi ve yetkinlik modelini geliştirmek",
+        "Satış çalışanlarının onboarding ve ürün eğitimlerini yönetmek",
+        "Müzakere, itiraz karşılama ve satış koçluğu programları yürütmek",
+        "Satış içerikleri, sunumları ve araçlarını yönetmek",
+        "Görüşme ve teklif kalite standartlarını izlemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Satış Eğitimleri",
+          "name_en": "Sales Training",
+          "lead": {
+            "title_tr": "Satış Eğitimleri Yöneticisi",
+            "title_en": "Sales Training Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Satış Eğitim Uzmanı",
+              "title_en": "Senior Sales Training Specialist"
+            },
+            {
+              "title_tr": "Satış Eğitim Uzmanı",
+              "title_en": "Sales Training Specialist"
+            },
+            {
+              "title_tr": "Ürün ve Çözüm Eğitim Uzmanı",
+              "title_en": "Product and Solution Training Specialist"
+            },
+            {
+              "title_tr": "Satış Yetkinlik Analisti",
+              "title_en": "Sales Capability Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Satış İçeriği ve Araçları",
+          "name_en": "Sales Content and Tools",
+          "lead": {
+            "title_tr": "Satış İçeriği ve Araçları Yöneticisi",
+            "title_en": "Sales Content and Tools Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Satış İçeriği Uzmanı",
+              "title_en": "Sales Content Specialist"
+            },
+            {
+              "title_tr": "Satış Sunumları Uzmanı",
+              "title_en": "Sales Presentation Specialist"
+            },
+            {
+              "title_tr": "Satış Araçları Uzmanı",
+              "title_en": "Sales Tools Specialist"
+            },
+            {
+              "title_tr": "Teklif ve Vaka Kütüphanesi Uzmanı",
+              "title_en": "Proposal and Case Library Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Satış Koçluğu ve Onboarding",
+          "name_en": "Sales Coaching and Onboarding",
+          "lead": {
+            "title_tr": "Satış Koçluğu ve Onboarding Yöneticisi",
+            "title_en": "Sales Coaching and Onboarding Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Satış Koçu",
+              "title_en": "Sales Coach"
+            },
+            {
+              "title_tr": "Satış Onboarding Uzmanı",
+              "title_en": "Sales Onboarding Specialist"
+            },
+            {
+              "title_tr": "Görüşme Kalitesi Uzmanı",
+              "title_en": "Sales Conversation Quality Specialist"
+            },
+            {
+              "title_tr": "Satış Yetkinlik Değerlendirme Uzmanı",
+              "title_en": "Sales Competency Assessment Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.07",
+      "name_tr": "Fiyatlandırma ve Ticari Yönetişim",
+      "name_en": "Pricing and Commercial Governance",
+      "manager": {
+        "title_tr": "Fiyatlandırma ve Ticari Yönetişim Müdürü",
+        "title_en": "Pricing and Commercial Governance Manager"
+      },
+      "responsibilities": [
+        "Fiyatlandırma stratejisinin ticari uygulamasını yönetmek",
+        "Paket, tarife, liste fiyatı ve iskonto limitlerini uygulamak",
+        "Ticari istisna ve teklif onay mekanizmalarını işletmek",
+        "Müşteri, sözleşme ve teklif kârlılığını analiz etmek",
+        "Fiyat esnekliği, katkı payı ve birim ekonomi performansını izlemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Fiyatlandırma Stratejisi",
+          "name_en": "Pricing Strategy",
+          "lead": {
+            "title_tr": "Fiyatlandırma Stratejisi Yöneticisi",
+            "title_en": "Pricing Strategy Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Fiyatlandırma Uzmanı",
+              "title_en": "Senior Pricing Specialist"
+            },
+            {
+              "title_tr": "Fiyatlandırma Uzmanı",
+              "title_en": "Pricing Specialist"
+            },
+            {
+              "title_tr": "Paket ve Tarife Uzmanı",
+              "title_en": "Packaging and Tariff Specialist"
+            },
+            {
+              "title_tr": "Fiyat Analisti",
+              "title_en": "Pricing Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "İskonto ve Ticari İstisna",
+          "name_en": "Discount and Commercial Exceptions",
+          "lead": {
+            "title_tr": "İskonto ve Ticari İstisna Yöneticisi",
+            "title_en": "Discount and Commercial Exceptions Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "İskonto Yönetimi Uzmanı",
+              "title_en": "Discount Management Specialist"
+            },
+            {
+              "title_tr": "Ticari İstisna Uzmanı",
+              "title_en": "Commercial Exceptions Specialist"
+            },
+            {
+              "title_tr": "Teklif Onay Kontrol Uzmanı",
+              "title_en": "Proposal Approval Controls Specialist"
+            },
+            {
+              "title_tr": "İskonto Analisti",
+              "title_en": "Discount Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Ticari Kârlılık",
+          "name_en": "Commercial Profitability",
+          "lead": {
+            "title_tr": "Ticari Kârlılık Yöneticisi",
+            "title_en": "Commercial Profitability Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Ticari Finans Analisti",
+              "title_en": "Senior Commercial Finance Analyst"
+            },
+            {
+              "title_tr": "Müşteri Kârlılık Analisti",
+              "title_en": "Customer Profitability Analyst"
+            },
+            {
+              "title_tr": "Sözleşme Değer Analisti",
+              "title_en": "Contract Value Analyst"
+            },
+            {
+              "title_tr": "Birim Ekonomi Analisti",
+              "title_en": "Unit Economics Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.08",
+      "name_tr": "Satış Performansı ve Gelir Planlama",
+      "name_en": "Sales Performance and Revenue Planning",
+      "manager": {
+        "title_tr": "Satış Performansı ve Gelir Planlama Müdürü",
+        "title_en": "Sales Performance and Revenue Planning Manager"
+      },
+      "responsibilities": [
+        "Satış hedefleri, kotalar, bölgeler ve portföyleri planlamak",
+        "Satış tahminleri ve pipeline ağırlıklandırma modellerini yönetmek",
+        "Gelir senaryoları, kapasite ve satış verimliliğini analiz etmek",
+        "Satış prim planı operasyonlarını ve hesaplama girdilerini yönetmek",
+        "Hedef-gerçekleşen, performans ve tahmin doğruluğunu raporlamak"
+      ],
+      "teams": [
+        {
+          "name_tr": "Hedef ve Kota Yönetimi",
+          "name_en": "Target and Quota Management",
+          "lead": {
+            "title_tr": "Hedef ve Kota Yönetimi Yöneticisi",
+            "title_en": "Target and Quota Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Satış Hedefleri Uzmanı",
+              "title_en": "Sales Targets Specialist"
+            },
+            {
+              "title_tr": "Kota Planlama Uzmanı",
+              "title_en": "Quota Planning Specialist"
+            },
+            {
+              "title_tr": "Bölge ve Portföy Planlama Uzmanı",
+              "title_en": "Territory and Portfolio Planning Specialist"
+            },
+            {
+              "title_tr": "Hedef Dağılım Analisti",
+              "title_en": "Target Allocation Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Satış Tahminleme ve Gelir Planlama",
+          "name_en": "Sales Forecasting and Revenue Planning",
+          "lead": {
+            "title_tr": "Satış Tahminleme ve Gelir Planlama Yöneticisi",
+            "title_en": "Sales Forecasting and Revenue Planning Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Satış Tahminleme Uzmanı",
+              "title_en": "Senior Sales Forecasting Specialist"
+            },
+            {
+              "title_tr": "Gelir Planlama Uzmanı",
+              "title_en": "Revenue Planning Specialist"
+            },
+            {
+              "title_tr": "Pipeline Tahmin Analisti",
+              "title_en": "Pipeline Forecast Analyst"
+            },
+            {
+              "title_tr": "Gelir Senaryoları Analisti",
+              "title_en": "Revenue Scenario Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Prim ve Performans Operasyonları",
+          "name_en": "Sales Incentive and Performance Operations",
+          "lead": {
+            "title_tr": "Prim ve Performans Operasyonları Yöneticisi",
+            "title_en": "Sales Incentive and Performance Operations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Satış Prim Operasyonları Uzmanı",
+              "title_en": "Sales Incentive Operations Specialist"
+            },
+            {
+              "title_tr": "Satış Performans Uzmanı",
+              "title_en": "Sales Performance Specialist"
+            },
+            {
+              "title_tr": "Prim Hesaplama Kontrol Uzmanı",
+              "title_en": "Incentive Calculation Controls Specialist"
+            },
+            {
+              "title_tr": "Satış Performans Raporlama Analisti",
+              "title_en": "Sales Performance Reporting Analyst"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "organization_summary": {
+    "unit_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "specialist_position_types": 96
+  },
+  "sales_lifecycle": [
+    {
+      "stage": 1,
+      "name_tr": "Pazar talebi oluşturma",
+      "primary_owner": "09 - Pazarlama ve Büyüme",
+      "output": "Lead"
+    },
+    {
+      "stage": 2,
+      "name_tr": "Lead kalifikasyonu",
+      "primary_owner": "08 - Satış ve Gelir Yönetimi / Satış Geliştirme",
+      "output": "Nitelikli satış adayı"
+    },
+    {
+      "stage": 3,
+      "name_tr": "Fırsat geliştirme",
+      "primary_owner": "08 - Satış ve Gelir Yönetimi",
+      "output": "Aktif satış fırsatı"
+    },
+    {
+      "stage": 4,
+      "name_tr": "Çözüm ve teklif",
+      "primary_owner": "Satış + Ürün + Teknik ekip",
+      "output": "Onaylı teklif"
+    },
+    {
+      "stage": 5,
+      "name_tr": "Fiyat ve ticari koşullar",
+      "primary_owner": "Satış + Fiyatlandırma + Finans",
+      "output": "Ticari teklif"
+    },
+    {
+      "stage": 6,
+      "name_tr": "Hukuki inceleme",
+      "primary_owner": "05 - Hukuk İşleri",
+      "output": "Hukuken onaylı sözleşme"
+    },
+    {
+      "stage": 7,
+      "name_tr": "Satış kapanışı",
+      "primary_owner": "08 - Satış ve Gelir Yönetimi",
+      "output": "İmzalı sözleşme"
+    },
+    {
+      "stage": 8,
+      "name_tr": "Faturalama",
+      "primary_owner": "02 - Muhasebe ve Mali İşler",
+      "output": "Fatura ve muhasebe kaydı"
+    },
+    {
+      "stage": 9,
+      "name_tr": "Tahsilat planlaması",
+      "primary_owner": "03 - Finans ve Hazine",
+      "output": "Tahsilat takvimi"
+    },
+    {
+      "stage": 10,
+      "name_tr": "Onboarding",
+      "primary_owner": "Müşteri Deneyimi + Operasyon",
+      "output": "Aktif müşteri"
+    },
+    {
+      "stage": 11,
+      "name_tr": "Yenileme",
+      "primary_owner": "Müşteri Deneyimi + Satış",
+      "output": "Yenilenen sözleşme"
+    },
+    {
+      "stage": 12,
+      "name_tr": "Çapraz satış",
+      "primary_owner": "08 - Satış ve Gelir Yönetimi",
+      "output": "Yeni gelir"
+    }
+  ],
+  "staffing_models": [
+    {
+      "model": "Yalın yapı",
+      "recommended_structure": "1 satış lideri, 3 ekip yöneticisi ve 6-12 satış çalışanı"
+    },
+    {
+      "model": "Orta ölçekli şirket",
+      "recommended_structure": "1 direktör, 4-6 müdür ve 15-35 satış çalışanı"
+    },
+    {
+      "model": "Holding yapısı",
+      "recommended_structure": "1 direktör, 1 direktör yardımcısı, 8 müdür ve marka/şirket satış ekipleri"
+    },
+    {
+      "model": "Tam fonksiyonel yapı",
+      "recommended_structure": "8 müdürlük ve 24 fonksiyonel ekibin ayrı kadrolanması"
+    }
+  ],
+  "department_boundaries": [
+    {
+      "interface_department": "09 - Pazarlama ve Büyüme",
+      "sales_owns": "Lead'i fırsata ve sözleşmeye dönüştürmek",
+      "other_department_owns": "Talep ve nitelikli lead üretmek"
+    },
+    {
+      "interface_department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+      "sales_owns": "Ticari büyüme ve yeni satış",
+      "other_department_owns": "Müşteri başarısı, memnuniyet ve devamlılık"
+    },
+    {
+      "interface_department": "18 - Ürün Yönetimi ve Ar-Ge",
+      "sales_owns": "Müşteri ihtiyacını ve satış geri bildirimini aktarmak",
+      "other_department_owns": "Ürün stratejisi ve yol haritası"
+    },
+    {
+      "interface_department": "03 - Finans ve Hazine",
+      "sales_owns": "Ticari teklif ve müşteri müzakeresi",
+      "other_department_owns": "Finansal limit, kârlılık ve tahsilat politikası"
+    },
+    {
+      "interface_department": "02 - Muhasebe ve Mali İşler",
+      "sales_owns": "Sözleşme ve faturalama girdisini aktarmak",
+      "other_department_owns": "Fatura ve muhasebe kaydı"
+    },
+    {
+      "interface_department": "05 - Hukuk İşleri",
+      "sales_owns": "Ticari şartları belirlemek",
+      "other_department_owns": "Hukuki hükümler ve sözleşme riski"
+    },
+    {
+      "interface_department": "19 - Tasarım ve Yaratıcı Hizmetler",
+      "sales_owns": "Satış briefi ve kullanım ihtiyacını belirlemek",
+      "other_department_owns": "Sunum ve satış materyallerinin tasarımı"
+    },
+    {
+      "interface_department": "04 - İnsan Kaynakları ve Organizasyon",
+      "sales_owns": "Satış hedef ve performans girdilerini sağlamak",
+      "other_department_owns": "Ücret, prim politikası ve bordro"
+    },
+    {
+      "interface_department": "12 - Operasyon Yönetimi",
+      "sales_owns": "Müşteriye verilen ticari taahhütleri aktarmak",
+      "other_department_owns": "Hizmet teslimatı ve SLA uygulaması"
+    }
+  ],
+  "scope_exclusions": [
+    "Pazarlama kampanyalarını ve reklamları yönetmek",
+    "Ürün yol haritasına tek başına karar vermek",
+    "Hukuki sözleşme hükümlerini onaylamak",
+    "Finansal kredi limitini tek başına belirlemek",
+    "Fatura veya muhasebe kaydı oluşturmak",
+    "Tahsilatı muhasebe kaydı olarak işlemek",
+    "Satış sonrası teknik destek operasyonunu yürütmek",
+    "Operasyonun onaylamadığı SLA taahhüdü vermek",
+    "Yetki matrisi dışında fiyat veya iskonto uygulamak",
+    "Prim bordrosunu oluşturmak"
+  ],
+  "notes": [
+    "Pozisyonlar hedef organizasyon modelidir ve mevcut çalışan sayısını ifade etmez.",
+    "Pazarlama talep oluşturur; Satış fırsatı sözleşmeye dönüştürür; Operasyon hizmeti teslim eder; Müşteri Deneyimi müşterinin değer elde etmesini ve devamlılığını yönetir.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; ticari yetki, fiyat onayı ve görevler ayrılığı korunmalıdır."
+  ]
+}

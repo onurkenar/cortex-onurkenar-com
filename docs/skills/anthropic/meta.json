@@ -1,0 +1,36 @@
+{
+ "about": "Anthropic'in github.com/anthropics/skills deposundaki skill'lerin uygulamadaki kategori, sahip ve risk varsayılanları. Kategoriler deponun README'sindeki gruplardan (Creative & Design, Development & Technical, Enterprise & Communication, Document Skills) türetildi; sahip = skill'i güncel tutacak pozisyon (Anthropic'teki yeni sürümleri izler, çeviriyi günceller); risk skill'in yaptığı işe göre (komut çalıştıran / kod üreten / dış servise bağlanan → orta).",
+ "install": {
+  "claudeCode": "/plugin marketplace add anthropics/skills",
+  "document": "/plugin install document-skills@anthropic-agent-skills",
+  "example": "/plugin install example-skills@anthropic-agent-skills"
+ },
+ "cats": {
+  "design": "Anthropic · Tasarım ve Yaratıcılık",
+  "dev": "Anthropic · Geliştirme",
+  "comm": "Anthropic · Kurumsal İletişim",
+  "docs": "Anthropic · Belgeler",
+  "learn": "Anthropic · Öğrenme ve Düşünme"
+ },
+ "skills": {
+  "algorithmic-art": {"cat": "design", "owner": {"dept": "tasarim", "pos": "19.03"}, "risk": "low"},
+  "canvas-design": {"cat": "design", "owner": {"dept": "tasarim", "pos": "19.03"}, "risk": "low"},
+  "frontend-design": {"cat": "design", "owner": {"dept": "tasarim", "pos": "19.04/web-ve-arayuz-gorsel-tasarimi"}, "risk": "low"},
+  "slack-gif-creator": {"cat": "design", "owner": {"dept": "tasarim", "pos": "19.03"}, "risk": "low"},
+  "theme-factory": {"cat": "design", "owner": {"dept": "tasarim", "pos": "19.03"}, "risk": "low"},
+  "claude-api": {"cat": "dev", "owner": {"dept": "veri-analitik", "pos": "17.06/uretken-yapay-zeka-cozumleri"}, "risk": "medium"},
+  "mcp-builder": {"cat": "dev", "owner": {"dept": "bilgi-teknolojileri", "pos": "15.05/entegrasyon-ve-api-yonetimi"}, "risk": "medium"},
+  "skill-creator": {"cat": "dev", "owner": {"dept": "veri-analitik", "pos": "17.06/akilli-otomasyon-ve-yapay-zeka-ajanlari"}, "risk": "medium"},
+  "web-artifacts-builder": {"cat": "dev", "owner": {"dept": "bilgi-teknolojileri", "pos": "15.05/kurumsal-yazilim-gelistirme"}, "risk": "medium"},
+  "webapp-testing": {"cat": "dev", "owner": {"dept": "bilgi-teknolojileri", "pos": "15.05/yazilim-kalitesi-test-ve-dokumantasyon"}, "risk": "medium"},
+  "brand-guidelines": {"cat": "comm", "owner": {"dept": "tasarim", "pos": "19.03"}, "risk": "low"},
+  "internal-comms": {"cat": "comm", "owner": {"dept": "kurumsal-iletisim", "pos": "10.05/ic-iletisim-kanallari"}, "risk": "low"},
+  "doc-coauthoring": {"cat": "comm", "owner": {"dept": "bilgi-teknolojileri", "pos": "15.05/yazilim-kalitesi-test-ve-dokumantasyon"}, "risk": "low"},
+  "academy-guide": {"cat": "learn", "owner": {"dept": "insan-kaynaklari", "pos": "egitim-ve-gelisim"}, "risk": "low"},
+  "discernment-nudge": {"cat": "learn", "owner": {"dept": "veri-analitik", "pos": "17.08/sorumlu-yapay-zeka-ve-model-risk-yonetimi"}, "risk": "low"},
+  "docx": {"cat": "docs", "owner": {"dept": "sekreterya", "pos": "23.07"}, "risk": "low", "name": "Word Belgeleri (docx)", "desc": "Word belgelerini (.docx) ve şablonlarını (.dotx) oluşturur, okur ve düzenler: başlık, içindekiler, sayfa numarası, tablo, görsel, değişiklik izleme ve yorumlar.", "scenario": "Rapor, yazı, tutanak, şablon ya da biçimli bir Word belgesi istendiğinde veya mevcut bir .docx dosyası düzenlenirken.", "example": "Toplantı notları içindekiler tablosu ve sayfa numaralarıyla biçimlendirilmiş bir .docx dosyası olarak teslim edilir."},
+  "pdf": {"cat": "docs", "owner": {"dept": "sekreterya", "pos": "23.07"}, "risk": "low", "name": "PDF İşlemleri", "desc": "PDF dosyalarından metin ve tablo çıkarır; PDF birleştirir, böler, döndürür, filigran ekler, form doldurur, şifreler ve taranmış belgeleri OCR ile aranabilir yapar.", "scenario": "Bir PDF okunacak, birleştirilecek, bölünecek, doldurulacak ya da yeni bir PDF üretilecekken.", "example": "Üç ayrı sözleşme PDF'i tek dosyada birleştirilir ve imza alanları doldurulmuş form olarak kaydedilir."},
+  "pptx": {"cat": "docs", "owner": {"dept": "sekreterya", "pos": "23.07"}, "risk": "low", "name": "PowerPoint Sunumları (pptx)", "desc": "PowerPoint sunumlarını (.pptx) ve şablonlarını (.potx) oluşturur, okur ve düzenler: slayt, yerleşim, konuşmacı notu ve yorumlar.", "scenario": "Sunum, slayt destesi ya da yatırımcı sunumu istendiğinde veya mevcut bir .pptx dosyası okunup düzenlenirken.", "example": "Çeyrek sonuçları kurumsal şablonla 10 slaytlık bir .pptx sunumu olarak hazırlanır."},
+  "xlsx": {"cat": "docs", "owner": {"dept": "sekreterya", "pos": "23.07"}, "risk": "low", "name": "Excel Tabloları (xlsx)", "desc": "Excel ve tablo dosyalarını (.xlsx, .xlsm, .csv, .tsv) açar, düzenler ve oluşturur: çalışan formüller, biçimlendirme, grafik ve dağınık tablo verisinin temizlenmesi.", "scenario": "Bir tablo dosyası işin girdisi ya da çıktısıyken: sütun ekleme, formül, grafik, veri temizleme veya biçim dönüştürme.", "example": "Dağınık bir satış CSV'si temizlenip toplam formülleri ve grafiğiyle biçimli bir .xlsx dosyasına dönüştürülür."}
+ }
+}

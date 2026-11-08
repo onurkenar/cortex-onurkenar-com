@@ -1,0 +1,2138 @@
+{
+ "version": "2026-11-07",
+ "group": "Ortak Bilgiler",
+ "area": "common",
+ "sections": [
+  {
+   "id": "oc_identity",
+   "name": "Kimlik & Kurum",
+   "en": "Identity & Organization",
+   "icon": "◉",
+   "desc": "Markanın resmî adını ve ticari unvanını, sloganını ve kısa tanıtımını, logo dosyasını, kurum hakkında metnini, ana mesajını ve misyonunu, logo ve marka varlıklarının adresini, canlı ve test site adreslerini, çalışma saatlerini, okunuş listesini ve vergi / sicil bilgilerini tek yerde tutar; proje, pazarlama ve SEO denetimi bölümleri bu bilgileri buradan okur",
+   "guide": {
+    "purpose": "Bu bölümdeki bilgiler projenin birden çok yerinde kullanılır: site başlıkları ve alt bilgi, yapısal veri, e-posta ve DNS kurulumu, pazarlama planı, brief'ler ve SEO denetimi. Bir kez burada girilir, diğer bölümler değeri buradan gösterir; değişiklik de yalnız burada yapılır.",
+    "criteria": [
+     "Marka adını müşterinin gördüğü biçimde yazın: büyük-küçük harf, Türkçe karakter ve kısaltmalar her yerde aynen kullanılır.",
+     "Ticari unvan ile marka adını karıştırmayın: hukuki metinlerde, künyede ve faturada unvan; menü, başlık ve reklamlarda marka adı kullanılır.",
+     "Canlı site adresinin tercih edilen sürümünü (https, www'lu ya da www'suz) yazın; diğer varyantlar bu adrese yönlendirilir.",
+     "İletişim bilgisi olarak kişisel değil kurumsal telefon ve e-posta kullanın; adres İşletme Profili'ndekiyle birebir aynı olmalı.",
+     "Bilgi değiştiğinde yalnız burada güncelleyin; kurallar, prompt ve dışa aktarımlar kendiliğinden yeni değeri alır.",
+     "Çalışma saatlerini İşletme Profili'ndekiyle birebir aynı yazın; resmî tatillerde değişen saatleri ayrıca duyurun."
+    ],
+    "pitfalls": [
+     "Marka adının sitede, İşletme Profili'nde ve sosyal hesaplarda farklı yazılması; arama motorları ve yapay zekâ sistemleri bunları ayrı varlıklar sanabilir.",
+     "Telefonu ya da adresi değiştirip eski bilgiyi görsellerde, brief'lerde veya dizinlerde bırakmak.",
+     "Test (staging) adresini herkese açık bırakmak; test ortamı arama motorlarına ve ziyaretçilere kapalı tutulmalı."
+    ],
+    "resources": [
+     {
+      "title": "Google Arama'daki site adları",
+      "url": "https://developers.google.com/search/docs/appearance/site-names?hl=tr",
+      "note": "Arama sonucunda görünen site adının nasıl belirlendiği; tutarlı marka adı kullanımının önemi."
+     },
+     {
+      "title": "Kuruluş (Organization) şema işaretlemesi",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/organization?hl=tr",
+      "note": "Marka adı, logo, iletişim ve resmî profillerin (sameAs) yapısal veriyle tanıtılması."
+     },
+     {
+      "title": "İşletmenizin Google'da gösterilmesiyle ilgili kurallar",
+      "url": "https://support.google.com/business/answer/3038177?hl=tr",
+      "note": "İşletme Profili'nde ad, adres ve telefonun nasıl yazılacağına dair resmî kurallar."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mk_brand_name",
+     "set": {
+      "explanation": "Markanın sitede, içeriklerde, pazarlama planında ve denetimlerde kullanılacak resmî adıdır. Boş bırakılırsa Proje Adı kullanılır; markanın kısa veya ticari adı proje adından farklıysa buraya yazın.",
+      "rule": "Marka adı “{value}” olarak yazılır; site başlıkları, alt bilgi, yapısal veri (Organization), içerik planı, brief ve dışa aktarılan dosyalarda bu yazım aynen korunur.",
+      "scenario": "Proje adı “Kurumsal Web Sitesi Yenileme” gibi bir iş adıysa ya da marka günlük kullanımda kısa bir adla biliniyorsa marka adını ayrıca yazmak gerekir.",
+      "example": "“Gülümse Diş Kliniği” yazılırsa sayfa başlıklarının sonunda, alt bilgide, kuruluş yapısal verisinde ve içerik planının başlığında bu ad görünür."
+     }
+    },
+    {
+     "id": "oc_legal_name",
+     "new": {
+      "label": "Ticari Unvan",
+      "en": "Legal Company Name",
+      "type": "text",
+      "placeholder": "Örn. Gülümse Ağız ve Diş Sağlığı Hizmetleri Ltd. Şti.",
+      "rule": "Ticari unvan: “{value}”. Alt bilgi, KVKK aydınlatma metni (veri sorumlusu), mesafeli satış ve ön bilgilendirme metinleri, fatura ve kuruluş yapısal verisi (legalName) bu yazımı aynen kullanır.",
+      "explanation": "Şirketin ticaret siciline kayıtlı tam unvanıdır. Marka adından farklı olabilir; hukuki metinlerde ve resmî bilgilerde marka adı yerine bu unvan kullanılır.",
+      "scenario": "Sitede KVKK aydınlatma metni, çerez politikası, mesafeli satış sözleşmesi ya da şirket künyesi yer alacaksa doldurun; şahıs işletmesinde işletme sahibinin adı soyadı ve işletme adı yazılır.",
+      "example": "Marka “Gülümse Diş Kliniği”, unvan “Gülümse Ağız ve Diş Sağlığı Hizmetleri Ltd. Şti.”; alt bilgide ve aydınlatma metninde unvan, menüde ve başlıklarda marka adı görünür.",
+      "agents": [
+       "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "mk_slogan",
+     "set": {
+      "label": "Marka Sözü (Slogan)",
+      "en": "Brand Slogan",
+      "explanation": "Markanın kısa ve akılda kalıcı sözüdür. İçerik planının başlığında, ana sayfa başlığında ve paylaşım önizlemesinde kullanılabilir; boş bırakılırsa plan başlığı “<Marka> İçerik ve Reklam Planı” olur.",
+      "rule": "Marka sözü “{value}”; içerik planının başlığında, ana sayfa ve paylaşım metinlerinde kullanıldığında yazımı ve büyük-küçük harf kullanımı değiştirilmez.",
+      "scenario": "Markanın kullandığı bir sloganı varsa ya da plan yönetime veya müşteriye sunulacaksa sayfanın ilk bakışta markayı anlatması için doldurun.",
+      "example": "Bir kitapçı “Her hafta yeni bir sayfa” yazar; plan sayfasında marka adının altında ve ana sayfanın kahraman alanında bu cümle görünür."
+     }
+    },
+    {
+     "id": "oc_tagline",
+     "new": {
+      "label": "Kısa Tanıtım",
+      "en": "Short Description",
+      "type": "textarea",
+      "placeholder": "Örn. Kadıköy'de çocuk ve yetişkinlere koruyucu diş hekimliği, implant ve ortodonti hizmeti veren klinik.",
+      "rule": "Markanın kısa tanıtımı: {value}. Ana sayfanın meta açıklaması, kuruluş yapısal verisi (description), sosyal medya profil açıklamaları ve brief'ler bu tanıtımdan türetilir; anlamı değiştirilmeden kısaltılabilir.",
+      "explanation": "Markanın ne yaptığını, kime ve nerede hizmet verdiğini anlatan 1–2 cümle. Ana sayfa açıklaması, sosyal medya biyografileri ve kuruluş yapısal verisi bu metinden türetilir.",
+      "scenario": "Markayı her yerde aynı cümleyle anlatmak, arama sonuçlarında ve yapay zekâ yanıtlarında tutarlı görünmek için doldurun; abartılı ve kanıtsız iddia (“en iyi”, “1 numara”) yazmayın.",
+      "example": "“Kadıköy'de çocuk ve yetişkinlere koruyucu diş hekimliği, implant ve ortodonti hizmeti veren klinik.” cümlesi Instagram biyografisinde kısaltılarak, ana sayfa açıklamasında aynen kullanılır.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_boilerplate",
+     "new": {
+      "label": "Kurum Hakkında (Boilerplate)",
+      "en": "Boilerplate",
+      "type": "textarea",
+      "words": 95,
+      "placeholder": "Örn. Örnek Firma, 2010'dan bu yana … (70–120 kelime, güncel ve onaylı kurum tanıtımı)",
+      "explanation": "Şirketi anlatan standart, güncel ve onaylı 70–120 kelimelik paragraftır. Basın bültenlerinin sonunda ve kurumsal belgelerde aynen kullanılır.",
+      "rule": "Kurum hakkında metni: {value}. Basın bültenlerinin “Hakkında” bölümü, medya kiti, kurumsal tanıtım sunumu ve iş ortaklığı belgeleri bu metni değiştirmeden kullanır; metin 70–120 kelimedir ve her yıl ya da önemli gelişmede güncellenir.",
+      "scenario": "Basın bülteni yayımlanacaksa ya da kurum tanıtımının belgelerde hep aynı onaylı paragrafla yapılması isteniyorsa doldurulur.",
+      "example": "Bir lojistik firmasının bütün bültenleri “Örnek Lojistik Hakkında” başlıklı aynı 90 kelimelik paragrafla biter.",
+      "agents": [
+       "poz:kurumsal-iletisim:10.02/basin-icerigi-ve-haber-yonetimi/basin-bulteni-yazari",
+       "poz:kurumsal-iletisim:10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-anlati-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_key_message",
+     "new": {
+      "label": "Ana Marka Mesajı",
+      "en": "Key Brand Message",
+      "type": "textarea",
+      "placeholder": "Örn. Randevunuzu dakikalar içinde alın, tedaviniz boyunca aynı hekimle ilerleyin.",
+      "explanation": "Markanın hedef kitleye verdiği tek ve kalıcı mesajdır. Slogandan farklı olarak vaadi açıkça anlatır.",
+      "rule": "Ana marka mesajı: {value}. İçeriklerin ana fikri bu mesajla çelişmez; hakkımızda metni, kurumsal sunum ve kampanya mesajları bu vaatten türetilir.",
+      "scenario": "Markanın hedef kitleye tek bir vaadi varsa ve bütün içeriklerin bu vaadi desteklemesi isteniyorsa doldurulur.",
+      "example": "Bir kargo firmasının kampanya başlıkları farklı olsa da hepsi “aynı gün, hasarsız teslim” vaadine bağlanır.",
+      "agents": [
+       "poz:kurumsal-iletisim:10.01/kurumsal-anlati-ve-mesaj-mimarisi/mesaj-mimarisi-uzmani",
+       "poz:pazarlama:marketing_strategy_brand/marka-yonetimi-muduru/konumlandirma-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_mission",
+     "new": {
+      "label": "Vizyon ve Misyon",
+      "en": "Vision and Mission",
+      "type": "textarea",
+      "placeholder": "Örn. Vizyon: …\nMisyon: …",
+      "explanation": "Kurumun onaylı vizyon ve misyon cümleleridir. Kurumsal tanıtım sunumunda ve uzun föy kapağında birebir kullanılır.",
+      "rule": "Vizyon ve misyon: {value}. Kurumsal tanıtım sunumunun “Biz kimiz” bölümü ve uzun föy kapağı bu cümleleri değiştirmeden kullanır.",
+      "scenario": "Kurumsal tanıtım sunumu ya da uzun hizmet föyü hazırlanacaksa ve onaylı vizyon / misyon cümleleri varsa doldurulur.",
+      "example": "Bir eğitim kurumunun tanıtım sunumunun ikinci slaytında vizyon ve misyon cümleleri aynen yer alır.",
+      "agents": [
+       "poz:kurumsal-iletisim:10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-anlati-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_logo",
+     "new": {
+      "label": "Logo Dosyası Adresi",
+      "en": "Logo URL",
+      "type": "url",
+      "placeholder": "Örn. https://www.ornekfirma.com/logo.svg",
+      "rule": "Logo dosyası: {value}. Kuruluş yapısal verisi (logo), paylaşım önizlemeleri, e-posta şablonları, içerik planı ve brief'ler bu dosyayı kullanır; logonun başka sürümü marka adına kullanılmaz.",
+      "explanation": "Ana logonun herkese açık, kalıcı adresi (SVG ya da en az 112×112 piksel PNG). Logo varyasyonları kararı Kurumsal Kimlik'te kalır; burada kullanılacak dosyanın adresi tutulur.",
+      "scenario": "Site yayındaysa logonun site üzerindeki adresini, değilse paylaşılan klasördeki kalıcı bağlantıyı yazın; adres sık değişmemeli.",
+      "example": "https://www.gulumse.com.tr/img/logo.svg yazılır; kuruluş yapısal verisindeki logo alanı ve brief'lerdeki logo bağlantısı bu adresten oluşur.",
+      "agents": [
+       "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_logo_files",
+     "new": {
+      "label": "Logo Dosyaları (Varyasyon Başına)",
+      "en": "Logo Files by Variant",
+      "type": "textarea",
+      "placeholder": "Örn. Ana logo | marka-ana-logo.svg\nSembol | marka-sembol.svg\nBeyaz | marka-beyaz-logo.svg\nSiyah | marka-siyah-logo.svg",
+      "explanation": "Her logo varyasyonunun dosya adını ya da adresini “Varyasyon | dosya” biçiminde yazın. Hangi varyasyonların hazırlanacağı Kurumsal Kimlik › Logo Varyasyonları'ndadır.",
+      "rule": "Logo dosyaları: {value}. İçerikte varyasyon zemine göre seçilir (koyu zeminde ve fotoğraf üstünde beyaz, tek renk baskıda siyah); listede olmayan logo sürümü kullanılmaz.",
+      "scenario": "Logonun birden çok sürümü varsa ve tasarımcıların doğru dosyayı tek yerden alması isteniyorsa doldurulur.",
+      "example": "Bir dernek ana, sembol, beyaz ve siyah logo dosyalarını yazar; brief'lerin logo satırı bu adlara başvurur.",
+      "agents": [
+       "poz:tasarim:19.02/marka-rehberi-ve-varlik-yonetimi/dijital-varlik-yonetimi-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_assets_url",
+     "new": {
+      "label": "Marka Varlıkları Klasörü",
+      "en": "Brand Assets Folder",
+      "type": "url",
+      "placeholder": "Örn. https://drive.ornekfirma.com/marka-varliklari",
+      "explanation": "Logo paketinin, kurumsal fotoğrafların, ikonların ve kimlik dosyalarının bulunduğu paylaşılan klasörün adresidir.",
+      "rule": "Marka varlıkları klasörü: {value}. Brief'lerin “zorunlu kullanılacak varlıklar” satırı ve tasarım teslimleri bu klasöre bağlanır; font dosyaları klasörde paylaşılmaz, yalnız font adı yazılır.",
+      "scenario": "Tasarım ajans ya da serbest çalışanlarla yapılıyorsa ve onaylı görsel varlıkların tek yerden alınması isteniyorsa doldurulur.",
+      "example": "Bir otel zincirinin brief'lerinde “Fotoğraflar: marka varlıkları klasörü › Odalar” satırı bulunur.",
+      "agents": [
+       "poz:tasarim:19.02/marka-rehberi-ve-varlik-yonetimi/dijital-varlik-yonetimi-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "domain_name",
+     "set": {
+      "explanation": "Sitenin yayına çıktığında ziyaretçilere açılacağı gerçek internet adresidir. Alan adını (ornekfirma.com) ya da tam adresi (https://www.ornekfirma.com) yazabilirsiniz. Alan Adı & DNS, pazarlama planı, paylaşım bağlantıları ve SEO denetimi bu adresi kullanır."
+     }
+    },
+    {
+     "id": "staging_url"
+    },
+    {
+     "id": "oc_hours",
+     "new": {
+      "label": "Çalışma Saatleri",
+      "en": "Opening Hours",
+      "type": "textarea",
+      "placeholder": "Örn. Pazartesi–Cuma 09:00–19:00\nCumartesi 10:00–16:00\nPazar kapalı",
+      "rule": "Çalışma saatleri: {value}. İletişim sayfası, alt bilgi, yerel işletme yapısal verisi (openingHoursSpecification), Google İşletme Profili ve reklamlardaki işletme bilgileri bu saatlerle aynı tutulur; resmî tatil ve özel gün saatleri ayrıca duyurulur.",
+      "explanation": "İşletmenin müşteri kabul ettiği, telefon ya da canlı destekle ulaşılabildiği saatler. Her satıra bir gün ya da gün aralığı yazın.",
+      "scenario": "Fiziksel bir mekân, randevu ya da telefon desteği varsa doldurun; sitede, haritada ve İşletme Profili'nde farklı saatler görünmesi güveni düşürür.",
+      "example": "“Pazartesi–Cuma 09:00–19:00, Cumartesi 10:00–16:00, Pazar kapalı” yazılır; iletişim sayfası, yapısal veri ve İşletme Profili aynı saatleri gösterir.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_pronounce",
+     "new": {
+      "label": "Okunuş ve Kısaltma Listesi",
+      "en": "Pronunciation and Abbreviations",
+      "type": "textarea",
+      "placeholder": "Örn. KVKK | ilk kullanımda: Kişisel Verilerin Korunması Kanunu · okunuş: ka-ve-ka-ka\nMarka adı | okunuşu",
+      "explanation": "Marka adının, ürün adlarının ve kısaltmaların okunuşunu ve ilk kullanımdaki açık hâlini “Terim | açıklama” biçiminde yazın.",
+      "rule": "Okunuş ve kısaltmalar: {value}. Seslendirme, podcast, video ve yapay zekâ ses üretiminde terimler bu okunuşla seslendirilir; yazılı içerikte kısaltmanın açık hâli ilk kullanımda verilir.",
+      "scenario": "Video, podcast ya da seslendirme üretiliyorsa veya markada yanlış okunabilecek ad ve kısaltmalar varsa doldurulur.",
+      "example": "Bir sağlık teknolojisi firmasının podcast metninde “KVKK” ilk geçtiği yerde “Kişisel Verilerin Korunması Kanunu” diye okunur.",
+      "agents": [
+       "poz:kurumsal-iletisim:10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-dil-ve-terminoloji-uzmani",
+       "poz:pazarlama:content_marketing/multimedya-icerik-muduru/podcast-yapimcisi"
+      ]
+     }
+    },
+    {
+     "id": "oc_tax_ids",
+     "new": {
+      "label": "Vergi ve Sicil Bilgileri",
+      "en": "Tax and Registry IDs",
+      "type": "textarea",
+      "placeholder": "Örn. Vergi dairesi: Kadıköy\nVergi no: 0000000000\nMERSİS no: 0000000000000000",
+      "rule": "Vergi ve sicil bilgileri: {value}. Bu bilgiler yalnız künye, mesafeli satış ve ön bilgilendirme metinleri, fatura ve yasal zorunluluk olan yerlerde kullanılır; kişisel T.C. kimlik numarası yazılmaz.",
+      "explanation": "Vergi dairesi, vergi numarası, MERSİS numarası ve gerekiyorsa ticaret sicil numarası. Her bilgiyi ayrı satıra “Ad: değer” biçiminde yazın.",
+      "scenario": "E-ticaret, rezervasyon ya da ücretli hizmet satışı varsa mesafeli satış ve ön bilgilendirme metinleri için zorunludur; şahıs işletmesinde kişisel T.C. kimlik numarası yerine vergi numarası kullanılır.",
+      "example": "Üç satır yazılır: “Vergi dairesi: Kadıköy”, “Vergi no: 1234567890”, “MERSİS no: 0123456789000015”; mesafeli satış sözleşmesinin satıcı bilgileri bölümü bunlardan oluşur.",
+      "agents": [
+       "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_contact",
+   "name": "İletişim & Adres",
+   "en": "Contact & Address",
+   "icon": "☏",
+   "desc": "Ana telefon, WhatsApp, destek hattı, kurumsal e-posta ve satış iletişimini, adres türünü, bileşenli adresi, koordinatı, harita bağlantısını ve şube adreslerini ayrı ayrı tutar; site, yapısal veri, Google İşletme Profili, pazarlama planı, brief ve SEO denetimi bu değerleri buradan okur",
+   "guide": {
+    "purpose": "İletişim bilgileri sitenin iletişim sayfasında ve alt bilgisinde, yapısal veride (Organization, LocalBusiness), Google İşletme Profili'nde, reklam öğelerinde, e-posta alt bilgisinde, brief'lerde ve bütün CTA'larda kullanılır. Her bilgi ayrı alanda tutulduğu için hangi numaranın CTA'da, hangisinin destek hattında gösterileceği karışmaz; adres bileşenleri yapısal verinin istediği parçalara doğrudan dönüşür ve ad, adres, telefon (NAP) her yerde aynı yazımla görünür.",
+    "criteria": [
+     "Telefonları kurumsal ve işletmenin doğrudan kontrolündeki numaralardan seçin; Google İşletme Profili mümkün olduğunda çağrı merkezi yerine yerel numara kullanılmasını ister.",
+     "Adresi müşterinin gördüğü ve İşletme Profili'ndeki yazımla birebir aynı girin; mahalle, sokak, numara, kat ve posta kodu ayrı kutulara yazılır, açık adres satırı bunlarla tutarlı olmalıdır.",
+     "Koordinatı haritadan işletmenin giriş kapısının üzerinde alın; yapısal veride en az 5 ondalık basamak gerekir.",
+     "Birden çok şube varsa her şubeyi kendi adresi, telefonu ve harita bağlantısıyla Diğer Adresler alanına yazın; her şube ayrı yerel işletme kaydı olarak tanıtılır.",
+     "Müşteriye kendi adresinde hizmet veren ve müşteri kabul etmeyen işletmelerde adres yalnız yasal bilgi olarak kullanılır; İşletme Profili'nde adres gizlenir, hizmet bölgesi gösterilir."
+    ],
+    "pitfalls": [
+     "Bütün iletişim bilgisini tek metin kutusunda tutmak; WhatsApp, destek hattı ve koordinat adresin içine karışabilir, yapısal veriye yanlış parça gider.",
+     "Sitede, İşletme Profili'nde ve dizinlerde adresi ya da telefonu farklı yazmak (kısaltmalar, eksik kat, farklı numara); yerel aramada güveni ve tutarlılığı zayıflatır.",
+     "Telefonu yapısal veride ülke kodu olmadan yazmak; Google, telefon numarasında ülke ve alan kodunun bulunmasını ister.",
+     "Kişisel cep telefonu ya da kişisel e-posta adresini kurumsal iletişim bilgisi olarak yayımlamak; çalışan değiştiğinde iletişim kopar ve kişisel veri gereksiz yere açılır."
+    ],
+    "resources": [
+     {
+      "title": "Yerel işletme (LocalBusiness) yapısal verisi",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business?hl=tr",
+      "note": "Adres, telefon (ülke ve alan koduyla), en az 5 ondalıklı koordinat ve çalışma saatlerinin yapısal veride nasıl verileceğini anlatan Google belgesi."
+     },
+     {
+      "title": "Kuruluş (Organization) yapısal verisi",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/organization?hl=tr",
+      "note": "Posta adresi bileşenleri, iki harfli ülke kodu, contactPoint telefon ve e-postası, vergi kimliği ve logo koşullarını listeleyen Google belgesi."
+     },
+     {
+      "title": "İşletmenizin Google'da gösterilmesiyle ilgili kurallar",
+      "url": "https://support.google.com/business/answer/3038177?hl=tr",
+      "note": "İşletme Profili'nde adres, telefon ve işletme adının nasıl yazılacağını ve hizmet bölgesi işletmelerinin adresini gizlemesi kuralını anlatan resmî yardım sayfası."
+     },
+     {
+      "title": "schema.org PostalAddress",
+      "url": "https://schema.org/PostalAddress",
+      "note": "streetAddress, addressLocality, addressRegion, postalCode ve addressCountry özelliklerinin tanımı."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "oc_phone",
+     "new": {
+      "label": "Ana Telefon",
+      "en": "Main Phone",
+      "type": "text",
+      "placeholder": "Örn. 0212 000 00 00",
+      "explanation": "Müşterinin aradığı kurumsal ana numaradır. Sitede, İşletme Profili'nde, yapısal veride ve reklam arama öğesinde aynı numara kullanılır.",
+      "rule": "Ana telefon: {value}. Görünür metinde ulusal biçimde yazılır, sitede tel: bağlantısı ve yapısal veride (telephone) ülke ve alan koduyla (+90…) verilir; site, İşletme Profili, reklam öğeleri ve içeriklerde aynı numara kullanılır.",
+      "scenario": "Telefonla teklif, randevu ya da bilgi talebi alan her işletmede doldurulur; numara işletmenin doğrudan kontrolünde olmalıdır.",
+      "example": "Bir oto servisi “0232 000 00 00” yazar; alt bilgide bu numara, LocalBusiness kaydında “+902320000000” görünür.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru",
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_whatsapp",
+     "new": {
+      "label": "WhatsApp Hattı",
+      "en": "WhatsApp Number",
+      "type": "text",
+      "placeholder": "Örn. +90 5xx xxx xx xx",
+      "explanation": "Müşterilerin mesajla ulaştığı WhatsApp Business numarasıdır. WhatsApp Kanal adresinden (Dijital Hesaplar) ayrıdır.",
+      "rule": "WhatsApp hattı: {value}. Bağlantı https://wa.me/ ile ülke kodlu numaraya verilir; WhatsApp'a yönlendiren reklamlar, “WhatsApp'tan yazın” düğmeleri ve WhatsApp tıklama dönüşümü bu numarayı kullanır; numara WhatsApp Kanal adresiyle karıştırılmaz.",
+      "scenario": "Teklif, randevu ya da destek talepleri WhatsApp'tan da alınıyorsa doldurulur.",
+      "example": "Bir güzellik merkezinin sitesindeki WhatsApp düğmesi ve Instagram CTA'sı bu numaraya açılır; Google Ads mesaj öğesi aynı numarayı kullanır.",
+      "agents": [
+       "poz:musteri-deneyimi:11.04/cok-kanalli-destek/dijital-destek-uzmani",
+       "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_support_phone",
+     "new": {
+      "label": "Destek / Çağrı Merkezi Hattı",
+      "en": "Support Line",
+      "type": "text",
+      "placeholder": "Örn. 0850 000 00 00 — ana telefonla aynıysa boş bırakın",
+      "explanation": "Mevcut müşterilerin destek ve çağrı merkezi numarasıdır. Boşsa ana telefon kullanılır.",
+      "rule": "Destek hattı: {value}. Destek ve müşteri hizmetleri sayfalarında, kuruluş yapısal verisinin contactPoint kaydında (müşteri hizmetleri) ve destek e-postalarında bu numara kullanılır; İşletme Profili'nde mümkün olduğunda yerel ana telefon gösterilir.",
+      "scenario": "Satış ve destek numaraları ayrıysa ya da kurumun çağrı merkezi / kısa numarası varsa doldurulur.",
+      "example": "Bir internet sağlayıcısının “Destek” sayfasında çağrı merkezi numarası, iletişim sayfasında ana telefon görünür.",
+      "agents": [
+       "poz:musteri-deneyimi:11.04/birinci-seviye-destek/kidemli-musteri-destek-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_email",
+     "new": {
+      "label": "Kurumsal E-posta",
+      "en": "Corporate Email",
+      "type": "text",
+      "placeholder": "Örn. bilgi@ornekfirma.com",
+      "explanation": "Genel iletişim için kullanılan kurumsal e-posta adresidir. Kişisel adres yerine birim adresi (bilgi@, iletisim@) önerilir.",
+      "rule": "Kurumsal e-posta: {value}. Sitede mailto: bağlantısı, yapısal veride (email) ve içeriklerin iletişim alanında bu adres kullanılır; kişisel e-posta adresi kurumsal iletişim bilgisi olarak yayımlanmaz.",
+      "scenario": "Sitede ve dokümanlarda genel iletişim e-postası gösterilecekse doldurulur.",
+      "example": "Bir mimarlık ofisinin alt bilgisinde ve föyünün son sayfasında “bilgi@ornekmimarlik.com” yer alır.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_sales_contact",
+     "new": {
+      "label": "Satış İletişim Bilgileri",
+      "en": "Sales Contact",
+      "type": "textarea",
+      "placeholder": "Örn. Satış sorumlusu: Ad Soyad\nTelefon: 0212 000 00 01\nE-posta: satis@ornekfirma.com",
+      "explanation": "Teklif, föy, sunum ve satış dokümanlarında gösterilecek satış birimi ya da sorumlusunun iletişim bilgileridir. Boşsa genel iletişim bilgileri kullanılır.",
+      "rule": "Satış iletişim bilgileri: {value}. Teklifin, hizmet föyünün ve sunumun CTA ve iletişim alanında bu bilgiler kullanılır; kişi adı yalnız kişinin onayıyla yazılır.",
+      "scenario": "Satış belgelerinde genel iletişimden farklı bir departman numarası, e-postası ya da sorumlu kişi gösterilecekse doldurulur.",
+      "example": "Bir yazılım firmasının teklifinin son sayfasında satış sorumlusunun adı, doğrudan hattı ve satis@ adresi yer alır.",
+      "agents": [
+       "poz:satis:08.06/satis-icerigi-ve-araclari/satis-icerigi-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_addr_type",
+     "new": {
+      "label": "Adres Türü",
+      "en": "Address Type",
+      "type": "select",
+      "explanation": "Aşağıdaki adresin genel merkez, şube ya da bölge müdürlüğü adresi olduğunu belirtir. Yapısal verinin ve iletişim sayfasının nasıl kurulacağını etkiler.",
+      "rule": "Adres türü: {label}.",
+      "scenario": "Kurumun birden çok adresi varsa ya da gösterilen adresin müşteri kabul edilen bir konum olup olmadığı belirtilmek isteniyorsa.",
+      "example": "Bir lojistik firması genel merkezini buraya, dört bölge deposunu Diğer Adresler alanına yazar.",
+      "options": [
+       {
+        "value": "hq",
+        "label": "Genel merkez (önerilen)",
+        "explanation": "Kurumun ana adresidir; tek adresli işletmelerde de bu seçilir.",
+        "scenario": "Tek adresli işletmelerde ve şubeli yapılarda ana merkez için.",
+        "example": "İletişim sayfasında “Genel Merkez” başlığı altında adres ve harita gösterilir.",
+        "ruleDetail": "Adres kuruluş (Organization) yapısal verisinin address alanında ve iletişim sayfasında “Genel Merkez” başlığıyla gösterilir; müşteri kabul ediliyorsa aynı adresle LocalBusiness kaydı da kurulur."
+       },
+       {
+        "value": "branch",
+        "label": "Şube",
+        "explanation": "Müşteri kabul eden bir şubenin adresidir.",
+        "scenario": "Gösterilen adres müşterilerin ziyaret ettiği bir şubeyse.",
+        "example": "Şube sayfasında adres, harita ve şube telefonu bulunur.",
+        "ruleDetail": "Şube adresi kendi LocalBusiness kaydında ve kendi lokasyon sayfasında gösterilir."
+       },
+       {
+        "value": "regional",
+        "label": "Bölge müdürlüğü",
+        "explanation": "Müşteri kabulü olmayan idari bir bölge ofisinin adresidir.",
+        "scenario": "Gösterilen adres yalnız idari ofisse ve müşteri ziyareti beklenmiyorsa.",
+        "example": "Bölge müdürlüğü adresi yalnız iletişim sayfasında listelenir; yerel işletme olarak işaretlenmez.",
+        "ruleDetail": "Bölge müdürlüğü adresi iletişim sayfasında listelenir; müşteri kabulü yoksa LocalBusiness olarak işaretlenmez."
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_address",
+     "new": {
+      "label": "Adres",
+      "en": "Address",
+      "type": "accounts",
+      "placeholder": "Örn. Otopark girişi arka sokaktan; engelli rampası ana kapıda",
+      "otherLabel": "Adres notu (ulaşım, giriş)",
+      "explanation": "Açık adres satırını ve adresin parçalarını ayrı kutulara girersiniz. Parçalar yapısal verinin (PostalAddress) istediği alanlara, açık adres satırı alt bilgiye, iletişim sayfasına ve dokümanlara gider.",
+      "rule": "Kurumsal adres: {value}. Alt bilgi, iletişim sayfası, LocalBusiness / Organization yapısal verisi (streetAddress, addressLocality = ilçe, addressRegion = il, postalCode, addressCountry = iki harfli ülke kodu), İşletme Profili, mesafeli satış ve e-posta alt bilgisi bu adresi aynı yazımla kullanır; açık adres satırı parçalarla tutarlıdır.",
+      "scenario": "Fiziksel adresi olan, İşletme Profili bulunan ya da mesafeli satış metninde satıcı adresi gereken her işletmede doldurulur.",
+      "example": "Bir veteriner kliniği mahalle, sokak, numara, kat ve posta kodunu ayrı kutulara yazar; alt bilgide tek satırlık açık adres, yapısal veride parçalar görünür.",
+      "accounts": [
+       {
+        "k": "acik",
+        "label": "Açık adres (tek satır)",
+        "ph": "Örn. Çınar Mah. Lale Sk. No: 5 Kat: 2 D: 4, 35000 Bornova / İzmir",
+        "re": "^.{10,200}$"
+       },
+       {
+        "k": "country",
+        "label": "Ülke",
+        "ph": "Türkiye",
+        "re": "^.{2,60}$"
+       },
+       {
+        "k": "city",
+        "label": "İl",
+        "ph": "Örn. İzmir",
+        "re": "^.{2,40}$"
+       },
+       {
+        "k": "district",
+        "label": "İlçe",
+        "ph": "Örn. Bornova",
+        "re": "^.{2,40}$"
+       },
+       {
+        "k": "neighborhood",
+        "label": "Mahalle",
+        "ph": "Örn. Çınar Mahallesi",
+        "re": "^.{2,80}$"
+       },
+       {
+        "k": "street",
+        "label": "Bulvar / cadde / sokak",
+        "ph": "Örn. Lale Sokak",
+        "re": "^.{2,100}$"
+       },
+       {
+        "k": "building",
+        "label": "Bina adı",
+        "ph": "Örn. Ege İş Merkezi",
+        "re": "^.{1,80}$"
+       },
+       {
+        "k": "number",
+        "label": "Bina no",
+        "ph": "Örn. 5",
+        "re": "^[0-9A-Za-z/ -]{1,10}$"
+       },
+       {
+        "k": "floor",
+        "label": "Kat",
+        "ph": "Örn. 2",
+        "re": "^.{1,10}$"
+       },
+       {
+        "k": "door",
+        "label": "İç kapı no",
+        "ph": "Örn. 4",
+        "re": "^[0-9A-Za-z/ -]{1,10}$"
+       },
+       {
+        "k": "postal",
+        "label": "Posta kodu",
+        "ph": "Örn. 35000",
+        "re": "^[0-9]{5}$"
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru",
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_geo",
+     "new": {
+      "label": "Konum Koordinatı (enlem, boylam)",
+      "en": "Geo Coordinates",
+      "type": "text",
+      "placeholder": "Örn. 38.45512, 27.21234",
+      "explanation": "İşletmenin enlem ve boylamıdır. Haritadaki işaretin doğru binaya düşmesi ve yerel işletme yapısal verisi için kullanılır.",
+      "rule": "Konum koordinatı: {value}. LocalBusiness yapısal verisinin geo alanında (latitude, longitude) en az 5 ondalık basamakla verilir; iletişim sayfasındaki harita bu konumu gösterir.",
+      "scenario": "Fiziksel konumu olan ve haritada bulunmak isteyen işletmelerde; adresin harita servislerinde yanlış konuma düştüğü durumlarda özellikle önemlidir.",
+      "example": "Bir restoran haritadan kapısının üzerindeki koordinatı kopyalar; yapısal verideki konum ve sitedeki harita aynı noktayı gösterir.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_map",
+     "new": {
+      "label": "Harita Bağlantısı",
+      "en": "Map Link",
+      "type": "url",
+      "placeholder": "Örn. https://maps.app.goo.gl/…",
+      "explanation": "İşletmenin harita sayfasının ya da İşletme Profili'nin harita bağlantısıdır.",
+      "rule": "Harita bağlantısı: {value}. İletişim sayfasındaki “Yol tarifi al” bağlantısı, e-posta ve PDF alt bilgisi ve LocalBusiness yapısal verisinin hasMap alanı bu adresi kullanır.",
+      "scenario": "Müşteriler işletmeye gelerek hizmet alıyorsa ya da etkinlik ve randevu duyurularında yol tarifi verilecekse doldurulur.",
+      "example": "Bir fizik tedavi merkezinin randevu onay e-postasında “Yol tarifi” bağlantısı bu adrese açılır.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_branches",
+     "new": {
+      "label": "Diğer Adresler (Şubeler)",
+      "en": "Other Locations",
+      "type": "textarea",
+      "placeholder": "Örn. Karşıyaka Şubesi | Bahar Mah. Gül Sk. No: 3, 35500 Karşıyaka / İzmir | 0232 000 00 02 | https://maps.app.goo.gl/…",
+      "explanation": "Genel merkez dışındaki şube ve bölge adreslerini her satıra “Ad | açık adres | telefon | harita bağlantısı” biçiminde yazın.",
+      "rule": "Diğer adresler: {value}. Her şube ayrı LocalBusiness kaydı ve ayrı lokasyon sayfasıyla tanıtılır; ad, adres ve telefon sitede, İşletme Profili'nde ve dizinlerde aynı yazımla kullanılır.",
+      "scenario": "Birden çok şubesi ya da müşteri kabul eden bölge ofisi olan işletmelerde doldurulur.",
+      "example": "Üç şubeli bir diş kliniği her şubeyi bir satıra yazar; her şube sayfasında kendi adresi, telefonu ve haritası görünür.",
+      "showIf": [
+       {
+        "field": "location_pages",
+        "in": [
+         true
+        ]
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "mk_contact",
+     "set": {
+      "label": "Ek İletişim Notları",
+      "placeholder": "Örn. Faks: 0212 000 00 09\nKEP adresi: ornekfirma@hs01.kep.tr",
+      "explanation": "Yukarıdaki alanlarda karşılığı olmayan ek iletişim bilgileridir (faks, KEP adresi, ikinci e-posta gibi). Telefon, WhatsApp, destek hattı, e-posta ve adres kendi alanlarına yazılır.",
+      "rule": "Ek iletişim bilgileri: {value}. Bu bilgiler yalnız ilgili oldukları yerde (künye, resmî yazışma, iletişim sayfası) kullanılır; ana telefon, e-posta ve adres İletişim & Adres bölümündeki alanlardan alınır.",
+      "scenario": "Kurumun faks, KEP adresi ya da ayrı bir birim e-postası gibi listede olmayan iletişim bilgileri varsa doldurulur.",
+      "example": "Bir kamu tedarikçisi KEP adresini buraya yazar; adres künyede ve resmî teklif yazısında görünür."
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_market",
+   "name": "İşletme & Pazar",
+   "en": "Business & Market",
+   "icon": "▦",
+   "desc": "İşletmenin kime sattığını, hangi coğrafyada ve hangi dillerde hizmet verdiğini, kitlenin cihaz kullanımını ve ürün / hizmet listesini tek yerde tutar; proje, pazarlama ve SEO denetimi kararları bu bilgilere göre verilir",
+   "guide": {
+    "purpose": "Bu bölüm işletmenin temel pazar bilgilerini tutar: kime satıyor, nerede ve hangi dillerde hizmet veriyor, kitlesi siteye hangi cihazdan geliyor, ne satıyor. Önceden bu bilgiler proje, hedef kitle ve SEO denetimi bölümlerinde farklı seçeneklerle ayrı ayrı soruluyordu; şimdi bir kez burada verilir ve bütün bölümler aynı cevabı kullanır.",
+    "criteria": [
+     "İş modelini ana gelirin geldiği müşteriye göre seçin; iki kitleye ayrı satış yapılıyorsa “Hem kurumlara hem bireylere” seçin.",
+     "Hizmet coğrafyasını bugünkü gerçek duruma göre seçin; planlanan genişlemeyi Hizmet Bölgesi Ayrıntısı'na not olarak yazabilirsiniz.",
+     "Dilleri yalnız içerik ve destek verebileceğiniz dillerle sınırlayın; sitenin dil yapısı (Çok Dillilik) bu listeyle uyumlu kurulur.",
+     "Cihaz kullanımını tahminle değil Analytics verisine ya da benzer bir sitenin istatistiğine bakarak seçin.",
+     "Ürün / hizmet listesini satışa hazır ve sitede sayfası olacak kalemlerle sınırlayın."
+    ],
+    "pitfalls": [
+     "Hizmet verilmeyen bölge ya da dil için sayfa veya reklam açmak; ziyaretçi hayal kırıklığına uğrar, reklam bütçesi boşa gider.",
+     "Makine çevirisiyle bir dil eklemek ve o dilde destek verememek.",
+     "Ürün / hizmet adlarını sitede, reklamlarda ve içerik planında farklı yazmak."
+    ],
+    "resources": [
+     {
+      "title": "Google'daki yerel sıralamanızı yükseltme",
+      "url": "https://support.google.com/business/answer/7091?hl=tr",
+      "note": "Yerel aramada alaka, uzaklık ve bilinirlik etkenleri; hizmet bölgesinin doğru tanımlanması."
+     },
+     {
+      "title": "Sayfalarınızın yerelleştirilmiş sürümleri",
+      "url": "https://developers.google.com/search/docs/specialty/international/localized-versions?hl=tr",
+      "note": "Birden çok dil ya da ülke için sayfa sürümlerinin arama motorlarına tanıtılması."
+     },
+     {
+      "title": "Mobil öncelikli dizine ekleme",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing?hl=tr",
+      "note": "Google'ın siteyi mobil sürümünden dizine eklemesi; cihaz önceliği kararının arama tarafı."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "business_model",
+     "set": {
+      "explanation": "Ürün veya hizmetin kime satıldığını belirtir: bireylere mi, şirketlere mi, kamuya mı. Sitenin dilini, form alanlarını ve satış akışını değiştirir; Hedef Kitle bölümündeki bireysel ve kurumsal kitle kararları da bu seçime göre açılır.",
+      "recommend": {
+       "field": "project_type",
+       "map": {
+        "B2B Platform": [
+         "b2b"
+        ],
+        "Corporate Website": [
+         "b2b",
+         "b2b2c"
+        ],
+        "SaaS": [
+         "b2b",
+         "b2b2c"
+        ],
+        "Portfolio": [
+         "b2b",
+         "b2b2c"
+        ],
+        "E-commerce": [
+         "b2c",
+         "b2b2c"
+        ],
+        "Marketplace": [
+         "b2b2c",
+         "b2c"
+        ],
+        "Booking": [
+         "b2c"
+        ],
+        "Blog": [
+         "b2c"
+        ],
+        "News Media": [
+         "b2c"
+        ],
+        "Community": [
+         "b2c"
+        ],
+        "LMS": [
+         "b2c",
+         "b2b2c"
+        ],
+        "Government": [
+         "b2c"
+        ],
+        "Nonprofit": [
+         "b2c"
+        ],
+        "Event": [
+         "b2b2c"
+        ],
+        "Personal Website": [
+         "b2c",
+         "b2b2c"
+        ]
+       }
+      },
+      "rule": "İş modeli: {label}. Sitenin dili, form alanları ve satış akışı ile içerik konuları, reklam hedeflemesi, ton ve mesajlar bu modele göre seçilir; hem bireylere hem kurumlara satılıyorsa her sayfa, içerik ve kampanyanın hangi müşteri tipine yazıldığı belirtilir."
+     }
+    },
+    {
+     "id": "operating_region",
+     "set": {
+      "label": "Hizmet Coğrafyası",
+      "en": "Service Area / Operating Region / Target Geography",
+      "rule": "Hizmet coğrafyası: {label}. Yerel SEO, lokasyon sayfaları ve reklam konum hedeflemesi bu kapsama göre kurulur; hizmet verilmeyen bölgelere reklam gösterilmez ve içeriklerde hizmet bölgesi açıkça yazılır.",
+      "explanation": "İşletmenin müşterilerine hangi coğrafyada hizmet verdiğini belirtir. Yerel SEO, harita ve adres bilgisi, reklam konum hedeflemesi, çok dillilik, yurt dışına veri aktarımı ve SEO denetiminin hedef pazarı bu seçime göre belirlenir.",
+      "scenario": "Müşteriler kapıya mı geliyor, ürün tüm ülkeye mi gönderiliyor, yoksa yurt dışından da talep mi var; bu netleşmeden SEO, reklam ve dil kararları doğru verilemez.",
+      "example": "Tek ilçede hizmet veren bir veteriner kliniği “Yerel” seçer; iletişim sayfasında harita ve çalışma saatleri öne çıkar, reklamlar klinik çevresindeki birkaç kilometrelik alana gösterilir.",
+      "options": [
+       {
+        "value": "local",
+        "label": "Yerel (ilçe / semt)",
+        "explanation": "Bir veya birkaç ilçe ya da semtteki müşteriler. Yakınlık en önemli etkendir; Google Haritalar, yerel aramalar ve yorumlar belirleyicidir.",
+        "scenario": "Kafe, kuaför, klinik, eczane, tadilat ve kurs gibi müşterinin size geldiği veya sizin müşteriye gittiğiniz işler için.",
+        "example": "Bir çiçekçi teslimat yaptığı mahalleleri sitesinde listeler; reklamlarını dükkân çevresinde birkaç kilometrelik yarıçapla gösterir.",
+        "ruleDetail": "Adres, harita, çalışma saatleri ve yerel işletme yapılandırılmış verisi (LocalBusiness) öne çıkar; içerik ve anahtar kelimeler şehir ve ilçe adıyla yazılır."
+       },
+       {
+        "value": "city",
+        "label": "Tek il",
+        "explanation": "Tek bir ildeki müşteriler. İl genelinde bilinirlik ve ilçelere göre farklı mesajlar gerekebilir; büyük şehirlerde ulaşım süresi belirleyicidir.",
+        "scenario": "Şehir içinde teslimat yapan e-ticaret ile il genelinde hizmet veren tadilat, nakliyat, eğitim ve sağlık işletmeleri için.",
+        "example": "Bir evden eve nakliyat firması il genelinde hizmet verir; en çok talep gelen ilçeler için ayrı hizmet sayfaları hazırlar."
+       },
+       {
+        "value": "region",
+        "label": "Birkaç il / bölge",
+        "explanation": "Birkaç il veya bir bölgedeki müşteriler. Her ilde şube, bayi veya teslimat koşulları farklı olabilir; içerikte bu farklar açıkça yazılmalıdır.",
+        "scenario": "Bölgesel bayi ağı olan firmalar, birkaç ilde şubesi olan klinikler ve bölgesel dağıtım yapan üreticiler için.",
+        "example": "Ege'de üç ilde şubesi olan bir sürücü kursu her şube için ayrı lokasyon sayfası açar; reklamları il bazında ayrı bütçeyle yönetir.",
+        "ruleDetail": "Her il veya şube için adres, çalışma saatleri ve hizmet kapsamı ayrı yazılır; reklam bütçesi ve sonuçlar il bazında izlenir."
+       },
+       {
+        "value": "national",
+        "label": "Türkiye geneli",
+        "explanation": "İşletme Türkiye'nin her yerine hizmet verir ya da ürün gönderir.",
+        "scenario": "Bir online mağaza ya da birden çok şubesi olan bir zincir tüm ülkeye hizmet veriyorsa.",
+        "example": "Şubeler sayfasında il seçilerek en yakın şube bulunur; ürün sayfasında Türkiye geneli kargo süresi yazar.",
+        "ruleDetail": "Şube veya hizmet bölgesi listesi ile Türkiye geneli teslimat ve hizmet koşulları açıkça yazılır."
+       },
+       {
+        "value": "national_intl",
+        "label": "Türkiye + belirli ülkeler",
+        "explanation": "Türkiye'nin yanı sıra seçilen birkaç ülkedeki müşteriler. Her ülke için dil, para birimi, teslimat ve yasal koşullar ayrıca planlanmalıdır.",
+        "scenario": "İhracat yapan üreticiler, yurt dışındaki Türkçe konuşan kitleye hizmet veren işler, sağlık turizmi ve uluslararası e-ticaret için.",
+        "example": "Bir halı üreticisi Türkiye'nin yanı sıra Almanya ve Hollanda'ya satış yapar; Almanca sayfalar açar, kargo ve iade koşullarını ülke bazında yazar.",
+        "ruleDetail": "Hedef ülkeler Hizmet Bölgesi Ayrıntısı alanında listelenir; her ülke için dil, para birimi, teslimat ve o ülkenin veri koruma kuralları (ör. GDPR) ayrıca kontrol edilir."
+       },
+       {
+        "value": "international",
+        "label": "Uluslararası / global",
+        "explanation": "İşletme yurt dışındaki müşterilere de satış yapar ya da hizmet verir.",
+        "scenario": "Bir ihracatçı, turizm işletmesi ya da yazılım firması yabancı müşterilere ulaşmak istiyorsa.",
+        "example": "Site Türkçe ve İngilizce yayımlanır; fiyatlar seçilen para biriminde, iletişim saatleri saat dilimiyle gösterilir.",
+        "ruleDetail": "Çok dillilik, para birimi, saat dilimi ve kişisel verilerin yurt dışına aktarımı (KVKK) kararları gündeme gelir; hedef ülkelerin kuralları (ör. AB için GDPR) kontrol edilir."
+       },
+       {
+        "value": "online",
+        "label": "Yalnız çevrim içi (fiziksel konum önemli değil)",
+        "explanation": "İşletmenin müşterinin gelebileceği bir mekânı yoktur; hizmet tamamen internet üzerinden verilir.",
+        "scenario": "Bir online eğitim platformu, dijital ürün satıcısı ya da uzaktan danışmanlık hizmeti için.",
+        "example": "Altbilgide şirket unvanı, iletişim e-postası ve iade koşulları bulunur; harita yer almaz.",
+        "ruleDetail": "Fiziksel adres öne çıkarılmaz; şirket unvanı, iletişim bilgileri ve iade koşulları gibi güven unsurları her sayfadan erişilebilir tutulur."
+       }
+      ],
+      "jump": {
+       "field": "local_seo",
+       "text": "Yerel SEO kararına git →"
+      }
+     }
+    },
+    {
+     "id": "mk_geo_detail",
+     "set": {
+      "label": "Hizmet Bölgesi Ayrıntısı",
+      "en": "Service Area Detail",
+      "rule": "Hizmet bölgesi ayrıntısı: {value}. Lokasyon sayfaları, yerel içerikler ve reklam konum hedeflemesi bu listeyle sınırlı tutulur; listede olmayan bir bölgeye yönelik çalışma ayrıca gerekçelendirilir.",
+      "explanation": "Seçtiğiniz kapsamın tam olarak hangi semt, ilçe, il veya ülkeleri içerdiğini yazarsınız. Lokasyon sayfaları, Yerel SEO, reklam konum hedeflemesi ve SEO denetimi bu listeyi kullanır.",
+      "showIf": [
+       {
+        "field": "operating_region",
+        "in": [
+         "local",
+         "city",
+         "region",
+         "national_intl"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "mk_languages",
+     "set": {
+      "label": "Diller",
+      "en": "Languages / Communication Languages",
+      "explanation": "Sitenin, içeriklerin, reklamların, e-postaların ve müşteri desteğinin hangi dillerde hazırlanacağını belirler. Çok Dillilik bölümündeki dil yapısı, Google Ads reklam dili ve SEO denetiminin dil kontrolleri bu listeye göre önerilir."
+     }
+    },
+    {
+     "id": "mk_device",
+     "set": {
+      "label": "Kitlenin Cihaz Kullanımı",
+      "en": "Device Usage",
+      "explanation": "Kitlenizin siteye ve içeriklere ağırlıklı olarak hangi cihazdan ulaştığını belirler. Tasarım ve test önceliği, içerik uzunluğu, form yapısı, reklam yerleşimleri ve SEO denetiminin ölçüm önceliği buna göre belirlenir."
+     }
+    },
+    {
+     "id": "oc_services",
+     "new": {
+      "label": "Ürün / Hizmet Listesi",
+      "en": "Products / Services",
+      "type": "textarea",
+      "placeholder": "Örn. İmplant tedavisi | /implant-tedavisi/\nOrtodonti (şeffaf plak) | /ortodonti/\nÇocuk diş hekimliği | /cocuk-dis-hekimligi/",
+      "rule": "Ürün ve hizmet listesi (ad | sayfa adresi): {value}. Ürün / hizmet sayfaları, hizmet yapısal verisi (Service / Product), Google Ads kampanya ve reklam grubu yapısı, içerik planı kategorileri ve SEO denetimi bu adları aynı yazımla kullanır; listede olmayan bir ürün ya da hizmetin reklamı verilmez.",
+      "explanation": "Satılan ürün ve hizmetler; her satıra bir kalem “Ad | sayfa adresi” biçiminde (adres isteğe bağlı). Ana kalemleri yazın; varyantları ayrıca listelemeyin.",
+      "scenario": "Hizmet sayfaları, ürün tanıtım sayfaları, hizmet bazında reklam kampanyaları ya da içerik kategorileri kurulacaksa doldurun; böylece aynı hizmet her yerde aynı adla geçer.",
+      "example": "“İmplant tedavisi | /implant-tedavisi/” satırı hizmet sayfasının, Service yapısal verisinin ve “İmplant” Google Ads kampanyasının adı olur.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+      ]
+     }
+    },
+    {
+     "id": "oc_proof",
+     "new": {
+      "label": "Referanslar, Sertifikalar ve Başarı Metrikleri",
+      "en": "Proof Points",
+      "type": "textarea",
+      "placeholder": "Örn. ISO 27001 | sertifika | belge no …\nÖrnek AŞ | referans | yazılı kullanım izni var\n%98 müşteri memnuniyeti | metrik | 2026 anketi",
+      "explanation": "Kurumun içeriklerde gösterebileceği, doğrulanmış ve kullanım izni alınmış kanıtları “Ad | tür | kaynak ya da izin” biçiminde yazın.",
+      "rule": "Kullanılabilir kanıtlar: {value}. “Neden biz”, “Kanıt” ve “Referans” bölümlerinde yalnız bu listedeki kanıtlar kullanılır; listede yoksa kanıt uydurulmaz, bölüm yer tutucuyla bırakılır; izinsiz müşteri adı ya da logosu kullanılmaz.",
+      "scenario": "Hizmet sayfası, föy, sunum ve tekliflerde referans, sertifika ya da metrik gösterilecekse doldurulur.",
+      "example": "Bir yazılım firmasının föyünde yalnız listedeki iki sertifika ve yazılı izinli üç müşteri logosu yer alır.",
+      "agents": [
+       "poz:satis:08.06/satis-icerigi-ve-araclari/teklif-ve-vaka-kutuphanesi-uzmani",
+       "poz:pazarlama:content_marketing/icerik-uretimi-muduru/vaka-calismasi-uzmani"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_brand",
+   "name": "Marka Görünümü",
+   "en": "Brand Look",
+   "icon": "◑",
+   "desc": "Ana, ikincil ve vurgu renklerini, başlık ve metin fontunu tek yerde tutar; site tasarımı, pazarlama planı, brief'ler ve pazarlama promptu bu değerleri buradan okur",
+   "guide": {
+    "purpose": "Marka renkleri ve fontları hem sitenin tasarımında hem de pazarlama görsellerinde, brief'lerde ve içerik planında kullanılır. Değerleri burada bir kez girersiniz; Kurumsal Kimlik bölümü renk ve font karakteri gibi tasarım kararlarını, bu bölüm ise kesin değerleri tutar.",
+    "criteria": [
+     "Renkleri kurumsal kimlik kılavuzundaki HEX kodlarıyla girin; ekran görüntüsünden alınan renkler farklı çıkabilir.",
+     "Vurgu rengini yalnız ana eylem çağrıları için ayırın; ana renkle aynı olmamalı ve zeminle yeterli kontrast taşımalı.",
+     "Metin ve zemin renklerinde WCAG 2.2 AA en az 4,5:1 kontrastı sağlayın.",
+     "Fontların Türkçe karakterleri (ç, ğ, ı, İ, ö, ş, ü) eksiksiz desteklediğini ve web lisansı olduğunu kontrol edin."
+    ],
+    "pitfalls": [
+     "Aynı rengin sitede, sosyal medya görsellerinde ve basılı işlerde farklı kodlarla kullanılması.",
+     "Çok sayıda font ya da font ağırlığı seçmek; sayfa yavaşlar ve görünüm dağınıklaşır.",
+     "Lisansı yalnız masaüstü kullanım için olan bir fontu web sitesine gömmek."
+    ],
+    "resources": [
+     {
+      "title": "WCAG 2.2 — Kontrast (en az)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "note": "Metin ve zemin renkleri arasındaki en az kontrast oranının açıklaması (İngilizce)."
+     },
+     {
+      "title": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "note": "Açık lisanslı web fontları; dil desteğine göre filtrelenebilir."
+     },
+     {
+      "title": "Yazı tipleriyle ilgili en iyi uygulamalar",
+      "url": "https://web.dev/articles/font-best-practices?hl=tr",
+      "note": "Fontların sayfa hızını bozmadan yüklenmesi."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "brand_color_primary"
+    },
+    {
+     "id": "brand_color_secondary"
+    },
+    {
+     "id": "brand_color_accent"
+    },
+    {
+     "id": "brand_color_dark",
+     "new": {
+      "label": "Koyu Renk (Metin, Alt Bilgi, Koyu Zemin)",
+      "en": "Dark Color",
+      "type": "color",
+      "placeholder": "#1F2937",
+      "explanation": "Gövde metni, alt bilgi ve koyu zeminlerde kullanılan kurumsal koyu renktir. Boşsa nötr renk kararından türetilir.",
+      "rule": "Koyu renk {value} olacaktır (--color-dark); gövde metni, alt bilgi ve koyu zeminler bu renkle oluşturulur, metinde saf siyah yerine kullanılır; koyu zemindeki açık metin en az 4.5:1 kontrast sağlar.",
+      "scenario": "Kurumsal kimlik kılavuzunda ayrı bir koyu renk tanımlıysa doldurulur.",
+      "example": "Bir danışmanlık şirketinin alt bilgi zemini ve paragraf metni bu koyu tonla, carousel kapakları da aynı koyu zeminle hazırlanır.",
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_light",
+     "new": {
+      "label": "Açık Renk (Zemin, Kart, Blok Alan)",
+      "en": "Light Color",
+      "type": "color",
+      "placeholder": "#F3F4F6",
+      "explanation": "Sayfa zemini, kartlar ve blok alanlarda kullanılan kurumsal açık renktir. Boşsa nötr renk kararından türetilir.",
+      "rule": "Açık renk {value} olacaktır (--color-light); sayfa, kart ve blok zeminleri ile plan dosyasının zemin rengi bu renkle oluşturulur; açık zeminde açık renkli metin kullanılmaz.",
+      "scenario": "Kurumsal kimlik kılavuzunda zemin ve kart için ayrı açık ton tanımlıysa doldurulur.",
+      "example": "Bir kliniğin hizmet kartlarının zemini ve sosyal görsellerin açık zemin varyasyonu bu tonla hazırlanır.",
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_neutral",
+     "new": {
+      "label": "Nötr Gri (Çizgi, Pasif Alan)",
+      "en": "Neutral Gray",
+      "type": "color",
+      "placeholder": "#E5E7EB",
+      "explanation": "Kenarlık, ayırıcı çizgi ve pasif öğelerde kullanılan kurumsal nötr gridir.",
+      "rule": "Nötr gri {value} olacaktır (--color-neutral); kenarlıklar, ayırıcı çizgiler, tablo çizgileri ve pasif düğmeler bu renkle gösterilir.",
+      "scenario": "Kurumsal kimlik kılavuzunda nötr ya da yardımcı gri tanımlıysa doldurulur.",
+      "example": "Bir teklif dokümanının tablo çizgileri ve sitedeki pasif “Gönder” düğmesi bu griyle görünür.",
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_success",
+     "new": {
+      "label": "Başarı Rengi",
+      "en": "Success Color",
+      "type": "color",
+      "placeholder": "#16A34A",
+      "explanation": "Kurumsal kılavuzdaki başarı / onay renginin HEX kodudur. Başarı mesajları, onay rozetleri ve olumlu metriklerde kullanılır.",
+      "rule": "Başarı rengi {value} olacaktır (--color-success); başarı mesajları, onay rozetleri ve olumlu metrikler bu renkle gösterilir. Durum yalnız renkle anlatılmaz, ikon ve metin eşlik eder; metin bu renkle yazılacaksa en az 4.5:1 kontrast sağlanır, sağlanmıyorsa rengin koyulaştırılmış tonu kullanılır.",
+      "scenario": "Kurumsal kimlik kılavuzu başarı rengini kodla tanımlıyorsa ve site, rapor ve görsellerde aynı ton kullanılmak isteniyorsa.",
+      "example": "Bir muhasebe yazılımının panelinde “Bordro onaylandı” mesajı ve rapor görselindeki artış oku bu yeşille gösterilir.",
+      "showIf": [
+       {
+        "field": "brand_status_colors",
+        "in": [
+         "Guide"
+        ]
+       }
+      ],
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_warning",
+     "new": {
+      "label": "Uyarı Rengi",
+      "en": "Warning Color",
+      "type": "color",
+      "placeholder": "#D97706",
+      "explanation": "Kurumsal kılavuzdaki uyarı / dikkat renginin HEX kodudur. Uyarı kutuları ve dikkat çekilecek alanlarda kullanılır.",
+      "rule": "Uyarı rengi {value} olacaktır (--color-warning); uyarı kutuları ve dikkat alanları bu renkle gösterilir. Uyarı ikon ve metinle birlikte verilir; kontrast yetersizse koyulaştırılmış ton kullanılır.",
+      "scenario": "Kılavuzda dikkat ya da uyarı rengi tanımlıysa; formlarda ve bilgilendirmelerde aynı tonun kullanılması isteniyorsa.",
+      "example": "Bir sigorta sitesinde “Poliçenizin bitmesine 7 gün kaldı” kutusu bu renkte kenarlık ve ünlem ikonuyla görünür.",
+      "showIf": [
+       {
+        "field": "brand_status_colors",
+        "in": [
+         "Guide"
+        ]
+       }
+      ],
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_error",
+     "new": {
+      "label": "Hata Rengi",
+      "en": "Error Color",
+      "type": "color",
+      "placeholder": "#DC2626",
+      "explanation": "Kurumsal kılavuzdaki hata renginin HEX kodudur. Form hataları ve başarısız işlem mesajlarında kullanılır. Kılavuzda ayrı hata rengi yoksa boş bırakılır; uyarı rengi kırmızı tonundaysa aynı kod yazılabilir.",
+      "rule": "Hata rengi {value} olacaktır (--color-error); form hataları ve başarısız işlem mesajları bu renkle, ikon ve açıklayıcı metinle birlikte gösterilir.",
+      "scenario": "Sitede form, ödeme ya da üyelik gibi hata mesajı veren akışlar varsa ve kılavuz hata rengini tanımlıyorsa.",
+      "example": "Bir randevu formunda eksik telefon alanının altında bu renkte çerçeve ve “Telefon numarası zorunludur” yazısı görünür.",
+      "showIf": [
+       {
+        "field": "brand_status_colors",
+        "in": [
+         "Guide"
+        ]
+       }
+      ],
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_color_info",
+     "new": {
+      "label": "Bilgi Rengi",
+      "en": "Info Color",
+      "type": "color",
+      "placeholder": "#2563EB",
+      "explanation": "Kurumsal kılavuzdaki bilgi renginin HEX kodudur. Bilgi kutuları ve ipuçlarında kullanılır. Kılavuzda tanım yoksa boş bırakılır.",
+      "rule": "Bilgi rengi {value} olacaktır (--color-info); bilgi kutuları ve ipuçları bu renkle, ikon ve metinle birlikte gösterilir.",
+      "scenario": "Sitede ve dokümanlarda bilgi notu, ipucu ya da duyuru kutuları kullanılıyorsa ve kılavuz bilgi rengini tanımlıyorsa.",
+      "example": "Bir eğitim platformunda “Sertifikanız ders bitince e-postanıza gönderilir” notu bu renkte bilgi kutusunda görünür.",
+      "showIf": [
+       {
+        "field": "brand_status_colors",
+        "in": [
+         "Guide"
+        ]
+       }
+      ],
+      "agents": [
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_color_print",
+     "new": {
+      "label": "Baskı Renk Kodları (CMYK)",
+      "en": "Print Color Codes",
+      "type": "textarea",
+      "placeholder": "Örn. Ana renk | C 0 M 60 Y 100 K 0\nİkincil renk | C 100 M 80 Y 10 K 0",
+      "explanation": "Kurumsal renklerin baskı (CMYK) karşılıklarını “Renk | C M Y K” biçiminde yazın. Ekran renkleri (HEX) bunlardan türetilmez.",
+      "rule": "Baskı renk kodları: {value}. Basılı föy, broşür ve baskıya gidecek PDF'lerde bu CMYK değerleri kullanılır; ekran için HEX değerleri geçerlidir.",
+      "scenario": "Basılı materyal (föy, broşür, fuar afişi) üretiliyorsa ve kılavuzda CMYK değerleri tanımlıysa doldurulur.",
+      "example": "Bir fuar katılımcısının roll-up'ı bu CMYK değerleriyle basılır; dijital görseller HEX değerlerini kullanır.",
+      "agents": [
+       "poz:tasarim:19.03/basili-materyal-ve-yayin-tasarimi/mizanpaj-ve-baski-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "brand_font_heading"
+    },
+    {
+     "id": "brand_font_body"
+    },
+    {
+     "id": "oc_font_office",
+     "new": {
+      "label": "Ofis Belgelerinde Yedek Font",
+      "en": "Office Fallback Font",
+      "type": "select",
+      "explanation": "Kurumsal fontun alıcının bilgisayarında bulunmayabileceği düzenlenebilir ofis dosyalarında (DOCX, PPTX, Google Slaytlar) kullanılacak yedek fonttur.",
+      "rule": "Ofis belgelerinde yedek font: {label}. Düzenlenebilir DOCX ve PPTX dosyalarında kurumsal font yoksa bu font kullanılır; PDF çıktılarında kurumsal font korunur; font dosyaları paylaşılmaz.",
+      "scenario": "Teklif, sunum ve föyler düzenlenebilir dosya olarak müşteriye ya da satış ekibine gönderiliyorsa.",
+      "example": "Bir danışmanlık şirketinin teklif şablonu kurumsal fontla, alıcıda font yoksa Calibri ile açılacak biçimde hazırlanır.",
+      "options": [
+       {
+        "value": "arial",
+        "label": "Arial",
+        "explanation": "Hemen her işletim sisteminde bulunan sade bir yazı tipidir.",
+        "scenario": "Dosyaların farklı işletim sistemlerinde açılacağı durumlarda.",
+        "example": "Sunumun PPTX sürümü Arial ile, PDF sürümü kurumsal fontla dağıtılır."
+       },
+       {
+        "value": "calibri",
+        "label": "Calibri",
+        "explanation": "Microsoft Office'in yaygın varsayılan yazı tipidir.",
+        "scenario": "Ekibin ve müşterilerin çoğunlukla Microsoft Office kullandığı durumlarda.",
+        "example": "Teklif DOCX dosyası Calibri ile hazırlanır."
+       }
+      ],
+      "agents": [
+       "poz:tasarim:19.07/sunum-tasarimi-ve-yonetici-iletisimi/sunum-tasarimcisi"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_cta",
+   "name": "Eylem Çağrısı (CTA)",
+   "en": "Call to Action",
+   "icon": "➚",
+   "desc": "Bütün içeriklerde ve sitede kullanılacak CTA satırının biçimini, CTA'da hangi numaranın gösterileceğini, varsayılan hedef sayfayı, onaylı CTA metinlerini ve ana CTA'yı tek yerde belirler",
+   "guide": {
+    "purpose": "Blog, sosyal medya, e-posta, SMS, reklam, sunum, föy, teklif ve site sayfaları aynı CTA standardını kullanır. Kılavuzlar CTA'nın metin, bağlantı ve telefonla birlikte verilmesini, bir kampanyanın bütün mecralarında aynı kalmasını ister. Bu bölüm CTA biçimini, numarayı, hedef sayfayı ve kullanılabilecek CTA metinlerini bir kez belirler; kanal bölümleri yalnız kanala özgü istisnaları ekler.",
+    "criteria": [
+     "Talepleriniz nereden geliyor? Telefonla satış ağırlıklıysa CTA'da bağlantıyla birlikte telefon, WhatsApp ağırlıklıysa WhatsApp hattı gösterilmelidir.",
+     "CTA metinlerini huni aşamasına göre seçin: farkındalık içeriklerinde “Bilgi Alın”, karar aşamasında “Teklif Alın” ya da “Demo Talep Edin”; seçilmeyen metinler hiçbir içerikte kullanılmaz.",
+     "Ana CTA'yı işletmenin satış modeline göre seçin: teklifle satan hizmet için teklif, yazılım için demo, randevulu işletme için randevu.",
+     "CTA metni kısa ve eylem odaklı olmalı (2–5 kelime) ve bağlantının nereye götürdüğünü tek başına anlatmalıdır."
+    ],
+    "pitfalls": [
+     "Google Ads reklam metnine telefon numarası yazmak; Google, numaranın telefon öğesiyle eklenmesini ister, metne yazılan numara reklamın onaylanmamasına yol açabilir.",
+     "Aynı kampanyada mecradan mecraya farklı CTA metni, bağlantı ya da numara kullanmak; ölçüm dağılır, kullanıcı hangi yolu izleyeceğini bilemez.",
+     "“Tıklayın”, “Buraya” gibi hedefi anlatmayan bağlantı metinleri; erişilebilirlik kuralları bağlantının amacının metinden ya da yakın bağlamından anlaşılmasını ister.",
+     "Bir görselde ya da içerikte birden fazla ana CTA kullanmak; tek ana mesaj ve tek aksiyon ilkesi bozulur."
+    ],
+    "resources": [
+     {
+      "title": "Telefon öğeleri hakkında",
+      "url": "https://support.google.com/google-ads/answer/2453991?hl=tr",
+      "note": "Google Ads'de telefon numarasının reklam metnine değil telefon öğesiyle eklenmesi gerektiğini anlatan resmî yardım sayfası."
+     },
+     {
+      "title": "Reklam Yöneticisi'nde WhatsApp'a yönlendiren reklamlar",
+      "url": "https://www.facebook.com/business/help/447934475640650",
+      "note": "WhatsApp hattına mesaj başlatan Meta reklamlarının nasıl kurulduğunu anlatan Meta İşletme Yardım Merkezi sayfası."
+     },
+     {
+      "title": "WCAG 2.2 — 2.4.4 Bağlantı Amacı (Bağlam İçinde)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+      "note": "CTA ve bağlantı metninin, kullanıcının bağlantıyı izleyip izlemeyeceğine karar verebileceği kadar açık olması gerektiğini anlatan W3C açıklaması."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "oc_cta_format",
+     "new": {
+      "label": "CTA Biçimi",
+      "en": "CTA Format",
+      "type": "select",
+      "explanation": "CTA satırının hangi parçalardan oluşacağını belirler: CTA metni, bağlantı, telefon, WhatsApp ya da e-posta.",
+      "rule": "CTA biçimi: {label}. Her içerik tek ana CTA taşır; CTA metni, bağlantı ve numara bir kampanyanın bütün mecralarında aynıdır. Platform istisnaları: Google Ads reklam metnine telefon yazılmaz, telefon öğesiyle eklenir; bağlantının tıklanmadığı gönderi metinlerinde (Instagram, TikTok) bağlantı profilde ya da düğmede verilir; kurumsal kilometre taşı paylaşımlarında CTA zorunlu değildir, telefon yalnız iş geliştirme bağlantısı varsa eklenir. Sitede telefon tel:, e-posta mailto: bağlantısıdır.",
+      "scenario": "İçerikleri farklı kişiler yazıyorsa ve her içerikte CTA'nın aynı biçimde, aynı iletişim bilgisiyle yer alması isteniyorsa.",
+      "example": "Bir İK danışmanlık firmasının blog sonu, LinkedIn gönderisi ve e-postası “CTA: Teklif Alın: kisa.link/abc | Telefon: 0212 000 00 00” satırıyla biter.",
+      "options": [
+       {
+        "value": "link_phone",
+        "label": "CTA metni + bağlantı + telefon (önerilen)",
+        "explanation": "Kılavuzların ortak standardıdır: CTA'da bağlantının yanında telefon da verilir.",
+        "scenario": "Telefonla teklif ya da randevu alan, B2B ya da hizmet satan işletmelerde.",
+        "example": "“CTA: Teklif Alın: kisa.link/abc | Telefon: 0212 000 00 00”.",
+        "ruleDetail": "CTA tek satırda yazılır: “CTA: [CTA metni]: [bağlantı] | Telefon: [CTA numarası]”; görselde telefon CTA'nın altında ya da yanında yer alır."
+       },
+       {
+        "value": "link",
+        "label": "CTA metni + bağlantı",
+        "explanation": "CTA yalnız metin ve bağlantıdan oluşur; telefon verilmez.",
+        "scenario": "Satış çevrim içi kapanıyorsa ya da telefonla talep alınmıyorsa.",
+        "example": "“Hemen inceleyin: kisa.link/abc”.",
+        "ruleDetail": "CTA “[CTA metni]: [bağlantı]” biçimindedir; telefon yalnız iletişim alanında yer alır."
+       },
+       {
+        "value": "phone",
+        "label": "CTA metni + telefon",
+        "explanation": "CTA telefonla aramaya yönlendirir; bağlantı ikinci plandadır ya da verilmez.",
+        "scenario": "Telefon ağırlıklı çalışan yerel işletmelerde ve acil hizmetlerde.",
+        "example": "“Hemen arayın: 0232 000 00 00”.",
+        "ruleDetail": "CTA “[CTA metni]: [CTA numarası]” biçimindedir; sitede numara tel: bağlantısıdır."
+       },
+       {
+        "value": "link_phone_whatsapp",
+        "label": "CTA metni + bağlantı + telefon + WhatsApp",
+        "explanation": "Bağlantı ve telefona ek olarak WhatsApp hattı da gösterilir.",
+        "scenario": "Taleplerin önemli bölümü WhatsApp'tan geliyorsa.",
+        "example": "“CTA: Randevu Oluşturun: kisa.link/abc | Telefon: 0232 000 00 00 | WhatsApp: wa.me/90…”.",
+        "ruleDetail": "CTA satırına WhatsApp hattı “WhatsApp: wa.me/…” olarak eklenir; WhatsApp'a yönlendiren reklamlarda CTA “WhatsApp'tan yazın” ve telefondur."
+       },
+       {
+        "value": "link_phone_email",
+        "label": "CTA metni + bağlantı + telefon + e-posta",
+        "explanation": "Bağlantı ve telefona ek olarak kurumsal ya da satış e-postası da verilir.",
+        "scenario": "Kurumsal satın alma ve iş ortaklığı süreçleri e-postayla ilerliyorsa.",
+        "example": "İş ortaklığı sayfasının sonunda “Bize ulaşın: kisa.link/abc | Telefon: … | E-posta: satis@…”.",
+        "ruleDetail": "CTA satırına e-posta eklenir; satış belgelerinde Satış İletişim Bilgileri'ndeki e-posta kullanılır."
+       },
+       {
+        "value": "per_platform",
+        "label": "Mecraya göre (bağlantı, telefon ya da mesaj)",
+        "explanation": "CTA, platform davranışına göre bağlantı, telefon ya da mesaj (DM) yönlendirmesi olarak verilir.",
+        "scenario": "Mecralar arasında kullanıcı davranışı çok farklıysa.",
+        "example": "LinkedIn'de bağlantı, WhatsApp Kanal'da bağlantı ve telefon, Instagram Story'de “DM ile yazın”.",
+        "ruleDetail": "Her mecrada CTA o platformun davranışına uygun verilir; link, telefon ya da DM yönlendirmesi net yazılır."
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani",
+       "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+      ]
+     }
+    },
+    {
+     "id": "oc_cta_phone",
+     "new": {
+      "label": "CTA'daki Numara",
+      "en": "CTA Phone",
+      "type": "select",
+      "explanation": "CTA'larda ve görsellerin iletişim alanında hangi numaranın gösterileceğini seçer. Numaralar İletişim & Adres bölümünden alınır.",
+      "rule": "CTA'larda kullanılacak numara: {label}. Numara görünür metinde ulusal biçimde, bağlantıda ülke koduyla (tel:+90…) yazılır; seçilen alan boşsa Ana Telefon kullanılır.",
+      "scenario": "Kurumun birden çok numarası varsa (santral, satış hattı, destek, WhatsApp) ve içeriklerde hep aynı numaranın görünmesi, çağrıların tek numarada ölçülmesi isteniyorsa.",
+      "example": "Bir sigorta acentesi satış hattını seçer; bütün kampanya görselleri ve CTA satırları satış numarasını gösterir.",
+      "options": [
+       {
+        "value": "main",
+        "label": "Ana telefon (önerilen)",
+        "explanation": "CTA'da kurumsal ana numara kullanılır.",
+        "scenario": "Tek numaralı işletmelerde ya da bütün talepler santralden yönlendiriliyorsa.",
+        "example": "CTA satırında ve alt şeritte aynı ana numara görünür."
+       },
+       {
+        "value": "sales",
+        "label": "Satış hattı",
+        "explanation": "CTA'da Satış İletişim Bilgileri'ndeki telefon kullanılır.",
+        "scenario": "Satış talepleri ayrı bir hatta karşılanıyorsa.",
+        "example": "Teklif CTA'larında satış ekibinin doğrudan hattı yer alır."
+       },
+       {
+        "value": "support",
+        "label": "Destek / çağrı merkezi",
+        "explanation": "CTA'da çağrı merkezi ya da kısa numara kullanılır.",
+        "scenario": "Bütün talepleri karşılayan bir çağrı merkezi varsa.",
+        "example": "Kampanya görsellerinde 0850'li çağrı merkezi numarası görünür."
+       },
+       {
+        "value": "whatsapp",
+        "label": "WhatsApp hattı",
+        "explanation": "CTA'da WhatsApp numarası ve wa.me bağlantısı kullanılır.",
+        "scenario": "Talepler ağırlıklı olarak mesajla alınıyorsa.",
+        "example": "Instagram CTA'sında “WhatsApp'tan yazın: wa.me/90…” bulunur."
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_cta_url",
+     "new": {
+      "label": "Varsayılan CTA / Teklif Formu Adresi",
+      "en": "Default CTA URL",
+      "type": "url",
+      "placeholder": "Örn. https://www.ornekfirma.com/teklif-al/",
+      "explanation": "Brief'te ya da içerikte başka bir bağlantı verilmediğinde CTA'nın yönlendireceği sayfadır (teklif, iletişim ya da başvuru formu). Hizmete özel sayfalar Ürün / Hizmet Listesi'nden alınır.",
+      "rule": "Varsayılan CTA adresi: {value}. Brief'te bağlantı yoksa CTA bu adrese verilir; dış mecralarda UTM ve kısa bağlantı kuralına göre etiketlenir; satış dokümanlarındaki CTA bağlantısı ve QR kodu da bu adrese gider.",
+      "scenario": "İçeriklerin çoğu aynı teklif ya da iletişim formuna yönleniyorsa doldurulur.",
+      "example": "Bir çatı yalıtım firmasının brief'inde bağlantı yoksa CTA “…/teklif-al/?utm_source=linkedin…” olarak yazılır.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/landing-page-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_cta_verbs",
+     "new": {
+      "label": "Onaylı CTA Metinleri",
+      "en": "Approved CTA Phrases",
+      "type": "multiselect",
+      "explanation": "İçeriklerde ve sitede kullanılabilecek CTA metinlerini belirler. Seçilmeyen metinler CTA olarak kullanılmaz; içerik huni aşamasına uygun olanı seçer.",
+      "rule": "CTA metinleri yalnız şunlardan seçilir: {labels}. CTA metni 2–5 kelime, eylem odaklıdır ve bağlantının hedefini anlatır; içeriğin huni aşamasına uygun olan kullanılır.",
+      "scenario": "Farklı kişilerin yazdığı içeriklerde CTA dilinin tutarlı olması ve markaya uymayan çağrıların kullanılmaması isteniyorsa.",
+      "example": "Bir yazılım firması “Demo Talep Edin, Bilgi Alın, Rehberi İndirin”i seçer; blog, reklam ve e-postalarda yalnız bu üç CTA görünür.",
+      "options": [
+       {
+        "value": "quote",
+        "label": "Teklif Alın",
+        "explanation": "Fiyatı teklifle verilen hizmet ve ürünler için karar aşaması çağrısı.",
+        "scenario": "Hizmet sayfalarında, kampanya görsellerinde ve teklif reklamlarında.",
+        "example": "Hizmet sayfasının kahraman alanında “Teklif Alın” düğmesi."
+       },
+       {
+        "value": "info",
+        "label": "Bilgi Alın / Detaylı Bilgi Alın",
+        "explanation": "Değerlendirme aşamasındaki kullanıcıyı iletişime ya da detay sayfasına yönlendirir.",
+        "scenario": "Bilgilendirici içeriklerde ve karar süreci uzun hizmetlerde.",
+        "example": "Carousel son slaytında “Detaylı Bilgi Alın”."
+       },
+       {
+        "value": "consult",
+        "label": "Danışmanlık Talep Edin",
+        "explanation": "Ön görüşmeyle başlayan danışmanlık hizmetleri için çağrı.",
+        "scenario": "Danışmanlık, hukuk ve mali hizmetlerde.",
+        "example": "Blog yazısının sonunda “Danışmanlık Talep Edin” kutusu."
+       },
+       {
+        "value": "discovery",
+        "label": "Keşif Görüşmesi Planlayın",
+        "explanation": "İhtiyacı anlamak için ücretsiz ön görüşmeye davet eder.",
+        "scenario": "Kapsamı müşteriye göre değişen B2B hizmetlerde.",
+        "example": "Hizmet föyünün son sayfasında “Keşif Görüşmesi Planlayın”."
+       },
+       {
+        "value": "demo",
+        "label": "Demo Talep Edin",
+        "explanation": "Yazılım ve platformların canlı tanıtımına yönlendirir.",
+        "scenario": "SaaS ve yazılım ürünlerinde.",
+        "example": "LinkedIn reklamında “Demo Talep Edin”."
+       },
+       {
+        "value": "booking",
+        "label": "Randevu Oluşturun",
+        "explanation": "Takvimden randevu almaya yönlendirir.",
+        "scenario": "Randevuyla çalışan klinik, salon ve danışmanlık işletmelerinde.",
+        "example": "Google İşletme Profili gönderisinde “Randevu Oluşturun”."
+       },
+       {
+        "value": "register",
+        "label": "Kaydolun",
+        "explanation": "Etkinlik, webinar ya da eğitime kayda yönlendirir.",
+        "scenario": "Etkinlik ve eğitim duyurularında.",
+        "example": "Webinar görselinde “Kaydolun” düğmesi."
+       },
+       {
+        "value": "form",
+        "label": "Formu Doldurun",
+        "explanation": "Lead formunu doldurmaya yönlendirir.",
+        "scenario": "Lead toplama kampanyalarında.",
+        "example": "Kampanya sayfasında “Formu Doldurun”."
+       },
+       {
+        "value": "download",
+        "label": "Rehberi İndirin",
+        "explanation": "İndirilebilir içeriğe (rehber, kontrol listesi, e-kitap) yönlendirir.",
+        "scenario": "Lead magnet ve doküman reklamlarında.",
+        "example": "LinkedIn doküman reklamında “Rehberi İndirin”."
+       },
+       {
+        "value": "service",
+        "label": "Hizmeti İnceleyin",
+        "explanation": "Hizmet sayfasına trafik yönlendirir.",
+        "scenario": "Blog içi geçişlerde ve farkındalık içeriklerinde.",
+        "example": "Yazının ortasında “Hizmeti İnceleyin” bağlantısı."
+       },
+       {
+        "value": "contact",
+        "label": "Bize Ulaşın",
+        "explanation": "Genel iletişim çağrısıdır.",
+        "scenario": "Kurumsal sayfalarda ve genel duyurularda.",
+        "example": "Hakkımızda sayfasının sonunda “Bize Ulaşın”."
+       },
+       {
+        "value": "apply",
+        "label": "Hemen Başvurun",
+        "explanation": "Başvuru formuna yönlendirir.",
+        "scenario": "İşe alım, burs ve başvuru kampanyalarında.",
+        "example": "Kariyer duyurusunda “Hemen Başvurun”."
+       },
+       {
+        "value": "call",
+        "label": "Hemen Arayın",
+        "explanation": "Doğrudan telefonla aramaya yönlendirir.",
+        "scenario": "Telefonla satış yapan yerel işletmelerde ve İşletme Profili gönderilerinde.",
+        "example": "İşletme Profili gönderisinde “Ara” düğmesi ve “Hemen Arayın”."
+       },
+       {
+        "value": "whatsapp",
+        "label": "WhatsApp'tan Yazın",
+        "explanation": "WhatsApp hattına mesaj başlatır.",
+        "scenario": "WhatsApp'a yönlendiren reklamlarda ve mesajla talep alan işletmelerde.",
+        "example": "Meta reklamında “WhatsApp'tan Yazın” düğmesi."
+       },
+       {
+        "value": "dm",
+        "label": "Mesaj Gönderin (DM)",
+        "explanation": "Platform içi mesaja yönlendirir.",
+        "scenario": "Story ve Reels gibi bağlantının sınırlı olduğu formatlarda.",
+        "example": "Story son karesinde “DM ile yazın”."
+       },
+       {
+        "value": "approve",
+        "label": "Teklifi Onaylayın",
+        "explanation": "Gönderilen fiyat teklifinin onayına yönlendirir.",
+        "scenario": "Fiyat tekliflerinin son sayfasında.",
+        "example": "Teklifin CTA alanında “Teklifi Onaylayın” ve satış iletişimi."
+       }
+      ],
+      "recommend": [
+       {
+        "field": "mk_prod_price",
+        "map": {
+         "quote": [
+          "quote"
+         ]
+        }
+       },
+       {
+        "field": "module_booking",
+        "map": {
+         "request": [
+          "booking"
+         ],
+         "calendar": [
+          "booking"
+         ],
+         "capacity": [
+          "booking"
+         ]
+        }
+       },
+       {
+        "field": "project_type",
+        "map": {
+         "SaaS": [
+          "demo"
+         ]
+        }
+       },
+       {
+        "field": "mk_evt_on",
+        "map": {
+         "true": [
+          "register"
+         ]
+        }
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter",
+       "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_cta_primary",
+     "new": {
+      "label": "Ana CTA",
+      "en": "Primary CTA",
+      "type": "select",
+      "explanation": "Sitenin kahraman alanında, sayfa sonlarında ve brief'te CTA verilmeyen içeriklerde varsayılan olarak kullanılacak çağrıdır.",
+      "rule": "Ana CTA: {label}. Sitenin kahraman alanında, hizmet sayfası sonlarında, reklamlarda ve brief'te başka CTA yazılmamış içeriklerde bu çağrı kullanılır; ana CTA Onaylı CTA Metinleri arasında da yer alır.",
+      "scenario": "İşletmenin tek bir ana dönüşüm hedefi varsa (teklif, demo, randevu) ve bütün kanallarda bu hedefin öne çıkması isteniyorsa.",
+      "example": "Bir klinik “Randevu Oluşturun”u seçer; ana sayfa düğmesi, reklamlar ve blog sonları bu çağrıyla biter.",
+      "options": [
+       {
+        "value": "quote",
+        "label": "Teklif Alın",
+        "explanation": "Ana hedef teklif talebidir.",
+        "scenario": "Fiyatı teklifle veren hizmet işletmelerinde.",
+        "example": "Ana sayfa düğmesi “Teklif Alın”."
+       },
+       {
+        "value": "info",
+        "label": "Bilgi Alın",
+        "explanation": "Ana hedef bilgi talebidir.",
+        "scenario": "Karar süreci uzun, önce bilgi isteyen kitlelerde.",
+        "example": "Kahraman alanında “Bilgi Alın”."
+       },
+       {
+        "value": "consult",
+        "label": "Danışmanlık Talep Edin",
+        "explanation": "Ana hedef danışmanlık görüşmesidir.",
+        "scenario": "Danışmanlık firmalarında.",
+        "example": "Sayfa sonlarında “Danışmanlık Talep Edin”."
+       },
+       {
+        "value": "discovery",
+        "label": "Keşif Görüşmesi Planlayın",
+        "explanation": "Ana hedef ön görüşmedir.",
+        "scenario": "Kapsamı değişken B2B hizmetlerde.",
+        "example": "Föy ve sunumlarda “Keşif Görüşmesi Planlayın”."
+       },
+       {
+        "value": "demo",
+        "label": "Demo Talep Edin",
+        "explanation": "Ana hedef ürün tanıtımıdır.",
+        "scenario": "Yazılım ve SaaS ürünlerinde.",
+        "example": "Üst menüde ve ana sayfada “Demo Talep Edin”."
+       },
+       {
+        "value": "booking",
+        "label": "Randevu Oluşturun",
+        "explanation": "Ana hedef randevudur.",
+        "scenario": "Randevulu işletmelerde.",
+        "example": "Mobil alt şeritte “Randevu Oluşturun”."
+       },
+       {
+        "value": "register",
+        "label": "Kaydolun",
+        "explanation": "Ana hedef kayıttır.",
+        "scenario": "Eğitim ve etkinlik odaklı kurumlarda.",
+        "example": "Ana sayfada “Kaydolun”."
+       },
+       {
+        "value": "form",
+        "label": "Formu Doldurun",
+        "explanation": "Ana hedef lead formudur.",
+        "scenario": "Lead toplama odaklı sitelerde.",
+        "example": "Kampanya sayfalarında “Formu Doldurun”."
+       },
+       {
+        "value": "download",
+        "label": "Rehberi İndirin",
+        "explanation": "Ana hedef indirilebilir içeriktir.",
+        "scenario": "İçerik pazarlamasıyla lead toplayan markalarda.",
+        "example": "Blog sonlarında “Rehberi İndirin”."
+       },
+       {
+        "value": "contact",
+        "label": "Bize Ulaşın",
+        "explanation": "Ana hedef genel iletişimdir.",
+        "scenario": "Kurumsal tanıtım sitelerinde.",
+        "example": "Alt bilgide ve sayfa sonlarında “Bize Ulaşın”."
+       },
+       {
+        "value": "call",
+        "label": "Hemen Arayın",
+        "explanation": "Ana hedef telefon aramasıdır.",
+        "scenario": "Acil ve yerel hizmetlerde.",
+        "example": "Mobilde sabit “Hemen Arayın” düğmesi."
+       },
+       {
+        "value": "whatsapp",
+        "label": "WhatsApp'tan Yazın",
+        "explanation": "Ana hedef WhatsApp mesajıdır.",
+        "scenario": "Mesajla satış yapan işletmelerde.",
+        "example": "Sitede sabit WhatsApp düğmesi."
+       },
+       {
+        "value": "apply",
+        "label": "Hemen Başvurun",
+        "explanation": "Ana hedef başvurudur.",
+        "scenario": "Başvuru odaklı program ve kariyer sitelerinde.",
+        "example": "Program sayfasında “Hemen Başvurun”."
+       }
+      ],
+      "recommend": [
+       {
+        "field": "mk_prod_price",
+        "map": {
+         "quote": [
+          "quote"
+         ]
+        }
+       },
+       {
+        "field": "project_type",
+        "map": {
+         "SaaS": [
+          "demo"
+         ]
+        }
+       },
+       {
+        "field": "module_booking",
+        "map": {
+         "request": [
+          "booking"
+         ],
+         "calendar": [
+          "booking"
+         ],
+         "capacity": [
+          "booking"
+         ]
+        }
+       }
+      ],
+      "agents": [
+       "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru/funnel-optimizasyon-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_cta_custom",
+     "new": {
+      "label": "Kuruma Özel CTA Metinleri",
+      "en": "Custom CTA Phrases",
+      "type": "textarea",
+      "placeholder": "Örn. Ücretsiz ön analiz isteyin\nMevzuat bülteni için kaydolun",
+      "explanation": "Listede olmayan, kurumun onayladığı CTA metinlerini her satıra bir tane olacak biçimde yazın.",
+      "rule": "Kuruma özel CTA metinleri: {value}. Bu metinler de onaylı CTA metinleri gibi kullanılır; 2–5 kelime ve eylem odaklıdır.",
+      "scenario": "Kurumun kampanyalarında listedeki genel çağrılar dışında kendine özgü onaylı ifadeler varsa doldurulur.",
+      "example": "Bir muhasebe bürosu “Ücretsiz ön analiz isteyin” ifadesini ekler; yıl sonu içeriklerinde bu CTA kullanılır.",
+      "agents": [
+       "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_accounts",
+   "name": "Dijital Hesaplar",
+   "en": "Digital Accounts",
+   "icon": "@",
+   "desc": "Markanın resmî sosyal medya hesap adreslerini ve ölçüm ile reklam hesaplarının açık kimliklerini tek yerde tutar; site, yapısal veri, pazarlama planı ve SEO denetimi bu bilgileri buradan okur",
+   "guide": {
+    "purpose": "Sosyal hesap adresleri sitenin alt bilgisinde, paylaşım bağlantılarında, kuruluş yapısal verisinde (sameAs) ve pazarlama planında; ölçüm ve reklam kimlikleri ise etiket kurulumunda ve raporlamada kullanılır. Hepsi burada bir kez girilir.",
+    "criteria": [
+     "Yalnız markanın resmî hesaplarını yazın; çalışanların kişisel hesapları ya da kullanılmayan eski hesaplar listeye girmez.",
+     "Ölçüm ve reklam kimliklerinden yalnız sayfa kaynağında zaten görünen açık kimlikleri yazın (GTM-…, G-…, piksel kimliği).",
+     "Bir hesap kapanır ya da değişirse burada güncelleyin; site, prompt ve plan dosyası yeni değeri alır."
+    ],
+    "pitfalls": [
+     "API anahtarı, erişim jetonu ya da gizli anahtarı bu alanlara yazmak; bunlar yalnız sunucudaki gizli anahtar deposunda tutulur.",
+     "Aynı ölçüm etiketini hem temadan hem Etiket Yöneticisi'nden yükleyip çift sayım yaratmak.",
+     "Sosyal hesap adresi yerine paylaşım ya da gönderi adresi yazmak."
+    ],
+    "resources": [
+     {
+      "title": "Kuruluş (Organization) şema işaretlemesi",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/organization?hl=tr",
+      "note": "Resmî profillerin sameAs ile arama motorlarına tanıtılması."
+     },
+     {
+      "title": "Web sitesi için Analytics'i ayarlama",
+      "url": "https://support.google.com/analytics/answer/9304153?hl=tr",
+      "note": "GA4 mülkü, veri akışı ve ölçüm kimliğinin (G-…) nereden alındığı."
+     },
+     {
+      "title": "Etiket Yöneticisi hesap ve kapsayıcı oluşturma",
+      "url": "https://support.google.com/tagmanager/answer/14842164?hl=tr",
+      "note": "Kapsayıcı kimliğinin (GTM-…) oluşturulması ve siteye eklenmesi."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mk_accounts"
+    },
+    {
+     "id": "mk_ids"
+    }
+   ]
+  },
+  {
+   "id": "oc_rivals",
+   "name": "Rakipler",
+   "en": "Competitors",
+   "icon": "⇋",
+   "desc": "Rakip firmaların adını, site adresini ve rakip türünü tek bir listede tutar; Rakip Analizi, içerik planının rakip sekmesi ve SEO denetimindeki rakip karşılaştırması bu listeyi kullanır",
+   "guide": {
+    "purpose": "Rakip listesi birden çok çalışmada gerekir: pazarlama planındaki rakip analizi, içerik planının Rakipler sekmesi ve SEO denetiminde rakiplerle içerik, hız ve görünürlük karşılaştırması. Liste burada bir kez tutulur; Rakip Analizi bölümü neyin, nasıl ve ne sıklıkla inceleneceğine karar verir.",
+    "criteria": [
+     "Rakipleri tahminle değil; kaybedilen tekliflerden, müşteri görüşmelerinden ve hedef sorguların arama sonuçlarından çıkarın.",
+     "Arama rakibiyle iş rakibi her zaman aynı değildir; SEO karşılaştırması için arama sonuçlarında sürekli karşınıza çıkan siteleri de ekleyin.",
+     "Rakip türünü (Doğrudan, Dolaylı, İkame) yazmak analizi ve önceliklendirmeyi kolaylaştırır.",
+     "Listeyi düzenli güncelleyin; pazara giren ya da kapanan firmalar analizi eskitir."
+    ],
+    "pitfalls": [
+     "Reklam ve içeriklerde rakibin adını, markasını veya logosunu kullanmak; karşılaştırmalı reklamın şartları Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği'ndedir.",
+     "Rakip sitelerde siteyi yoracak yoğunlukta tarama yapmak ya da herkese açık olmayan sayfalara erişmeye çalışmak.",
+     "Çok uzun bir liste tutup hiçbirini derinlemesine incelememek; 5–10 rakip çoğu iş için yeterlidir."
+    ],
+    "resources": [
+     {
+      "title": "Google Reklam Şeffaflık Merkezi",
+      "url": "https://adstransparency.google.com/?region=TR&hl=tr",
+      "note": "Rakiplerin Google'daki reklamlarını reklamveren ve bölgeye göre aramaya yarayan resmî araç."
+     },
+     {
+      "title": "Meta Reklam Kütüphanesi Hakkında",
+      "url": "https://www.facebook.com/business/help/2405092116183307",
+      "note": "Facebook ve Instagram'da yayındaki reklamların herkese açık kütüphanede aranması."
+     },
+     {
+      "title": "Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20435&MevzuatTur=7&MevzuatTertip=5",
+      "note": "Karşılaştırmalı reklamın şartları; rakip bulgularını reklama çevirmeden önce okunmalı."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "oc_competitors",
+     "new": {
+      "label": "Rakip Listesi",
+      "en": "Competitor List",
+      "type": "textarea",
+      "placeholder": "Örn. Örnek Diş Kliniği | https://www.ornekdis.com | Doğrudan\nGülüş Merkezi | https://www.gulusmerkezi.com | Dolaylı",
+      "rule": "Rakip listesi (ad | site adresi | tür): {value}. Rakip analizi, içerik planının rakip sekmesi ve SEO denetimindeki rakip karşılaştırması yalnız bu listeyi kullanır; listede olmayan bir firma rakip olarak raporlanmadan önce listeye eklenir. Rakiplerin adı, markası ve logosu reklam ve içeriklerde kullanılmaz.",
+      "explanation": "Her satıra bir rakip yazın: “Ad | site adresi | tür”. Tür isteğe bağlıdır: Doğrudan (aynı müşteriye aynı ihtiyaç için satış yapan), Dolaylı (aynı ihtiyacı başka yolla karşılayan) ya da İkame. Adres yoksa yalnız adı yazabilirsiniz.",
+      "scenario": "Rakip analizi yapılacak, içerik planına rakip sekmesi eklenecek ya da SEO denetiminde rakiplerle karşılaştırma istenecekse doldurun; üç çalışma da aynı listeyi kullanır.",
+      "example": "“Örnek Diş Kliniği | https://www.ornekdis.com | Doğrudan” satırı içerik planında RK-01 kimlikli rakip olarak görünür, SEO denetiminde de bu sitenin hizmet sayfaları sizinkilerle karşılaştırılır.",
+      "agents": [
+       "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "oc_search",
+   "name": "Hedef Sorgular",
+   "en": "Target Queries",
+   "icon": "⌕",
+   "desc": "Sitenin görünmek istediği arama sorgularını ve anahtar kelimeleri, gerekiyorsa hedef sayfalarıyla birlikte tek listede tutar; içerik planı, ürün / hizmet sayfaları, Google Ads ve SEO denetimi bu listeyi kullanır",
+   "guide": {
+    "purpose": "Hedef sorgular SEO'nun, içerik planının ve arama reklamlarının ortak dayanağıdır: hangi aramalarda görünmek istediğinizi ve bu aramaları hangi sayfanın karşılayacağını gösterir. Liste bir kez burada tutulur; içerik konuları, hizmet sayfalarının anahtar kelime planı, Google Ads kelimeleri ve SEO denetiminin arama niyeti kontrolü aynı listeye bakar.",
+    "criteria": [
+     "Her sorgu için onu karşılayacak tek bir sayfa belirleyin; aynı sorguyu birden çok sayfa hedeflerse sayfalar birbirinin sıralamasını böler.",
+     "Sorguları müşterinin gerçekten yazdığı biçimde yazın; Search Console ve Anahtar Kelime Planlayıcı verisi tahminden daha güvenilirdir.",
+     "Bilgi aramalarını (nasıl, nedir) blog konularına, satın alma aramalarını (fiyat, randevu, ilçe adıyla hizmet) hizmet sayfalarına bağlayın.",
+     "Listeyi ürün / hizmet listesiyle uyumlu tutun; satılmayan bir hizmetin sorgusunu hedeflemek boşa trafik getirir."
+    ],
+    "pitfalls": [
+     "Her sorgu varyasyonu için ayrı sayfa üretmek; Google bunu ölçekli içerik kötüye kullanımı sayabilir.",
+     "Anahtar kelimeyi metinde doğal olmayan sıklıkta tekrarlamak.",
+     "Araçların arama hacmi tahminlerini kesin veri gibi kullanmak."
+    ],
+    "resources": [
+     {
+      "title": "SEO başlangıç kılavuzu",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=tr",
+      "note": "Kullanıcıların sizi hangi kelimelerle arayacağını düşünme ve içeriği buna göre düzenleme."
+     },
+     {
+      "title": "Anahtar Kelime Planlayıcı'yı kullanma",
+      "url": "https://support.google.com/google-ads/answer/7337243?hl=tr",
+      "note": "Anahtar kelime fikirleri ve arama hacmi tahminleri için Google'ın ücretsiz aracı."
+     },
+     {
+      "title": "Performans raporu (Arama sonuçları)",
+      "url": "https://support.google.com/webmasters/answer/7576553?hl=tr",
+      "note": "Sitenin hangi sorgularda gösterildiğini ve tıklandığını gösteren Search Console raporu."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "oc_keywords",
+     "new": {
+      "label": "Hedef Sorgular",
+      "en": "Target Queries / Keywords",
+      "type": "textarea",
+      "placeholder": "Örn. implant tedavisi fiyatları | /implant-tedavisi/\nkadıköy diş kliniği | /\ndiş beyazlatma zararlı mı | /blog/dis-beyazlatma/",
+      "rule": "Hedef sorgular (sorgu | hedef sayfa): {value}. Her sorgu tek bir sayfayla karşılanır; içerik planı, ürün / hizmet sayfalarının anahtar kelime planı, Google Ads anahtar kelimeleri ve SEO denetimi bu listeyi kullanır. Anahtar kelime doldurma yapılmaz; sorgu varyasyonları için ayrı sayfa açılmaz.",
+      "explanation": "Sitenin görünmek istediği aramalar; her satıra bir sorgu, isteğe bağlı olarak “sorgu | hedef sayfa” biçiminde. 10–50 sorgu çoğu site için yeterlidir.",
+      "scenario": "SEO çalışması, içerik planı, hizmet sayfası yazımı ya da arama reklamı yapılacaksa doldurun; anahtar kelime araştırmasının sonucunu buraya aktarın.",
+      "example": "“implant tedavisi fiyatları | /implant-tedavisi/” satırı hizmet sayfasının odak kelimesi, Google Ads'te “İmplant” reklam grubunun ana kelimesi ve SEO denetiminde arama niyeti kontrolünün hedefi olur.",
+      "agents": [
+       "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "sectionSet": {
+  "mk_planfile": {
+   "desc": "Kararlar içerik planı şablonunun veri dosyasına aktarılırken kullanılacak seri no önekini, plan başlığını ve dönem bilgilerini belirler; marka adı, site adresi ve iletişim bilgileri Ortak Bilgiler'den gelir"
+  },
+  "brand": {
+   "desc": "Logo, renk ve tipografi karakteri, köşe, boşluk, ikon, görsel dili ve marka ses tonu gibi sitenin görsel kimlik standartlarını belirler; renk kodları ve fontlar Ortak Bilgiler › Marka Görünümü'nde tutulur"
+  },
+  "cloudflare": {
+   "desc": "Cloudflare'ın güvenlik duvarı ve dosya depolama servislerinden hangilerinin kullanılacağını belirler; yayın platformu (Pages / Workers) Barındırma & Yayın'da, bot koruması (Turnstile) Kimlik Doğrulama & Güvenlik › Bot Koruması'nda seçilir"
+  },
+  "database": {
+   "desc": "Kalıcı verilerin hangi veritabanında ve hangi sağlayıcıda tutulacağını ve koda nasıl bağlanacağını belirler; yedekleme ve zamana dönük kurtarma (PITR) Yedek & Felaket Kurtarma bölümünde seçilir"
+  },
+  "public": {
+   "desc": "Herkese açık sitenin tasarım sistemi, sık sorulan sorular ve güven veren kanıt alanları gibi ziyaretçiye görünen ortak standartlarını belirler; ekran uyumu (responsive) Tema, Hareket & Tasarım bölümünde seçilir"
+  },
+  "stack": {
+   "desc": "Sitenin ön yüzünde ve görünüm katmanında hangi yazılım çatılarının ve yardımcı araçların kullanılacağını belirler; kodlama dilleri Programlama Dilleri bölümünde seçilir"
+  },
+  "mk_target": {
+   "desc": "Pazarlamanın hitap edeceği bireysel ve kurumsal kitle özelliklerini, gelir segmentini, satın alma motivasyonu ve kanalını ve persona yapısını belirler; iş modeli, hizmet coğrafyası, diller ve cihaz kullanımı Ortak Bilgiler › İşletme & Pazar'dan gelir"
+  }
+ },
+ "fieldSet": {
+  "analytics_tool": {
+   "jump": {
+    "field": "mk_ids",
+    "text": "Hesap ve etiket kimliklerini girin (Ortak Bilgiler › Dijital Hesaplar) →"
+   }
+  },
+  "privacy_regime": {
+   "recommend": [
+    {
+     "field": "module_ecommerce",
+     "map": {
+      "store": [
+       "KVKK"
+      ],
+      "catalog": [
+       "KVKK"
+      ]
+     }
+    },
+    {
+     "field": "module_booking",
+     "map": {
+      "request": [
+       "KVKK"
+      ],
+      "calendar": [
+       "KVKK"
+      ],
+      "capacity": [
+       "KVKK"
+      ]
+     }
+    },
+    {
+     "field": "module_lms",
+     "map": {
+      "content": [
+       "KVKK"
+      ],
+      "courses": [
+       "KVKK"
+      ],
+      "corporate": [
+       "KVKK"
+      ]
+     }
+    },
+    {
+     "field": "operating_region",
+     "map": {
+      "international": [
+       "GDPR"
+      ],
+      "national_intl": [
+       "GDPR"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "crm": [
+       "KVKK"
+      ],
+      "support_ai": [
+       "KVKK"
+      ],
+      "community": [
+       "KVKK"
+      ],
+      "forum": [
+       "KVKK"
+      ],
+      "portal": [
+       "KVKK"
+      ],
+      "events": [
+       "KVKK"
+      ],
+      "listings": [
+       "KVKK"
+      ],
+      "career": [
+       "KVKK"
+      ]
+     }
+    }
+   ]
+  },
+  "domain_www": {
+   "derive": {
+    "from": "domain_name",
+    "fn": "www"
+   },
+   "explanation": "Sitenin www ile mi (www.ornekfirma.com) yoksa www olmadan mı (ornekfirma.com) açılacağını belirler. Ortak Bilgiler › Canlı Site Adresi girilmişse bu karar adresten kendiliğinden türetilir; değiştirmek için adresi değiştirin."
+  },
+  "mk_gads_lang": {
+   "recommend": {
+    "field": "mk_languages",
+    "map": {
+     "en": [
+      "tr_en"
+     ]
+    }
+   }
+  },
+  "design_system": {
+   "recommend": {
+    "field": "brand_tokens",
+    "map": {
+     "true": [
+      "Custom Tokens",
+      "Tailwind Tokens",
+      "Material Design",
+      "Bootstrap"
+     ]
+    }
+   }
+  },
+  "css_system": {
+   "recommend": {
+    "field": "design_system",
+    "map": {
+     "Tailwind Tokens": [
+      "Tailwind CSS"
+     ],
+     "Material Design": [
+      "MUI"
+     ]
+    }
+   }
+  },
+  "wcag": {
+   "recommend": {
+    "field": "inclusive_design",
+    "map": {
+     "true": [
+      "2.2 AA",
+      "2.2 AAA"
+     ]
+    }
+   }
+  },
+  "golive_gate": {
+   "recommend": [
+    {
+     "field": "seo_gate",
+     "map": {
+      "true": [
+       "SEO",
+       "Schema"
+      ]
+     }
+    },
+    {
+     "field": "lighthouse",
+     "map": {
+      "true": [
+       "Lighthouse"
+      ]
+     }
+    },
+    {
+     "field": "wcag",
+     "map": {
+      "2.2 AA": [
+       "WCAG"
+      ],
+      "2.2 AAA": [
+       "WCAG"
+      ],
+      "2.1 AA": [
+       "WCAG"
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "refs": {
+  "brand": [
+   "brand_color_primary",
+   "brand_color_secondary",
+   "brand_color_accent",
+   "brand_font_heading",
+   "brand_font_body",
+   "mk_brand_name",
+   "mk_slogan",
+   "oc_logo"
+  ],
+  "domain": [
+   "domain_name",
+   "staging_url"
+  ],
+  "schema": [
+   "mk_brand_name",
+   "oc_legal_name",
+   "oc_tagline",
+   "oc_logo",
+   "mk_contact",
+   "oc_hours",
+   "mk_accounts",
+   "oc_services"
+  ],
+  "local": [
+   "mk_contact",
+   "oc_hours",
+   "operating_region",
+   "mk_geo_detail"
+  ],
+  "analytics": [
+   "mk_ids"
+  ],
+  "mk_comp": [
+   "oc_competitors"
+  ],
+  "mk_social": [
+   "mk_accounts"
+  ],
+  "mk_measure": [
+   "mk_ids"
+  ],
+  "mk_planfile": [
+   "mk_brand_name",
+   "mk_slogan",
+   "domain_name",
+   "mk_contact"
+  ],
+  "au_scope": [
+   "domain_name",
+   "operating_region",
+   "mk_languages"
+  ],
+  "au_offpage": [
+   "oc_competitors"
+  ],
+  "project": [
+   "business_model",
+   "operating_region",
+   "mk_brand_name"
+  ],
+  "i18n": [
+   "mk_languages"
+  ],
+  "privacy": [
+   "oc_legal_name",
+   "oc_tax_ids",
+   "mk_contact"
+  ],
+  "public": [
+   "oc_tagline",
+   "mk_contact",
+   "oc_hours",
+   "mk_accounts"
+  ],
+  "mk_target": [
+   "business_model",
+   "operating_region",
+   "mk_geo_detail",
+   "mk_languages",
+   "mk_device"
+  ],
+  "mk_prod": [
+   "oc_services",
+   "oc_keywords"
+  ],
+  "mk_content": [
+   "oc_keywords",
+   "oc_services"
+  ],
+  "mk_gads": [
+   "oc_services",
+   "oc_keywords",
+   "mk_geo_detail",
+   "mk_languages"
+  ],
+  "mk_meta": [
+   "mk_geo_detail"
+  ],
+  "au_onpage": [
+   "oc_keywords"
+  ],
+  "au_perf": [
+   "mk_device"
+  ],
+  "au_intl": [
+   "operating_region",
+   "mk_languages",
+   "mk_contact",
+   "oc_hours"
+  ]
+ },
+ "remove": [
+  "mk_customer_type",
+  "mk_geo_scope",
+  "responsive",
+  "language",
+  "db_backup",
+  "db_pitr",
+  "cf_turnstile",
+  "cf_pages",
+  "cf_workers"
+ ],
+ "showIfMap": {
+  "mk_customer_type": {
+   "to": "business_model",
+   "map": {
+    "b2c": [
+     "b2c",
+     "nonprofit"
+    ],
+    "b2b": [
+     "b2b"
+    ],
+    "both": [
+     "b2b2c"
+    ],
+    "b2g": [
+     "b2g"
+    ]
+   }
+  },
+  "mk_geo_scope": {
+   "to": "operating_region",
+   "map": {
+    "global": [
+     "international"
+    ]
+   }
+  }
+ },
+ "textSet": [
+  {
+   "path": [
+    "sectionGuides",
+    "project",
+    "purpose"
+   ],
+   "old": "Sektör bilgileri (sektör, faaliyet alanı, iş modeli, sektöre özel düzenlemeler, faaliyet bölgesi, firma büyüklüğü)",
+   "new": "Sektör bilgileri (sektör, faaliyet alanı, sektöre özel düzenlemeler, firma büyüklüğü; iş modeli ve hizmet coğrafyası Ortak Bilgiler › İşletme & Pazar'da)"
+  },
+  {
+   "path": [
+    "sectionGuides",
+    "cloudflare",
+    "purpose"
+   ],
+   "old": "Cloudflare'ın sunduğu yayın (Pages), sunucusuz kod (Workers), bot koruması (Turnstile), güvenlik duvarı (WAF) ve dosya depolama (R2) servislerinden hangilerinin kullanılacağını belirler.",
+   "new": "Cloudflare'ın güvenlik duvarı (WAF) ve dosya depolama (R2) servislerinden hangilerinin kullanılacağını belirler; yayın (Pages) ve sunucusuz kod (Workers) Barındırma & Yayın'daki Yayın Platformu ve Çalışma Ortamı kararlarıyla, bot koruması (Turnstile) Kimlik Doğrulama & Güvenlik › Bot Koruması kararıyla seçilir."
+  },
+  {
+   "path": [
+    "sectionGuides",
+    "database",
+    "criteria",
+    4
+   ],
+   "old": "otomatik yedeğe ek olarak zamana dönük kurtarma (PITR) açın.",
+   "new": "Yedek & Felaket Kurtarma › Yedekleme Stratejisi'nde “Günlük Backup + PITR” seçin."
+  },
+  {
+   "path": [
+    "sectionGuides",
+    "mk_target",
+    "purpose"
+   ],
+   "old": "önce müşteri tipi, sonra bireysel ya da kurumsal kitle özellikleri, ardından herkes için coğrafya, dil, motivasyon, kanal ve cihaz.",
+   "new": "iş modeline göre bireysel ya da kurumsal kitle özellikleri, ardından herkes için gelir segmenti, motivasyon ve satın alma kanalı. İş modeli, hizmet coğrafyası, diller ve cihaz kullanımı Ortak Bilgiler › İşletme & Pazar'dan gelir."
+  },
+  {
+   "path": [
+    "field",
+    "mk_b2b_sectors",
+    "options",
+    12,
+    "scenario"
+   ],
+   "old": "“Kamu kurumları (B2G)” müşteri tipiyle",
+   "new": "“Kamuya hizmet (B2G)” iş modeliyle"
+  },
+  {
+   "path": [
+    "field",
+    "au_site",
+    "explanation"
+   ],
+   "old": "Ortak Bilgiler › Kimlik & İletişim",
+   "new": "Ortak Bilgiler › Kimlik & Kurum"
+  }
+ ]
+}

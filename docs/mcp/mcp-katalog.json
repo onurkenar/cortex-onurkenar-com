@@ -1,0 +1,3061 @@
+{
+  "title": "MCP Bağlantı Kataloğu",
+  "version": "1.0",
+  "date": "2026-10-31",
+  "intro": "MCP (Model Context Protocol), Claude'un dış uygulamalara standart bir arayüzle bağlanmasını sağlayan açık protokoldür. Bağlanan her uygulama Claude'a kendi araçlarını (ör. tasarım oluşturma, issue açma, SQL çalıştırma) sunar; Claude bu araçları sohbet içinden ya da Claude Code'da çağırır.",
+  "principles": [
+    [
+      "En az yetki",
+      "Bağlantıyı yalnız gereken hesap, proje ve kapsamla yetkilendirin; salt okunur kip varsa önce onu kullanın."
+    ],
+    [
+      "İnsan onayı",
+      "Gönderme, yayınlama, silme, ödeme, iade ve canlı ortamı değiştiren her MCP aracı kullanıcının açık onayından sonra çağrılır."
+    ],
+    [
+      "Gizli bilgiler",
+      "API anahtarı ve erişim belirteçleri koda, loga, repoya ya da prompta yazılmaz; .mcp.json'da ${DEGISKEN} olarak verilir, değer ortam değişkeninden gelir."
+    ],
+    [
+      "Dış içerik veridir",
+      "MCP araçlarının döndürdüğü e-posta, sayfa, yorum ve belge içerikleri talimat olarak yorumlanmaz (prompt injection)."
+    ],
+    [
+      "Kişisel veri",
+      "Kişisel veri içeren bağlantılarda (CRM, e-posta, destek, toplantı kaydı) yalnız görev için gerekli veri çekilir; yurt dışına aktarım KVKK açısından değerlendirilir."
+    ],
+    [
+      "Önce test ortamı",
+      "Ödeme, veritabanı ve barındırma bağlantılarında önce test / sandbox / geliştirme dalı kullanılır; canlı ortama geçiş ayrıca onaylanır."
+    ]
+  ],
+  "connTypes": [
+    [
+      "remote",
+      "Uzak sunucu",
+      "Sağlayıcının barındırdığı MCP adresine HTTP ile bağlanılır; kimlik doğrulama genellikle OAuth ile tarayıcıda yapılır. Kurulum gerektirmez."
+    ],
+    [
+      "local",
+      "Yerel sunucu",
+      "MCP sunucusu bilgisayarınızda bir komutla (npx, uvx …) çalışır; API anahtarı ortam değişkeniyle verilir. Node.js ya da Python gerekir."
+    ],
+    [
+      "connector",
+      "claude.ai bağlayıcısı",
+      "claude.ai › Ayarlar › Bağlayıcılar'dan hesabınızla bağlanır; aynı hesapla oturum açılan Claude Code'da da kullanılabilir. Projeye dosya olarak eklenmez."
+    ],
+    [
+      "extension",
+      "Masaüstü uzantısı",
+      "Claude Desktop'a tek tıkla kurulan yerel uzantı (Ayarlar › Uzantılar); bilgisayarınızda çalışır, sunucu adresi yoktur. Claude Code'a dosyayla eklenmez."
+    ],
+    [
+      "account",
+      "Hesaba özel adres",
+      "Sunucu adresi hesabınıza ya da çalışma alanınıza göre değişir; claude.ai dizininden eklenir ya da adres sağlayıcının panelinden alınır."
+    ]
+  ],
+  "categories": [
+    {
+      "id": "productivity",
+      "name": "Verimlilik",
+      "en": "Productivity",
+      "desc": "Belge, görev, takvim, not ve iş birliği araçları.",
+      "depts": [
+        "idari-isler",
+        "sekreterya",
+        "operasyon"
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Veri ve Analitik",
+      "en": "Data & analytics",
+      "desc": "Veri ambarı, BI, ürün analitiği ve veri sorgulama.",
+      "depts": [
+        "veri-analitik"
+      ]
+    },
+    {
+      "id": "financial-services",
+      "name": "Finansal Hizmetler",
+      "en": "Financial services",
+      "desc": "Ödeme, muhasebe, bankacılık, yatırım ve finansal veri.",
+      "depts": [
+        "finans",
+        "muhasebe"
+      ]
+    },
+    {
+      "id": "sales-and-marketing",
+      "name": "Satış ve Pazarlama",
+      "en": "Sales & marketing",
+      "desc": "CRM, potansiyel müşteri, reklam, SEO ve e-posta pazarlaması.",
+      "depts": [
+        "satis",
+        "pazarlama"
+      ]
+    },
+    {
+      "id": "developer-tools",
+      "name": "Geliştirici Araçları",
+      "en": "Developer tools",
+      "desc": "Kod deposu, altyapı, veritabanı, izleme ve test.",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge"
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "İletişim",
+      "en": "Communication",
+      "desc": "E-posta, mesajlaşma, toplantı ve müşteri iletişimi.",
+      "depts": [
+        "kurumsal-iletisim",
+        "sekreterya"
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "Hukuk",
+      "en": "Legal",
+      "desc": "Sözleşme, mevzuat, dava ve uyum araçları.",
+      "depts": [
+        "hukuk",
+        "uyum-risk"
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "Yaratıcı İşler ve Tasarım",
+      "en": "Creative",
+      "desc": "Tasarım, görsel, video, ses ve içerik üretimi.",
+      "depts": [
+        "tasarim",
+        "pazarlama"
+      ]
+    },
+    {
+      "id": "commerce-shopping",
+      "name": "Ticaret ve Alışveriş",
+      "en": "Commerce & shopping",
+      "desc": "E-ticaret mağazaları, ürün, sipariş ve alışveriş.",
+      "depts": [
+        "satis",
+        "operasyon"
+      ]
+    },
+    {
+      "id": "health-life-sciences",
+      "name": "Sağlık ve Yaşam Bilimleri",
+      "en": "Health & life sciences",
+      "desc": "Klinik araştırma, genomik ve yaşam bilimleri verisi.",
+      "depts": [
+        "urun-arge"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Sağlık Hizmetleri",
+      "en": "Healthcare",
+      "desc": "Sağlık hizmeti sunucuları için araçlar.",
+      "depts": [
+        "isg-cevre"
+      ]
+    },
+    {
+      "id": "consumer-health",
+      "name": "Tüketici Sağlığı",
+      "en": "Consumer health",
+      "desc": "Kişisel sağlık, spor ve sağlıklı yaşam uygulamaları.",
+      "depts": [
+        "isg-cevre",
+        "insan-kaynaklari"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Eğitim",
+      "en": "Education",
+      "desc": "Öğrenme platformları ve eğitim içeriği.",
+      "depts": [
+        "insan-kaynaklari"
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "Seyahat",
+      "en": "Travel",
+      "desc": "Uçuş, konaklama ve seyahat planlama.",
+      "depts": [
+        "idari-isler"
+      ]
+    },
+    {
+      "id": "media-entertainment",
+      "name": "Medya ve Eğlence",
+      "en": "Media & entertainment",
+      "desc": "Haber, yayın, müzik ve eğlence içeriği.",
+      "depts": [
+        "kurumsal-iletisim",
+        "pazarlama"
+      ]
+    },
+    {
+      "id": "nonprofit",
+      "name": "Kâr Amacı Gütmeyen Kuruluşlar",
+      "en": "Nonprofit",
+      "desc": "Bağış, gönüllü ve sosyal etki araçları.",
+      "depts": [
+        "kurumsal-iletisim"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Diğer",
+      "en": "Other",
+      "desc": "Başka bir kategoriye girmeyen ya da kategorisi belirtilmemiş bağlayıcılar.",
+      "depts": []
+    }
+  ],
+  "items": [
+    {
+      "id": "canva",
+      "name": "Canva",
+      "vendor": "Canva",
+      "dir": "canva",
+      "cats": [],
+      "official": true,
+      "desc": "Canva hesabınızdaki tasarımları arar, yenilerini üretir, düzenler ve dışa aktarır.",
+      "about": "Canva MCP sunucusu Claude'a Canva'nın tasarım motorunu açar: metinden tasarım üretme, marka şablonunu verilerle doldurma, mevcut tasarımı yeniden boyutlandırma ve PDF / PNG / MP4 olarak dışa aktarma. Marka kitinizdeki renk, yazı tipi ve logolar üretimde kullanılır.",
+      "scenario": "Sosyal medya görseli, sunum, broşür, afiş ya da kampanya setini marka kurallarınıza uygun ve hızlı üretmek istediğinizde.",
+      "example": "“Kasım kampanyası için marka şablonumuzdan 1080×1080 Instagram gönderisi ve 1920×1080 YouTube kapağı oluştur, PNG olarak dışa aktar.”",
+      "features": [
+        [
+          "Tasarım üretme",
+          "Metin açıklamasından sunum, sosyal medya gönderisi, poster gibi tasarım adayları üretir ve seçileni düzenlenebilir tasarıma çevirir."
+        ],
+        [
+          "Marka şablonu doldurma",
+          "Marka şablonlarındaki metin ve görsel alanlarını verilerle otomatik doldurur (autofill)."
+        ],
+        [
+          "Düzenleme ve yeniden boyutlandırma",
+          "Tasarımdaki metinleri ve öğeleri değiştirir, tasarımı farklı biçim ve ölçülere uyarlar."
+        ],
+        [
+          "Dışa aktarma",
+          "Tasarımı PDF, PNG, JPG, GIF, PPTX ya da MP4 olarak indirilebilir bağlantıya çevirir."
+        ],
+        [
+          "Görsel araçları",
+          "Yapay zekâ ile görsel üretir, arka planı kaldırır, görsel katmanlarını ayırır."
+        ],
+        [
+          "Arama, klasör ve yorum",
+          "Tasarım ve klasörlerde arar, tasarımları klasörlere taşır, tasarıma yorum ekler ve yanıtlar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.canva.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://www.canva.com/help/mcp-agent-setup/",
+      "depts": [
+        "pazarlama",
+        "tasarim",
+        "kurumsal-iletisim"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Tasarım üretmek ve dışa aktarmak Canva planınızın kotasını kullanır.",
+        "Marka şablonu ve marka kiti özellikleri Canva Pro / Teams gerektirebilir."
+      ]
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "vendor": "Figma",
+      "dir": "figma",
+      "cats": [],
+      "official": true,
+      "desc": "Figma çerçevelerini, bileşenlerini ve tasarım değişkenlerini Claude'un kod üretirken okuyabileceği bağlama çevirir.",
+      "about": "Figma'nın Dev Mode MCP sunucusu seçili çerçevenin yapısını, stillerini, değişkenlerini (tasarım token'ları) ve Code Connect eşlemelerini Claude'a verir. Böylece arayüz kodu tasarıma birebir uyacak şekilde, projedeki mevcut bileşenler kullanılarak yazılır.",
+      "scenario": "Tasarım ekibinin Figma'da hazırladığı ekranı koda dökerken ya da tasarım token'larını CSS değişkenlerine aktarırken.",
+      "example": "“Figma'daki ‘Ürün Detay — Mobil’ çerçevesini mevcut React bileşenlerimizle uygula; renk ve boşlukları tasarım değişkenlerinden al.”",
+      "features": [
+        [
+          "Tasarım bağlamı",
+          "Seçili çerçeve ya da bağlantıdaki düğümün yapısını, yerleşimini ve stillerini kod üretimine uygun biçimde verir."
+        ],
+        [
+          "Değişkenler ve stiller",
+          "Renk, boşluk, tipografi değişkenlerini (tasarım token'ları) okur."
+        ],
+        [
+          "Ekran görüntüsü",
+          "Çerçevenin görüntüsünü alarak üretilen kodun görsel karşılaştırmasını sağlar."
+        ],
+        [
+          "Code Connect",
+          "Figma bileşenlerinin koddaki karşılıklarını eşler; Claude yeni bileşen yazmak yerine mevcut olanı kullanır."
+        ],
+        [
+          "FigJam",
+          "FigJam panolarındaki diyagram ve notları okur."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.figma.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://help.figma.com/hc/en-us/articles/32132100833559",
+      "depts": [
+        "tasarim",
+        "urun-arge",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "low",
+      "notes": [
+        "Masaüstü uygulamasındaki yerel sunucu (Dev Mode) ücretli Figma koltuğu gerektirebilir.",
+        "Uzak sunucu tuvale içerik de yazabilir (beta; taslaklar dışında Full koltuk gerekir); değişiklikleri gözden geçirin."
+      ]
+    },
+    {
+      "id": "miro",
+      "name": "Miro",
+      "vendor": "Miro",
+      "dir": "miro",
+      "cats": [],
+      "official": true,
+      "desc": "Miro panolarını okur; diyagram, tablo, yapışkan not ve prototip oluşturur.",
+      "about": "Miro MCP sunucusu Claude'un panolardaki içeriği okumasını ve panoya yeni içerik yazmasını sağlar. Atölye çıktısını özetleme, koddan mimari diyagramı çizme, gereksinim panosundan teknik şartname üretme gibi işler için uygundur.",
+      "scenario": "Beyin fırtınası, kullanıcı yolculuğu, mimari diyagram ya da retrospektif panosunu Claude ile birlikte hazırlamak veya özetlemek istediğinizde.",
+      "example": "“Proje mimarimizi Miro'da yeni bir panoya diyagram olarak çiz; servisler arası bağlantıları oklarla göster.”",
+      "features": [
+        [
+          "Pano okuma",
+          "Panodaki notları, şekilleri, bağlantıları ve bölümleri okuyarak özetler."
+        ],
+        [
+          "Diyagram ve içerik oluşturma",
+          "Panoya akış şeması, mimari diyagram, yapışkan not ve bölüm ekler."
+        ],
+        [
+          "Tablo",
+          "Panoda tablo oluşturur, satırları günceller."
+        ],
+        [
+          "Prototip ve görsel",
+          "Ekran prototipi ve görsel ekler."
+        ],
+        [
+          "Yorum ve paylaşım",
+          "Panoya yorum yazar, yanıtlar; pano ve alanları paylaşır."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.miro.com/",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.miro.com/docs/miro-mcp",
+      "depts": [
+        "urun-arge",
+        "tasarim",
+        "ust-yonetim"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Panoya yazılan içerik ekip üyelerince hemen görülür; paylaşılan panolarda dikkatli olun."
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "vendor": "ElevenLabs",
+      "dir": "elevenlabs",
+      "cats": [],
+      "official": true,
+      "desc": "Metni doğal sesle seslendirir, ses tasarlar, sesi yazıya döker ve sesli yapay zekâ ajanları kurar.",
+      "about": "ElevenLabs'in barındırdığı MCP sunucusu metinden konuşma, ses efekti, ses tasarımı, ses klonlama, transkripsiyon ve konuşan (sesli) ajan oluşturma araçlarını Claude'a açar. Tanıtım videosu seslendirmesi, podcast, sesli müşteri asistanı gibi işlerde kullanılır.",
+      "scenario": "Video ya da reklam için Türkçe seslendirme, toplantı kaydının yazıya dökülmesi ya da telefonda yanıt veren sesli asistan kurmak istediğinizde.",
+      "example": "“Bu 45 saniyelik tanıtım metnini sıcak, orta yaşlı bir kadın sesiyle Türkçe seslendir; iki farklı okuma üret.”",
+      "features": [
+        [
+          "Metinden konuşma",
+          "Metni seçilen sesle, çok dilli olarak seslendirir."
+        ],
+        [
+          "Ses tasarımı ve klonlama",
+          "Açıklamadan yeni ses tasarlar; izinli ses örneğinden ses klonlar."
+        ],
+        [
+          "Transkripsiyon",
+          "Ses ve videoyu konuşmacı ayrımıyla yazıya döker."
+        ],
+        [
+          "Ses işleme",
+          "Arka plan gürültüsünü ayırır, ses efekti ve müzik üretir."
+        ],
+        [
+          "Sesli ajan",
+          "Telefon ya da web için konuşan yapay zekâ ajanı oluşturur ve yapılandırır."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://api.elevenlabs.io/v1/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://elevenlabs.io/docs/agents-platform/operate/hosted-mcp",
+      "depts": [
+        "pazarlama",
+        "musteri-deneyimi",
+        "tasarim"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Her üretim kredi harcar.",
+        "Ses klonlama yalnız sesin sahibinin açık rızasıyla yapılmalıdır (biyometrik veri).",
+        "Eski yerel paket (uvx elevenlabs-mcp) kullanımdan kalktı; barındırılan sunucuyu kullanın."
+      ]
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "vendor": "Hugging Face",
+      "dir": "hugging-face",
+      "cats": [],
+      "official": true,
+      "desc": "Hugging Face Hub'daki modelleri, veri setlerini, makaleleri ve Space uygulamalarını arar ve kullanır.",
+      "about": "Hugging Face MCP sunucusu Hub'da model, veri seti, Space ve makale aramayı, dokümantasyonda soru sormayı ve seçtiğiniz Space'leri (ör. görsel üretimi, ses işleme) araç olarak çalıştırmayı sağlar.",
+      "scenario": "Projeye uygun açık kaynak model ya da veri seti seçerken veya bir Space'teki yapay zekâ aracını Claude'dan çalıştırmak istediğinizde.",
+      "example": "“Türkçe metin sınıflandırma için en çok indirilen ve ticari kullanıma açık lisanslı 5 modeli karşılaştır.”",
+      "features": [
+        [
+          "Model ve veri seti arama",
+          "Görev, dil, lisans ve popülerliğe göre model ve veri seti bulur."
+        ],
+        [
+          "Makale arama",
+          "Yapay zekâ makalelerini arar ve özetler."
+        ],
+        [
+          "Dokümantasyon",
+          "Hugging Face kütüphanelerinin belgelerinde arama yapar."
+        ],
+        [
+          "Space araçları",
+          "Seçtiğiniz Space uygulamalarını (görsel üretimi, transkripsiyon …) araç olarak çalıştırır."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://huggingface.co/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://huggingface.co/docs/hub/hf-mcp-server",
+      "depts": [
+        "veri-analitik",
+        "urun-arge"
+      ],
+      "risk": "low",
+      "notes": [
+        "Model lisanslarını ticari kullanıma uygunluk açısından ayrıca kontrol edin."
+      ]
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "vendor": "Automattic",
+      "dir": "",
+      "cats": [
+        "creative",
+        "productivity"
+      ],
+      "official": true,
+      "desc": "WordPress sitenizde kayıtlı yetenekleri (abilities) — içerik, medya ve eklenti işlemleri — Claude'a MCP araçları olarak açar.",
+      "about": "WordPress'in resmî MCP Adapter eklentisi sitede kayıtlı yetenekleri (Abilities API) MCP araçlarına çevirir; Automattic'in yerel köprüsü (mcp-wordpress-remote) Claude'u siteye uygulama parolasıyla bağlar. Hangi araçların görüneceği sitede kayıtlı yeteneklere ve eklentilere bağlıdır. WordPress.com ve Jetpack siteleri için ayrıca resmî uzak sunucu vardır.",
+      "scenario": "Kurumsal site ya da blogda içerik girişini, SEO alanlarını ve toplu düzenlemeleri Claude ile yapmak istediğinizde.",
+      "example": "“Hizmetler sayfasındaki 6 alt sayfanın meta açıklamalarını 155 karakteri geçmeyecek şekilde yeniden yaz ve taslak olarak kaydet.”",
+      "features": [
+        [
+          "Site yetenekleri",
+          "Sitede ve eklentilerde kayıtlı yetenekler (ör. yazı, sayfa, medya işlemleri) MCP aracı olarak görünür."
+        ],
+        [
+          "İçerik yönetimi",
+          "İçerik yetenekleri kayıtlıysa yazı ve sayfa oluşturur, düzenler, SEO alanlarını günceller."
+        ],
+        [
+          "Kullanıcı yetkisiyle erişim",
+          "Her araç, uygulama parolası verilen kullanıcının WordPress yetkileriyle çalışır."
+        ],
+        [
+          "WordPress.com",
+          "WordPress.com / Jetpack sitelerinde uzak sunucu (public-api.wordpress.com) ile bağlanılır."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@automattic/mcp-wordpress-remote@latest"
+        ],
+        "env": [
+          "WP_API_URL",
+          "WP_API_USERNAME",
+          "WP_API_PASSWORD"
+        ],
+        "auth": "apikey"
+      },
+      "docs": "https://github.com/Automattic/mcp-wordpress-remote",
+      "depts": [
+        "pazarlama",
+        "kurumsal-iletisim",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "high",
+      "notes": [
+        "Sitede WordPress MCP Adapter eklentisi etkin olmalı; WP_API_URL https://site.com/wp-json/mcp/mcp-adapter-default-server adresini göstermelidir.",
+        "Yönetici yerine yalnız Editör yetkili bir kullanıcının uygulama parolasını kullanın.",
+        "Yayınlama ve silme işlemlerinden önce onay alın; önce hazırlık (staging) sitesinde deneyin."
+      ]
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "vendor": "Webflow",
+      "dir": "webflow",
+      "cats": [],
+      "official": true,
+      "desc": "Webflow sitelerinizin CMS koleksiyonlarını, sayfalarını ve SEO alanlarını yönetir, siteyi yayınlar.",
+      "about": "Webflow MCP sunucusu Data API ve Designer API'ye erişim verir: CMS koleksiyon ve öğeleri, sayfa meta verileri, yerelleştirme ve Designer'daki öğe / stil düzenlemeleri.",
+      "scenario": "Webflow ile yapılmış sitede blog / CMS içeriğini toplu güncellemek, sayfa SEO alanlarını düzenlemek ya da yeni bölüm tasarlamak istediğinizde.",
+      "example": "“Blog koleksiyonundaki açıklaması boş yazılara içerikten 150 karakterlik özet yaz, taslak olarak kaydet.”",
+      "features": [
+        [
+          "CMS",
+          "Koleksiyon ve öğeleri listeler, oluşturur, günceller ve yayınlar."
+        ],
+        [
+          "Sayfa ve SEO",
+          "Sayfa başlığı, açıklaması ve Open Graph alanlarını düzenler."
+        ],
+        [
+          "Designer",
+          "Designer uygulamasındaki öğeleri, bileşenleri ve stilleri düzenler."
+        ],
+        [
+          "Yayınlama",
+          "Siteyi seçilen alan adlarına yayınlar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.webflow.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.webflow.com/mcp/reference/overview",
+      "depts": [
+        "pazarlama",
+        "tasarim"
+      ],
+      "risk": "high",
+      "notes": [
+        "Yayınlama canlı siteyi değiştirir; onay alın."
+      ]
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "vendor": "Wix",
+      "dir": "wix",
+      "cats": [],
+      "official": true,
+      "desc": "Wix sitelerinin içerik, mağaza, rezervasyon ve blog verilerini yönetir.",
+      "about": "Wix MCP sunucusu Wix sitelerinde site oluşturmayı ve Wix Stores, Bookings, Blog, CMS gibi iş çözümlerinin API'lerini kullanmayı sağlar; Wix geliştirici belgelerinde de arama yapar.",
+      "scenario": "Wix ile yönetilen sitede ürün, rezervasyon ya da blog içeriğini Claude ile güncellemek istediğinizde.",
+      "example": "“Mağazadaki stoku 5'in altına düşen ürünleri listele ve kategori bazında özetle.”",
+      "features": [
+        [
+          "Mağaza",
+          "Ürün, stok ve siparişleri okur ve günceller."
+        ],
+        [
+          "Rezervasyon",
+          "Hizmet ve randevu kayıtlarını yönetir."
+        ],
+        [
+          "Blog ve CMS",
+          "Yazı ve CMS koleksiyon öğelerini yönetir."
+        ],
+        [
+          "Geliştirici belgeleri",
+          "Wix API belgelerinde arama yaparak doğru çağrıyı bulur."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.wix.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://dev.wix.com/docs/sdk/articles/use-the-wix-mcp/about-the-wix-mcp",
+      "depts": [
+        "pazarlama",
+        "satis",
+        "operasyon"
+      ],
+      "risk": "high",
+      "notes": [
+        "Sipariş ve müşteri verisi kişisel veri içerir."
+      ]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "vendor": "Shopify",
+      "dir": "shopify",
+      "cats": [],
+      "official": true,
+      "desc": "Shopify uygulama ve tema geliştirirken GraphQL şemasında, belgelerde arar ve kodu doğrular.",
+      "about": "Shopify Dev MCP sunucusu Admin GraphQL şemasını, Shopify belgelerini ve Polaris / Liquid / Functions rehberlerini Claude'a verir; yazılan GraphQL sorgularını şemaya göre doğrular. Mağaza verisine (ürün, sipariş) erişim için ayrıca mağazanın kendi MCP'si ya da Admin API yetkisi gerekir.",
+      "scenario": "Shopify uygulaması, tema ya da mağaza entegrasyonu geliştirirken doğru ve güncel API kullanımı için.",
+      "example": "“Varyant stoklarını toplu güncelleyen Admin GraphQL mutation'ını yaz ve şemaya göre doğrula.”",
+      "features": [
+        [
+          "Belge arama",
+          "shopify.dev belgelerinde arama yapar."
+        ],
+        [
+          "GraphQL şeması",
+          "Admin API şemasındaki tip, alan ve mutation'ları inceler."
+        ],
+        [
+          "Kod doğrulama",
+          "GraphQL kod bloklarını ve tema / Liquid kodunu şemaya göre doğrular."
+        ],
+        [
+          "Rehberler",
+          "Uygulama, tema, Functions ve Polaris geliştirme rehberlerini getirir."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@shopify/dev-mcp@latest"
+        ],
+        "env": [],
+        "auth": "none"
+      },
+      "docs": "https://shopify.dev/docs/apps/build/devmcp",
+      "depts": [
+        "bilgi-teknolojileri",
+        "satis",
+        "urun-arge"
+      ],
+      "risk": "low",
+      "notes": [
+        "Dev MCP mağaza verisine dokunmaz; mağaza işlemleri için ayrı yetkilendirme gerekir."
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "vendor": "GitHub",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "Depoları, issue ve pull request'leri, Actions iş akışlarını ve güvenlik uyarılarını yönetir.",
+      "about": "GitHub'ın resmî MCP sunucusu depo içeriğini okuma, kod arama, issue / PR oluşturma ve inceleme, Actions çalıştırmalarını izleme ve kod tarama / Dependabot uyarılarını okuma araçlarını sağlar. Araç setleri (toolsets) ile yalnız gerekenler açılabilir.",
+      "scenario": "Issue'dan iş alıp PR açmak, CI hatasını incelemek, güvenlik uyarılarını önceliklendirmek ya da depolar arası kod aramak istediğinizde.",
+      "example": "“‘bug’ etiketli açık issue'ları önceliğe göre sırala, en kritik olanın düzeltmesi için dal açıp PR taslağı oluştur.”",
+      "features": [
+        [
+          "Depo ve kod",
+          "Dosya içeriği okur, depolarda kod arar, dal ve commit bilgilerini getirir."
+        ],
+        [
+          "Issue",
+          "Issue oluşturur, günceller, yorum yazar, etiket ve atama yapar."
+        ],
+        [
+          "Pull request",
+          "PR açar, değişiklikleri inceler, inceleme yorumu yazar, birleştirir."
+        ],
+        [
+          "Actions",
+          "İş akışı çalıştırmalarını ve loglarını izler, yeniden çalıştırır."
+        ],
+        [
+          "Güvenlik",
+          "Kod tarama, gizli bilgi tarama ve Dependabot uyarılarını okur."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "auth": "oauth"
+      },
+      "docs": "https://github.com/github/github-mcp-server",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge",
+        "siber-guvenlik"
+      ],
+      "risk": "high",
+      "notes": [
+        "Birleştirme (merge), dal silme ve sürüm yayınlama onaysız yapılmaz.",
+        "Kişisel erişim belirteci kullanılıyorsa yalnız gerekli depolara ve izinlere sınırlayın."
+      ]
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "vendor": "GitLab",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "GitLab projelerindeki issue, merge request ve pipeline bilgilerini okur ve yönetir.",
+      "about": "GitLab MCP sunucusu GitLab örneğinize OAuth ile bağlanır; issue ve merge request oluşturma, MR değişikliklerini ve pipeline işlerini görüntüleme, proje ve kod içinde arama yapma araçlarını sağlar.",
+      "scenario": "Kod ve CI/CD süreçleri GitLab'da yürüyen projelerde issue / MR yönetimini Claude'a devretmek istediğinizde.",
+      "example": "“Son başarısız pipeline'ın hangi işte ve neden düştüğünü bul, düzeltme için MR taslağı aç.”",
+      "features": [
+        [
+          "Issue",
+          "Issue oluşturur ve ayrıntısını getirir."
+        ],
+        [
+          "Merge request",
+          "MR oluşturur, değişiklikleri ve commit'leri listeler."
+        ],
+        [
+          "Pipeline",
+          "MR pipeline'larını ve işlerini görüntüler."
+        ],
+        [
+          "Arama",
+          "Proje, issue ve kod içinde arama yapar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://gitlab.com/api/v4/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge"
+      ],
+      "risk": "high",
+      "notes": [
+        "Kendi sunucunuzdaki GitLab için adresteki gitlab.com'u kendi alan adınızla değiştirin."
+      ]
+    },
+    {
+      "id": "context7",
+      "name": "Context7",
+      "vendor": "Upstash",
+      "dir": "context7",
+      "cats": [],
+      "official": true,
+      "desc": "Kütüphane ve framework'lerin güncel, sürüme özel belgelerini ve kod örneklerini getirir.",
+      "about": "Context7, binlerce açık kaynak kütüphanenin belgelerini dizinler; Claude kod yazarken eğitim verisindeki eski API yerine kullandığınız sürümün güncel belgesine bakar. Uydurma ya da eskimiş fonksiyon kullanımı azalır.",
+      "scenario": "Hızlı değişen kütüphanelerle (Next.js, Tailwind, Prisma, Supabase …) çalışırken doğru ve güncel API kullanımı için.",
+      "example": "“Next.js 15'te sunucu eylemleriyle form doğrulama nasıl yapılır? Context7'den güncel belgeye bakarak örnek yaz.”",
+      "features": [
+        [
+          "Kütüphane bulma",
+          "Ada göre kütüphaneyi ve kimliğini bulur."
+        ],
+        [
+          "Güncel belge",
+          "İstenen konu ve sürüm için belge parçalarını ve kod örneklerini getirir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "auth": "none"
+      },
+      "docs": "https://github.com/upstash/context7",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge"
+      ],
+      "risk": "low",
+      "notes": [
+        "Ücretsiz kullanımda istek sınırı vardır; yoğun kullanımda API anahtarı ekleyin."
+      ]
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "vendor": "Microsoft",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "Gerçek bir tarayıcıyı yönetir: sayfaları açar, tıklar, form doldurur, ekran görüntüsü alır.",
+      "about": "Playwright MCP sunucusu Claude'a tarayıcı otomasyonu verir. Sayfayı ekran görüntüsü yerine erişilebilirlik ağacıyla okuduğu için hızlı ve kararlıdır. Uçtan uca test senaryosu yazmak, akışı elle denemek ve hata yeniden üretmek için kullanılır.",
+      "scenario": "Yeni bir formun ya da ödeme akışının tarayıcıda gerçekten çalıştığını doğrulamak, E2E test yazmak ya da hatayı yeniden üretmek istediğinizde.",
+      "example": "“Yerel sitede iletişim formunu boş, hatalı ve geçerli verilerle doldur; her durumda çıkan mesajları raporla ve Playwright testine çevir.”",
+      "features": [
+        [
+          "Gezinme ve etkileşim",
+          "Sayfa açar, tıklar, yazar, seçer, dosya yükler, sekmeleri yönetir."
+        ],
+        [
+          "Sayfa anlık görüntüsü",
+          "Sayfayı erişilebilirlik ağacı olarak okur; öğeleri rol ve adla bulur."
+        ],
+        [
+          "Ekran görüntüsü ve PDF",
+          "Sayfanın ya da öğenin görüntüsünü alır, PDF kaydeder."
+        ],
+        [
+          "Konsol ve ağ",
+          "Konsol mesajlarını ve ağ isteklerini listeler."
+        ],
+        [
+          "Test üretimi",
+          "Yapılan adımlardan Playwright test kodu üretilmesine yardım eder."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ],
+        "env": [],
+        "auth": "none"
+      },
+      "docs": "https://github.com/microsoft/playwright-mcp",
+      "depts": [
+        "bilgi-teknolojileri",
+        "kalite",
+        "urun-arge"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Canlı sitede form gönderimi gerçek kayıt oluşturur; testleri yerel ya da hazırlık ortamında çalıştırın.",
+        "Tarayıcı oturumundaki çerezlere ve oturum açılmış hesaplara erişebilir."
+      ]
+    },
+    {
+      "id": "chrome-devtools",
+      "name": "Chrome DevTools",
+      "vendor": "Google",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "Chrome geliştirici araçlarıyla performans izi alır, ağ ve konsolu inceler, Core Web Vitals ölçer.",
+      "about": "Chrome DevTools MCP sunucusu Claude'a canlı bir Chrome örneği ve geliştirici araçlarını verir: performans kaydı ve öngörüleri (LCP, INP, CLS), ağ istekleri, konsol hataları, DOM / CSS inceleme, cihaz ve ağ hızı emülasyonu.",
+      "scenario": "Sayfanın neden yavaş açıldığını ölçmek, Core Web Vitals sorunlarını bulmak ya da yalnız tarayıcıda görünen bir hatayı ayıklamak istediğinizde.",
+      "example": "“Ana sayfanın mobil 4G emülasyonunda performans izini al; LCP'yi geciktiren kaynakları ve çözüm önerilerini listele.”",
+      "features": [
+        [
+          "Performans",
+          "Performans izi kaydeder, LCP / INP / CLS ve öngörüleri çıkarır."
+        ],
+        [
+          "Ağ",
+          "İstekleri, yanıt kodlarını, boyut ve süreleri listeler."
+        ],
+        [
+          "Konsol",
+          "Konsol hata ve uyarılarını okur, betik çalıştırır."
+        ],
+        [
+          "Emülasyon",
+          "Mobil cihaz, CPU yavaşlatma ve ağ hızı emülasyonu yapar."
+        ],
+        [
+          "Ekran görüntüsü ve DOM",
+          "Sayfa görüntüsü alır, öğeleri ve stilleri inceler."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "chrome-devtools-mcp@latest"
+        ],
+        "env": [],
+        "auth": "none"
+      },
+      "docs": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "depts": [
+        "bilgi-teknolojileri",
+        "pazarlama",
+        "kalite"
+      ],
+      "risk": "low",
+      "notes": [
+        "Tarayıcıdaki açık oturumlara erişebilir; ayrı bir tarayıcı profiliyle kullanın."
+      ]
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "vendor": "Postman",
+      "dir": "postman",
+      "cats": [],
+      "official": true,
+      "desc": "Postman koleksiyonlarını, ortamlarını, mock sunucularını ve API şartnamelerini yönetir.",
+      "about": "Postman MCP sunucusu çalışma alanlarınızdaki koleksiyon, istek, ortam ve mock sunucularını yönetmeyi; OpenAPI şartnamesi ile koleksiyonu karşılıklı üretip senkronlamayı sağlar.",
+      "scenario": "Yazılan API için koleksiyon ve örnek istekleri otomatik oluşturmak, OpenAPI dokümanını güncel tutmak ya da ön yüz için mock sunucu açmak istediğinizde.",
+      "example": "“Yeni /api/orders uç noktaları için koleksiyona istekleri ve örnek yanıtları ekle, şartnameden mock sunucu oluştur.”",
+      "features": [
+        [
+          "Koleksiyon ve istek",
+          "Koleksiyon, klasör, istek ve örnek yanıt oluşturur ve günceller."
+        ],
+        [
+          "Ortam",
+          "Ortam ve değişkenleri yönetir."
+        ],
+        [
+          "Şartname",
+          "OpenAPI şartnamesi oluşturur, koleksiyondan üretir, iki yönlü senkronlar."
+        ],
+        [
+          "Mock sunucu",
+          "Koleksiyondan mock sunucu oluşturur ve yayınlar."
+        ],
+        [
+          "Arama",
+          "Postman Ağı'ndaki herkese açık API'lerde arar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.postman.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://learning.postman.com/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge"
+      ],
+      "risk": "medium",
+      "notes": [
+        "/mcp adresi tam araç setidir; varsayılan /minimal daha az araç açar.",
+        "API anahtarıyla bağlanmak için Authorization: Bearer başlığı kullanılır; AB sunucusunda (mcp.eu.postman.com) yalnız API anahtarı geçerlidir.",
+        "Ortam değişkenlerinde gerçek gizli bilgiler varsa bunlar Claude'un bağlamına girebilir; test anahtarları kullanın."
+      ]
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "vendor": "Sentry",
+      "dir": "sentry",
+      "cats": [],
+      "official": true,
+      "desc": "Canlıdaki hataları, olay ayrıntılarını ve stack trace'leri getirir; kök neden analizi yapar.",
+      "about": "Sentry MCP sunucusu kuruluşunuzdaki projelerde issue ve olay araması, stack trace ve bağlam getirme, Seer ile otomatik kök neden analizi ve proje / DSN yönetimi araçlarını sağlar. Claude hatayı koddaki karşılığıyla eşleyip düzeltme önerebilir.",
+      "scenario": "Canlıda artan bir hatayı incelemek, yeni sürümden sonra çıkan istisnaları bulmak ya da hatayı düzeltip doğrulamak istediğinizde.",
+      "example": "“Son 24 saatte en çok kullanıcıyı etkileyen 3 hatayı getir, stack trace'e göre koddaki yerini bul ve düzeltme öner.”",
+      "features": [
+        [
+          "Issue ve olay arama",
+          "Doğal dille ya da filtreyle hata ve olay arar."
+        ],
+        [
+          "Ayrıntı",
+          "Stack trace, etiketler, kullanıcı etkisi ve sürüm bilgisini getirir."
+        ],
+        [
+          "Kök neden analizi",
+          "Seer ile hatanın kök nedenini ve düzeltme önerisini çıkarır."
+        ],
+        [
+          "Proje yönetimi",
+          "Proje, takım ve DSN oluşturur ve listeler."
+        ],
+        [
+          "Issue güncelleme",
+          "Issue'yu çözüldü, yok sayıldı olarak işaretler ve atar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.sentry.dev/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://mcp.sentry.dev/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "kalite"
+      ],
+      "risk": "low",
+      "notes": [
+        "Olay verisinde kişisel veri olabilir; Sentry'de veri temizleme (data scrubbing) açık olmalıdır."
+      ]
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "vendor": "Datadog",
+      "dir": "datadog",
+      "cats": [],
+      "official": true,
+      "desc": "Datadog'daki log, metrik, trace, monitör ve olay kayıtlarını sorgular.",
+      "about": "Datadog MCP sunucusu gözlemlenebilirlik verinizi Claude'a açar: log arama, metrik sorgusu, APM trace'leri, monitör durumları, olaylar (incident) ve panolar. Olay müdahalesinde “canlıda ne oluyor?” sorusunu veriyle yanıtlamak için kullanılır.",
+      "scenario": "Canlıda yavaşlama ya da hata artışı olduğunda log, metrik ve trace'i birlikte incelemek istediğinizde.",
+      "example": "“Ödeme servisinde son 1 saatte p95 gecikmesi neden arttı? İlgili log ve trace'leri bul, olası nedeni özetle.”",
+      "features": [
+        [
+          "Log",
+          "Logları sorgu ve zaman aralığıyla arar."
+        ],
+        [
+          "Metrik",
+          "Metrik sorgusu çalıştırır, zaman serisini getirir."
+        ],
+        [
+          "Trace",
+          "APM trace ve span'lerini inceler."
+        ],
+        [
+          "Monitör ve olay",
+          "Monitör durumlarını, olay (incident) kayıtlarını ve panoları listeler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.datadoghq.com/v1/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.datadoghq.com/mcp_server/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "siber-guvenlik"
+      ],
+      "risk": "low",
+      "notes": [
+        "Adres US1 bölgesi içindir; EU1 için https://mcp.datadoghq.eu/v1/mcp, diğer bölgeler için mcp.<site>/v1/mcp kullanılır.",
+        "Log ve trace verisinde kişisel veri olabilir; yalnız gerekli zaman aralığını sorgulayın."
+      ]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "vendor": "Supabase",
+      "dir": "supabase",
+      "cats": [],
+      "official": true,
+      "desc": "Supabase projelerinde tabloları inceler, SQL çalıştırır, migration uygular, edge function dağıtır.",
+      "about": "Supabase MCP sunucusu veritabanı şemasını okuma, SQL çalıştırma, migration uygulama, edge function dağıtma, log ve güvenlik / performans önerilerini (advisors) okuma, TypeScript tipleri üretme ve geliştirme dalı (branch) yönetme araçlarını sağlar.",
+      "scenario": "Supabase üzerinde çalışan uygulamada şema tasarlamak, RLS politikalarını kontrol etmek, hata ayıklamak ya da migration yazmak istediğinizde.",
+      "example": "“orders tablosunun RLS politikalarını kontrol et; güvenlik önerilerini (advisors) getir ve eksik politikalar için migration taslağı hazırla.”",
+      "features": [
+        [
+          "Şema",
+          "Tabloları, uzantıları ve migration geçmişini listeler."
+        ],
+        [
+          "SQL ve migration",
+          "SQL çalıştırır, migration uygular."
+        ],
+        [
+          "Edge function",
+          "Fonksiyonları listeler, dağıtır."
+        ],
+        [
+          "Log ve öneriler",
+          "Servis loglarını ve güvenlik / performans önerilerini getirir."
+        ],
+        [
+          "Geliştirme dalı",
+          "Dal oluşturur, birleştirir, sıfırlar."
+        ],
+        [
+          "Tip üretimi",
+          "Şemadan TypeScript tipleri üretir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.supabase.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://supabase.com/docs/guides/getting-started/mcp",
+      "depts": [
+        "bilgi-teknolojileri",
+        "veri-analitik"
+      ],
+      "risk": "high",
+      "notes": [
+        "Adrese ?read_only=true&project_ref=<proje> ekleyerek salt okunur ve tek projeyle sınırlayın.",
+        "Canlı veritabanı yerine geliştirme projesi ya da dal kullanın; migration öncesi yedek alın."
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "vendor": "Cloudflare",
+      "dir": "cloudflare",
+      "cats": [],
+      "official": true,
+      "desc": "Cloudflare hesabınızdaki Workers, KV, R2, D1, DNS ve diğer kaynakları API üzerinden yönetir.",
+      "about": "Cloudflare'in API MCP sunucusu Cloudflare API'sinin tamamını kapsar: Workers, KV, R2, D1, Hyperdrive, DNS, WAF ve gözlemlenebilirlik verisi. Belgelerde arama için ayrı bir dokümantasyon sunucusu da vardır.",
+      "scenario": "Cloudflare üzerinde barındırılan site ya da Worker'ın yapılandırmasını incelemek, kaynak oluşturmak ya da sorun gidermek istediğinizde.",
+      "example": "“Hesaptaki Worker'ları ve bağlı KV / R2 kaynaklarını listele; son dağıtımdan sonra hata oranı artan Worker'ın loglarını getir.”",
+      "features": [
+        [
+          "Workers",
+          "Worker'ları, kodlarını ve bağlamalarını (bindings) listeler."
+        ],
+        [
+          "Depolama",
+          "KV, R2 ve D1 kaynaklarını oluşturur, sorgular, siler."
+        ],
+        [
+          "DNS ve güvenlik",
+          "DNS kayıtlarını ve güvenlik kurallarını yönetir."
+        ],
+        [
+          "Gözlemlenebilirlik",
+          "Worker log ve metriklerini sorgular."
+        ],
+        [
+          "Belge arama",
+          "Cloudflare belgelerinde arama yapar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.cloudflare.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "siber-guvenlik"
+      ],
+      "risk": "high",
+      "notes": [
+        "DNS ve güvenlik kuralı değişiklikleri siteyi erişilemez yapabilir; değişiklikten önce mevcut kaydı yedekleyin ve onay alın."
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "vendor": "Vercel",
+      "dir": "vercel",
+      "cats": [],
+      "official": true,
+      "desc": "Vercel projelerini, dağıtımlarını ve yapı / çalışma loglarını inceler; Vercel belgelerinde arar.",
+      "about": "Vercel MCP sunucusu takımlarınızdaki projeleri ve dağıtımları listeleme, başarısız yapının loglarını getirme, dağıtım ayrıntısını inceleme ve Vercel belgelerinde arama araçlarını sağlar.",
+      "scenario": "Vercel'de yayınlanan sitede başarısız dağıtımın nedenini bulmak ya da proje yapılandırmasını incelemek istediğinizde.",
+      "example": "“Son başarısız dağıtımın yapı logunu getir, hatanın kaynağını bul ve düzeltmeyi öner.”",
+      "features": [
+        [
+          "Proje ve takım",
+          "Takımları ve projeleri listeler."
+        ],
+        [
+          "Dağıtım",
+          "Dağıtımları ve ayrıntılarını getirir."
+        ],
+        [
+          "Loglar",
+          "Yapı (build) ve çalışma zamanı loglarını getirir."
+        ],
+        [
+          "Belge arama",
+          "Vercel belgelerinde arama yapar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.vercel.com",
+        "auth": "oauth"
+      },
+      "docs": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "depts": [
+        "bilgi-teknolojileri"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Ortam değişkenleri loglarda görünmemelidir; yapı loglarına gizli bilgi yazdırmayın."
+      ]
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "vendor": "Netlify",
+      "dir": "netlify",
+      "cats": [],
+      "official": true,
+      "desc": "Netlify'da site oluşturur, dağıtır, ortam değişkenlerini ve form gönderimlerini yönetir.",
+      "about": "Netlify MCP sunucusu Netlify CLI ve API'si üzerinden proje oluşturma, dağıtma, ortam değişkeni, erişim kontrolü, form ve uzantı yönetimi araçlarını sağlar.",
+      "scenario": "Statik site ya da Jamstack projesini Netlify'a almak, dağıtım ayarlarını ya da form gönderimlerini yönetmek istediğinizde.",
+      "example": "“Bu projeyi Netlify'da yeni site olarak oluştur, önizleme dağıtımı yap ve adresini ver.”",
+      "features": [
+        [
+          "Proje",
+          "Site oluşturur, ayarlarını günceller."
+        ],
+        [
+          "Dağıtım",
+          "Siteyi derleyip dağıtır, dağıtım durumunu izler."
+        ],
+        [
+          "Ortam değişkenleri",
+          "Ortam değişkenlerini ve gizli bilgileri yönetir."
+        ],
+        [
+          "Formlar",
+          "Form gönderimlerini okur, form algılamayı açar / kapatır."
+        ],
+        [
+          "Erişim ve uzantılar",
+          "Site erişim kontrollerini ve uzantıları yönetir."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@netlify/mcp"
+        ],
+        "env": [],
+        "auth": "oauth"
+      },
+      "docs": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview/",
+      "depts": [
+        "bilgi-teknolojileri"
+      ],
+      "risk": "high",
+      "notes": [
+        "Netlify uzak sunucuyu da (https://netlify-mcp.netlify.app/mcp) önerir; yerel komut Netlify CLI oturumunu kullanır.",
+        "Canlı (production) dağıtımı onaysız yapılmaz.",
+        "Form gönderimleri kişisel veri içerir."
+      ]
+    },
+    {
+      "id": "neon",
+      "name": "Neon",
+      "vendor": "Neon",
+      "dir": "neon",
+      "cats": [],
+      "official": true,
+      "desc": "Neon Postgres projelerinde dal açar, SQL çalıştırır, migration'ı dalda deneyip uygular.",
+      "about": "Neon MCP sunucusu proje ve dal yönetimi, SQL çalıştırma, şema inceleme ve güvenli migration akışını (önce geçici dalda dene, sonra ana dala uygula) sağlar; yavaş sorgular için ayarlama önerir.",
+      "scenario": "Neon üzerinde Postgres kullanan projede şema değişikliğini canlıyı riske atmadan denemek istediğinizde.",
+      "example": "“users tablosuna email_verified sütununu ekleyen migration'ı geçici dalda dene; sorun yoksa ana dala uygulamak için onayımı iste.”",
+      "features": [
+        [
+          "Proje ve dal",
+          "Proje ve dal oluşturur, listeler, siler."
+        ],
+        [
+          "SQL",
+          "SQL ve işlem (transaction) çalıştırır, tabloları ve şemayı açıklar."
+        ],
+        [
+          "Güvenli migration",
+          "Migration'ı geçici dalda hazırlar, doğruladıktan sonra uygular."
+        ],
+        [
+          "Sorgu ayarlama",
+          "Yavaş sorguları bulur, EXPLAIN ile iyileştirme önerir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.neon.tech/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://neon.com/docs/ai/neon-mcp-server",
+      "depts": [
+        "bilgi-teknolojileri",
+        "veri-analitik"
+      ],
+      "risk": "high",
+      "notes": [
+        "Ana dala uygulama ve dal silme onay gerektirir."
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "vendor": "MongoDB",
+      "dir": "",
+      "cats": [
+        "developer-tools",
+        "data-analytics"
+      ],
+      "official": true,
+      "desc": "MongoDB veritabanlarını sorgular, şema ve index'leri inceler, Atlas kümelerini yönetir.",
+      "about": "MongoDB MCP sunucusu bağlantı dizesiyle veritabanına, Atlas API anahtarlarıyla Atlas hesabına bağlanır: koleksiyon ve şema inceleme, find / aggregate sorguları, index yönetimi, Atlas küme, kullanıcı ve erişim listesi işlemleri.",
+      "scenario": "MongoDB kullanan projede veri modelini incelemek, sorgu yazmak ya da performans için index önermek istediğinizde.",
+      "example": "“orders koleksiyonunda son 30 günün şehir bazında ciro toplamını aggregate ile çıkar ve gerekli index'i öner.”",
+      "features": [
+        [
+          "Koleksiyon ve şema",
+          "Veritabanı ve koleksiyonları listeler, örnek belgelerden şema çıkarır."
+        ],
+        [
+          "Sorgu",
+          "find, count ve aggregate sorguları çalıştırır, EXPLAIN getirir."
+        ],
+        [
+          "Index",
+          "Index'leri listeler; --readOnly kaldırılırsa index oluşturur."
+        ],
+        [
+          "Atlas",
+          "Atlas API kimlik bilgileri (MDB_MCP_API_CLIENT_ID / SECRET) verilirse küme, veritabanı kullanıcısı ve IP erişim listesini yönetir; oluşturma araçları --readOnly kaldırılınca açılır."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "mongodb-mcp-server@latest",
+          "--readOnly"
+        ],
+        "env": [
+          "MDB_MCP_CONNECTION_STRING"
+        ],
+        "auth": "apikey"
+      },
+      "docs": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "depts": [
+        "bilgi-teknolojileri",
+        "veri-analitik"
+      ],
+      "risk": "high",
+      "notes": [
+        "--readOnly bayrağı yazma ve oluşturma araçlarını kapatır; yazma gerekiyorsa bilerek kaldırın.",
+        "Bağlantı dizesinde parola vardır; yalnız ortam değişkeniyle verin.",
+        "Atlas araçları için MDB_MCP_API_CLIENT_ID ve MDB_MCP_API_CLIENT_SECRET ortam değişkenlerini ayrıca tanımlayın."
+      ]
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "vendor": "Google",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "Firebase projelerinde Firestore, Authentication, güvenlik kuralları ve bildirim işlemlerini yapar.",
+      "about": "Firebase CLI ile gelen MCP sunucusu proje ve uygulama yönetimi, Firestore belge işlemleri, Authentication kullanıcıları, Security Rules doğrulama, Cloud Messaging ile bildirim gönderme ve Crashlytics hatalarını okuma araçlarını sağlar.",
+      "scenario": "Firebase üzerinde çalışan mobil / web uygulamasında veri, kullanıcı ya da güvenlik kurallarıyla çalışırken.",
+      "example": "“Firestore güvenlik kurallarımızı doğrula; kimliği doğrulanmamış kullanıcının orders koleksiyonunu okuyup okuyamadığını kontrol et.”",
+      "features": [
+        [
+          "Proje",
+          "Proje ve uygulamaları listeler, SDK yapılandırmasını getirir."
+        ],
+        [
+          "Firestore",
+          "Belge okur, yazar, siler; koleksiyonları listeler."
+        ],
+        [
+          "Authentication",
+          "Kullanıcıları arar, günceller."
+        ],
+        [
+          "Güvenlik kuralları",
+          "Firestore ve Storage kurallarını getirir ve doğrular."
+        ],
+        [
+          "Bildirim ve hata",
+          "Cloud Messaging ile bildirim gönderir, Crashlytics hatalarını okur."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "firebase-tools@latest",
+          "mcp"
+        ],
+        "env": [],
+        "auth": "oauth"
+      },
+      "docs": "https://firebase.google.com/docs/ai-assistance/mcp-server",
+      "depts": [
+        "bilgi-teknolojileri",
+        "urun-arge"
+      ],
+      "risk": "high",
+      "notes": [
+        "Kullanıcı ve belge silme, toplu bildirim gönderme onay gerektirir."
+      ]
+    },
+    {
+      "id": "aws-knowledge",
+      "name": "AWS Knowledge",
+      "vendor": "Amazon Web Services",
+      "dir": "",
+      "cats": [
+        "developer-tools"
+      ],
+      "official": true,
+      "desc": "AWS belgelerinde, mimari rehberlerde ve bölgesel hizmet durumunda arama yapar.",
+      "about": "AWS Knowledge MCP sunucusu AWS dokümantasyonu, API referansları, Well-Architected rehberleri ve blog içeriklerinde güncel arama yapar; hangi hizmetin hangi bölgede kullanılabildiğini söyler. Hesabınıza erişmez.",
+      "scenario": "AWS'de mimari kurarken doğru hizmeti, yapılandırmayı ve bölge desteğini belgeye dayanarak seçmek istediğinizde.",
+      "example": "“eu-central-1'de Bedrock'ta hangi modeller kullanılabilir? Belgeden kontrol et.”",
+      "features": [
+        [
+          "Belge arama",
+          "AWS belgelerinde ve rehberlerde arama yapar."
+        ],
+        [
+          "Sayfa okuma",
+          "Belge sayfasını Markdown olarak getirir."
+        ],
+        [
+          "Bölge desteği",
+          "Bölgeleri listeler; hizmet ve API'lerin bölgelere göre kullanılabilirliğini getirir."
+        ],
+        [
+          "Rehber (skill)",
+          "AWS'nin hazır uygulama rehberlerini getirir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://knowledge-mcp.global.api.aws",
+        "auth": "none"
+      },
+      "docs": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server",
+      "depts": [
+        "bilgi-teknolojileri"
+      ],
+      "risk": "low",
+      "notes": [
+        "Yalnız herkese açık belgeleri okur; hesabınızda işlem yapmaz."
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "vendor": "Stripe",
+      "dir": "stripe",
+      "cats": [],
+      "official": true,
+      "desc": "Stripe'ta müşteri, ürün, fiyat, ödeme bağlantısı, fatura, abonelik ve iade işlemlerini yapar.",
+      "about": "Stripe MCP sunucusu Stripe API'sinin sık kullanılan işlemlerini ve Stripe belgelerinde aramayı Claude'a açar. Ödeme entegrasyonu geliştirirken doğru API kullanımı ve test verisi oluşturmak için de kullanılır.",
+      "scenario": "Ödeme entegrasyonunu geliştirirken test verisi oluşturmak, bir müşterinin abonelik / fatura durumunu incelemek ya da Stripe belgesine bakmak istediğinizde.",
+      "example": "“Test modunda ‘Pro Aylık’ ürününü 499 TL aylık fiyatla oluştur ve ödeme bağlantısı üret.”",
+      "features": [
+        [
+          "Müşteri",
+          "Müşteri oluşturur ve listeler."
+        ],
+        [
+          "Ürün ve fiyat",
+          "Ürün, fiyat ve kupon oluşturur."
+        ],
+        [
+          "Ödeme bağlantısı ve fatura",
+          "Ödeme bağlantısı, fatura ve fatura kalemi oluşturur."
+        ],
+        [
+          "Abonelik",
+          "Abonelikleri listeler, günceller, iptal eder."
+        ],
+        [
+          "İade ve uyuşmazlık",
+          "İade oluşturur, uyuşmazlıkları listeler."
+        ],
+        [
+          "Belge arama",
+          "Stripe belgelerinde arama yapar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.stripe.com",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.stripe.com/mcp",
+      "depts": [
+        "finans",
+        "muhasebe",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "high",
+      "notes": [
+        "Önce test modunu kullanın; canlı ortamda iade, iptal ve fiyat değişikliği onay gerektirir.",
+        "Yerel kurulumda Stripe'ın ajanlar için önerdiği “agent” API anahtarını ya da OAuth'u kullanın; tam yetkili gizli anahtar kullanmayın."
+      ]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "vendor": "PayPal",
+      "dir": "paypal",
+      "cats": [],
+      "official": true,
+      "desc": "PayPal'da fatura, sipariş, iade, uyuşmazlık, abonelik ve işlem raporlarını yönetir.",
+      "about": "PayPal MCP sunucusu fatura oluşturma ve gönderme, sipariş ve ödeme, iade, uyuşmazlık yönetimi, abonelik planları, ürün kataloğu ve işlem raporlama araçlarını sağlar. Sandbox ortamı ayrı adrestedir.",
+      "scenario": "PayPal ile tahsilat yapan işletmede fatura kesmek, iadeyi yönetmek ya da işlem raporu çıkarmak istediğinizde.",
+      "example": "“Geçen ayın PayPal işlemlerini listele, iade edilenleri ayır ve toplamları para birimine göre özetle.”",
+      "features": [
+        [
+          "Fatura",
+          "Fatura oluşturur, gönderir, hatırlatır, iptal eder."
+        ],
+        [
+          "Sipariş ve ödeme",
+          "Sipariş oluşturur, ödemeyi tahsil eder."
+        ],
+        [
+          "İade ve uyuşmazlık",
+          "İade yapar, uyuşmazlıkları listeler ve yanıtlar."
+        ],
+        [
+          "Abonelik ve ürün",
+          "Abonelik planı ve ürün kataloğunu yönetir."
+        ],
+        [
+          "Raporlama",
+          "İşlemleri tarih ve duruma göre listeler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.paypal.com/http",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.paypal.com/tools/mcp-server/",
+      "depts": [
+        "finans",
+        "muhasebe",
+        "musteri-deneyimi"
+      ],
+      "risk": "high",
+      "notes": [
+        "Geliştirmede sandbox adresini (https://mcp.sandbox.paypal.com/http) kullanın.",
+        "İade ve fatura gönderimi onay gerektirir."
+      ]
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "vendor": "Block",
+      "dir": "square",
+      "cats": [],
+      "official": true,
+      "desc": "Square'de ödeme, sipariş, katalog, stok, müşteri ve randevu verisini yönetir.",
+      "about": "Square MCP sunucusu Square API'sinin ödeme, sipariş, katalog, envanter, müşteri, sadakat ve randevu hizmetlerine erişim sağlar.",
+      "scenario": "Square POS ya da online satış kullanan işletmede satış, stok ve müşteri verisiyle çalışırken.",
+      "example": "“Bu haftanın en çok satan 10 ürününü ve stok durumlarını getir.”",
+      "features": [
+        [
+          "Ödeme ve sipariş",
+          "Ödeme ve siparişleri listeler, oluşturur."
+        ],
+        [
+          "Katalog ve stok",
+          "Ürün kataloğunu ve stok sayımlarını yönetir."
+        ],
+        [
+          "Müşteri ve sadakat",
+          "Müşteri kayıtları ve sadakat programını yönetir."
+        ],
+        [
+          "Randevu",
+          "Randevu ve hizmet kayıtlarını yönetir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.squareup.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.squareup.com/docs/mcp",
+      "depts": [
+        "finans",
+        "satis",
+        "operasyon"
+      ],
+      "risk": "high",
+      "notes": [
+        "Uzak sunucu yalnız canlı (production) hesaba erişir; sandbox için yerel sunucu (npx square-mcp-server start, SANDBOX=true) kullanılır.",
+        "İade ve fiyat değişikliği onay gerektirir."
+      ]
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "vendor": "Ahrefs",
+      "dir": "ahrefs",
+      "cats": [],
+      "official": true,
+      "desc": "Ahrefs'in backlink, anahtar kelime, organik trafik ve rakip verisini getirir.",
+      "about": "Ahrefs MCP sunucusu Site Explorer, Keywords Explorer, Rank Tracker ve Site Audit verilerine API üzerinden erişim sağlar. SEO analizi, içerik fırsatı bulma ve rakip karşılaştırması için kullanılır.",
+      "scenario": "SEO stratejisi kurarken anahtar kelime fırsatlarını, rakiplerin backlink profilini ya da sitenin teknik sorunlarını incelemek istediğinizde.",
+      "example": "“Sitemizle iki rakibin ortak sıralandığı ama bizim ilk 10'da olmadığımız anahtar kelimeleri hacme göre listele.”",
+      "features": [
+        [
+          "Site Explorer",
+          "Alan adının backlink, referans alan adı, organik anahtar kelime ve trafik verisini getirir."
+        ],
+        [
+          "Keywords Explorer",
+          "Anahtar kelime hacmi, zorluğu, ilgili kelimeler ve SERP verisi."
+        ],
+        [
+          "Rakip analizi",
+          "Rakiplerin sıralandığı kelimeleri ve içerik boşluklarını bulur."
+        ],
+        [
+          "Site Audit",
+          "Teknik SEO denetim sonuçlarını getirir."
+        ],
+        [
+          "Rank Tracker",
+          "İzlenen kelimelerin sıralama değişimini getirir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://api.ahrefs.com/mcp/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+      "depts": [
+        "pazarlama"
+      ],
+      "risk": "low",
+      "notes": [
+        "Her sorgu API kotanızdan (birim) düşer; büyük raporlarda tahmini maliyeti kontrol edin."
+      ]
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "vendor": "Semrush",
+      "dir": "semrush",
+      "cats": [],
+      "official": true,
+      "desc": "Semrush'ın anahtar kelime, alan adı, backlink ve trafik verisine erişir.",
+      "about": "Semrush MCP sunucusu SEO ve Trends API verilerini Claude'a açar: anahtar kelime araştırması, alan adı ve rakip analizi, backlink profili ve trafik tahminleri.",
+      "scenario": "Rakip pazar payını, kanal bazında trafik tahminini ya da anahtar kelime fırsatlarını incelemek istediğinizde.",
+      "example": "“Sektördeki 3 rakibin son 6 aydaki organik ve ücretli trafik değişimini karşılaştır.”",
+      "features": [
+        [
+          "Anahtar kelime",
+          "Hacim, zorluk, niyet ve ilgili kelimeleri getirir."
+        ],
+        [
+          "Alan adı analizi",
+          "Organik / ücretli kelimeler ve rakipleri listeler."
+        ],
+        [
+          "Backlink",
+          "Backlink ve referans alan adı verisini getirir."
+        ],
+        [
+          "Trafik",
+          "Trends API ile trafik ve kitle tahminleri."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.semrush.com/v2/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.semrush.com/api/basics/semrush-mcp/",
+      "depts": [
+        "pazarlama"
+      ],
+      "risk": "low",
+      "notes": [
+        "API birimi tüketir; planınızın API erişimi olmalıdır."
+      ]
+    },
+    {
+      "id": "similarweb",
+      "name": "Similarweb",
+      "vendor": "Similarweb",
+      "dir": "similarweb",
+      "cats": [],
+      "official": true,
+      "desc": "Web sitelerinin trafik, kanal, kitle ve rakip verilerini getirir.",
+      "about": "Similarweb MCP sunucusu web sitesi ve uygulama trafik tahminlerine, trafik kaynaklarına, coğrafi dağılıma, anahtar kelime ve rakip verilerine erişim sağlar.",
+      "scenario": "Pazar araştırmasında rakiplerin trafik büyüklüğünü ve kanal dağılımını karşılaştırmak istediğinizde.",
+      "example": "“Üç rakibin Türkiye trafiğini kanal bazında (organik, ücretli, sosyal, doğrudan) karşılaştır.”",
+      "features": [
+        [
+          "Trafik",
+          "Ziyaret, süre, hemen çıkma oranı tahminleri."
+        ],
+        [
+          "Kanal dağılımı",
+          "Organik, ücretli, sosyal, yönlendirme ve doğrudan trafik payları."
+        ],
+        [
+          "Coğrafya ve kitle",
+          "Ülke dağılımı ve kitle ilgi alanları."
+        ],
+        [
+          "Rakip",
+          "Benzer siteler ve pazar payı."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.similarweb.com",
+        "auth": "apikey"
+      },
+      "docs": "https://developers.similarweb.com/docs/similarweb-mcp",
+      "depts": [
+        "pazarlama",
+        "satis",
+        "ust-yonetim"
+      ],
+      "risk": "low",
+      "notes": [
+        "Ücretli API planı ve API anahtarı gerektirir; anahtarın nasıl verileceği sağlayıcı belgesindedir."
+      ]
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "vendor": "Klaviyo",
+      "dir": "klaviyo",
+      "cats": [],
+      "official": true,
+      "desc": "Klaviyo'da kampanya, otomasyon akışı, segment, profil ve performans verisiyle çalışır.",
+      "about": "Klaviyo MCP sunucusu e-posta / SMS kampanyalarını ve akışlarını listeleme, performans raporu alma, segment ve liste yönetimi, profil arama ve kampanya / şablon taslağı oluşturma araçlarını sağlar.",
+      "scenario": "E-posta pazarlamasında kampanya performansını analiz etmek, yeni kampanya taslağı hazırlamak ya da segment oluşturmak istediğinizde.",
+      "example": "“Son 90 günün kampanyalarını açılma ve tıklama oranına göre sırala; en iyi 3'ün ortak özelliklerini çıkar ve yeni kampanya taslağı öner.”",
+      "features": [
+        [
+          "Kampanya",
+          "Kampanyaları listeler, taslak oluşturur."
+        ],
+        [
+          "Akış",
+          "Otomasyon akışlarını ve performansını getirir."
+        ],
+        [
+          "Segment ve liste",
+          "Segment ve listeleri listeler, oluşturur."
+        ],
+        [
+          "Profil",
+          "Abone profillerini arar, günceller."
+        ],
+        [
+          "Rapor",
+          "Kampanya ve akış performans raporları."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.klaviyo.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "depts": [
+        "pazarlama",
+        "musteri-deneyimi"
+      ],
+      "risk": "high",
+      "notes": [
+        "Kampanya gönderimi ve zamanlaması onay gerektirir.",
+        "Abone profilleri kişisel veridir; ticari ileti izni (İYS) kontrol edilmelidir."
+      ]
+    },
+    {
+      "id": "google-ads",
+      "name": "Google Ads",
+      "vendor": "Google",
+      "dir": "",
+      "cats": [
+        "sales-and-marketing"
+      ],
+      "official": true,
+      "desc": "Google Ads hesaplarınızdaki kampanya, reklam grubu ve performans verisini salt okunur sorgular.",
+      "about": "Google'ın resmî Google Ads MCP sunucusu Google Ads API'sine GAQL sorgularıyla erişir; hesap listesi, kampanya / reklam grubu / anahtar kelime performansı gibi raporları getirir. Değişiklik yapmaz.",
+      "scenario": "Reklam performansını analiz etmek, bütçe dağılımını değerlendirmek ya da düşük performanslı anahtar kelimeleri bulmak istediğinizde.",
+      "example": "“Son 30 günde maliyeti en yüksek ama dönüşümü olmayan 20 anahtar kelimeyi listele.”",
+      "features": [
+        [
+          "Hesaplar",
+          "Erişilebilir müşteri hesaplarını listeler."
+        ],
+        [
+          "Rapor sorgusu",
+          "GAQL ile kampanya, reklam grubu, reklam ve anahtar kelime performansını getirir."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "pipx",
+        "args": [
+          "run",
+          "--spec",
+          "git+https://github.com/googleads/google-ads-mcp.git",
+          "google-ads-mcp"
+        ],
+        "env": [
+          "GOOGLE_APPLICATION_CREDENTIALS",
+          "GOOGLE_PROJECT_ID",
+          "GOOGLE_ADS_DEVELOPER_TOKEN"
+        ],
+        "auth": "oauth"
+      },
+      "docs": "https://github.com/googleads/google-ads-mcp",
+      "depts": [
+        "pazarlama"
+      ],
+      "risk": "low",
+      "notes": [
+        "Google Cloud uygulama varsayılan kimlik bilgileri (OAuth) ve Google Ads geliştirici jetonu gerekir; yönetici hesapla erişimde GOOGLE_ADS_LOGIN_CUSTOMER_ID de tanımlanır.",
+        "Salt okunurdur; kampanya değişikliği yapmaz."
+      ]
+    },
+    {
+      "id": "google-analytics",
+      "name": "Google Analytics",
+      "vendor": "Google",
+      "dir": "",
+      "cats": [
+        "data-analytics",
+        "sales-and-marketing"
+      ],
+      "official": true,
+      "desc": "GA4 mülklerinizden rapor ve gerçek zamanlı veri çeker.",
+      "about": "Google'ın resmî Analytics MCP sunucusu Analytics Admin ve Data API'lerini kullanır: hesap ve mülk özetleri, özel boyut / metrikler, standart ve gerçek zamanlı raporlar. Salt okunurdur.",
+      "scenario": "Trafik, dönüşüm ve kampanya performansını sohbetle sorgulamak ya da aylık analitik raporu hazırlamak istediğinizde.",
+      "example": "“Son 28 günde kaynak / araca göre oturum ve dönüşüm sayılarını getir, önceki dönemle karşılaştır.”",
+      "features": [
+        [
+          "Hesap ve mülk",
+          "Hesap ve GA4 mülklerini, ayrıntılarını listeler."
+        ],
+        [
+          "Rapor",
+          "Boyut, metrik ve filtreyle rapor çalıştırır."
+        ],
+        [
+          "Gerçek zamanlı",
+          "Anlık aktif kullanıcı ve olay verisini getirir."
+        ],
+        [
+          "Özel tanımlar",
+          "Özel boyut ve metrikleri listeler."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "pipx",
+        "args": [
+          "run",
+          "analytics-mcp"
+        ],
+        "env": [
+          "GOOGLE_APPLICATION_CREDENTIALS",
+          "GOOGLE_CLOUD_PROJECT"
+        ],
+        "auth": "oauth"
+      },
+      "docs": "https://github.com/googleanalytics/google-analytics-mcp",
+      "depts": [
+        "pazarlama",
+        "veri-analitik"
+      ],
+      "risk": "low",
+      "notes": [
+        "Google Cloud'da Analytics API'leri etkin olmalı ve uygulama varsayılan kimlik bilgileri tanımlanmalıdır."
+      ]
+    },
+    {
+      "id": "amplitude",
+      "name": "Amplitude",
+      "vendor": "Amplitude",
+      "dir": "amplitude",
+      "cats": [],
+      "official": true,
+      "desc": "Amplitude'daki grafik, pano, deney, kohort ve olay verisini sorgular.",
+      "about": "Amplitude MCP sunucusu ürün analitiği verinizi Claude'a açar: grafik ve panolarda arama, grafik sorgusu çalıştırma, deney (A/B) sonuçları, kohortlar, olay taksonomisi ve oturum kayıtları.",
+      "scenario": "Ürünün hangi adımında kullanıcı kaybedildiğini, bir deneyin sonucunu ya da yeni özelliğin benimsenmesini incelemek istediğinizde.",
+      "example": "“Kayıt hunisinde geçen ay en çok kayıp hangi adımda yaşandı? Mobil ve masaüstünü karşılaştır.”",
+      "features": [
+        [
+          "Grafik ve pano",
+          "Grafik ve panoları arar, grafik sorgusu çalıştırır."
+        ],
+        [
+          "Deney",
+          "A/B deneylerinin sonuç ve anlamlılığını getirir."
+        ],
+        [
+          "Kohort",
+          "Kohortları listeler ve inceler."
+        ],
+        [
+          "Olay taksonomisi",
+          "Olay ve özellik tanımlarını getirir."
+        ],
+        [
+          "Oturum kaydı",
+          "Oturum kayıtlarını arar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.amplitude.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://amplitude.com/docs/analytics/amplitude-mcp",
+      "depts": [
+        "veri-analitik",
+        "urun-arge",
+        "pazarlama"
+      ],
+      "risk": "low",
+      "notes": [
+        "AB veri merkezindeki hesaplar için ayrı (EU) adres kullanılır."
+      ]
+    },
+    {
+      "id": "bigdata",
+      "name": "Bigdata.com",
+      "vendor": "RavenPack",
+      "dir": "bigdata",
+      "cats": [],
+      "official": true,
+      "desc": "Haber, şirket raporları, kazanç görüşmeleri ve piyasa verisinde finansal araştırma yapar.",
+      "about": "Bigdata.com MCP sunucusu finansal ve iş içeriğinde (haber, SEC dosyaları, kazanç görüşmesi dökümleri, analist raporları) anlamsal arama, şirket / ülke / ETF özet kartları, duygu (sentiment) analizi, etkinlik takvimi ve izleme listeleri sağlar.",
+      "scenario": "Yatırımcı ilişkileri, rakip ya da sektör analizi için güncel ve kaynaklı finansal araştırma yapmak istediğinizde.",
+      "example": "“Sektördeki 3 halka açık rakibin son çeyrek kazanç görüşmelerinde öne çıkan riskleri özetle, kaynaklarıyla ver.”",
+      "features": [
+        [
+          "Arama",
+          "Haber, rapor ve döküm içinde anlamsal arama."
+        ],
+        [
+          "Özet kartları",
+          "Şirket, ülke, ETF ve piyasa özet kartları."
+        ],
+        [
+          "Duygu analizi",
+          "Şirket bazında haber duygu eğilimi."
+        ],
+        [
+          "Takvim ve izleme listesi",
+          "Kazanç takvimi, izleme listesi oluşturma ve izleme."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.bigdata.com/mcp-reference/introduction",
+      "depts": [
+        "finans",
+        "ust-yonetim",
+        "veri-analitik"
+      ],
+      "risk": "low",
+      "notes": [
+        "Ücretli abonelik gerektirir; bağlantı adresini belgeden alın."
+      ]
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "vendor": "HubSpot",
+      "dir": "hubspot",
+      "cats": [],
+      "official": true,
+      "desc": "HubSpot CRM'deki kişi, şirket, fırsat, bilet ve etkinlik kayıtlarını arar ve yönetir.",
+      "about": "HubSpot MCP sunucusu CRM nesnelerinde (kişi, şirket, fırsat, bilet, ürün, teklif) arama, okuma ve kayıt oluşturma / güncelleme, not ve görev ekleme araçlarını sağlar.",
+      "scenario": "Satış hattını analiz etmek, toplantı sonrası notları CRM'e işlemek ya da müşteri geçmişini hızla özetlemek istediğinizde.",
+      "example": "“Bu çeyrekte kapanması beklenen ve 30 gündür etkinliği olmayan fırsatları listele, her biri için takip görevi oluştur.”",
+      "features": [
+        [
+          "CRM arama",
+          "Kişi, şirket, fırsat ve biletlerde filtreli arama."
+        ],
+        [
+          "Kayıt yönetimi",
+          "Kayıt oluşturur ve günceller, ilişkilendirir."
+        ],
+        [
+          "Not ve görev",
+          "Kayda not, görev ve etkinlik ekler."
+        ],
+        [
+          "Özellikler",
+          "Nesne özelliklerini ve satış hattı aşamalarını getirir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.hubspot.com",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.hubspot.com/mcp",
+      "depts": [
+        "satis",
+        "pazarlama",
+        "musteri-deneyimi"
+      ],
+      "risk": "high",
+      "notes": [
+        "CRM kayıtları kişisel veridir; yalnız gerekli alanları çekin.",
+        "Toplu güncelleme ve silme onay gerektirir."
+      ]
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "vendor": "Salesforce",
+      "dir": "",
+      "cats": [
+        "sales-and-marketing"
+      ],
+      "official": true,
+      "desc": "Salesforce org'unda SOQL sorgusu çalıştırır, kayıt ve metadata ile çalışır, Apex testlerini yürütür.",
+      "about": "Salesforce DX MCP sunucusu Salesforce CLI üzerinden yetkilendirilmiş org'lara bağlanır: SOQL sorguları, kayıt işlemleri, metadata dağıtma / getirme, Apex testleri ve kod analizi. Araç setleri ile yalnız gerekenler açılır.",
+      "scenario": "Salesforce üzerinde geliştirme yaparken ya da CRM verisini sorgulayıp raporlamak istediğinizde.",
+      "example": "“Bu ay oluşturulan ve ‘Qualified’ aşamasındaki fırsatları sahiplerine göre say; SOQL'i de göster.”",
+      "features": [
+        [
+          "SOQL",
+          "Org verisinde SOQL sorgusu çalıştırır."
+        ],
+        [
+          "Metadata",
+          "Metadata'yı org'a dağıtır ve org'dan getirir."
+        ],
+        [
+          "Apex test",
+          "Apex testlerini çalıştırır, sonuçları getirir."
+        ],
+        [
+          "Org yönetimi",
+          "Yetkili org'ları listeler, kullanıcıya izin seti atar."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@salesforce/mcp",
+          "--orgs",
+          "DEFAULT_TARGET_ORG",
+          "--toolsets",
+          "orgs,metadata,data,users,testing"
+        ],
+        "env": [],
+        "auth": "oauth"
+      },
+      "docs": "https://github.com/salesforcecli/mcp",
+      "depts": [
+        "satis",
+        "bilgi-teknolojileri",
+        "musteri-deneyimi"
+      ],
+      "risk": "high",
+      "notes": [
+        "Önce sandbox org kullanın; canlı org'a metadata dağıtımı onay gerektirir.",
+        "Salesforce CLI ile org yetkilendirmesi önceden yapılmalıdır."
+      ]
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo.io",
+      "vendor": "Apollo.io",
+      "dir": "apollo",
+      "cats": [],
+      "official": true,
+      "desc": "Apollo'nun kişi / şirket veritabanında potansiyel müşteri arar, zenginleştirir ve e-posta sekanslarını yönetir.",
+      "about": "Apollo.io MCP sunucusu kişi ve şirket arama, veri zenginleştirme, e-posta / telefon doğrulama, sekans (çok adımlı e-posta kampanyası) oluşturma ve kişileri sekansa ekleme, fırsat ve görev yönetimi, görüşme dökümü araçlarını sağlar.",
+      "scenario": "Hedef kitle tanımına uyan potansiyel müşteri listesi çıkarmak, CRM verisini zenginleştirmek ya da soğuk e-posta kampanyası hazırlamak istediğinizde.",
+      "example": "“İstanbul'da 50–200 çalışanlı yazılım şirketlerinin pazarlama direktörlerini bul, 25 kişilik liste çıkar ve kredi maliyetini önce göster.”",
+      "features": [
+        [
+          "Kişi ve şirket arama",
+          "Unvan, sektör, konum ve büyüklüğe göre arama."
+        ],
+        [
+          "Zenginleştirme",
+          "Kişi ve şirket kayıtlarını e-posta, telefon ve firma bilgisiyle tamamlar."
+        ],
+        [
+          "Sekans",
+          "E-posta sekansı oluşturur, kişileri ekler / çıkarır, onaylar."
+        ],
+        [
+          "Fırsat ve görev",
+          "Fırsat ve görev oluşturur, arar, günceller."
+        ],
+        [
+          "Görüşme ve doğrulama",
+          "Görüşme dökümlerini getirir, e-posta / telefon doğrular."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.apollo.io/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.apollo.io/docs/apollo-mcp",
+      "depts": [
+        "satis",
+        "pazarlama"
+      ],
+      "risk": "high",
+      "notes": [
+        "Zenginleştirme ve arama kredi harcar; maliyeti önce gösterin.",
+        "Soğuk e-posta Türkiye'de ticari ileti izni (İYS) ve KVKK'ya tabidir; toplu gönderim onaysız yapılmaz."
+      ]
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "vendor": "Intercom",
+      "dir": "intercom",
+      "cats": [],
+      "official": true,
+      "desc": "Intercom'daki müşteri konuşmalarını ve kişileri arar, konuşma ayrıntısını getirir.",
+      "about": "Intercom MCP sunucusu destek konuşmaları ve kişiler üzerinde arama yapmayı, tek bir konuşmanın tüm geçmişini getirmeyi sağlar. Destek eğilimlerini analiz etmek ve hata raporlarını müşteri konuşmalarıyla ilişkilendirmek için kullanılır.",
+      "scenario": "Müşterilerin en sık şikâyet ettiği konuları bulmak ya da bir hatanın kaç müşteriyi etkilediğini görmek istediğinizde.",
+      "example": "“Son 2 haftada ‘ödeme başarısız’ geçen konuşmaları bul, ortak nedenleri grupla.”",
+      "features": [
+        [
+          "Konuşma arama",
+          "Konuşmaları metin, durum ve tarihe göre arar."
+        ],
+        [
+          "Konuşma ayrıntısı",
+          "Bir konuşmanın tüm mesaj geçmişini getirir."
+        ],
+        [
+          "Kişi arama",
+          "Kişi ve şirket kayıtlarını arar."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.intercom.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.intercom.com/docs/guides/mcp",
+      "depts": [
+        "musteri-deneyimi",
+        "urun-arge"
+      ],
+      "risk": "medium",
+      "notes": [
+        "ABD ve AB veri merkezleri desteklenir (AB adresi: https://mcp.eu.intercom.com/mcp); Avustralya henüz desteklenmez.",
+        "Konuşmalar kişisel veri içerir."
+      ]
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian (Jira ve Confluence)",
+      "vendor": "Atlassian",
+      "dir": "atlassian",
+      "cats": [],
+      "official": true,
+      "desc": "Jira issue'larını ve Confluence sayfalarını arar, oluşturur ve günceller.",
+      "about": "Atlassian Rovo MCP sunucusu Jira'da JQL ile arama, issue oluşturma / güncelleme / geçiş, yorum; Confluence'ta CQL ile arama, sayfa oluşturma ve güncelleme araçlarını sağlar. Erişim kullanıcının mevcut Atlassian izinleriyle sınırlıdır.",
+      "scenario": "Sprint işlerini Jira'dan alıp yürütmek, teknik dokümanı Confluence'a yazmak ya da gereksinim sayfasından issue üretmek istediğinizde.",
+      "example": "“Confluence'taki ‘Ödeme v2 gereksinimleri’ sayfasından Jira'da epic ve alt görevleri oluştur.”",
+      "features": [
+        [
+          "Jira arama",
+          "JQL ile issue arar, ayrıntısını getirir."
+        ],
+        [
+          "Jira güncelleme",
+          "Issue oluşturur, alanları günceller, durum geçişi yapar, yorum ekler."
+        ],
+        [
+          "Confluence arama",
+          "CQL ile sayfa arar, içeriği getirir."
+        ],
+        [
+          "Confluence yazma",
+          "Sayfa oluşturur ve günceller, yorum ekler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.atlassian.com/v2/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://support.atlassian.com/rovo/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+      "depts": [
+        "urun-arge",
+        "bilgi-teknolojileri",
+        "operasyon"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Toplu issue oluşturma ve sayfa silme onay gerektirir."
+      ]
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "vendor": "Linear",
+      "dir": "linear",
+      "cats": [],
+      "official": true,
+      "desc": "Linear'daki issue, proje, döngü ve yorumları yönetir.",
+      "about": "Linear MCP sunucusu issue arama, oluşturma ve güncelleme, proje ve döngü (cycle) bilgisi, yorum ekleme, takım / etiket / kullanıcı listeleme araçlarını sağlar.",
+      "scenario": "Geliştirme işlerini Linear'da yöneten ekipte işi Claude'a doğrudan issue'dan vermek ya da durum raporu almak istediğinizde.",
+      "example": "“Bu döngüde bana atanmış ve ‘In Progress’ olan issue'ları getir, en eskisinden başlayarak durum özeti yaz.”",
+      "features": [
+        [
+          "Issue",
+          "Issue arar, oluşturur, günceller, durum ve atama değiştirir."
+        ],
+        [
+          "Proje ve döngü",
+          "Proje ve döngüleri, ilerlemelerini getirir."
+        ],
+        [
+          "Yorum",
+          "Issue'ya yorum ekler, yorumları listeler."
+        ],
+        [
+          "Takım ve etiket",
+          "Takım, etiket, kullanıcı ve durumları listeler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.linear.app/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://linear.app/docs/mcp",
+      "depts": [
+        "urun-arge",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "medium",
+      "notes": []
+    },
+    {
+      "id": "asana",
+      "name": "Asana",
+      "vendor": "Asana",
+      "dir": "asana",
+      "cats": [],
+      "official": true,
+      "desc": "Asana'daki görev, proje, portföy ve hedefleri okur ve yönetir.",
+      "about": "Asana MCP sunucusu Asana İş Grafiği'ne erişim sağlar: görev ve proje arama, görev oluşturma / güncelleme, yorum, portföy ve hedef durumları.",
+      "scenario": "Pazarlama, operasyon ya da ürün ekibinin işlerini Asana'da takip ettiği durumda haftalık durum raporu almak ya da toplantı çıktısını göreve çevirmek istediğinizde.",
+      "example": "“Lansman projesinde gecikmiş görevleri sorumlularıyla listele ve haftalık durum özeti yaz.”",
+      "features": [
+        [
+          "Görev",
+          "Görev arar, oluşturur, günceller, atar."
+        ],
+        [
+          "Proje",
+          "Proje, bölüm ve durum güncellemelerini getirir."
+        ],
+        [
+          "Portföy ve hedef",
+          "Portföy ve hedeflerin ilerlemesini getirir."
+        ],
+        [
+          "Yorum",
+          "Görevlere yorum ekler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.asana.com/v2/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "depts": [
+        "operasyon",
+        "pazarlama",
+        "urun-arge"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Eski /sse adresli beta sunucusu kullanımdan kalktı; v2 adresini kullanın."
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "vendor": "Notion",
+      "dir": "notion",
+      "cats": [],
+      "official": true,
+      "desc": "Notion çalışma alanında arar, sayfa ve veritabanı oluşturur, günceller.",
+      "about": "Notion MCP sunucusu çalışma alanında (ve bağlı uygulamalarda) arama, sayfa okuma, sayfa oluşturma / güncelleme, veritabanı sorgulama ve oluşturma, yorum ekleme araçlarını sağlar.",
+      "scenario": "Şirket wikisi, toplantı notları, içerik takvimi ya da gereksinim dokümanları Notion'da tutuluyorsa.",
+      "example": "“İçerik takvimi veritabanında bu ay yayımlanacak ve durumu ‘Taslak’ olan yazıları getir, her biri için kısa özet ekle.”",
+      "features": [
+        [
+          "Arama",
+          "Çalışma alanında ve bağlı uygulamalarda arama."
+        ],
+        [
+          "Sayfa",
+          "Sayfa içeriğini getirir, oluşturur, günceller, taşır."
+        ],
+        [
+          "Veritabanı",
+          "Veritabanı oluşturur, sorgular, satır ekler."
+        ],
+        [
+          "Yorum",
+          "Sayfaya yorum ekler, yorumları getirir."
+        ],
+        [
+          "Kullanıcı ve ekip",
+          "Kullanıcı ve ekip alanlarını listeler."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.notion.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.notion.com/docs/mcp",
+      "depts": [
+        "urun-arge",
+        "pazarlama",
+        "insan-kaynaklari",
+        "sekreterya"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Erişim, kullanıcının seçilen çalışma alanındaki kendi Notion yetkileriyle sınırlıdır."
+      ]
+    },
+    {
+      "id": "clickup",
+      "name": "ClickUp",
+      "vendor": "ClickUp",
+      "dir": "clickup",
+      "cats": [],
+      "official": true,
+      "desc": "ClickUp'taki görev, liste, belge ve zaman kayıtlarını yönetir.",
+      "about": "ClickUp MCP sunucusu çalışma alanında arama, görev oluşturma / güncelleme, liste ve klasör, belge (Docs), yorum ve zaman takibi araçlarını sağlar.",
+      "scenario": "Ekip işlerini ClickUp'ta yönetiyorsanız görev açma, durum raporu ve zaman analizi için.",
+      "example": "“Geçen hafta en çok zaman kaydedilen 10 görevi ve sahiplerini listele.”",
+      "features": [
+        [
+          "Görev",
+          "Görev arar, oluşturur, günceller, atar."
+        ],
+        [
+          "Liste ve klasör",
+          "Alan, klasör ve listeleri yönetir."
+        ],
+        [
+          "Belge",
+          "ClickUp Docs sayfalarını okur ve yazar."
+        ],
+        [
+          "Zaman takibi",
+          "Zaman kayıtlarını getirir ve ekler."
+        ],
+        [
+          "Yorum ve sohbet",
+          "Görev yorumları ve sohbet kanallarına mesaj."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.clickup.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "depts": [
+        "operasyon",
+        "urun-arge"
+      ],
+      "risk": "medium",
+      "notes": []
+    },
+    {
+      "id": "monday",
+      "name": "monday.com",
+      "vendor": "monday.com",
+      "dir": "monday",
+      "cats": [],
+      "official": true,
+      "desc": "monday.com panolarındaki öğeleri, sütunları ve güncellemeleri okur ve yönetir.",
+      "about": "monday.com MCP sunucusu pano ve öğe oluşturma, sütun değerlerini güncelleme, güncelleme (yorum) ekleme, pano şemasını okuma ve GraphQL API'sini kullanma araçlarını sağlar.",
+      "scenario": "Satış, operasyon ya da proje takibini monday.com panolarında yapıyorsanız.",
+      "example": "“Satış panosunda durumu ‘Teklif gönderildi’ olan ve 14 günü geçen öğeleri listele.”",
+      "features": [
+        [
+          "Pano",
+          "Pano oluşturur, şemasını ve sütunlarını getirir."
+        ],
+        [
+          "Öğe",
+          "Öğe oluşturur, sütun değerlerini günceller, taşır."
+        ],
+        [
+          "Güncelleme",
+          "Öğelere güncelleme (yorum) ekler."
+        ],
+        [
+          "API",
+          "GraphQL API şemasını inceler ve sorgu çalıştırır."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.monday.com/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp",
+      "depts": [
+        "operasyon",
+        "satis"
+      ],
+      "risk": "medium",
+      "notes": []
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "vendor": "Google",
+      "dir": "gmail",
+      "cats": [],
+      "official": true,
+      "desc": "Gmail'de ileti ve konu arar, okur, taslak hazırlar, yanıtlar ve etiketler.",
+      "about": "Gmail bağlayıcısı claude.ai hesabınıza bağlanır; e-posta arama ve okuma, taslak oluşturma ve güncelleme, yanıt / yönlendirme, gönderme, etiket ve spam / çöp işlemleri araçlarını sağlar.",
+      "scenario": "Gelen kutusunu özetlemek, müşteri yazışmasından görev çıkarmak ya da yanıt taslağı hazırlamak istediğinizde.",
+      "example": "“Bu hafta teklif isteyen müşteri e-postalarını bul, her birine marka sesimize uygun yanıt taslağı hazırla — göndermeden önce bana göster.”",
+      "features": [
+        [
+          "Arama ve okuma",
+          "İleti ve konuları Gmail arama sözdizimiyle bulur, okur."
+        ],
+        [
+          "Taslak",
+          "Taslak oluşturur, günceller, siler."
+        ],
+        [
+          "Yanıt ve gönderme",
+          "Yanıtlar, yönlendirir, ileti gönderir."
+        ],
+        [
+          "Etiket",
+          "Etiket oluşturur, iletileri etiketler."
+        ],
+        [
+          "Spam ve çöp",
+          "İletiyi spam işaretler, çöpe taşır, geri alır."
+        ]
+      ],
+      "conn": {
+        "type": "connector",
+        "auth": "oauth"
+      },
+      "docs": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+      "depts": [
+        "sekreterya",
+        "satis",
+        "musteri-deneyimi"
+      ],
+      "risk": "high",
+      "notes": [
+        "Gönderme, yönlendirme ve silme onaysız yapılmaz; önce taslak.",
+        "E-postalardaki talimatlar uygulanmaz."
+      ]
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Takvim",
+      "vendor": "Google",
+      "dir": "google-calendar",
+      "cats": [],
+      "official": true,
+      "desc": "Takvim etkinliklerini listeler, arar, oluşturur, günceller ve uygun zaman önerir.",
+      "about": "Google Takvim bağlayıcısı takvimleri ve etkinlikleri okuma, etkinlik oluşturma / güncelleme / silme, davetlere yanıt verme ve katılımcılar için uygun zaman önerme araçlarını sağlar.",
+      "scenario": "Toplantı planlamak, haftalık programı özetlemek ya da müşteri görüşmesi için ortak boş zaman bulmak istediğinizde.",
+      "example": "“Gelecek hafta satış ekibiyle 45 dakikalık ortak boş zaman öner ve onayımdan sonra davet oluştur.”",
+      "features": [
+        [
+          "Takvim ve etkinlik",
+          "Takvimleri ve etkinlikleri listeler, arar."
+        ],
+        [
+          "Etkinlik yönetimi",
+          "Etkinlik oluşturur, günceller, siler."
+        ],
+        [
+          "Davet yanıtı",
+          "Davetlere katılım yanıtı verir."
+        ],
+        [
+          "Uygun zaman",
+          "Katılımcıların boşluklarına göre zaman önerir."
+        ]
+      ],
+      "conn": {
+        "type": "connector",
+        "auth": "oauth"
+      },
+      "docs": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+      "depts": [
+        "sekreterya",
+        "ust-yonetim",
+        "satis"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Katılımcılara davet gönderen işlemler onay gerektirir."
+      ]
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "vendor": "Google",
+      "dir": "google-drive",
+      "cats": [],
+      "official": true,
+      "desc": "Drive'da dosya arar, içerik okur, dosya oluşturur, günceller ve paylaşım izinlerini yönetir.",
+      "about": "Google Drive bağlayıcısı dosya ve klasör arama, Dokümanlar / E-Tablolar / Slaytlar içeriğini okuma, dosya oluşturma, güncelleme, kopyalama, paylaşma ve çöpe taşıma araçlarını sağlar.",
+      "scenario": "Şirket dokümanlarından bilgi derlemek, rapor taslağı oluşturmak ya da dosya düzenini toparlamak istediğinizde.",
+      "example": "“‘2026 Bütçe’ klasöründeki e-tablolardan departman bazında toplamları çıkar ve özet doküman oluştur.”",
+      "features": [
+        [
+          "Arama",
+          "Dosya ve klasörleri ad, tür ve içeriğe göre arar."
+        ],
+        [
+          "İçerik okuma",
+          "Doküman, e-tablo ve sunum içeriğini getirir."
+        ],
+        [
+          "Oluşturma ve güncelleme",
+          "Dosya oluşturur, günceller, kopyalar."
+        ],
+        [
+          "Paylaşım",
+          "Paylaşım izinlerini getirir ve değiştirir."
+        ],
+        [
+          "Çöp",
+          "Dosyayı çöpe taşır."
+        ]
+      ],
+      "conn": {
+        "type": "connector",
+        "auth": "oauth"
+      },
+      "docs": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+      "depts": [
+        "sekreterya",
+        "idari-isler",
+        "finans"
+      ],
+      "risk": "high",
+      "notes": [
+        "Dışarıya paylaşım ve silme onaysız yapılmaz."
+      ]
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "vendor": "Microsoft",
+      "dir": "microsoft-365",
+      "cats": [],
+      "official": true,
+      "desc": "Outlook e-posta ve takvimi, OneDrive / SharePoint dosyaları ve Teams sohbetlerinde arar.",
+      "about": "Microsoft 365 bağlayıcısı kurumsal Microsoft 365 hesabına bağlanır; Outlook e-posta ve takvim, SharePoint ve OneDrive belgeleri ile Teams sohbet ve toplantı kayıtlarında arama ve okuma sağlar.",
+      "scenario": "Kurumunuz Microsoft 365 kullanıyorsa e-posta, belge ve Teams yazışmalarından bilgi derlemek için.",
+      "example": "“Geçen ayki ‘Tedarikçi değerlendirme’ toplantısının Teams notlarını ve ilgili SharePoint belgelerini bul, kararları özetle.”",
+      "features": [
+        [
+          "Outlook",
+          "E-posta ve takvim etkinliklerinde arama ve okuma."
+        ],
+        [
+          "SharePoint ve OneDrive",
+          "Belgelerde arama ve içerik okuma."
+        ],
+        [
+          "Teams",
+          "Sohbet, kanal mesajı ve toplantı dökümlerinde arama."
+        ]
+      ],
+      "conn": {
+        "type": "connector",
+        "auth": "oauth"
+      },
+      "docs": "https://support.claude.com/en/articles/12542951-enabling-and-using-the-microsoft-365-connector",
+      "depts": [
+        "sekreterya",
+        "idari-isler",
+        "ust-yonetim"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Kuruluşunuzun Microsoft Entra yöneticisinin bağlayıcıyı onaylaması gerekir."
+      ]
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "vendor": "Slack (Salesforce)",
+      "dir": "slack",
+      "cats": [],
+      "official": true,
+      "desc": "Slack kanallarında ve mesajlarda arar, konuşma geçmişini okur, mesaj gönderir.",
+      "about": "Slack bağlayıcısı çalışma alanında mesaj ve dosya arama, kanal ve konu (thread) geçmişini okuma, kullanıcı profili getirme ve mesaj / taslak gönderme araçlarını sağlar.",
+      "scenario": "Ekip yazışmalarından karar ve aksiyon derlemek, olay kanalını özetlemek ya da duyuru taslağı hazırlamak istediğinizde.",
+      "example": "“#urun kanalında bu hafta alınan kararları ve sahipsiz kalan aksiyonları listele.”",
+      "features": [
+        [
+          "Arama",
+          "Mesaj ve dosyalarda arama."
+        ],
+        [
+          "Kanal ve konu",
+          "Kanal ve konu geçmişini okur."
+        ],
+        [
+          "Mesaj",
+          "Mesaj ya da taslak gönderir."
+        ],
+        [
+          "Kullanıcı",
+          "Kullanıcı profillerini getirir."
+        ]
+      ],
+      "conn": {
+        "type": "connector",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.slack.dev/ai/slack-mcp-server/",
+      "depts": [
+        "kurumsal-iletisim",
+        "sekreterya",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Kanala mesaj gönderme onay gerektirir.",
+        "Özel kanal ve doğrudan mesajlar gizli bilgi içerebilir."
+      ]
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "vendor": "Box",
+      "dir": "box",
+      "cats": [],
+      "official": true,
+      "desc": "Box'taki dosya ve klasörlerde arar, içerik okur, Box AI ile belgeye soru sorar ve metadata çıkarır.",
+      "about": "Box MCP sunucusu kurumsal içerik yönetimi için arama, dosya içeriğini okuma, Box AI ile tek ya da çok belge üzerinden soru-cevap, yapılandırılmış metadata çıkarma ve Doc Gen ile şablondan belge üretme araçlarını sağlar.",
+      "scenario": "Sözleşme, fatura ya da politika belgeleri Box'ta tutuluyorsa belgelerden bilgi çıkarmak için.",
+      "example": "“Tedarikçi sözleşmeleri klasöründeki sözleşmelerin bitiş tarihlerini ve otomatik yenileme maddelerini tabloya çıkar.”",
+      "features": [
+        [
+          "Arama",
+          "Dosya ve klasörlerde arama."
+        ],
+        [
+          "İçerik",
+          "Dosya içeriğini metin olarak getirir."
+        ],
+        [
+          "Box AI",
+          "Belgeler üzerinden soru-cevap."
+        ],
+        [
+          "Metadata çıkarma",
+          "Belgelerden yapılandırılmış alanlar çıkarır."
+        ],
+        [
+          "Doc Gen",
+          "Şablondan belge üretir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.box.com",
+        "auth": "oauth"
+      },
+      "docs": "https://developer.box.com/guides/box-mcp/",
+      "depts": [
+        "hukuk",
+        "idari-isler",
+        "muhasebe"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Box yöneticisinin MCP entegrasyonunu etkinleştirmesi gerekebilir."
+      ]
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "vendor": "Fireflies.ai",
+      "dir": "fireflies",
+      "cats": [],
+      "official": true,
+      "desc": "Toplantı dökümlerinde arar, toplantı özetlerini ve aksiyon maddelerini getirir.",
+      "about": "Fireflies MCP sunucusu kaydedilen toplantıların dökümlerine, özetlerine, aksiyon maddelerine ve konuşmacı bilgilerine erişim sağlar; toplantılar arasında arama yapar.",
+      "scenario": "Müşteri görüşmeleri ya da iç toplantılardan karar, itiraz ve aksiyonları derlemek istediğinizde.",
+      "example": "“Bu ayki müşteri görüşmelerinde en sık dile getirilen 5 itirazı bul, hangi toplantıda geçtiğini göster.”",
+      "features": [
+        [
+          "Döküm arama",
+          "Toplantı dökümlerinde anahtar kelimeyle arama."
+        ],
+        [
+          "Özet",
+          "Toplantı özeti, ana konular ve aksiyon maddeleri."
+        ],
+        [
+          "Toplantı listesi",
+          "Tarih ve katılımcıya göre toplantıları listeler."
+        ],
+        [
+          "Konuşmacı",
+          "Konuşmacı bazında söylenenleri getirir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://api.fireflies.ai/mcp",
+        "auth": "oauth"
+      },
+      "docs": "https://docs.fireflies.ai/getting-started/mcp-configuration",
+      "depts": [
+        "satis",
+        "sekreterya",
+        "musteri-deneyimi"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Toplantı kaydı katılımcıların bilgilendirilmesini / rızasını gerektirir (KVKK)."
+      ]
+    },
+    {
+      "id": "exa",
+      "name": "Exa",
+      "vendor": "Exa",
+      "dir": "exa",
+      "cats": [],
+      "official": true,
+      "desc": "Yapay zekâ için tasarlanmış web arama motoruyla arar ve sayfa içeriklerini getirir.",
+      "about": "Exa MCP sunucusu anlamsal web araması, sayfa içeriğini temiz metin olarak getirme, şirket araştırması ve kod örneği arama araçlarını sağlar.",
+      "scenario": "Güncel bilgiye, rakip içeriklerine ya da teknik örneklere kaynaklı olarak ulaşmak istediğinizde.",
+      "example": "“Türkiye'de 2026'da açıklanan e-ticaret mevzuatı değişikliklerini resmî kaynaklardan bul ve özetle.”",
+      "features": [
+        [
+          "Web arama",
+          "Anlamsal ve anahtar kelime tabanlı web araması."
+        ],
+        [
+          "İçerik getirme",
+          "Sayfa içeriğini temiz metin olarak getirir."
+        ],
+        [
+          "Gelişmiş arama",
+          "Alan adı, tarih ve kategori filtreli arama (isteğe bağlı araç)."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.exa.ai/mcp",
+        "auth": "none"
+      },
+      "docs": "https://docs.exa.ai/reference/exa-mcp",
+      "depts": [
+        "pazarlama",
+        "veri-analitik",
+        "urun-arge"
+      ],
+      "risk": "low",
+      "notes": [
+        "Yoğun kullanımda API anahtarı gerekir."
+      ]
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "vendor": "Firecrawl",
+      "dir": "firecrawl",
+      "cats": [],
+      "official": true,
+      "desc": "Web sayfalarını kazır, siteleri tarar ve sayfalardan yapılandırılmış veri çıkarır.",
+      "about": "Firecrawl MCP sunucusu tek sayfayı Markdown'a çevirme, tüm siteyi tarama, site haritası çıkarma, web araması ve şemaya göre yapılandırılmış veri çıkarma araçlarını sağlar; JavaScript ile çizilen sayfaları da okur.",
+      "scenario": "Rakip sitelerin içerik yapısını incelemek, eski siteden içerik taşımak ya da çok sayfadan ürün / fiyat verisi derlemek istediğinizde.",
+      "example": "“Eski sitemizin blog bölümündeki tüm yazıları başlık, tarih ve içerikle Markdown'a çıkar.”",
+      "features": [
+        [
+          "Sayfa kazıma",
+          "Sayfayı Markdown ya da HTML olarak getirir."
+        ],
+        [
+          "Site tarama",
+          "Siteyi sınırlar içinde tarar."
+        ],
+        [
+          "Site haritası",
+          "Sitedeki adresleri listeler."
+        ],
+        [
+          "Arama",
+          "Web'de arar ve sonuç içeriklerini getirir."
+        ],
+        [
+          "Veri çıkarma",
+          "Şemaya göre yapılandırılmış veri çıkarır."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "firecrawl-mcp"
+        ],
+        "env": [
+          "FIRECRAWL_API_KEY"
+        ],
+        "auth": "apikey"
+      },
+      "docs": "https://docs.firecrawl.dev/mcp-server",
+      "depts": [
+        "pazarlama",
+        "veri-analitik",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "medium",
+      "notes": [
+        "Yalnız izin verilen sitelerde kullanın; robots.txt, kullanım koşulları ve telif hakkına uyun.",
+        "Tarama kredisi harcar."
+      ]
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "vendor": "Brave",
+      "dir": "",
+      "cats": [
+        "productivity"
+      ],
+      "official": true,
+      "desc": "Brave'in bağımsız arama dizininde web, haber, görsel, video ve yerel arama yapar.",
+      "about": "Brave Search MCP sunucusu Brave Search API'si üzerinden web, haber, görsel, video ve yerel işletme araması ile sonuçları özetleme araçlarını sağlar.",
+      "scenario": "Güncel haber, yerel işletme ya da genel web araştırması gerektiğinde.",
+      "example": "“Ankara'da kurumsal web tasarım hizmeti veren işletmeleri yerel aramayla listele.”",
+      "features": [
+        [
+          "Web arama",
+          "Genel web araması."
+        ],
+        [
+          "Haber",
+          "Güncel haber araması."
+        ],
+        [
+          "Görsel ve video",
+          "Görsel ve video araması."
+        ],
+        [
+          "Yerel arama",
+          "Konuma göre işletme araması."
+        ],
+        [
+          "Özetleme",
+          "Arama sonuçlarından özet üretir."
+        ]
+      ],
+      "conn": {
+        "type": "local",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@brave/brave-search-mcp-server"
+        ],
+        "env": [
+          "BRAVE_API_KEY"
+        ],
+        "auth": "apikey"
+      },
+      "docs": "https://github.com/brave/brave-search-mcp-server",
+      "depts": [
+        "pazarlama",
+        "veri-analitik"
+      ],
+      "risk": "low",
+      "notes": [
+        "Brave Search API anahtarı gerekir; ücretsiz planda aylık sınır vardır."
+      ]
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "vendor": "Zapier",
+      "dir": "zapier",
+      "cats": [],
+      "official": true,
+      "desc": "Zapier'e bağlı binlerce uygulamada, seçtiğiniz eylemleri tek MCP bağlantısıyla çalıştırır.",
+      "about": "Zapier MCP, Zapier hesabınızda seçtiğiniz uygulama eylemlerini (ör. Google E-Tablolar'a satır ekle, Trello kartı oluştur, WhatsApp mesajı gönder) Claude'a araç olarak açar. Her eylem için hangi alanları Claude'un dolduracağını siz belirlersiniz.",
+      "scenario": "Doğrudan MCP sunucusu olmayan bir uygulamayı Claude'a bağlamak ya da birden çok uygulamayı tek adresle açmak istediğinizde.",
+      "example": "“Web formundan gelen bu talebi Google E-Tablolar'daki potansiyel müşteri listesine ekle ve satış kanalına Slack bildirimi gönder.”",
+      "features": [
+        [
+          "Binlerce uygulama",
+          "Zapier'in desteklediği uygulamalardaki eylemler."
+        ],
+        [
+          "Eylem seçimi",
+          "Yalnız sizin seçtiğiniz eylemler araç olur."
+        ],
+        [
+          "Alan denetimi",
+          "Her alanın Claude tarafından mı yoksa sabit değerle mi doldurulacağını belirlersiniz."
+        ],
+        [
+          "Hesaba bağlı sunucu",
+          "Sunucu Zapier hesabınızla oturum açınca oluşur; bağlantı adresi Zapier MCP sayfasında verilir."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "",
+        "auth": "oauth"
+      },
+      "docs": "https://zapier.com/mcp",
+      "depts": [
+        "operasyon",
+        "bilgi-teknolojileri",
+        "pazarlama"
+      ],
+      "risk": "high",
+      "notes": [
+        "Seçtiğiniz eylemler Zapier hesabınızdaki uygulama bağlantılarıyla çalışır; yalnız gereken eylemleri açın.",
+        "Her eylem çağrısı Zapier görev kotasından düşer."
+      ]
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "vendor": "Make (Celonis)",
+      "dir": "make",
+      "cats": [],
+      "official": true,
+      "desc": "Make'te tanımladığınız senaryoları Claude'un çağırabileceği araçlara çevirir.",
+      "about": "Make MCP sunucusu, “isteğe bağlı” (on-demand) zamanlanmış senaryolarınızı girdi ve çıktılarıyla Claude'a araç olarak açar; böylece Make'teki karmaşık otomasyonlar sohbetten tetiklenebilir.",
+      "scenario": "Make'te hazır otomasyonlarınız varsa bunları Claude'dan çalıştırmak istediğinizde.",
+      "example": "“‘Yeni müşteri karşılama’ senaryosunu bu müşteri bilgileriyle çalıştır.”",
+      "features": [
+        [
+          "Senaryo araçları",
+          "İsteğe bağlı senaryolar araç olarak görünür."
+        ],
+        [
+          "Girdi ve çıktı",
+          "Senaryo girdileri Claude tarafından doldurulur, çıktı geri döner."
+        ],
+        [
+          "Kapsam",
+          "OAuth ya da belirteçle hangi senaryoların erişilebilir olacağı sınırlanır."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "https://mcp.make.com/v2",
+        "auth": "oauth"
+      },
+      "docs": "https://developers.make.com/mcp-server",
+      "depts": [
+        "operasyon",
+        "bilgi-teknolojileri"
+      ],
+      "risk": "high",
+      "notes": [
+        "API anahtarıyla bağlanmak için bölgenize özel https://<bölge>/mcp/v2 adresi ve Bearer başlığı kullanılır.",
+        "Senaryo işlem (operation) kotası harcar."
+      ]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "vendor": "n8n",
+      "dir": "n8n",
+      "cats": [],
+      "official": true,
+      "desc": "n8n iş akışlarınızı MCP sunucusu olarak yayımlar; Claude bu akışları araç olarak çağırır.",
+      "about": "n8n'in MCP Server Trigger düğümü bir iş akışını MCP sunucusuna çevirir; akıştaki araçlar Claude'a açılır. Kendi sunucunuzda (self-hosted) çalışabildiği için veriler sizin altyapınızda kalır.",
+      "scenario": "Kurum içi sistemlerle konuşan otomasyonları kendi sunucunuzda tutup Claude'dan tetiklemek istediğinizde.",
+      "example": "“n8n'deki ‘Stok sorgula’ aracını kullanarak 3 ürünün depo bazında stoklarını getir.”",
+      "features": [
+        [
+          "MCP Server Trigger",
+          "İş akışını MCP sunucusu olarak yayımlar."
+        ],
+        [
+          "Araç düğümleri",
+          "Akışa bağlanan araç düğümleri Claude'un araçları olur."
+        ],
+        [
+          "Kimlik doğrulama",
+          "Bearer ya da başlık (header) ile erişim korunur."
+        ],
+        [
+          "Kendi sunucunuz",
+          "Self-hosted kurulumla veri dışarı çıkmaz."
+        ]
+      ],
+      "conn": {
+        "type": "remote",
+        "url": "",
+        "auth": "token"
+      },
+      "docs": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger/",
+      "depts": [
+        "bilgi-teknolojileri",
+        "operasyon"
+      ],
+      "risk": "high",
+      "notes": [
+        "Üretim adresini kimlik doğrulama olmadan açmayın."
+      ]
+    }
+  ]
+}

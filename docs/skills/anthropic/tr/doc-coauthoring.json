@@ -1,0 +1,7 @@
+{
+ "name": "Belge Ortak Yazımı",
+ "desc": "Belge, öneri, teknik spesifikasyon ve karar belgesi yazımında kullanıcıyı bağlam toplama, bölüm bölüm iyileştirme ve okur testi aşamalarından geçiren yapılandırılmış bir iş akışı sunar.",
+ "trigger": "Kullanıcılara belgeleri birlikte yazmak için yapılandırılmış bir iş akışında rehberlik et. Kullanıcı belge, öneri, teknik spesifikasyon, karar belgesi ya da benzeri yapılandırılmış içerik yazmak istediğinde kullan. Bu iş akışı kullanıcıların bağlamı verimli biçimde aktarmasına, içeriği yinelemeyle iyileştirmesine ve belgenin okurlar için işe yaradığını doğrulamasına yardımcı olur. Kullanıcı belge yazmaktan, öneri oluşturmaktan, spesifikasyon taslağı hazırlamaktan ya da benzeri belgeleme işlerinden söz ettiğinde tetiklen.",
+ "scenario": "PRD, tasarım belgesi, karar belgesi, RFC ya da öneri gibi başkalarının okuyacağı kapsamlı bir belge yazılmaya başlanırken.",
+ "example": "Claude önce belge türünü, hedef kitleyi ve istenen etkiyi sorar, bölümleri beyin fırtınası ve ayıklamayla tek tek yazar, sonunda belgeyi bağlamsız bir alt ajana okutup anlaşılmayan yerleri düzeltir."
+}

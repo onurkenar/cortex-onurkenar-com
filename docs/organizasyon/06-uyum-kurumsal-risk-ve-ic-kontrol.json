@@ -1,0 +1,2409 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "06",
+    "name_tr": "Uyum, Kurumsal Risk ve İç Kontrol",
+    "name_en": "Compliance, Enterprise Risk and Internal Control",
+    "mission": "Faaliyetlerin mevzuata, etik kurallara, şirket politikalarına ve belirlenen risk iştahına uygun yürütülmesini; kurumsal risk ve iç kontrol sistemlerinin etkin biçimde yönetilmesini sağlamak.",
+    "administrative_reporting_to": {"title_tr": "Genel Müdür / CEO", "title_en": "Chief Executive Officer"},
+    "functional_reporting_to": {"title_tr": "Yönetim Kurulu Risk ve Uyum Komitesi", "title_en": "Board Risk and Compliance Committee"},
+    "department_head": {"title_tr": "Uyum, Kurumsal Risk ve İç Kontrol Direktörü", "title_en": "Compliance, Enterprise Risk and Internal Control Director / Chief Compliance and Risk Officer"},
+    "hierarchy_standard": ["Departman lideri", "Birim müdürü", "Ekip yöneticisi", "Uzman pozisyon"],
+    "independence_principle": "Departman direktörü, kritik risk ve uyum konularında Yönetim Kurulu Risk ve Uyum Komitesine doğrudan ve sınırsız erişime sahiptir."
+  },
+  "organization_chart": {
+    "root": {
+      "id": "BOARD",
+      "title_tr": "Yönetim Kurulu",
+      "children": [
+        {
+          "id": "RCC",
+          "title_tr": "Risk ve Uyum Komitesi",
+          "title_en": "Risk and Compliance Committee",
+          "relationship": "Fonksiyonel gözetim",
+          "children": [
+            {
+              "id": "CRIC-DIR",
+              "title_tr": "Uyum, Kurumsal Risk ve İç Kontrol Direktörü",
+              "title_en": "Compliance, Enterprise Risk and Internal Control Director",
+              "administrative_reporting_to": "CEO",
+              "children": [
+                {"unit_ref": "06.01"}, {"unit_ref": "06.02"}, {"unit_ref": "06.03"}, {"unit_ref": "06.04"},
+                {"unit_ref": "06.05"}, {"unit_ref": "06.06"}, {"unit_ref": "06.07"}, {"unit_ref": "06.08"}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {"id": "CRIC-DIR", "title_tr": "Uyum, Kurumsal Risk ve İç Kontrol Direktörü", "title_en": "Compliance, Enterprise Risk and Internal Control Director / Chief Compliance and Risk Officer", "reports_administratively_to": "CEO", "reports_functionally_to": "Yönetim Kurulu Risk ve Uyum Komitesi"},
+    {"id": "CRIC-DEPUTY", "title_tr": "Direktör Yardımcısı", "title_en": "Deputy Compliance, Risk and Internal Control Director", "reports_to": "CRIC-DIR", "status": "Şirket ölçeğine göre opsiyonel"},
+    {"id": "CCO", "title_tr": "Baş Uyum Görevlisi", "title_en": "Chief Compliance Officer", "reports_to": "CRIC-DIR", "status": "Direktör rolüyle birleştirilebilir"},
+    {"id": "CRO", "title_tr": "Baş Risk Görevlisi", "title_en": "Chief Risk Officer", "reports_to": "CRIC-DIR", "status": "Direktör rolüyle birleştirilebilir"}
+  ],
+  "units": [
+    {
+      "id": "06.01",
+      "name_tr": "Mevzuat Uyum Yönetimi",
+      "name_en": "Regulatory Compliance Management",
+      "manager": {"title_tr": "Mevzuat Uyum Müdürü", "title_en": "Regulatory Compliance Manager"},
+      "responsibilities": ["Mevzuat değişikliklerini ve düzenleyici yükümlülükleri izlemek", "Mevzuat etki analizlerini koordine etmek", "Uyum yükümlülük envanterini yönetmek", "Uyum programları, politika ve kontrol planlarını geliştirmek", "Zorunlu uyum eğitimlerini ve farkındalık çalışmalarını yönetmek"],
+      "teams": [
+        {"name_tr": "Mevzuat İzleme ve Etki Analizi", "name_en": "Regulatory Monitoring and Impact Assessment", "lead": {"title_tr": "Mevzuat İzleme ve Etki Analizi Yöneticisi", "title_en": "Regulatory Monitoring and Impact Assessment Lead"}, "positions": [
+          {"title_tr": "Kıdemli Mevzuat Uyum Uzmanı", "title_en": "Senior Regulatory Compliance Specialist"},
+          {"title_tr": "Mevzuat Uyum Uzmanı", "title_en": "Regulatory Compliance Specialist"},
+          {"title_tr": "Mevzuat Etki Analisti", "title_en": "Regulatory Impact Analyst"},
+          {"title_tr": "Mevzuat Takip Uzman Yardımcısı", "title_en": "Regulatory Monitoring Associate"}]},
+        {"name_tr": "Uyum Programları ve Politikalar", "name_en": "Compliance Programs and Policies", "lead": {"title_tr": "Uyum Programları ve Politikalar Yöneticisi", "title_en": "Compliance Programs and Policies Lead"}, "positions": [
+          {"title_tr": "Kıdemli Uyum Programı Uzmanı", "title_en": "Senior Compliance Program Specialist"},
+          {"title_tr": "Uyum Politikaları Uzmanı", "title_en": "Compliance Policies Specialist"},
+          {"title_tr": "Politika ve Prosedür Yönetişimi Uzmanı", "title_en": "Policy Governance Specialist"}]},
+        {"name_tr": "Uyum Eğitimleri ve Farkındalık", "name_en": "Compliance Training and Awareness", "lead": {"title_tr": "Uyum Eğitimleri ve Farkındalık Yöneticisi", "title_en": "Compliance Training and Awareness Lead"}, "positions": [
+          {"title_tr": "Uyum Eğitimleri Uzmanı", "title_en": "Compliance Training Specialist"},
+          {"title_tr": "Etik ve Uyum Farkındalık Uzmanı", "title_en": "Ethics and Compliance Awareness Specialist"},
+          {"title_tr": "Uyum Eğitimleri Analisti", "title_en": "Compliance Training Analyst"}]}
+      ]
+    },
+    {
+      "id": "06.02",
+      "name_tr": "Kurumsal Risk Yönetimi",
+      "name_en": "Enterprise Risk Management",
+      "manager": {"title_tr": "Kurumsal Risk Yönetimi Müdürü", "title_en": "Enterprise Risk Management Manager"},
+      "responsibilities": ["Kurumsal risk metodolojisini ve risk taksonomisini yönetmek", "Risk envanterini ve risk değerlendirmelerini koordine etmek", "Risk iştahı ve tolerans önerilerini hazırlamak", "Anahtar risk göstergelerini izlemek", "Risk azaltma planlarını ve stratejik riskleri raporlamak"],
+      "teams": [
+        {"name_tr": "Risk Envanteri ve Değerlendirme", "name_en": "Risk Inventory and Assessment", "lead": {"title_tr": "Risk Envanteri ve Değerlendirme Yöneticisi", "title_en": "Risk Inventory and Assessment Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal Risk Uzmanı", "title_en": "Senior Enterprise Risk Specialist"},
+          {"title_tr": "Kurumsal Risk Uzmanı", "title_en": "Enterprise Risk Specialist"},
+          {"title_tr": "Risk Değerlendirme Analisti", "title_en": "Risk Assessment Analyst"},
+          {"title_tr": "Risk Veri Analisti", "title_en": "Risk Data Analyst"}]},
+        {"name_tr": "Risk İştahı ve Göstergeler", "name_en": "Risk Appetite and Indicators", "lead": {"title_tr": "Risk İştahı ve Göstergeler Yöneticisi", "title_en": "Risk Appetite and Indicators Lead"}, "positions": [
+          {"title_tr": "Risk İştahı Uzmanı", "title_en": "Risk Appetite Specialist"},
+          {"title_tr": "Anahtar Risk Göstergeleri Uzmanı", "title_en": "Key Risk Indicators Specialist"},
+          {"title_tr": "Risk Modelleme Analisti", "title_en": "Risk Modelling Analyst"}]},
+        {"name_tr": "Stratejik ve Operasyonel Risk", "name_en": "Strategic and Operational Risk", "lead": {"title_tr": "Stratejik ve Operasyonel Risk Yöneticisi", "title_en": "Strategic and Operational Risk Lead"}, "positions": [
+          {"title_tr": "Stratejik Risk Uzmanı", "title_en": "Strategic Risk Specialist"},
+          {"title_tr": "Operasyonel Risk Uzmanı", "title_en": "Operational Risk Specialist"},
+          {"title_tr": "Proje ve Dönüşüm Riskleri Uzmanı", "title_en": "Project and Transformation Risk Specialist"},
+          {"title_tr": "Yeni Ürün ve Hizmet Risk Analisti", "title_en": "New Product and Service Risk Analyst"}]}
+      ]
+    },
+    {
+      "id": "06.03",
+      "name_tr": "İç Kontrol ve Görevler Ayrılığı",
+      "name_en": "Internal Control and Segregation of Duties",
+      "manager": {"title_tr": "İç Kontrol Müdürü", "title_en": "Internal Control Manager"},
+      "responsibilities": ["İç kontrol çerçevesini ve kontrol standartlarını tasarlamak", "Süreç-risk-kontrol matrislerini yönetmek", "Kontrol etkinlik testlerini yürütmek", "Görevler ayrılığı ve yetki kontrollerini izlemek", "Kontrol eksikliklerini ve iyileştirme aksiyonlarını takip etmek"],
+      "teams": [
+        {"name_tr": "Kontrol Tasarımı ve Test", "name_en": "Control Design and Testing", "lead": {"title_tr": "Kontrol Tasarımı ve Test Yöneticisi", "title_en": "Control Design and Testing Lead"}, "positions": [
+          {"title_tr": "Kıdemli İç Kontrol Uzmanı", "title_en": "Senior Internal Control Specialist"},
+          {"title_tr": "İç Kontrol Uzmanı", "title_en": "Internal Control Specialist"},
+          {"title_tr": "Kontrol Test Analisti", "title_en": "Control Testing Analyst"},
+          {"title_tr": "Süreç Kontrol Uzmanı", "title_en": "Process Controls Specialist"}]},
+        {"name_tr": "Görevler Ayrılığı ve Yetki Kontrolleri", "name_en": "Segregation of Duties and Access Controls", "lead": {"title_tr": "Görevler Ayrılığı ve Yetki Kontrolleri Yöneticisi", "title_en": "Segregation of Duties and Access Controls Lead"}, "positions": [
+          {"title_tr": "Görevler Ayrılığı Uzmanı", "title_en": "Segregation of Duties Specialist"},
+          {"title_tr": "Yetki Matrisi Kontrol Uzmanı", "title_en": "Delegation of Authority Controls Specialist"},
+          {"title_tr": "Erişim ve Rol Kontrolleri Uzmanı", "title_en": "Access and Role Controls Specialist"},
+          {"title_tr": "ERP Kontrol Analisti", "title_en": "ERP Controls Analyst"}]},
+        {"name_tr": "İç Kontrol Aksiyon Yönetimi", "name_en": "Internal Control Remediation", "lead": {"title_tr": "İç Kontrol Aksiyon Yönetimi Yöneticisi", "title_en": "Internal Control Remediation Lead"}, "positions": [
+          {"title_tr": "Kontrol İyileştirme Uzmanı", "title_en": "Control Improvement Specialist"},
+          {"title_tr": "Bulgular ve Aksiyon Takip Uzmanı", "title_en": "Findings and Action Tracking Specialist"},
+          {"title_tr": "Kontrol Dokümantasyon Uzmanı", "title_en": "Control Documentation Specialist"}]}
+      ]
+    },
+    {
+      "id": "06.04",
+      "name_tr": "Etik, İhbar ve Suistimal Önleme",
+      "name_en": "Ethics, Whistleblowing and Fraud Prevention",
+      "manager": {"title_tr": "Etik ve Suistimal Önleme Müdürü", "title_en": "Ethics and Fraud Prevention Manager"},
+      "responsibilities": ["Etik ve davranış kurallarını yönetmek", "İhbar mekanizmasının bağımsızlığını ve gizliliğini sağlamak", "Çıkar çatışması, hediye ve ağırlama kontrollerini izlemek", "Suistimal risk değerlendirmelerini ve önleyici kontrolleri yönetmek", "Etik vakaları sınıflandırmak ve Etik Kurula raporlamak"],
+      "teams": [
+        {"name_tr": "Etik ve İhbar Yönetimi", "name_en": "Ethics and Whistleblowing", "lead": {"title_tr": "Etik ve İhbar Yönetimi Yöneticisi", "title_en": "Ethics and Whistleblowing Lead"}, "positions": [
+          {"title_tr": "Etik ve Uyum Uzmanı", "title_en": "Ethics and Compliance Specialist"},
+          {"title_tr": "İhbar Hattı Yönetimi Uzmanı", "title_en": "Whistleblowing Program Specialist"},
+          {"title_tr": "Etik Vaka Analisti", "title_en": "Ethics Case Analyst"}]},
+        {"name_tr": "Suistimal Önleme", "name_en": "Fraud Prevention", "lead": {"title_tr": "Suistimal Önleme Yöneticisi", "title_en": "Fraud Prevention Lead"}, "positions": [
+          {"title_tr": "Kıdemli Suistimal Risk Uzmanı", "title_en": "Senior Fraud Risk Specialist"},
+          {"title_tr": "Suistimal Önleme Uzmanı", "title_en": "Fraud Prevention Specialist"},
+          {"title_tr": "Suistimal Veri Analisti", "title_en": "Fraud Data Analyst"},
+          {"title_tr": "Finansal Suistimal Kontrol Uzmanı", "title_en": "Financial Fraud Controls Specialist"}]},
+        {"name_tr": "Çıkar Çatışması ve Etik İnceleme", "name_en": "Conflict of Interest and Ethics Review", "lead": {"title_tr": "Çıkar Çatışması ve Etik İnceleme Yöneticisi", "title_en": "Conflict of Interest and Ethics Review Lead"}, "positions": [
+          {"title_tr": "Çıkar Çatışması Uzmanı", "title_en": "Conflict of Interest Specialist"},
+          {"title_tr": "Hediye ve Ağırlama Kontrol Uzmanı", "title_en": "Gifts and Hospitality Controls Specialist"},
+          {"title_tr": "Etik İnceleme Uzmanı", "title_en": "Ethics Review Specialist"}]}
+      ]
+    },
+    {
+      "id": "06.05",
+      "name_tr": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+      "name_en": "Third-Party Compliance and Risk Management",
+      "manager": {"title_tr": "Üçüncü Taraf Uyum ve Risk Müdürü", "title_en": "Third-Party Compliance and Risk Manager"},
+      "responsibilities": ["Üçüncü taraf risk sınıflandırmasını yönetmek", "Tedarikçi ve iş ortağı uyum kontrollerini yürütmek", "Uyum durum tespiti ve yaptırım taramalarını koordine etmek", "Nihai faydalanıcı kontrollerini izlemek", "Kritik üçüncü taraf risklerini ve taahhütlerini takip etmek"],
+      "teams": [
+        {"name_tr": "Tedarikçi ve İş Ortağı Uyumu", "name_en": "Supplier and Business Partner Compliance", "lead": {"title_tr": "Tedarikçi ve İş Ortağı Uyumu Yöneticisi", "title_en": "Supplier and Business Partner Compliance Lead"}, "positions": [
+          {"title_tr": "Tedarikçi Uyum Uzmanı", "title_en": "Supplier Compliance Specialist"},
+          {"title_tr": "İş Ortağı Uyum Uzmanı", "title_en": "Business Partner Compliance Specialist"},
+          {"title_tr": "Bayi ve Aracı Uyum Uzmanı", "title_en": "Dealer and Intermediary Compliance Specialist"}]},
+        {"name_tr": "Uyum Durum Tespiti ve Tarama", "name_en": "Compliance Due Diligence and Screening", "lead": {"title_tr": "Uyum Durum Tespiti ve Tarama Yöneticisi", "title_en": "Compliance Due Diligence and Screening Lead"}, "positions": [
+          {"title_tr": "Kıdemli Durum Tespiti Uzmanı", "title_en": "Senior Due Diligence Specialist"},
+          {"title_tr": "Uyum Tarama Uzmanı", "title_en": "Compliance Screening Specialist"},
+          {"title_tr": "Yaptırım ve Kısıtlı Taraf Tarama Uzmanı", "title_en": "Sanctions Screening Specialist"},
+          {"title_tr": "Üçüncü Taraf Araştırma Analisti", "title_en": "Third-Party Research Analyst"}]},
+        {"name_tr": "Üçüncü Taraf Risk İzleme", "name_en": "Third-Party Risk Monitoring", "lead": {"title_tr": "Üçüncü Taraf Risk İzleme Yöneticisi", "title_en": "Third-Party Risk Monitoring Lead"}, "positions": [
+          {"title_tr": "Üçüncü Taraf Risk Uzmanı", "title_en": "Third-Party Risk Specialist"},
+          {"title_tr": "Tedarikçi Risk Analisti", "title_en": "Supplier Risk Analyst"},
+          {"title_tr": "Uyum Taahhütleri Takip Uzmanı", "title_en": "Compliance Commitments Specialist"}]}
+      ]
+    },
+    {
+      "id": "06.06",
+      "name_tr": "KVKK ve Veri Koruma Uyumu",
+      "name_en": "Data Protection Compliance",
+      "manager": {"title_tr": "KVKK ve Veri Koruma Uyum Müdürü", "title_en": "Data Protection Compliance Manager"},
+      "responsibilities": ["KVKK ve GDPR uyum programını yönetmek", "Kişisel veri işleme envanterini ve VERBİS koordinasyonunu yürütmek", "Saklama, imha, açık rıza ve aydınlatma kontrollerini izlemek", "İlgili kişi başvuruları ile veri ihlallerini koordine etmek", "Veri koruma etki değerlendirmelerini yürütmek"],
+      "teams": [
+        {"name_tr": "Veri Koruma Uyum Programı", "name_en": "Data Protection Compliance Program", "lead": {"title_tr": "Veri Koruma Uyum Programı Yöneticisi", "title_en": "Data Protection Compliance Program Lead"}, "positions": [
+          {"title_tr": "Kıdemli Veri Koruma Uyum Uzmanı", "title_en": "Senior Data Protection Compliance Specialist"},
+          {"title_tr": "KVKK Uyum Uzmanı", "title_en": "KVKK Compliance Specialist"},
+          {"title_tr": "GDPR Uyum Uzmanı", "title_en": "GDPR Compliance Specialist"}]},
+        {"name_tr": "Veri Envanteri ve Kontroller", "name_en": "Data Inventory and Controls", "lead": {"title_tr": "Veri Envanteri ve Kontroller Yöneticisi", "title_en": "Data Inventory and Controls Lead"}, "positions": [
+          {"title_tr": "Veri Envanteri Uzmanı", "title_en": "Data Inventory Specialist"},
+          {"title_tr": "Kişisel Veri Süreç Analisti", "title_en": "Personal Data Process Analyst"},
+          {"title_tr": "Saklama ve İmha Kontrol Uzmanı", "title_en": "Retention and Disposal Controls Specialist"},
+          {"title_tr": "Veri İşleyen Uyum Uzmanı", "title_en": "Data Processor Compliance Specialist"}]},
+        {"name_tr": "Başvuru ve İhlal Koordinasyonu", "name_en": "Data Subject Requests and Breach Coordination", "lead": {"title_tr": "Başvuru ve İhlal Koordinasyon Yöneticisi", "title_en": "Data Subject Requests and Breach Coordination Lead"}, "positions": [
+          {"title_tr": "İlgili Kişi Başvuru Koordinasyon Uzmanı", "title_en": "Data Subject Request Coordinator"},
+          {"title_tr": "Veri İhlali Koordinasyon Uzmanı", "title_en": "Data Breach Coordination Specialist"},
+          {"title_tr": "Veri Koruma Kayıt ve Raporlama Uzmanı", "title_en": "Privacy Records and Reporting Specialist"}]}
+      ]
+    },
+    {
+      "id": "06.07",
+      "name_tr": "İş Sürekliliği ve Kriz Riskleri",
+      "name_en": "Business Continuity and Crisis Risk",
+      "manager": {"title_tr": "İş Sürekliliği ve Kurumsal Dayanıklılık Müdürü", "title_en": "Business Continuity and Corporate Resilience Manager"},
+      "responsibilities": ["İş etki analizlerini ve kritik süreç envanterini yönetmek", "İş sürekliliği planlarını ve kurtarma önceliklerini koordine etmek", "Kriz senaryoları ve tatbikatlar hazırlamak", "Tedarikçi sürekliliğini izlemek", "Kurumsal dayanıklılık performansını raporlamak"],
+      "teams": [
+        {"name_tr": "İş Etki Analizi", "name_en": "Business Impact Analysis", "lead": {"title_tr": "İş Etki Analizi Yöneticisi", "title_en": "Business Impact Analysis Lead"}, "positions": [
+          {"title_tr": "İş Etki Analizi Uzmanı", "title_en": "Business Impact Analysis Specialist"},
+          {"title_tr": "Kritik Süreç Analisti", "title_en": "Critical Process Analyst"},
+          {"title_tr": "Bağımlılık ve Kaynak Analisti", "title_en": "Dependency and Resource Analyst"}]},
+        {"name_tr": "İş Sürekliliği Yönetimi", "name_en": "Business Continuity Management", "lead": {"title_tr": "İş Sürekliliği Yönetimi Yöneticisi", "title_en": "Business Continuity Management Lead"}, "positions": [
+          {"title_tr": "Kıdemli İş Sürekliliği Uzmanı", "title_en": "Senior Business Continuity Specialist"},
+          {"title_tr": "İş Sürekliliği Planlama Uzmanı", "title_en": "Business Continuity Planning Specialist"},
+          {"title_tr": "Kurtarma Stratejileri Uzmanı", "title_en": "Recovery Strategies Specialist"}]},
+        {"name_tr": "Kriz Tatbikatları ve Dayanıklılık", "name_en": "Crisis Exercises and Resilience", "lead": {"title_tr": "Kriz Tatbikatları ve Dayanıklılık Yöneticisi", "title_en": "Crisis Exercises and Resilience Lead"}, "positions": [
+          {"title_tr": "Kriz Yönetimi Uzmanı", "title_en": "Crisis Management Specialist"},
+          {"title_tr": "Tatbikat ve Test Uzmanı", "title_en": "Exercise and Testing Specialist"},
+          {"title_tr": "Kurumsal Dayanıklılık Analisti", "title_en": "Corporate Resilience Analyst"}]}
+      ]
+    },
+    {
+      "id": "06.08",
+      "name_tr": "Uyum Operasyonları, İzleme ve Raporlama",
+      "name_en": "Compliance Operations, Monitoring and Reporting",
+      "manager": {"title_tr": "Uyum Operasyonları ve Raporlama Müdürü", "title_en": "Compliance Operations and Reporting Manager"},
+      "responsibilities": ["Uyum izleme ve test planını yürütmek", "Uyum bulguları ve aksiyonlarını takip etmek", "Risk ve uyum dashboardları ile komite raporlarını hazırlamak", "GRC platformunu ve veri kalitesini yönetmek", "Uyum teknolojileri ve otomasyonlarını geliştirmek"],
+      "teams": [
+        {"name_tr": "Uyum İzleme ve Test", "name_en": "Compliance Monitoring and Testing", "lead": {"title_tr": "Uyum İzleme ve Test Yöneticisi", "title_en": "Compliance Monitoring and Testing Lead"}, "positions": [
+          {"title_tr": "Kıdemli Uyum İzleme Uzmanı", "title_en": "Senior Compliance Monitoring Specialist"},
+          {"title_tr": "Uyum Test Uzmanı", "title_en": "Compliance Testing Specialist"},
+          {"title_tr": "Uyum Kontrol Analisti", "title_en": "Compliance Controls Analyst"},
+          {"title_tr": "Uyum Bulguları Takip Uzmanı", "title_en": "Compliance Findings Specialist"}]},
+        {"name_tr": "Risk ve Uyum Raporlama", "name_en": "Risk and Compliance Reporting", "lead": {"title_tr": "Risk ve Uyum Raporlama Yöneticisi", "title_en": "Risk and Compliance Reporting Lead"}, "positions": [
+          {"title_tr": "Risk ve Uyum Raporlama Uzmanı", "title_en": "Risk and Compliance Reporting Specialist"},
+          {"title_tr": "Yönetim Kurulu Raporlama Uzmanı", "title_en": "Board Reporting Specialist"},
+          {"title_tr": "Risk Veri Analisti", "title_en": "Risk Data Analyst"},
+          {"title_tr": "KRI ve KPI Raporlama Uzmanı", "title_en": "KRI and KPI Reporting Specialist"}]},
+        {"name_tr": "GRC Sistemleri ve Veri Yönetimi", "name_en": "GRC Systems and Data Management", "lead": {"title_tr": "GRC Sistemleri ve Veri Yönetimi Yöneticisi", "title_en": "GRC Systems and Data Management Lead"}, "positions": [
+          {"title_tr": "GRC Sistemleri Uzmanı", "title_en": "GRC Systems Specialist"},
+          {"title_tr": "Risk ve Kontrol Veri Uzmanı", "title_en": "Risk and Control Data Specialist"},
+          {"title_tr": "Uyum Otomasyonu Uzmanı", "title_en": "Compliance Automation Specialist"},
+          {"title_tr": "GRC Raporlama Analisti", "title_en": "GRC Reporting Analyst"}]}
+      ]
+    }
+  ],
+  "organization_summary": {"unit_count": 8, "team_count": 24, "team_lead_count": 24, "specialist_position_types": 83},
+  "staffing_models": [
+    {"model": "Yalın yapı", "recommended_structure": "1 direktör/yönetici, 3 birim sorumlusu, 5-8 uzman"},
+    {"model": "Orta ölçekli şirket", "recommended_structure": "1 direktör, 5-6 müdür, 12-20 uzman"},
+    {"model": "Holding yapısı", "recommended_structure": "1 direktör, 1 direktör yardımcısı, 8 müdür ve seçili ekip yöneticileri"},
+    {"model": "Tam fonksiyonel yapı", "recommended_structure": "8 müdürlük ve 24 fonksiyonel ekibin ayrı kadrolanması"}
+  ],
+  "department_boundaries": [
+    {"interface_department": "05 - Hukuk İşleri", "this_department_owns": "Uyum programı, izleme, kontrol ve kanıt yönetimi", "other_department_owns": "Hukuki yorum, görüş, sözleşme ve temsil"},
+    {"interface_department": "07 - İç Denetim", "this_department_owns": "Risk ve kontrol sisteminin tasarımı ve izlenmesi", "other_department_owns": "Bağımsız güvence ve denetim"},
+    {"interface_department": "04 - İnsan Kaynakları ve Organizasyon", "this_department_owns": "Etik ve çalışma mevzuatı kontrolleri", "other_department_owns": "Personel, disiplin ve çalışma ilişkileri süreçlerinin icrası"},
+    {"interface_department": "15 - Bilgi Teknolojileri", "this_department_owns": "BT risk ve kontrol gereksinimleri", "other_department_owns": "Teknik uygulama ve sistem işletimi"},
+    {"interface_department": "16 - Siber Güvenlik ve Bilgi Güvenliği", "this_department_owns": "Güvenlik risklerinin kurumsal risk sistemine alınması", "other_department_owns": "Teknik güvenlik ve olay müdahalesi"},
+    {"interface_department": "03 - Finans ve Hazine", "this_department_owns": "Finansal risk çerçevesi ve kurumsal gözetim", "other_department_owns": "Nakit, kur, faiz, kredi ve likidite riskinin günlük yönetimi"},
+    {"interface_department": "12 - Operasyon Yönetimi", "this_department_owns": "Operasyonel risk ve kontrol standartları", "other_department_owns": "Günlük operasyon ve kontrollerin uygulanması"},
+    {"interface_department": "14 - Kalite Yönetimi", "this_department_owns": "Kurumsal risk ve kontrol bütünlüğü", "other_department_owns": "Ürün, hizmet ve süreç kalite sistemi"}
+  ],
+  "scope_exclusions": [
+    "Operasyonları departmanlar adına yürütmek",
+    "Hukuki görüş vermek veya dava yönetmek",
+    "Kontrollerin günlük uygulayıcısı olmak",
+    "Kendi tasarladığı sistemin bağımsız denetimini yapmak",
+    "Personel disiplin kararını tek başına vermek",
+    "Teknik siber güvenlik operasyonu yürütmek",
+    "Finansal işlem, muhasebe kaydı veya ödeme gerçekleştirmek",
+    "Risk sahiplerinin sorumluluğunu devralmak"
+  ],
+  "notes": [
+    "Uyum yükümlülükleri izler; Kurumsal Risk belirsizlikleri yönetim sistemine dönüştürür; İç Kontrol riskleri kabul edilebilir seviyede tutacak kontrol yapısını kurar.",
+    "İç Denetim bu sistemin dışında kalarak bağımsız güvence sağlar.",
+    "Pozisyonlar hedef organizasyon modelidir ve mevcut çalışan sayısını ifade etmez.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; görev sahipliği, bağımsızlık ve görevler ayrılığı korunmalıdır."
+  ],
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Uyum, kurumsal risk ve iç kontrol stratejisini ve yıllık programını belirlemek",
+        "Mevzuat ve düzenleyici yükümlülükleri izlemek ve uyum programına dönüştürmek",
+        "Kurumsal risk metodolojisini, risk envanterini ve risk iştahı önerilerini yönetmek",
+        "İç kontrol çerçevesini, görevler ayrılığını ve kontrol etkinlik testlerini yönetmek",
+        "Etik kuralları, ihbar mekanizmasını ve suistimal önleme kontrollerini yönetmek",
+        "Üçüncü taraf, veri koruma ve iş sürekliliği risklerini kurumsal risk sistemine dahil etmek",
+        "GRC platformunu ve uyum izleme süreçlerini işletmek",
+        "Risk ve uyum durumunu Yönetim Kurulu Risk ve Uyum Komitesine raporlamak"
+      ],
+      "authorities": [
+        "Uyum programını, kurumsal risk metodolojisini ve iç kontrol standartlarını onaylar",
+        "Risk iştahı ve tolerans önerilerini Yönetim Kurulu Risk ve Uyum Komitesinin onayına sunar",
+        "Kritik risk ve uyum konularını Risk ve Uyum Komitesine doğrudan raporlar",
+        "Kontrol eksikliklerinde risk sahibinden aksiyon planı ister ve kapanışını izler",
+        "Yüksek riskli üçüncü taraflar için iş ilişkisi öncesinde uyum görüşü verir",
+        "Etik ihlal vakalarında disiplin önerisi sunar; disiplin kararı İnsan Kaynaklarında kalır",
+        "Hukuki yorum gerektiren konuları Hukuk İşlerine yönlendirir"
+      ],
+      "collaborations": [
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Mevzuat ve Düzenleyici Hukuk",
+          "topic": "Mevzuatın hukuki yorumu, hukuki görüş ve uyuşmazlık konularında koordinasyon"
+        },
+        {
+          "department": "07 - İç Denetim",
+          "unit": "",
+          "topic": "Risk ve kontrol sisteminin bağımsız denetimi, bulgular ve güvence planlaması"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Çalışan İlişkileri",
+          "topic": "Etik ve çalışma mevzuatı kontrolleri ile disiplin süreçlerine bilgi akışı"
+        },
+        {
+          "department": "15 - Bilgi Teknolojileri",
+          "unit": "BT Stratejisi, Yönetişim ve Kurumsal Mimari",
+          "topic": "BT risk ve kontrol gereksinimlerinin sistemlere uygulanması"
+        },
+        {
+          "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+          "unit": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+          "topic": "Siber güvenlik risklerinin kurumsal risk sistemine alınması"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Finansal Risk Yönetimi Müdürlüğü",
+          "topic": "Finansal risk çerçevesi ile nakit, kur, faiz ve likidite risklerinin gözetimi"
+        },
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+          "topic": "Operasyonel risk ve kontrol standartlarının günlük operasyonda uygulanması"
+        },
+        {
+          "department": "14 - Kalite Yönetimi",
+          "unit": "Kalite Yönetim Sistemi ve Strateji",
+          "topic": "Kalite sistemi ile kurumsal risk ve kontrol bütünlüğü"
+        },
+        {
+          "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+          "unit": "Kurumsal Yönetişim Müdürlüğü",
+          "topic": "Risk ve Uyum Komitesi gündemi ve kurumsal yönetişim raporlaması"
+        }
+      ],
+      "kpis": [
+        "Uyum yükümlülük envanterinin güncellik oranı",
+        "Mevzuat değişikliklerinin etki analizine alınma süresi",
+        "Zorunlu uyum eğitimi tamamlama oranı",
+        "Risk değerlendirmesi güncel olan kritik süreç oranı",
+        "Risk iştahı sınırını aşan risk sayısı",
+        "Etkin bulunan anahtar kontrol oranı",
+        "Süresinde kapatılan kontrol eksikliği oranı",
+        "Görevler ayrılığı çatışması bulunan kullanıcı sayısı",
+        "İhbarların ilk değerlendirmeye alınma süresi",
+        "Uyum taramasından geçen yüksek riskli üçüncü taraf oranı",
+        "İlgili kişi başvurularının yasal sürede yanıtlanma oranı",
+        "Tatbikatla doğrulanmış iş sürekliliği planı oranı",
+        "Tekrarlayan uyum ve kontrol bulgusu sayısı",
+        "Düzenleyici idari para cezası ve yaptırım sayısı"
+      ],
+      "title_standard": [
+        {
+          "level": "Departman lideri",
+          "title_tr": "Direktör",
+          "title_en": "Director"
+        },
+        {
+          "level": "Birim müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Lead"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Kıdemli Uzman",
+          "title_en": "Senior Specialist"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Uzman",
+          "title_en": "Specialist"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Analist",
+          "title_en": "Analyst"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Uzman Yardımcısı",
+          "title_en": "Associate Specialist"
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 116,
+        "total_max": 207,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 9,
+            "max": 18
+          },
+          {
+            "role_group": "Uzman",
+            "min": 54,
+            "max": 113
+          },
+          {
+            "role_group": "Analist",
+            "min": 19,
+            "max": 38
+          },
+          {
+            "role_group": "Uzman Yardımcısı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "06.01",
+        "name_tr": "Mevzuat Uyum Yönetimi",
+        "responsibilities": [
+          "Mevzuat değişikliklerini ve düzenleyici yükümlülükleri izlemek",
+          "Mevzuat etki analizlerini ilgili departmanlarla koordine etmek",
+          "Uyum yükümlülük envanterini güncel tutmak",
+          "Uyum programlarını, politikalarını ve kontrol planlarını geliştirmek",
+          "Zorunlu uyum eğitimlerini ve farkındalık çalışmalarını yönetmek"
+        ],
+        "authorities": [
+          "Uyum yükümlülük envanterine eklenecek yükümlülükleri ve sahiplerini belirler",
+          "Uyum politikası ve prosedür taslaklarını direktörün onayına sunar",
+          "Zorunlu uyum eğitimlerinin kapsamını ve hedef kitlesini belirler",
+          "Hukuki yorum gerektiren mevzuat değişikliklerini Hukuk İşlerine yönlendirir"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Mevzuat değişikliklerinin hukuki yorumu ve etki analizi"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Eğitim ve Gelişim",
+            "topic": "Zorunlu uyum eğitimlerinin planlanması ve katılım takibi"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Uyum Operasyonları, İzleme ve Raporlama",
+            "topic": "Uyum yükümlülüklerinin izleme ve test planına aktarılması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "KVKK ve Veri Koruma Uyumu",
+            "topic": "Veri koruma yükümlülüklerinin uyum envanterine işlenmesi"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İç İletişim ve Çalışan Katılımı",
+            "topic": "Etik ve uyum farkındalık iletişimi"
+          }
+        ],
+        "kpis": [
+          "Uyum yükümlülük envanterinin güncellik oranı",
+          "Mevzuat değişikliklerinin etki analizine alınma süresi",
+          "Zorunlu uyum eğitimi tamamlama oranı",
+          "Gözden geçirme süresi geçmiş politika oranı",
+          "Sahibi atanmış uyum yükümlülüğü oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Mevzuat Uyum Müdürü",
+            "title_en": "Regulatory Compliance Manager"
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Mevzuat İzleme ve Etki Analizi Yöneticisi",
+            "title_en": "Regulatory Monitoring and Impact Assessment Lead"
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/kidemli-mevzuat-uyum-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Mevzuat Uyum Uzmanı",
+            "title_en": "Senior Regulatory Compliance Specialist"
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Mevzuat Uyum Uzmanı",
+            "title_en": "Regulatory Compliance Specialist"
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-etki-analisti",
+            "level": "Analist",
+            "title_tr": "Mevzuat Etki Analisti",
+            "title_en": "Regulatory Impact Analyst"
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-takip-uzman-yardimcisi",
+            "level": "Uzman Yardımcısı",
+            "title_tr": "Mevzuat Takip Uzman Yardımcısı",
+            "title_en": "Regulatory Monitoring Associate"
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uyum Programları ve Politikalar Yöneticisi",
+            "title_en": "Compliance Programs and Policies Lead"
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/kidemli-uyum-programi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Uyum Programı Uzmanı",
+            "title_en": "Senior Compliance Program Specialist"
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/uyum-politikalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Politikaları Uzmanı",
+            "title_en": "Compliance Policies Specialist"
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/politika-ve-prosedur-yonetisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Politika ve Prosedür Yönetişimi Uzmanı",
+            "title_en": "Policy Governance Specialist"
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uyum Eğitimleri ve Farkındalık Yöneticisi",
+            "title_en": "Compliance Training and Awareness Lead"
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/uyum-egitimleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Eğitimleri Uzmanı",
+            "title_en": "Compliance Training Specialist"
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/etik-ve-uyum-farkindalik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etik ve Uyum Farkındalık Uzmanı",
+            "title_en": "Ethics and Compliance Awareness Specialist"
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/uyum-egitimleri-analisti",
+            "level": "Analist",
+            "title_tr": "Uyum Eğitimleri Analisti",
+            "title_en": "Compliance Training Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 24
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 32
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.01",
+            "title_tr": "Mevzuat Uyum Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi",
+            "title_tr": "Mevzuat İzleme ve Etki Analizi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/kidemli-mevzuat-uyum-uzmani",
+            "title_tr": "Kıdemli Mevzuat Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-uyum-uzmani",
+            "title_tr": "Mevzuat Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-etki-analisti",
+            "title_tr": "Mevzuat Etki Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/mevzuat-izleme-ve-etki-analizi/mevzuat-takip-uzman-yardimcisi",
+            "title_tr": "Mevzuat Takip Uzman Yardımcısı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar",
+            "title_tr": "Uyum Programları ve Politikalar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/kidemli-uyum-programi-uzmani",
+            "title_tr": "Kıdemli Uyum Programı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/uyum-politikalari-uzmani",
+            "title_tr": "Uyum Politikaları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-programlari-ve-politikalar/politika-ve-prosedur-yonetisimi-uzmani",
+            "title_tr": "Politika ve Prosedür Yönetişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik",
+            "title_tr": "Uyum Eğitimleri ve Farkındalık Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/uyum-egitimleri-uzmani",
+            "title_tr": "Uyum Eğitimleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/etik-ve-uyum-farkindalik-uzmani",
+            "title_tr": "Etik ve Uyum Farkındalık Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.01/uyum-egitimleri-ve-farkindalik/uyum-egitimleri-analisti",
+            "title_tr": "Uyum Eğitimleri Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.02",
+        "name_tr": "Kurumsal Risk Yönetimi",
+        "responsibilities": [
+          "Kurumsal risk metodolojisini ve risk taksonomisini yönetmek",
+          "Risk envanterini ve risk değerlendirmelerini koordine etmek",
+          "Risk iştahı ve tolerans önerilerini hazırlamak",
+          "Anahtar risk göstergelerini izlemek",
+          "Stratejik, operasyonel, proje ve yeni ürün risklerini değerlendirmek",
+          "Risk azaltma planlarını izlemek ve raporlamak"
+        ],
+        "authorities": [
+          "Risk metodolojisi ve taksonomi değişikliklerini direktörün onayına sunar",
+          "Risk değerlendirmelerinin metodolojiye uygunluğunu onaylar",
+          "Anahtar risk göstergesi eşiklerini önerir ve aşımlarda risk sahibinden aksiyon ister",
+          "Risk iştahı ve tolerans önerilerini hazırlar ve onaya sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Stratejik risklerin strateji ve hedef planlamasına entegrasyonu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Stratejik Projeler ve Dönüşüm Ofisi",
+            "topic": "Proje ve dönüşüm risklerinin değerlendirilmesi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Risk Yönetimi Müdürlüğü",
+            "topic": "Finansal risklerin kurumsal risk envanterine alınması"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+            "topic": "Siber risklerin kurumsal risk envanterine alınması"
+          },
+          {
+            "department": "18 - Ürün Yönetimi ve Ar-Ge",
+            "unit": "Ürün Stratejisi, Portföy ve Yönetişim",
+            "topic": "Yeni ürün ve hizmet risk değerlendirmeleri"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Uyum Operasyonları, İzleme ve Raporlama",
+            "topic": "Anahtar risk göstergeleri ve risk raporlarının GRC platformunda izlenmesi"
+          }
+        ],
+        "kpis": [
+          "Risk değerlendirmesi güncel olan birim oranı",
+          "Risk iştahı sınırını aşan risk sayısı",
+          "Eşik aşan anahtar risk göstergesi sayısı",
+          "Süresinde tamamlanan risk azaltma aksiyonu oranı",
+          "Risk değerlendirmesinden geçen yeni ürün ve proje oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Kurumsal Risk Yönetimi Müdürü",
+            "title_en": "Enterprise Risk Management Manager"
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Risk Envanteri ve Değerlendirme Yöneticisi",
+            "title_en": "Risk Inventory and Assessment Lead"
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/kidemli-kurumsal-risk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal Risk Uzmanı",
+            "title_en": "Senior Enterprise Risk Specialist"
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/kurumsal-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Risk Uzmanı",
+            "title_en": "Enterprise Risk Specialist"
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/risk-degerlendirme-analisti",
+            "level": "Analist",
+            "title_tr": "Risk Değerlendirme Analisti",
+            "title_en": "Risk Assessment Analyst"
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/risk-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Risk Veri Analisti",
+            "title_en": "Risk Data Analyst"
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Risk İştahı ve Göstergeler Yöneticisi",
+            "title_en": "Risk Appetite and Indicators Lead"
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/risk-istahi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Risk İştahı Uzmanı",
+            "title_en": "Risk Appetite Specialist"
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/anahtar-risk-gostergeleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Anahtar Risk Göstergeleri Uzmanı",
+            "title_en": "Key Risk Indicators Specialist"
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/risk-modelleme-analisti",
+            "level": "Analist",
+            "title_tr": "Risk Modelleme Analisti",
+            "title_en": "Risk Modelling Analyst"
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Stratejik ve Operasyonel Risk Yöneticisi",
+            "title_en": "Strategic and Operational Risk Lead"
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/stratejik-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Stratejik Risk Uzmanı",
+            "title_en": "Strategic Risk Specialist"
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/operasyonel-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Operasyonel Risk Uzmanı",
+            "title_en": "Operational Risk Specialist"
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/proje-ve-donusum-riskleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Proje ve Dönüşüm Riskleri Uzmanı",
+            "title_en": "Project and Transformation Risk Specialist"
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/yeni-urun-ve-hizmet-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Yeni Ürün ve Hizmet Risk Analisti",
+            "title_en": "New Product and Service Risk Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 11
+          },
+          {
+            "model": "Standart",
+            "min": 15,
+            "max": 27
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 21,
+            "max": 36
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.02",
+            "title_tr": "Kurumsal Risk Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme",
+            "title_tr": "Risk Envanteri ve Değerlendirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/kidemli-kurumsal-risk-uzmani",
+            "title_tr": "Kıdemli Kurumsal Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/kurumsal-risk-uzmani",
+            "title_tr": "Kurumsal Risk Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/risk-degerlendirme-analisti",
+            "title_tr": "Risk Değerlendirme Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/risk-envanteri-ve-degerlendirme/risk-veri-analisti",
+            "title_tr": "Risk Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler",
+            "title_tr": "Risk İştahı ve Göstergeler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/risk-istahi-uzmani",
+            "title_tr": "Risk İştahı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/anahtar-risk-gostergeleri-uzmani",
+            "title_tr": "Anahtar Risk Göstergeleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/risk-istahi-ve-gostergeler/risk-modelleme-analisti",
+            "title_tr": "Risk Modelleme Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk",
+            "title_tr": "Stratejik ve Operasyonel Risk Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/stratejik-risk-uzmani",
+            "title_tr": "Stratejik Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/operasyonel-risk-uzmani",
+            "title_tr": "Operasyonel Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/proje-ve-donusum-riskleri-uzmani",
+            "title_tr": "Proje ve Dönüşüm Riskleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.02/stratejik-ve-operasyonel-risk/yeni-urun-ve-hizmet-risk-analisti",
+            "title_tr": "Yeni Ürün ve Hizmet Risk Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.03",
+        "name_tr": "İç Kontrol ve Görevler Ayrılığı",
+        "responsibilities": [
+          "İç kontrol çerçevesini ve kontrol standartlarını tasarlamak",
+          "Süreç-risk-kontrol matrislerini güncel tutmak",
+          "Kontrol etkinlik testlerini yürütmek",
+          "Görevler ayrılığı ve yetki kontrollerini izlemek",
+          "Kontrol eksikliklerini ve iyileştirme aksiyonlarını takip etmek"
+        ],
+        "authorities": [
+          "Kontrol tasarım standartlarını ve test metodolojisini belirler",
+          "Kontrol test sonuçlarını ve etkinlik derecelendirmesini onaylar",
+          "Görevler ayrılığı çatışması taşıyan rol ve yetki tanımlarında düzeltme ister",
+          "Kontrol eksikliklerinde süreç sahibinden aksiyon planı ister ve kapanışı onaylar"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Finansal raporlama süreçlerinde anahtar kontrollerin tasarımı ve testi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "ERP rol ve yetki tasarımının görevler ayrılığı kurallarına uygunluğu"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Kimlik ve Erişim Güvenliği",
+            "topic": "Erişim ve rol kontrollerinin periyodik gözden geçirilmesi"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Süreç Yönetimi ve Operasyonel Mükemmellik",
+            "topic": "Süreç-risk-kontrol matrislerinin süreç dokümantasyonuyla uyumu"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Kalite Güvence, Bulgular ve Raporlama",
+            "topic": "İç kontrol bulgularının denetim aksiyon takibiyle uyumu"
+          }
+        ],
+        "kpis": [
+          "Test edilen anahtar kontrol oranı",
+          "Etkin bulunan kontrol oranı",
+          "Süresinde kapatılan kontrol eksikliği oranı",
+          "Görevler ayrılığı çatışması bulunan kullanıcı sayısı",
+          "Güncel süreç-risk-kontrol matrisi bulunan süreç oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.03",
+            "level": "Birim Müdürü",
+            "title_tr": "İç Kontrol Müdürü",
+            "title_en": "Internal Control Manager"
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kontrol Tasarımı ve Test Yöneticisi",
+            "title_en": "Control Design and Testing Lead"
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/kidemli-ic-kontrol-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İç Kontrol Uzmanı",
+            "title_en": "Senior Internal Control Specialist"
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/ic-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "İç Kontrol Uzmanı",
+            "title_en": "Internal Control Specialist"
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/kontrol-test-analisti",
+            "level": "Analist",
+            "title_tr": "Kontrol Test Analisti",
+            "title_en": "Control Testing Analyst"
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/surec-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Süreç Kontrol Uzmanı",
+            "title_en": "Process Controls Specialist"
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Görevler Ayrılığı ve Yetki Kontrolleri Yöneticisi",
+            "title_en": "Segregation of Duties and Access Controls Lead"
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/gorevler-ayriligi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Görevler Ayrılığı Uzmanı",
+            "title_en": "Segregation of Duties Specialist"
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/yetki-matrisi-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yetki Matrisi Kontrol Uzmanı",
+            "title_en": "Delegation of Authority Controls Specialist"
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/erisim-ve-rol-kontrolleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Erişim ve Rol Kontrolleri Uzmanı",
+            "title_en": "Access and Role Controls Specialist"
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/erp-kontrol-analisti",
+            "level": "Analist",
+            "title_tr": "ERP Kontrol Analisti",
+            "title_en": "ERP Controls Analyst"
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İç Kontrol Aksiyon Yönetimi Yöneticisi",
+            "title_en": "Internal Control Remediation Lead"
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/kontrol-iyilestirme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kontrol İyileştirme Uzmanı",
+            "title_en": "Control Improvement Specialist"
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/bulgular-ve-aksiyon-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bulgular ve Aksiyon Takip Uzmanı",
+            "title_en": "Findings and Action Tracking Specialist"
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/kontrol-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kontrol Dokümantasyon Uzmanı",
+            "title_en": "Control Documentation Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 11
+          },
+          {
+            "model": "Standart",
+            "min": 15,
+            "max": 27
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 21,
+            "max": 36
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.03",
+            "title_tr": "İç Kontrol Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test",
+            "title_tr": "Kontrol Tasarımı ve Test Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/kidemli-ic-kontrol-uzmani",
+            "title_tr": "Kıdemli İç Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/ic-kontrol-uzmani",
+            "title_tr": "İç Kontrol Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/kontrol-test-analisti",
+            "title_tr": "Kontrol Test Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/kontrol-tasarimi-ve-test/surec-kontrol-uzmani",
+            "title_tr": "Süreç Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri",
+            "title_tr": "Görevler Ayrılığı ve Yetki Kontrolleri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/gorevler-ayriligi-uzmani",
+            "title_tr": "Görevler Ayrılığı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/yetki-matrisi-kontrol-uzmani",
+            "title_tr": "Yetki Matrisi Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/erisim-ve-rol-kontrolleri-uzmani",
+            "title_tr": "Erişim ve Rol Kontrolleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/gorevler-ayriligi-ve-yetki-kontrolleri/erp-kontrol-analisti",
+            "title_tr": "ERP Kontrol Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi",
+            "title_tr": "İç Kontrol Aksiyon Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/kontrol-iyilestirme-uzmani",
+            "title_tr": "Kontrol İyileştirme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/bulgular-ve-aksiyon-takip-uzmani",
+            "title_tr": "Bulgular ve Aksiyon Takip Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.03/ic-kontrol-aksiyon-yonetimi/kontrol-dokumantasyon-uzmani",
+            "title_tr": "Kontrol Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.04",
+        "name_tr": "Etik, İhbar ve Suistimal Önleme",
+        "responsibilities": [
+          "Etik ve davranış kurallarını güncel tutmak ve yaygınlaştırmak",
+          "İhbar mekanizmasının bağımsızlığını ve gizliliğini sağlamak",
+          "Çıkar çatışması, hediye ve ağırlama kontrollerini izlemek",
+          "Suistimal risk değerlendirmelerini ve önleyici kontrolleri yönetmek",
+          "Etik vakaları sınıflandırmak ve Etik Kurula raporlamak"
+        ],
+        "authorities": [
+          "İhbarları sınıflandırır ve inceleme yolunu belirler",
+          "Etik vaka inceleme sonuçlarını ve önerilerini Etik Kurula sunar",
+          "Çıkar çatışması beyanlarını değerlendirir ve önlem önerir",
+          "Disiplin gerektiren vakalarda öneri sunar; disiplin kararı İnsan Kaynaklarında kalır",
+          "Suistimal şüphesi taşıyan vakaları özel inceleme için İç Denetime yönlendirir"
+        ],
+        "collaborations": [
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Suistimal İncelemeleri ve Özel Denetimler",
+            "topic": "Suistimal şüphesi taşıyan ihbarların özel incelemeye aktarılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan İlişkileri",
+            "topic": "Etik ihlal vakalarında disiplin sürecine bilgi aktarımı"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "İş ve Sosyal Güvenlik Hukuku",
+            "topic": "Etik vakalarda iş hukuku görüşü"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Güvenlik İstihbaratı ve Soruşturmalar",
+            "topic": "Güvenlik soruşturması gerektiren vakaların koordinasyonu"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Finansal suistimal kontrolleri ve ödeme anomalilerinin izlenmesi"
+          }
+        ],
+        "kpis": [
+          "İhbarların ilk değerlendirmeye alınma süresi",
+          "Etik vakaların ortalama sonuçlanma süresi",
+          "Çıkar çatışması beyanı tamamlama oranı",
+          "Etik kurallar eğitimi tamamlama oranı",
+          "Önleyici kontrolle tespit edilen suistimal girişimi sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Etik ve Suistimal Önleme Müdürü",
+            "title_en": "Ethics and Fraud Prevention Manager"
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Etik ve İhbar Yönetimi Yöneticisi",
+            "title_en": "Ethics and Whistleblowing Lead"
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/etik-ve-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etik ve Uyum Uzmanı",
+            "title_en": "Ethics and Compliance Specialist"
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/ihbar-hatti-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İhbar Hattı Yönetimi Uzmanı",
+            "title_en": "Whistleblowing Program Specialist"
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/etik-vaka-analisti",
+            "level": "Analist",
+            "title_tr": "Etik Vaka Analisti",
+            "title_en": "Ethics Case Analyst"
+          },
+          {
+            "position": "06.04/suistimal-onleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Suistimal Önleme Yöneticisi",
+            "title_en": "Fraud Prevention Lead"
+          },
+          {
+            "position": "06.04/suistimal-onleme/kidemli-suistimal-risk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Suistimal Risk Uzmanı",
+            "title_en": "Senior Fraud Risk Specialist"
+          },
+          {
+            "position": "06.04/suistimal-onleme/suistimal-onleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Suistimal Önleme Uzmanı",
+            "title_en": "Fraud Prevention Specialist"
+          },
+          {
+            "position": "06.04/suistimal-onleme/suistimal-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Suistimal Veri Analisti",
+            "title_en": "Fraud Data Analyst"
+          },
+          {
+            "position": "06.04/suistimal-onleme/finansal-suistimal-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Suistimal Kontrol Uzmanı",
+            "title_en": "Financial Fraud Controls Specialist"
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çıkar Çatışması ve Etik İnceleme Yöneticisi",
+            "title_en": "Conflict of Interest and Ethics Review Lead"
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/cikar-catismasi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çıkar Çatışması Uzmanı",
+            "title_en": "Conflict of Interest Specialist"
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/hediye-ve-agirlama-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hediye ve Ağırlama Kontrol Uzmanı",
+            "title_en": "Gifts and Hospitality Controls Specialist"
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/etik-inceleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etik İnceleme Uzmanı",
+            "title_en": "Ethics Review Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 24
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 32
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.04",
+            "title_tr": "Etik ve Suistimal Önleme Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi",
+            "title_tr": "Etik ve İhbar Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/etik-ve-uyum-uzmani",
+            "title_tr": "Etik ve Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/ihbar-hatti-yonetimi-uzmani",
+            "title_tr": "İhbar Hattı Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/etik-ve-ihbar-yonetimi/etik-vaka-analisti",
+            "title_tr": "Etik Vaka Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/suistimal-onleme",
+            "title_tr": "Suistimal Önleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.04/suistimal-onleme/kidemli-suistimal-risk-uzmani",
+            "title_tr": "Kıdemli Suistimal Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/suistimal-onleme/suistimal-onleme-uzmani",
+            "title_tr": "Suistimal Önleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/suistimal-onleme/suistimal-veri-analisti",
+            "title_tr": "Suistimal Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/suistimal-onleme/finansal-suistimal-kontrol-uzmani",
+            "title_tr": "Finansal Suistimal Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme",
+            "title_tr": "Çıkar Çatışması ve Etik İnceleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/cikar-catismasi-uzmani",
+            "title_tr": "Çıkar Çatışması Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/hediye-ve-agirlama-kontrol-uzmani",
+            "title_tr": "Hediye ve Ağırlama Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.04/cikar-catismasi-ve-etik-inceleme/etik-inceleme-uzmani",
+            "title_tr": "Etik İnceleme Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.05",
+        "name_tr": "Üçüncü Taraf Uyum ve Risk Yönetimi",
+        "responsibilities": [
+          "Üçüncü taraf risk sınıflandırmasını yönetmek",
+          "Tedarikçi, iş ortağı, bayi ve aracı uyum kontrollerini yürütmek",
+          "Uyum durum tespiti ve yaptırım taramalarını koordine etmek",
+          "Nihai faydalanıcı kontrollerini izlemek",
+          "Kritik üçüncü taraf risklerini ve uyum taahhütlerini takip etmek"
+        ],
+        "authorities": [
+          "Üçüncü taraf risk çerçevesini ve konsolide risk sınıfını belirler; uyum, siber güvenlik, fiziksel güvenlik ve EHS değerlendirmelerini bu sınıfta birleştirir",
+          "Yüksek riskli üçüncü taraflar için iş ilişkisi öncesinde uyum görüşü verir",
+          "Yaptırım taramasında eşleşme çıkan taraflarla işlemin askıya alınmasını önerir",
+          "Uyum taahhüdünü yerine getirmeyen üçüncü taraflar için düzeltici aksiyon ister"
+        ],
+        "collaborations": [
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Tedarikçi seçimi ve kayıt sürecinde uyum durum tespiti"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Kanal, İş Ortaklıkları ve Ekosistem Satışları",
+            "topic": "Bayi, aracı ve iş ortaklarının uyum kontrolleri"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Üçüncü taraf sözleşmelerine uyum ve denetim maddelerinin eklenmesi"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Siber Risk, Varlık ve Üçüncü Taraf Güvenliği",
+            "topic": "Üçüncü taraf siber risk değerlendirmeleri"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Kritik tedarikçilerin süreklilik riskinin izlenmesi"
+          }
+        ],
+        "kpis": [
+          "Uyum taramasından geçen yeni üçüncü taraf oranı",
+          "Risk sınıfı güncel olan kritik üçüncü taraf oranı",
+          "Durum tespiti ortalama tamamlanma süresi",
+          "Yaptırım taraması eşleşmelerinin sonuçlandırılma süresi",
+          "Süresinde yerine getirilen uyum taahhüdü oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Üçüncü Taraf Uyum ve Risk Müdürü",
+            "title_en": "Third-Party Compliance and Risk Manager"
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tedarikçi ve İş Ortağı Uyumu Yöneticisi",
+            "title_en": "Supplier and Business Partner Compliance Lead"
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/tedarikci-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tedarikçi Uyum Uzmanı",
+            "title_en": "Supplier Compliance Specialist"
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/is-ortagi-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Ortağı Uyum Uzmanı",
+            "title_en": "Business Partner Compliance Specialist"
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/bayi-ve-araci-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bayi ve Aracı Uyum Uzmanı",
+            "title_en": "Dealer and Intermediary Compliance Specialist"
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uyum Durum Tespiti ve Tarama Yöneticisi",
+            "title_en": "Compliance Due Diligence and Screening Lead"
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/kidemli-durum-tespiti-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Durum Tespiti Uzmanı",
+            "title_en": "Senior Due Diligence Specialist"
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/uyum-tarama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Tarama Uzmanı",
+            "title_en": "Compliance Screening Specialist"
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/yaptirim-ve-kisitli-taraf-tarama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yaptırım ve Kısıtlı Taraf Tarama Uzmanı",
+            "title_en": "Sanctions Screening Specialist"
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/ucuncu-taraf-arastirma-analisti",
+            "level": "Analist",
+            "title_tr": "Üçüncü Taraf Araştırma Analisti",
+            "title_en": "Third-Party Research Analyst"
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Üçüncü Taraf Risk İzleme Yöneticisi",
+            "title_en": "Third-Party Risk Monitoring Lead"
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/ucuncu-taraf-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üçüncü Taraf Risk Uzmanı",
+            "title_en": "Third-Party Risk Specialist"
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/tedarikci-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Tedarikçi Risk Analisti",
+            "title_en": "Supplier Risk Analyst"
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/uyum-taahhutleri-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Taahhütleri Takip Uzmanı",
+            "title_en": "Compliance Commitments Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 26
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 20,
+            "max": 34
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.05",
+            "title_tr": "Üçüncü Taraf Uyum ve Risk Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu",
+            "title_tr": "Tedarikçi ve İş Ortağı Uyumu Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/tedarikci-uyum-uzmani",
+            "title_tr": "Tedarikçi Uyum Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/is-ortagi-uyum-uzmani",
+            "title_tr": "İş Ortağı Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/tedarikci-ve-is-ortagi-uyumu/bayi-ve-araci-uyum-uzmani",
+            "title_tr": "Bayi ve Aracı Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama",
+            "title_tr": "Uyum Durum Tespiti ve Tarama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/kidemli-durum-tespiti-uzmani",
+            "title_tr": "Kıdemli Durum Tespiti Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/uyum-tarama-uzmani",
+            "title_tr": "Uyum Tarama Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/yaptirim-ve-kisitli-taraf-tarama-uzmani",
+            "title_tr": "Yaptırım ve Kısıtlı Taraf Tarama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/uyum-durum-tespiti-ve-tarama/ucuncu-taraf-arastirma-analisti",
+            "title_tr": "Üçüncü Taraf Araştırma Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme",
+            "title_tr": "Üçüncü Taraf Risk İzleme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/ucuncu-taraf-risk-uzmani",
+            "title_tr": "Üçüncü Taraf Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/tedarikci-risk-analisti",
+            "title_tr": "Tedarikçi Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.05/ucuncu-taraf-risk-izleme/uyum-taahhutleri-takip-uzmani",
+            "title_tr": "Uyum Taahhütleri Takip Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.06",
+        "name_tr": "KVKK ve Veri Koruma Uyumu",
+        "responsibilities": [
+          "KVKK ve GDPR uyum programını yönetmek",
+          "Kişisel veri işleme envanterini ve VERBİS koordinasyonunu yürütmek",
+          "Saklama, imha, açık rıza ve aydınlatma kontrollerini izlemek",
+          "İlgili kişi başvurularını ve veri ihlali süreçlerini koordine etmek",
+          "Veri koruma etki değerlendirmelerini yürütmek",
+          "Veri işleyenlerin uyum durumunu izlemek"
+        ],
+        "authorities": [
+          "Veri işleme envanteri ve VERBİS kayıtlarının güncelliğini onaylar",
+          "Veri koruma etki değerlendirmesi sonucunda ek kontrol gereksinimi belirler",
+          "Saklama süresi aşan veriler için imha aksiyonu ister",
+          "Hukuki yorum, aydınlatma metni ve ihlal bildirimi konularını Hukuk İşlerine iletir"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "KVKK ve Veri Koruma Hukuku",
+            "topic": "Aydınlatma metinleri, ihlal bildirimi ve ilgili kişi başvurularında hukuki görüş"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Veri Güvenliği, Gizlilik Teknolojileri ve Kriptografi",
+            "topic": "Kişisel verilerin teknik korunması, maskeleme ve şifreleme kontrolleri"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Veri ihlali olaylarının tespiti ve müdahale koordinasyonu"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "Veri Yönetişimi, Kalitesi ve Ana Veri",
+            "topic": "Kişisel veri envanteri ile veri kataloğu ve sınıflandırmasının uyumu"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Bordro ve Özlük İşleri",
+            "topic": "Çalışan kişisel verilerinin saklama ve imha kontrolleri"
+          },
+          {
+            "department": "11 - Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+            "unit": "Şikâyet, Talep ve Müşterinin Sesi",
+            "topic": "İlgili kişi başvurularının müşteri kanallarından alınması"
+          }
+        ],
+        "kpis": [
+          "Güncel veri işleme envanteri bulunan süreç oranı",
+          "İlgili kişi başvurularının yasal sürede yanıtlanma oranı",
+          "Saklama süresi aşılmış kişisel veri bulunan sistem sayısı",
+          "Tamamlanan veri koruma etki değerlendirmesi sayısı",
+          "Uyum değerlendirmesinden geçen veri işleyen oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.06",
+            "level": "Birim Müdürü",
+            "title_tr": "KVKK ve Veri Koruma Uyum Müdürü",
+            "title_en": "Data Protection Compliance Manager"
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri Koruma Uyum Programı Yöneticisi",
+            "title_en": "Data Protection Compliance Program Lead"
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/kidemli-veri-koruma-uyum-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Veri Koruma Uyum Uzmanı",
+            "title_en": "Senior Data Protection Compliance Specialist"
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "KVKK Uyum Uzmanı",
+            "title_en": "KVKK Compliance Specialist"
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/gdpr-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "GDPR Uyum Uzmanı",
+            "title_en": "GDPR Compliance Specialist"
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Veri Envanteri ve Kontroller Yöneticisi",
+            "title_en": "Data Inventory and Controls Lead"
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/veri-envanteri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri Envanteri Uzmanı",
+            "title_en": "Data Inventory Specialist"
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/kisisel-veri-surec-analisti",
+            "level": "Analist",
+            "title_tr": "Kişisel Veri Süreç Analisti",
+            "title_en": "Personal Data Process Analyst"
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/saklama-ve-imha-kontrol-uzmani",
+            "level": "Uzman",
+            "title_tr": "Saklama ve İmha Kontrol Uzmanı",
+            "title_en": "Retention and Disposal Controls Specialist"
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/veri-isleyen-uyum-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri İşleyen Uyum Uzmanı",
+            "title_en": "Data Processor Compliance Specialist"
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Başvuru ve İhlal Koordinasyon Yöneticisi",
+            "title_en": "Data Subject Requests and Breach Coordination Lead"
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/ilgili-kisi-basvuru-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "İlgili Kişi Başvuru Koordinasyon Uzmanı",
+            "title_en": "Data Subject Request Coordinator"
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/veri-ihlali-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri İhlali Koordinasyon Uzmanı",
+            "title_en": "Data Breach Coordination Specialist"
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/veri-koruma-kayit-ve-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Veri Koruma Kayıt ve Raporlama Uzmanı",
+            "title_en": "Privacy Records and Reporting Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 14,
+            "max": 24
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 32
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.06",
+            "title_tr": "KVKK ve Veri Koruma Uyum Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi",
+            "title_tr": "Veri Koruma Uyum Programı Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/kidemli-veri-koruma-uyum-uzmani",
+            "title_tr": "Kıdemli Veri Koruma Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+            "title_tr": "KVKK Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-koruma-uyum-programi/gdpr-uyum-uzmani",
+            "title_tr": "GDPR Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller",
+            "title_tr": "Veri Envanteri ve Kontroller Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/veri-envanteri-uzmani",
+            "title_tr": "Veri Envanteri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/kisisel-veri-surec-analisti",
+            "title_tr": "Kişisel Veri Süreç Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/saklama-ve-imha-kontrol-uzmani",
+            "title_tr": "Saklama ve İmha Kontrol Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/veri-envanteri-ve-kontroller/veri-isleyen-uyum-uzmani",
+            "title_tr": "Veri İşleyen Uyum Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu",
+            "title_tr": "Başvuru ve İhlal Koordinasyon Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/ilgili-kisi-basvuru-koordinasyon-uzmani",
+            "title_tr": "İlgili Kişi Başvuru Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/veri-ihlali-koordinasyon-uzmani",
+            "title_tr": "Veri İhlali Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.06/basvuru-ve-ihlal-koordinasyonu/veri-koruma-kayit-ve-raporlama-uzmani",
+            "title_tr": "Veri Koruma Kayıt ve Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.07",
+        "name_tr": "İş Sürekliliği ve Kriz Riskleri",
+        "responsibilities": [
+          "İş etki analizlerini ve kritik süreç envanterini yönetmek",
+          "İş sürekliliği planlarını ve kurtarma önceliklerini koordine etmek",
+          "Kriz senaryolarını ve tatbikatları hazırlamak",
+          "Kritik tedarikçilerin süreklilik kapasitesini izlemek",
+          "Kurumsal dayanıklılık performansını raporlamak"
+        ],
+        "authorities": [
+          "Kritik süreçleri ve kurtarma süresi hedeflerini belirler ve onaya sunar",
+          "İş sürekliliği planlarının asgari içerik standardını belirler",
+          "Kurumsal tatbikat takvimini tek takvimde birleştirir ve onaylar; iş sürekliliği tatbikat senaryolarını onaylar",
+          "Tatbikatta yetersiz bulunan planlar için düzeltme ister"
+        ],
+        "collaborations": [
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Altyapı, Bulut ve Platform Operasyonları",
+            "topic": "BT felaket kurtarma planları ve sistem kurtarma süreleri"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "Kriz iletişimi planlarının süreklilik planlarıyla uyumu"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Acil Durum, Yangın Güvenliği ve EHS Güvence",
+            "topic": "Acil durum planları ve tahliye tatbikatlarının koordinasyonu"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Kritik tedarikçilerin süreklilik kapasitesi ve alternatif tedarik"
+          },
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Operasyon Stratejisi, Planlama ve Yönetişim",
+            "topic": "Kritik operasyonel süreçlerin iş etki analizi"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Güvenlik Operasyonları ve Kontrol Merkezi",
+            "topic": "Güvenlik olaylarında kriz koordinasyonu ve kontrol merkezi desteği"
+          }
+        ],
+        "kpis": [
+          "Güncel iş etki analizi bulunan kritik süreç oranı",
+          "Tatbikatla doğrulanmış iş sürekliliği planı oranı",
+          "Kurtarma süresi hedefine ulaşılan tatbikat oranı",
+          "Süreklilik değerlendirmesinden geçen kritik tedarikçi oranı",
+          "Tatbikat bulgularının süresinde kapatılma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.07",
+            "level": "Birim Müdürü",
+            "title_tr": "İş Sürekliliği ve Kurumsal Dayanıklılık Müdürü",
+            "title_en": "Business Continuity and Corporate Resilience Manager"
+          },
+          {
+            "position": "06.07/is-etki-analizi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Etki Analizi Yöneticisi",
+            "title_en": "Business Impact Analysis Lead"
+          },
+          {
+            "position": "06.07/is-etki-analizi/is-etki-analizi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Etki Analizi Uzmanı",
+            "title_en": "Business Impact Analysis Specialist"
+          },
+          {
+            "position": "06.07/is-etki-analizi/kritik-surec-analisti",
+            "level": "Analist",
+            "title_tr": "Kritik Süreç Analisti",
+            "title_en": "Critical Process Analyst"
+          },
+          {
+            "position": "06.07/is-etki-analizi/bagimlilik-ve-kaynak-analisti",
+            "level": "Analist",
+            "title_tr": "Bağımlılık ve Kaynak Analisti",
+            "title_en": "Dependency and Resource Analyst"
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İş Sürekliliği Yönetimi Yöneticisi",
+            "title_en": "Business Continuity Management Lead"
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/kidemli-is-surekliligi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İş Sürekliliği Uzmanı",
+            "title_en": "Senior Business Continuity Specialist"
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/is-surekliligi-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "İş Sürekliliği Planlama Uzmanı",
+            "title_en": "Business Continuity Planning Specialist"
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/kurtarma-stratejileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurtarma Stratejileri Uzmanı",
+            "title_en": "Recovery Strategies Specialist"
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kriz Tatbikatları ve Dayanıklılık Yöneticisi",
+            "title_en": "Crisis Exercises and Resilience Lead"
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/kriz-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kriz Yönetimi Uzmanı",
+            "title_en": "Crisis Management Specialist"
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/tatbikat-ve-test-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tatbikat ve Test Uzmanı",
+            "title_en": "Exercise and Testing Specialist"
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/kurumsal-dayaniklilik-analisti",
+            "level": "Analist",
+            "title_tr": "Kurumsal Dayanıklılık Analisti",
+            "title_en": "Corporate Resilience Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 10
+          },
+          {
+            "model": "Standart",
+            "min": 13,
+            "max": 22
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 29
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.07",
+            "title_tr": "İş Sürekliliği ve Kurumsal Dayanıklılık Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.07/is-etki-analizi",
+            "title_tr": "İş Etki Analizi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.07/is-etki-analizi/is-etki-analizi-uzmani",
+            "title_tr": "İş Etki Analizi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/is-etki-analizi/kritik-surec-analisti",
+            "title_tr": "Kritik Süreç Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/is-etki-analizi/bagimlilik-ve-kaynak-analisti",
+            "title_tr": "Bağımlılık ve Kaynak Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi",
+            "title_tr": "İş Sürekliliği Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/kidemli-is-surekliligi-uzmani",
+            "title_tr": "Kıdemli İş Sürekliliği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/is-surekliligi-planlama-uzmani",
+            "title_tr": "İş Sürekliliği Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/is-surekliligi-yonetimi/kurtarma-stratejileri-uzmani",
+            "title_tr": "Kurtarma Stratejileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik",
+            "title_tr": "Kriz Tatbikatları ve Dayanıklılık Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/kriz-yonetimi-uzmani",
+            "title_tr": "Kriz Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/tatbikat-ve-test-uzmani",
+            "title_tr": "Tatbikat ve Test Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.07/kriz-tatbikatlari-ve-dayaniklilik/kurumsal-dayaniklilik-analisti",
+            "title_tr": "Kurumsal Dayanıklılık Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "06.08",
+        "name_tr": "Uyum Operasyonları, İzleme ve Raporlama",
+        "responsibilities": [
+          "Uyum izleme ve test planını yürütmek",
+          "Uyum bulgularını ve aksiyonlarını takip etmek",
+          "Risk ve uyum dashboardlarını ve komite raporlarını hazırlamak",
+          "GRC platformunu ve risk ve kontrol veri kalitesini yönetmek",
+          "Uyum teknolojileri ve otomasyonlarını geliştirmek"
+        ],
+        "authorities": [
+          "Yıllık uyum izleme ve test planını direktörün onayına sunar",
+          "Uyum testi sonuçlarını ve bulgu derecelendirmesini onaylar",
+          "Komite raporlarının veri kaynağını ve içerik standardını belirler",
+          "GRC platformundaki rol, iş akışı ve veri standartlarını belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Risk ve Uyum Komitesi raporlarının hazırlanması ve sunumu"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Kalite Güvence, Bulgular ve Raporlama",
+            "topic": "Uyum bulguları ile denetim bulgularının ortak aksiyon takibinde izlenmesi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "GRC platformunun işletimi ve iş sistemleriyle entegrasyonu"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "Risk ve uyum dashboardlarının veri altyapısı"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Kurumsal Risk Yönetimi",
+            "topic": "Anahtar risk göstergelerinin raporlanması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İç Kontrol ve Görevler Ayrılığı",
+            "topic": "Kontrol test sonuçlarının GRC platformunda izlenmesi"
+          }
+        ],
+        "kpis": [
+          "Uyum izleme planının gerçekleşme oranı",
+          "Süresinde kapatılan uyum bulgusu oranı",
+          "Komite raporlarının zamanında sunulma oranı",
+          "GRC platformu veri kalitesi skoru",
+          "Otomatik izlenen uyum kontrolü oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "06.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Uyum Operasyonları ve Raporlama Müdürü",
+            "title_en": "Compliance Operations and Reporting Manager"
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Uyum İzleme ve Test Yöneticisi",
+            "title_en": "Compliance Monitoring and Testing Lead"
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/kidemli-uyum-izleme-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Uyum İzleme Uzmanı",
+            "title_en": "Senior Compliance Monitoring Specialist"
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-test-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Test Uzmanı",
+            "title_en": "Compliance Testing Specialist"
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-kontrol-analisti",
+            "level": "Analist",
+            "title_tr": "Uyum Kontrol Analisti",
+            "title_en": "Compliance Controls Analyst"
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-bulgulari-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Bulguları Takip Uzmanı",
+            "title_en": "Compliance Findings Specialist"
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Risk ve Uyum Raporlama Yöneticisi",
+            "title_en": "Risk and Compliance Reporting Lead"
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/risk-ve-uyum-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Risk ve Uyum Raporlama Uzmanı",
+            "title_en": "Risk and Compliance Reporting Specialist"
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/yonetim-kurulu-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetim Kurulu Raporlama Uzmanı",
+            "title_en": "Board Reporting Specialist"
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/risk-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Risk Veri Analisti",
+            "title_en": "Risk Data Analyst"
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/kri-ve-kpi-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "KRI ve KPI Raporlama Uzmanı",
+            "title_en": "KRI and KPI Reporting Specialist"
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "GRC Sistemleri ve Veri Yönetimi Yöneticisi",
+            "title_en": "GRC Systems and Data Management Lead"
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/grc-sistemleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "GRC Sistemleri Uzmanı",
+            "title_en": "GRC Systems Specialist"
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/risk-ve-kontrol-veri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Risk ve Kontrol Veri Uzmanı",
+            "title_en": "Risk and Control Data Specialist"
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/uyum-otomasyonu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Uyum Otomasyonu Uzmanı",
+            "title_en": "Compliance Automation Specialist"
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/grc-raporlama-analisti",
+            "level": "Analist",
+            "title_tr": "GRC Raporlama Analisti",
+            "title_en": "GRC Reporting Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 6,
+            "max": 12
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 29
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 22,
+            "max": 38
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "06.08",
+            "title_tr": "Uyum Operasyonları ve Raporlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test",
+            "title_tr": "Uyum İzleme ve Test Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/kidemli-uyum-izleme-uzmani",
+            "title_tr": "Kıdemli Uyum İzleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-test-uzmani",
+            "title_tr": "Uyum Test Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-kontrol-analisti",
+            "title_tr": "Uyum Kontrol Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/uyum-izleme-ve-test/uyum-bulgulari-takip-uzmani",
+            "title_tr": "Uyum Bulguları Takip Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama",
+            "title_tr": "Risk ve Uyum Raporlama Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/risk-ve-uyum-raporlama-uzmani",
+            "title_tr": "Risk ve Uyum Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/yonetim-kurulu-raporlama-uzmani",
+            "title_tr": "Yönetim Kurulu Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/risk-veri-analisti",
+            "title_tr": "Risk Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/risk-ve-uyum-raporlama/kri-ve-kpi-raporlama-uzmani",
+            "title_tr": "KRI ve KPI Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi",
+            "title_tr": "GRC Sistemleri ve Veri Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/grc-sistemleri-uzmani",
+            "title_tr": "GRC Sistemleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/risk-ve-kontrol-veri-uzmani",
+            "title_tr": "Risk ve Kontrol Veri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/uyum-otomasyonu-uzmani",
+            "title_tr": "Uyum Otomasyonu Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "06.08/grc-sistemleri-ve-veri-yonetimi/grc-raporlama-analisti",
+            "title_tr": "GRC Raporlama Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

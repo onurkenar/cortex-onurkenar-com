@@ -1,0 +1,7 @@
+{
+ "name": "MCP Sunucusu Oluşturucu",
+ "desc": "LLM'lerin dış hizmetlerle iyi tasarlanmış araçlar üzerinden çalışmasını sağlayan yüksek kaliteli MCP sunucularını araştırma, uygulama, test ve değerlendirme aşamalarıyla kurar.",
+ "trigger": "LLM'lerin iyi tasarlanmış araçlar aracılığıyla dış hizmetlerle etkileşim kurmasını sağlayan yüksek kaliteli MCP (Model Context Protocol) sunucuları oluşturma rehberi. Dış API'leri ya da hizmetleri entegre etmek için Python (FastMCP) ya da Node/TypeScript (MCP SDK) ile MCP sunucusu geliştirirken kullanın.",
+ "scenario": "Bir dış API ya da hizmet Claude'a MCP sunucusu olarak bağlanacağı zaman, Python (FastMCP) ya da TypeScript (MCP SDK) ile yeni sunucu yazılırken veya mevcut bir sunucu iyileştirilirken.",
+ "example": "GitHub API'si için `github_create_issue`, `github_list_repos` gibi tutarlı adlı, Zod şemalı, sayfalamalı araçlar yazılır; sunucu MCP Inspector ile test edilir ve 10 soruluk XML değerlendirme dosyası hazırlanır."
+}

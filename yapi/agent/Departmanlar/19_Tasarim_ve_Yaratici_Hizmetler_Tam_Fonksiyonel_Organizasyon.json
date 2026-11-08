@@ -1,0 +1,1093 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "19 - Tasarım ve Yaratıcı Hizmetler Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "19",
+    "name_tr": "Tasarım ve Yaratıcı Hizmetler",
+    "name_en": "Design and Creative Services",
+    "organization_model": "Tam Fonksiyonel Yaratıcı Stüdyo Modeli",
+    "purpose": "Marka stratejisini, ürün ve iletişim hedeflerini tutarlı, özgün ve yüksek kaliteli görsel deneyimlere dönüştürmek; yaratıcı üretimi ölçeklenebilir stüdyo ve yönetişim modeliyle yönetmek.",
+    "reports_to": {
+      "title_tr": "Pazarlama Başkanı / Kurumsal İletişim Başkanı / Genel Müdür",
+      "title_en": "Chief Marketing Officer / Chief Communications Officer / Chief Executive Officer"
+    },
+    "head": {
+      "position_code": "19.00.001",
+      "title_tr": "Tasarım ve Yaratıcı Hizmetler Direktörü",
+      "title_en": "Design and Creative Services Director",
+      "alternative_executive_titles": [
+        "Executive Creative Director",
+        "Chief Design Officer"
+      ],
+      "reports_to": "Pazarlama Başkanı / Chief Marketing Officer",
+      "direct_reports": [
+        "19.01",
+        "19.02",
+        "19.03",
+        "19.04",
+        "19.05",
+        "19.06",
+        "19.07",
+        "19.08"
+      ],
+      "accountabilities": [
+        "Yaratıcı strateji, tasarım kalitesi ve görsel standartları yönetmek",
+        "Marka kimliği ve tüm yaratıcı uygulamaların tutarlılığını sağlamak",
+        "Grafik, dijital, video, fotoğraf, motion ve 3D üretimini yönetmek",
+        "Yaratıcı kaynak, stüdyo, tedarikçi ve dijital varlık operasyonlarını yönetmek",
+        "Tasarımın marka algısı, kullanıcı deneyimi ve ticari performans üzerindeki etkisini geliştirmek"
+      ]
+    },
+    "operating_principle": "Pazarlama ve Kurumsal İletişim neyin, kime ve hangi hedefle anlatılacağını belirler; Tasarım ve Yaratıcı Hizmetler bunun yaratıcı fikir, görsel dil ve üretim kalitesini sahiplenir. Ürün Tasarımı ise ürün deneyimi sahipliği kapsamında Ürün Yönetimiyle ortak çalışır.",
+    "hierarchy_standard": [
+      "Departman Direktörü / Executive Creative Director",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "19.01",
+        "name_tr": "Yaratıcı Strateji ve Tasarım Yönetişimi",
+        "name_en": "Creative Strategy and Design Governance",
+        "manager": {
+          "position_code": "19.01.001",
+          "title_tr": "Yaratıcı Strateji ve Tasarım Yönetişimi Müdürü",
+          "title_en": "Creative Strategy and Design Governance Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.01.01",
+            "name_tr": "Yaratıcı Strateji ve Konsept Geliştirme",
+            "name_en": "Creative Strategy and Concept Development",
+            "lead": {
+              "position_code": "19.01.01.001",
+              "title_tr": "Yaratıcı Strateji ve Konsept Geliştirme Yöneticisi",
+              "title_en": "Creative Strategy and Concept Development Manager",
+              "reports_to": "19.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.01.01.002",
+                "title_tr": "Kıdemli Yaratıcı Stratejist",
+                "title_en": "Senior Creative Strategist",
+                "reports_to": "19.01.01.001"
+              },
+              {
+                "position_code": "19.01.01.003",
+                "title_tr": "Yaratıcı Stratejist",
+                "title_en": "Creative Strategist",
+                "reports_to": "19.01.01.001"
+              },
+              {
+                "position_code": "19.01.01.004",
+                "title_tr": "Konsept Geliştirme Uzmanı",
+                "title_en": "Concept Development Specialist",
+                "reports_to": "19.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Marka ve kampanya hedeflerini yaratıcı stratejiye dönüştürmek",
+              "Büyük fikir, konsept ve yaratıcı anlatı geliştirmek",
+              "Yaratıcı yaklaşımın kanal ve hedef kitle uyumunu sağlamak"
+            ]
+          },
+          {
+            "team_code": "19.01.02",
+            "name_tr": "Tasarım Yönetişimi ve Standartlar",
+            "name_en": "Design Governance and Standards",
+            "lead": {
+              "position_code": "19.01.02.001",
+              "title_tr": "Tasarım Yönetişimi ve Standartlar Yöneticisi",
+              "title_en": "Design Governance and Standards Manager",
+              "reports_to": "19.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.01.02.002",
+                "title_tr": "Kıdemli Tasarım Yönetişimi Uzmanı",
+                "title_en": "Senior Design Governance Specialist",
+                "reports_to": "19.01.02.001"
+              },
+              {
+                "position_code": "19.01.02.003",
+                "title_tr": "Tasarım Standartları Uzmanı",
+                "title_en": "Design Standards Specialist",
+                "reports_to": "19.01.02.001"
+              },
+              {
+                "position_code": "19.01.02.004",
+                "title_tr": "Tasarım Kalite Analisti",
+                "title_en": "Design Quality Analyst",
+                "reports_to": "19.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Tasarım prensipleri ve kalite kriterlerini oluşturmak",
+              "Tasarım inceleme ve onay mekanizmalarını işletmek",
+              "Markalar ve kanallar arası görsel tutarlılığı izlemek"
+            ]
+          },
+          {
+            "team_code": "19.01.03",
+            "name_tr": "Yaratıcı Araştırma ve Trendler",
+            "name_en": "Creative Research and Trends",
+            "lead": {
+              "position_code": "19.01.03.001",
+              "title_tr": "Yaratıcı Araştırma ve Trendler Yöneticisi",
+              "title_en": "Creative Research and Trends Manager",
+              "reports_to": "19.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.01.03.002",
+                "title_tr": "Kıdemli Yaratıcı Araştırmacı",
+                "title_en": "Senior Creative Researcher",
+                "reports_to": "19.01.03.001"
+              },
+              {
+                "position_code": "19.01.03.003",
+                "title_tr": "Tasarım Trendleri Uzmanı",
+                "title_en": "Design Trends Specialist",
+                "reports_to": "19.01.03.001"
+              },
+              {
+                "position_code": "19.01.03.004",
+                "title_tr": "Görsel Kültür Analisti",
+                "title_en": "Visual Culture Analyst",
+                "reports_to": "19.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Tasarım, kültür, teknoloji ve yaratıcı endüstri trendlerini izlemek",
+              "Referans, benchmark ve ilham kütüphanesini yönetmek",
+              "Trendleri marka ve tasarım fırsatlarına dönüştürmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.02",
+        "name_tr": "Marka Kimliği ve Kurumsal Tasarım",
+        "name_en": "Brand Identity and Corporate Design",
+        "manager": {
+          "position_code": "19.02.001",
+          "title_tr": "Marka Kimliği ve Kurumsal Tasarım Müdürü",
+          "title_en": "Brand Identity and Corporate Design Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.02.01",
+            "name_tr": "Marka Kimliği Tasarımı",
+            "name_en": "Brand Identity Design",
+            "lead": {
+              "position_code": "19.02.01.001",
+              "title_tr": "Marka Kimliği Tasarımı Yöneticisi",
+              "title_en": "Brand Identity Design Manager",
+              "reports_to": "19.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.02.01.002",
+                "title_tr": "Kıdemli Marka Tasarımcısı",
+                "title_en": "Senior Brand Designer",
+                "reports_to": "19.02.01.001"
+              },
+              {
+                "position_code": "19.02.01.003",
+                "title_tr": "Marka Tasarımcısı",
+                "title_en": "Brand Designer",
+                "reports_to": "19.02.01.001"
+              },
+              {
+                "position_code": "19.02.01.004",
+                "title_tr": "Görsel Kimlik Uzmanı",
+                "title_en": "Visual Identity Specialist",
+                "reports_to": "19.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Logo, renk, tipografi ve görsel kimlik sistemlerini geliştirmek",
+              "Yeni marka, alt marka ve kimlik dönüşüm projelerini yürütmek",
+              "Kimlik uygulamalarının ölçeklenebilirliğini sağlamak"
+            ]
+          },
+          {
+            "team_code": "19.02.02",
+            "name_tr": "Kurumsal Kimlik Uygulamaları",
+            "name_en": "Corporate Identity Applications",
+            "lead": {
+              "position_code": "19.02.02.001",
+              "title_tr": "Kurumsal Kimlik Uygulamaları Yöneticisi",
+              "title_en": "Corporate Identity Applications Manager",
+              "reports_to": "19.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.02.02.002",
+                "title_tr": "Kıdemli Kurumsal Tasarımcı",
+                "title_en": "Senior Corporate Designer",
+                "reports_to": "19.02.02.001"
+              },
+              {
+                "position_code": "19.02.02.003",
+                "title_tr": "Kurumsal Tasarımcı",
+                "title_en": "Corporate Designer",
+                "reports_to": "19.02.02.001"
+              },
+              {
+                "position_code": "19.02.02.004",
+                "title_tr": "Kurumsal Kimlik Uygulama Uzmanı",
+                "title_en": "Corporate Identity Application Specialist",
+                "reports_to": "19.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Kartvizit, antet, tabela, araç ve ofis kimliği uygulamalarını tasarlamak",
+              "Kurumsal şablon ve doküman sistemlerini yönetmek",
+              "Uygulama kalitesi ve tedarikçi üretim uyumunu kontrol etmek"
+            ]
+          },
+          {
+            "team_code": "19.02.03",
+            "name_tr": "Marka Rehberi ve Varlık Yönetimi",
+            "name_en": "Brand Guidelines and Asset Management",
+            "lead": {
+              "position_code": "19.02.03.001",
+              "title_tr": "Marka Rehberi ve Varlık Yönetimi Yöneticisi",
+              "title_en": "Brand Guidelines and Asset Management Manager",
+              "reports_to": "19.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.02.03.002",
+                "title_tr": "Kıdemli Marka Rehberi Uzmanı",
+                "title_en": "Senior Brand Guidelines Specialist",
+                "reports_to": "19.02.03.001"
+              },
+              {
+                "position_code": "19.02.03.003",
+                "title_tr": "Dijital Varlık Yönetimi Uzmanı",
+                "title_en": "Digital Asset Management Specialist",
+                "reports_to": "19.02.03.001"
+              },
+              {
+                "position_code": "19.02.03.004",
+                "title_tr": "Marka Varlıkları Koordinatörü",
+                "title_en": "Brand Asset Coordinator",
+                "reports_to": "19.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Kurumsal kimlik rehberlerini oluşturmak ve güncel tutmak",
+              "Logo, font, şablon ve yaratıcı dosya kütüphanesini yönetmek",
+              "Varlık kullanım yetkisi, versiyon ve erişim kontrolünü sağlamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.03",
+        "name_tr": "Grafik Tasarım ve Kampanya Kreatifi",
+        "name_en": "Graphic Design and Campaign Creative",
+        "manager": {
+          "position_code": "19.03.001",
+          "title_tr": "Grafik Tasarım ve Kampanya Kreatifi Müdürü",
+          "title_en": "Graphic Design and Campaign Creative Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.03.01",
+            "name_tr": "Kampanya ve Reklam Tasarımı",
+            "name_en": "Campaign and Advertising Design",
+            "lead": {
+              "position_code": "19.03.01.001",
+              "title_tr": "Kampanya ve Reklam Tasarımı Yöneticisi",
+              "title_en": "Campaign and Advertising Design Manager",
+              "reports_to": "19.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.03.01.002",
+                "title_tr": "Kıdemli Art Direktör",
+                "title_en": "Senior Art Director",
+                "reports_to": "19.03.01.001"
+              },
+              {
+                "position_code": "19.03.01.003",
+                "title_tr": "Art Direktör",
+                "title_en": "Art Director",
+                "reports_to": "19.03.01.001"
+              },
+              {
+                "position_code": "19.03.01.004",
+                "title_tr": "Reklam Tasarımcısı",
+                "title_en": "Advertising Designer",
+                "reports_to": "19.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Kampanya ana görselleri ve yaratıcı uygulamaları geliştirmek",
+              "Mesaj, görsel ve kanal adaptasyonlarını koordine etmek",
+              "Kampanya yaratıcı kalitesi ve marka uyumunu sağlamak"
+            ]
+          },
+          {
+            "team_code": "19.03.02",
+            "name_tr": "Dijital ve Sosyal Medya Tasarımı",
+            "name_en": "Digital and Social Media Design",
+            "lead": {
+              "position_code": "19.03.02.001",
+              "title_tr": "Dijital ve Sosyal Medya Tasarımı Yöneticisi",
+              "title_en": "Digital and Social Media Design Manager",
+              "reports_to": "19.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.03.02.002",
+                "title_tr": "Kıdemli Dijital Tasarımcı",
+                "title_en": "Senior Digital Designer",
+                "reports_to": "19.03.02.001"
+              },
+              {
+                "position_code": "19.03.02.003",
+                "title_tr": "Dijital Tasarımcı",
+                "title_en": "Digital Designer",
+                "reports_to": "19.03.02.001"
+              },
+              {
+                "position_code": "19.03.02.004",
+                "title_tr": "Sosyal Medya Tasarımcısı",
+                "title_en": "Social Media Designer",
+                "reports_to": "19.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Web, reklam ve sosyal medya görsellerini üretmek",
+              "Platform formatları ve içerik serilerine uygun şablonlar geliştirmek",
+              "Dijital performans sonuçlarına göre tasarımları iyileştirmek"
+            ]
+          },
+          {
+            "team_code": "19.03.03",
+            "name_tr": "Basılı Materyal ve Yayın Tasarımı",
+            "name_en": "Print Materials and Publication Design",
+            "lead": {
+              "position_code": "19.03.03.001",
+              "title_tr": "Basılı Materyal ve Yayın Tasarımı Yöneticisi",
+              "title_en": "Print Materials and Publication Design Manager",
+              "reports_to": "19.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.03.03.002",
+                "title_tr": "Kıdemli Grafik Tasarımcı",
+                "title_en": "Senior Graphic Designer",
+                "reports_to": "19.03.03.001"
+              },
+              {
+                "position_code": "19.03.03.003",
+                "title_tr": "Grafik Tasarımcı",
+                "title_en": "Graphic Designer",
+                "reports_to": "19.03.03.001"
+              },
+              {
+                "position_code": "19.03.03.004",
+                "title_tr": "Mizanpaj ve Baskı Uzmanı",
+                "title_en": "Layout and Print Specialist",
+                "reports_to": "19.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Broşür, katalog, rapor, afiş ve basılı materyalleri tasarlamak",
+              "Mizanpaj, baskı öncesi hazırlık ve renk yönetimini yürütmek",
+              "Matbaa ve üretim kalite kontrolünü koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.04",
+        "name_tr": "Dijital Deneyim ve Arayüz Tasarımı",
+        "name_en": "Digital Experience and Interface Design",
+        "manager": {
+          "position_code": "19.04.001",
+          "title_tr": "Dijital Deneyim ve Arayüz Tasarımı Müdürü",
+          "title_en": "Digital Experience and Interface Design Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.04.01",
+            "name_tr": "Web ve Arayüz Görsel Tasarımı",
+            "name_en": "Web and Interface Visual Design",
+            "lead": {
+              "position_code": "19.04.01.001",
+              "title_tr": "Web ve Arayüz Görsel Tasarımı Yöneticisi",
+              "title_en": "Web and Interface Visual Design Manager",
+              "reports_to": "19.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.04.01.002",
+                "title_tr": "Kıdemli UI Tasarımcısı",
+                "title_en": "Senior UI Designer",
+                "reports_to": "19.04.01.001"
+              },
+              {
+                "position_code": "19.04.01.003",
+                "title_tr": "UI Tasarımcısı",
+                "title_en": "UI Designer",
+                "reports_to": "19.04.01.001"
+              },
+              {
+                "position_code": "19.04.01.004",
+                "title_tr": "Web Görsel Tasarımcısı",
+                "title_en": "Web Visual Designer",
+                "reports_to": "19.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Web ve dijital ürünlerin görsel arayüzünü tasarlamak",
+              "Marka kimliğini dijital bileşen ve ekranlara uyarlamak",
+              "Responsive, erişilebilir ve tutarlı arayüzler üretmek"
+            ]
+          },
+          {
+            "team_code": "19.04.02",
+            "name_tr": "Dijital Tasarım Sistemleri",
+            "name_en": "Digital Design Systems",
+            "lead": {
+              "position_code": "19.04.02.001",
+              "title_tr": "Dijital Tasarım Sistemleri Yöneticisi",
+              "title_en": "Digital Design Systems Manager",
+              "reports_to": "19.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.04.02.002",
+                "title_tr": "Kıdemli Tasarım Sistemi Tasarımcısı",
+                "title_en": "Senior Design System Designer",
+                "reports_to": "19.04.02.001"
+              },
+              {
+                "position_code": "19.04.02.003",
+                "title_tr": "Tasarım Sistemi Uzmanı",
+                "title_en": "Design System Specialist",
+                "reports_to": "19.04.02.001"
+              },
+              {
+                "position_code": "19.04.02.004",
+                "title_tr": "UI Kit ve Bileşen Tasarımcısı",
+                "title_en": "UI Kit and Component Designer",
+                "reports_to": "19.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Dijital tasarım sistemi ve bileşen kütüphanelerini yönetmek",
+              "Tasarım-token ve marka sistemi uyumunu sağlamak",
+              "Tasarım ve geliştirme ekipleri arasında bileşen tutarlılığı oluşturmak"
+            ]
+          },
+          {
+            "team_code": "19.04.03",
+            "name_tr": "Landing Page ve Dönüşüm Tasarımı",
+            "name_en": "Landing Page and Conversion Design",
+            "lead": {
+              "position_code": "19.04.03.001",
+              "title_tr": "Landing Page ve Dönüşüm Tasarımı Yöneticisi",
+              "title_en": "Landing Page and Conversion Design Manager",
+              "reports_to": "19.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.04.03.002",
+                "title_tr": "Kıdemli Dönüşüm Tasarımcısı",
+                "title_en": "Senior Conversion Designer",
+                "reports_to": "19.04.03.001"
+              },
+              {
+                "position_code": "19.04.03.003",
+                "title_tr": "Landing Page Tasarımcısı",
+                "title_en": "Landing Page Designer",
+                "reports_to": "19.04.03.001"
+              },
+              {
+                "position_code": "19.04.03.004",
+                "title_tr": "Dijital Deneyim Tasarımcısı",
+                "title_en": "Digital Experience Designer",
+                "reports_to": "19.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Landing page ve kampanya deneyimlerini tasarlamak",
+              "Görsel hiyerarşi, CTA ve içerik akışını optimize etmek",
+              "A/B testleri için tasarım varyantları geliştirmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.05",
+        "name_tr": "Video, Fotoğraf ve İçerik Prodüksiyonu",
+        "name_en": "Video, Photography and Content Production",
+        "manager": {
+          "position_code": "19.05.001",
+          "title_tr": "Video, Fotoğraf ve İçerik Prodüksiyonu Müdürü",
+          "title_en": "Video, Photography and Content Production Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.05.01",
+            "name_tr": "Video Prodüksiyon",
+            "name_en": "Video Production",
+            "lead": {
+              "position_code": "19.05.01.001",
+              "title_tr": "Video Prodüksiyon Yöneticisi",
+              "title_en": "Video Production Manager",
+              "reports_to": "19.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.05.01.002",
+                "title_tr": "Kıdemli Video Prodüktörü",
+                "title_en": "Senior Video Producer",
+                "reports_to": "19.05.01.001"
+              },
+              {
+                "position_code": "19.05.01.003",
+                "title_tr": "Video Prodüktörü",
+                "title_en": "Video Producer",
+                "reports_to": "19.05.01.001"
+              },
+              {
+                "position_code": "19.05.01.004",
+                "title_tr": "Görüntü Yönetmeni",
+                "title_en": "Director of Photography",
+                "reports_to": "19.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Tanıtım, reklam, röportaj ve kurumsal video prodüksiyonlarını yönetmek",
+              "Çekim planı, ekip, lokasyon ve prodüksiyon bütçesini koordine etmek",
+              "Görüntü kalitesi ve yaratıcı anlatıyı güvence altına almak"
+            ]
+          },
+          {
+            "team_code": "19.05.02",
+            "name_tr": "Fotoğraf ve Görsel İçerik",
+            "name_en": "Photography and Visual Content",
+            "lead": {
+              "position_code": "19.05.02.001",
+              "title_tr": "Fotoğraf ve Görsel İçerik Yöneticisi",
+              "title_en": "Photography and Visual Content Manager",
+              "reports_to": "19.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.05.02.002",
+                "title_tr": "Kıdemli Fotoğrafçı",
+                "title_en": "Senior Photographer",
+                "reports_to": "19.05.02.001"
+              },
+              {
+                "position_code": "19.05.02.003",
+                "title_tr": "Fotoğrafçı",
+                "title_en": "Photographer",
+                "reports_to": "19.05.02.001"
+              },
+              {
+                "position_code": "19.05.02.004",
+                "title_tr": "Görsel İçerik Prodüktörü",
+                "title_en": "Visual Content Producer",
+                "reports_to": "19.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Ürün, portre, etkinlik ve kurumsal fotoğraf çekimlerini yürütmek",
+              "Çekim stili, ışık, kompozisyon ve retouch süreçlerini yönetmek",
+              "Görsel arşiv ve kullanım haklarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "19.05.03",
+            "name_tr": "Kurgu, Post Prodüksiyon ve Ses",
+            "name_en": "Editing, Post-Production and Audio",
+            "lead": {
+              "position_code": "19.05.03.001",
+              "title_tr": "Kurgu, Post Prodüksiyon ve Ses Yöneticisi",
+              "title_en": "Editing, Post-Production and Audio Manager",
+              "reports_to": "19.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.05.03.002",
+                "title_tr": "Kıdemli Video Editörü",
+                "title_en": "Senior Video Editor",
+                "reports_to": "19.05.03.001"
+              },
+              {
+                "position_code": "19.05.03.003",
+                "title_tr": "Video Editörü",
+                "title_en": "Video Editor",
+                "reports_to": "19.05.03.001"
+              },
+              {
+                "position_code": "19.05.03.004",
+                "title_tr": "Ses Tasarımı ve Post Prodüksiyon Uzmanı",
+                "title_en": "Sound Design and Post-Production Specialist",
+                "reports_to": "19.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Video kurgu, renk, ses ve post prodüksiyon süreçlerini yürütmek",
+              "Farklı kanal ve formatlar için içerik adaptasyonları üretmek",
+              "Teknik teslim standartları ve medya arşivini yönetmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.06",
+        "name_tr": "Hareketli Tasarım, 3D ve Yaratıcı Teknoloji",
+        "name_en": "Motion Design, 3D and Creative Technology",
+        "manager": {
+          "position_code": "19.06.001",
+          "title_tr": "Hareketli Tasarım, 3D ve Yaratıcı Teknoloji Müdürü",
+          "title_en": "Motion Design, 3D and Creative Technology Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.06.01",
+            "name_tr": "Motion Graphics ve Animasyon",
+            "name_en": "Motion Graphics and Animation",
+            "lead": {
+              "position_code": "19.06.01.001",
+              "title_tr": "Motion Graphics ve Animasyon Yöneticisi",
+              "title_en": "Motion Graphics and Animation Manager",
+              "reports_to": "19.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.06.01.002",
+                "title_tr": "Kıdemli Motion Designer",
+                "title_en": "Senior Motion Designer",
+                "reports_to": "19.06.01.001"
+              },
+              {
+                "position_code": "19.06.01.003",
+                "title_tr": "Motion Designer",
+                "title_en": "Motion Designer",
+                "reports_to": "19.06.01.001"
+              },
+              {
+                "position_code": "19.06.01.004",
+                "title_tr": "2D Animasyon Uzmanı",
+                "title_en": "2D Animation Specialist",
+                "reports_to": "19.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Motion graphics, açıklayıcı video ve animasyonlar üretmek",
+              "Marka hareket dili ve animasyon standartlarını geliştirmek",
+              "Dijital ve sosyal kanallara uygun hareketli içerik hazırlamak"
+            ]
+          },
+          {
+            "team_code": "19.06.02",
+            "name_tr": "3D Tasarım ve Görselleştirme",
+            "name_en": "3D Design and Visualization",
+            "lead": {
+              "position_code": "19.06.02.001",
+              "title_tr": "3D Tasarım ve Görselleştirme Yöneticisi",
+              "title_en": "3D Design and Visualization Manager",
+              "reports_to": "19.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.06.02.002",
+                "title_tr": "Kıdemli 3D Tasarımcı",
+                "title_en": "Senior 3D Designer",
+                "reports_to": "19.06.02.001"
+              },
+              {
+                "position_code": "19.06.02.003",
+                "title_tr": "3D Tasarımcı",
+                "title_en": "3D Designer",
+                "reports_to": "19.06.02.001"
+              },
+              {
+                "position_code": "19.06.02.004",
+                "title_tr": "Render ve Görselleştirme Uzmanı",
+                "title_en": "Rendering and Visualization Specialist",
+                "reports_to": "19.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "3D model, sahne, ürün ve mekân görselleştirmeleri üretmek",
+              "Render, ışık, malzeme ve animasyon süreçlerini yönetmek",
+              "Ürün, etkinlik ve kampanya ihtiyaçlarına 3D çözümler geliştirmek"
+            ]
+          },
+          {
+            "team_code": "19.06.03",
+            "name_tr": "Yaratıcı Teknoloji ve Üretken Yapay Zekâ",
+            "name_en": "Creative Technology and Generative AI",
+            "lead": {
+              "position_code": "19.06.03.001",
+              "title_tr": "Yaratıcı Teknoloji ve Üretken Yapay Zekâ Yöneticisi",
+              "title_en": "Creative Technology and Generative AI Manager",
+              "reports_to": "19.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.06.03.002",
+                "title_tr": "Kıdemli Yaratıcı Teknoloji Uzmanı",
+                "title_en": "Senior Creative Technologist",
+                "reports_to": "19.06.03.001"
+              },
+              {
+                "position_code": "19.06.03.003",
+                "title_tr": "Üretken Yapay Zekâ Tasarım Uzmanı",
+                "title_en": "Generative AI Design Specialist",
+                "reports_to": "19.06.03.001"
+              },
+              {
+                "position_code": "19.06.03.004",
+                "title_tr": "Etkileşimli Medya Geliştiricisi",
+                "title_en": "Interactive Media Developer",
+                "reports_to": "19.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Üretken yapay zekâ ve yaratıcı teknoloji iş akışlarını geliştirmek",
+              "Etkileşimli içerik, deneysel medya ve prototipler üretmek",
+              "Telif, etik, kalite ve marka güvenliği kontrollerini uygulamak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.07",
+        "name_tr": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı",
+        "name_en": "Corporate Publications, Presentation and Event Design",
+        "manager": {
+          "position_code": "19.07.001",
+          "title_tr": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı Müdürü",
+          "title_en": "Corporate Publications, Presentation and Event Design Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.07.01",
+            "name_tr": "Kurumsal Yayın ve Rapor Tasarımı",
+            "name_en": "Corporate Publication and Report Design",
+            "lead": {
+              "position_code": "19.07.01.001",
+              "title_tr": "Kurumsal Yayın ve Rapor Tasarımı Yöneticisi",
+              "title_en": "Corporate Publication and Report Design Manager",
+              "reports_to": "19.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.07.01.002",
+                "title_tr": "Kıdemli Editoryal Tasarımcı",
+                "title_en": "Senior Editorial Designer",
+                "reports_to": "19.07.01.001"
+              },
+              {
+                "position_code": "19.07.01.003",
+                "title_tr": "Editoryal Tasarımcı",
+                "title_en": "Editorial Designer",
+                "reports_to": "19.07.01.001"
+              },
+              {
+                "position_code": "19.07.01.004",
+                "title_tr": "Rapor Tasarım Uzmanı",
+                "title_en": "Report Design Specialist",
+                "reports_to": "19.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Faaliyet, sürdürülebilirlik ve kurumsal raporları tasarlamak",
+              "Uzun format içeriklerde bilgi hiyerarşisi ve veri görselleştirmesini yönetmek",
+              "Dijital ve basılı yayın standartlarını uygulamak"
+            ]
+          },
+          {
+            "team_code": "19.07.02",
+            "name_tr": "Sunum Tasarımı ve Yönetici İletişimi",
+            "name_en": "Presentation Design and Executive Communications",
+            "lead": {
+              "position_code": "19.07.02.001",
+              "title_tr": "Sunum Tasarımı ve Yönetici İletişimi Yöneticisi",
+              "title_en": "Presentation Design and Executive Communications Manager",
+              "reports_to": "19.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.07.02.002",
+                "title_tr": "Kıdemli Sunum Tasarımcısı",
+                "title_en": "Senior Presentation Designer",
+                "reports_to": "19.07.02.001"
+              },
+              {
+                "position_code": "19.07.02.003",
+                "title_tr": "Sunum Tasarımcısı",
+                "title_en": "Presentation Designer",
+                "reports_to": "19.07.02.001"
+              },
+              {
+                "position_code": "19.07.02.004",
+                "title_tr": "Yönetici Görsel İletişim Uzmanı",
+                "title_en": "Executive Visual Communications Specialist",
+                "reports_to": "19.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yönetim, yatırımcı, satış ve strateji sunumlarını tasarlamak",
+              "Mesaj akışı, veri hikâyeleştirme ve görsel hiyerarşiyi geliştirmek",
+              "Kurumsal sunum şablonlarını ve kalite standartlarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "19.07.03",
+            "name_tr": "Etkinlik, Fuar ve Mekânsal Tasarım",
+            "name_en": "Event, Exhibition and Spatial Design",
+            "lead": {
+              "position_code": "19.07.03.001",
+              "title_tr": "Etkinlik, Fuar ve Mekânsal Tasarım Yöneticisi",
+              "title_en": "Event, Exhibition and Spatial Design Manager",
+              "reports_to": "19.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.07.03.002",
+                "title_tr": "Kıdemli Etkinlik Tasarımcısı",
+                "title_en": "Senior Event Designer",
+                "reports_to": "19.07.03.001"
+              },
+              {
+                "position_code": "19.07.03.003",
+                "title_tr": "Fuar ve Mekân Tasarımcısı",
+                "title_en": "Exhibition and Spatial Designer",
+                "reports_to": "19.07.03.001"
+              },
+              {
+                "position_code": "19.07.03.004",
+                "title_tr": "Etkinlik Görsel Uygulama Uzmanı",
+                "title_en": "Event Visual Application Specialist",
+                "reports_to": "19.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Etkinlik, fuar, sahne ve deneyim alanlarını tasarlamak",
+              "Mekânsal marka uygulamaları ve yönlendirme sistemlerini geliştirmek",
+              "Üretim, kurulum ve saha kalite kontrolünü koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "19.08",
+        "name_tr": "Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi",
+        "name_en": "Design Operations, Studio and Production Management",
+        "manager": {
+          "position_code": "19.08.001",
+          "title_tr": "Tasarım Operasyonları, Stüdyo ve Üretim Yönetimi Müdürü",
+          "title_en": "Design Operations, Studio and Production Management Manager",
+          "reports_to": "19.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "19.08.01",
+            "name_tr": "Yaratıcı Proje ve Kaynak Yönetimi",
+            "name_en": "Creative Project and Resource Management",
+            "lead": {
+              "position_code": "19.08.01.001",
+              "title_tr": "Yaratıcı Proje ve Kaynak Yönetimi Yöneticisi",
+              "title_en": "Creative Project and Resource Management Manager",
+              "reports_to": "19.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.08.01.002",
+                "title_tr": "Kıdemli Yaratıcı Proje Yöneticisi",
+                "title_en": "Senior Creative Project Manager",
+                "reports_to": "19.08.01.001"
+              },
+              {
+                "position_code": "19.08.01.003",
+                "title_tr": "Yaratıcı Proje Yöneticisi",
+                "title_en": "Creative Project Manager",
+                "reports_to": "19.08.01.001"
+              },
+              {
+                "position_code": "19.08.01.004",
+                "title_tr": "Kaynak Planlama Uzmanı",
+                "title_en": "Resource Planning Specialist",
+                "reports_to": "19.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Yaratıcı talepleri kapsam, öncelik, süre ve kaynak açısından yönetmek",
+              "Stüdyo kapasitesi ve iş yükü planlamasını yürütmek",
+              "Teslimat riskleri, revizyon ve onay akışlarını izlemek"
+            ]
+          },
+          {
+            "team_code": "19.08.02",
+            "name_tr": "Stüdyo, Prodüksiyon ve Tedarikçi Yönetimi",
+            "name_en": "Studio, Production and Vendor Management",
+            "lead": {
+              "position_code": "19.08.02.001",
+              "title_tr": "Stüdyo, Prodüksiyon ve Tedarikçi Yönetimi Yöneticisi",
+              "title_en": "Studio, Production and Vendor Management Manager",
+              "reports_to": "19.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.08.02.002",
+                "title_tr": "Kıdemli Prodüksiyon Yöneticisi",
+                "title_en": "Senior Production Manager",
+                "reports_to": "19.08.02.001"
+              },
+              {
+                "position_code": "19.08.02.003",
+                "title_tr": "Stüdyo Operasyon Uzmanı",
+                "title_en": "Studio Operations Specialist",
+                "reports_to": "19.08.02.001"
+              },
+              {
+                "position_code": "19.08.02.004",
+                "title_tr": "Yaratıcı Tedarikçi Koordinatörü",
+                "title_en": "Creative Vendor Coordinator",
+                "reports_to": "19.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Stüdyo, ekipman ve prodüksiyon operasyonlarını yönetmek",
+              "Ajans, freelancer, matbaa ve prodüksiyon tedarikçilerini koordine etmek",
+              "Teklif, takvim, teslim ve üretim kalitesini izlemek"
+            ]
+          },
+          {
+            "team_code": "19.08.03",
+            "name_tr": "Yaratıcı Varlık, Telif ve Arşiv Yönetimi",
+            "name_en": "Creative Asset, Rights and Archive Management",
+            "lead": {
+              "position_code": "19.08.03.001",
+              "title_tr": "Yaratıcı Varlık, Telif ve Arşiv Yönetimi Yöneticisi",
+              "title_en": "Creative Asset, Rights and Archive Management Manager",
+              "reports_to": "19.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "19.08.03.002",
+                "title_tr": "Kıdemli Yaratıcı Varlık Uzmanı",
+                "title_en": "Senior Creative Asset Specialist",
+                "reports_to": "19.08.03.001"
+              },
+              {
+                "position_code": "19.08.03.003",
+                "title_tr": "Telif ve Lisans Koordinatörü",
+                "title_en": "Rights and Licensing Coordinator",
+                "reports_to": "19.08.03.001"
+              },
+              {
+                "position_code": "19.08.03.004",
+                "title_tr": "Dijital Arşiv Uzmanı",
+                "title_en": "Digital Archive Specialist",
+                "reports_to": "19.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Yaratıcı dosya, kaynak ve final varlık arşivini yönetmek",
+              "Stok görsel, font, müzik ve yetenek kullanım haklarını izlemek",
+              "Dosya adlandırma, metadata, saklama ve yeniden kullanım standartlarını uygulamak"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Zamanında Yaratıcı Teslimat Oranı",
+        "İlk Sunumda Onay Oranı",
+        "Ortalama Revizyon Sayısı",
+        "Marka Uyum Skoru",
+        "Yaratıcı Talep Çevrim Süresi",
+        "Stüdyo Kapasite Kullanım Oranı",
+        "Tasarım Yeniden Kullanım Oranı",
+        "Dijital Varlık Kütüphanesi Kullanım Oranı",
+        "Prodüksiyon Bütçe Sapması",
+        "Tedarikçi Zamanında Teslimat Oranı",
+        "Kampanya Kreatif Performans Artışı",
+        "Landing Page Dönüşüm Artışı",
+        "İç Müşteri Memnuniyeti",
+        "Telif ve Lisans Uyum Oranı",
+        "Erişilebilirlik Uyum Oranı"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük Stüdyo Planlama Toplantısı",
+          "focus": "Aktif işler, kapasite, kritik teslimler ve üretim engelleri"
+        },
+        {
+          "forum": "Haftalık Yaratıcı İnceleme Kurulu",
+          "focus": "Konsept, marka uyumu, tasarım kalitesi ve kanal adaptasyonları"
+        },
+        {
+          "forum": "Aylık Tasarım Operasyonları Toplantısı",
+          "focus": "KPI, bütçe, tedarikçi, varlık yönetimi ve süreç iyileştirmeleri"
+        },
+        {
+          "forum": "Çeyreklik Yaratıcı Strateji Gözden Geçirmesi",
+          "focus": "Marka gelişimi, yaratıcı trendler, performans ve yetkinlik yol haritası"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "marketing": "Pazarlama hedef kitle, kampanya hedefi, kanal ve performans bütçesinin; Tasarım yaratıcı konsept, görsel sistem ve üretimin sahibidir.",
+      "corporate_communications": "Kurumsal İletişim mesaj, kurumsal söylem, medya ve itibar yönetiminin; Tasarım görsel anlatım ve yaratıcı uygulamanın sahibidir.",
+      "product_management": "Ürün Yönetimi ürün deneyimi, kullanıcı problemi ve yol haritasının; Tasarım departmanı marka ve yaratıcı standart desteğinin sahibidir. Ürün UX/UI ekipleri ürün organizasyonunda veya matris yapıda konumlanabilir.",
+      "content": "İçerik ekipleri metin, editoryal plan ve mesaj içeriğinin; Tasarım görsel yorumlama, mizanpaj, prodüksiyon ve yaratıcı kalite sahibidir.",
+      "sales": "Satış ticari süreç ve müşteri teklifinin; Tasarım satış materyali, sunum şablonu ve görsel desteğin sahibidir.",
+      "procurement": "Satın Alma ticari müzakere ve sözleşmenin; Tasarım yaratıcı tedarikçi brifi, teknik değerlendirme ve üretim kalite kontrolünün sahibidir.",
+      "legal": "Hukuk fikri mülkiyet, sözleşme ve hukuki görüşün; Tasarım varlık kullanım kayıtları ve telif/lisans operasyonunun sahibidir.",
+      "information_technology": "BT dijital platform, altyapı ve teknik işletimin; Tasarım görsel arayüz, yaratıcı varlık ve deneyim standartlarının sahibidir.",
+      "data_ai": "Veri/AI departmanı kurumsal AI platformu ve yönetişimin; Tasarım yaratıcı AI kullanım senaryosu, çıktı kalitesi ve marka güvenliği uygulamasının sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; marka sayısı, kampanya ve yaratıcı talep hacmi, kanal çeşitliliği, video/fotoğraf prodüksiyonu, dijital ürün ve web ihtiyacı, etkinlik yoğunluğu ve dış kaynak kullanımına göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; tasarımcı, prodüktör, editör, fotoğrafçı ve yaratıcı teknoloji kadroları iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Aktif marka ve alt marka sayısı",
+        "Aylık yaratıcı talep hacmi",
+        "Kampanya ve kanal sayısı",
+        "Video ve fotoğraf prodüksiyon günü",
+        "Web ve dijital tasarım talebi",
+        "Etkinlik, fuar ve kurumsal yayın hacmi",
+        "İç kaynak/dış kaynak üretim oranı",
+        "Dil, ülke ve format adaptasyonu sayısı"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Tasarım yalnızca estetik üretim değil; marka stratejisini anlaşılır, tutarlı, erişilebilir ve davranış yaratan deneyimlere dönüştüren kurumsal bir değer üretim sistemidir."
+    }
+  }
+}

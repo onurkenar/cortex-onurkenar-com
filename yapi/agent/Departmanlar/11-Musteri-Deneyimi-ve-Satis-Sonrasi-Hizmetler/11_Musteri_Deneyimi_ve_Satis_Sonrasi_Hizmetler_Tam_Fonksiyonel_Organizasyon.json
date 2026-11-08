@@ -1,0 +1,358 @@
+{
+  "schema_version": "2.0",
+  "department": {
+    "code": "11",
+    "name_tr": "Müşteri Deneyimi ve Satış Sonrası Hizmetler",
+    "name_en": "Customer Experience and After-Sales Services",
+    "organization_model": "Tam Fonksiyonel",
+    "reports_to": {
+      "title_tr": "Ticari İşler Başkanı",
+      "title_en": "Chief Commercial Officer (CCO)"
+    },
+    "purpose": "Müşterinin satış sonrası yaşam döngüsünü uçtan uca yönetmek; müşterinin vaat edilen değeri elde etmesini, memnuniyetini, bağlılığını ve sürdürülebilir ticari ilişkisini güvence altına almak.",
+    "head": {
+      "position_code": "11.00.001",
+      "title_tr": "Müşteri Deneyimi ve Satış Sonrası Hizmetler Direktörü",
+      "title_en": "Customer Experience and After-Sales Services Director",
+      "alternative_executive_title": "Chief Customer Officer (CCO)",
+      "reports_to": "Ticari İşler Başkanı / Chief Commercial Officer",
+      "direct_reports": ["11.01", "11.02", "11.03", "11.04", "11.05", "11.06", "11.07", "11.08"],
+      "key_accountabilities": [
+        "Müşteri deneyimi ve satış sonrası hizmetler stratejisini oluşturmak",
+        "Müşteri yaşam döngüsü, hizmet seviyeleri ve deneyim standartlarını yönetmek",
+        "Memnuniyet, sadakat, yenileme, kayıp ve müşteri değeri göstergelerini sahiplenmek",
+        "Müşteri geri bildirimlerini kurumsal iyileştirme gündemine dönüştürmek",
+        "Satış, operasyon, ürün, teknik ekipler ve finans ile müşteri odaklı yönetişimi kurmak"
+      ]
+    },
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "11.01",
+        "name_tr": "Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi",
+        "name_en": "Customer Experience Strategy and Journey Management",
+        "manager": {"title_tr": "Müşteri Deneyimi Stratejisi ve Yolculuk Yönetimi Müdürü", "title_en": "Customer Experience Strategy and Journey Management Manager"},
+        "mission": "Müşteri deneyimi vizyonunu, yolculuklarını, temas noktalarını ve ölçüm mimarisini tasarlamak.",
+        "teams": [
+          {
+            "team_code": "11.01.01",
+            "name_tr": "Müşteri Yolculuğu Yönetimi",
+            "name_en": "Customer Journey Management",
+            "lead": {"title_tr": "Müşteri Yolculuğu Yöneticisi", "title_en": "Customer Journey Manager"},
+            "positions": [
+              {"title_tr": "Kıdemli Müşteri Yolculuğu Uzmanı", "title_en": "Senior Customer Journey Specialist"},
+              {"title_tr": "Müşteri Yolculuğu Uzmanı", "title_en": "Customer Journey Specialist"},
+              {"title_tr": "Müşteri Deneyimi Analisti", "title_en": "Customer Experience Analyst"}
+            ],
+            "responsibilities": ["Uçtan uca müşteri yolculuklarını haritalamak", "Kritik temas noktalarını ve deneyim kırılmalarını belirlemek", "Yolculuk bazlı iyileştirme portföyünü yönetmek"]
+          },
+          {
+            "team_code": "11.01.02",
+            "name_tr": "Servis Tasarımı ve Deneyim Standartları",
+            "name_en": "Service Design and Experience Standards",
+            "lead": {"title_tr": "Servis Tasarımı ve Deneyim Standartları Yöneticisi", "title_en": "Service Design and Experience Standards Manager"},
+            "positions": [
+              {"title_tr": "Kıdemli Servis Tasarımı Uzmanı", "title_en": "Senior Service Design Specialist"},
+              {"title_tr": "Servis Tasarımı Uzmanı", "title_en": "Service Design Specialist"},
+              {"title_tr": "Deneyim Standartları Uzmanı", "title_en": "Experience Standards Specialist"}
+            ],
+            "responsibilities": ["Hizmet tasarımı ilkelerini ve deneyim standartlarını geliştirmek", "Temas noktaları için servis blueprintleri oluşturmak", "Standartların uygulanmasını izlemek"]
+          },
+          {
+            "team_code": "11.01.03",
+            "name_tr": "Müşteri Deneyimi Analitiği",
+            "name_en": "Customer Experience Analytics",
+            "lead": {"title_tr": "Müşteri Deneyimi Analitiği Yöneticisi", "title_en": "Customer Experience Analytics Manager"},
+            "positions": [
+              {"title_tr": "Kıdemli Müşteri Deneyimi Analitiği Uzmanı", "title_en": "Senior Customer Experience Analytics Specialist"},
+              {"title_tr": "Müşteri Deneyimi Analitiği Uzmanı", "title_en": "Customer Experience Analytics Specialist"},
+              {"title_tr": "Müşteri İçgörüleri Analisti", "title_en": "Customer Insights Analyst"}
+            ],
+            "responsibilities": ["NPS, CSAT, CES ve yolculuk metriklerini yönetmek", "Deneyim verilerini segment ve temas noktası bazında analiz etmek", "Yönetim raporları ve erken uyarı göstergeleri üretmek"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.02",
+        "name_tr": "Müşteri Onboarding ve Uygulama",
+        "name_en": "Customer Onboarding and Implementation",
+        "manager": {"title_tr": "Müşteri Onboarding ve Uygulama Müdürü", "title_en": "Customer Onboarding and Implementation Manager"},
+        "mission": "Satıştan teslimata geçişi yönetmek ve müşterinin en kısa sürede ilk değeri elde etmesini sağlamak.",
+        "teams": [
+          {
+            "team_code": "11.02.01",
+            "name_tr": "Satıştan Devir ve Hazırlık",
+            "name_en": "Sales Handover and Readiness",
+            "lead": {"title_tr": "Satıştan Devir ve Hazırlık Yöneticisi", "title_en": "Sales Handover and Readiness Manager"},
+            "positions": [{"title_tr": "Kıdemli Devir ve Hazırlık Uzmanı", "title_en": "Senior Handover and Readiness Specialist"}, {"title_tr": "Müşteri Devir Uzmanı", "title_en": "Customer Handover Specialist"}, {"title_tr": "Onboarding Koordinatörü", "title_en": "Onboarding Coordinator"}],
+            "responsibilities": ["Sözleşme, kapsam ve müşteri beklentilerinin eksiksiz devrini sağlamak", "Onboarding hazırlık kontrolünü yürütmek", "Risk, bağımlılık ve sorumlulukları netleştirmek"]
+          },
+          {
+            "team_code": "11.02.02",
+            "name_tr": "Kurulum ve Uygulama",
+            "name_en": "Installation and Implementation",
+            "lead": {"title_tr": "Kurulum ve Uygulama Yöneticisi", "title_en": "Installation and Implementation Manager"},
+            "positions": [{"title_tr": "Kıdemli Uygulama Uzmanı", "title_en": "Senior Implementation Specialist"}, {"title_tr": "Uygulama Uzmanı", "title_en": "Implementation Specialist"}, {"title_tr": "Kurulum Koordinatörü", "title_en": "Installation Coordinator"}],
+            "responsibilities": ["Müşteri uygulama planını yönetmek", "Teknik ve operasyonel kurulum faaliyetlerini koordine etmek", "Kapsam, takvim ve kabul kriterlerini izlemek"]
+          },
+          {
+            "team_code": "11.02.03",
+            "name_tr": "Aktivasyon ve İlk Değer",
+            "name_en": "Activation and First Value",
+            "lead": {"title_tr": "Aktivasyon ve İlk Değer Yöneticisi", "title_en": "Activation and First Value Manager"},
+            "positions": [{"title_tr": "Kıdemli Aktivasyon Uzmanı", "title_en": "Senior Activation Specialist"}, {"title_tr": "Aktivasyon Uzmanı", "title_en": "Activation Specialist"}, {"title_tr": "Müşteri Başlangıç Deneyimi Uzmanı", "title_en": "Customer Launch Experience Specialist"}],
+            "responsibilities": ["Aktivasyon ve canlıya geçiş sürecini yönetmek", "İlk değer elde etme süresini kısaltmak", "Onboarding kapanışını ve başarı kriterlerini doğrulamak"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.03",
+        "name_tr": "Müşteri Başarı Yönetimi",
+        "name_en": "Customer Success Management",
+        "manager": {"title_tr": "Müşteri Başarı Yönetimi Müdürü", "title_en": "Customer Success Management Manager"},
+        "mission": "Müşterilerin hedeflenen iş sonuçlarına ulaşmasını, kullanım derinliğini ve ilişki sağlığını geliştirmek.",
+        "teams": [
+          {
+            "team_code": "11.03.01",
+            "name_tr": "Portföy ve Müşteri Başarısı",
+            "name_en": "Portfolio Customer Success",
+            "lead": {"title_tr": "Portföy Müşteri Başarısı Yöneticisi", "title_en": "Portfolio Customer Success Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Başarı Yöneticisi", "title_en": "Senior Customer Success Manager"}, {"title_tr": "Müşteri Başarı Yöneticisi", "title_en": "Customer Success Manager"}, {"title_tr": "Müşteri Başarı Uzmanı", "title_en": "Customer Success Specialist"}],
+            "responsibilities": ["Segment bazlı müşteri başarı planlarını yürütmek", "Müşteri sağlık skorlarını izlemek", "Değer gerçekleşmesini ve kullanım gelişimini takip etmek"]
+          },
+          {
+            "team_code": "11.03.02",
+            "name_tr": "Stratejik Müşteri Başarısı",
+            "name_en": "Strategic Customer Success",
+            "lead": {"title_tr": "Stratejik Müşteri Başarısı Yöneticisi", "title_en": "Strategic Customer Success Manager"},
+            "positions": [{"title_tr": "Kıdemli Stratejik Müşteri Başarı Yöneticisi", "title_en": "Senior Strategic Customer Success Manager"}, {"title_tr": "Stratejik Müşteri Başarı Yöneticisi", "title_en": "Strategic Customer Success Manager"}, {"title_tr": "Stratejik Müşteri Uzmanı", "title_en": "Strategic Customer Specialist"}],
+            "responsibilities": ["Kritik müşteriler için ortak başarı planları oluşturmak", "Yönetici sponsorluğu ve iş gözden geçirmelerini koordine etmek", "Stratejik risk ve değer fırsatlarını yönetmek"]
+          },
+          {
+            "team_code": "11.03.03",
+            "name_tr": "Riskli Müşteri ve Kurtarma",
+            "name_en": "At-Risk Customer and Recovery",
+            "lead": {"title_tr": "Riskli Müşteri ve Kurtarma Yöneticisi", "title_en": "At-Risk Customer and Recovery Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Kurtarma Uzmanı", "title_en": "Senior Customer Recovery Specialist"}, {"title_tr": "Müşteri Kurtarma Uzmanı", "title_en": "Customer Recovery Specialist"}, {"title_tr": "Müşteri Risk Analisti", "title_en": "Customer Risk Analyst"}],
+            "responsibilities": ["Riskli müşterileri erken uyarı göstergeleriyle belirlemek", "Kurtarma planlarını koordine etmek", "Kayıp nedenlerini ve önleyici aksiyonları izlemek"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.04",
+        "name_tr": "Müşteri Destek ve Servis Masası",
+        "name_en": "Customer Support and Service Desk",
+        "manager": {"title_tr": "Müşteri Destek ve Servis Masası Müdürü", "title_en": "Customer Support and Service Desk Manager"},
+        "mission": "Müşteri soru, talep ve olaylarını çok kanallı, hızlı, tutarlı ve ölçülebilir biçimde çözmek.",
+        "teams": [
+          {
+            "team_code": "11.04.01",
+            "name_tr": "Birinci Seviye Destek",
+            "name_en": "Level 1 Support",
+            "lead": {"title_tr": "Birinci Seviye Destek Yöneticisi", "title_en": "Level 1 Support Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Destek Uzmanı", "title_en": "Senior Customer Support Specialist"}, {"title_tr": "Müşteri Destek Uzmanı", "title_en": "Customer Support Specialist"}, {"title_tr": "Servis Masası Temsilcisi", "title_en": "Service Desk Representative"}],
+            "responsibilities": ["İlk temas çözümünü sağlamak", "Kayıt, sınıflandırma, önceliklendirme ve eskalasyonu yürütmek", "SLA ve çözüm sürelerini izlemek"]
+          },
+          {
+            "team_code": "11.04.02",
+            "name_tr": "Çok Kanallı Destek",
+            "name_en": "Omnichannel Support",
+            "lead": {"title_tr": "Çok Kanallı Destek Yöneticisi", "title_en": "Omnichannel Support Manager"},
+            "positions": [{"title_tr": "Kıdemli Çok Kanallı Destek Uzmanı", "title_en": "Senior Omnichannel Support Specialist"}, {"title_tr": "Dijital Destek Uzmanı", "title_en": "Digital Support Specialist"}, {"title_tr": "Müşteri İletişim Uzmanı", "title_en": "Customer Communications Specialist"}],
+            "responsibilities": ["Telefon, e-posta, portal, sohbet ve sosyal kanalları entegre yönetmek", "Kanal bazlı hizmet seviyelerini optimize etmek", "Müşteri iletişim tutarlılığını sağlamak"]
+          },
+          {
+            "team_code": "11.04.03",
+            "name_tr": "Destek Bilgi Yönetimi",
+            "name_en": "Support Knowledge Management",
+            "lead": {"title_tr": "Destek Bilgi Yönetimi Yöneticisi", "title_en": "Support Knowledge Management Manager"},
+            "positions": [{"title_tr": "Kıdemli Bilgi Yönetimi Uzmanı", "title_en": "Senior Knowledge Management Specialist"}, {"title_tr": "Bilgi Yönetimi Uzmanı", "title_en": "Knowledge Management Specialist"}, {"title_tr": "Destek İçerik Uzmanı", "title_en": "Support Content Specialist"}],
+            "responsibilities": ["Bilgi bankası ve standart çözüm içeriklerini yönetmek", "Self-servis kullanımını artırmak", "Destek ekipleri için güncel bilgi akışını sağlamak"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.05",
+        "name_tr": "Servis ve Teknik Destek Koordinasyonu",
+        "name_en": "Service and Technical Support Coordination",
+        "manager": {"title_tr": "Servis ve Teknik Destek Koordinasyonu Müdürü", "title_en": "Service and Technical Support Coordination Manager"},
+        "mission": "Teknik çözüm, saha servisi ve garanti süreçlerinin müşteri açısından koordinasyonunu sağlamak.",
+        "teams": [
+          {
+            "team_code": "11.05.01",
+            "name_tr": "Teknik Destek Koordinasyonu",
+            "name_en": "Technical Support Coordination",
+            "lead": {"title_tr": "Teknik Destek Koordinasyonu Yöneticisi", "title_en": "Technical Support Coordination Manager"},
+            "positions": [{"title_tr": "Kıdemli Teknik Destek Koordinatörü", "title_en": "Senior Technical Support Coordinator"}, {"title_tr": "Teknik Destek Koordinatörü", "title_en": "Technical Support Coordinator"}, {"title_tr": "Teknik Eskalasyon Uzmanı", "title_en": "Technical Escalation Specialist"}],
+            "responsibilities": ["İleri seviye teknik vakaları ilgili uzman ekiplere yönlendirmek", "Teknik eskalasyon ve müşteri bilgilendirmesini yönetmek", "Çözüm taahhütlerini izlemek"]
+          },
+          {
+            "team_code": "11.05.02",
+            "name_tr": "Servis ve Garanti Yönetimi",
+            "name_en": "Service and Warranty Management",
+            "lead": {"title_tr": "Servis ve Garanti Yöneticisi", "title_en": "Service and Warranty Manager"},
+            "positions": [{"title_tr": "Kıdemli Servis ve Garanti Uzmanı", "title_en": "Senior Service and Warranty Specialist"}, {"title_tr": "Garanti Uzmanı", "title_en": "Warranty Specialist"}, {"title_tr": "Saha Servis Koordinatörü", "title_en": "Field Service Coordinator"}],
+            "responsibilities": ["Garanti uygunluğu ve servis süreçlerini koordine etmek", "Saha servis planlama ve müşteri iletişimini yönetmek", "Servis performansını ve maliyet göstergelerini izlemek"]
+          },
+          {
+            "team_code": "11.05.03",
+            "name_tr": "Problem ve Tekrarlayan Hata Yönetimi",
+            "name_en": "Problem and Recurring Issue Management",
+            "lead": {"title_tr": "Problem ve Tekrarlayan Hata Yönetimi Yöneticisi", "title_en": "Problem and Recurring Issue Management Manager"},
+            "positions": [{"title_tr": "Kıdemli Problem Yönetimi Uzmanı", "title_en": "Senior Problem Management Specialist"}, {"title_tr": "Problem Yönetimi Uzmanı", "title_en": "Problem Management Specialist"}, {"title_tr": "Tekrarlayan Hata Analisti", "title_en": "Recurring Issue Analyst"}],
+            "responsibilities": ["Tekrarlayan sorunları ve etkilerini analiz etmek", "Kök neden çalışmalarını teknik ve operasyonel ekiplerle koordine etmek", "Kalıcı çözüm ve önleyici aksiyonları izlemek"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.06",
+        "name_tr": "Şikâyet, Talep ve Müşterinin Sesi",
+        "name_en": "Complaints, Requests and Voice of Customer",
+        "manager": {"title_tr": "Şikâyet, Talep ve Müşterinin Sesi Müdürü", "title_en": "Complaints, Requests and Voice of Customer Manager"},
+        "mission": "Müşteri geri bildirimlerini sistematik biçimde toplamak, çözmek ve kurumsal öğrenmeye dönüştürmek.",
+        "teams": [
+          {
+            "team_code": "11.06.01",
+            "name_tr": "Şikâyet ve Talep Yönetimi",
+            "name_en": "Complaint and Request Management",
+            "lead": {"title_tr": "Şikâyet ve Talep Yönetimi Yöneticisi", "title_en": "Complaint and Request Management Manager"},
+            "positions": [{"title_tr": "Kıdemli Şikâyet Yönetimi Uzmanı", "title_en": "Senior Complaint Management Specialist"}, {"title_tr": "Şikâyet Yönetimi Uzmanı", "title_en": "Complaint Management Specialist"}, {"title_tr": "Müşteri Talep Uzmanı", "title_en": "Customer Request Specialist"}],
+            "responsibilities": ["Şikâyet ve talepleri kayıt altına almak, sınıflandırmak ve sonuçlandırmak", "Kritik vakaları eskale etmek", "Çözüm kalitesini ve geri dönüş sürelerini izlemek"]
+          },
+          {
+            "team_code": "11.06.02",
+            "name_tr": "Müşterinin Sesi",
+            "name_en": "Voice of Customer",
+            "lead": {"title_tr": "Müşterinin Sesi Yöneticisi", "title_en": "Voice of Customer Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşterinin Sesi Uzmanı", "title_en": "Senior Voice of Customer Specialist"}, {"title_tr": "Müşterinin Sesi Uzmanı", "title_en": "Voice of Customer Specialist"}, {"title_tr": "Müşteri Araştırmaları Analisti", "title_en": "Customer Research Analyst"}],
+            "responsibilities": ["Anket, görüşme ve dijital geri bildirim programlarını yönetmek", "Müşteri içgörülerini tema ve segment bazında analiz etmek", "İçgörüleri karar vericilere sunmak"]
+          },
+          {
+            "team_code": "11.06.03",
+            "name_tr": "Kök Neden ve İyileştirme",
+            "name_en": "Root Cause and Improvement",
+            "lead": {"title_tr": "Kök Neden ve İyileştirme Yöneticisi", "title_en": "Root Cause and Improvement Manager"},
+            "positions": [{"title_tr": "Kıdemli Sürekli İyileştirme Uzmanı", "title_en": "Senior Continuous Improvement Specialist"}, {"title_tr": "Kök Neden Analizi Uzmanı", "title_en": "Root Cause Analysis Specialist"}, {"title_tr": "Müşteri Deneyimi İyileştirme Uzmanı", "title_en": "Customer Experience Improvement Specialist"}],
+            "responsibilities": ["Geri bildirimlerin kök nedenlerini belirlemek", "İyileştirme aksiyonlarını ilgili birimlerle tasarlamak", "Aksiyon etkisini ve kapanışını izlemek"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.07",
+        "name_tr": "Müşteri Adaptasyonu, Eğitim ve Topluluk",
+        "name_en": "Customer Adoption, Education and Community",
+        "manager": {"title_tr": "Müşteri Adaptasyonu, Eğitim ve Topluluk Müdürü", "title_en": "Customer Adoption, Education and Community Manager"},
+        "mission": "Müşterinin ürünü veya hizmeti doğru, etkin ve yaygın biçimde kullanmasını sağlamak.",
+        "teams": [
+          {
+            "team_code": "11.07.01",
+            "name_tr": "Müşteri Eğitimleri",
+            "name_en": "Customer Education",
+            "lead": {"title_tr": "Müşteri Eğitimleri Yöneticisi", "title_en": "Customer Education Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Eğitim Uzmanı", "title_en": "Senior Customer Education Specialist"}, {"title_tr": "Müşteri Eğitim Uzmanı", "title_en": "Customer Education Specialist"}, {"title_tr": "Eğitim İçerik Geliştirme Uzmanı", "title_en": "Learning Content Development Specialist"}],
+            "responsibilities": ["Müşteri eğitim stratejisi ve müfredatını oluşturmak", "Canlı ve dijital eğitimleri yürütmek", "Eğitim etkinliğini ölçmek"]
+          },
+          {
+            "team_code": "11.07.02",
+            "name_tr": "Kullanım ve Benimseme",
+            "name_en": "Usage and Adoption",
+            "lead": {"title_tr": "Kullanım ve Benimseme Yöneticisi", "title_en": "Usage and Adoption Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Adaptasyon Uzmanı", "title_en": "Senior Customer Adoption Specialist"}, {"title_tr": "Müşteri Adaptasyon Uzmanı", "title_en": "Customer Adoption Specialist"}, {"title_tr": "Kullanım Analisti", "title_en": "Usage Analyst"}],
+            "responsibilities": ["Kullanım ve benimseme göstergelerini izlemek", "Düşük kullanım alanları için aktivasyon programları geliştirmek", "Müşteri değer gerçekleşmesini desteklemek"]
+          },
+          {
+            "team_code": "11.07.03",
+            "name_tr": "Müşteri Topluluğu",
+            "name_en": "Customer Community",
+            "lead": {"title_tr": "Müşteri Topluluğu Yöneticisi", "title_en": "Customer Community Manager"},
+            "positions": [{"title_tr": "Kıdemli Topluluk Uzmanı", "title_en": "Senior Community Specialist"}, {"title_tr": "Müşteri Topluluğu Uzmanı", "title_en": "Customer Community Specialist"}, {"title_tr": "Müşteri Etkileşim Koordinatörü", "title_en": "Customer Engagement Coordinator"}],
+            "responsibilities": ["Müşteri topluluğu platformunu ve etkileşim programlarını yönetmek", "Akran öğrenmesini ve iyi uygulama paylaşımını desteklemek", "Savunucu ve referans müşterileri ilgili ekiplerle koordine etmek"]
+          }
+        ]
+      },
+      {
+        "unit_code": "11.08",
+        "name_tr": "Yenileme, Müşteri Tutundurma ve Değer Yönetimi",
+        "name_en": "Renewal, Retention and Customer Value Management",
+        "manager": {"title_tr": "Yenileme, Müşteri Tutundurma ve Değer Yönetimi Müdürü", "title_en": "Renewal, Retention and Customer Value Management Manager"},
+        "mission": "Yenileme hazırlığını, müşteri kaybı önleme programlarını ve müşteri yaşam boyu değerini yönetmek.",
+        "teams": [
+          {
+            "team_code": "11.08.01",
+            "name_tr": "Yenileme Yönetimi",
+            "name_en": "Renewal Management",
+            "lead": {"title_tr": "Yenileme Yönetimi Yöneticisi", "title_en": "Renewal Management Manager"},
+            "positions": [{"title_tr": "Kıdemli Yenileme Uzmanı", "title_en": "Senior Renewal Specialist"}, {"title_tr": "Yenileme Uzmanı", "title_en": "Renewal Specialist"}, {"title_tr": "Yenileme Operasyonları Analisti", "title_en": "Renewal Operations Analyst"}],
+            "responsibilities": ["Yenileme takvimini ve hazırlık sürecini yönetmek", "Müşteri sağlık ve değer verilerini satış ekibine sunmak", "Yenileme risklerini erken aşamada eskale etmek"]
+          },
+          {
+            "team_code": "11.08.02",
+            "name_tr": "Churn Önleme ve Müşteri Kurtarma",
+            "name_en": "Churn Prevention and Customer Recovery",
+            "lead": {"title_tr": "Churn Önleme ve Müşteri Kurtarma Yöneticisi", "title_en": "Churn Prevention and Customer Recovery Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Tutundurma Uzmanı", "title_en": "Senior Customer Retention Specialist"}, {"title_tr": "Müşteri Tutundurma Uzmanı", "title_en": "Customer Retention Specialist"}, {"title_tr": "Churn Analisti", "title_en": "Churn Analyst"}],
+            "responsibilities": ["Kayıp eğilimi gösteren müşterileri belirlemek", "Tutundurma ve geri kazanım programlarını koordine etmek", "Churn nedenleri ve önleme sonuçlarını raporlamak"]
+          },
+          {
+            "team_code": "11.08.03",
+            "name_tr": "Müşteri Değeri ve Ticari Fırsat Koordinasyonu",
+            "name_en": "Customer Value and Commercial Opportunity Coordination",
+            "lead": {"title_tr": "Müşteri Değeri ve Ticari Fırsat Koordinasyonu Yöneticisi", "title_en": "Customer Value and Commercial Opportunity Coordination Manager"},
+            "positions": [{"title_tr": "Kıdemli Müşteri Değeri Uzmanı", "title_en": "Senior Customer Value Specialist"}, {"title_tr": "Müşteri Değeri Uzmanı", "title_en": "Customer Value Specialist"}, {"title_tr": "Ticari Fırsat Koordinatörü", "title_en": "Commercial Opportunity Coordinator"}],
+            "responsibilities": ["Müşteri yaşam boyu değeri ve değer gerçekleşmesini analiz etmek", "Genişleme ve çapraz satış sinyallerini satış ekibine aktarmak", "Ticari fırsatların müşteri deneyimiyle uyumunu gözetmek"]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Net Tavsiye Skoru (NPS)",
+        "Müşteri Memnuniyet Skoru (CSAT)",
+        "Müşteri Efor Skoru (CES)",
+        "İlk Temasta Çözüm Oranı (FCR)",
+        "Ortalama Çözüm Süresi",
+        "SLA Uyum Oranı",
+        "İlk Değere Ulaşma Süresi",
+        "Ürün/Hizmet Benimseme Oranı",
+        "Yenileme Oranı",
+        "Müşteri Kayıp Oranı (Churn)",
+        "Net Gelir Tutundurma Oranı (NRR)",
+        "Şikâyet Kapanış Süresi"
+      ],
+      "cadence": [
+        {"forum": "Günlük Operasyon Toplantısı", "focus": "Kritik vakalar, SLA ihlalleri ve eskalasyonlar"},
+        {"forum": "Haftalık Müşteri Sağlığı Toplantısı", "focus": "Riskli müşteriler, onboarding ve yenileme durumu"},
+        {"forum": "Aylık Müşterinin Sesi Kurulu", "focus": "Geri bildirim temaları, kök nedenler ve iyileştirmeler"},
+        {"forum": "Çeyreklik Müşteri Deneyimi Yönetişim Kurulu", "focus": "KPI sonuçları, yatırım öncelikleri ve stratejik müşteri gündemi"}
+      ]
+    },
+    "scope_boundaries": {
+      "sales": "Satış; teklif, fiyat, müzakere ve kapanışın sahibidir. Müşteri Deneyimi; başarı, yenileme hazırlığı ve fırsat sinyallerinin sahibidir.",
+      "marketing": "Pazarlama; talep yaratma ve yeni müşteri adaylarının sahibidir. Müşteri Deneyimi; mevcut müşteri içgörüsü ve referans koordinasyonunu sağlar.",
+      "operations": "Operasyon; günlük hizmet teslimatının sahibidir. Müşteri Deneyimi; müşteri iletişimi, beklenti ve çözüm koordinasyonunu yönetir.",
+      "product": "Ürün; ürün yol haritası ve önceliklendirme sahibidir. Müşteri Deneyimi; geri bildirim, kullanım ve değer içgörüsü sağlar.",
+      "technical_it": "Teknik ve BT ekipleri teknik çözümün sahibidir. Müşteri Deneyimi; vakanın müşteri tarafı koordinasyonunu ve iletişimini yürütür.",
+      "finance": "Muhasebe fatura ve kayıtların, Finans tahsilat politikası ve riskin sahibidir. Müşteri Deneyimi müşteri iletişimini destekler.",
+      "legal": "Hukuk hukuki uyuşmazlık ve görüşlerin sahibidir. Müşteri Deneyimi vaka ve müşteri bağlamını sağlar.",
+      "quality": "Kalite standart ve uygunsuzluk yönetiminin sahibidir. Müşteri Deneyimi müşteri geri bildirimi ve deneyim verisini sağlar."
+    },
+    "staffing_guidance": {
+      "model": "İş hacmi, müşteri segmenti, kanal yoğunluğu, ürün karmaşıklığı ve hizmet seviyesi taahhütlerine göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; uzman kadrolar iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": ["Aktif müşteri sayısı", "Stratejik müşteri sayısı", "Aylık destek vaka hacmi", "Onboarding proje sayısı", "Saha servis yoğunluğu", "Yenileme portföyü", "Kanal ve dil çeşitliliği"]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Satış müşteriyi kazanır; Müşteri Deneyimi müşterinin değeri elde etmesini ve ilişkiyi sürdürmesini sağlar; operasyon ve teknik ekipler taahhüt edilen ürün veya hizmeti teslim eder."
+    }
+  }
+}

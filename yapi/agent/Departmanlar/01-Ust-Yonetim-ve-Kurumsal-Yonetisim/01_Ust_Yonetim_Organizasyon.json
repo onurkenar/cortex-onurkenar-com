@@ -1,0 +1,16 @@
+{
+  "departman_kodu": "01",
+  "departman_adi": "Üst Yönetim ve Kurumsal Yönetişim",
+  "amac": "Stratejik yön, kurumsal gözetim, icra koordinasyonu ve hesap verebilirlik.",
+  "organizasyon": {
+    "yonetim_kurulu": {"title": "Yönetim Kurulu Başkanı / Chairperson", "alt_roller": ["Yönetim Kurulu Üyesi / Board Member", "Yönetim Kurulu Sekreteri / Board Secretary"], "gorevler": ["Strateji ve yatırım onayı", "CEO atama ve gözetimi", "Risk iştahı ve kurumsal yönetişim"]},
+    "ceo": {"title": "İcra Kurulu Başkanı ve CEO / Chief Executive Officer", "raporlar": "Yönetim Kurulu", "kurul": "İcra Kurulu / Executive Committee", "dogrudan_bagli_birimler": [
+      {"birim": "CEO Ofisi ve Yönetim Koordinasyonu", "yonetici": "CEO Ofisi Direktörü / Chief of Staff", "pozisyonlar": ["Üst Yönetim Asistanı / Executive Assistant", "Yönetim Raporlama Uzmanı / Executive Reporting Specialist"], "gorevler": ["Karar ve aksiyon takibi", "Üst yönetim toplantı koordinasyonu", "Yönetim raporlaması"]},
+      {"birim": "Kurumsal Strateji ve İş Geliştirme", "yonetici": "Strateji Direktörü / Chief Strategy Officer", "pozisyonlar": ["Kurumsal Strateji Müdürü / Corporate Strategy Manager", "Stratejik Projeler Müdürü / Strategic Projects Manager", "Strateji Analisti / Strategy Analyst"], "gorevler": ["Kurumsal strateji", "Portföy ve büyüme öncelikleri", "Stratejik girişim takibi"]},
+      {"birim": "Kurumsal Yönetişim ve Yönetim Kurulu İlişkileri", "yonetici": "Kurumsal Yönetişim Direktörü / Director of Corporate Governance", "pozisyonlar": ["Kurumsal Yönetişim Müdürü / Corporate Governance Manager", "Yönetim Kurulu İlişkileri Uzmanı / Board Relations Specialist"], "gorevler": ["Yetki ve karar mekanizmaları", "Yönetim kurulu süreçleri", "Kurumsal politika koordinasyonu"]},
+      {"birim": "Kurumsal Performans ve Dönüşüm", "yonetici": "Kurumsal Performans ve Dönüşüm Direktörü / Director of Corporate Performance and Transformation", "pozisyonlar": ["Kurumsal Performans Müdürü / Corporate Performance Manager", "Dönüşüm Programları Müdürü / Transformation Program Manager", "Performans Analisti / Performance Analyst"], "gorevler": ["Şirket ve departman KPI koordinasyonu", "Dönüşüm portföyü takibi", "İcra kurulu karar panosu"]}
+    ]}
+  },
+  "gorev_sinirlari": ["Finans ve Hazine nakit, bütçe ve finansmanı yürütür; üst yönetim hedef ve kritik tahsis kararlarını onaylar.", "Muhasebe ve Mali İşler kayıt ve yasal mali raporlamadan sorumludur.", "İnsan Kaynakları personel operasyonları ve İK politikalarının uygulamasından sorumludur.", "Satış, Pazarlama, Hukuk ve diğer uzman departmanların operasyonel icrası ilgili departmanlarda kalır.", "İç denetim bağımsızlığını korumak için Yönetim Kuruluna veya ilgili komiteye fonksiyonel raporlar."],
+  "not": "Bu şema öneri niteliğindedir; unvanlar ve kadro büyüklükleri şirket ölçeğine göre birleştirilebilir."
+}

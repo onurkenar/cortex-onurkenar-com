@@ -1,0 +1,5455 @@
+{
+ "version": 1,
+ "note": "Tasarım stilleri: yeni stiller, PPT görsellerinin stillere dağılımı, temsili önizleme metinleri ve canlı örnekler. docs/tasarim-stilleri/tasarim_stilleri_ekle.py ile işlenir.",
+ "fields": [
+  "page_design_style",
+  "secondary_design_styles"
+ ],
+ "add": [
+  {
+   "after": "Minimalism",
+   "value": "Scandinavian",
+   "label": "Scandinavian / Nordic — İskandinav Tasarım",
+   "explanation": "Açık ve sıcak nötr renkler, doğal doku ve ahşap tonları, yuvarlatılmış sade biçimler ve bol ışıkla sakin, yaşanabilir bir his kurar. Artısı: güven veren, temiz ve uzun ömürlü görünür. Eksisi: fotoğraf ve doku zayıfsa sıradan ve soğuk kalabilir; vurgu rengi az olduğu için ana eylem ayrıca belirginleştirilmelidir.",
+   "scenario": "Mobilya, ev tekstili, kahve dükkânı, çocuk ürünleri veya sürdürülebilir yaşam markası gibi sıcaklık ve sadeliği birlikte anlatmak isteyen işletmeler için.",
+   "example": "Bir mobilya markasının ana sayfasında kırık beyaz zeminde açık meşe bir masanın bol ışıklı fotoğrafı, yumuşak gri yazılar ve tek bir soluk yeşil ‘Koleksiyonu gör’ düğmesi vardır.",
+   "examples": [
+    "Mobilya markası",
+    "Kahve dükkânı",
+    "Ev yaşam ürünleri"
+   ]
+  },
+  {
+   "after": "Scandinavian",
+   "value": "Japandi",
+   "label": "Japandi / Wabi-Sabi — Japon-İskandinav Sadeliği",
+   "explanation": "Japon wabi-sabi anlayışının kusurlu doğallığını İskandinav işlevselliğiyle birleştirir: toprak tonları, asimetrik ama dengeli yerleşim, geniş boşluk ve el yapımı doku. Artısı: sakin, özenli ve premium bir his verir. Eksisi: yavaş ve içe dönük tonu hızlı satış odaklı sayfalara uymayabilir; düşük kontrastlı renkler okunabilirlik için denetlenmelidir.",
+   "scenario": "Seramik atölyesi, yoga stüdyosu, çay markası, butik otel veya iç mimarlık ofisi gibi dinginlik ve zanaatı öne çıkaran işletmeler için.",
+   "example": "Bir seramik atölyesinin sitesinde bej kâğıt dokulu zeminde tek bir el yapımı kâse sola yaslanmış durur; sağda ince yazılı kısa bir metin ve fırça darbesiyle çizilmiş bir daire (ensō) vardır.",
+   "examples": [
+    "Seramik atölyesi",
+    "Yoga stüdyosu",
+    "Butik otel"
+   ]
+  },
+  {
+   "after": "Flat 2.0",
+   "value": "Material Design",
+   "label": "Material Design — Google Material Tasarım Dili",
+   "explanation": "Google'ın açık kaynak tasarım sistemidir: renk rollerine göre üretilen tonal yüzeyler, belirgin yükseklik (elevation) katmanları, yuvarlatılmış bileşenler ve hazır erişilebilir bileşen kütüphanesi. Artısı: kullanıcılar Android ve Google ürünlerinden tanır, bileşenler ve erişilebilirlik kuralları hazırdır. Eksisi: markaya özgü uyarlanmazsa her Google ürününe benzer, kimliksiz görünebilir.",
+   "scenario": "Web uygulaması, yönetim paneli, Android uygulamasıyla birlikte yürüyen bir hizmet veya hızlı ve tutarlı bir bileşen sistemine ihtiyaç duyan bir girişim için.",
+   "example": "Bir randevu uygulamasının web sürümünde açık mor tonlu yüzeyler, köşeleri yuvarlak kartlar, sağ altta yüzen yuvarlak ‘+’ düğmesi (FAB) ve hap biçimli filtre çipleri vardır.",
+   "examples": [
+    "Web uygulaması",
+    "Yönetim paneli",
+    "Android uygulama sitesi"
+   ]
+  },
+  {
+   "after": "Typography-Led",
+   "value": "Editorial Magazine",
+   "label": "Editorial / Magazine — Dergi Tasarımı",
+   "explanation": "Basılı dergi kompozisyonunu web'e taşır: güçlü başlık hiyerarşisi, serifli ve serifsiz yazı eşleşmeleri, sütunlu metin, büyük fotoğraf kırpımları, ince çizgiler ve sayı / bölüm etiketleri. Artısı: uzun içerik okunur ve prestijli görünür, marka hikâyesi derinleşir. Eksisi: düzenli ve kaliteli içerik üretimi ister; karmaşık yerleşim mobilde dikkatle sadeleştirilmelidir.",
+   "scenario": "Blog ve içerik pazarlamasına ağırlık veren bir marka, yayın kuruluşu, moda veya kültür-sanat kurumu, uzun vaka çalışmaları yayımlayan bir ajans için.",
+   "example": "Bir kültür dergisinin ana sayfasında büyük serifli bir manşet, altında ince bir çizgi ve ‘Sayı 12 · Kasım’ etiketi, yanında iki sütunlu giriş metni ve sayfayı ikiye bölen geniş bir portre fotoğrafı vardır.",
+   "examples": [
+    "Kültür dergisi",
+    "Marka blogu",
+    "Moda yayını"
+   ]
+  },
+  {
+   "after": "Vaporwave",
+   "value": "Retro-Futurism",
+   "label": "Retro-Futurism — Retro Fütürizm",
+   "explanation": "Geçmişin geleceği nasıl hayal ettiğini kullanır: 1950–60'ların uzay çağı (atomic age) biçimleri, yıldız patlamaları, yuvarlak roket ve kapsül formları, turuncu-turkuaz paletler ve iyimser bilimkurgu dili. Artısı: nostaljik ama heyecanlı, akılda kalıcı bir kimlik verir. Eksisi: tema ağır gelirse kurumsal güveni zayıflatabilir; dekoratif öğeler içeriği bastırmamalıdır.",
+   "scenario": "Bilim müzesi, uzay temalı etkinlik, retro tasarım ürünleri, eğlence parkı veya yaratıcı bir teknoloji lansmanı için.",
+   "example": "Bir bilim festivalinin sitesinde krem zeminde turuncu bir gezegen, etrafında yörünge çizgileri ve yıldız patlaması süsleri vardır; başlık yuvarlak hatlı kalın yazıyla ‘Geleceğe Hoş Geldiniz’ der.",
+   "examples": [
+    "Bilim festivali",
+    "Retro ürün markası",
+    "Eğlence mekânı"
+   ]
+  },
+  {
+   "after": "3D-Led",
+   "value": "Isometric",
+   "label": "Isometric — İzometrik Tasarım",
+   "explanation": "Nesneleri 30° açılı, perspektifsiz üç boyutlu bir ızgarada çizer; ürünü, süreci ya da sistemi küçük bir maket gibi gösterir. Artısı: karmaşık bir sistemi veya akışı tek bakışta anlaşılır kılar, 3B'ye göre çok daha hafiftir. Eksisi: iyi illüstrasyon emeği ister; çok fazla detay küçük ekranlarda okunmaz hale gelir.",
+   "scenario": "Altyapı, lojistik, akıllı şehir, bulut hizmeti veya fabrika süreçlerini anlatan B2B teknoloji şirketleri ve eğitim içerikleri için.",
+   "example": "Bir lojistik yazılımının sitesinde açılı küçük bir depo maketi vardır: raflar, forkliftler ve kamyonlar izometrik çizilmiş, ürün kutuları renkli oklarla depodan mağazaya akar.",
+   "examples": [
+    "Lojistik yazılımı",
+    "Bulut altyapısı",
+    "Süreç anlatımı"
+   ]
+  },
+  {
+   "after": "Gradient",
+   "value": "Duotone",
+   "label": "Duotone — Çift Ton",
+   "explanation": "Fotoğrafları ve yüzeyleri iki renkten oluşan bir palete indirger; görseller marka renkleriyle boyanmış gibi görünür. Artısı: farklı kaynaklardan gelen fotoğrafları tek bir kimlikte birleştirir, güçlü ve tanınır bir görünüm verir. Eksisi: renk seçimi kontrastı bozabilir; gerçek renkleri önemli olan ürün fotoğraflarında kullanılmamalıdır.",
+   "scenario": "Konferans, kampanya, müzik yayın platformu veya sivil toplum kuruluşu gibi çok farklı fotoğrafları tutarlı bir kimlikte göstermesi gereken projeler için.",
+   "example": "Bir teknoloji konferansının konuşmacı sayfasında bütün portreler lacivert-pembe çift tona çevrilmiştir; başlıklar beyaz, ‘Bilet al’ düğmesi pembedir.",
+   "examples": [
+    "Konferans sitesi",
+    "Kampanya sayfası",
+    "Müzik platformu"
+   ]
+  },
+  {
+   "after": "Glassmorphism",
+   "value": "Liquid Glass",
+   "label": "Liquid Glass — Sıvı Cam",
+   "explanation": "Apple'ın 2025'te tanıttığı tasarım dilinin web yorumudur: arkasındaki içeriği büker ve yansıtır gibi görünen, kenarlarında ışık parlaması olan, hareketle canlanan yarı saydam katmanlar. Glassmorphism'den farkı düz buzlu cam yerine sıvı gibi kırılan, derinlikli yüzeylerdir. Artısı: güncel, premium ve dokunsal bir his verir. Eksisi: metin kontrastı ve performans en zor stillerden biridir; şeffaflığı azalt tercihi ve düşük güçlü cihazlar için sade yedek gerekir.",
+   "scenario": "Mobil uygulama tanıtımı, premium elektronik ürünü, Apple ekosistemine yakın bir hizmet ya da güncel ve teknolojik görünmesi gereken bir lansman sayfası için.",
+   "example": "Bir müzik uygulamasının tanıtımında renkli albüm kapakları üzerinde kenarları ışık yansıtan yuvarlak cam bir menü yüzer; menünün altındaki renkler hafifçe bükülmüş görünür, metin koyu ve okunaklı kalır.",
+   "examples": [
+    "Uygulama tanıtımı",
+    "Premium elektronik",
+    "Lansman sayfası"
+   ]
+  },
+  {
+   "after": "Corporate Modern",
+   "value": "SaaS Product-Led",
+   "label": "SaaS / Product-Led — Ürün Odaklı SaaS",
+   "explanation": "Ürünün kendisini (ekran görüntüsü, canlı demo, özellik kartları) satış aracı yapar: net değer önerisi, ürün arayüzü ön planda, fiyatlandırma ve deneme çağrısı her bölümde erişilebilir. Artısı: ziyaretçi ürünü görerek karar verir, dönüşüm yolu kısadır. Eksisi: ürün ekranları güncel tutulmazsa güven kaybı olur; özellik listesi kalabalıklaşmaya eğilimlidir.",
+   "scenario": "Abonelikli yazılım, web uygulaması veya geliştirici aracı satan; ücretsiz deneme ya da demo talebiyle büyüyen şirketler için.",
+   "example": "Bir proje yönetim aracının ana sayfasında başlığın altında ürünün gerçek panosunun ekran görüntüsü durur; aşağıda özellikler kısa kartlarda, her kartta küçük bir arayüz parçası ve sağ üstte sabit ‘Ücretsiz dene’ düğmesi vardır.",
+   "examples": [
+    "Proje yönetim aracı",
+    "Geliştirici platformu",
+    "B2B web uygulaması"
+   ]
+  },
+  {
+   "after": "SaaS Product-Led",
+   "value": "Fintech Trust",
+   "label": "Fintech / Trust-Driven — Güven Odaklı Finans",
+   "explanation": "Para ve kişisel veriyle ilgili kararlarda güveni öne koyar: sakin lacivert-yeşil paletler, net rakamlar, güvenlik ve lisans rozetleri, şeffaf ücret tabloları ve sade, öngörülebilir arayüz. Artısı: kullanıcının risk algısını düşürür, düzenleyici gerekliliklerle uyumludur. Eksisi: sektörde sık kullanıldığı için ayırt edicilik azdır; güven öğeleri gerçek belgeye dayanmalıdır.",
+   "scenario": "Ödeme hizmeti, dijital banka, yatırım uygulaması, sigorta veya muhasebe yazılımı gibi kullanıcıdan finansal güven bekleyen işler için.",
+   "example": "Bir ödeme kuruluşunun ana sayfasında lacivert zeminde ‘Ödemelerin güvende’ başlığı, yanında kart ve işlem özetini gösteren sade bir uygulama ekranı, altında lisans numarası, şifreleme ve 7/24 destek rozetleri yer alır.",
+   "examples": [
+    "Dijital banka",
+    "Ödeme kuruluşu",
+    "Yatırım uygulaması"
+   ]
+  },
+  {
+   "after": "Fintech Trust",
+   "value": "Web3 Digital Native",
+   "label": "Web3 / Digital Native — Dijital Yerli",
+   "explanation": "Blokzincir, topluluk ve dijital varlık ürünlerinin dilini kullanır: koyu zemin, neon vurgular, holografik geçişler, cüzdan bağlama ve topluluk metrikleri. Artısı: hedef kitle tarafından hemen tanınır, teknolojik ve topluluk odaklı görünür. Eksisi: spekülatif ve güvensiz algılanabilir; finansal iddialar, riskler ve hukuki bilgilendirme açıkça yazılmalıdır.",
+   "scenario": "Blokzincir altyapısı, dijital koleksiyon, merkeziyetsiz uygulama ya da kripto eğitim topluluğu gibi dijital yerli bir kitleye hitap eden projeler için.",
+   "example": "Bir dijital koleksiyon platformunun sitesinde koyu mor zeminde parlayan holografik kartlar döner; sağ üstte ‘Cüzdanı bağla’ düğmesi, altında topluluk üye sayısı ve son işlemler akışı yer alır.",
+   "examples": [
+    "Dijital koleksiyon",
+    "Blokzincir altyapısı",
+    "Topluluk platformu"
+   ]
+  },
+  {
+   "after": "Web3 Digital Native",
+   "value": "AI-Native",
+   "label": "AI-Native / Generative — Yapay Zekâ Yerlisi",
+   "explanation": "Yapay zekâ ürünlerinin dilini kullanır: sohbet ya da komut kutusu ilk ekranda, üretken degrade ve parçacık efektleri, örnek istemler ve canlı çıktı önizlemesi. Artısı: ürünün nasıl çalıştığını ilk saniyede gösterir. Eksisi: tür hızla kalıplaştı, birbirine benzeyen sitelerden ayrışmak zordur; yetenekler abartılmamalı, örnek çıktılar gerçek olmalıdır.",
+   "scenario": "Yapay zekâ asistanı, içerik üretim aracı, model ya da API sağlayıcısı, yapay zekâ destekli SaaS ürünü için.",
+   "example": "Bir yazı asistanının ana sayfasında ortada büyük bir komut kutusu ve ‘Bir blog yazısı taslağı çıkar’ gibi örnek istem çipleri vardır; arkada yavaşça dönen mor-mavi bir degrade küre ışık saçar.",
+   "examples": [
+    "Yapay zekâ asistanı",
+    "Model / API sağlayıcı",
+    "Üretken içerik aracı"
+   ]
+  },
+  {
+   "after": "AI-Native",
+   "value": "Eco Sustainable",
+   "label": "Eco / Sustainable — Ekolojik / Sürdürülebilir",
+   "explanation": "Sürdürülebilirliği hem görselde hem teknikte uygular: doğal toprak ve yaprak tonları, geri dönüştürülmüş kâğıt dokusu, ölçülü görsel kullanımı ve düşük karbonlu (hafif, az veri harcayan) sayfa yapısı. Artısı: değer önerisiyle tutarlı, hızlı ve güven verici bir site çıkar. Eksisi: yeşil iddialar belgeyle desteklenmezse aklama (greenwashing) olarak algılanır.",
+   "scenario": "Organik gıda, sürdürülebilir moda, yenilenebilir enerji, sivil toplum veya karbon raporlaması yapan kurumlar için.",
+   "example": "Bir organik çiftliğin sitesinde krem kâğıt dokulu zeminde yaprak yeşili başlıklar, az sayıda ama iyi sıkıştırılmış fotoğraf ve alt bilgide sayfa başına karbon salımı göstergesi bulunur.",
+   "examples": [
+    "Organik gıda",
+    "Yenilenebilir enerji",
+    "Sürdürülebilir moda"
+   ]
+  },
+  {
+   "after": "Typography-Led",
+   "value": "Art Direction-Led",
+   "label": "Art Direction-Led — Sanat Yönetimi Odaklı",
+   "explanation": "Her sayfayı ya da kampanyayı özel bir sanat yönetimiyle kurgular: özel fotoğraf çekimi, cesur kırpımlar, sayfaya özgü tipografi ve kompozisyon. Şablon değil, editoryal bir dergi kapağı gibi düşünülür. Artısı: güçlü ve unutulmaz bir marka izlenimi bırakır. Eksisi: her yeni içerik için tasarım emeği ister; ölçeklenmesi ve tutarlılığı zordur.",
+   "scenario": "Moda markası, kreatif ajans, kültür kurumu ya da lansman kampanyası gibi görsel anlatının ürünün kendisi kadar önemli olduğu projeler için.",
+   "example": "Bir moda markasının sezon sayfasında model fotoğrafı ekranı çapraz keser, başlık fotoğrafın üzerine dev ve dikey yazılmıştır; her koleksiyon sayfasının kendine ait bir renk ve kompozisyonu vardır.",
+   "examples": [
+    "Moda kampanyası",
+    "Kreatif ajans",
+    "Kültür kurumu"
+   ]
+  },
+  {
+   "after": "Monochromatic",
+   "value": "Dark-First",
+   "label": "Dark-First Design — Önce Koyu Tasarım",
+   "explanation": "Arayüzü baştan koyu zemin için tasarlar: derin gri yüzeyler, katmanlarla ayrılan paneller, kontrollü parlak vurgular; açık tema varsa sonradan türetilir. Artısı: yoğun ekran kullanımında göz yorgunluğunu azaltabilir, teknik ve premium görünür. Eksisi: uzun metinlerde okunabilirlik, kontrast ve görsel sunumu dikkat ister; saf siyah ve saf beyaz yan yana kullanılmamalıdır.",
+   "scenario": "Geliştirici aracı, yaratıcı yazılım, oyun, medya oynatıcı veya uzun süre açık kalan bir izleme paneli için.",
+   "example": "Bir video düzenleme uygulamasının sitesinde koyu grafit zeminde hafif açık tonlu paneller birbirinden ayrılır; tek vurgu rengi olan elektrik mavisi yalnız ‘İndir’ düğmesinde ve etkin sekmede görünür.",
+   "examples": [
+    "Geliştirici aracı",
+    "Yaratıcı yazılım",
+    "İzleme paneli"
+   ]
+  },
+  {
+   "after": "Memphis",
+   "value": "Neo-Memphis",
+   "label": "Neo-Memphis — Yeni Memphis",
+   "explanation": "1980'lerin Memphis akımını güncel dijital ürünlere uyarlar: yumuşatılmış pastel paletler, soyut geometrik süsler, dalgalı çizgiler, ince kontur ve bol beyaz alan. Klasik Memphis'ten daha sakin ve kurumsala uygundur. Artısı: eğlenceli ama düzenli, yaratıcı ve modern görünür. Eksisi: süsler içeriği bastırırsa ciddiyet kaybolur; dekoratif öğeler ekran okuyuculardan gizlenmelidir.",
+   "scenario": "Eğitim teknolojisi, yaratıcı topluluk, etkinlik platformu ya da genç kitleye hitap eden bir SaaS ürünü için.",
+   "example": "Bir çevrim içi kurs platformunun ana sayfasında kırık beyaz zeminde pastel sarı yarım daire, ince siyah dalga çizgisi ve lila noktalı bir üçgen başlığın çevresinde dağınık durur; kartlar sade ve hizalıdır.",
+   "examples": [
+    "Eğitim teknolojisi",
+    "Etkinlik platformu",
+    "Yaratıcı topluluk"
+   ]
+  },
+  {
+   "after": "Cyberpunk",
+   "value": "Industrial",
+   "label": "Industrial / Utilitarian — Endüstriyel / İşlevsel",
+   "explanation": "İşlevi süsün önüne koyar: teknik çizim estetiği, ızgara çizgileri, uyarı sarısı ve siyahı, etiket ve seri numarası tipografisi, sık ama düzenli bilgi yerleşimi. Artısı: dürüst, sağlam ve teknik bir güven verir; karmaşık ürün bilgisini düzenli sunar. Eksisi: soğuk algılanabilir; yoğun bilgi küçük ekranda dikkatli sadeleştirilmelidir.",
+   "scenario": "Makine üreticisi, endüstriyel ekipman, mühendislik firması, donanım girişimi ya da teknik ürün kataloğu için.",
+   "example": "Bir sanayi robotu üreticisinin sitesinde açık gri ızgara zeminde ürünün teknik çizimi durur; ölçüler ince çizgilerle işaretlidir, başlık ‘MODEL RX-40’ gibi etiket yazısıyla yazılmış, ‘Teknik föy’ düğmesi sarı-siyah çerçevelidir.",
+   "examples": [
+    "Makine üreticisi",
+    "Donanım girişimi",
+    "Teknik katalog"
+   ]
+  },
+  {
+   "after": "Photography-Led",
+   "value": "Data Viz-Led",
+   "label": "Data Visualization-Led — Veri Görselleştirme Odaklı",
+   "explanation": "Mesajı grafikler, haritalar ve canlı göstergelerle anlatır; sayılar ve eğilimler sayfanın ana görselidir. Artısı: soyut bir değeri somut ve ölçülebilir kılar, güvenilir ve analitik görünür. Eksisi: grafikler erişilebilir tablo ve metin alternatifi olmadan anlaşılmaz; veri kaynağı ve tarihi açıkça yazılmalıdır.",
+   "scenario": "Analitik platformu, araştırma kurumu, kamu verisi portalı, finansal rapor ya da etki raporu yayımlayan kurum için.",
+   "example": "Bir iklim araştırma kurumunun ana sayfasında ilk ekranda Türkiye haritası üzerinde sıcaklık değişimi renkleri, yanında ‘+1,4 °C’ büyük rakamı ve altında kaynak ile güncelleme tarihi bulunur.",
+   "examples": [
+    "Analitik platformu",
+    "Araştırma raporu",
+    "Kamu veri portalı"
+   ]
+  },
+  {
+   "after": "Cinematic",
+   "value": "Immersive",
+   "label": "Immersive / Experiential — Sürükleyici / Deneyimsel",
+   "explanation": "Siteyi gezilecek bir deneyime çevirir: tam ekran sahneler, kaydırmayla ilerleyen anlatı, ses, 3B ya da WebGL ortamları ve ziyaretçinin keşfettiği etkileşimler. Artısı: güçlü duygusal etki ve paylaşılabilirlik yaratır. Eksisi: performans, erişilebilirlik ve SEO maliyeti yüksektir; hareket azaltma tercihi ve sade bir alternatif yol şarttır.",
+   "scenario": "Ürün lansmanı, müze ya da sergi, oyun tanıtımı, marka kampanyası veya ödül odaklı ajans portfolyosu için.",
+   "example": "Bir otomobil lansmanında ziyaretçi kaydırdıkça kamera aracın etrafında döner, farlar yanar ve motor sesi duyulur; sağ üstte ‘Sesi kapat’ ve ‘Sade görünüm’ düğmeleri her zaman erişilebilirdir.",
+   "examples": [
+    "Ürün lansmanı",
+    "Sanal sergi",
+    "Oyun tanıtımı"
+   ]
+  },
+  {
+   "after": "Immersive",
+   "value": "Kinetic Type",
+   "label": "Kinetic Typography — Hareketli Tipografi",
+   "explanation": "Yazının kendisini hareket ettirerek anlatır: kayan, büyüyen, harf harf beliren ya da kaydırmaya tepki veren başlıklar. Artısı: az görselle güçlü ve akılda kalıcı bir ilk izlenim yaratır. Eksisi: okunabilirliği ve dikkat süresini zorlayabilir; hareket kısa tutulmalı, hareket azaltma tercihinde durmalı ve metin her zaman seçilebilir olmalıdır.",
+   "scenario": "Kreatif ajans, etkinlik ya da konferans, müzik lansmanı veya güçlü bir manifestosu olan marka için.",
+   "example": "Bir tasarım konferansının sitesinde ‘DÜŞÜN · YAP · PAYLAŞ’ kelimeleri ekranı yatay şeritler halinde zıt yönlere kayarak geçer; kaydırma hızlandıkça şeritler de hızlanır, imleç üzerine gelince yavaşlar.",
+   "examples": [
+    "Konferans sitesi",
+    "Kreatif ajans",
+    "Müzik lansmanı"
+   ]
+  },
+  {
+   "after": "Liquid Glass",
+   "value": "Liquid Fluid",
+   "label": "Liquid / Fluid Design — Akışkan Tasarım",
+   "explanation": "Sıvı gibi akan biçimler, organik morph geçişleri, imlece tepki veren dalgalar ve yumuşak, kesintisiz bölüm geçişleri kullanır. Artısı: canlı, modern ve dokunsal bir his verir; markaya hareket kimliği kazandırır. Eksisi: animasyonlar işlemciyi yorabilir; hareket azaltma tercihinde durağan sürüm gösterilmelidir.",
+   "scenario": "Kozmetik ve içecek markası, yaratıcı teknoloji ürünü, müzik platformu ya da canlı bir marka kimliği isteyen lansman için.",
+   "example": "Bir içecek markasının sitesinde şişenin arkasında yavaşça şekil değiştiren turuncu-pembe sıvı bir damla durur; fare yaklaştıkça damla dalgalanır, bölümler birbirine dalga biçimli kenarlarla geçer.",
+   "examples": [
+    "İçecek markası",
+    "Kozmetik",
+    "Yaratıcı teknoloji"
+   ]
+  }
+ ],
+ "images": {
+  "Flat 2.0": null,
+  "Brutalism": null,
+  "Vintage": null,
+  "Y2K": null,
+  "Pixel Art": {
+   "ids": [
+    "img_ae4d35021d6f",
+    "img_556780666003"
+   ],
+   "labels": [
+    "Piksel telefon anlatısı",
+    "Oyun karakterleri"
+   ]
+  },
+  "Collage": {
+   "ids": [
+    "img_3f841c74b84d"
+   ],
+   "labels": [
+    "Müzikal tanıtımı"
+   ]
+  },
+  "Editorial Magazine": {
+   "ids": [
+    "img_5f5641484758",
+    "img_1d2770493266"
+   ],
+   "labels": [
+    "Kültür hikâyesi",
+    "Moda hikâyeleri"
+   ]
+  }
+ },
+ "mock": {
+  "Minimalism": {
+   "brand": "atelier",
+   "kicker": "Mimarlık",
+   "title": "Az ama öz.",
+   "button": "Projeler"
+  },
+  "Scandinavian": {
+   "brand": "norr",
+   "kicker": "Ev & yaşam",
+   "title": "Işıkla dolu ev",
+   "button": "Koleksiyon"
+  },
+  "Japandi": {
+   "brand": "kami",
+   "kicker": "Seramik",
+   "title": "Sadelikte denge",
+   "button": "Atölye"
+  },
+  "Swiss Style": {
+   "brand": "Grid AG",
+   "kicker": "01 — Rapor",
+   "title": "Düzen bilgidir",
+   "button": "Raporu oku"
+  },
+  "Flat Design": {
+   "brand": "portal",
+   "kicker": "e-Hizmet",
+   "title": "Başvurunu hızla yap",
+   "button": "Başvur"
+  },
+  "Flat 2.0": {
+   "brand": "cloudy",
+   "kicker": "SaaS",
+   "title": "Ekibin tek panelde",
+   "button": "Ücretsiz dene"
+  },
+  "Material Design": {
+   "brand": "randevu",
+   "kicker": "Uygulama",
+   "title": "Planla ve paylaş",
+   "button": "Başla"
+  },
+  "Typography-Led": {
+   "brand": "MANİFESTO",
+   "kicker": "Kişisel marka",
+   "title": "SÖZ BİZİM",
+   "button": "Oku"
+  },
+  "Editorial Magazine": {
+   "brand": "Kültür",
+   "kicker": "Sayı 12 · Kasım",
+   "title": "Şehrin sessiz sesi",
+   "button": "Okumaya başla"
+  },
+  "Monochromatic": {
+   "brand": "mavi",
+   "kicker": "Danışmanlık",
+   "title": "Tek renk, net mesaj",
+   "button": "İletişim"
+  },
+  "Corporate Modern": {
+   "brand": "Endüstri A.Ş.",
+   "kicker": "B2B çözümler",
+   "title": "Güvenilir üretim ortağınız",
+   "button": "Teklif al"
+  },
+  "Luxury": {
+   "brand": "MAISON",
+   "kicker": "Koleksiyon",
+   "title": "Zamansız zarafet",
+   "button": "Keşfet"
+  },
+  "Brutalism": {
+   "brand": "INDEX",
+   "kicker": "sanat/2026",
+   "title": "HAM. GERÇEK.",
+   "button": "[GİR]"
+  },
+  "Neobrutalism": {
+   "brand": "boom!",
+   "kicker": "Startup",
+   "title": "Fark yaratan araç",
+   "button": "Hemen dene"
+  },
+  "Constructivism": {
+   "brand": "FEST",
+   "kicker": "Kültür",
+   "title": "İLERİ!",
+   "button": "Bilet"
+  },
+  "Bauhaus": {
+   "brand": "form",
+   "kicker": "Tasarım",
+   "title": "Biçim işlevi izler",
+   "button": "Stüdyo"
+  },
+  "Geometric": {
+   "brand": "vertex",
+   "kicker": "Mühendislik",
+   "title": "Hassas yapılar",
+   "button": "Çözümler"
+  },
+  "Maximalism": {
+   "brand": "WOW",
+   "kicker": "Festival",
+   "title": "Hepsi bir arada!",
+   "button": "Bilet al"
+  },
+  "Anti-Design": {
+   "brand": "k a o s",
+   "kicker": "deney",
+   "title": "kuralları boz",
+   "button": "tıkla?"
+  },
+  "Art Deco": {
+   "brand": "GATSBY",
+   "kicker": "Otel",
+   "title": "Altın çağ",
+   "button": "Rezervasyon"
+  },
+  "Vintage": {
+   "brand": "Kahveci",
+   "kicker": "Est. 1952",
+   "title": "Eski usul kavrulur",
+   "button": "Mağaza"
+  },
+  "Y2K": {
+   "brand": "glitter",
+   "kicker": "2000'ler",
+   "title": "Parla ✦ yeniden",
+   "button": "Koleksiyon"
+  },
+  "Synthwave": {
+   "brand": "NEON",
+   "kicker": "Oyun",
+   "title": "Geceye sür",
+   "button": "Oyna"
+  },
+  "Vaporwave": {
+   "brand": "ＡＥＳＴＨＥＴＩＣ",
+   "kicker": "dijital sanat",
+   "title": "ｒｅｌａｘ",
+   "button": "Gir"
+  },
+  "Retro-Futurism": {
+   "brand": "ATOM",
+   "kicker": "Bilim festivali",
+   "title": "Geleceğe hoş geldiniz",
+   "button": "Bilet"
+  },
+  "Pixel Art": {
+   "brand": "PIXEL",
+   "kicker": "Indie oyun",
+   "title": "PRESS START",
+   "button": "Oyna"
+  },
+  "Grunge": {
+   "brand": "NOISE",
+   "kicker": "Alternatif",
+   "title": "Yüksek ses",
+   "button": "Albüm"
+  },
+  "Memphis": {
+   "brand": "pop!",
+   "kicker": "Etkinlik",
+   "title": "Eğlenceli tasarım",
+   "button": "Katıl"
+  },
+  "Psychedelic": {
+   "brand": "trip",
+   "kicker": "Festival",
+   "title": "Renklerin dansı",
+   "button": "Bilet"
+  },
+  "Hand-Drawn": {
+   "brand": "atölye",
+   "kicker": "El yapımı",
+   "title": "Birlikte çizelim",
+   "button": "Kaydol"
+  },
+  "Illustration-Led": {
+   "brand": "kidz",
+   "kicker": "Eğitim",
+   "title": "Öğrenmek eğlenceli",
+   "button": "Başla"
+  },
+  "Collage": {
+   "brand": "KOLAJ",
+   "kicker": "Kültür-sanat",
+   "title": "Parçalar bütünü",
+   "button": "Sergi"
+  },
+  "Organic": {
+   "brand": "doğa",
+   "kicker": "Kişisel bakım",
+   "title": "Doğadan gelen",
+   "button": "Ürünler"
+  },
+  "Paper-Cut": {
+   "brand": "kağıt",
+   "kicker": "Seyahat",
+   "title": "Katman katman",
+   "button": "Keşfet"
+  },
+  "Playful": {
+   "brand": "yay!",
+   "kicker": "Topluluk",
+   "title": "Oyna, öğren",
+   "button": "Katıl"
+  },
+  "Skeuomorphism": {
+   "brand": "MIX",
+   "kicker": "Ses",
+   "title": "Gerçek gibi",
+   "button": "Çal"
+  },
+  "Neumorphism": {
+   "brand": "home",
+   "kicker": "Akıllı ev",
+   "title": "Yumuşak kontrol",
+   "button": "Aç"
+  },
+  "Glassmorphism": {
+   "brand": "wallet",
+   "kicker": "Fintech",
+   "title": "Paran şeffaf",
+   "button": "İndir"
+  },
+  "Liquid Glass": {
+   "brand": "tune",
+   "kicker": "Uygulama",
+   "title": "Akıcı ve canlı",
+   "button": "İndir"
+  },
+  "Claymorphism": {
+   "brand": "blob",
+   "kicker": "Onboarding",
+   "title": "Merhaba!",
+   "button": "Devam"
+  },
+  "3D-Led": {
+   "brand": "AUTO",
+   "kicker": "Lansman",
+   "title": "Yeni model",
+   "button": "Keşfet"
+  },
+  "Isometric": {
+   "brand": "flow",
+   "kicker": "Lojistik",
+   "title": "Depodan kapına",
+   "button": "Demo"
+  },
+  "Futuristic": {
+   "brand": "NOVA",
+   "kicker": "AI",
+   "title": "Yarının zekâsı",
+   "button": "Erişim"
+  },
+  "Cyberpunk": {
+   "brand": "sec://",
+   "kicker": "Siber güvenlik",
+   "title": "> sistem güvende_",
+   "button": "./tara"
+  },
+  "Gradient": {
+   "brand": "spectra",
+   "kicker": "Dijital ürün",
+   "title": "Renkle akan fikir",
+   "button": "Başla"
+  },
+  "Duotone": {
+   "brand": "SUMMIT",
+   "kicker": "Konferans",
+   "title": "Fikirler sahnede",
+   "button": "Bilet al"
+  },
+  "Photography-Led": {
+   "brand": "Ege",
+   "kicker": "Restoran",
+   "title": "Denize nazır",
+   "button": "Rezervasyon"
+  },
+  "Cinematic": {
+   "brand": "ODYSSEY",
+   "kicker": "Destinasyon",
+   "title": "Bir yolculuk",
+   "button": "İzle"
+  },
+  "SaaS Product-Led": {
+   "brand": "flowly",
+   "kicker": "Ürün",
+   "title": "İşini tek ekrandan yönet",
+   "button": "Ücretsiz dene"
+  },
+  "Fintech Trust": {
+   "brand": "paynet",
+   "kicker": "Finans",
+   "title": "Paran güvende",
+   "button": "Hesap aç"
+  },
+  "Web3 Digital Native": {
+   "brand": "chainly",
+   "kicker": "Web3",
+   "title": "Topluluk sahibi olsun",
+   "button": "Cüzdanı bağla"
+  },
+  "AI-Native": {
+   "brand": "nova.ai",
+   "kicker": "Yapay zekâ",
+   "title": "Sor, üret, gönder",
+   "button": "Dene"
+  },
+  "Eco Sustainable": {
+   "brand": "yeşil",
+   "kicker": "Sürdürülebilir",
+   "title": "Doğaya saygıyla",
+   "button": "Ürünler"
+  },
+  "Art Direction-Led": {
+   "brand": "ATELIER 9",
+   "kicker": "Sezon 26",
+   "title": "Işığın biçimi",
+   "button": "Koleksiyon"
+  },
+  "Dark-First": {
+   "brand": "umbra",
+   "kicker": "Yazılım",
+   "title": "Gece de net",
+   "button": "İndir"
+  },
+  "Neo-Memphis": {
+   "brand": "blip",
+   "kicker": "Eğitim",
+   "title": "Öğrenmek renkli",
+   "button": "Kursları gör"
+  },
+  "Industrial": {
+   "brand": "RX-40",
+   "kicker": "Endüstri",
+   "title": "Dayanıklı. Hassas.",
+   "button": "Teknik föy"
+  },
+  "Data Viz-Led": {
+   "brand": "metrik",
+   "kicker": "Analitik",
+   "title": "Veri konuşsun",
+   "button": "Raporu aç"
+  },
+  "Immersive": {
+   "brand": "ORBIT",
+   "kicker": "Deneyim",
+   "title": "İçine gir",
+   "button": "Keşfet"
+  },
+  "Kinetic Type": {
+   "brand": "MOTION",
+   "kicker": "Konferans",
+   "title": "DÜŞÜN · YAP",
+   "button": "Bilet al"
+  },
+  "Liquid Fluid": {
+   "brand": "flow",
+   "kicker": "Lansman",
+   "title": "Akışa bırak",
+   "button": "Keşfet"
+  }
+ },
+ "live": {
+  "Minimalism": {
+   "sites": [
+    {
+     "name": "Causal",
+     "url": "https://causal.so/",
+     "why": "bol beyaz alan, tek vurgu, az öğeli sakin arayüz",
+     "source": "minimal.gallery",
+     "visual": true
+    },
+    {
+     "name": "Kinfolk",
+     "url": "https://www.kinfolk.com/",
+     "why": "beyaz zemin, tek kapak görseli, ince serif yazı",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Vitsœ",
+     "url": "https://www.vitsoe.com/",
+     "why": "sade ızgara, gri-beyaz palet, süssüz ürün sunumu",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "minimal.gallery",
+     "url": "https://minimal.gallery/"
+    },
+    {
+     "name": "One Page Love — Minimal",
+     "url": "https://onepagelove.com/style/minimal"
+    }
+   ],
+   "note": "Vitsœ açılışta çerez bandı gösteriyor; içerik görünür."
+  },
+  "Scandinavian": {
+   "sites": [
+    {
+     "name": "Ferm Living",
+     "url": "https://fermliving.com/",
+     "why": "sıcak doğal tonlar, hasır ve ahşap dokulu ürün fotoğrafları, sade sans menü",
+     "source": "bilinen Danimarka markası",
+     "visual": true
+    },
+    {
+     "name": "Muuto",
+     "url": "https://www.muuto.com/",
+     "why": "aydınlık, ferah iç mekân, açık ahşap ve yumuşak pastel mobilya",
+     "source": "bilinen Danimarka markası",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Muuto görüntüsünün ortasında çerez kutusu var, tasarım çevresinde görülüyor. HAY, Audo, Vipp çerez duvarı; Normann Copenhagen ve String 403."
+  },
+  "Japandi": {
+   "sites": [
+    {
+     "name": "KINTO",
+     "url": "https://kinto.co.jp/",
+     "why": "eski ahşap masa, keten ve el yapımı seramik; doğal ışık ve sade arayüz",
+     "source": "bilinen Japon markası",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Karimoku Case ve kinto-usa.com çizilemedi / açılır pencere gösterdi; Ariake ve MUJI curl'a yanıt vermedi."
+  },
+  "Swiss Style": {
+   "sites": [
+    {
+     "name": "Lars Müller Publishers",
+     "url": "https://www.lars-mueller-publishers.com/",
+     "why": "sola hizalı iri grotesk başlık, katı ızgara, net hiyerarşi",
+     "source": "bilinen örnek (İsviçreli tasarım yayınevi)",
+     "visual": true
+    },
+    {
+     "name": "Swissted",
+     "url": "https://www.swissted.com/",
+     "why": "İsviçre tipografik stilinde afiş ızgarası",
+     "source": "bilinen örnek",
+     "visual": false
+    }
+   ],
+   "gallery": [],
+   "note": "Zayıf: yalnız 1 site görsel olarak doğrulandı. Swissted 200 dönüyor ama başsız Chrome'da ekran görüntüsü alınamadı. Denenen İsviçre kurumları (Museum für Gestaltung, Lineto, ECAL, Kunsthalle Basel/Zürich, Swiss Design Awards) güncel tasarımda bu stili net taşımıyor."
+  },
+  "Flat Design": {
+   "sites": [
+    {
+     "name": "Duolingo",
+     "url": "https://www.duolingo.com/",
+     "why": "gölgesiz düz renkler, sade vektör karakterler",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Flat UI Colors",
+     "url": "https://flatuicolors.com/",
+     "why": "düz renk blokları, dokusuz yüzeyler",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Headspace",
+     "url": "https://www.headspace.com/",
+     "why": "düz renkli illüstrasyonlar, sade şekiller",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Flat Design",
+     "url": "https://onepagelove.com/style/flat-design"
+    }
+   ],
+   "note": "Flat UI Colors reklam alanları içeriyor."
+  },
+  "Flat 2.0": {
+   "sites": [
+    {
+     "name": "Android",
+     "url": "https://www.android.com/",
+     "why": "düz yüzeyler, yuvarlak köşeler, hafif katman ve gölge",
+     "source": "bilinen örnek (Material Design)",
+     "visual": true
+    },
+    {
+     "name": "Google Chrome",
+     "url": "https://www.google.com/chrome/",
+     "why": "düz renkli arayüz, belirgin hap butonlar, ince gölgeli kartlar",
+     "source": "bilinen örnek (Material Design)",
+     "visual": true
+    },
+    {
+     "name": "Google Store",
+     "url": "https://store.google.com/",
+     "why": "Material bileşenleri, yumuşak gölgeli kartlar",
+     "source": "bilinen örnek (Material Design)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Material Design 3 sitesi (m3.material.io) stilin en net örneği ama HEAD isteğine 405 döndüğü için kural gereği dışarıda bırakıldı. Google Store bölge yönlendirmesi yapar; /us sürümü kullanıldı."
+  },
+  "Material Design": {
+   "sites": [
+    {
+     "name": "Material Design 3",
+     "url": "https://m3.material.io/",
+     "why": "Google'ın resmî Material 3 sitesi: dinamik renk, yuvarlak kartlar, Material bileşenleri",
+     "source": "resmî Google",
+     "visual": true
+    },
+    {
+     "name": "Google Fonts",
+     "url": "https://fonts.google.com/",
+     "why": "Material 3 gezinme rayı, hap biçimli filtre çipleri ve tonal yüzeyler",
+     "source": "resmî Google ürünü",
+     "visual": true
+    },
+    {
+     "name": "Android Developers — Design",
+     "url": "https://developer.android.com/design",
+     "why": "Material şekilleri ve renkleriyle Android tasarım rehberi",
+     "source": "resmî Google",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "m3.material.io HEAD isteğine 405 döndürüyor, aynı curl GET ile 200; site sorunsuz açılıyor."
+  },
+  "Typography-Led": {
+   "sites": [
+    {
+     "name": "Commercial Type",
+     "url": "https://commercialtype.com/",
+     "why": "sayfayı dev yazı örnekleri ve renk bantları kuruyor",
+     "source": "bilinen örnek (yazı dökümhanesi)",
+     "visual": true
+    },
+    {
+     "name": "Ohno Type",
+     "url": "https://ohnotype.co/",
+     "why": "kalın, karakterli harfler görsel yerine kompozisyonu taşıyor",
+     "source": "bilinen örnek (yazı dökümhanesi)",
+     "visual": true
+    },
+    {
+     "name": "Pangram Pangram",
+     "url": "https://pangrampangram.com/",
+     "why": "büyük serif başlık ve yazı tipi vitrinleri",
+     "source": "bilinen örnek (yazı dökümhanesi)",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "Typewolf — Site of the Day",
+     "url": "https://www.typewolf.com/site-of-the-day"
+    },
+    {
+     "name": "One Page Love — Typographic",
+     "url": "https://onepagelove.com/style/typographic"
+    }
+   ]
+  },
+  "Editorial Magazine": {
+   "sites": [
+    {
+     "name": "Kinfolk",
+     "url": "https://www.kinfolk.com/",
+     "why": "bol beyaz alan, ince serif başlık ve ortada dergi kapağı",
+     "source": "bilinen dergi",
+     "visual": true
+    },
+    {
+     "name": "The New Yorker",
+     "url": "https://www.newyorker.com/",
+     "why": "klasik serif logo, illüstrasyonlu manşet haberi ve dergi tipografisi",
+     "source": "bilinen dergi",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Editorial",
+     "url": "https://onepagelove.com/style/editorial"
+    }
+   ],
+   "note": "It's Nice That, Monocle ve Apartamento açılır pencere / çerez duvarı yüzünden elendi."
+  },
+  "Monochromatic": {
+   "sites": [
+    {
+     "name": "Vercel",
+     "url": "https://vercel.com/",
+     "why": "siyah-beyaz ve gri tonlarla kurulu arayüz",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Linear",
+     "url": "https://linear.app/",
+     "why": "koyu tek ton palet, gri ara tonlar, renk neredeyse yok",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Tek renkli moda markaları (SSENSE, Balenciaga, Yohji Yamamoto) bot korumasıyla 403 döndüğü için alınmadı. Tek bir renk tonunun açık-koyu tonlarıyla kurulu (siyah-beyaz dışı) doğrulanmış örnek bulunamadı."
+  },
+  "Corporate Modern": {
+   "sites": [
+    {
+     "name": "IBM",
+     "url": "https://www.ibm.com/us-en",
+     "why": "okunaklı tırnaksız yazı, kontrollü mavi, net CTA'lar",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Vodafone",
+     "url": "https://www.vodafone.com/",
+     "why": "tek marka rengi, gerçek fotoğraf, belirgin başlık ve buton",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Corporate",
+     "url": "https://onepagelove.com/style/corporate"
+    }
+   ],
+   "note": "İki site de açılışta çerez penceresi gösteriyor; arkadaki tasarım görünür. Siemens, Bosch, Deloitte, Maersk erişilebilir (200) ama ekran görüntüsünde bot doğrulaması ya da çerez penceresi tasarımı kapattı."
+  },
+  "Luxury": {
+   "sites": [
+    {
+     "name": "Brunello Cucinelli",
+     "url": "https://www.brunellocucinelli.com/en/",
+     "why": "ince serif, krem tonlar, gravür çizimler; sade lüks",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Aman",
+     "url": "https://www.aman.com/",
+     "why": "geniş boşluk, aralıklı büyük harf logo, sakin fotoğraf",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Belmond",
+     "url": "https://www.belmond.com/en",
+     "why": "tam ekran seçkin fotoğraf, harf aralıklı ince logo",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Luxury",
+     "url": "https://onepagelove.com/style/luxury"
+    }
+   ],
+   "note": "Üç site de açılışta çerez penceresi gösteriyor; tasarım arkada görünür. Hermès, Cartier, Rolex, Loro Piana, Bottega Veneta, Aesop bot korumasıyla 403 döndü."
+  },
+  "Brutalism": {
+   "sites": [
+    {
+     "name": "Stedelijk Museum Amsterdam",
+     "url": "https://www.stedelijk.nl/",
+     "why": "dev siyah yazılar, ince çizgilerle bölünmüş ham düzen",
+     "source": "brutalistwebsites.com",
+     "visual": true
+    },
+    {
+     "name": "Yale School of Art",
+     "url": "https://art.yale.edu/",
+     "why": "üst üste binen pencereler, ham HTML hissi, düzensiz yerleşim",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Berkshire Hathaway",
+     "url": "https://www.berkshirehathaway.com/",
+     "why": "cilasız düz HTML, varsayılan bağlantılar, süs yok",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "Brutalist Websites",
+     "url": "https://brutalistwebsites.com/"
+    },
+    {
+     "name": "One Page Love — Brutalism",
+     "url": "https://onepagelove.com/style/brutalism"
+    }
+   ],
+   "note": "Stedelijk açılışta çerez bandı gösteriyor."
+  },
+  "Neobrutalism": {
+   "sites": [
+    {
+     "name": "Neobrutalism components",
+     "url": "https://www.neobrutalism.dev/",
+     "why": "kalın siyah çerçeve, keskin gölge, canlı düz renk",
+     "source": "bilinen örnek (bileşen kütüphanesi)",
+     "visual": true
+    },
+    {
+     "name": "NeoBrutalism (eski RetroUI)",
+     "url": "https://neobrutalism.com/",
+     "why": "sarı vurgu, kalın kenarlı kutular, ofset gölgeli butonlar",
+     "source": "bilinen örnek (bileşen kütüphanesi)",
+     "visual": true
+    },
+    {
+     "name": "Byooooob",
+     "url": "https://www.byooooob.com/",
+     "why": "çıkartma gibi kalın konturlu kartlar, doygun renkler",
+     "source": "NN/g neobrutalism makalesi",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Gumroad sık anılan örnek ama güncel ana sayfası artık kalın çerçeve/sert gölge kullanmıyor. www.retroui.dev adresi neobrutalism.com'a yönleniyor."
+  },
+  "Constructivism": {
+   "sites": [
+    {
+     "name": "Kraftwerk",
+     "url": "https://kraftwerk.com/",
+     "why": "kırmızı-siyah palet, blok harfler; Man-Machine kapağının konstrüktivist diline gönderme",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Zayıf: tek ve kısmi örnek (çapraz kompozisyon ve fotomontaj yok). Awwwards'ta Rus avangardı temalı 'Composition No.24' (k24moscow.ru) yanıt vermiyor. Franz Ferdinand fotomontaj kullanıyor ama genel düzen konstrüktivist değil."
+  },
+  "Geometric": {
+   "sites": [
+    {
+     "name": "Whitney Museum of American Art",
+     "url": "https://whitney.org/",
+     "why": "logodan türeyen zikzak çizgi sayfanın görsel sistemini kuruyor",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Griffo House",
+     "url": "https://griffo.house/",
+     "why": "tekrar eden çapraz bloklar, siyah-beyaz geometrik desen",
+     "source": "Webflow blog (örnek olarak anılan)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Whitney açılışta çerez penceresi gösteriyor."
+  },
+  "Maximalism": {
+   "sites": [
+    {
+     "name": "Omsom",
+     "url": "https://omsom.com/",
+     "why": "doygun renkler, çıkartma etiketler, yoğun katmanlı ürün sahnesi",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Fishwife",
+     "url": "https://eatfishwife.com/",
+     "why": "çok renkli illüstrasyon, desenli ambalaj, yoğun dekor",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "MSCHF ve Camille Walala erişilebilir (200) ama başsız Chrome'da boş/siyah çizildi; Oatly çerez penceresiyle kapandı; Gucci ve Liquid Death yanıt vermedi."
+  },
+  "Anti-Design": {
+   "sites": [
+    {
+     "name": "JODI",
+     "url": "https://wwwwwwwww.jodi.org/",
+     "why": "karakter yığınından oluşan, okunamaz, kuralları bozan net-art sayfası",
+     "source": "bilinen örnek (net art)",
+     "visual": true
+    },
+    {
+     "name": "Cameron's World",
+     "url": "https://www.cameronsworld.net/",
+     "why": "GeoCities parçalarından kaotik kolaj, ızgarasız düzen",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "İkisi de ticari değil, sanat/arşiv projesi. Lings Cars 403, Bloomberg bot doğrulaması gösterdi; Windows 93 siyah çizildi."
+  },
+  "Art Deco": {
+   "sites": [
+    {
+     "name": "Poklonnaya 9",
+     "url": "https://poklonnaya9.site/",
+     "why": "geometrik büyük harf yazı, koyu zeminde altın tonlar, cephe motifleri",
+     "source": "Awwwards Site of the Day",
+     "visual": true
+    },
+    {
+     "name": "Art Deco Society of New York",
+     "url": "https://www.artdeco.org/",
+     "why": "deco yazı tipli logo, altın çizgisel bezeme",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Poklonnaya 9 bir Moskova konut projesinin sitesidir. Art Deco Society'de stil yalnız başlık/logoda belirgin, gövde sade. Art Deco binalı oteller (Claridge's, The Carlyle, Gleneagles) sitelerinde bu stili kullanmıyor."
+  },
+  "Vintage": {
+   "sites": [
+    {
+     "name": "Lockerland",
+     "url": "https://www.lockerland.com.au/",
+     "why": "eski tabela harfleri, düz kırmızı zemin, retro logo",
+     "source": "One Page Love — Retro & Vintage",
+     "visual": true
+    },
+    {
+     "name": "Accidentally Wes Anderson",
+     "url": "https://accidentallywesanderson.com/",
+     "why": "pastel tonlar, eski kartpostal/etiket havası",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Retro & Vintage",
+     "url": "https://onepagelove.com/style/retro-vintage"
+    }
+   ],
+   "note": "Orta düzey: eskitilmiş kâğıt ve gren dokusunu belirgin kullanan büyük marka sitesi doğrulanamadı. Accidentally Wes Anderson açılışta bülten ve çerez penceresi gösteriyor."
+  },
+  "Y2K": {
+   "sites": [
+    {
+     "name": "The Frutiger Aero Archive",
+     "url": "https://frutigeraeroarchive.org/",
+     "why": "parlak cam paneller, yeşil doğa görselleri, 2000'ler arayüzü",
+     "source": "bilinen örnek (estetik arşivi)",
+     "visual": true
+    },
+    {
+     "name": "Vapor95",
+     "url": "https://vapor95.com/",
+     "why": "krom yazı, mavi parlak gradyan, yıldız parıltıları, hap butonlar",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Starface",
+     "url": "https://starface.world/",
+     "why": "doygun pembe-yeşil-sarı, kawaii ikonlar, şeker renkli kartlar",
+     "source": "Webflow blog (web kitsch örneği)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Frutiger Aero, Y2K'nın hemen ardından gelen yakın estetik; arşiv sitesi hayran projesidir. Starface açılışta çerez bandı gösteriyor."
+  },
+  "Synthwave": {
+   "sites": [
+    {
+     "name": "The Midnight",
+     "url": "https://themidnightofficial.com/",
+     "why": "neon mor-pembe şehir, gece ufku, 80'ler logo",
+     "source": "bilinen örnek (synthwave grubu)",
+     "visual": true
+    },
+    {
+     "name": "Kavinsky",
+     "url": "https://www.kavinsky.com/",
+     "why": "koyu zemin, ufka uzanan neon yol perspektifi",
+     "source": "bilinen örnek (outrun öncüsü)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Müzisyen siteleri albüm dönemine göre değişir. Timecop1983 (406) ve Hotline Miami (429) 2xx dönmediği için alınmadı."
+  },
+  "Vaporwave": {
+   "sites": [
+    {
+     "name": "Virtual Resort '98",
+     "url": "https://virtualresort.org/",
+     "why": "90'lar CGI plajı, palmiyeler, italik serif; ironik dijital nostalji",
+     "source": "bilinen örnek (vaporwave albümüne bağlı site)",
+     "visual": true
+    },
+    {
+     "name": "Poolsuite",
+     "url": "https://poolsuite.net/",
+     "why": "pastel pembe zemin, eski Mac pencereleri",
+     "source": "Webflow blog",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Poolsuite retro işletim sistemi arayüzüyle vaporwave'e yakın; bazı kaynaklar Y2K olarak anar."
+  },
+  "Retro-Futurism": {
+   "sites": [
+    {
+     "name": "Fallout (Bethesda)",
+     "url": "https://fallout.bethesda.net/",
+     "why": "1950'ler atom çağı geleceği: Vault Boy, retro reklam afişi dili ve bilimkurgu",
+     "source": "bilinen marka (retro-fütürist oyun serisinin resmî sitesi)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Zayıf: yalnız bir örnek doğrulandı. Nothing (dot-matrix) mağaza seçim penceresiyle açılıyor; The Outer Worlds 2 403; Atomic Heart yanıt vermedi; rabbit.tech görüntüde stili net göstermedi."
+  },
+  "Pixel Art": {
+   "sites": [
+    {
+     "name": "Stardew Valley",
+     "url": "https://www.stardewvalley.net/",
+     "why": "piksel logo ve manzara, 16-bit oyun dili",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Terraria",
+     "url": "https://terraria.org/",
+     "why": "piksel çerçeveler, bloklu menü ve sahne",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "PICO-8",
+     "url": "https://www.lexaloffle.com/pico-8.php",
+     "why": "8-bit karakterler, piksel yazı, kartuş ızgarası",
+     "source": "bilinen örnek",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Pixel Art",
+     "url": "https://onepagelove.com/style/pixel-art"
+    }
+   ]
+  },
+  "Grunge": {
+   "sites": [
+    {
+     "name": "Palace Skateboards",
+     "url": "https://palaceskateboards.com/",
+     "why": "VHS/lo-fi görüntü, grafitili duvar, ham kayıt hissi",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "The Lords of Water",
+     "url": "https://www.thelordsofwater.com/",
+     "why": "koyu aşınmış doku, eskitilmiş yazılar",
+     "source": "One Page Love — Grunge",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Grunge",
+     "url": "https://onepagelove.com/style/grunge"
+    }
+   ],
+   "note": "The Lords of Water açılışta bülten penceresi gösteriyor."
+  },
+  "Memphis": {
+   "sites": [
+    {
+     "name": "Adam Nathaniel Furman",
+     "url": "https://www.adamnathanielfurman.com/",
+     "why": "sarı-pembe dalgalı desen, oyuncu postmodern renk birliktelikleri",
+     "source": "bilinen örnek (postmodern tasarımcı)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Zayıf: tek örnek ve klasik Memphis motifleri (zikzak, benek) sınırlı. Memphis Milano'nun resmî sitesi (memphis.it) 403; Camille Walala ve Nathalie Du Pasquier 200 dönüyor ama başsız Chrome'da boş çizildi."
+  },
+  "Psychedelic": {
+   "sites": [
+    {
+     "name": "King Gizzard & the Lizard Wizard",
+     "url": "https://kinggizzardandthelizardwizard.com/",
+     "why": "yoğun psikedelik albüm sanatı, neon yeşil logo",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "The Flaming Lips",
+     "url": "https://www.flaminglips.com/",
+     "why": "renkli ışık huzmeleri, yoğun mavi-neon atmosfer",
+     "source": "bilinen örnek",
+     "visual": true
+    },
+    {
+     "name": "Desert Daze",
+     "url": "https://desertdaze.org/",
+     "why": "damla biçimli görseller, psych festival tipografisi",
+     "source": "bilinen örnek (psych rock festivali)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Orta düzey: dalgalanan yazı ve optik desenler belirgin değil, etki daha çok görsellerden geliyor. Müzisyen siteleri albüm dönemine göre değişir."
+  },
+  "Hand-Drawn": {
+   "sites": [
+    {
+     "name": "Excalidraw",
+     "url": "https://excalidraw.com/",
+     "why": "eskiz gibi titrek çizgiler, el yazısı fontu ve karalama oklarla açıklanan arayüz",
+     "source": "bilinen ürün (el çizimi beyaz tahta)",
+     "visual": true
+    },
+    {
+     "name": "Tally",
+     "url": "https://tally.so/",
+     "why": "başlık altında karalama alt çizgi, elle çizilmiş konuşma balonları ve doodle'lar",
+     "source": "bilinen ürün",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Hand Drawn",
+     "url": "https://onepagelove.com/tag/hand-drawn"
+    }
+   ],
+   "note": "Basecamp ve Oatly ana sayfaları artık el çizimini öne çıkarmıyor (Oatly çerez duvarı); elendi."
+  },
+  "Illustration-Led": {
+   "sites": [
+    {
+     "name": "Kurzgesagt",
+     "url": "https://kurzgesagt.org/",
+     "why": "düz renkli uzay illüstrasyonları ve markanın kendi çizgi dili tüm sayfada",
+     "source": "bilinen marka (illüstrasyon stüdyosu)",
+     "visual": true
+    },
+    {
+     "name": "Notion",
+     "url": "https://www.notion.com/",
+     "why": "siyah tek çizgili, elle çizilmiş karakter illüstrasyonları ürün görselleriyle birlikte",
+     "source": "bilinen marka",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "Awwwards — Illustration",
+     "url": "https://www.awwwards.com/websites/illustration/"
+    }
+   ],
+   "note": "Mailchimp artık fotoğraf ağırlıklı; Headspace'te illüstrasyon fotoğrafla karışık — ikisi de elendi. Duolingo da uygun (bkz. Playful)."
+  },
+  "Collage": {
+   "sites": [
+    {
+     "name": "Teardwn",
+     "url": "https://teardwn.com/",
+     "why": "fırça darbeli boyalı zemin üstüne kesilmiş fotoğraf, şekil ve yazı katmanları",
+     "source": "One Page Love — Collage",
+     "visual": true
+    },
+    {
+     "name": "April Leihuanani",
+     "url": "https://aprilleihuanani.com/",
+     "why": "yırtık kâğıt, polaroid, pul ve bantla üst üste bindirilmiş fotoğraf kolajı",
+     "source": "One Page Love — Collage",
+     "visual": true
+    },
+    {
+     "name": "davesocozy",
+     "url": "https://davesocozy.com/",
+     "why": "kolaj sanatçısının portfolyosu; kesilip yapıştırılmış karma medya işler ızgarada",
+     "source": "One Page Love — Collage",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Collage",
+     "url": "https://onepagelove.com/tag/collage"
+    }
+   ],
+   "note": "Üç örnek de kişisel / küçük stüdyo sitesi; büyük marka örneği doğrulanamadı (MSCHF ve Liquid Death curl'a yanıt vermedi)."
+  },
+  "Organic": {
+   "sites": [
+    {
+     "name": "allplants",
+     "url": "https://allplants.com/",
+     "why": "krem ve adaçayı yeşili doğal palet, yumuşak serif başlık, doğal gıda fotoğrafı",
+     "source": "bilinen marka",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Organic",
+     "url": "https://onepagelove.com/tag/organic"
+    }
+   ],
+   "note": "Zayıf: akışkan / biyomorfik şekilleri net gösteren canlı örnek doğrulanamadı. Aesop, Ecosia, Seed 403; Luomu.fi, Seedlip, Pangaia, Ritual çerez duvarı; Calm boş çizildi."
+  },
+  "Paper-Cut": {
+   "sites": [
+    {
+     "name": "Finding Margarete (SBS)",
+     "url": "https://www.sbs.com.au/margarete/",
+     "why": "eski mektuplar, fotoğraflar ve pullar dağınık albüm gibi katmanlanmış, el yazısı başlık",
+     "source": "One Page Love — Paper",
+     "visual": true
+    },
+    {
+     "name": "Postaway",
+     "url": "https://www.postaway.space/",
+     "why": "üst üste bindirilmiş kartpostallar, pullar ve kesik kenarlı fotoğraflarla hatıra albümü",
+     "source": "One Page Love — Skeuomorphism / Retro",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Paper",
+     "url": "https://onepagelove.com/tag/paper"
+    }
+   ],
+   "note": "April Leihuanani (Collage) da bant ve yırtık kâğıtla albüm etkisi verir."
+  },
+  "Playful": {
+   "sites": [
+    {
+     "name": "Duolingo",
+     "url": "https://www.duolingo.com/",
+     "why": "baykuş maskotu Duo, yuvarlak hatlı neşeli karakterler ve canlı yeşil",
+     "source": "bilinen marka",
+     "visual": true
+    },
+    {
+     "name": "Gumroad",
+     "url": "https://gumroad.com/",
+     "why": "koyu zeminde zıplayan pembe 'G' paraları, iri ve şakacı tipografi",
+     "source": "bilinen marka",
+     "visual": true
+    },
+    {
+     "name": "Kahoot!",
+     "url": "https://kahoot.com/",
+     "why": "renkli kalın butonlar, oyun şovu havası ve yuvarlak köşeli kartlar",
+     "source": "bilinen marka",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Cartoon",
+     "url": "https://onepagelove.com/tag/cartoon"
+    },
+    {
+     "name": "One Page Love — Fun",
+     "url": "https://onepagelove.com/style/fun"
+    }
+   ],
+   "note": "Kahoot ekran görüntüsünün alt kısmını çerez şeridi kapatıyor; tasarım üst yarıda görülüyor. Discord curl'a yanıt vermedi."
+  },
+  "Skeuomorphism": {
+   "sites": [
+    {
+     "name": "Playdate (Panic)",
+     "url": "https://play.date/",
+     "why": "cihaz vidaları, krank ve fiziksel tuşlarıyla gerçekçi çizilmiş sarı el konsolu",
+     "source": "bilinen ürün",
+     "visual": true
+    },
+    {
+     "name": "Rogue Amoeba",
+     "url": "https://rogueamoeba.com/",
+     "why": "ahşap radyo, metal kadran ve hoparlör gibi gerçek nesne taklidi uygulama ikonları",
+     "source": "bilinen ürün",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Skeuomorphism",
+     "url": "https://onepagelove.com/style/skeuomorphism"
+    }
+   ],
+   "note": "Raycast artık sade koyu tasarımda; Teenage Engineering ürün fotoğrafı (arayüz değil) — elendi."
+  },
+  "Neumorphism": {
+   "sites": [
+    {
+     "name": "Neumorphism.io",
+     "url": "https://neumorphism.io/",
+     "why": "zeminle aynı gri tonda, iki yönlü yumuşak gölgelerle kabarık kart ve kaydırıcılar",
+     "source": "bilinen araç (stili adlandıran üretici)",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Neumorphism",
+     "url": "https://onepagelove.com/tag/neumorphism"
+    }
+   ],
+   "note": "Zayıf: gerçek bir marka sitesinde neumorphism bulunamadı. Themesberg 'Neumorphism UI' demosu (demo.themesberg.com/neumorphism-ui/) tarayıcıda doğru çiziliyor ama curl'a sürekli 429 döndürdüğü için kurala göre eklenmedi."
+  },
+  "Glassmorphism": {
+   "sites": [
+    {
+     "name": "css.glass",
+     "url": "https://css.glass/",
+     "why": "renkli degrade üstünde yarı saydam, buzlu cam panel ve arkada bulanık şekiller",
+     "source": "bilinen araç (glassmorphism üreticisi)",
+     "visual": true
+    },
+    {
+     "name": "Hype4 Glassmorphism Generator",
+     "url": "https://hype4.academy/tools/glassmorphism-generator",
+     "why": "koyu zeminde bulanık cam ayar paneli, ince açık kenarlık ve arkadaki 3B nesneler",
+     "source": "stili adlandıran Hype4'ün aracı",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Glassmorphism",
+     "url": "https://onepagelove.com/style/glassmorphism"
+    }
+   ],
+   "note": "İki örnek de üretici araç sayfası; stili tam gösteren büyük marka ana sayfası doğrulanamadı (Bobbin çerez duvarı, Novu kapanmış)."
+  },
+  "Liquid Glass": {
+   "sites": [
+    {
+     "name": "Apple Newsroom — yeni yazılım tasarımı",
+     "url": "https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/",
+     "why": "Liquid Glass'ı tanıtan resmî duyuru ve cihaz görselleri",
+     "source": "resmî Apple",
+     "visual": true
+    },
+    {
+     "name": "Apple Developer — Liquid Glass",
+     "url": "https://developer.apple.com/documentation/technologyoverviews/liquid-glass",
+     "why": "Liquid Glass malzemesinin resmî tanımı ve uygulama rehberi",
+     "source": "resmî Apple",
+     "visual": true
+    },
+    {
+     "name": "Apple HIG — Materials",
+     "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+     "why": "İnsan Arayüzü Yönergeleri'nde Liquid Glass ve standart malzemeler",
+     "source": "resmî Apple",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Sayfalar stili anlatan resmî kaynaklar; ekran görüntüsünde cam etkisi yalnız ürün görsellerinde seçiliyor."
+  },
+  "Claymorphism": {
+   "sites": [
+    {
+     "name": "Clay",
+     "url": "https://www.clay.com/",
+     "why": "şişkin, mat yüzeyli kil modeli ağaçlar, huni ve oyuncak nesnelerden kurulu 3B sahne",
+     "source": "bilinen ürün",
+     "visual": true
+    },
+    {
+     "name": "Hype4 Claymorphism Generator",
+     "url": "https://hype4.academy/tools/claymorphism-generator",
+     "why": "pastel mavi, içten ve dıştan gölgeli şişkin kartlar ve yuvarlak 3B eller",
+     "source": "stili adlandıran Hype4'ün aracı",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Clay",
+     "url": "https://onepagelove.com/tag/clay"
+    }
+   ],
+   "note": "TinyFaces NFT sayfası kil karakterleri gösteriyor ama NFT olduğu için eklenmedi."
+  },
+  "3D-Led": {
+   "sites": [
+    {
+     "name": "Blender",
+     "url": "https://www.blender.org/",
+     "why": "ana görsel baştan sona Blender'da üretilmiş 3B animasyon karesi",
+     "source": "bilinen ürün",
+     "visual": true
+    },
+    {
+     "name": "Clay",
+     "url": "https://www.clay.com/",
+     "why": "kahraman alanı ışık ve malzemesiyle hazır render 3B sahne",
+     "source": "bilinen ürün",
+     "visual": true
+    },
+    {
+     "name": "Bruno Simon",
+     "url": "https://bruno-simon.com/",
+     "why": "arabayla gezilen etkileşimli WebGL / Three.js 3B dünya",
+     "source": "Awwwards (Site of the Day, çok bilinen 3B portfolyo)",
+     "visual": false
+    }
+   ],
+   "gallery": [
+    {
+     "name": "Awwwards — 3D",
+     "url": "https://www.awwwards.com/websites/3d/"
+    },
+    {
+     "name": "One Page Love — 3D",
+     "url": "https://onepagelove.com/style/3d"
+    }
+   ],
+   "note": "Bruno Simon, Lusion ve Igloo Inc. WebGL istiyor; başsız Chrome'da 3B çizilmedi, bu yüzden Bruno Simon visual:false, diğerleri eklenmedi."
+  },
+  "Isometric": {
+   "sites": [
+    {
+     "name": "Townscaper",
+     "url": "https://www.townscapergame.com/",
+     "why": "suyun üstünde izometrik açıdan görülen renkli minyatür kasaba dioraması",
+     "source": "bilinen oyun",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "99designs — Isometric websites",
+     "url": "https://99designs.com/inspiration/websites/isometric"
+    }
+   ],
+   "note": "Zayıf: yalnız bir örnek. Monument Valley sayfası başsız tarayıcıda karanlık çizildi; Habbo 463, Carta 403; Webflow ve Unpacking artık izometrik görsel kullanmıyor."
+  },
+  "Futuristic": {
+   "sites": [
+    {
+     "name": "Anduril",
+     "url": "https://www.anduril.com/",
+     "why": "koyu zemin, bozulma efektli dev başlık ve askeri teknoloji imgeleri",
+     "source": "bilinen marka",
+     "visual": true
+    },
+    {
+     "name": "Figure AI",
+     "url": "https://www.figure.ai/",
+     "why": "gri ton, insansı robot yakın planı ve geleceğe dönük minimal teknoloji dili",
+     "source": "bilinen marka",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Futuristic",
+     "url": "https://onepagelove.com/style/futuristic"
+    }
+   ],
+   "note": "Active Theory başsız tarayıcıda 'browser not supported' gösterdi; Neuralink ve Palantir stile uymadı ya da boş çizildi."
+  },
+  "Cyberpunk": {
+   "sites": [
+    {
+     "name": "Cyberpunk 2077",
+     "url": "https://www.cyberpunk.net/",
+     "why": "neon sarı zemin, glitch tipografi ve karanlık şehir karakterleri",
+     "source": "bilinen marka (oyunun resmî sitesi)",
+     "visual": true
+    },
+    {
+     "name": "terminal.shop",
+     "url": "https://www.terminal.shop/",
+     "why": "siyah zemin, satır numaralı komut satırı ve eş aralıklı yazıyla 'ssh terminal.shop'",
+     "source": "bilinen ürün",
+     "visual": true
+    },
+    {
+     "name": "Ghostty",
+     "url": "https://ghostty.org/",
+     "why": "terminal penceresinde ASCII sanatıyla canlanan logo, koyu sade arayüz",
+     "source": "bilinen ürün",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Terminal",
+     "url": "https://onepagelove.com/tag/terminal"
+    }
+   ],
+   "note": "Cyberpunk.net görüntüsünde çerez kutusu var ama tasarım çevresinde açıkça görülüyor; adres Türkiye'den bölgesel URL'ye yönleniyor (cyberpunk.net)."
+  },
+  "Gradient": {
+   "sites": [
+    {
+     "name": "Stripe",
+     "url": "https://stripe.com/",
+     "why": "sağ üstte turuncu-pembe-mor akışkan mesh degrade şerit",
+     "source": "bilinen marka",
+     "visual": true
+    },
+    {
+     "name": "Kelvin",
+     "url": "https://kelvin.8b.com/",
+     "why": "gökkuşağı degrade dev harfler ve pembe ışık bulutu",
+     "source": "One Page Love — Gradients",
+     "visual": true
+    },
+    {
+     "name": "Uni",
+     "url": "https://www.getuni.co/",
+     "why": "pastel şeftali-mavi yumuşak mesh degrade arka plan",
+     "source": "One Page Love — Gradients",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Gradients",
+     "url": "https://onepagelove.com/style/gradients"
+    }
+   ]
+  },
+  "Duotone": {
+   "sites": [
+    {
+     "name": "Kelvin",
+     "url": "https://kelvin.8b.com/",
+     "why": "mavi-sarı iki tonlu termal kamera etkili portre fotoğrafı",
+     "source": "One Page Love — Gradients",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "One Page Love — Duotone",
+     "url": "https://onepagelove.com/color/duotone"
+    }
+   ],
+   "note": "Zayıf: tek örnek ve tam duotone site değil (görsel duotone, sayfa gökkuşağı). BEAM (beamand.co, kırmızı-beyaz) tarayıcıda çiziliyor ama curl 403; Pull Systems yanıt vermedi; spotify.design artık open.spotify.com'a yönleniyor."
+  },
+  "Photography-Led": {
+   "sites": [
+    {
+     "name": "Magnum Photos",
+     "url": "https://www.magnumphotos.com/",
+     "why": "ekranı kaplayan belgesel sokak fotoğrafı, arayüz neredeyse yok",
+     "source": "bilinen kurum",
+     "visual": true
+    },
+    {
+     "name": "World Press Photo",
+     "url": "https://www.worldpressphoto.org/",
+     "why": "tam genişlikte haber fotoğrafı, üstünde yalnız kısa başlık",
+     "source": "bilinen kurum",
+     "visual": true
+    }
+   ],
+   "gallery": [
+    {
+     "name": "Awwwards — Photography",
+     "url": "https://www.awwwards.com/websites/photography/"
+    }
+   ],
+   "note": "Patagonia bakım sayfası gösteriyordu, Aman ve Hasselblad'da çerez duvarı — elendi."
+  },
+  "Cinematic": {
+   "sites": [
+    {
+     "name": "A24",
+     "url": "https://a24films.com/",
+     "why": "film karesi tam ekran, üstünde dev başlık; video ve sinema kadrajı",
+     "source": "bilinen marka (film stüdyosu)",
+     "visual": true
+    },
+    {
+     "name": "NEON",
+     "url": "https://www.neonrated.com/",
+     "why": "tam ekran film sahnesi, posterden çıkmış kalın başlık ve gösterim çağrısı",
+     "source": "bilinen marka (film dağıtımcısı)",
+     "visual": true
+    }
+   ],
+   "gallery": [],
+   "note": "Rolex 403, RSA Films bölge seçimi / 404, MUBI erişim engeli — elendi. Görüntülerde köşede çerez kutusu var."
+  }
+ },
+ "classes": [
+  {
+   "id": "primary-style",
+   "name": "Temel tasarım dili"
+  },
+  {
+   "id": "brand-style",
+   "name": "Marka / sektör yaklaşımı"
+  },
+  {
+   "id": "visual-approach",
+   "name": "Görsel iletişim yaklaşımı"
+  },
+  {
+   "id": "surface-effect",
+   "name": "Yüzey / derinlik efekti"
+  },
+  {
+   "id": "media-approach",
+   "name": "Medya sunum yaklaşımı"
+  },
+  {
+   "id": "theme-approach",
+   "name": "Tema yaklaşımı"
+  },
+  {
+   "id": "interaction-approach",
+   "name": "Etkileşim yaklaşımı"
+  },
+  {
+   "id": "design-principle",
+   "name": "Genel tasarım ilkesi"
+  }
+ ],
+ "rename": {
+  "Japandi": "Japanese Minimalism / Wabi-Sabi — Japon Minimalizmi",
+  "Scandinavian": "Scandinavian / Nordic — İskandinav Tasarım",
+  "Isometric": "Isometric Illustration — İzometrik İllüstrasyon",
+  "Duotone": "Duotone / Color Blocking — Çift Ton / Renk Blokları",
+  "Retro-Futurism": "Retro Futurism — Retro Fütürizm",
+  "Editorial Magazine": "Premium Editorial — Premium Dergi Tasarımı"
+ },
+ "principle": {
+  "value": "Accessible-First",
+  "label": "Accessible-First / Inclusive — Önce Erişilebilirlik",
+  "explanation": "Bir stil seçeneği değil, bütün tasarım kararlarında geçerli kalite standardıdır: WCAG 2.2 AA kontrastı, klavyeyle tam gezinme, görünür odak, hareket azaltma tercihine uyum, yalnız renge dayanmayan durumlar, yeterli dokunma alanı ve okunabilir tipografi. Hangi stil seçilirse seçilsin bu kurallar stilin önündedir.",
+  "examples": [
+   "Kamu hizmeti",
+   "Sağlık",
+   "Eğitim"
+  ]
+ },
+ "principleMock": {
+  "brand": "erişim",
+  "kicker": "Herkes için",
+  "title": "Herkes kullanabilsin",
+  "button": "Başla"
+ },
+ "styleMeta": {
+  "Minimalism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Scandinavian": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Japandi": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Swiss Style": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Flat Design": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Flat 2.0": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Material Design": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Typography-Led": {
+   "cls": [
+    "visual-approach"
+   ],
+   "tone": "l"
+  },
+  "Art Direction-Led": {
+   "cls": [
+    "visual-approach",
+    "media-approach"
+   ],
+   "tone": "l"
+  },
+  "Editorial Magazine": {
+   "cls": [
+    "brand-style",
+    "visual-approach"
+   ],
+   "tone": "l"
+  },
+  "Monochromatic": {
+   "cls": [
+    "visual-approach",
+    "theme-approach"
+   ],
+   "tone": "d"
+  },
+  "Dark-First": {
+   "cls": [
+    "theme-approach"
+   ],
+   "tone": "d"
+  },
+  "Corporate Modern": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "l"
+  },
+  "SaaS Product-Led": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "l"
+  },
+  "Fintech Trust": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "d"
+  },
+  "Web3 Digital Native": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "d"
+  },
+  "AI-Native": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "d"
+  },
+  "Eco Sustainable": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "l"
+  },
+  "Luxury": {
+   "cls": [
+    "brand-style"
+   ],
+   "tone": "d"
+  },
+  "Brutalism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Neobrutalism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Constructivism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Bauhaus": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Geometric": {
+   "cls": [
+    "primary-style",
+    "visual-approach"
+   ],
+   "tone": "d"
+  },
+  "Maximalism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Anti-Design": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Art Deco": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "d"
+  },
+  "Vintage": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Y2K": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Synthwave": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "d"
+  },
+  "Vaporwave": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Retro-Futurism": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Pixel Art": {
+   "cls": [
+    "primary-style",
+    "visual-approach"
+   ],
+   "tone": "d"
+  },
+  "Grunge": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "d"
+  },
+  "Memphis": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Neo-Memphis": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Psychedelic": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Hand-Drawn": {
+   "cls": [
+    "visual-approach"
+   ],
+   "tone": "l"
+  },
+  "Illustration-Led": {
+   "cls": [
+    "visual-approach",
+    "media-approach"
+   ],
+   "tone": "l"
+  },
+  "Collage": {
+   "cls": [
+    "visual-approach",
+    "media-approach"
+   ],
+   "tone": "l"
+  },
+  "Organic": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Paper-Cut": {
+   "cls": [
+    "visual-approach"
+   ],
+   "tone": "l"
+  },
+  "Playful": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Skeuomorphism": {
+   "cls": [
+    "surface-effect"
+   ],
+   "tone": "d"
+  },
+  "Neumorphism": {
+   "cls": [
+    "surface-effect"
+   ],
+   "tone": "l"
+  },
+  "Glassmorphism": {
+   "cls": [
+    "surface-effect"
+   ],
+   "tone": "d"
+  },
+  "Liquid Glass": {
+   "cls": [
+    "surface-effect"
+   ],
+   "tone": "l"
+  },
+  "Liquid Fluid": {
+   "cls": [
+    "interaction-approach",
+    "surface-effect"
+   ],
+   "tone": "l"
+  },
+  "Claymorphism": {
+   "cls": [
+    "surface-effect"
+   ],
+   "tone": "l"
+  },
+  "3D-Led": {
+   "cls": [
+    "media-approach"
+   ],
+   "tone": "d"
+  },
+  "Isometric": {
+   "cls": [
+    "visual-approach",
+    "media-approach"
+   ],
+   "tone": "l"
+  },
+  "Futuristic": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "d"
+  },
+  "Cyberpunk": {
+   "cls": [
+    "primary-style",
+    "theme-approach"
+   ],
+   "tone": "d"
+  },
+  "Industrial": {
+   "cls": [
+    "primary-style"
+   ],
+   "tone": "l"
+  },
+  "Gradient": {
+   "cls": [
+    "visual-approach",
+    "theme-approach"
+   ],
+   "tone": "d"
+  },
+  "Duotone": {
+   "cls": [
+    "visual-approach",
+    "media-approach"
+   ],
+   "tone": "d"
+  },
+  "Photography-Led": {
+   "cls": [
+    "media-approach"
+   ],
+   "tone": "d"
+  },
+  "Data Viz-Led": {
+   "cls": [
+    "media-approach"
+   ],
+   "tone": "l"
+  },
+  "Cinematic": {
+   "cls": [
+    "media-approach"
+   ],
+   "tone": "d"
+  },
+  "Immersive": {
+   "cls": [
+    "interaction-approach",
+    "media-approach"
+   ],
+   "tone": "d"
+  },
+  "Kinetic Type": {
+   "cls": [
+    "interaction-approach"
+   ],
+   "tone": "l"
+  },
+  "Accessible-First": {
+   "cls": [
+    "design-principle"
+   ],
+   "tone": "l"
+  }
+ },
+ "newFields": [
+  {
+   "after": "secondary_design_styles",
+   "id": "design_surface",
+   "label": "Yüzey / Derinlik Efekti",
+   "type": "select",
+   "cls": [
+    "surface-effect"
+   ],
+   "none": "None Surface",
+   "explanation": "Kart, panel ve düğmelerin yüzeyine uygulanacak derinlik efektini ayrı bir karar olarak seçin. Ana tasarım dili sitenin karakterini, yüzey efekti ise bileşenlerin dokusunu belirler; efekt yalnız uygun bileşenlerde kullanılır, metin kontrastını düşürmemelidir.",
+   "rule": "Bileşen yüzeylerinde {label} efekti kullanılacaktır. Efekt kart, panel ve vurgu alanlarıyla sınırlı kalacak; metin kontrastı WCAG 2.2 AA'nın altına düşmeyecek, şeffaflığı azalt ve hareket azaltma tercihlerinde sade yedek yüzey gösterilecektir.",
+   "scenario": "Ana stil sade (ör. Minimalizm, Kurumsal) ama ürün kartlarında ya da uygulama tanıtımında daha dokunsal, katmanlı bir his isteniyorsa.",
+   "example": "Minimalist bir fintech sitesinde sayfanın geneli düz kalır; yalnız ‘Kart özetin’ paneli renkli arka plan üzerinde buzlu cam (Glassmorphism) yüzeyle öne çıkar.",
+   "noneLabel": "Yüzey efekti yok — düz yüzeyler",
+   "noneText": "Bileşenler ana stilin kendi yüzeyini kullanır; ek cam, kabartma ya da kil efekti uygulanmaz.",
+   "noneScenario": "Performans, erişilebilirlik ya da sadelik önceliklidir; ana stil zaten yeterli derinlik veriyordur.",
+   "noneExample": "Kurumsal bir sitede kartlar ince kenarlıklı ve gölgesiz düz yüzeylerdir."
+  },
+  {
+   "after": "design_surface",
+   "id": "design_media",
+   "label": "Medya Sunum Yaklaşımı",
+   "type": "select",
+   "cls": [
+    "media-approach"
+   ],
+   "none": "None Media",
+   "explanation": "Sitenin görsel anlatımında hangi medya türünün öne çıkacağını seçin: fotoğraf, sinematik video, 3B, illüstrasyon ya da veri görselleştirme. Bu karar çekim, illüstrasyon ve veri hazırlığı bütçesini doğrudan etkiler.",
+   "rule": "Sitenin medya sunum yaklaşımı {label} olacaktır. Görseller WebP / AVIF, uygun boyut ve tembel yükleme ile sunulacak; her görselin anlamlı alternatif metni, videoların altyazısı ve durdurma kontrolü, grafiklerin metin ya da tablo alternatifi olacaktır.",
+   "scenario": "Ürün, mekân ya da veri, sitenin en güçlü ikna aracıysa ve içerik üretimi buna göre planlanacaksa.",
+   "example": "Bir butik otelde medya yaklaşımı Fotoğraf Odaklı seçilir: her oda sayfası ekran genişliğinde gerçek çekimle açılır, metinler kısa tutulur.",
+   "noneLabel": "Belirgin bir medya yaklaşımı yok",
+   "noneText": "Görseller içeriği destekleyen ikincil öğelerdir; ana anlatım metin ve arayüzle kurulur.",
+   "noneScenario": "Bilgi ve metin ağırlıklı kurumsal ya da hizmet siteleri için.",
+   "noneExample": "Bir hukuk bürosunun sitesinde yalnız ekip portreleri ve küçük ikonlar kullanılır."
+  },
+  {
+   "after": "design_media",
+   "id": "design_theme_interaction",
+   "label": "Tema ve Etkileşim Yaklaşımı",
+   "type": "multiselect",
+   "cls": [
+    "theme-approach",
+    "interaction-approach"
+   ],
+   "explanation": "Sitenin tema karakterini (önce koyu, tek renk, degrade) ve etkileşim dilini (hareketli tipografi, sürükleyici deneyim, akışkan geçişler) ayrı bir karar olarak seçin. Renk modu (açık / koyu / sisteme göre) Tema, Hareket & Tasarım bölümündeki Renk / Yüzey Teması kararında kalır.",
+   "rule": "Tema ve etkileşim yaklaşımı olarak şunlar uygulanacaktır: {labels}. Hareketler prefers-reduced-motion tercihinde durdurulacak ya da sadeleştirilecek, etkileşimler klavyeyle de kullanılabilecek ve içeriğe erişimi engellemeyecektir.",
+   "scenario": "Marka güçlü bir atmosfer ya da hareket kimliği istiyorsa; teknik kitleye koyu tema öncelikli bir ürün sunuluyorsa.",
+   "example": "Bir yaratıcı yazılım sitesi Dark-First ve Hareketli Tipografi'yi birlikte seçer: koyu zeminde başlıklar kaydırmayla harf harf belirir.",
+   "noneValue": "None Theme Interaction",
+   "noneLabel": "Ek tema / etkileşim yaklaşımı yok",
+   "noneText": "Ana stilin ve Tema, Hareket & Tasarım bölümündeki kararların ötesinde ek bir yaklaşım uygulanmaz.",
+   "noneScenario": "Sade, hızlı ve öngörülebilir bir arayüz öncelikliyse.",
+   "noneExample": "Bir belediye hizmet portalı açık temada, yalnız standart odak ve geçiş efektleriyle çalışır."
+  }
+ ],
+ "layouts": {
+  "add": [
+   {
+    "after": "Split Screen",
+    "value": "Centered Hero",
+    "label": "Centered Hero Layout — Ortalanmış Açılış",
+    "explanation": "İlk ekranda ortalanmış tek bir güçlü başlık, kısa açıklama ve bir ana çağrı; altında bölümler sakin bir ritimle sıralanır. Artısı: mesaj ve eylem net, tasarımı ve uygulaması kolaydır. Eksisi: çok yaygın olduğu için ayırt edici değildir; uzun içerikte tekdüzeleşebilir.",
+    "scenario": "Tek ve net bir değer önerisi olan ürün, uygulama, etkinlik ya da açılış sayfası için.",
+    "example": "Bir not uygulamasının sitesi beyaz zeminde ortalanmış ‘Düşüncelerini tek yerde topla’ başlığı ve tek bir ‘Ücretsiz başla’ düğmesiyle açılır; hemen altında ürün ekranı durur."
+   },
+   {
+    "after": "Centered Hero",
+    "value": "Z-Pattern",
+    "label": "Z-Pattern Layout — Z Okuma Düzeni",
+    "explanation": "Göz sol üstten sağ üste, çaprazla sol alta ve sağ alta gider; logo, menü, açılış mesajı ve çağrı bu dört köşeye yerleştirilir. Bağımsız bir düzen olarak da, diğer düzenlerle birlikte kullanılan bir kompozisyon ilkesi olarak da seçilebilir. Artısı: az içerikli sayfalarda dikkati çağrıya taşır. Eksisi: metin yoğun sayfalarda işlemez.",
+    "scenario": "Az metinli açılış sayfaları, kampanya sayfaları ve tek eylem hedefli tanıtımlar için.",
+    "example": "Bir kampanya sayfasında logo sol üstte, ‘Hemen kaydol’ sağ üstte; çaprazda ürün görseli, sağ altta büyük ‘%20 indirimle başla’ düğmesi durur."
+   },
+   {
+    "after": "Z-Pattern",
+    "value": "F-Pattern",
+    "label": "F-Pattern Layout — F Okuma Düzeni",
+    "explanation": "Ziyaretçi metin yoğun sayfalarda önce üst satırları yatay, sonra sol kenarı dikey tarar; önemli başlıklar ve anahtar kelimeler satır başlarına yerleştirilir. Kompozisyon ilkesi olarak blog, liste ve dokümantasyon düzenleriyle birlikte kullanılır. Artısı: taranabilirliği artırır. Eksisi: yalnız metin ağırlıklı sayfalarda anlamlıdır.",
+    "scenario": "Blog, haber, arama sonuçları, dokümantasyon ve ürün listeleri gibi taranan sayfalar için.",
+    "example": "Bir bilgi bankası makalesinde her paragraf kalın bir anahtar ifadeyle başlar, ara başlıklar sola hizalıdır ve sağ kenarda sabit içindekiler listesi yer alır."
+   },
+   {
+    "after": "Card Based",
+    "value": "Sidebar Navigation",
+    "label": "Sidebar / Sticky Navigation — Kenar Çubuğu Menüsü",
+    "explanation": "Ana gezinme ya da sayfa içi menü sol veya sağ kenarda sabit durur; içerik yanında kaydırılır. Artısı: çok sayfalı ve derin yapılarda konumu ve geçişi kolaylaştırır. Eksisi: yatay alan harcar, mobilde çekmeceye dönüşmelidir; sabit menü klavye odağını kapatmamalıdır.",
+    "scenario": "Dokümantasyon, bilgi bankası, yönetim paneli, uzun hizmet katalogları ve kurumsal intranet için.",
+    "example": "Bir yazılım dokümantasyonunda solda sabit başlık ağacı, ortada makale, sağda o sayfanın içindekiler listesi durur; mobilde sol menü ☰ ile açılır."
+   },
+   {
+    "after": "Masonry",
+    "value": "Horizontal Scroll",
+    "label": "Horizontal Scroll — Yatay Kaydırma",
+    "explanation": "İçerik bölümleri ya da kartlar yatay bir şeritte ilerler; dikey kaydırma bir bölümü yatayda gezdirebilir. Artısı: galeri, zaman çizelgesi ve ürün koleksiyonlarında farklı ve akıcı bir anlatı kurar. Eksisi: keşfedilebilirlik ve klavye erişimi zordur; görünür oklar, ilerleme göstergesi ve dikey yedek gerekir.",
+    "scenario": "Portfolyo, zaman çizelgesi, ürün koleksiyonu ya da hikâye anlatan kampanya bölümleri için.",
+    "example": "Bir mimarlık ofisinin proje bölümünde kartlar yatay dizilir, sonuncusu kenardan taşarak devam ettiğini gösterir; altta ilerleme çubuğu ve ‹ › düğmeleri vardır."
+   },
+   {
+    "after": "Full Bleed",
+    "value": "Layered",
+    "label": "Layered / Overlapping — Katmanlı / Üst Üste",
+    "explanation": "Görseller, metin kutuları ve kartlar birbirinin üzerine taşarak derinlik ve hareket hissi yaratır. Artısı: düz ızgaraya göre daha editoryal ve dinamik görünür. Eksisi: üst üste binen alanlar küçük ekranda çakışabilir; metin hiçbir zaman görselin karmaşık bölümüne binmemelidir.",
+    "scenario": "Moda, mimarlık, kreatif ajans ve hikâye anlatan marka sayfaları için.",
+    "example": "Bir iç mimarlık sitesinde büyük salon fotoğrafının sağ alt köşesine beyaz bir metin kartı taşar, kartın altına da ikinci küçük bir detay fotoğrafı kayar."
+   },
+   {
+    "after": "Scrollytelling",
+    "value": "Sticky Sections",
+    "label": "Sticky Section Layout — Sabitlenen Bölümler",
+    "explanation": "Bir sütun (başlık, görsel ya da gösterge) sabit kalırken diğer sütundaki içerik kaydırılır; adımlar ilerledikçe sabit alan güncellenir. Artısı: süreç, özellik ve karşılaştırmaları bağlamı kaybetmeden anlatır. Eksisi: kısa ekranlarda sabit alan içeriği sıkıştırabilir; mobilde normal akışa dönmelidir.",
+    "scenario": "Ürün özellik turu, hizmet süreci, adım adım rehber ve fiyat karşılaştırmaları için.",
+    "example": "Bir SaaS özellik sayfasında solda ‘Nasıl çalışır?’ başlığı ve ürün ekranı sabit kalır; sağda dört adım kaydırıldıkça soldaki ekran ilgili adıma geçer."
+   },
+   {
+    "after": "Dashboard",
+    "value": "Configurator Workspace",
+    "label": "Configurator / Workspace Layout — Yapılandırıcı / Çalışma Alanı",
+    "explanation": "Ekran araç panelleri, ortada çalışma alanı ya da canlı önizleme ve kenarda özet / sepetten oluşur; kullanıcı seçim yaptıkça önizleme anında değişir. Artısı: karmaşık ürün seçimini ve özelleştirmeyi somutlaştırır. Eksisi: küçük ekranda panellerin sırası ve adımları yeniden tasarlanmalıdır; durum değişiklikleri ekran okuyucuya duyurulmalıdır.",
+    "scenario": "Ürün yapılandırıcı (mobilya, araç, baskı), fiyat hesaplayıcı, tasarım aracı ve çok adımlı teklif oluşturma ekranları için.",
+    "example": "Bir mutfak dolabı yapılandırıcısında solda malzeme ve renk seçenekleri, ortada canlı 3B dolap, sağda seçilenlerin listesi ve toplam fiyat yer alır."
+   }
+  ],
+  "pageNames": {
+   "home": "Ana sayfa",
+   "product": "Hizmet / Ürün",
+   "about": "Hakkımızda",
+   "blog": "Blog listeleme",
+   "post": "Blog detay",
+   "contact": "İletişim",
+   "landing": "Landing Page",
+   "dashboard": "Dashboard",
+   "auth": "Üyelik / Giriş",
+   "custom": "Özel sayfa",
+   "listing": "Liste / arama",
+   "docs": "Dokümantasyon",
+   "service": "Hizmet",
+   "portfolio": "Portfolyo",
+   "gallery": "Galeri",
+   "report": "Rapor",
+   "account": "Hesabım"
+  },
+  "recipeLabels": [
+   [
+    "Ana sayfa",
+    "home"
+   ],
+   [
+    "İçerik / hizmet sayfası",
+    "product"
+   ],
+   [
+    "Alternatif kurgu",
+    "alt"
+   ]
+  ],
+  "meta": {
+   "Bento Grid": {
+    "en": "Bento Grid",
+    "pages": [
+     "home",
+     "product",
+     "landing"
+    ],
+    "responsive": "Masaüstünde farklı boyutlu hücreler; tablette 2, mobilde tek sütun, büyük hücreler başta.",
+    "a11y": "Hücre sırası DOM'da mantıklı olmalı; görsel sıra ile okuma sırası ayrışmamalı.",
+    "perf": "Çok hücreli yapı orta düzey; hücrelerdeki görseller tembel yüklenmeli.",
+    "styles": [
+     "SaaS Product-Led",
+     "AI-Native",
+     "Material Design"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "2fr 1fr 1fr",
+       [
+        "hero",
+        "stat",
+        "img"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 2fr",
+       [
+        "img",
+        "card",
+        "chart"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr 1fr",
+       [
+        "tall",
+        "card",
+        "img"
+       ]
+      ],
+      [
+       2,
+       "1fr 2fr",
+       [
+        "stat",
+        "wide"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr",
+       [
+        "hero",
+        "img"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "stat",
+        "card"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Editorial": {
+    "en": "Editorial",
+    "pages": [
+     "blog",
+     "post",
+     "about"
+    ],
+    "responsive": "Çok sütunlu metin tablette 2, mobilde tek sütuna iner; büyük görseller tam genişliğe geçer.",
+    "a11y": "Uzun metinde satır uzunluğu 60–75 karakter; başlık hiyerarşisi atlanmamalı.",
+    "perf": "Büyük görseller için duyarlı boyutlar (srcset) şart.",
+    "styles": [
+     "Editorial Magazine",
+     "Swiss Style",
+     "Luxury"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1.4fr 1fr",
+       [
+        "img",
+        "head"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 1fr",
+       [
+        "text",
+        "text",
+        "quote"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       4,
+       "1fr 2fr 1fr",
+       [
+        "text",
+        "img",
+        "text"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr",
+       [
+        "head",
+        "tall"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr",
+       [
+        "list",
+        "list",
+        "list"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Card Based": {
+    "en": "Card-Based",
+    "pages": [
+     "home",
+     "product",
+     "blog"
+    ],
+    "responsive": "Kart ızgarası 3–4 sütundan tablette 2, mobilde 1 sütuna iner.",
+    "a11y": "Kartın tamamı tıklanabilirse tek bağlantı olmalı; iç içe bağlantıdan kaçınılmalı.",
+    "perf": "Kart görselleri sabit oranla ayrılmalı (kayma olmasın).",
+    "styles": [
+     "Material Design",
+     "Neobrutalism",
+     "Flat 2.0"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card",
+        "card"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       5,
+       "1fr 3fr",
+       [
+        "side",
+        "gal"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Modular Grid": {
+    "en": "Modular Grid",
+    "pages": [
+     "home",
+     "product",
+     "about"
+    ],
+    "responsive": "12 sütunlu ızgara tablette 8, mobilde 4 sütuna; modüller sırayla alt alta.",
+    "a11y": "Modüller arası boşluk ve başlık sırası tutarlı olmalı.",
+    "perf": "Hafif; modüller bağımsız yüklenebilir.",
+    "styles": [
+     "Swiss Style",
+     "Corporate Modern",
+     "Industrial"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "hero",
+        "img"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr 1fr",
+       [
+        "stat",
+        "stat",
+        "stat",
+        "stat"
+       ]
+      ],
+      [
+       4,
+       "2fr 1fr",
+       [
+        "chart",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 2fr",
+       [
+        "head",
+        "text"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 1fr",
+       [
+        "img",
+        "img",
+        "img"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Asymmetric Grid": {
+    "en": "Asymmetric Grid",
+    "pages": [
+     "home",
+     "about",
+     "landing"
+    ],
+    "responsive": "Asimetri masaüstünde; mobilde öğeler tek sütunda, öncelik sırasıyla.",
+    "a11y": "Görsel sıra ile DOM sırası tutarlı kalmalı; odak sırası atlamamalı.",
+    "perf": "Orta; büyük görsellere dikkat.",
+    "styles": [
+     "Neobrutalism",
+     "Constructivism",
+     "Art Direction-Led"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "2fr 1fr",
+       [
+        "hero",
+        "tall"
+       ]
+      ],
+      [
+       2,
+       "1fr 2fr",
+       [
+        "card",
+        "wide"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 3fr",
+       [
+        "text",
+        "img"
+       ]
+      ],
+      [
+       3,
+       "3fr 1fr",
+       [
+        "img",
+        "quote"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       5,
+       "1.5fr 1fr 2fr",
+       [
+        "tall",
+        "head",
+        "img"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Split Screen": {
+    "en": "Split-Screen",
+    "pages": [
+     "home",
+     "landing",
+     "auth",
+     "contact"
+    ],
+    "responsive": "İki yarı masaüstünde yan yana; mobilde üst üste, görsel kısalır.",
+    "a11y": "İki yarıdaki eylemler aynı ağırlıkta ise hangisinin birincil olduğu açık olmalı.",
+    "perf": "Hafif.",
+    "styles": [
+     "Corporate Modern",
+     "AI-Native",
+     "Fintech Trust"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr 1fr",
+       [
+        "hero",
+        "img"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr 1fr",
+       [
+        "img",
+        "form"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "card",
+        "card"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "img",
+        "text"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Centered Hero": {
+    "en": "Centered Hero Layout",
+    "pages": [
+     "home",
+     "landing",
+     "product",
+     "contact"
+    ],
+    "responsive": "Başlık ve çağrı tüm ekranlarda ortada; mobilde yazı boyutu küçülür, görsel altta.",
+    "a11y": "Ortalanmış uzun paragraflar okunmaz; açıklama kısa tutulmalı.",
+    "perf": "Çok hafif; açılış görseli LCP öğesi olur, öncelikli yüklenmeli.",
+    "styles": [
+     "Minimalism",
+     "SaaS Product-Led",
+     "AI-Native"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "img"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr",
+       [
+        "stat",
+        "stat",
+        "stat"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Z-Pattern": {
+    "en": "Z-Pattern Layout",
+    "pages": [
+     "landing",
+     "home"
+    ],
+    "responsive": "Masaüstünde dört köşe; mobilde sıra logo → mesaj → görsel → çağrı.",
+    "a11y": "Görsel desen için içerik sırası bozulmamalı.",
+    "perf": "Hafif.",
+    "styles": [
+     "Minimalism",
+     "Corporate Modern",
+     "Flat Design"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "head",
+        "img"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "img",
+        "cta"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "zpath"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr 1fr",
+       [
+        "hero",
+        "img"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr",
+       [
+        "text",
+        "cta"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "zpath"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "img",
+        "head"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "cta",
+        "img"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "zpath"
+       ]
+      ]
+     ]
+    ]
+   },
+   "F-Pattern": {
+    "en": "F-Pattern Layout",
+    "pages": [
+     "blog",
+     "post",
+     "listing"
+    ],
+    "responsive": "Satır başları her ekranda sola hizalı kalır; yan sütun mobilde alta iner.",
+    "a11y": "Anahtar bilgiler satır başında olmalı; yalnız görsel desenle anlam verilmemeli.",
+    "perf": "Hafif.",
+    "styles": [
+     "Swiss Style",
+     "Editorial Magazine",
+     "Corporate Modern"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       5,
+       "3fr 1fr",
+       [
+        "list",
+        "side"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "fpath"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "3fr 1fr",
+       [
+        "text",
+        "list"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "fpath"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       5,
+       "1fr 3fr",
+       [
+        "side",
+        "list"
+       ]
+      ],
+      [
+       0,
+       "",
+       [
+        "fpath"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Sidebar Navigation": {
+    "en": "Sidebar / Sticky Navigation",
+    "pages": [
+     "docs",
+     "dashboard",
+     "service"
+    ],
+    "responsive": "Kenar çubuğu tablette daralır, mobilde çekmeceye (☰) dönüşür.",
+    "a11y": "Sabit menü odak sırasında önce gelmeli; ‘içeriğe atla’ bağlantısı şart.",
+    "perf": "Hafif; menü ağacı uzunsa tembel çizilmeli.",
+    "styles": [
+     "Material Design",
+     "Industrial",
+     "Dark-First"
+    ],
+    "recipes": [
+     [
+      [
+       6,
+       "1fr 4fr",
+       [
+        "side",
+        "text"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr 3fr 1fr",
+       [
+        "side",
+        "text",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       5,
+       "1fr 4fr",
+       [
+        "side",
+        "gal"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Masonry": {
+    "en": "Masonry",
+    "pages": [
+     "blog",
+     "gallery",
+     "listing"
+    ],
+    "responsive": "Sütun sayısı 4 → 2 → 1; öğeler kendi yüksekliğinde akar.",
+    "a11y": "Okuma sırası sütun sırası mı satır sırası mı açık olmalı; klavye sırası tutarlı kalmalı.",
+    "perf": "Çok görselli; tembel yükleme ve ayrılmış oranlar şart.",
+    "styles": [
+     "Photography-Led",
+     "Collage",
+     "Illustration-Led"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr",
+       [
+        "mason"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       5,
+       "1fr",
+       [
+        "mason"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr 3fr",
+       [
+        "side",
+        "mason"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Horizontal Scroll": {
+    "en": "Horizontal Scroll",
+    "pages": [
+     "portfolio",
+     "landing",
+     "product"
+    ],
+    "responsive": "Masaüstünde yatay şerit; mobilde dokunmayla kaydırılan şerit ya da dikey liste.",
+    "a11y": "Görünür ‹ › düğmeleri, ilerleme göstergesi ve klavyeyle kaydırma şart.",
+    "perf": "Şeritteki görseller görünür olunca yüklenmeli.",
+    "styles": [
+     "Art Direction-Led",
+     "Photography-Led",
+     "Immersive"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       5,
+       "",
+       [
+        "hscroll"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "",
+       [
+        "hscroll"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       3,
+       "",
+       [
+        "hscroll"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Full Bleed": {
+    "en": "Full-Bleed",
+    "pages": [
+     "home",
+     "landing",
+     "about"
+    ],
+    "responsive": "Görseller tüm ekranlarda kenardan kenara; metin güvenli alanda kalır.",
+    "a11y": "Görsel üzerindeki metin için yeterli kontrast katmanı gerekir.",
+    "perf": "Büyük görseller: AVIF / WebP, duyarlı boyut, LCP önceliği.",
+    "styles": [
+     "Photography-Led",
+     "Cinematic",
+     "Luxury"
+    ],
+    "recipes": [
+     [
+      [
+       6,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "text"
+       ]
+      ]
+     ],
+     [
+      [
+       3,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Layered": {
+    "en": "Layered / Overlapping",
+    "pages": [
+     "home",
+     "about",
+     "service"
+    ],
+    "responsive": "Taşmalar masaüstünde; mobilde katmanlar alt alta, taşma kaldırılır.",
+    "a11y": "Metin görselin karmaşık bölümüne binmemeli; kontrast her katmanda denetlenmeli.",
+    "perf": "Orta.",
+    "styles": [
+     "Art Direction-Led",
+     "Luxury",
+     "Collage"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr",
+       [
+        "layer"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr",
+       [
+        "layer"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr",
+       [
+        "card",
+        "card"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr",
+       [
+        "layer"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Long Scroll": {
+    "en": "Long-Scroll",
+    "pages": [
+     "landing",
+     "product",
+     "home"
+    ],
+    "responsive": "Bölümler tüm ekranlarda alt alta; mobilde bölüm içi sütunlar tek sütuna iner.",
+    "a11y": "Uzun sayfada sayfa içi menü ve ‘başa dön’ gerekir.",
+    "perf": "Bölümler tembel yüklenmeli; toplam sayfa ağırlığı izlenmeli.",
+    "styles": [
+     "SaaS Product-Led",
+     "Eco Sustainable",
+     "Playful"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr",
+       [
+        "text",
+        "img"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr",
+       [
+        "card",
+        "card",
+        "card"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "cta"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr",
+       [
+        "img",
+        "text"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr",
+       [
+        "text",
+        "img"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "cta"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "foot"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "hero"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr",
+       [
+        "stat",
+        "stat",
+        "stat"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "quote"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "cta"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Scrollytelling": {
+    "en": "Scrollytelling",
+    "pages": [
+     "landing",
+     "about",
+     "report"
+    ],
+    "responsive": "Masaüstünde sabit görsel + kayan adımlar; mobilde adım ve görsel sırayla.",
+    "a11y": "Hareket azaltma tercihinde adımlar statik gösterilmeli; içerik hareketsiz de okunabilmeli.",
+    "perf": "Animasyonlar ağır olabilir; yalnız transform / opacity kullanılmalı.",
+    "styles": [
+     "Cinematic",
+     "Data Viz-Led",
+     "Immersive"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr 1fr",
+       [
+        "pin",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr 1fr",
+       [
+        "list",
+        "pin"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       3,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ],
+      [
+       3,
+       "1fr 1fr",
+       [
+        "pin",
+        "text"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Sticky Sections": {
+    "en": "Sticky Section Layout",
+    "pages": [
+     "product",
+     "service",
+     "landing"
+    ],
+    "responsive": "Masaüstünde bir sütun sabit; mobilde sabitleme kalkar, normal akış.",
+    "a11y": "Sabit alan kısa ekranda içeriği kapatmamalı; odaklanan öğe görünür kalmalı.",
+    "perf": "Hafif (position: sticky).",
+    "styles": [
+     "SaaS Product-Led",
+     "Corporate Modern",
+     "Swiss Style"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr 1fr",
+       [
+        "pin",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "2fr 1fr",
+       [
+        "list",
+        "pin"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       4,
+       "1fr 2fr",
+       [
+        "pin",
+        "card"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Dashboard": {
+    "en": "Dashboard",
+    "pages": [
+     "dashboard",
+     "account"
+    ],
+    "responsive": "Kenar menü mobilde alta ya da çekmeceye; grafikler tek sütun, tablolar yatay kaydırılır.",
+    "a11y": "Grafiklerin tablo / metin karşılığı ve canlı bölge duyuruları gerekir.",
+    "perf": "Veri istekleri ve grafik kütüphanesi ağırlığı izlenmeli.",
+    "styles": [
+     "Data Viz-Led",
+     "Dark-First",
+     "Material Design"
+    ],
+    "recipes": [
+     [
+      [
+       6,
+       "1fr 5fr",
+       [
+        "side",
+        "dash"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr 1fr",
+       [
+        "stat",
+        "stat",
+        "stat",
+        "stat"
+       ]
+      ],
+      [
+       4,
+       "2fr 1fr",
+       [
+        "chart",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr 4fr",
+       [
+        "side",
+        "chart"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Configurator Workspace": {
+    "en": "Configurator / Workspace Layout",
+    "pages": [
+     "product",
+     "custom"
+    ],
+    "responsive": "Masaüstünde üç panel; tablette özet alta; mobilde adım adım akış + sabit alt özet.",
+    "a11y": "Seçim değişiklikleri ekran okuyucuya duyurulmalı (aria-live); her kontrol klavyeyle kullanılmalı.",
+    "perf": "Canlı önizleme (özellikle 3B) ağır olabilir; düşük güçte statik görsel yedek.",
+    "styles": [
+     "SaaS Product-Led",
+     "Industrial",
+     "3D-Led"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr 3fr 1fr",
+       [
+        "form",
+        "img",
+        "list"
+       ]
+      ]
+     ],
+     [
+      [
+       6,
+       "1fr 2fr",
+       [
+        "form",
+        "img"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       5,
+       "3fr 1fr",
+       [
+        "img",
+        "form"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "cta"
+       ]
+      ]
+     ]
+    ]
+   },
+   "Gallery": {
+    "en": "Gallery",
+    "pages": [
+     "portfolio",
+     "product",
+     "home"
+    ],
+    "responsive": "Galeri ızgarası 4 → 2 → 1; tam ekran görüntüleyici mobilde kaydırmalı.",
+    "a11y": "Her görselin alternatif metni; görüntüleyicide odak tuzağı ve Escape.",
+    "perf": "Çok görselli: tembel yükleme, küçük önizlemeler, AVIF / WebP.",
+    "styles": [
+     "Photography-Led",
+     "Minimalism",
+     "Art Direction-Led"
+    ],
+    "recipes": [
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       6,
+       "1fr",
+       [
+        "gal"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       4,
+       "1fr",
+       [
+        "bleed"
+       ]
+      ],
+      [
+       2,
+       "1fr 1fr 1fr 1fr",
+       [
+        "tile",
+        "tile",
+        "tile",
+        "tile"
+       ]
+      ]
+     ],
+     [
+      [
+       1,
+       "1fr",
+       [
+        "nav"
+       ]
+      ],
+      [
+       1,
+       "1fr",
+       [
+        "head"
+       ]
+      ],
+      [
+       5,
+       "1fr",
+       [
+        "gal"
+       ]
+      ]
+     ]
+    ]
+   }
+  }
+ },
+ "section": {
+  "after": "design_style",
+  "id": "design_params",
+  "name": "Tasarım Parametreleri",
+  "en": "Design Parameters",
+  "group": "Tasarım & Arayüz",
+  "icon": "▥",
+  "desc": "Seçilen stil ve düzeni ölçülebilir kurallara çevirir: boşluk yoğunluğu, ızgara, yüzey, görsel işleme, hizalama, açılış kompozisyonu, bölüm ritmi, kapsayıcı genişliği, etkileşim yoğunluğu ve gezinme. Köşe yuvarlaklığı ve gölge Kurumsal Kimlik'te, renk modu ve hareket teknikleri Tema, Hareket & Tasarım'da kalır. Bu kararlardan tasarım token'ları, JSON yapılandırması ve Claude için tasarım şartnamesi üretilir."
+ },
+ "guide": {
+  "purpose": "Bu bölüm tasarım stilini geliştiricinin uygulayabileceği somut değerlere çevirir. Burada verilen kararlar CSS değişkenlerine (design token), bileşen ve responsive kurallarına dönüşür; böylece aynı stil her sayfada aynı boşluk, ızgara, yüzey ve hareket kurallarıyla uygulanır.",
+  "criteria": [
+   "Her parametrenin altında, seçtiğiniz ana stile göre bir öneri görünür; öneri yalnız “Öneriyi uygula” ile uygulanır, kendiliğinden değişmez.",
+   "Yoğunluk ve kapsayıcı genişliği içerik miktarına göre seçin: çok bilgi gösteren paneller sıkı ve geniş, marka ve hikâye sayfaları ferah ve dar ölçüyle daha iyi okunur.",
+   "Etkileşim yoğunluğu arttıkça performans ve erişilebilirlik yükü artar; hareket azaltma tercihi her seçimde geçerlidir.",
+   "Köşe yuvarlaklığı, gölge, renk ve font zaten Kurumsal Kimlik ve Ortak Bilgiler'de seçiliyse burada tekrar seçilmez; tasarım çıktısı onları oradan okur.",
+   "Kararlar tamamlandığında bölümün başındaki “Tasarım çıktısı” kartından JSON yapılandırmasını ve CSS token'larını indirebilir, şartnameyi kopyalayabilirsiniz."
+  ],
+  "pitfalls": [
+   "Aynı sayfada farklı yoğunluk ve köşe kuralları kullanmak tutarsız görünür; istisnaları sayfa bazlı layout'la sınırlayın.",
+   "Glass ya da katmanlı yüzeylerde metin kontrastı her arka planda yeniden denetlenmelidir.",
+   "Tam genişlik kapsayıcıda metin satırları çok uzar; metin blokları her durumda 60–75 karakterle sınırlanmalıdır.",
+   "Alt gezinme çubuğu yalnız mobilde ve en çok beş hedefle kullanılmalıdır."
+  ],
+  "resources": [
+   {
+    "title": "W3C — WCAG 2.2",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "note": "Kontrast, odak görünürlüğü, hedef boyutu ve hareket ölçütleri."
+   },
+   {
+    "title": "Design Tokens Community Group — Format Module",
+    "url": "https://www.designtokens.org/tr/drafts/format/",
+    "note": "Tasarım token'larının paylaşılabilir JSON biçimi (taslak)."
+   },
+   {
+    "title": "MDN — prefers-reduced-motion",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+    "note": "Hareket azaltma tercihine uyum."
+   }
+  ]
+ },
+ "params": [
+  {
+   "id": "design_density",
+   "label": "Görsel Yoğunluk",
+   "en": "Visual Density",
+   "after": null,
+   "explanation": "Bileşenler ve bölümler arasındaki boşluk miktarını belirler; 8 noktalı boşluk ölçeğinin temel birimine dönüşür.",
+   "rule": "Arayüzün görsel yoğunluğu {label} olacaktır; bileşen içi ve bölümler arası boşluklar bu ölçekteki token'larla verilecek, rastgele değer kullanılmayacaktır.",
+   "scenario": "Ana stil seçildikten sonra; özellikle hem pazarlama sayfası hem panel içeren projelerde.",
+   "example": "Ferah seçilen bir mimarlık sitesinde bölümler arasında 128 px boşluk; sıkı seçilen bir yönetim panelinde 48 px boşluk ve yoğun tablolar.",
+   "options": [
+    {
+     "value": "Ultra Spacious",
+     "label": "Ultra Spacious — Çok ferah",
+     "explanation": "Çok geniş boşluk, az öğe; içerik nefes alır. Artısı: premium ve sakin. Eksisi: kaydırma uzar, bilgi yoğun sayfalara uymaz.",
+     "scenario": "Lüks marka, sanat ve mimarlık portfolyosu.",
+     "example": "Bir saat markasında ürün fotoğrafı ekranın ortasında yalnız durur, çevresinde geniş boşluk vardır.",
+     "tokens": {
+      "space": 12,
+      "section": 160,
+      "lh": 1.75
+     }
+    },
+    {
+     "value": "Spacious",
+     "label": "Spacious — Ferah",
+     "explanation": "Bol boşluk, rahat okuma. Artısı: odaklı ve modern. Eksisi: ekran başına daha az bilgi.",
+     "scenario": "Kurumsal tanıtım, hizmet ve marka siteleri.",
+     "example": "Bir danışmanlık sitesinde her hizmet bloğu arasında geniş boşluk vardır.",
+     "tokens": {
+      "space": 10,
+      "section": 128,
+      "lh": 1.7
+     }
+    },
+    {
+     "value": "Balanced",
+     "label": "Balanced — Dengeli",
+     "explanation": "Genel amaçlı orta yoğunluk. Artısı: çoğu sayfaya uyar. Eksisi: ayırt edici değildir.",
+     "scenario": "Belirgin bir ihtiyaç yoksa varsayılan seçim.",
+     "example": "Bir e-ticaret sitesinde kartlar arası 24 px, bölümler arası 96 px boşluk.",
+     "tokens": {
+      "space": 8,
+      "section": 96,
+      "lh": 1.6
+     }
+    },
+    {
+     "value": "Compact",
+     "label": "Compact — Sıkı",
+     "explanation": "Daha az boşluk, daha çok içerik. Artısı: verimli tarama. Eksisi: dikkat dağılabilir; dokunma hedefleri yine 24 px'in altına inmez.",
+     "scenario": "SaaS ürün sayfaları, kataloglar, dokümantasyon.",
+     "example": "Bir yazılım dokümantasyonunda kenar menüsü ve içerik sık ama düzenli yerleşir.",
+     "tokens": {
+      "space": 6,
+      "section": 72,
+      "lh": 1.55
+     }
+    },
+    {
+     "value": "Dense",
+     "label": "Dense — Yoğun",
+     "explanation": "En sık yerleşim; tablolar ve paneller. Artısı: tek ekranda çok veri. Eksisi: pazarlama sayfalarında yorucu.",
+     "scenario": "Yönetim paneli, analitik ve veri ağırlıklı ekranlar.",
+     "example": "Bir analitik panelinde 16 gösterge tek ekrana sığar.",
+     "tokens": {
+      "space": 4,
+      "section": 48,
+      "lh": 1.5
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_grid",
+   "label": "Izgara Sistemi",
+   "en": "Grid System",
+   "explanation": "Masaüstündeki sütun sayısını belirler; tablet ve mobil sütunları bundan türetilir (tablet en çok 8, mobil 4).",
+   "rule": "Sayfa ızgarası {label} olacaktır; tablet ve mobilde sütun sayısı tasarım yapılandırmasındaki değerlere iner ve bileşenler sütun sınırlarına hizalanır.",
+   "scenario": "Layout seçildikten sonra; özellikle modüler, bento ve panel düzenlerinde.",
+   "example": "12 sütunlu ızgarada açılış görseli 7, metin 5 sütun kaplar; mobilde ikisi 4 sütunun tamamına yayılır.",
+   "options": [
+    {
+     "value": "Grid 4",
+     "label": "4 Columns — 4 sütun",
+     "explanation": "Basit, tek amaçlı sayfalar. Artısı: sade. Eksisi: karmaşık düzen kurulamaz.",
+     "scenario": "Tek sayfalık tanıtım, açılış sayfası.",
+     "example": "Bir etkinlik sayfası 4 sütunlu ızgarada iki büyük blokla kurulur.",
+     "tokens": {
+      "cols": [
+       4,
+       4,
+       4
+      ]
+     }
+    },
+    {
+     "value": "Grid 8",
+     "label": "8 Columns — 8 sütun",
+     "explanation": "Orta karmaşıklık; mobil öncelikli tasarımlara uygun.",
+     "scenario": "Mobil uygulama tanıtımı, kişisel site.",
+     "example": "Bir uygulama tanıtımında özellikler 8 sütunda ikişerli dizilir.",
+     "tokens": {
+      "cols": [
+       8,
+       8,
+       4
+      ]
+     }
+    },
+    {
+     "value": "Grid 12",
+     "label": "12 Columns — 12 sütun",
+     "explanation": "Web'in standart ızgarası; 2, 3, 4 ve 6'lı bölünmelere izin verir.",
+     "scenario": "Kurumsal, e-ticaret ve içerik siteleri; varsayılan.",
+     "example": "Bir kurumsal sitede hizmet kartları 3'lü, referanslar 4'lü dizilir.",
+     "tokens": {
+      "cols": [
+       12,
+       8,
+       4
+      ]
+     }
+    },
+    {
+     "value": "Grid 16",
+     "label": "16 Columns — 16 sütun",
+     "explanation": "İnce bölünmeler; geniş ekran panelleri. Eksisi: tasarım ve bakım zorlaşır.",
+     "scenario": "Analitik panel, veri yoğun yönetim ekranı.",
+     "example": "Bir veri panelinde göstergeler 4, grafikler 8 sütun kaplar.",
+     "tokens": {
+      "cols": [
+       16,
+       8,
+       4
+      ]
+     }
+    },
+    {
+     "value": "Grid Fluid",
+     "label": "Fluid — Akışkan ızgara",
+     "explanation": "Sabit sütun yerine içeriğe göre kendiliğinden kırılan ızgara (auto-fit / minmax).",
+     "scenario": "Galeri, kart koleksiyonu, deneysel düzenler.",
+     "example": "Bir galeride kartlar en az 280 px genişlikte ekrana sığdığı kadar dizilir.",
+     "tokens": {
+      "cols": [
+       "fluid",
+       "fluid",
+       "fluid"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_surface_treatment",
+   "label": "Yüzey İşleme",
+   "en": "Surface Treatment",
+   "explanation": "Kart ve panellerin genel yüzey karakteri. Yüzey / Derinlik Efekti kararındaki stil efektini (ör. cam) hangi yüzeylere uygulayacağınızın temelidir.",
+   "rule": "Bileşen yüzeyleri {label} karakterde olacaktır; yüzey token'ları (zemin, kenarlık, yükseklik) bütün kart, panel ve açılır menülerde aynı kullanılacaktır.",
+   "scenario": "Ana stil ve yüzey efekti seçildikten sonra.",
+   "example": "Elevated seçilen bir SaaS sitesinde kartlar beyaz zeminden hafif gölgeyle ayrılır; Flat seçilen bir kamu sitesinde ince kenarlıkla ayrılır.",
+   "options": [
+    {
+     "value": "Flat",
+     "label": "Flat — Düz",
+     "explanation": "Gölgesiz, kenarlık ya da renkle ayrılan yüzeyler.",
+     "scenario": "Kamu, kurumsal ve yüksek erişilebilirlik hedefli siteler.",
+     "example": "Kartlar açık gri zeminde ince kenarlıklıdır.",
+     "tokens": {
+      "elev": "none"
+     }
+    },
+    {
+     "value": "Elevated",
+     "label": "Elevated — Yükseltilmiş",
+     "explanation": "Hafif gölgeyle zeminden ayrılan katmanlar.",
+     "scenario": "SaaS, uygulama ve e-ticaret arayüzleri.",
+     "example": "Ürün kartı fareyle üzerine gelince biraz yükselir.",
+     "tokens": {
+      "elev": "soft"
+     }
+    },
+    {
+     "value": "Glass",
+     "label": "Glass — Cam",
+     "explanation": "Yarı saydam, arka planı bulanıklaştıran yüzeyler; yedek düz yüzey şart.",
+     "scenario": "Yapay zekâ, fintech ve uygulama tanıtımları.",
+     "example": "Gezinme çubuğu kaydırırken arkadaki içeriği buzlu cam gibi gösterir.",
+     "tokens": {
+      "elev": "glass"
+     }
+    },
+    {
+     "value": "Textured",
+     "label": "Textured — Dokulu",
+     "explanation": "Kâğıt, tahıl ya da desen dokulu yüzeyler.",
+     "scenario": "El yapımı ürün, sürdürülebilir marka, kültür sitesi.",
+     "example": "Bloklar hafif kâğıt dokulu krem zeminde durur.",
+     "tokens": {
+      "elev": "texture"
+     }
+    },
+    {
+     "value": "Layered",
+     "label": "Layered — Katmanlı",
+     "explanation": "Üst üste binen, derinlik hissi veren yüzeyler.",
+     "scenario": "Editoryal, kreatif ajans, lansman sayfası.",
+     "example": "Metin kartı fotoğrafın köşesine taşar.",
+     "tokens": {
+      "elev": "layered"
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_image_treatment",
+   "label": "Görsel İşleme",
+   "en": "Image Treatment",
+   "explanation": "Fotoğraf ve görsellerin sitede nasıl işleneceği; görsel dilin tutarlılığını sağlar.",
+   "rule": "Görseller {label} işlemeyle sunulacaktır; işleme CSS ya da üretim aşamasında tutarlı uygulanacak, ürün renklerinin doğru görünmesi gereken yerlerde bozulmayacaktır.",
+   "scenario": "Medya yaklaşımı ve marka renkleri belirlendikten sonra.",
+   "example": "Duotone seçilen bir konferans sitesinde bütün konuşmacı fotoğrafları lacivert-pembe çift tona çevrilir.",
+   "options": [
+    {
+     "value": "Natural",
+     "label": "Natural — Doğal",
+     "explanation": "Görseller gerçek renkleriyle; yalnız ışık ve kırpım düzeltmesi.",
+     "scenario": "Ürün, yemek, turizm ve sağlık siteleri.",
+     "example": "Restoran fotoğrafları gerçek renkleriyle gösterilir.",
+     "tokens": {
+      "img": "none"
+     }
+    },
+    {
+     "value": "Duotone",
+     "label": "Duotone — Çift ton",
+     "explanation": "İki marka rengine indirgenmiş görseller.",
+     "scenario": "Kampanya, konferans, farklı kaynaklı fotoğraflar.",
+     "example": "Konuşmacı portreleri iki renkte tek kimliğe kavuşur.",
+     "tokens": {
+      "img": "duotone"
+     }
+    },
+    {
+     "value": "Monochrome",
+     "label": "Monochrome — Tek renk",
+     "explanation": "Siyah-beyaz ya da tek tonlu görseller.",
+     "scenario": "Mimarlık, hukuk, editoryal ve lüks siteler.",
+     "example": "Ekip fotoğrafları siyah-beyaz sunulur.",
+     "tokens": {
+      "img": "grayscale(1)"
+     }
+    },
+    {
+     "value": "Cinematic",
+     "label": "Cinematic — Sinematik",
+     "explanation": "Geniş en-boy oranı, koyu ve kontrastlı renk düzeltmesi.",
+     "scenario": "Otomotiv, film, destinasyon ve prestij lansmanı.",
+     "example": "Açılış görseli 21:9 oranında, koyu tonlu bir sahnedir.",
+     "tokens": {
+      "img": "contrast(1.1) saturate(.9)"
+     }
+    },
+    {
+     "value": "Illustrated",
+     "label": "Illustrated — İllüstrasyon",
+     "explanation": "Fotoğraf yerine illüstrasyon ya da ikon ağırlıklı görsel dil.",
+     "scenario": "Eğitim, SaaS anlatımı, çocuk ve topluluk siteleri.",
+     "example": "Her özellik kartında küçük bir çizim yer alır.",
+     "tokens": {
+      "img": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_alignment",
+   "label": "İçerik Hizalaması",
+   "en": "Content Alignment",
+   "explanation": "Başlık, metin ve blokların genel hizalama kuralı.",
+   "rule": "İçerik hizalaması {label} olacaktır; uzun metin her durumda sola hizalı kalacak, ortalanmış metin kısa başlık ve açıklamalarla sınırlanacaktır.",
+   "scenario": "Layout ve açılış kompozisyonu seçilirken.",
+   "example": "Asimetrik seçilen bir ajans sitesinde başlık sola, görsel sağa taşar; ritim her bölümde değişir.",
+   "options": [
+    {
+     "value": "Left",
+     "label": "Left — Sola hizalı",
+     "explanation": "Okunabilirliği en yüksek, taranması kolay hizalama.",
+     "scenario": "Kurumsal, içerik ve dokümantasyon siteleri.",
+     "example": "Bütün başlıklar ve paragraflar sol kenardan başlar."
+    },
+    {
+     "value": "Center",
+     "label": "Center — Ortalanmış",
+     "explanation": "Kısa mesajlar ve açılışlar için simetrik düzen.",
+     "scenario": "Açılış sayfası, lansman ve etkinlik.",
+     "example": "Açılış başlığı ve düğme ekranın ortasındadır."
+    },
+    {
+     "value": "Asymmetric",
+     "label": "Asymmetric — Asimetrik",
+     "explanation": "Dengeli ama simetrik olmayan, dinamik kompozisyon.",
+     "scenario": "Kreatif ajans, moda ve kültür siteleri.",
+     "example": "Görsel sayfanın üçte ikisini kaplar, metin dar sütunda kalır."
+    },
+    {
+     "value": "Mixed",
+     "label": "Mixed — Karışık",
+     "explanation": "Açılış ortada, içerik solda gibi bölüme göre değişen hizalama.",
+     "scenario": "Çoğu pazarlama sitesi.",
+     "example": "Açılış ortalanmış, hizmet listeleri sola hizalıdır."
+    }
+   ]
+  },
+  {
+   "id": "design_hero",
+   "label": "Açılış (Hero) Kompozisyonu",
+   "en": "Hero Composition",
+   "explanation": "Ana sayfanın ilk ekranının kuruluşu; ilk izlenimi ve LCP performansını belirler.",
+   "rule": "Ana sayfa açılışı {label} kompozisyonunda olacaktır; ilk ekranda tek bir ana mesaj ve tek bir birincil eylem bulunacak, açılış görseli ya da videosu öncelikli ve optimize yüklenecektir.",
+   "scenario": "Ana sayfa tasarlanırken; sayfa bazlı layout'la birlikte.",
+   "example": "Split seçilen bir SaaS sitesinde solda başlık ve düğme, sağda ürün ekranı durur.",
+   "options": [
+    {
+     "value": "Hero Centered",
+     "label": "Centered — Ortalanmış",
+     "explanation": "Tek mesaj ve eylem ortada.",
+     "scenario": "Ürün, uygulama ve etkinlik.",
+     "example": "Ortada büyük başlık, altında tek düğme."
+    },
+    {
+     "value": "Hero Split",
+     "label": "Split — İkiye bölünmüş",
+     "explanation": "Metin ve görsel yan yana.",
+     "scenario": "SaaS, kurumsal ve hizmet siteleri.",
+     "example": "Solda değer önerisi, sağda ürün görseli."
+    },
+    {
+     "value": "Hero Full-Bleed",
+     "label": "Full-Bleed — Tam genişlik görsel",
+     "explanation": "Ekranı kaplayan görsel üzerinde metin.",
+     "scenario": "Turizm, mimarlık, restoran.",
+     "example": "Otel fotoğrafı ekranı kaplar, başlık sol altta durur."
+    },
+    {
+     "value": "Hero Video",
+     "label": "Video — Video açılış",
+     "explanation": "Sessiz, kısa ve durdurulabilir arka plan videosu.",
+     "scenario": "Otomotiv, etkinlik ve marka lansmanı.",
+     "example": "Sessiz döngü videonun üzerinde başlık ve ‘Videoyu durdur’ düğmesi."
+    },
+    {
+     "value": "Hero Editorial",
+     "label": "Editorial — Editoryal",
+     "explanation": "Dergi kapağı gibi büyük tipografi ve kırpılmış görsel.",
+     "scenario": "Yayın, moda ve kültür kurumları.",
+     "example": "Dev başlık görselin üzerine taşar, yanında sayı etiketi."
+    }
+   ]
+  },
+  {
+   "id": "design_rhythm",
+   "label": "Bölüm Ritmi",
+   "en": "Section Rhythm",
+   "explanation": "Sayfa boyunca bölümlerin yerleşim ve zemin değişim düzeni.",
+   "rule": "Bölüm ritmi {label} olacaktır; bölümler arası boşluk yoğunluk token'ından gelecek ve ritim kırılmaları bilinçli olarak kullanılacaktır.",
+   "scenario": "Uzun sayfalar ve ana sayfa kurgusunda.",
+   "example": "Alternating seçilen bir hizmet sayfasında görsel-metin blokları sırayla sağa ve sola yerleşir.",
+   "options": [
+    {
+     "value": "Uniform",
+     "label": "Uniform — Tekdüze",
+     "explanation": "Her bölüm aynı yapı ve zeminde; öngörülebilir.",
+     "scenario": "Kurumsal, kamu ve dokümantasyon.",
+     "example": "Bütün bölümler beyaz zeminde aynı ızgarada."
+    },
+    {
+     "value": "Alternating",
+     "label": "Alternating — Dönüşümlü",
+     "explanation": "Görsel-metin yönü ve zemin rengi sırayla değişir.",
+     "scenario": "Hizmet ve ürün tanıtımı.",
+     "example": "Bir bölüm açık griyle, sonraki beyazla; görseller sırayla sağ ve sol."
+    },
+    {
+     "value": "Dynamic",
+     "label": "Dynamic — Dinamik",
+     "explanation": "Her bölüm kendine özgü kompozisyonla; sürpriz ve hareket.",
+     "scenario": "Kreatif ajans, kampanya, lansman.",
+     "example": "Bir bölüm tam ekran görsel, sonraki asimetrik kolaj, sonraki dev sayılar."
+    }
+   ]
+  },
+  {
+   "id": "design_container",
+   "label": "Kapsayıcı Genişliği",
+   "en": "Container Width",
+   "explanation": "İçeriğin masaüstünde yayılabileceği en büyük genişlik.",
+   "rule": "İçerik kapsayıcısı {label} olacaktır; metin blokları her durumda 60–75 karakterlik satır uzunluğuyla sınırlanacaktır.",
+   "scenario": "Ekran genişliği ve içerik türüne göre.",
+   "example": "Standart seçilen bir sitede içerik 1200 px'te ortalanır; Full seçilen bir galeride görseller kenardan kenara yayılır.",
+   "options": [
+    {
+     "value": "Narrow",
+     "label": "Narrow — Dar (960 px)",
+     "explanation": "Okuma odaklı, dar ölçü.",
+     "scenario": "Blog, makale, kişisel site.",
+     "example": "Makale 960 px genişlikte ortalanır.",
+     "tokens": {
+      "max": "960px"
+     }
+    },
+    {
+     "value": "Standard",
+     "label": "Standard — Standart (1200 px)",
+     "explanation": "Çoğu site için dengeli genişlik.",
+     "scenario": "Kurumsal, e-ticaret ve hizmet siteleri.",
+     "example": "İçerik 1200 px genişlikte ortalanır.",
+     "tokens": {
+      "max": "1200px"
+     }
+    },
+    {
+     "value": "Wide",
+     "label": "Wide — Geniş (1440 px)",
+     "explanation": "Geniş ekranlarda daha çok içerik.",
+     "scenario": "Panel, katalog ve veri ağırlıklı siteler.",
+     "example": "Ürün ızgarası 1440 px'e kadar genişler.",
+     "tokens": {
+      "max": "1440px"
+     }
+    },
+    {
+     "value": "Full",
+     "label": "Full — Tam genişlik",
+     "explanation": "Kenardan kenara; metin blokları yine sınırlı.",
+     "scenario": "Fotoğraf, galeri ve sinematik siteler.",
+     "example": "Görseller ekranın tamamını kaplar, metin 720 px'te kalır.",
+     "tokens": {
+      "max": "100%"
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_interaction_intensity",
+   "label": "Etkileşim Yoğunluğu",
+   "en": "Interaction Intensity",
+   "explanation": "Geçiş, hover ve kaydırma animasyonlarının ne kadar belirgin olacağı. Hangi tekniklerin kullanılacağı Tema, Hareket & Tasarım bölümündeki Hareket & Etkileşim Teknikleri kararındadır.",
+   "rule": "Etkileşim yoğunluğu {label} olacaktır; animasyon süreleri hareket token'larından gelecek, prefers-reduced-motion tercihinde hareketler durdurulacak ya da yalnız opaklık geçişine inecektir.",
+   "scenario": "Ana stil ve hareket teknikleri seçildikten sonra.",
+   "example": "Subtle seçilen bir fintech sitesinde düğmeler 150 ms'de renk değiştirir; Expressive seçilen bir lansmanda bölümler kaydırmayla sahnelenir.",
+   "options": [
+    {
+     "value": "Static",
+     "label": "Static — Durağan",
+     "explanation": "Yalnız odak ve durum değişimleri; animasyon yok.",
+     "scenario": "Kamu, sağlık ve yüksek erişilebilirlik hedefli siteler.",
+     "example": "Düğme durumları anında değişir.",
+     "tokens": {
+      "dur": "0ms"
+     }
+    },
+    {
+     "value": "Subtle",
+     "label": "Subtle — Hafif",
+     "explanation": "Kısa, fark edilmeyen geçişler.",
+     "scenario": "Kurumsal, fintech ve çoğu site; varsayılan.",
+     "example": "Kart üzerine gelince 150 ms'de hafifçe yükselir.",
+     "tokens": {
+      "dur": "150ms"
+     }
+    },
+    {
+     "value": "Moderate",
+     "label": "Moderate — Orta",
+     "explanation": "Belirgin ama ölçülü animasyonlar.",
+     "scenario": "SaaS, e-ticaret, uygulama tanıtımı.",
+     "example": "Bölümler kaydırınca hafifçe belirir.",
+     "tokens": {
+      "dur": "250ms"
+     }
+    },
+    {
+     "value": "Expressive",
+     "label": "Expressive — Belirgin",
+     "explanation": "Anlatının parçası olan, sahne kuran hareketler.",
+     "scenario": "Lansman, kreatif ajans, deneyim siteleri.",
+     "example": "Başlıklar harf harf belirir, görseller paralaksla kayar.",
+     "tokens": {
+      "dur": "400ms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_navigation",
+   "label": "Gezinme Kalıbı",
+   "en": "Navigation Pattern",
+   "explanation": "Ana menünün biçimi; site haritasının derinliğine ve cihaz kullanımına göre seçilir.",
+   "rule": "Ana gezinme {label} kalıbında olacaktır; menü klavyeyle tam kullanılabilecek, mobilde erişilebilir bir çekmece ya da alt çubuğa dönüşecek ve ‘içeriğe atla’ bağlantısı bulunacaktır.",
+   "scenario": "Site haritası belirlendikten sonra.",
+   "example": "Mega Menu seçilen bir sanayi sitesinde ‘Ürünler’ menüsü ürün gruplarını görselli sütunlarla açar.",
+   "options": [
+    {
+     "value": "Top Nav",
+     "label": "Top Nav — Üst menü",
+     "explanation": "Yatay üst menü; mobilde çekmece.",
+     "scenario": "Çoğu site; 5–7 ana başlık.",
+     "example": "Logo solda, 6 başlık sağda."
+    },
+    {
+     "value": "Mega Menu",
+     "label": "Mega Menu — Geniş açılır menü",
+     "explanation": "Çok sütunlu, görselli alt menüler.",
+     "scenario": "Çok ürünlü kurumsal ve e-ticaret siteleri.",
+     "example": "Ürünler menüsü kategorileri dört sütunda açar."
+    },
+    {
+     "value": "Sidebar",
+     "label": "Sidebar — Kenar menü",
+     "explanation": "Sol kenarda sabit menü.",
+     "scenario": "Dokümantasyon, panel ve uygulamalar.",
+     "example": "Solda sabit başlık ağacı."
+    },
+    {
+     "value": "Bottom Nav",
+     "label": "Bottom Nav — Alt çubuk (mobil)",
+     "explanation": "Mobilde başparmakla erişilen alt sekme çubuğu; en çok 5 hedef.",
+     "scenario": "Uygulama benzeri mobil öncelikli siteler.",
+     "example": "Mobilde Ana sayfa, Ara, Sepet, Hesabım sekmeleri altta."
+    },
+    {
+     "value": "Hybrid",
+     "label": "Hybrid — Karma",
+     "explanation": "Masaüstünde üst menü + bağlam kenar menüsü, mobilde alt çubuk.",
+     "scenario": "SaaS, portal ve hesap içeren siteler.",
+     "example": "Üstte ana menü, hesap sayfalarında solda alt menü."
+    }
+   ]
+  }
+ ],
+ "profiles": {
+  "design_density": {
+   "_": "Balanced",
+   "Ultra Spacious": [
+    "Luxury",
+    "Japandi",
+    "Art Direction-Led"
+   ],
+   "Spacious": [
+    "Minimalism",
+    "Scandinavian",
+    "Editorial Magazine",
+    "Cinematic",
+    "Photography-Led",
+    "Eco Sustainable",
+    "Typography-Led",
+    "Immersive",
+    "Kinetic Type"
+   ],
+   "Compact": [
+    "Material Design",
+    "SaaS Product-Led",
+    "Fintech Trust",
+    "Swiss Style",
+    "Brutalism",
+    "Flat 2.0",
+    "Dark-First"
+   ],
+   "Dense": [
+    "Data Viz-Led",
+    "Industrial",
+    "Cyberpunk"
+   ]
+  },
+  "design_grid": {
+   "_": "Grid 12",
+   "Grid 16": [
+    "Data Viz-Led",
+    "Industrial"
+   ],
+   "Grid 8": [
+    "Playful",
+    "Claymorphism",
+    "Neo-Memphis"
+   ],
+   "Grid Fluid": [
+    "Organic",
+    "Liquid Fluid",
+    "Anti-Design",
+    "Immersive",
+    "Collage",
+    "Maximalism",
+    "Psychedelic"
+   ]
+  },
+  "design_surface_treatment": {
+   "_": "Flat",
+   "Elevated": [
+    "Material Design",
+    "SaaS Product-Led",
+    "Flat 2.0",
+    "Corporate Modern",
+    "Fintech Trust",
+    "Claymorphism",
+    "Neumorphism",
+    "Playful",
+    "Dark-First"
+   ],
+   "Glass": [
+    "Glassmorphism",
+    "Liquid Glass",
+    "AI-Native",
+    "Web3 Digital Native",
+    "Futuristic"
+   ],
+   "Textured": [
+    "Vintage",
+    "Grunge",
+    "Eco Sustainable",
+    "Hand-Drawn",
+    "Skeuomorphism",
+    "Japandi",
+    "Organic"
+   ],
+   "Layered": [
+    "Art Direction-Led",
+    "Collage",
+    "Paper-Cut",
+    "3D-Led",
+    "Immersive",
+    "Liquid Fluid",
+    "Maximalism"
+   ]
+  },
+  "design_image_treatment": {
+   "_": "Natural",
+   "Duotone": [
+    "Duotone",
+    "Constructivism"
+   ],
+   "Monochrome": [
+    "Monochromatic",
+    "Brutalism",
+    "Swiss Style",
+    "Typography-Led"
+   ],
+   "Cinematic": [
+    "Cinematic",
+    "Immersive",
+    "Luxury",
+    "Dark-First",
+    "Art Direction-Led"
+   ],
+   "Illustrated": [
+    "Illustration-Led",
+    "Hand-Drawn",
+    "Playful",
+    "Isometric",
+    "Memphis",
+    "Neo-Memphis",
+    "Pixel Art",
+    "Paper-Cut",
+    "Flat Design",
+    "Claymorphism"
+   ]
+  },
+  "design_alignment": {
+   "_": "Mixed",
+   "Left": [
+    "Swiss Style",
+    "Corporate Modern",
+    "Fintech Trust",
+    "Data Viz-Led",
+    "Industrial",
+    "Editorial Magazine",
+    "Material Design",
+    "Dark-First"
+   ],
+   "Center": [
+    "Minimalism",
+    "Luxury",
+    "Immersive",
+    "Kinetic Type",
+    "AI-Native",
+    "Art Deco",
+    "Cinematic"
+   ],
+   "Asymmetric": [
+    "Art Direction-Led",
+    "Constructivism",
+    "Anti-Design",
+    "Brutalism",
+    "Neobrutalism",
+    "Collage",
+    "Japandi",
+    "Maximalism"
+   ]
+  },
+  "design_hero": {
+   "_": "Hero Split",
+   "Hero Centered": [
+    "Minimalism",
+    "AI-Native",
+    "Kinetic Type",
+    "Art Deco",
+    "Typography-Led",
+    "Accessible-First"
+   ],
+   "Hero Full-Bleed": [
+    "Photography-Led",
+    "Luxury",
+    "Eco Sustainable",
+    "Liquid Fluid",
+    "Duotone"
+   ],
+   "Hero Video": [
+    "Cinematic",
+    "3D-Led",
+    "Immersive"
+   ],
+   "Hero Editorial": [
+    "Editorial Magazine",
+    "Art Direction-Led",
+    "Swiss Style",
+    "Japandi",
+    "Collage",
+    "Brutalism",
+    "Constructivism"
+   ]
+  },
+  "design_rhythm": {
+   "_": "Alternating",
+   "Uniform": [
+    "Swiss Style",
+    "Corporate Modern",
+    "Material Design",
+    "Industrial",
+    "Data Viz-Led",
+    "Fintech Trust",
+    "Minimalism",
+    "Dark-First"
+   ],
+   "Dynamic": [
+    "Maximalism",
+    "Anti-Design",
+    "Art Direction-Led",
+    "Immersive",
+    "Collage",
+    "Memphis",
+    "Y2K",
+    "Psychedelic",
+    "Kinetic Type",
+    "Neobrutalism",
+    "Liquid Fluid"
+   ]
+  },
+  "design_container": {
+   "_": "Standard",
+   "Narrow": [
+    "Editorial Magazine",
+    "Japandi",
+    "Typography-Led"
+   ],
+   "Wide": [
+    "Data Viz-Led",
+    "Material Design",
+    "Industrial",
+    "SaaS Product-Led",
+    "Dark-First"
+   ],
+   "Full": [
+    "Photography-Led",
+    "Cinematic",
+    "Immersive",
+    "Art Direction-Led",
+    "Kinetic Type",
+    "Liquid Fluid"
+   ]
+  },
+  "design_interaction_intensity": {
+   "_": "Subtle",
+   "Static": [
+    "Brutalism",
+    "Swiss Style"
+   ],
+   "Moderate": [
+    "SaaS Product-Led",
+    "Material Design",
+    "Glassmorphism",
+    "Liquid Glass",
+    "Playful",
+    "Claymorphism",
+    "AI-Native",
+    "Web3 Digital Native",
+    "Neobrutalism",
+    "Neo-Memphis",
+    "Y2K"
+   ],
+   "Expressive": [
+    "Kinetic Type",
+    "Immersive",
+    "Liquid Fluid",
+    "Psychedelic",
+    "Synthwave",
+    "Maximalism",
+    "3D-Led",
+    "Cyberpunk",
+    "Cinematic",
+    "Anti-Design"
+   ]
+  },
+  "design_navigation": {
+   "_": "Top Nav",
+   "Mega Menu": [
+    "Corporate Modern",
+    "Industrial"
+   ],
+   "Sidebar": [
+    "Data Viz-Led",
+    "Dark-First"
+   ],
+   "Hybrid": [
+    "SaaS Product-Led",
+    "AI-Native",
+    "Material Design",
+    "Fintech Trust"
+   ]
+  },
+  "brand_radius": {
+   "_": "Small",
+   "None": [
+    "Brutalism",
+    "Swiss Style",
+    "Constructivism",
+    "Industrial",
+    "Art Deco",
+    "Editorial Magazine",
+    "Bauhaus",
+    "Pixel Art",
+    "Cyberpunk",
+    "Futuristic",
+    "Grunge",
+    "Typography-Led",
+    "Art Direction-Led",
+    "Luxury",
+    "Duotone",
+    "Kinetic Type"
+   ],
+   "Medium": [
+    "SaaS Product-Led",
+    "Material Design",
+    "Flat 2.0",
+    "Scandinavian",
+    "Eco Sustainable",
+    "AI-Native",
+    "Dark-First",
+    "Web3 Digital Native",
+    "Neo-Memphis",
+    "Illustration-Led"
+   ],
+   "Large": [
+    "Glassmorphism",
+    "Claymorphism",
+    "Neumorphism",
+    "Liquid Glass",
+    "Liquid Fluid",
+    "Playful",
+    "Organic"
+   ],
+   "Pill": [
+    "Y2K"
+   ]
+  },
+  "brand_shadow": {
+   "_": "Soft",
+   "Flat": [
+    "Flat Design",
+    "Swiss Style",
+    "Brutalism",
+    "Minimalism",
+    "Typography-Led",
+    "Editorial Magazine",
+    "Bauhaus",
+    "Constructivism",
+    "Pixel Art",
+    "Monochromatic",
+    "Duotone",
+    "Industrial",
+    "Japandi",
+    "Art Deco",
+    "Luxury",
+    "Accessible-First"
+   ],
+   "Layered": [
+    "3D-Led",
+    "Glassmorphism",
+    "Liquid Glass",
+    "Skeuomorphism",
+    "Paper-Cut",
+    "Immersive",
+    "Collage",
+    "Art Direction-Led"
+   ]
+  }
+ },
+ "layoutRec": {
+  "weights": {
+   "main": 40,
+   "mainAlt": 30,
+   "mainRef": 15,
+   "secondary": 10,
+   "type": 20,
+   "sector": 10,
+   "audience": 5,
+   "conversion": 10,
+   "density": 10,
+   "page": 50,
+   "pageMiss": -20,
+   "perf": -10,
+   "a11y": -10,
+   "base": 20
+  },
+  "style": {
+   "Corporate Modern": [
+    "Modular Grid",
+    "Split Screen"
+   ],
+   "Swiss Style": [
+    "Modular Grid",
+    "Editorial"
+   ],
+   "Luxury": [
+    "Full Bleed",
+    "Editorial"
+   ],
+   "SaaS Product-Led": [
+    "Bento Grid",
+    "Long Scroll"
+   ],
+   "Minimalism": [
+    "Centered Hero",
+    "Modular Grid"
+   ],
+   "Neobrutalism": [
+    "Asymmetric Grid",
+    "Card Based"
+   ],
+   "Photography-Led": [
+    "Gallery",
+    "Full Bleed"
+   ],
+   "Cinematic": [
+    "Scrollytelling",
+    "Full Bleed"
+   ],
+   "Data Viz-Led": [
+    "Dashboard",
+    "Modular Grid"
+   ],
+   "AI-Native": [
+    "Bento Grid",
+    "Split Screen"
+   ]
+  },
+  "cls": {
+   "primary-style": [
+    "Modular Grid",
+    "Card Based"
+   ],
+   "brand-style": [
+    "Modular Grid",
+    "Split Screen"
+   ],
+   "visual-approach": [
+    "Editorial",
+    "Asymmetric Grid"
+   ],
+   "surface-effect": [
+    "Bento Grid",
+    "Card Based"
+   ],
+   "media-approach": [
+    "Full Bleed",
+    "Gallery"
+   ],
+   "theme-approach": [
+    "Bento Grid",
+    "Modular Grid"
+   ],
+   "interaction-approach": [
+    "Scrollytelling",
+    "Long Scroll"
+   ]
+  },
+  "type": {
+   "Corporate Website": [
+    "Modular Grid",
+    "Split Screen",
+    "Sticky Sections"
+   ],
+   "Personal Website": [
+    "Centered Hero",
+    "Editorial"
+   ],
+   "Portfolio": [
+    "Gallery",
+    "Masonry",
+    "Horizontal Scroll"
+   ],
+   "Blog": [
+    "F-Pattern",
+    "Editorial",
+    "Card Based"
+   ],
+   "News Media": [
+    "Editorial",
+    "F-Pattern",
+    "Modular Grid"
+   ],
+   "Landing Page": [
+    "Centered Hero",
+    "Z-Pattern",
+    "Long Scroll"
+   ],
+   "SaaS": [
+    "Bento Grid",
+    "Long Scroll",
+    "Sticky Sections"
+   ],
+   "Web App": [
+    "Dashboard",
+    "Sidebar Navigation",
+    "Configurator Workspace"
+   ],
+   "Portal": [
+    "Sidebar Navigation",
+    "Dashboard",
+    "Card Based"
+   ],
+   "Community": [
+    "Card Based",
+    "Masonry"
+   ],
+   "Marketplace": [
+    "Card Based",
+    "Modular Grid"
+   ],
+   "E-commerce": [
+    "Card Based",
+    "Modular Grid",
+    "Configurator Workspace"
+   ],
+   "B2B Platform": [
+    "Modular Grid",
+    "Dashboard",
+    "Split Screen"
+   ],
+   "Booking": [
+    "Split Screen",
+    "Card Based",
+    "Configurator Workspace"
+   ],
+   "Classifieds": [
+    "Card Based",
+    "F-Pattern"
+   ],
+   "LMS": [
+    "Sidebar Navigation",
+    "Card Based",
+    "Dashboard"
+   ],
+   "Knowledge Base": [
+    "Sidebar Navigation",
+    "F-Pattern"
+   ],
+   "Intranet": [
+    "Dashboard",
+    "Sidebar Navigation"
+   ],
+   "Directory": [
+    "Card Based",
+    "F-Pattern"
+   ],
+   "Event": [
+    "Centered Hero",
+    "Full Bleed",
+    "Long Scroll"
+   ],
+   "Nonprofit": [
+    "Long Scroll",
+    "Full Bleed",
+    "Scrollytelling"
+   ],
+   "Government": [
+    "Modular Grid",
+    "F-Pattern",
+    "Sidebar Navigation"
+   ]
+  },
+  "sector": {
+   "finance": [
+    "Modular Grid",
+    "Split Screen"
+   ],
+   "professional": [
+    "Modular Grid",
+    "Split Screen"
+   ],
+   "tourism": [
+    "Full Bleed",
+    "Gallery"
+   ],
+   "food": [
+    "Full Bleed",
+    "Gallery"
+   ],
+   "beauty": [
+    "Full Bleed",
+    "Layered"
+   ],
+   "media": [
+    "Editorial",
+    "Masonry"
+   ],
+   "tech": [
+    "Bento Grid",
+    "Long Scroll"
+   ],
+   "education": [
+    "Card Based",
+    "Sidebar Navigation"
+   ],
+   "public": [
+    "Modular Grid",
+    "F-Pattern"
+   ],
+   "ngo": [
+    "Long Scroll",
+    "Scrollytelling"
+   ],
+   "manufacturing": [
+    "Modular Grid",
+    "Full Bleed"
+   ],
+   "construction": [
+    "Full Bleed",
+    "Gallery"
+   ],
+   "automotive": [
+    "Full Bleed",
+    "Configurator Workspace"
+   ],
+   "energy": [
+    "Modular Grid",
+    "Scrollytelling"
+   ],
+   "logistics": [
+    "Modular Grid",
+    "Split Screen"
+   ],
+   "retail": [
+    "Card Based",
+    "Gallery"
+   ],
+   "health": [
+    "Modular Grid",
+    "Centered Hero"
+   ]
+  },
+  "b2b": [
+   "Modular Grid",
+   "Split Screen",
+   "Sticky Sections"
+  ],
+  "b2c": [
+   "Card Based",
+   "Full Bleed",
+   "Long Scroll"
+  ],
+  "conversion": [
+   "Centered Hero",
+   "Z-Pattern",
+   "Split Screen",
+   "Long Scroll",
+   "Sticky Sections"
+  ],
+  "dense": [
+   "Dashboard",
+   "Modular Grid",
+   "Card Based",
+   "Sidebar Navigation",
+   "F-Pattern"
+  ],
+  "spacious": [
+   "Centered Hero",
+   "Full Bleed",
+   "Editorial",
+   "Z-Pattern"
+  ],
+  "heavy": [
+   "Horizontal Scroll",
+   "Scrollytelling",
+   "Layered",
+   "Masonry",
+   "Gallery",
+   "Configurator Workspace"
+  ],
+  "a11yRisk": [
+   "Horizontal Scroll",
+   "Scrollytelling",
+   "Layered",
+   "Masonry",
+   "Asymmetric Grid"
+  ]
+ },
+ "pages": [
+  [
+   "home",
+   "Ana sayfa"
+  ],
+  [
+   "product",
+   "Hizmet / Ürün"
+  ],
+  [
+   "about",
+   "Hakkımızda"
+  ],
+  [
+   "blog",
+   "Blog listeleme"
+  ],
+  [
+   "post",
+   "Blog detay"
+  ],
+  [
+   "contact",
+   "İletişim"
+  ],
+  [
+   "landing",
+   "Landing Page"
+  ],
+  [
+   "dashboard",
+   "Dashboard"
+  ],
+  [
+   "auth",
+   "Üyelik / Giriş"
+  ],
+  [
+   "custom",
+   "Özel sayfa"
+  ]
+ ]
+}

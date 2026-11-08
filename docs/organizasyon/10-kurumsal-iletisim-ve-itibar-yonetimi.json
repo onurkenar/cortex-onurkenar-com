@@ -1,0 +1,2588 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "10",
+    "name_tr": "Kurumsal İletişim ve İtibar Yönetimi",
+    "name_en": "Corporate Communications and Reputation Management",
+    "mission": "Şirketin kurumsal anlatısını, kamuoyu algısını, itibarını ve paydaşlarla güven ilişkisini yönetmek.",
+    "reporting_to": {"title_tr": "Genel Müdür / CEO", "title_en": "Chief Executive Officer"},
+    "department_head": {"title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü", "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer"},
+    "hierarchy_standard": ["Departman lideri", "Birim müdürü", "Ekip yöneticisi", "Uzman pozisyon"]
+  },
+  "organization_chart": {
+    "root": {
+      "id": "CEO",
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer",
+      "children": [
+        {
+          "id": "COMMS-DIR",
+          "title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü",
+          "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer",
+          "children": [
+            {"unit_ref": "10.01"}, {"unit_ref": "10.02"}, {"unit_ref": "10.03"}, {"unit_ref": "10.04"},
+            {"unit_ref": "10.05"}, {"unit_ref": "10.06"}, {"unit_ref": "10.07"}, {"unit_ref": "10.08"}
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {"id": "COMMS-DIR", "title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü", "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer", "reports_to": "CEO"},
+    {"id": "DEPUTY-COMMS-DIR", "title_tr": "Kurumsal İletişim Direktör Yardımcısı", "title_en": "Deputy Corporate Communications Director", "reports_to": "COMMS-DIR", "status": "Şirket ölçeğine göre opsiyonel"},
+    {"id": "REPUTATION-DIR", "title_tr": "İtibar Yönetimi Direktörü", "title_en": "Reputation Management Director", "reports_to": "COMMS-DIR", "status": "Büyük ölçekli yapılarda opsiyonel"},
+    {"id": "SENIOR-ADVISOR", "title_tr": "Kurumsal İletişim Başdanışmanı", "title_en": "Senior Corporate Communications Advisor", "reports_to": "COMMS-DIR", "status": "Opsiyonel"}
+  ],
+  "units": [
+    {
+      "id": "10.01",
+      "name_tr": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+      "name_en": "Corporate Communications Strategy and Messaging",
+      "manager": {"title_tr": "Kurumsal İletişim Stratejisi Müdürü", "title_en": "Corporate Communications Strategy Manager"},
+      "responsibilities": ["Kurumsal iletişim stratejisini ve ana anlatıyı geliştirmek", "Mesaj hiyerarşisi, kurumsal dil ve terminolojiyi yönetmek", "Grup şirketleri iletişim yönetişimini kurmak", "Yıllık iletişim planı ve içerik takvimini koordine etmek", "Paydaş algısı, itibar araştırmaları ve iletişim KPI'larını izlemek"],
+      "teams": [
+        {"name_tr": "Kurumsal Anlatı ve Mesaj Mimarisi", "name_en": "Corporate Narrative and Messaging", "lead": {"title_tr": "Kurumsal Anlatı ve Mesaj Mimarisi Yöneticisi", "title_en": "Corporate Narrative and Messaging Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal Mesaj Uzmanı", "title_en": "Senior Corporate Messaging Specialist"},
+          {"title_tr": "Kurumsal Anlatı Uzmanı", "title_en": "Corporate Narrative Specialist"},
+          {"title_tr": "Mesaj Mimarisi Uzmanı", "title_en": "Messaging Architecture Specialist"},
+          {"title_tr": "Kurumsal Dil ve Terminoloji Uzmanı", "title_en": "Corporate Language and Terminology Specialist"}]},
+        {"name_tr": "İletişim Planlama ve Yönetişim", "name_en": "Communications Planning and Governance", "lead": {"title_tr": "İletişim Planlama ve Yönetişim Yöneticisi", "title_en": "Communications Planning and Governance Lead"}, "positions": [
+          {"title_tr": "Kıdemli İletişim Planlama Uzmanı", "title_en": "Senior Communications Planning Specialist"},
+          {"title_tr": "İletişim Yönetişimi Uzmanı", "title_en": "Communications Governance Specialist"},
+          {"title_tr": "Grup Şirketleri İletişim Koordinatörü", "title_en": "Group Companies Communications Coordinator"},
+          {"title_tr": "İletişim Takvimi ve Operasyon Uzmanı", "title_en": "Communications Calendar and Operations Specialist"}]},
+        {"name_tr": "Araştırma ve İletişim Analitiği", "name_en": "Communications Research and Analytics", "lead": {"title_tr": "İletişim Araştırmaları ve Analitik Yöneticisi", "title_en": "Communications Research and Analytics Lead"}, "positions": [
+          {"title_tr": "İtibar Araştırmaları Uzmanı", "title_en": "Reputation Research Specialist"},
+          {"title_tr": "İletişim Veri Analisti", "title_en": "Communications Data Analyst"},
+          {"title_tr": "Paydaş Algı Araştırmaları Uzmanı", "title_en": "Stakeholder Perception Research Specialist"},
+          {"title_tr": "İletişim Performans Analisti", "title_en": "Communications Performance Analyst"}]}
+      ]
+    },
+    {
+      "id": "10.02",
+      "name_tr": "Medya İlişkileri ve Basın Yönetimi",
+      "name_en": "Media Relations and Press Management",
+      "manager": {"title_tr": "Medya İlişkileri ve Basın Müdürü", "title_en": "Media Relations and Press Manager"},
+      "responsibilities": ["Basın ve medya ilişkilerini yönetmek", "Basın bülteni, bilgi notu ve medya içeriklerini hazırlamak", "Basın toplantısı, röportaj ve yayın koordinasyonunu yürütmek", "Medya görünürlüğü, haber tonu ve söylem analizlerini izlemek", "Yanlış veya eksik haberlerde düzeltme süreçlerini koordine etmek"],
+      "teams": [
+        {"name_tr": "Basın ve Medya İlişkileri", "name_en": "Press and Media Relations", "lead": {"title_tr": "Basın ve Medya İlişkileri Yöneticisi", "title_en": "Press and Media Relations Lead"}, "positions": [
+          {"title_tr": "Kıdemli Medya İlişkileri Uzmanı", "title_en": "Senior Media Relations Specialist"},
+          {"title_tr": "Basın İlişkileri Uzmanı", "title_en": "Press Relations Specialist"},
+          {"title_tr": "Medya İlişkileri Uzmanı", "title_en": "Media Relations Specialist"},
+          {"title_tr": "Basın Koordinasyon Uzmanı", "title_en": "Press Coordination Specialist"}]},
+        {"name_tr": "Basın İçeriği ve Haber Yönetimi", "name_en": "Press Content and News Management", "lead": {"title_tr": "Basın İçeriği ve Haber Yönetimi Yöneticisi", "title_en": "Press Content and News Management Lead"}, "positions": [
+          {"title_tr": "Kıdemli Basın İçeriği Uzmanı", "title_en": "Senior Press Content Specialist"},
+          {"title_tr": "Basın Bülteni Yazarı", "title_en": "Press Release Writer"},
+          {"title_tr": "Kurumsal Haber Editörü", "title_en": "Corporate News Editor"},
+          {"title_tr": "Basın Dosyası ve Bilgi Notu Uzmanı", "title_en": "Press Kit and Briefing Specialist"}]},
+        {"name_tr": "Medya Takibi ve Analizi", "name_en": "Media Monitoring and Analysis", "lead": {"title_tr": "Medya Takibi ve Analizi Yöneticisi", "title_en": "Media Monitoring and Analysis Lead"}, "positions": [
+          {"title_tr": "Medya Takip Uzmanı", "title_en": "Media Monitoring Specialist"},
+          {"title_tr": "Medya Analisti", "title_en": "Media Analyst"},
+          {"title_tr": "Haber ve Söylem Analisti", "title_en": "News and Discourse Analyst"},
+          {"title_tr": "Medya Raporlama Uzmanı", "title_en": "Media Reporting Specialist"}]}
+      ]
+    },
+    {
+      "id": "10.03",
+      "name_tr": "İtibar, Gündem ve Kriz İletişimi",
+      "name_en": "Reputation, Issues and Crisis Communications",
+      "manager": {"title_tr": "İtibar ve Kriz İletişimi Müdürü", "title_en": "Reputation and Crisis Communications Manager"},
+      "responsibilities": ["Kurumsal itibar risklerini ve paydaş algısını izlemek", "Gündem, hassas konu ve erken uyarı sistemini yönetmek", "Kriz iletişim planı, senaryo ve tatbikatlarını hazırlamak", "Kriz mesajları, açıklamalar ve sözcülük süreçlerini koordine etmek", "Kriz sonrası itibar iyileştirme ve dezenformasyon müdahalesini yönetmek"],
+      "teams": [
+        {"name_tr": "İtibar Takibi ve Risk Analizi", "name_en": "Reputation Monitoring and Risk Analysis", "lead": {"title_tr": "İtibar Takibi ve Risk Analizi Yöneticisi", "title_en": "Reputation Monitoring and Risk Analysis Lead"}, "positions": [
+          {"title_tr": "Kıdemli İtibar Yönetimi Uzmanı", "title_en": "Senior Reputation Management Specialist"},
+          {"title_tr": "İtibar Risk Uzmanı", "title_en": "Reputation Risk Specialist"},
+          {"title_tr": "Algı ve Duygu Analisti", "title_en": "Perception and Sentiment Analyst"},
+          {"title_tr": "Erken Uyarı ve Gündem Analisti", "title_en": "Early Warning and Agenda Analyst"}]},
+        {"name_tr": "Gündem ve Konu Yönetimi", "name_en": "Issues and Agenda Management", "lead": {"title_tr": "Gündem ve Konu Yönetimi Yöneticisi", "title_en": "Issues and Agenda Management Lead"}, "positions": [
+          {"title_tr": "Kıdemli Konu Yönetimi Uzmanı", "title_en": "Senior Issues Management Specialist"},
+          {"title_tr": "Gündem Takip Uzmanı", "title_en": "Agenda Monitoring Specialist"},
+          {"title_tr": "Hassas Konular İletişim Uzmanı", "title_en": "Sensitive Issues Communications Specialist"},
+          {"title_tr": "Kurumsal Pozisyonlandırma Uzmanı", "title_en": "Corporate Positioning Specialist"}]},
+        {"name_tr": "Kriz İletişimi", "name_en": "Crisis Communications", "lead": {"title_tr": "Kriz İletişimi Yöneticisi", "title_en": "Crisis Communications Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kriz İletişimi Uzmanı", "title_en": "Senior Crisis Communications Specialist"},
+          {"title_tr": "Kriz Senaryoları ve Hazırlık Uzmanı", "title_en": "Crisis Scenarios and Preparedness Specialist"},
+          {"title_tr": "Kriz İçerik ve Sözcülük Uzmanı", "title_en": "Crisis Content and Spokesperson Specialist"},
+          {"title_tr": "Kriz İzleme ve Koordinasyon Uzmanı", "title_en": "Crisis Monitoring and Coordination Specialist"}]}
+      ]
+    },
+    {
+      "id": "10.04",
+      "name_tr": "Yönetici ve Liderlik İletişimi",
+      "name_en": "Executive and Leadership Communications",
+      "manager": {"title_tr": "Yönetici ve Liderlik İletişimi Müdürü", "title_en": "Executive and Leadership Communications Manager"},
+      "responsibilities": ["CEO ve üst yönetim iletişim stratejisini yönetmek", "Yönetici mesajları, konuşma metinleri ve bilgi notları hazırlamak", "Röportaj, konferans ve panel hazırlıklarını koordine etmek", "Düşünce liderliği içerikleri geliştirmek", "Yönetici görünürlüğü ve dijital iletişimini yönetmek"],
+      "teams": [
+        {"name_tr": "CEO ve Üst Yönetim İletişimi", "name_en": "CEO and Executive Communications", "lead": {"title_tr": "CEO ve Üst Yönetim İletişimi Yöneticisi", "title_en": "CEO and Executive Communications Lead"}, "positions": [
+          {"title_tr": "Kıdemli Yönetici İletişimi Uzmanı", "title_en": "Senior Executive Communications Specialist"},
+          {"title_tr": "CEO İletişimi Uzmanı", "title_en": "CEO Communications Specialist"},
+          {"title_tr": "Üst Yönetim İletişimi Uzmanı", "title_en": "Executive Communications Specialist"},
+          {"title_tr": "Yönetici İletişim Planlama Uzmanı", "title_en": "Executive Communications Planning Specialist"}]},
+        {"name_tr": "Konuşma ve Mesaj Geliştirme", "name_en": "Speechwriting and Message Development", "lead": {"title_tr": "Konuşma ve Mesaj Geliştirme Yöneticisi", "title_en": "Speechwriting and Message Development Lead"}, "positions": [
+          {"title_tr": "Kıdemli Konuşma Metni Yazarı", "title_en": "Senior Speechwriter"},
+          {"title_tr": "Konuşma Metni Yazarı", "title_en": "Speechwriter"},
+          {"title_tr": "Yönetici Sunum İçeriği Uzmanı", "title_en": "Executive Presentation Content Specialist"},
+          {"title_tr": "Yönetici Bilgi Notu Uzmanı", "title_en": "Executive Briefing Specialist"}]},
+        {"name_tr": "Lider Görünürlüğü ve Düşünce Liderliği", "name_en": "Leadership Visibility and Thought Leadership", "lead": {"title_tr": "Düşünce Liderliği Yöneticisi", "title_en": "Thought Leadership Lead"}, "positions": [
+          {"title_tr": "Düşünce Liderliği İçerik Uzmanı", "title_en": "Thought Leadership Content Specialist"},
+          {"title_tr": "Yönetici Görünürlüğü Uzmanı", "title_en": "Executive Visibility Specialist"},
+          {"title_tr": "Konferans ve Panel Koordinasyon Uzmanı", "title_en": "Conference and Panel Coordination Specialist"},
+          {"title_tr": "Yönetici Dijital İletişim Uzmanı", "title_en": "Executive Digital Communications Specialist"}]}
+      ]
+    },
+    {
+      "id": "10.05",
+      "name_tr": "İç İletişim ve Çalışan Katılımı",
+      "name_en": "Internal Communications and Employee Engagement",
+      "manager": {"title_tr": "İç İletişim ve Çalışan Katılımı Müdürü", "title_en": "Internal Communications and Employee Engagement Manager"},
+      "responsibilities": ["İç iletişim stratejisi ve kanallarını yönetmek", "Yönetim mesajlarını çalışanlara aktarmak", "Değişim ve dönüşüm iletişimini koordine etmek", "Kurum kültürü ve çalışan katılımı iletişimini yürütmek", "Çalışan geri bildirimlerini ve iç iletişim performansını izlemek"],
+      "teams": [
+        {"name_tr": "İç İletişim Kanalları", "name_en": "Internal Communications Channels", "lead": {"title_tr": "İç İletişim Kanalları Yöneticisi", "title_en": "Internal Communications Channels Lead"}, "positions": [
+          {"title_tr": "Kıdemli İç İletişim Uzmanı", "title_en": "Senior Internal Communications Specialist"},
+          {"title_tr": "İç İletişim Uzmanı", "title_en": "Internal Communications Specialist"},
+          {"title_tr": "İntranet ve Dijital Kanallar Uzmanı", "title_en": "Intranet and Digital Channels Specialist"},
+          {"title_tr": "Çalışan Bülteni Editörü", "title_en": "Employee Newsletter Editor"}]},
+        {"name_tr": "Değişim İletişimi", "name_en": "Change Communications", "lead": {"title_tr": "Değişim İletişimi Yöneticisi", "title_en": "Change Communications Lead"}, "positions": [
+          {"title_tr": "Kıdemli Değişim İletişimi Uzmanı", "title_en": "Senior Change Communications Specialist"},
+          {"title_tr": "Dönüşüm Programları İletişim Uzmanı", "title_en": "Transformation Communications Specialist"},
+          {"title_tr": "Değişim Paydaş Analisti", "title_en": "Change Stakeholder Analyst"},
+          {"title_tr": "Değişim İçerikleri Uzmanı", "title_en": "Change Content Specialist"}]},
+        {"name_tr": "Çalışan Katılımı ve Kültür İletişimi", "name_en": "Employee Engagement and Culture Communications", "lead": {"title_tr": "Çalışan Katılımı ve Kültür İletişimi Yöneticisi", "title_en": "Employee Engagement and Culture Communications Lead"}, "positions": [
+          {"title_tr": "Çalışan Katılımı Uzmanı", "title_en": "Employee Engagement Specialist"},
+          {"title_tr": "Kültür İletişimi Uzmanı", "title_en": "Culture Communications Specialist"},
+          {"title_tr": "Çalışan Etkinlikleri İletişim Uzmanı", "title_en": "Employee Events Communications Specialist"},
+          {"title_tr": "Çalışan Geri Bildirim Analisti", "title_en": "Employee Feedback Analyst"}]}
+      ]
+    },
+    {
+      "id": "10.06",
+      "name_tr": "Paydaş, Kamu ve Sektör İletişimi",
+      "name_en": "Stakeholder, Public and Industry Communications",
+      "manager": {"title_tr": "Paydaş ve Kamu İletişimi Müdürü", "title_en": "Stakeholder and Public Affairs Communications Manager"},
+      "responsibilities": ["Paydaş haritalama ve iletişim planlarını geliştirmek", "Kamuoyu ve sektör iletişimini yönetmek", "Meslek örgütleri, sektörel platformlar ve kurumsal üyelikleri koordine etmek", "Kurumsal temsil ve paydaş toplantılarını yönetmek", "Şirket görüş ve pozisyonlarının iletişimini sağlamak"],
+      "teams": [
+        {"name_tr": "Kurumsal Paydaş İletişimi", "name_en": "Corporate Stakeholder Communications", "lead": {"title_tr": "Kurumsal Paydaş İletişimi Yöneticisi", "title_en": "Corporate Stakeholder Communications Lead"}, "positions": [
+          {"title_tr": "Kıdemli Paydaş İletişimi Uzmanı", "title_en": "Senior Stakeholder Communications Specialist"},
+          {"title_tr": "Paydaş İletişimi Uzmanı", "title_en": "Stakeholder Communications Specialist"},
+          {"title_tr": "Paydaş Haritalama Analisti", "title_en": "Stakeholder Mapping Analyst"},
+          {"title_tr": "Kurumsal İlişkiler Koordinatörü", "title_en": "Corporate Relations Coordinator"}]},
+        {"name_tr": "Kamu ve Sektör İletişimi", "name_en": "Public and Industry Communications", "lead": {"title_tr": "Kamu ve Sektör İletişimi Yöneticisi", "title_en": "Public and Industry Communications Lead"}, "positions": [
+          {"title_tr": "Kamu İletişimi Uzmanı", "title_en": "Public Affairs Communications Specialist"},
+          {"title_tr": "Sektörel İletişim Uzmanı", "title_en": "Industry Communications Specialist"},
+          {"title_tr": "Meslek Örgütleri İletişim Uzmanı", "title_en": "Professional Associations Communications Specialist"},
+          {"title_tr": "Kamu Gündemi Analisti", "title_en": "Public Agenda Analyst"}]},
+        {"name_tr": "Kurumsal Temsil ve İlişkiler", "name_en": "Corporate Representation and Relations", "lead": {"title_tr": "Kurumsal Temsil ve İlişkiler Yöneticisi", "title_en": "Corporate Representation and Relations Lead"}, "positions": [
+          {"title_tr": "Kurumsal Temsil Uzmanı", "title_en": "Corporate Representation Specialist"},
+          {"title_tr": "Protokol İletişimi Uzmanı", "title_en": "Protocol Communications Specialist"},
+          {"title_tr": "Kurumsal Üyelikler Uzmanı", "title_en": "Corporate Memberships Specialist"},
+          {"title_tr": "Paydaş Toplantıları Koordinatörü", "title_en": "Stakeholder Meetings Coordinator"}]}
+      ]
+    },
+    {
+      "id": "10.07",
+      "name_tr": "Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki",
+      "name_en": "Sponsorships, Corporate Events and Social Impact",
+      "manager": {"title_tr": "Sponsorluk ve Kurumsal Etkinlikler Müdürü", "title_en": "Sponsorships and Corporate Events Manager"},
+      "responsibilities": ["Kurumsal sponsorluk stratejisi ve değerlendirme kriterlerini yönetmek", "Sponsorluk aktivasyonlarını ve etki ölçümünü koordine etmek", "Kurumsal ve paydaş etkinliklerini yönetmek", "Sosyal etki ve kurumsal sosyal sorumluluk iletişimini yürütmek", "Sürdürülebilirlik anlatısı ve iletişim çıktıları geliştirmek"],
+      "teams": [
+        {"name_tr": "Sponsorluk Yönetimi", "name_en": "Sponsorship Management", "lead": {"title_tr": "Sponsorluk Yönetimi Yöneticisi", "title_en": "Sponsorship Management Lead"}, "positions": [
+          {"title_tr": "Kıdemli Sponsorluk Uzmanı", "title_en": "Senior Sponsorship Specialist"},
+          {"title_tr": "Sponsorluk Uzmanı", "title_en": "Sponsorship Specialist"},
+          {"title_tr": "Sponsorluk Aktivasyon Uzmanı", "title_en": "Sponsorship Activation Specialist"},
+          {"title_tr": "Sponsorluk Etki Analisti", "title_en": "Sponsorship Impact Analyst"}]},
+        {"name_tr": "Kurumsal Etkinlikler", "name_en": "Corporate Events", "lead": {"title_tr": "Kurumsal Etkinlikler Yöneticisi", "title_en": "Corporate Events Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal Etkinlik Uzmanı", "title_en": "Senior Corporate Events Specialist"},
+          {"title_tr": "Kurumsal Etkinlik Uzmanı", "title_en": "Corporate Events Specialist"},
+          {"title_tr": "Etkinlik Operasyonları Uzmanı", "title_en": "Event Operations Specialist"},
+          {"title_tr": "Etkinlik İletişimi Uzmanı", "title_en": "Event Communications Specialist"}]},
+        {"name_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi", "name_en": "Social Impact and Sustainability Communications", "lead": {"title_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi Yöneticisi", "title_en": "Social Impact and Sustainability Communications Lead"}, "positions": [
+          {"title_tr": "Sosyal Etki İletişimi Uzmanı", "title_en": "Social Impact Communications Specialist"},
+          {"title_tr": "Sürdürülebilirlik İletişimi Uzmanı", "title_en": "Sustainability Communications Specialist"},
+          {"title_tr": "Kurumsal Sosyal Sorumluluk Uzmanı", "title_en": "Corporate Social Responsibility Specialist"},
+          {"title_tr": "Sosyal Etki Raporlama Analisti", "title_en": "Social Impact Reporting Analyst"}]}
+      ]
+    },
+    {
+      "id": "10.08",
+      "name_tr": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+      "name_en": "Corporate Publications and Digital Communications Governance",
+      "manager": {"title_tr": "Kurumsal Yayınlar ve Dijital İletişim Müdürü", "title_en": "Corporate Publications and Digital Communications Manager"},
+      "responsibilities": ["Faaliyet ve sürdürülebilirlik raporlarının editoryal yönetimini yürütmek", "Kurumsal sunum, profil ve yayınları yönetmek", "Kurumsal web ve sosyal medya içeriklerini yönetmek", "Dijital itibar ve kurumsal içerik takvimini izlemek", "Editoryal standartlar, kalite ve kurumsal arşivi yönetmek"],
+      "teams": [
+        {"name_tr": "Kurumsal Yayınlar ve Dokümantasyon", "name_en": "Corporate Publications and Documentation", "lead": {"title_tr": "Kurumsal Yayınlar Yöneticisi", "title_en": "Corporate Publications Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal Yayınlar Uzmanı", "title_en": "Senior Corporate Publications Specialist"},
+          {"title_tr": "Kurumsal Yayınlar Uzmanı", "title_en": "Corporate Publications Specialist"},
+          {"title_tr": "Faaliyet Raporu Editörü", "title_en": "Annual Report Editor"},
+          {"title_tr": "Kurumsal Dokümantasyon Uzmanı", "title_en": "Corporate Documentation Specialist"}]},
+        {"name_tr": "Kurumsal Dijital ve Sosyal Medya", "name_en": "Corporate Digital and Social Media", "lead": {"title_tr": "Kurumsal Dijital İletişim Yöneticisi", "title_en": "Corporate Digital Communications Lead"}, "positions": [
+          {"title_tr": "Kurumsal Dijital İletişim Uzmanı", "title_en": "Corporate Digital Communications Specialist"},
+          {"title_tr": "Kurumsal Sosyal Medya Uzmanı", "title_en": "Corporate Social Media Specialist"},
+          {"title_tr": "Dijital İtibar İzleme Uzmanı", "title_en": "Digital Reputation Monitoring Specialist"},
+          {"title_tr": "Kurumsal Web İçerik Uzmanı", "title_en": "Corporate Web Content Specialist"}]},
+        {"name_tr": "Kurumsal İçerik ve Editoryal Yönetim", "name_en": "Corporate Content and Editorial Management", "lead": {"title_tr": "Kurumsal İçerik ve Editoryal Yönetim Yöneticisi", "title_en": "Corporate Content and Editorial Management Lead"}, "positions": [
+          {"title_tr": "Kıdemli Kurumsal İçerik Editörü", "title_en": "Senior Corporate Content Editor"},
+          {"title_tr": "Kurumsal İçerik Yazarı", "title_en": "Corporate Content Writer"},
+          {"title_tr": "Editoryal Kalite Uzmanı", "title_en": "Editorial Quality Specialist"},
+          {"title_tr": "Kurumsal İçerik Takvimi Uzmanı", "title_en": "Corporate Content Calendar Specialist"}]}
+      ]
+    }
+  ],
+  "organization_summary": {"unit_count": 8, "team_count": 24, "team_lead_count": 24, "specialist_position_types": 96},
+  "content_ownership": [
+    {"content_type": "Basın bülteni ve medya açıklaması", "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"},
+    {"content_type": "CEO mesajı ve konuşma metni", "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"},
+    {"content_type": "Kriz açıklaması", "primary_owner": "Kurumsal İletişim + Hukuk + ilgili kriz sahibi"},
+    {"content_type": "Faaliyet raporu editoryal yönetimi", "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"},
+    {"content_type": "Kurumsal sosyal medya", "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"},
+    {"content_type": "Reklam ve kampanya içeriği", "primary_owner": "09 - Pazarlama ve Büyüme"},
+    {"content_type": "Blog, SEO/GEO ve lead içeriği", "primary_owner": "09 - Pazarlama ve Büyüme"},
+    {"content_type": "Grafik, video ve kreatif üretim", "primary_owner": "19 - Tasarım ve Yaratıcı Hizmetler"},
+    {"content_type": "İşveren markası stratejisi", "primary_owner": "04 - İnsan Kaynakları ve Organizasyon"},
+    {"content_type": "İşveren markası iletişim uygulaması", "primary_owner": "İnsan Kaynakları + Kurumsal İletişim"},
+    {"content_type": "Ürün mesajı ve değer önerisi", "primary_owner": "18 - Ürün Yönetimi + 09 - Pazarlama"},
+    {"content_type": "Sürdürülebilirlik verisi ve performansı", "primary_owner": "21 - İSG, Çevre ve Sürdürülebilirlik"},
+    {"content_type": "Sürdürülebilirlik anlatısı", "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"}
+  ],
+  "staffing_models": [
+    {"model": "Yalın yapı", "recommended_structure": "1 iletişim lideri, 3 ekip sorumlusu ve 5-8 uzman"},
+    {"model": "Orta ölçekli şirket", "recommended_structure": "1 direktör, 4-6 müdür ve 10-20 uzman"},
+    {"model": "Holding yapısı", "recommended_structure": "1 direktör, 1 direktör yardımcısı, 8 müdür ve şirket iletişim sorumluları"},
+    {"model": "Tam fonksiyonel yapı", "recommended_structure": "8 müdürlük ve 24 fonksiyonel ekibin ayrı kadrolanması"}
+  ],
+  "department_boundaries": [
+    {"interface_department": "09 - Pazarlama ve Büyüme", "communications_owns": "Kurumsal anlatı, medya ve itibar", "other_department_owns": "Talep, kampanya, reklam ve lead"},
+    {"interface_department": "19 - Tasarım ve Yaratıcı Hizmetler", "communications_owns": "Brief, mesaj ve iletişim amacı", "other_department_owns": "Görsel tasarım, video ve prodüksiyon"},
+    {"interface_department": "04 - İnsan Kaynakları ve Organizasyon", "communications_owns": "İç iletişim kanalları ve çalışan mesajları", "other_department_owns": "Çalışan deneyimi ve işveren markası stratejisi"},
+    {"interface_department": "05 - Hukuk İşleri", "communications_owns": "Kurumsal açıklamanın iletişimi", "other_department_owns": "Hukuki görüş ve risk kontrolü"},
+    {"interface_department": "01 - Üst Yönetim ve Kurumsal Yönetişim", "communications_owns": "Mesaj ve iletişim danışmanlığı", "other_department_owns": "Kurumsal karar ve açıklama yetkisi"},
+    {"interface_department": "21 - İSG, Çevre ve Sürdürülebilirlik", "communications_owns": "Sürdürülebilirlik anlatısı", "other_department_owns": "Veri, hedef ve performans sahipliği"},
+    {"interface_department": "12 - Operasyon Yönetimi", "communications_owns": "Krizin paydaş ve kamuoyu iletişimi", "other_department_owns": "Operasyonel krizin çözümü"},
+    {"interface_department": "08 - Satış ve Gelir Yönetimi", "communications_owns": "Kurumsal temsil ve itibar mesajları", "other_department_owns": "Müşteri teklifi ve ticari müzakere"}
+  ],
+  "scope_exclusions": [
+    "Performans reklamlarını yönetmek",
+    "Lead üretim hedefinin sahibi olmak",
+    "Satış işlemini kapatmak",
+    "Grafik tasarım veya video prodüksiyonunu doğrudan üstlenmek",
+    "Hukuki görüş veya hukuki kriz onayı vermek",
+    "Operasyonel krizi çözmek",
+    "Sürdürülebilirlik verisini üretmek",
+    "İnsan Kaynakları politikalarını belirlemek",
+    "Yönetim adına yetkisiz açıklama yapmak",
+    "Ürün yol haritasını veya ürün fiyatını belirlemek"
+  ],
+  "notes": [
+    "Kurumsal İletişim şirketin ne söylediğini ve nasıl algılandığını yönetir; Pazarlama talep yaratır; Tasarım mesajı görsel ve yaratıcı çıktıya dönüştürür.",
+    "İlgili iş birimi, kurumsal açıklamanın dayandığı karar ve verinin sahibidir.",
+    "Pozisyonlar hedef organizasyon modelidir ve mevcut çalışan sayısını ifade etmez.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; sözcülük yetkisi, onay akışı ve görevler ayrılığı korunmalıdır."
+  ],
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Kurumsal iletişim stratejisini, ana anlatıyı ve mesaj hiyerarşisini oluşturmak ve yönetmek",
+        "Basın ve medya ilişkilerini ve kurumsal açıklamaların iletişimini yürütmek",
+        "Kurumsal itibarı, gündemi ve paydaş algısını izlemek ve itibar risklerini yönetmek",
+        "Kriz iletişim planlarını hazırlamak ve kriz anında paydaş ve kamuoyu iletişimini koordine etmek",
+        "CEO ve üst yönetimin iletişimini, sözcülük hazırlıklarını ve düşünce liderliği görünürlüğünü yönetmek",
+        "İç iletişim, değişim iletişimi ve çalışan katılımı iletişimini yürütmek",
+        "Kamu, sektör ve kurumsal paydaşlarla iletişimi ve kurumsal temsili yönetmek",
+        "Sponsorluk, kurumsal etkinlik, sosyal etki ve kurumsal yayın süreçlerini yönetmek"
+      ],
+      "authorities": [
+        "Kurumsal anlatıyı, mesaj hiyerarşisini ve kurumsal dil standartlarını belirler",
+        "Kurumsal açıklamaların iletişim metnini hazırlar ve Üst Yönetimin onayına sunar",
+        "Onaylı sözcülük yetkileri çerçevesinde medya taleplerine yanıt verecek sözcüyü önerir",
+        "Kriz iletişim seviyesini değerlendirir ve kriz iletişim planının devreye alınmasını önerir",
+        "Kurumsal kanallarda yayımlanacak içeriklerin kurumsal dil ve itibar uygunluğunu onaylar",
+        "Sponsorluk ve kurumsal etkinlik önerilerini değerlendirme kriterlerine göre onaya sunar",
+        "Hukuki risk taşıyan açıklamaları yayımlamadan önce Hukuk İşlerinin görüşüne sunar"
+      ],
+      "collaborations": [
+        {
+          "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+          "unit": "",
+          "topic": "Kurumsal karar ve açıklama yetkisine mesaj ve iletişim danışmanlığı sağlanması"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "İşveren Markası ve İç İletişim",
+          "topic": "İç iletişim kanalları, çalışan mesajları ve işveren markası stratejisinin uyumu"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "",
+          "topic": "Kurumsal açıklamaların hukuki görüşü ve risk kontrolü"
+        },
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "",
+          "topic": "Müşteri teklif ve müzakere süreçlerinde kurumsal temsil ve itibar mesajları"
+        },
+        {
+          "department": "09 - Pazarlama ve Büyüme",
+          "unit": "Pazarlama Stratejisi ve Marka Yönetimi",
+          "topic": "Kurumsal anlatı ile talep, kampanya ve reklam mesajlarının ayrımı ve uyumu"
+        },
+        {
+          "department": "12 - Operasyon Yönetimi",
+          "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+          "topic": "Operasyonel krizin çözümü ile paydaş ve kamuoyu iletişiminin koordinasyonu"
+        },
+        {
+          "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+          "unit": "",
+          "topic": "İletişim brifleri ile görsel tasarım, video ve prodüksiyon talepleri"
+        },
+        {
+          "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+          "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+          "topic": "Sürdürülebilirlik anlatısı için ESG verisi, hedef ve performans bilgisi"
+        },
+        {
+          "department": "03 - Finans ve Hazine",
+          "unit": "Yatırımcı İlişkileri Müdürlüğü",
+          "topic": "Yatırımcı iletişimi ile kurumsal açıklamaların mesaj tutarlılığı"
+        }
+      ],
+      "kpis": [
+        "Medya görünürlüğü ve haber tonu",
+        "Olumlu ve nötr haber oranı",
+        "Kurumsal itibar endeksi",
+        "Paydaş algı skoru",
+        "Mesaj tutarlılığı oranı",
+        "Medya taleplerine yanıt süresi",
+        "Kriz iletişiminde ilk açıklama süresi",
+        "Kriz tatbikatı tamamlanma oranı",
+        "İç iletişim erişim ve okunma oranı",
+        "Çalışanların iç iletişim memnuniyeti",
+        "Yönetici görünürlüğü ve düşünce liderliği erişimi",
+        "Sponsorluk etki ve aktivasyon getirisi",
+        "Kurumsal yayınların zamanında yayımlanma oranı",
+        "Kurumsal dijital kanal etkileşim oranı"
+      ],
+      "title_standard": [
+        {
+          "level": "Departman lideri",
+          "title_tr": "Direktör",
+          "title_en": "Director"
+        },
+        {
+          "level": "Birim müdürü",
+          "title_tr": "Müdür",
+          "title_en": "Manager"
+        },
+        {
+          "level": "Ekip yöneticisi",
+          "title_tr": "Yönetici",
+          "title_en": "Team Lead"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Kıdemli Uzman / Kıdemli Editör",
+          "title_en": "Senior Specialist / Senior Editor"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Uzman / Editör / Yazar",
+          "title_en": "Specialist / Editor / Writer"
+        },
+        {
+          "level": "Uzman pozisyon",
+          "title_tr": "Analist / Koordinatör",
+          "title_en": "Analyst / Coordinator"
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 129,
+        "total_max": 229,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 16,
+            "max": 32
+          },
+          {
+            "role_group": "Uzman",
+            "min": 65,
+            "max": 131
+          },
+          {
+            "role_group": "Analist",
+            "min": 12,
+            "max": 24
+          },
+          {
+            "role_group": "Koordinatör",
+            "min": 3,
+            "max": 6
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "10.01",
+        "name_tr": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+        "responsibilities": [
+          "Kurumsal iletişim stratejisini ve ana anlatıyı geliştirmek",
+          "Mesaj hiyerarşisini, kurumsal dili ve terminolojiyi yönetmek",
+          "Grup şirketleri iletişim yönetişimini kurmak ve uygulamak",
+          "Yıllık iletişim planını ve kurumsal içerik takvimini koordine etmek",
+          "Paydaş algısını, itibar araştırmalarını ve iletişim KPI'larını izlemek"
+        ],
+        "authorities": [
+          "Kurumsal mesaj hiyerarşisini ve terminoloji standartlarını belirler",
+          "Yıllık iletişim planını direktörün onayına sunar",
+          "Grup şirketlerinin kurumsal iletişim çıktılarının ana anlatıya uyumunu onaylar",
+          "İletişim araştırmalarının kapsamını ve ölçüm yöntemini belirler"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+            "topic": "Kurumsal içerik takvimi ve editoryal standartların uygulanması"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "İtibar araştırmaları ve paydaş algısı bulgularının paylaşımı"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Pazarlama Stratejisi ve Marka Yönetimi",
+            "topic": "Kurumsal anlatı ile marka konumlandırması ve mesajlarının uyumu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "İştirakler ve Şirket Performansı Müdürlüğü",
+            "topic": "Grup şirketleri iletişim yönetişimi ve iştirak iletişimlerinin koordinasyonu"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Kurumsal strateji ve önceliklerin ana anlatıya yansıtılması"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "İletişim performans verisi ve raporlama panoları"
+          }
+        ],
+        "kpis": [
+          "Mesaj tutarlılığı oranı",
+          "Paydaş algı skoru",
+          "Yıllık iletişim planı gerçekleşme oranı",
+          "Kurumsal dil standardına uyum oranı",
+          "Grup şirketleri iletişim uyum oranı",
+          "İletişim KPI raporlarının güncelliği"
+        ],
+        "title_standard": [
+          {
+            "position": "10.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Kurumsal İletişim Stratejisi Müdürü",
+            "title_en": "Corporate Communications Strategy Manager"
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Anlatı ve Mesaj Mimarisi Yöneticisi",
+            "title_en": "Corporate Narrative and Messaging Lead"
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kidemli-kurumsal-mesaj-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal Mesaj Uzmanı",
+            "title_en": "Senior Corporate Messaging Specialist"
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-anlati-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Anlatı Uzmanı",
+            "title_en": "Corporate Narrative Specialist"
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/mesaj-mimarisi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Mesaj Mimarisi Uzmanı",
+            "title_en": "Messaging Architecture Specialist"
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-dil-ve-terminoloji-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Dil ve Terminoloji Uzmanı",
+            "title_en": "Corporate Language and Terminology Specialist"
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İletişim Planlama ve Yönetişim Yöneticisi",
+            "title_en": "Communications Planning and Governance Lead"
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/kidemli-iletisim-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İletişim Planlama Uzmanı",
+            "title_en": "Senior Communications Planning Specialist"
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/iletisim-yonetisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "İletişim Yönetişimi Uzmanı",
+            "title_en": "Communications Governance Specialist"
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/grup-sirketleri-iletisim-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Grup Şirketleri İletişim Koordinatörü",
+            "title_en": "Group Companies Communications Coordinator"
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/iletisim-takvimi-ve-operasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "İletişim Takvimi ve Operasyon Uzmanı",
+            "title_en": "Communications Calendar and Operations Specialist"
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İletişim Araştırmaları ve Analitik Yöneticisi",
+            "title_en": "Communications Research and Analytics Lead"
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/itibar-arastirmalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "İtibar Araştırmaları Uzmanı",
+            "title_en": "Reputation Research Specialist"
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/iletisim-veri-analisti",
+            "level": "Analist",
+            "title_tr": "İletişim Veri Analisti",
+            "title_en": "Communications Data Analyst"
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/paydas-algi-arastirmalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Paydaş Algı Araştırmaları Uzmanı",
+            "title_en": "Stakeholder Perception Research Specialist"
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/iletisim-performans-analisti",
+            "level": "Analist",
+            "title_tr": "İletişim Performans Analisti",
+            "title_en": "Communications Performance Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.01",
+            "title_tr": "Kurumsal İletişim Stratejisi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi",
+            "title_tr": "Kurumsal Anlatı ve Mesaj Mimarisi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kidemli-kurumsal-mesaj-uzmani",
+            "title_tr": "Kıdemli Kurumsal Mesaj Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-anlati-uzmani",
+            "title_tr": "Kurumsal Anlatı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/mesaj-mimarisi-uzmani",
+            "title_tr": "Mesaj Mimarisi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/kurumsal-anlati-ve-mesaj-mimarisi/kurumsal-dil-ve-terminoloji-uzmani",
+            "title_tr": "Kurumsal Dil ve Terminoloji Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim",
+            "title_tr": "İletişim Planlama ve Yönetişim Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/kidemli-iletisim-planlama-uzmani",
+            "title_tr": "Kıdemli İletişim Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/iletisim-yonetisimi-uzmani",
+            "title_tr": "İletişim Yönetişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/grup-sirketleri-iletisim-koordinatoru",
+            "title_tr": "Grup Şirketleri İletişim Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/iletisim-planlama-ve-yonetisim/iletisim-takvimi-ve-operasyon-uzmani",
+            "title_tr": "İletişim Takvimi ve Operasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi",
+            "title_tr": "İletişim Araştırmaları ve Analitik Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/itibar-arastirmalari-uzmani",
+            "title_tr": "İtibar Araştırmaları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/iletisim-veri-analisti",
+            "title_tr": "İletişim Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/paydas-algi-arastirmalari-uzmani",
+            "title_tr": "Paydaş Algı Araştırmaları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.01/arastirma-ve-iletisim-analitigi/iletisim-performans-analisti",
+            "title_tr": "İletişim Performans Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.02",
+        "name_tr": "Medya İlişkileri ve Basın Yönetimi",
+        "responsibilities": [
+          "Basın ve medya ilişkilerini yönetmek",
+          "Basın bülteni, bilgi notu ve basın dosyalarını hazırlamak",
+          "Basın toplantısı, röportaj ve yayın koordinasyonunu yürütmek",
+          "Medya görünürlüğünü, haber tonunu ve söylemi izlemek ve raporlamak",
+          "Yanlış veya eksik haberlerde düzeltme süreçlerini koordine etmek"
+        ],
+        "authorities": [
+          "Medya taleplerinin önceliğini ve yanıt sürecini belirler",
+          "Basın bülteni ve bilgi notlarını direktörün onayına sunar",
+          "Onaylı sözcü listesine göre röportaj ve basın toplantısı katılımcısını önerir",
+          "Yanlış veya eksik haberler için düzeltme talebi sürecini başlatır"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Yönetici ve Liderlik İletişimi",
+            "topic": "Röportaj, basın toplantısı ve yönetici sözcülük hazırlıkları"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "Kriz dönemlerinde medya yönetimi ve açıklamaların dağıtımı"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+            "topic": "Düzeltme ve cevap hakkı talepleri ile basın içeriklerinin hukuki kontrolü"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırımcı İlişkileri Müdürlüğü",
+            "topic": "Finansal sonuç ve yatırımcı açıklamalarının basın iletişimi"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Video, Fotoğraf ve İçerik Prodüksiyonu",
+            "topic": "Basın görselleri, fotoğraf ve video materyallerinin üretimi"
+          }
+        ],
+        "kpis": [
+          "Medya görünürlüğü",
+          "Olumlu ve nötr haber oranı",
+          "Medya taleplerine yanıt süresi",
+          "Kilit mesajların haberlere yansıma oranı",
+          "Basın bültenlerinin yayımlanma oranı",
+          "Düzeltme taleplerinin sonuçlanma süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "10.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Medya İlişkileri ve Basın Müdürü",
+            "title_en": "Media Relations and Press Manager"
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Basın ve Medya İlişkileri Yöneticisi",
+            "title_en": "Press and Media Relations Lead"
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/kidemli-medya-iliskileri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Medya İlişkileri Uzmanı",
+            "title_en": "Senior Media Relations Specialist"
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/basin-iliskileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Basın İlişkileri Uzmanı",
+            "title_en": "Press Relations Specialist"
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/medya-iliskileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Medya İlişkileri Uzmanı",
+            "title_en": "Media Relations Specialist"
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/basin-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Basın Koordinasyon Uzmanı",
+            "title_en": "Press Coordination Specialist"
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Basın İçeriği ve Haber Yönetimi Yöneticisi",
+            "title_en": "Press Content and News Management Lead"
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/kidemli-basin-icerigi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Basın İçeriği Uzmanı",
+            "title_en": "Senior Press Content Specialist"
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/basin-bulteni-yazari",
+            "level": "Uzman",
+            "title_tr": "Basın Bülteni Yazarı",
+            "title_en": "Press Release Writer"
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/kurumsal-haber-editoru",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Haber Editörü",
+            "title_en": "Corporate News Editor"
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/basin-dosyasi-ve-bilgi-notu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Basın Dosyası ve Bilgi Notu Uzmanı",
+            "title_en": "Press Kit and Briefing Specialist"
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Medya Takibi ve Analizi Yöneticisi",
+            "title_en": "Media Monitoring and Analysis Lead"
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Medya Takip Uzmanı",
+            "title_en": "Media Monitoring Specialist"
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-analisti",
+            "level": "Analist",
+            "title_tr": "Medya Analisti",
+            "title_en": "Media Analyst"
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/haber-ve-soylem-analisti",
+            "level": "Analist",
+            "title_tr": "Haber ve Söylem Analisti",
+            "title_en": "News and Discourse Analyst"
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Medya Raporlama Uzmanı",
+            "title_en": "Media Reporting Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 29
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 29,
+            "max": 41
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.02",
+            "title_tr": "Medya İlişkileri ve Basın Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri",
+            "title_tr": "Basın ve Medya İlişkileri Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/kidemli-medya-iliskileri-uzmani",
+            "title_tr": "Kıdemli Medya İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/basin-iliskileri-uzmani",
+            "title_tr": "Basın İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/medya-iliskileri-uzmani",
+            "title_tr": "Medya İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-ve-medya-iliskileri/basin-koordinasyon-uzmani",
+            "title_tr": "Basın Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi",
+            "title_tr": "Basın İçeriği ve Haber Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/kidemli-basin-icerigi-uzmani",
+            "title_tr": "Kıdemli Basın İçeriği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/basin-bulteni-yazari",
+            "title_tr": "Basın Bülteni Yazarı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/kurumsal-haber-editoru",
+            "title_tr": "Kurumsal Haber Editörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/basin-icerigi-ve-haber-yonetimi/basin-dosyasi-ve-bilgi-notu-uzmani",
+            "title_tr": "Basın Dosyası ve Bilgi Notu Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi",
+            "title_tr": "Medya Takibi ve Analizi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-takip-uzmani",
+            "title_tr": "Medya Takip Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-analisti",
+            "title_tr": "Medya Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/haber-ve-soylem-analisti",
+            "title_tr": "Haber ve Söylem Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.02/medya-takibi-ve-analizi/medya-raporlama-uzmani",
+            "title_tr": "Medya Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.03",
+        "name_tr": "İtibar, Gündem ve Kriz İletişimi",
+        "responsibilities": [
+          "Kurumsal itibar risklerini ve paydaş algısını izlemek",
+          "Gündem, hassas konu ve erken uyarı sistemini yönetmek",
+          "Kriz iletişim planını, senaryolarını ve tatbikatlarını hazırlamak",
+          "Kriz mesajlarını, açıklamaları ve sözcülük süreçlerini koordine etmek",
+          "Kriz sonrası itibar iyileştirme ve dezenformasyon müdahalesini yönetmek"
+        ],
+        "authorities": [
+          "Erken uyarı eşiklerini ve hassas konu listesini belirler",
+          "Kriz iletişim seviyesini değerlendirir ve kriz iletişim planının devreye alınmasını önerir",
+          "Kriz mesajlarını Hukuk görüşüyle birlikte Üst Yönetimin onayına sunar",
+          "Kriz döneminde planlı kurumsal iletişimlerin ertelenmesini talep eder"
+        ],
+        "collaborations": [
+          {
+            "department": "12 - Operasyon Yönetimi",
+            "unit": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+            "topic": "Operasyonel krizlerde durum bilgisi ve çözüm takviminin paylaşımı"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "İş Sürekliliği ve Kriz Riskleri",
+            "topic": "Kriz senaryoları, iş sürekliliği planları ve tatbikat koordinasyonu"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "",
+            "topic": "Kriz açıklamalarının hukuki görüşü ve risk kontrolü"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Sosyal Medya Pazarlaması",
+            "topic": "Sosyal dinleme sinyalleri ve kriz potansiyeli taşıyan sosyal medya konuları"
+          },
+          {
+            "department": "16 - Siber Güvenlik ve Bilgi Güvenliği",
+            "unit": "Güvenlik Operasyonları ve Olay Müdahale",
+            "topic": "Siber olaylarda olay bilgisi ile kamuoyu iletişiminin koordinasyonu"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Medya İlişkileri ve Basın Yönetimi",
+            "topic": "Kriz açıklamalarının medyaya iletilmesi ve medya takibi"
+          }
+        ],
+        "kpis": [
+          "Kurumsal itibar endeksi",
+          "Erken uyarıdan müdahaleye geçiş süresi",
+          "Kriz iletişiminde ilk açıklama süresi",
+          "Kriz tatbikatı tamamlanma oranı",
+          "Kriz sonrası itibar toparlanma süresi",
+          "Dezenformasyona müdahale süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "10.03",
+            "level": "Birim Müdürü",
+            "title_tr": "İtibar ve Kriz İletişimi Müdürü",
+            "title_en": "Reputation and Crisis Communications Manager"
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İtibar Takibi ve Risk Analizi Yöneticisi",
+            "title_en": "Reputation Monitoring and Risk Analysis Lead"
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/kidemli-itibar-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İtibar Yönetimi Uzmanı",
+            "title_en": "Senior Reputation Management Specialist"
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/itibar-risk-uzmani",
+            "level": "Uzman",
+            "title_tr": "İtibar Risk Uzmanı",
+            "title_en": "Reputation Risk Specialist"
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/algi-ve-duygu-analisti",
+            "level": "Analist",
+            "title_tr": "Algı ve Duygu Analisti",
+            "title_en": "Perception and Sentiment Analyst"
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/erken-uyari-ve-gundem-analisti",
+            "level": "Analist",
+            "title_tr": "Erken Uyarı ve Gündem Analisti",
+            "title_en": "Early Warning and Agenda Analyst"
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Gündem ve Konu Yönetimi Yöneticisi",
+            "title_en": "Issues and Agenda Management Lead"
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/kidemli-konu-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Konu Yönetimi Uzmanı",
+            "title_en": "Senior Issues Management Specialist"
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/gundem-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Gündem Takip Uzmanı",
+            "title_en": "Agenda Monitoring Specialist"
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/hassas-konular-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hassas Konular İletişim Uzmanı",
+            "title_en": "Sensitive Issues Communications Specialist"
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/kurumsal-pozisyonlandirma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Pozisyonlandırma Uzmanı",
+            "title_en": "Corporate Positioning Specialist"
+          },
+          {
+            "position": "10.03/kriz-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kriz İletişimi Yöneticisi",
+            "title_en": "Crisis Communications Lead"
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kidemli-kriz-iletisimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kriz İletişimi Uzmanı",
+            "title_en": "Senior Crisis Communications Specialist"
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-senaryolari-ve-hazirlik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kriz Senaryoları ve Hazırlık Uzmanı",
+            "title_en": "Crisis Scenarios and Preparedness Specialist"
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-icerik-ve-sozculuk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kriz İçerik ve Sözcülük Uzmanı",
+            "title_en": "Crisis Content and Spokesperson Specialist"
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-izleme-ve-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kriz İzleme ve Koordinasyon Uzmanı",
+            "title_en": "Crisis Monitoring and Coordination Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.03",
+            "title_tr": "İtibar ve Kriz İletişimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi",
+            "title_tr": "İtibar Takibi ve Risk Analizi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/kidemli-itibar-yonetimi-uzmani",
+            "title_tr": "Kıdemli İtibar Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/itibar-risk-uzmani",
+            "title_tr": "İtibar Risk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/algi-ve-duygu-analisti",
+            "title_tr": "Algı ve Duygu Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/itibar-takibi-ve-risk-analizi/erken-uyari-ve-gundem-analisti",
+            "title_tr": "Erken Uyarı ve Gündem Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi",
+            "title_tr": "Gündem ve Konu Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/kidemli-konu-yonetimi-uzmani",
+            "title_tr": "Kıdemli Konu Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/gundem-takip-uzmani",
+            "title_tr": "Gündem Takip Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/hassas-konular-iletisim-uzmani",
+            "title_tr": "Hassas Konular İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/gundem-ve-konu-yonetimi/kurumsal-pozisyonlandirma-uzmani",
+            "title_tr": "Kurumsal Pozisyonlandırma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/kriz-iletisimi",
+            "title_tr": "Kriz İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kidemli-kriz-iletisimi-uzmani",
+            "title_tr": "Kıdemli Kriz İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-senaryolari-ve-hazirlik-uzmani",
+            "title_tr": "Kriz Senaryoları ve Hazırlık Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-icerik-ve-sozculuk-uzmani",
+            "title_tr": "Kriz İçerik ve Sözcülük Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.03/kriz-iletisimi/kriz-izleme-ve-koordinasyon-uzmani",
+            "title_tr": "Kriz İzleme ve Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.04",
+        "name_tr": "Yönetici ve Liderlik İletişimi",
+        "responsibilities": [
+          "CEO ve üst yönetim iletişim stratejisini yönetmek",
+          "Yönetici mesajlarını, konuşma metinlerini ve bilgi notlarını hazırlamak",
+          "Röportaj, konferans ve panel hazırlıklarını koordine etmek",
+          "Düşünce liderliği içeriklerini geliştirmek",
+          "Yönetici görünürlüğünü ve dijital iletişimini yönetmek"
+        ],
+        "authorities": [
+          "Yönetici iletişim takvimini ve öncelikli görünürlük platformlarını belirler",
+          "Konuşma metinlerini ve yönetici mesajlarını ilgili yöneticinin onayına sunar",
+          "Konferans ve panel davetlerini değerlendirme kriterlerine göre önerir",
+          "Yönetici dijital kanallarındaki içeriklerin kurumsal anlatıya uyumunu onaylar"
+        ],
+        "collaborations": [
+          {
+            "department": "23 - Sekreterya, Yönetici Destek ve Protokol",
+            "unit": "Takvim, Toplantı ve Gündem Yönetimi",
+            "topic": "Yönetici takvimi, toplantı ve etkinlik programlarının koordinasyonu"
+          },
+          {
+            "department": "23 - Sekreterya, Yönetici Destek ve Protokol",
+            "unit": "Kurumsal Protokol ve Temsil",
+            "topic": "Konferans, panel ve temsil etkinliklerinde protokol düzeni"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Medya İlişkileri ve Basın Yönetimi",
+            "topic": "Röportaj ve basın toplantısı hazırlıkları"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+            "topic": "Yönetici mesajlarının ana anlatı ve mesaj hiyerarşisiyle uyumu"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı",
+            "topic": "Yönetici sunumları ve etkinlik tasarımları"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Karar Yönetimi ve Yönetim Raporlama Müdürlüğü",
+            "topic": "Yönetim kararları ve öncelikleri hakkında bilgi notu girdileri"
+          }
+        ],
+        "kpis": [
+          "Yönetici görünürlüğü ve medya erişimi",
+          "Düşünce liderliği içerik erişimi ve etkileşimi",
+          "Konuşma metni ve bilgi notu teslim süresi",
+          "Konferans ve panel katılım sayısı",
+          "Yönetici dijital kanal etkileşim oranı",
+          "Yönetici iletişim takvimi gerçekleşme oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "10.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Yönetici ve Liderlik İletişimi Müdürü",
+            "title_en": "Executive and Leadership Communications Manager"
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "CEO ve Üst Yönetim İletişimi Yöneticisi",
+            "title_en": "CEO and Executive Communications Lead"
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/kidemli-yonetici-iletisimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yönetici İletişimi Uzmanı",
+            "title_en": "Senior Executive Communications Specialist"
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/ceo-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "CEO İletişimi Uzmanı",
+            "title_en": "CEO Communications Specialist"
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/ust-yonetim-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Üst Yönetim İletişimi Uzmanı",
+            "title_en": "Executive Communications Specialist"
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/yonetici-iletisim-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetici İletişim Planlama Uzmanı",
+            "title_en": "Executive Communications Planning Specialist"
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Konuşma ve Mesaj Geliştirme Yöneticisi",
+            "title_en": "Speechwriting and Message Development Lead"
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/kidemli-konusma-metni-yazari",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Konuşma Metni Yazarı",
+            "title_en": "Senior Speechwriter"
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/konusma-metni-yazari",
+            "level": "Uzman",
+            "title_tr": "Konuşma Metni Yazarı",
+            "title_en": "Speechwriter"
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/yonetici-sunum-icerigi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetici Sunum İçeriği Uzmanı",
+            "title_en": "Executive Presentation Content Specialist"
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/yonetici-bilgi-notu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetici Bilgi Notu Uzmanı",
+            "title_en": "Executive Briefing Specialist"
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Düşünce Liderliği Yöneticisi",
+            "title_en": "Thought Leadership Lead"
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/dusunce-liderligi-icerik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Düşünce Liderliği İçerik Uzmanı",
+            "title_en": "Thought Leadership Content Specialist"
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/yonetici-gorunurlugu-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetici Görünürlüğü Uzmanı",
+            "title_en": "Executive Visibility Specialist"
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/konferans-ve-panel-koordinasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Konferans ve Panel Koordinasyon Uzmanı",
+            "title_en": "Conference and Panel Coordination Specialist"
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/yonetici-dijital-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetici Dijital İletişim Uzmanı",
+            "title_en": "Executive Digital Communications Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.04",
+            "title_tr": "Yönetici ve Liderlik İletişimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi",
+            "title_tr": "CEO ve Üst Yönetim İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/kidemli-yonetici-iletisimi-uzmani",
+            "title_tr": "Kıdemli Yönetici İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/ceo-iletisimi-uzmani",
+            "title_tr": "CEO İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/ust-yonetim-iletisimi-uzmani",
+            "title_tr": "Üst Yönetim İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/ceo-ve-ust-yonetim-iletisimi/yonetici-iletisim-planlama-uzmani",
+            "title_tr": "Yönetici İletişim Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme",
+            "title_tr": "Konuşma ve Mesaj Geliştirme Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/kidemli-konusma-metni-yazari",
+            "title_tr": "Kıdemli Konuşma Metni Yazarı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/konusma-metni-yazari",
+            "title_tr": "Konuşma Metni Yazarı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/yonetici-sunum-icerigi-uzmani",
+            "title_tr": "Yönetici Sunum İçeriği Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/konusma-ve-mesaj-gelistirme/yonetici-bilgi-notu-uzmani",
+            "title_tr": "Yönetici Bilgi Notu Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi",
+            "title_tr": "Düşünce Liderliği Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/dusunce-liderligi-icerik-uzmani",
+            "title_tr": "Düşünce Liderliği İçerik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/yonetici-gorunurlugu-uzmani",
+            "title_tr": "Yönetici Görünürlüğü Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/konferans-ve-panel-koordinasyon-uzmani",
+            "title_tr": "Konferans ve Panel Koordinasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.04/lider-gorunurlugu-ve-dusunce-liderligi/yonetici-dijital-iletisim-uzmani",
+            "title_tr": "Yönetici Dijital İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.05",
+        "name_tr": "İç İletişim ve Çalışan Katılımı",
+        "responsibilities": [
+          "İç iletişim stratejisini ve kanallarını yönetmek",
+          "Yönetim mesajlarını çalışanlara zamanında ve tutarlı biçimde aktarmak",
+          "Değişim ve dönüşüm iletişimini koordine etmek",
+          "Kurum kültürü ve çalışan katılımı iletişimini yürütmek",
+          "Çalışan geri bildirimlerini ve iç iletişim performansını izlemek"
+        ],
+        "authorities": [
+          "İç iletişim kanallarının kullanım kurallarını ve yayın takvimini belirler",
+          "Kurum geneline gönderilecek iç duyuruların iletişim içeriğini onaylar",
+          "Değişim programlarının iletişim planını program sahibinin onayına sunar",
+          "İK politikalarına ilişkin duyuruların içeriğini İnsan Kaynaklarının onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İşveren Markası ve İç İletişim",
+            "topic": "Çalışan mesajları, iç iletişim kanalları ve işveren markası stratejisinin uyumu"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "Çalışan Deneyimi ve Bağlılık",
+            "topic": "Çalışan bağlılığı araştırmaları ve katılım programlarının iletişimi"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Stratejik Projeler ve Dönüşüm Ofisi",
+            "topic": "Dönüşüm programlarının değişim iletişimi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Ağ, İletişim ve Dijital İşyeri",
+            "topic": "İntranet ve dijital işyeri kanallarının işletimi"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+            "topic": "Yönetim mesajlarının ana anlatı ve kurumsal dille uyumu"
+          }
+        ],
+        "kpis": [
+          "İç iletişim erişim ve okunma oranı",
+          "Çalışanların iç iletişim memnuniyeti",
+          "Değişim iletişimi farkındalık oranı",
+          "Çalışan katılımı etkinliklerine katılım oranı",
+          "Çalışan geri bildirimlerine dönüş süresi",
+          "Yönetim mesajlarının çalışanlara aktarım süresi"
+        ],
+        "title_standard": [
+          {
+            "position": "10.05",
+            "level": "Birim Müdürü",
+            "title_tr": "İç İletişim ve Çalışan Katılımı Müdürü",
+            "title_en": "Internal Communications and Employee Engagement Manager"
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "İç İletişim Kanalları Yöneticisi",
+            "title_en": "Internal Communications Channels Lead"
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/kidemli-ic-iletisim-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli İç İletişim Uzmanı",
+            "title_en": "Senior Internal Communications Specialist"
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/ic-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "İç İletişim Uzmanı",
+            "title_en": "Internal Communications Specialist"
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/intranet-ve-dijital-kanallar-uzmani",
+            "level": "Uzman",
+            "title_tr": "İntranet ve Dijital Kanallar Uzmanı",
+            "title_en": "Intranet and Digital Channels Specialist"
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/calisan-bulteni-editoru",
+            "level": "Uzman",
+            "title_tr": "Çalışan Bülteni Editörü",
+            "title_en": "Employee Newsletter Editor"
+          },
+          {
+            "position": "10.05/degisim-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Değişim İletişimi Yöneticisi",
+            "title_en": "Change Communications Lead"
+          },
+          {
+            "position": "10.05/degisim-iletisimi/kidemli-degisim-iletisimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Değişim İletişimi Uzmanı",
+            "title_en": "Senior Change Communications Specialist"
+          },
+          {
+            "position": "10.05/degisim-iletisimi/donusum-programlari-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dönüşüm Programları İletişim Uzmanı",
+            "title_en": "Transformation Communications Specialist"
+          },
+          {
+            "position": "10.05/degisim-iletisimi/degisim-paydas-analisti",
+            "level": "Analist",
+            "title_tr": "Değişim Paydaş Analisti",
+            "title_en": "Change Stakeholder Analyst"
+          },
+          {
+            "position": "10.05/degisim-iletisimi/degisim-icerikleri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Değişim İçerikleri Uzmanı",
+            "title_en": "Change Content Specialist"
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çalışan Katılımı ve Kültür İletişimi Yöneticisi",
+            "title_en": "Employee Engagement and Culture Communications Lead"
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-katilimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışan Katılımı Uzmanı",
+            "title_en": "Employee Engagement Specialist"
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/kultur-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kültür İletişimi Uzmanı",
+            "title_en": "Culture Communications Specialist"
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-etkinlikleri-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışan Etkinlikleri İletişim Uzmanı",
+            "title_en": "Employee Events Communications Specialist"
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-geri-bildirim-analisti",
+            "level": "Analist",
+            "title_tr": "Çalışan Geri Bildirim Analisti",
+            "title_en": "Employee Feedback Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.05",
+            "title_tr": "İç İletişim ve Çalışan Katılımı Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari",
+            "title_tr": "İç İletişim Kanalları Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/kidemli-ic-iletisim-uzmani",
+            "title_tr": "Kıdemli İç İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/ic-iletisim-uzmani",
+            "title_tr": "İç İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/intranet-ve-dijital-kanallar-uzmani",
+            "title_tr": "İntranet ve Dijital Kanallar Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/ic-iletisim-kanallari/calisan-bulteni-editoru",
+            "title_tr": "Çalışan Bülteni Editörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/degisim-iletisimi",
+            "title_tr": "Değişim İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.05/degisim-iletisimi/kidemli-degisim-iletisimi-uzmani",
+            "title_tr": "Kıdemli Değişim İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/degisim-iletisimi/donusum-programlari-iletisim-uzmani",
+            "title_tr": "Dönüşüm Programları İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/degisim-iletisimi/degisim-paydas-analisti",
+            "title_tr": "Değişim Paydaş Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/degisim-iletisimi/degisim-icerikleri-uzmani",
+            "title_tr": "Değişim İçerikleri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi",
+            "title_tr": "Çalışan Katılımı ve Kültür İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-katilimi-uzmani",
+            "title_tr": "Çalışan Katılımı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/kultur-iletisimi-uzmani",
+            "title_tr": "Kültür İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-etkinlikleri-iletisim-uzmani",
+            "title_tr": "Çalışan Etkinlikleri İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.05/calisan-katilimi-ve-kultur-iletisimi/calisan-geri-bildirim-analisti",
+            "title_tr": "Çalışan Geri Bildirim Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.06",
+        "name_tr": "Paydaş, Kamu ve Sektör İletişimi",
+        "responsibilities": [
+          "Paydaş haritalamasını ve paydaş iletişim planlarını geliştirmek",
+          "Kamuoyu ve sektör iletişimini yönetmek",
+          "Meslek örgütleri, sektörel platformlar ve kurumsal üyelikleri koordine etmek",
+          "Kurumsal temsil ve paydaş toplantılarını yönetmek",
+          "Şirket görüş ve pozisyonlarının iletişimini sağlamak"
+        ],
+        "authorities": [
+          "Paydaş önceliklendirme ölçütlerini ve paydaş iletişim planını belirler",
+          "Kurumsal üyelik ve sektörel platform katılımlarını direktörün onayına sunar",
+          "Şirket adına paylaşılacak görüş ve pozisyon metinlerini Üst Yönetimin onayına sunar",
+          "Paydaş toplantılarının gündemini ve katılımcılarını önerir"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Mevzuat gelişmeleri ve kamu görüş süreçlerinde hukuki değerlendirme"
+          },
+          {
+            "department": "23 - Sekreterya, Yönetici Destek ve Protokol",
+            "unit": "Kurumsal Protokol ve Temsil",
+            "topic": "Kurumsal temsil ve paydaş toplantılarında protokol düzeni"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "ESG paydaş beklentileri ve sürdürülebilirlik iletişimi"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "İtibar, Gündem ve Kriz İletişimi",
+            "topic": "Hassas konular ve kamu gündemine ilişkin şirket pozisyonları"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Paydaş ilişkilerinde kurumsal yönetişim ilkeleri ve açıklama yetkisi"
+          }
+        ],
+        "kpis": [
+          "Paydaş güven ve memnuniyet skoru",
+          "Kilit paydaş temas planı gerçekleşme oranı",
+          "Sektörel platform ve üyeliklerde aktif katılım oranı",
+          "Paydaş toplantısı aksiyonlarının kapanma oranı",
+          "Kamu gündemi izleme raporlarının güncelliği"
+        ],
+        "title_standard": [
+          {
+            "position": "10.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Paydaş ve Kamu İletişimi Müdürü",
+            "title_en": "Stakeholder and Public Affairs Communications Manager"
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Paydaş İletişimi Yöneticisi",
+            "title_en": "Corporate Stakeholder Communications Lead"
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/kidemli-paydas-iletisimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Paydaş İletişimi Uzmanı",
+            "title_en": "Senior Stakeholder Communications Specialist"
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/paydas-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Paydaş İletişimi Uzmanı",
+            "title_en": "Stakeholder Communications Specialist"
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/paydas-haritalama-analisti",
+            "level": "Analist",
+            "title_tr": "Paydaş Haritalama Analisti",
+            "title_en": "Stakeholder Mapping Analyst"
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/kurumsal-iliskiler-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Kurumsal İlişkiler Koordinatörü",
+            "title_en": "Corporate Relations Coordinator"
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kamu ve Sektör İletişimi Yöneticisi",
+            "title_en": "Public and Industry Communications Lead"
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/kamu-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kamu İletişimi Uzmanı",
+            "title_en": "Public Affairs Communications Specialist"
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/sektorel-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sektörel İletişim Uzmanı",
+            "title_en": "Industry Communications Specialist"
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/meslek-orgutleri-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Meslek Örgütleri İletişim Uzmanı",
+            "title_en": "Professional Associations Communications Specialist"
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/kamu-gundemi-analisti",
+            "level": "Analist",
+            "title_tr": "Kamu Gündemi Analisti",
+            "title_en": "Public Agenda Analyst"
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Temsil ve İlişkiler Yöneticisi",
+            "title_en": "Corporate Representation and Relations Lead"
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/kurumsal-temsil-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Temsil Uzmanı",
+            "title_en": "Corporate Representation Specialist"
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/protokol-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Protokol İletişimi Uzmanı",
+            "title_en": "Protocol Communications Specialist"
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/kurumsal-uyelikler-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Üyelikler Uzmanı",
+            "title_en": "Corporate Memberships Specialist"
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/paydas-toplantilari-koordinatoru",
+            "level": "Koordinatör",
+            "title_tr": "Paydaş Toplantıları Koordinatörü",
+            "title_en": "Stakeholder Meetings Coordinator"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.06",
+            "title_tr": "Paydaş ve Kamu İletişimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi",
+            "title_tr": "Kurumsal Paydaş İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/kidemli-paydas-iletisimi-uzmani",
+            "title_tr": "Kıdemli Paydaş İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/paydas-iletisimi-uzmani",
+            "title_tr": "Paydaş İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/paydas-haritalama-analisti",
+            "title_tr": "Paydaş Haritalama Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-paydas-iletisimi/kurumsal-iliskiler-koordinatoru",
+            "title_tr": "Kurumsal İlişkiler Koordinatörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi",
+            "title_tr": "Kamu ve Sektör İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/kamu-iletisimi-uzmani",
+            "title_tr": "Kamu İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/sektorel-iletisim-uzmani",
+            "title_tr": "Sektörel İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/meslek-orgutleri-iletisim-uzmani",
+            "title_tr": "Meslek Örgütleri İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kamu-ve-sektor-iletisimi/kamu-gundemi-analisti",
+            "title_tr": "Kamu Gündemi Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler",
+            "title_tr": "Kurumsal Temsil ve İlişkiler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/kurumsal-temsil-uzmani",
+            "title_tr": "Kurumsal Temsil Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/protokol-iletisimi-uzmani",
+            "title_tr": "Protokol İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/kurumsal-uyelikler-uzmani",
+            "title_tr": "Kurumsal Üyelikler Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.06/kurumsal-temsil-ve-iliskiler/paydas-toplantilari-koordinatoru",
+            "title_tr": "Paydaş Toplantıları Koordinatörü",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.07",
+        "name_tr": "Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki",
+        "responsibilities": [
+          "Kurumsal sponsorluk stratejisini ve değerlendirme kriterlerini yönetmek",
+          "Sponsorluk aktivasyonlarını ve etki ölçümünü koordine etmek",
+          "Kurumsal ve paydaş etkinliklerini yönetmek",
+          "Sosyal etki ve kurumsal sosyal sorumluluk iletişimini yürütmek",
+          "Sürdürülebilirlik anlatısını ve iletişim çıktılarını geliştirmek"
+        ],
+        "authorities": [
+          "Sponsorluk başvurularını değerlendirme kriterlerine göre önceliklendirir ve onaya sunar",
+          "Onaylı bütçe içinde kurumsal etkinlik planını ve etkinlik formatını belirler",
+          "Sponsorluk aktivasyon planını ve etki ölçüm yöntemini onaylar",
+          "Sürdürülebilirlik iletişim çıktılarındaki verilerin teyidini veri sahibinden talep eder"
+        ],
+        "collaborations": [
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "Sürdürülebilirlik ve ESG verisi, hedef ve performans bilgisinin iletişime aktarımı"
+          },
+          {
+            "department": "20 - İdari İşler ve Destek Hizmetleri",
+            "unit": "Seyahat, Konaklama ve Organizasyon Hizmetleri",
+            "topic": "Kurumsal etkinlik lojistiği, mekân ve organizasyon hizmetleri"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "Kampanya ve Etkinlik Pazarlaması",
+            "topic": "Kurumsal etkinlikler ile pazarlama etkinliklerinin ayrımı ve takvim uyumu"
+          },
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı",
+            "topic": "Etkinlik tasarımı ve kurumsal yayın görselleri"
+          },
+          {
+            "department": "22 - Kurumsal Güvenlik",
+            "unit": "Yönetici, Seyahat ve Etkinlik Güvenliği",
+            "topic": "Kurumsal etkinliklerde güvenlik planlaması"
+          },
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Etik, İhbar ve Suistimal Önleme",
+            "topic": "Sponsorluk ve bağışlarda etik ve çıkar çatışması kontrolü"
+          }
+        ],
+        "kpis": [
+          "Sponsorluk etki ve aktivasyon getirisi",
+          "Etkinlik katılımcı memnuniyeti",
+          "Etkinlik bütçesi gerçekleşme oranı",
+          "Sosyal etki programlarının erişimi",
+          "Sürdürülebilirlik iletişim çıktılarının zamanında yayımlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "10.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Sponsorluk ve Kurumsal Etkinlikler Müdürü",
+            "title_en": "Sponsorships and Corporate Events Manager"
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sponsorluk Yönetimi Yöneticisi",
+            "title_en": "Sponsorship Management Lead"
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/kidemli-sponsorluk-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Sponsorluk Uzmanı",
+            "title_en": "Senior Sponsorship Specialist"
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sponsorluk Uzmanı",
+            "title_en": "Sponsorship Specialist"
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-aktivasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sponsorluk Aktivasyon Uzmanı",
+            "title_en": "Sponsorship Activation Specialist"
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-etki-analisti",
+            "level": "Analist",
+            "title_tr": "Sponsorluk Etki Analisti",
+            "title_en": "Sponsorship Impact Analyst"
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Etkinlikler Yöneticisi",
+            "title_en": "Corporate Events Lead"
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/kidemli-kurumsal-etkinlik-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal Etkinlik Uzmanı",
+            "title_en": "Senior Corporate Events Specialist"
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/kurumsal-etkinlik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Etkinlik Uzmanı",
+            "title_en": "Corporate Events Specialist"
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/etkinlik-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etkinlik Operasyonları Uzmanı",
+            "title_en": "Event Operations Specialist"
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/etkinlik-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Etkinlik İletişimi Uzmanı",
+            "title_en": "Event Communications Specialist"
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi Yöneticisi",
+            "title_en": "Social Impact and Sustainability Communications Lead"
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/sosyal-etki-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sosyal Etki İletişimi Uzmanı",
+            "title_en": "Social Impact Communications Specialist"
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/surdurulebilirlik-iletisimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sürdürülebilirlik İletişimi Uzmanı",
+            "title_en": "Sustainability Communications Specialist"
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/kurumsal-sosyal-sorumluluk-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Sosyal Sorumluluk Uzmanı",
+            "title_en": "Corporate Social Responsibility Specialist"
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/sosyal-etki-raporlama-analisti",
+            "level": "Analist",
+            "title_tr": "Sosyal Etki Raporlama Analisti",
+            "title_en": "Social Impact Reporting Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.07",
+            "title_tr": "Sponsorluk ve Kurumsal Etkinlikler Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi",
+            "title_tr": "Sponsorluk Yönetimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/kidemli-sponsorluk-uzmani",
+            "title_tr": "Kıdemli Sponsorluk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-uzmani",
+            "title_tr": "Sponsorluk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-aktivasyon-uzmani",
+            "title_tr": "Sponsorluk Aktivasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sponsorluk-yonetimi/sponsorluk-etki-analisti",
+            "title_tr": "Sponsorluk Etki Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler",
+            "title_tr": "Kurumsal Etkinlikler Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/kidemli-kurumsal-etkinlik-uzmani",
+            "title_tr": "Kıdemli Kurumsal Etkinlik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/kurumsal-etkinlik-uzmani",
+            "title_tr": "Kurumsal Etkinlik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/etkinlik-operasyonlari-uzmani",
+            "title_tr": "Etkinlik Operasyonları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/kurumsal-etkinlikler/etkinlik-iletisimi-uzmani",
+            "title_tr": "Etkinlik İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi",
+            "title_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/sosyal-etki-iletisimi-uzmani",
+            "title_tr": "Sosyal Etki İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/surdurulebilirlik-iletisimi-uzmani",
+            "title_tr": "Sürdürülebilirlik İletişimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/kurumsal-sosyal-sorumluluk-uzmani",
+            "title_tr": "Kurumsal Sosyal Sorumluluk Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.07/sosyal-etki-ve-surdurulebilirlik-iletisimi/sosyal-etki-raporlama-analisti",
+            "title_tr": "Sosyal Etki Raporlama Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "10.08",
+        "name_tr": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+        "responsibilities": [
+          "Faaliyet ve sürdürülebilirlik raporlarının editoryal yönetimini yürütmek",
+          "Kurumsal sunum, profil ve yayınları yönetmek",
+          "Kurumsal web ve sosyal medya içeriklerini yönetmek",
+          "Dijital itibarı ve kurumsal içerik takvimini izlemek",
+          "Editoryal standartları, içerik kalitesini ve kurumsal arşivi yönetmek"
+        ],
+        "authorities": [
+          "Kurumsal editoryal standartları ve yayın kurallarını belirler",
+          "Kurumsal web sitesinin kurumsal sayfalarında (hakkımızda, haberler, basın, yatırımcı ilişkileri, sürdürülebilirlik) ve kurumsal sosyal medya hesaplarında yayınlanacak içerikleri onaylar",
+          "Editoryal standartlara aykırı kurumsal yayınların yayımını durdurabilir",
+          "Faaliyet raporu içerik planını ve takvimini direktörün onayına sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "19 - Tasarım ve Yaratıcı Hizmetler",
+            "unit": "Kurumsal Yayınlar, Sunum ve Etkinlik Tasarımı",
+            "topic": "Kurumsal yayınlar, faaliyet raporu ve sunum tasarımı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırımcı İlişkileri Müdürlüğü",
+            "topic": "Faaliyet raporunun finansal ve yatırımcı bölümleri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Faaliyet raporundaki finansal tablo ve verilerin teyidi"
+          },
+          {
+            "department": "21 - İş Sağlığı, Güvenliği, Çevre ve Sürdürülebilirlik",
+            "unit": "Kurumsal Sürdürülebilirlik ve ESG",
+            "topic": "Sürdürülebilirlik raporu verileri ve ESG içerikleri"
+          },
+          {
+            "department": "09 - Pazarlama ve Büyüme",
+            "unit": "İçerik Pazarlaması",
+            "topic": "Kurumsal yayınlar ile pazarlama içeriklerinin dil ve mesaj uyumu"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Yazılım Mühendisliği, Entegrasyon ve DevOps",
+            "topic": "Kurumsal web sitesi yayın altyapısı ve içerik yönetim sistemi"
+          }
+        ],
+        "kpis": [
+          "Kurumsal yayınların zamanında yayımlanma oranı",
+          "Editoryal kalite kontrolünü geçme oranı",
+          "Kurumsal web içeriklerinin güncellik oranı",
+          "Kurumsal sosyal medya etkileşim oranı",
+          "Dijital itibar skoru",
+          "Kurumsal arşive kayıt tamamlanma oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "10.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Kurumsal Yayınlar ve Dijital İletişim Müdürü",
+            "title_en": "Corporate Publications and Digital Communications Manager"
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Yayınlar Yöneticisi",
+            "title_en": "Corporate Publications Lead"
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kidemli-kurumsal-yayinlar-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal Yayınlar Uzmanı",
+            "title_en": "Senior Corporate Publications Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kurumsal-yayinlar-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Yayınlar Uzmanı",
+            "title_en": "Corporate Publications Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/faaliyet-raporu-editoru",
+            "level": "Uzman",
+            "title_tr": "Faaliyet Raporu Editörü",
+            "title_en": "Annual Report Editor"
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kurumsal-dokumantasyon-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Dokümantasyon Uzmanı",
+            "title_en": "Corporate Documentation Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Dijital İletişim Yöneticisi",
+            "title_en": "Corporate Digital Communications Lead"
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-dijital-iletisim-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Dijital İletişim Uzmanı",
+            "title_en": "Corporate Digital Communications Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-sosyal-medya-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Sosyal Medya Uzmanı",
+            "title_en": "Corporate Social Media Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/dijital-itibar-izleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Dijital İtibar İzleme Uzmanı",
+            "title_en": "Digital Reputation Monitoring Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-web-icerik-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Web İçerik Uzmanı",
+            "title_en": "Corporate Web Content Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal İçerik ve Editoryal Yönetim Yöneticisi",
+            "title_en": "Corporate Content and Editorial Management Lead"
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kidemli-kurumsal-icerik-editoru",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Kurumsal İçerik Editörü",
+            "title_en": "Senior Corporate Content Editor"
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kurumsal-icerik-yazari",
+            "level": "Uzman",
+            "title_tr": "Kurumsal İçerik Yazarı",
+            "title_en": "Corporate Content Writer"
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/editoryal-kalite-uzmani",
+            "level": "Uzman",
+            "title_tr": "Editoryal Kalite Uzmanı",
+            "title_en": "Editorial Quality Specialist"
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kurumsal-icerik-takvimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal İçerik Takvimi Uzmanı",
+            "title_en": "Corporate Content Calendar Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "model": "Standart",
+            "min": 16,
+            "max": 28
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 28,
+            "max": 40
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "10.08",
+            "title_tr": "Kurumsal Yayınlar ve Dijital İletişim Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon",
+            "title_tr": "Kurumsal Yayınlar Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kidemli-kurumsal-yayinlar-uzmani",
+            "title_tr": "Kıdemli Kurumsal Yayınlar Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kurumsal-yayinlar-uzmani",
+            "title_tr": "Kurumsal Yayınlar Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/faaliyet-raporu-editoru",
+            "title_tr": "Faaliyet Raporu Editörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-yayinlar-ve-dokumantasyon/kurumsal-dokumantasyon-uzmani",
+            "title_tr": "Kurumsal Dokümantasyon Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya",
+            "title_tr": "Kurumsal Dijital İletişim Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-dijital-iletisim-uzmani",
+            "title_tr": "Kurumsal Dijital İletişim Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-sosyal-medya-uzmani",
+            "title_tr": "Kurumsal Sosyal Medya Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/dijital-itibar-izleme-uzmani",
+            "title_tr": "Dijital İtibar İzleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-dijital-ve-sosyal-medya/kurumsal-web-icerik-uzmani",
+            "title_tr": "Kurumsal Web İçerik Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim",
+            "title_tr": "Kurumsal İçerik ve Editoryal Yönetim Yöneticisi",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kidemli-kurumsal-icerik-editoru",
+            "title_tr": "Kıdemli Kurumsal İçerik Editörü",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kurumsal-icerik-yazari",
+            "title_tr": "Kurumsal İçerik Yazarı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/editoryal-kalite-uzmani",
+            "title_tr": "Editoryal Kalite Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "10.08/kurumsal-icerik-ve-editoryal-yonetim/kurumsal-icerik-takvimi-uzmani",
+            "title_tr": "Kurumsal İçerik Takvimi Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      }
+    ]
+  }
+}

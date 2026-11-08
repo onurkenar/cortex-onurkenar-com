@@ -1,0 +1,13 @@
+<style id="v26-done-items">
+/* 2026-11-07: verilmiş kararlar sol menüde yeşil + ✓; bütün kararları verilmiş bölümün sayı rozeti yeşil */
+#sideNav .subItem.done{color:#17603a;font-weight:650}
+#sideNav .subItem.done::after{content:"✓";margin-left:auto;flex:0 0 auto;font-weight:900;font-size:11.5px;color:#1f9d55}
+#sideNav .subItem.done:hover{color:#0f4a28}
+#sideNav .subItem.done.active{color:#111}
+#sideNav .menuSection.done .menuBadge{background:#1f9d55;color:#fff;border-color:#1f9d55}
+[data-theme="dark"] #sideNav .subItem.done{color:#8fe0b0}
+[data-theme="dark"] #sideNav .subItem.done::after{color:#3fb877}
+[data-theme="dark"] #sideNav .subItem.done:hover{color:#b6f0cf}
+[data-theme="dark"] #sideNav .subItem.done.active{color:#fff}
+[data-theme="dark"] #sideNav .menuSection.done .menuBadge{background:#3fb877;color:#0b1a12;border-color:#3fb877}
+</style>

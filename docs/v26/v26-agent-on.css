@@ -1,0 +1,22 @@
+<style id="v26-agent-on">
+/* 2026-11-07 kullanıcı isteği: projede seçili ajanlar Ajanlar sayfasında farklı renkte (yeşil) — kartlar, şema etiketleri, organ kartlarındaki "Projedeki ajanlar", departman sayıları */
+.agCard.on[data-agent]{border-color:#1f9d55}
+.agCard.on[data-agent]:not(.editing){background:#f2fbf5}
+.agCard.on[data-agent] .agToggle[aria-pressed=true]{background:#1f9d55;border-color:#1f9d55;color:#fff}
+.amAgChip:not(.off){background:#e6f6ec;border-color:#8fd0a9;color:#145c34;font-weight:800}
+.amAgChip:not(.off):hover,.amAgChip:not(.off):focus-visible{border-color:#1f9d55}
+.amAgent.on{border-color:#8fd0a9;background:#f2fbf5;box-shadow:inset 3px 0 0 #1f9d55}
+.amAgent.on:hover,.amAgent.on:focus-visible{border-color:#1f9d55}
+.amDot.on{background:#1f9d55}
+.agPosDept summary small.agOnN{background:#e6f6ec;border:1px solid #8fd0a9;color:#145c34;border-radius:999px;padding:0 8px}
+[data-theme="dark"] .agCard.on[data-agent]{border-color:#3fb877}
+[data-theme="dark"] .agCard.on[data-agent]:not(.editing){background:#11241a}
+[data-theme="dark"] .agCard.on[data-agent] .agToggle[aria-pressed=true]{background:#3fb877;border-color:#3fb877;color:#0b1a12}
+[data-theme="dark"] .amAgChip:not(.off){background:#12301f;border-color:#2f7a4e;color:#9be3bb}
+[data-theme="dark"] .amAgChip:not(.off):hover,[data-theme="dark"] .amAgChip:not(.off):focus-visible{border-color:#3fb877}
+[data-theme="dark"] .amAgent.on{background:#11241a;border-color:#2f7a4e;box-shadow:inset 3px 0 0 #3fb877}
+[data-theme="dark"] .amDot.on{background:#3fb877}
+[data-theme="dark"] .agPosDept summary small.agOnN{background:#12301f;border-color:#2f7a4e;color:#9be3bb}
+.amRoot .amAgChip:not(.off){background:#1f9d55;border-color:#1f9d55;color:#fff}
+[data-theme="dark"] .amRoot .amAgChip:not(.off){background:#1f9d55;border-color:#1f9d55;color:#fff}
+</style>

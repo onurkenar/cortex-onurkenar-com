@@ -1,0 +1,1086 @@
+{
+  "schema_version": "2.0",
+  "document": {
+    "name": "12 - Operasyon Yönetimi Tam Fonksiyonel Organizasyon Yapısı",
+    "created_at": "2026-10-29",
+    "language": "tr-TR"
+  },
+  "department": {
+    "code": "12",
+    "name_tr": "Operasyon Yönetimi",
+    "name_en": "Operations Management",
+    "organization_model": "Tam Fonksiyonel",
+    "purpose": "Şirketin ürün ve hizmet taahhütlerini güvenli, zamanında, kaliteli, ölçeklenebilir ve maliyet etkin biçimde teslim etmek; kaynak, kapasite, süreç, saha ve hizmet seviyelerini uçtan uca yönetmek.",
+    "reports_to": {
+      "title_tr": "Operasyonlardan Sorumlu Genel Müdür Yardımcısı / Operasyon Başkanı",
+      "title_en": "Chief Operating Officer (COO)"
+    },
+    "head": {
+      "position_code": "12.00.001",
+      "title_tr": "Operasyon Yönetimi Direktörü",
+      "title_en": "Operations Management Director",
+      "alternative_executive_title": "Chief Operating Officer (COO)",
+      "reports_to": "Genel Müdür / Chief Executive Officer",
+      "direct_reports": [
+        "12.01",
+        "12.02",
+        "12.03",
+        "12.04",
+        "12.05",
+        "12.06",
+        "12.07",
+        "12.08"
+      ],
+      "accountabilities": [
+        "Operasyon stratejisi ve hedef işletim modelini oluşturmak",
+        "Hizmet teslimatı, kapasite, saha, stok, lojistik ve operasyonel kaliteyi yönetmek",
+        "SLA, verimlilik, maliyet ve süreklilik hedeflerini sahiplenmek",
+        "Operasyonel riskleri, darboğazları ve dönüşüm portföyünü yönetmek",
+        "Müşteri, satış, ürün, teknoloji, finans, kalite ve tedarik birimleriyle uçtan uca koordinasyonu sağlamak"
+      ]
+    },
+    "hierarchy_standard": [
+      "Departman Direktörü",
+      "Birim Müdürü",
+      "Ekip Yöneticisi",
+      "Uzman Pozisyonlar"
+    ],
+    "units": [
+      {
+        "unit_code": "12.01",
+        "name_tr": "Operasyon Stratejisi, Planlama ve Yönetişim",
+        "name_en": "Operations Strategy, Planning and Governance",
+        "manager": {
+          "position_code": "12.01.001",
+          "title_tr": "Operasyon Stratejisi, Planlama ve Yönetişim Müdürü",
+          "title_en": "Operations Strategy, Planning and Governance Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.01.01",
+            "name_tr": "Operasyon Stratejisi ve İşletim Modeli",
+            "name_en": "Operations Strategy and Operating Model",
+            "lead": {
+              "position_code": "12.01.01.001",
+              "title_tr": "Operasyon Stratejisi ve İşletim Modeli Yöneticisi",
+              "title_en": "Operations Strategy and Operating Model Manager",
+              "reports_to": "12.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.01.01.002",
+                "title_tr": "Kıdemli Operasyon Stratejisi Uzmanı",
+                "title_en": "Senior Operations Strategy Specialist",
+                "reports_to": "12.01.01.001"
+              },
+              {
+                "position_code": "12.01.01.003",
+                "title_tr": "Operasyon Stratejisi Uzmanı",
+                "title_en": "Operations Strategy Specialist",
+                "reports_to": "12.01.01.001"
+              },
+              {
+                "position_code": "12.01.01.004",
+                "title_tr": "İşletim Modeli Analisti",
+                "title_en": "Operating Model Analyst",
+                "reports_to": "12.01.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon stratejisi ve hedef işletim modelini oluşturmak",
+              "Operasyonel yetkinlik, lokasyon ve organizasyon tasarımını desteklemek",
+              "Stratejik operasyon dönüşüm portföyünü yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.01.02",
+            "name_tr": "Operasyon Planlama ve Bütçe",
+            "name_en": "Operations Planning and Budget",
+            "lead": {
+              "position_code": "12.01.02.001",
+              "title_tr": "Operasyon Planlama ve Bütçe Yöneticisi",
+              "title_en": "Operations Planning and Budget Manager",
+              "reports_to": "12.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.01.02.002",
+                "title_tr": "Kıdemli Operasyon Planlama Uzmanı",
+                "title_en": "Senior Operations Planning Specialist",
+                "reports_to": "12.01.02.001"
+              },
+              {
+                "position_code": "12.01.02.003",
+                "title_tr": "Operasyon Planlama Uzmanı",
+                "title_en": "Operations Planning Specialist",
+                "reports_to": "12.01.02.001"
+              },
+              {
+                "position_code": "12.01.02.004",
+                "title_tr": "Operasyon Bütçe Analisti",
+                "title_en": "Operations Budget Analyst",
+                "reports_to": "12.01.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Yıllık operasyon planı ve bütçesini hazırlamak",
+              "Hacim, kapasite, kaynak ve maliyet tahminlerini bütünleştirmek",
+              "Plan-gerçekleşen sapmalarını ve aksiyonları izlemek"
+            ]
+          },
+          {
+            "team_code": "12.01.03",
+            "name_tr": "Operasyonel Yönetişim ve Performans",
+            "name_en": "Operational Governance and Performance",
+            "lead": {
+              "position_code": "12.01.03.001",
+              "title_tr": "Operasyonel Yönetişim ve Performans Yöneticisi",
+              "title_en": "Operational Governance and Performance Manager",
+              "reports_to": "12.01.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.01.03.002",
+                "title_tr": "Kıdemli Operasyonel Performans Uzmanı",
+                "title_en": "Senior Operational Performance Specialist",
+                "reports_to": "12.01.03.001"
+              },
+              {
+                "position_code": "12.01.03.003",
+                "title_tr": "Operasyonel Yönetişim Uzmanı",
+                "title_en": "Operational Governance Specialist",
+                "reports_to": "12.01.03.001"
+              },
+              {
+                "position_code": "12.01.03.004",
+                "title_tr": "Operasyon Performans Analisti",
+                "title_en": "Operations Performance Analyst",
+                "reports_to": "12.01.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon KPI ve yönetim ritmini tasarlamak",
+              "Birim performansını, SLA sonuçlarını ve aksiyonları izlemek",
+              "Operasyon yönetim raporlarını ve karar destek çıktılarını üretmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.02",
+        "name_tr": "Hizmet Teslimatı ve Operasyon Yönetimi",
+        "name_en": "Service Delivery and Operations Management",
+        "manager": {
+          "position_code": "12.02.001",
+          "title_tr": "Hizmet Teslimatı ve Operasyon Yönetimi Müdürü",
+          "title_en": "Service Delivery and Operations Management Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.02.01",
+            "name_tr": "Hizmet Teslimatı",
+            "name_en": "Service Delivery",
+            "lead": {
+              "position_code": "12.02.01.001",
+              "title_tr": "Hizmet Teslimatı Yöneticisi",
+              "title_en": "Service Delivery Manager",
+              "reports_to": "12.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.02.01.002",
+                "title_tr": "Kıdemli Hizmet Teslimatı Uzmanı",
+                "title_en": "Senior Service Delivery Specialist",
+                "reports_to": "12.02.01.001"
+              },
+              {
+                "position_code": "12.02.01.003",
+                "title_tr": "Hizmet Teslimatı Uzmanı",
+                "title_en": "Service Delivery Specialist",
+                "reports_to": "12.02.01.001"
+              },
+              {
+                "position_code": "12.02.01.004",
+                "title_tr": "Hizmet Teslimatı Koordinatörü",
+                "title_en": "Service Delivery Coordinator",
+                "reports_to": "12.02.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Sözleşme ve hizmet kapsamına uygun günlük teslimatı yürütmek",
+              "Teslimat takvimi, çıktı ve bağımlılıkları koordine etmek",
+              "Hizmet aksaklıklarını ve telafi planlarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.02.02",
+            "name_tr": "Operasyon Kontrol Merkezi",
+            "name_en": "Operations Control Center",
+            "lead": {
+              "position_code": "12.02.02.001",
+              "title_tr": "Operasyon Kontrol Merkezi Yöneticisi",
+              "title_en": "Operations Control Center Manager",
+              "reports_to": "12.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.02.02.002",
+                "title_tr": "Kıdemli Operasyon Kontrol Uzmanı",
+                "title_en": "Senior Operations Control Specialist",
+                "reports_to": "12.02.02.001"
+              },
+              {
+                "position_code": "12.02.02.003",
+                "title_tr": "Operasyon Kontrol Uzmanı",
+                "title_en": "Operations Control Specialist",
+                "reports_to": "12.02.02.001"
+              },
+              {
+                "position_code": "12.02.02.004",
+                "title_tr": "Operasyon İzleme Analisti",
+                "title_en": "Operations Monitoring Analyst",
+                "reports_to": "12.02.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyonun anlık durumunu ve kritik göstergeleri izlemek",
+              "Kesinti, gecikme ve darboğazlar için eskalasyon başlatmak",
+              "Vardiya ve birimler arası operasyon koordinasyonunu sağlamak"
+            ]
+          },
+          {
+            "team_code": "12.02.03",
+            "name_tr": "İş Emri ve Talep Yönetimi",
+            "name_en": "Work Order and Request Management",
+            "lead": {
+              "position_code": "12.02.03.001",
+              "title_tr": "İş Emri ve Talep Yönetimi Yöneticisi",
+              "title_en": "Work Order and Request Management Manager",
+              "reports_to": "12.02.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.02.03.002",
+                "title_tr": "Kıdemli İş Emri Yönetimi Uzmanı",
+                "title_en": "Senior Work Order Management Specialist",
+                "reports_to": "12.02.03.001"
+              },
+              {
+                "position_code": "12.02.03.003",
+                "title_tr": "İş Emri Yönetimi Uzmanı",
+                "title_en": "Work Order Management Specialist",
+                "reports_to": "12.02.03.001"
+              },
+              {
+                "position_code": "12.02.03.004",
+                "title_tr": "Operasyon Talep Koordinatörü",
+                "title_en": "Operations Request Coordinator",
+                "reports_to": "12.02.03.001"
+              }
+            ],
+            "responsibilities": [
+              "İş emirlerini almak, sınıflandırmak ve önceliklendirmek",
+              "Atama, durum, tamamlanma ve kapanış süreçlerini yönetmek",
+              "İş emri çevrim süresi ve iş yükü dengesini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.03",
+        "name_tr": "Kapasite, Kaynak ve Vardiya Yönetimi",
+        "name_en": "Capacity, Resource and Workforce Management",
+        "manager": {
+          "position_code": "12.03.001",
+          "title_tr": "Kapasite, Kaynak ve Vardiya Yönetimi Müdürü",
+          "title_en": "Capacity, Resource and Workforce Management Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.03.01",
+            "name_tr": "Talep ve Kapasite Planlama",
+            "name_en": "Demand and Capacity Planning",
+            "lead": {
+              "position_code": "12.03.01.001",
+              "title_tr": "Talep ve Kapasite Planlama Yöneticisi",
+              "title_en": "Demand and Capacity Planning Manager",
+              "reports_to": "12.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.03.01.002",
+                "title_tr": "Kıdemli Kapasite Planlama Uzmanı",
+                "title_en": "Senior Capacity Planning Specialist",
+                "reports_to": "12.03.01.001"
+              },
+              {
+                "position_code": "12.03.01.003",
+                "title_tr": "Kapasite Planlama Uzmanı",
+                "title_en": "Capacity Planning Specialist",
+                "reports_to": "12.03.01.001"
+              },
+              {
+                "position_code": "12.03.01.004",
+                "title_tr": "Talep Tahmin Analisti",
+                "title_en": "Demand Forecast Analyst",
+                "reports_to": "12.03.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon talebini hacim ve kanal bazında tahmin etmek",
+              "Kapasite ihtiyacı ve darboğaz senaryolarını oluşturmak",
+              "Kapasite kullanımını ve esneklik planlarını yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.03.02",
+            "name_tr": "İş Gücü ve Vardiya Planlama",
+            "name_en": "Workforce and Shift Planning",
+            "lead": {
+              "position_code": "12.03.02.001",
+              "title_tr": "İş Gücü ve Vardiya Planlama Yöneticisi",
+              "title_en": "Workforce and Shift Planning Manager",
+              "reports_to": "12.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.03.02.002",
+                "title_tr": "Kıdemli İş Gücü Planlama Uzmanı",
+                "title_en": "Senior Workforce Planning Specialist",
+                "reports_to": "12.03.02.001"
+              },
+              {
+                "position_code": "12.03.02.003",
+                "title_tr": "Vardiya Planlama Uzmanı",
+                "title_en": "Shift Planning Specialist",
+                "reports_to": "12.03.02.001"
+              },
+              {
+                "position_code": "12.03.02.004",
+                "title_tr": "İş Gücü Analisti",
+                "title_en": "Workforce Analyst",
+                "reports_to": "12.03.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Vardiya, izin ve operasyonel iş gücü planını oluşturmak",
+              "Hacim ile personel kapasitesini dengelemek",
+              "Fazla mesai, doluluk ve vardiya uyumunu izlemek"
+            ]
+          },
+          {
+            "team_code": "12.03.03",
+            "name_tr": "Kaynak Tahsis ve Çizelgeleme",
+            "name_en": "Resource Allocation and Scheduling",
+            "lead": {
+              "position_code": "12.03.03.001",
+              "title_tr": "Kaynak Tahsis ve Çizelgeleme Yöneticisi",
+              "title_en": "Resource Allocation and Scheduling Manager",
+              "reports_to": "12.03.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.03.03.002",
+                "title_tr": "Kıdemli Kaynak Planlama Uzmanı",
+                "title_en": "Senior Resource Planning Specialist",
+                "reports_to": "12.03.03.001"
+              },
+              {
+                "position_code": "12.03.03.003",
+                "title_tr": "Kaynak Tahsis Uzmanı",
+                "title_en": "Resource Allocation Specialist",
+                "reports_to": "12.03.03.001"
+              },
+              {
+                "position_code": "12.03.03.004",
+                "title_tr": "Çizelgeleme Uzmanı",
+                "title_en": "Scheduling Specialist",
+                "reports_to": "12.03.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Ekipman, araç, alan ve insan kaynağını operasyonlara tahsis etmek",
+              "Çizelge optimizasyonu ve değişiklik yönetimini yürütmek",
+              "Kaynak çakışmaları ve atıl kapasiteyi azaltmak"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.04",
+        "name_tr": "Saha Operasyonları ve Lokasyon Yönetimi",
+        "name_en": "Field Operations and Site Management",
+        "manager": {
+          "position_code": "12.04.001",
+          "title_tr": "Saha Operasyonları ve Lokasyon Yönetimi Müdürü",
+          "title_en": "Field Operations and Site Management Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.04.01",
+            "name_tr": "Saha Operasyonları",
+            "name_en": "Field Operations",
+            "lead": {
+              "position_code": "12.04.01.001",
+              "title_tr": "Saha Operasyonları Yöneticisi",
+              "title_en": "Field Operations Manager",
+              "reports_to": "12.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.04.01.002",
+                "title_tr": "Kıdemli Saha Operasyon Uzmanı",
+                "title_en": "Senior Field Operations Specialist",
+                "reports_to": "12.04.01.001"
+              },
+              {
+                "position_code": "12.04.01.003",
+                "title_tr": "Saha Operasyon Uzmanı",
+                "title_en": "Field Operations Specialist",
+                "reports_to": "12.04.01.001"
+              },
+              {
+                "position_code": "12.04.01.004",
+                "title_tr": "Saha Operasyon Koordinatörü",
+                "title_en": "Field Operations Coordinator",
+                "reports_to": "12.04.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Saha ekiplerinin günlük faaliyetlerini planlamak ve izlemek",
+              "Saha görevlerinin kalite, süre ve kapsam uyumunu sağlamak",
+              "Saha riskleri, olayları ve eskalasyonları yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.04.02",
+            "name_tr": "Lokasyon ve Tesis Operasyonları",
+            "name_en": "Site and Facility Operations",
+            "lead": {
+              "position_code": "12.04.02.001",
+              "title_tr": "Lokasyon ve Tesis Operasyonları Yöneticisi",
+              "title_en": "Site and Facility Operations Manager",
+              "reports_to": "12.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.04.02.002",
+                "title_tr": "Kıdemli Lokasyon Operasyon Uzmanı",
+                "title_en": "Senior Site Operations Specialist",
+                "reports_to": "12.04.02.001"
+              },
+              {
+                "position_code": "12.04.02.003",
+                "title_tr": "Tesis Operasyon Uzmanı",
+                "title_en": "Facility Operations Specialist",
+                "reports_to": "12.04.02.001"
+              },
+              {
+                "position_code": "12.04.02.004",
+                "title_tr": "Lokasyon Koordinatörü",
+                "title_en": "Site Coordinator",
+                "reports_to": "12.04.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Lokasyonların operasyonel hazırlığını ve sürekliliğini sağlamak",
+              "Alan, erişim, altyapı ve destek ihtiyaçlarını koordine etmek",
+              "Lokasyon performansı ve standart uyumunu izlemek"
+            ]
+          },
+          {
+            "team_code": "12.04.03",
+            "name_tr": "Mobil Ekip ve Rota Yönetimi",
+            "name_en": "Mobile Workforce and Route Management",
+            "lead": {
+              "position_code": "12.04.03.001",
+              "title_tr": "Mobil Ekip ve Rota Yönetimi Yöneticisi",
+              "title_en": "Mobile Workforce and Route Management Manager",
+              "reports_to": "12.04.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.04.03.002",
+                "title_tr": "Kıdemli Rota Planlama Uzmanı",
+                "title_en": "Senior Route Planning Specialist",
+                "reports_to": "12.04.03.001"
+              },
+              {
+                "position_code": "12.04.03.003",
+                "title_tr": "Mobil Ekip Planlama Uzmanı",
+                "title_en": "Mobile Workforce Planning Specialist",
+                "reports_to": "12.04.03.001"
+              },
+              {
+                "position_code": "12.04.03.004",
+                "title_tr": "Rota Optimizasyon Analisti",
+                "title_en": "Route Optimization Analyst",
+                "reports_to": "12.04.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Mobil ekip görev ve rota planlarını oluşturmak",
+              "Seyahat süresi, yakıt ve hizmet seviyesini optimize etmek",
+              "Gerçekleşen rota ve saha verimliliğini analiz etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.05",
+        "name_tr": "Tedarik, Stok ve Lojistik Operasyonları",
+        "name_en": "Supply, Inventory and Logistics Operations",
+        "manager": {
+          "position_code": "12.05.001",
+          "title_tr": "Tedarik, Stok ve Lojistik Operasyonları Müdürü",
+          "title_en": "Supply, Inventory and Logistics Operations Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.05.01",
+            "name_tr": "Operasyonel Tedarik Koordinasyonu",
+            "name_en": "Operational Supply Coordination",
+            "lead": {
+              "position_code": "12.05.01.001",
+              "title_tr": "Operasyonel Tedarik Koordinasyonu Yöneticisi",
+              "title_en": "Operational Supply Coordination Manager",
+              "reports_to": "12.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.05.01.002",
+                "title_tr": "Kıdemli Operasyonel Tedarik Uzmanı",
+                "title_en": "Senior Operational Supply Specialist",
+                "reports_to": "12.05.01.001"
+              },
+              {
+                "position_code": "12.05.01.003",
+                "title_tr": "Operasyonel Tedarik Uzmanı",
+                "title_en": "Operational Supply Specialist",
+                "reports_to": "12.05.01.001"
+              },
+              {
+                "position_code": "12.05.01.004",
+                "title_tr": "Tedarik Koordinatörü",
+                "title_en": "Supply Coordinator",
+                "reports_to": "12.05.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Onaylı taleplerin tedarik sürecini koordine etmek",
+              "Teslimat tarihi, miktar ve hizmet uygunluğunu izlemek",
+              "Tedarikçi operasyon sorunlarını Satın Alma ile yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.05.02",
+            "name_tr": "Stok ve Malzeme Yönetimi",
+            "name_en": "Inventory and Materials Management",
+            "lead": {
+              "position_code": "12.05.02.001",
+              "title_tr": "Stok ve Malzeme Yönetimi Yöneticisi",
+              "title_en": "Inventory and Materials Management Manager",
+              "reports_to": "12.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.05.02.002",
+                "title_tr": "Kıdemli Stok Yönetimi Uzmanı",
+                "title_en": "Senior Inventory Management Specialist",
+                "reports_to": "12.05.02.001"
+              },
+              {
+                "position_code": "12.05.02.003",
+                "title_tr": "Stok Yönetimi Uzmanı",
+                "title_en": "Inventory Management Specialist",
+                "reports_to": "12.05.02.001"
+              },
+              {
+                "position_code": "12.05.02.004",
+                "title_tr": "Malzeme Planlama Analisti",
+                "title_en": "Materials Planning Analyst",
+                "reports_to": "12.05.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Stok seviyelerini ve malzeme ihtiyaçlarını planlamak",
+              "Sayım, hareket, kritik stok ve yeniden sipariş süreçlerini yürütmek",
+              "Stok doğruluğu, devir hızı ve kayıp oranını izlemek"
+            ]
+          },
+          {
+            "team_code": "12.05.03",
+            "name_tr": "Depo, Sevkiyat ve Lojistik",
+            "name_en": "Warehouse, Dispatch and Logistics",
+            "lead": {
+              "position_code": "12.05.03.001",
+              "title_tr": "Depo, Sevkiyat ve Lojistik Yöneticisi",
+              "title_en": "Warehouse, Dispatch and Logistics Manager",
+              "reports_to": "12.05.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.05.03.002",
+                "title_tr": "Kıdemli Lojistik Operasyon Uzmanı",
+                "title_en": "Senior Logistics Operations Specialist",
+                "reports_to": "12.05.03.001"
+              },
+              {
+                "position_code": "12.05.03.003",
+                "title_tr": "Depo ve Sevkiyat Uzmanı",
+                "title_en": "Warehouse and Dispatch Specialist",
+                "reports_to": "12.05.03.001"
+              },
+              {
+                "position_code": "12.05.03.004",
+                "title_tr": "Lojistik Koordinatörü",
+                "title_en": "Logistics Coordinator",
+                "reports_to": "12.05.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Mal kabul, depolama, toplama, paketleme ve sevkiyatı yönetmek",
+              "Teslimat planı ve lojistik sağlayıcı koordinasyonunu yürütmek",
+              "Teslimat doğruluğu, hasar ve lojistik maliyetlerini izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.06",
+        "name_tr": "Süreç Yönetimi ve Operasyonel Mükemmellik",
+        "name_en": "Process Management and Operational Excellence",
+        "manager": {
+          "position_code": "12.06.001",
+          "title_tr": "Süreç Yönetimi ve Operasyonel Mükemmellik Müdürü",
+          "title_en": "Process Management and Operational Excellence Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.06.01",
+            "name_tr": "Süreç Tasarımı ve Standardizasyon",
+            "name_en": "Process Design and Standardization",
+            "lead": {
+              "position_code": "12.06.01.001",
+              "title_tr": "Süreç Tasarımı ve Standardizasyon Yöneticisi",
+              "title_en": "Process Design and Standardization Manager",
+              "reports_to": "12.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.06.01.002",
+                "title_tr": "Kıdemli Süreç Yönetimi Uzmanı",
+                "title_en": "Senior Process Management Specialist",
+                "reports_to": "12.06.01.001"
+              },
+              {
+                "position_code": "12.06.01.003",
+                "title_tr": "Süreç Yönetimi Uzmanı",
+                "title_en": "Process Management Specialist",
+                "reports_to": "12.06.01.001"
+              },
+              {
+                "position_code": "12.06.01.004",
+                "title_tr": "Süreç Analisti",
+                "title_en": "Process Analyst",
+                "reports_to": "12.06.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon süreçlerini haritalamak ve süreç sahipliğini netleştirmek",
+              "Prosedür, iş talimatı ve kontrol noktalarını standardize etmek",
+              "Süreç değişikliklerini ve dokümantasyon yaşam döngüsünü yönetmek"
+            ]
+          },
+          {
+            "team_code": "12.06.02",
+            "name_tr": "Yalın Operasyon ve Sürekli İyileştirme",
+            "name_en": "Lean Operations and Continuous Improvement",
+            "lead": {
+              "position_code": "12.06.02.001",
+              "title_tr": "Yalın Operasyon ve Sürekli İyileştirme Yöneticisi",
+              "title_en": "Lean Operations and Continuous Improvement Manager",
+              "reports_to": "12.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.06.02.002",
+                "title_tr": "Kıdemli Yalın Operasyon Uzmanı",
+                "title_en": "Senior Lean Operations Specialist",
+                "reports_to": "12.06.02.001"
+              },
+              {
+                "position_code": "12.06.02.003",
+                "title_tr": "Sürekli İyileştirme Uzmanı",
+                "title_en": "Continuous Improvement Specialist",
+                "reports_to": "12.06.02.001"
+              },
+              {
+                "position_code": "12.06.02.004",
+                "title_tr": "Operasyonel Verimlilik Analisti",
+                "title_en": "Operational Efficiency Analyst",
+                "reports_to": "12.06.02.001"
+              }
+            ],
+            "responsibilities": [
+              "İsraf, bekleme ve tekrar iş kaynaklarını azaltmak",
+              "Lean, Kaizen ve problem çözme programlarını yürütmek",
+              "İyileştirme faydalarını zaman, kalite ve maliyet bazında ölçmek"
+            ]
+          },
+          {
+            "team_code": "12.06.03",
+            "name_tr": "Operasyon Otomasyonu ve Dijitalleşme",
+            "name_en": "Operations Automation and Digitalization",
+            "lead": {
+              "position_code": "12.06.03.001",
+              "title_tr": "Operasyon Otomasyonu ve Dijitalleşme Yöneticisi",
+              "title_en": "Operations Automation and Digitalization Manager",
+              "reports_to": "12.06.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.06.03.002",
+                "title_tr": "Kıdemli Operasyon Otomasyonu Uzmanı",
+                "title_en": "Senior Operations Automation Specialist",
+                "reports_to": "12.06.03.001"
+              },
+              {
+                "position_code": "12.06.03.003",
+                "title_tr": "Operasyon Dijitalleşme Uzmanı",
+                "title_en": "Operations Digitalization Specialist",
+                "reports_to": "12.06.03.001"
+              },
+              {
+                "position_code": "12.06.03.004",
+                "title_tr": "İş Süreçleri Otomasyon Analisti",
+                "title_en": "Business Process Automation Analyst",
+                "reports_to": "12.06.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Otomasyon ve dijitalleşme fırsatlarını belirlemek",
+              "BT ve ürün ekipleriyle çözüm gereksinimlerini tanımlamak",
+              "Dijital uygulamaların benimsenmesini ve operasyonel faydasını izlemek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.07",
+        "name_tr": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence",
+        "name_en": "Service Level, Quality and Operational Assurance",
+        "manager": {
+          "position_code": "12.07.001",
+          "title_tr": "Hizmet Seviyesi, Kalite ve Operasyonel Güvence Müdürü",
+          "title_en": "Service Level, Quality and Operational Assurance Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.07.01",
+            "name_tr": "SLA ve Hizmet Seviyesi Yönetimi",
+            "name_en": "SLA and Service Level Management",
+            "lead": {
+              "position_code": "12.07.01.001",
+              "title_tr": "SLA ve Hizmet Seviyesi Yönetimi Yöneticisi",
+              "title_en": "SLA and Service Level Management Manager",
+              "reports_to": "12.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.07.01.002",
+                "title_tr": "Kıdemli Hizmet Seviyesi Uzmanı",
+                "title_en": "Senior Service Level Specialist",
+                "reports_to": "12.07.01.001"
+              },
+              {
+                "position_code": "12.07.01.003",
+                "title_tr": "SLA Yönetimi Uzmanı",
+                "title_en": "SLA Management Specialist",
+                "reports_to": "12.07.01.001"
+              },
+              {
+                "position_code": "12.07.01.004",
+                "title_tr": "Hizmet Seviyesi Analisti",
+                "title_en": "Service Level Analyst",
+                "reports_to": "12.07.01.001"
+              }
+            ],
+            "responsibilities": [
+              "SLA, OLA ve operasyonel taahhütleri takip etmek",
+              "İhlal risklerini belirlemek ve önleyici aksiyonları koordine etmek",
+              "Hizmet seviyesi sonuçlarını müşteri ve yönetim raporlarına dönüştürmek"
+            ]
+          },
+          {
+            "team_code": "12.07.02",
+            "name_tr": "Operasyonel Kalite Kontrol",
+            "name_en": "Operational Quality Control",
+            "lead": {
+              "position_code": "12.07.02.001",
+              "title_tr": "Operasyonel Kalite Kontrol Yöneticisi",
+              "title_en": "Operational Quality Control Manager",
+              "reports_to": "12.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.07.02.002",
+                "title_tr": "Kıdemli Operasyonel Kalite Uzmanı",
+                "title_en": "Senior Operational Quality Specialist",
+                "reports_to": "12.07.02.001"
+              },
+              {
+                "position_code": "12.07.02.003",
+                "title_tr": "Operasyonel Kalite Uzmanı",
+                "title_en": "Operational Quality Specialist",
+                "reports_to": "12.07.02.001"
+              },
+              {
+                "position_code": "12.07.02.004",
+                "title_tr": "Kalite Kontrol Analisti",
+                "title_en": "Quality Control Analyst",
+                "reports_to": "12.07.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon çıktılarının kalite kontrollerini yürütmek",
+              "Hata, tekrar iş ve uygunsuzlukları sınıflandırmak",
+              "Düzeltici faaliyetleri Kalite ve süreç sahipleriyle izlemek"
+            ]
+          },
+          {
+            "team_code": "12.07.03",
+            "name_tr": "Operasyonel Risk, Süreklilik ve Acil Durum",
+            "name_en": "Operational Risk, Continuity and Emergency",
+            "lead": {
+              "position_code": "12.07.03.001",
+              "title_tr": "Operasyonel Risk, Süreklilik ve Acil Durum Yöneticisi",
+              "title_en": "Operational Risk, Continuity and Emergency Manager",
+              "reports_to": "12.07.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.07.03.002",
+                "title_tr": "Kıdemli Operasyonel Süreklilik Uzmanı",
+                "title_en": "Senior Operational Continuity Specialist",
+                "reports_to": "12.07.03.001"
+              },
+              {
+                "position_code": "12.07.03.003",
+                "title_tr": "Operasyonel Risk Uzmanı",
+                "title_en": "Operational Risk Specialist",
+                "reports_to": "12.07.03.001"
+              },
+              {
+                "position_code": "12.07.03.004",
+                "title_tr": "Acil Durum Koordinatörü",
+                "title_en": "Emergency Response Coordinator",
+                "reports_to": "12.07.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyonel riskleri ve kritik bağımlılıkları izlemek",
+              "İş sürekliliği ve acil durum planlarının operasyonel uygulamasını yürütmek",
+              "Tatbikat, olay sonrası değerlendirme ve iyileştirmeleri koordine etmek"
+            ]
+          }
+        ]
+      },
+      {
+        "unit_code": "12.08",
+        "name_tr": "Operasyon Analitiği, Maliyet ve Verimlilik",
+        "name_en": "Operations Analytics, Cost and Productivity",
+        "manager": {
+          "position_code": "12.08.001",
+          "title_tr": "Operasyon Analitiği, Maliyet ve Verimlilik Müdürü",
+          "title_en": "Operations Analytics, Cost and Productivity Manager",
+          "reports_to": "12.00.001"
+        },
+        "teams": [
+          {
+            "team_code": "12.08.01",
+            "name_tr": "Operasyon Analitiği ve Raporlama",
+            "name_en": "Operations Analytics and Reporting",
+            "lead": {
+              "position_code": "12.08.01.001",
+              "title_tr": "Operasyon Analitiği ve Raporlama Yöneticisi",
+              "title_en": "Operations Analytics and Reporting Manager",
+              "reports_to": "12.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.08.01.002",
+                "title_tr": "Kıdemli Operasyon Analitiği Uzmanı",
+                "title_en": "Senior Operations Analytics Specialist",
+                "reports_to": "12.08.01.001"
+              },
+              {
+                "position_code": "12.08.01.003",
+                "title_tr": "Operasyon Analitiği Uzmanı",
+                "title_en": "Operations Analytics Specialist",
+                "reports_to": "12.08.01.001"
+              },
+              {
+                "position_code": "12.08.01.004",
+                "title_tr": "Operasyon Veri Analisti",
+                "title_en": "Operations Data Analyst",
+                "reports_to": "12.08.01.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyon veri modelini ve gösterge panolarını geliştirmek",
+              "Hacim, süre, kalite, kapasite ve maliyet analizleri üretmek",
+              "Tahminleme ve erken uyarı modellerini desteklemek"
+            ]
+          },
+          {
+            "team_code": "12.08.02",
+            "name_tr": "Operasyonel Maliyet Yönetimi",
+            "name_en": "Operational Cost Management",
+            "lead": {
+              "position_code": "12.08.02.001",
+              "title_tr": "Operasyonel Maliyet Yönetimi Yöneticisi",
+              "title_en": "Operational Cost Management Manager",
+              "reports_to": "12.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.08.02.002",
+                "title_tr": "Kıdemli Operasyonel Maliyet Uzmanı",
+                "title_en": "Senior Operational Cost Specialist",
+                "reports_to": "12.08.02.001"
+              },
+              {
+                "position_code": "12.08.02.003",
+                "title_tr": "Operasyonel Maliyet Uzmanı",
+                "title_en": "Operational Cost Specialist",
+                "reports_to": "12.08.02.001"
+              },
+              {
+                "position_code": "12.08.02.004",
+                "title_tr": "Birim Maliyet Analisti",
+                "title_en": "Unit Cost Analyst",
+                "reports_to": "12.08.02.001"
+              }
+            ],
+            "responsibilities": [
+              "Operasyonel maliyetleri hizmet, kanal ve lokasyon bazında izlemek",
+              "Birim maliyet ve maliyet sürücülerini analiz etmek",
+              "Finans ile tasarruf ve bütçe aksiyonlarını koordine etmek"
+            ]
+          },
+          {
+            "team_code": "12.08.03",
+            "name_tr": "Verimlilik ve Benchmark Yönetimi",
+            "name_en": "Productivity and Benchmark Management",
+            "lead": {
+              "position_code": "12.08.03.001",
+              "title_tr": "Verimlilik ve Benchmark Yönetimi Yöneticisi",
+              "title_en": "Productivity and Benchmark Management Manager",
+              "reports_to": "12.08.001"
+            },
+            "positions": [
+              {
+                "position_code": "12.08.03.002",
+                "title_tr": "Kıdemli Verimlilik Uzmanı",
+                "title_en": "Senior Productivity Specialist",
+                "reports_to": "12.08.03.001"
+              },
+              {
+                "position_code": "12.08.03.003",
+                "title_tr": "Verimlilik Uzmanı",
+                "title_en": "Productivity Specialist",
+                "reports_to": "12.08.03.001"
+              },
+              {
+                "position_code": "12.08.03.004",
+                "title_tr": "Benchmark Analisti",
+                "title_en": "Benchmark Analyst",
+                "reports_to": "12.08.03.001"
+              }
+            ],
+            "responsibilities": [
+              "Verimlilik göstergelerini ve karşılaştırma metodolojisini yönetmek",
+              "İç ve dış benchmark çalışmaları yapmak",
+              "Verimlilik hedefleri ile gerçekleşen faydayı izlemek"
+            ]
+          }
+        ]
+      }
+    ],
+    "governance": {
+      "core_kpis": [
+        "Zamanında ve Eksiksiz Teslimat Oranı (OTIF)",
+        "SLA Uyum Oranı",
+        "İlk Seferde Doğru Yapma Oranı (Right First Time)",
+        "Operasyon Çevrim Süresi",
+        "Kapasite Kullanım Oranı",
+        "İş Gücü Verimliliği",
+        "Birim Operasyon Maliyeti",
+        "Hata ve Tekrar İş Oranı",
+        "Plan-Gerçekleşen Hacim Sapması",
+        "Stok Doğruluk Oranı",
+        "Operasyonel Kesinti Süresi",
+        "İş Emri Kapanış Süresi"
+      ],
+      "cadence": [
+        {
+          "forum": "Günlük Operasyon Kontrol Toplantısı",
+          "focus": "Hacim, kapasite, kritik iş emirleri, SLA ve kesintiler"
+        },
+        {
+          "forum": "Haftalık Operasyon Performans Toplantısı",
+          "focus": "KPI sonuçları, darboğazlar, kaynak ve aksiyonlar"
+        },
+        {
+          "forum": "Aylık Operasyon ve Maliyet Kurulu",
+          "focus": "Bütçe, birim maliyet, kalite, verimlilik ve iyileştirme portföyü"
+        },
+        {
+          "forum": "Çeyreklik Operasyon Stratejisi Kurulu",
+          "focus": "Kapasite yatırımları, işletim modeli, süreklilik ve dönüşüm öncelikleri"
+        }
+      ]
+    },
+    "scope_boundaries": {
+      "customer_experience": "Müşteri Deneyimi müşteri iletişimi, beklenti ve ilişki sağlığının; Operasyon ise taahhüt edilen hizmetin günlük teslimatının sahibidir.",
+      "sales": "Satış teklif, fiyat, müzakere ve ticari kapanışın; Operasyon teslim edilebilirlik görüşü, kapasite teyidi ve sözleşme sonrası uygulamanın sahibidir.",
+      "product": "Ürün ekibi ürün yol haritası ve ürün kararlarının; Operasyon ürün veya hizmetin standart biçimde uygulanması ve teslimat geri bildiriminin sahibidir.",
+      "technology": "BT ve teknik ekipler platform, altyapı ve teknik çözümün; Operasyon iş gereksinimi, kullanım, iş sürekliliği prosedürü ve operasyonel koordinasyonun sahibidir.",
+      "procurement": "Satın Alma tedarikçi seçimi, müzakere ve sözleşmenin; Operasyon talep planı, mal kabul, stok, günlük tedarik ve hizmet performansı takibinin sahibidir.",
+      "quality": "Kalite yönetim sistemi, bağımsız kalite güvence ve kurumsal standartların; Operasyon süreç içi kontrol, uygulama ve düzeltici aksiyonların sahibidir.",
+      "finance": "Finans bütçe politikası, mali kontrol ve finansal kayıtların; Operasyon hacim planı, kaynak kullanımı, birim maliyet ve tasarruf aksiyonlarının sahibidir.",
+      "risk_compliance": "Uyum ve Risk çerçeve, metodoloji ve ikinci hat gözetiminin; Operasyon birinci hat risk kontrolleri, olay yönetimi ve süreklilik uygulamasının sahibidir.",
+      "human_resources": "İnsan Kaynakları işe alım, ücret, performans sistemi ve çalışan politikalarının; Operasyon vardiya, günlük görev, kapasite ve yetkinlik ihtiyacının sahibidir."
+    },
+    "staffing_guidance": {
+      "model": "Kadro; işlem hacmi, hizmet çeşitliliği, lokasyon sayısı, vardiya düzeni, saha yoğunluğu, otomasyon seviyesi ve SLA taahhütlerine göre ölçeklenir.",
+      "minimum_core_headcount": 33,
+      "minimum_core_headcount_note": "1 direktör + 8 birim müdürü + 24 ekip yöneticisi; uzman kadrolar iş hacmine göre ayrıca planlanır.",
+      "capacity_drivers": [
+        "Aylık işlem ve iş emri hacmi",
+        "Hizmet ve ürün çeşitliliği",
+        "Lokasyon ve saha görev sayısı",
+        "Vardiya ve çalışma saati kapsamı",
+        "SLA seviyesi ve kritiklik",
+        "Stok ve sevkiyat hacmi",
+        "Otomasyon ve self-servis oranı",
+        "Mevsimsellik ve büyüme tahmini"
+      ]
+    },
+    "organization_summary": {
+      "department_heads": 1,
+      "units": 8,
+      "team_leads": 24,
+      "specialist_role_types": 72,
+      "core_principle": "Operasyon; ticari olarak verilen sözleri standart süreçler, doğru kapasite, kontrollü maliyet ve ölçülebilir hizmet seviyesiyle sürdürülebilir teslimata dönüştürür."
+    }
+  }
+}

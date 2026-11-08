@@ -1,0 +1,7 @@
+{
+ "name": "Kurum İçi İletişim",
+ "desc": "Durum raporu, 3P güncellemesi, şirket bülteni, SSS, olay raporu gibi kurum içi iletişim metinlerini şirketin tercih ettiği biçimlerle yazar.",
+ "trigger": "Şirketimin kullanmayı sevdiği biçimleri kullanarak her türlü kurum içi iletişim metnini yazmama yardım eden bir kaynak seti. Claude, herhangi bir kurum içi iletişim metni (durum raporları, yönetime yönelik güncellemeler, 3P güncellemeleri, şirket bültenleri, SSS'ler, olay raporları, proje güncellemeleri vb.) yazması istendiğinde bu skill'i kullanmalıdır.",
+ "scenario": "Ekip, yönetim ya da şirket geneli için durum raporu, haftalık güncelleme, bülten, SSS yanıtı veya olay raporu yazılırken.",
+ "example": "Haftalık ekip güncellemesi, examples/3p-updates.md yönergesine göre İlerleme, Planlar ve Sorunlar başlıklarıyla kısa ve taranabilir biçimde yazılır."
+}

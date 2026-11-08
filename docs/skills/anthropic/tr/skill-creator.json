@@ -1,0 +1,7 @@
+{
+ "name": "Skill Oluşturucu",
+ "desc": "Yeni skill'ler oluşturur, mevcutları düzenleyip iyileştirir; test prompt'larıyla değerlendirme çalıştırır, sonuçları ölçer ve açıklamayı tetikleme doğruluğu için optimize eder.",
+ "trigger": "Yeni skill'ler oluşturur, mevcut skill'leri düzenleyip iyileştirir ve skill performansını ölçer. Kullanıcılar sıfırdan bir skill oluşturmak, mevcut bir skill'i düzenlemek ya da optimize etmek, bir skill'i test etmek için değerlendirmeler (eval) çalıştırmak, varyans analiziyle skill performansını karşılaştırmalı olarak ölçmek ya da daha doğru tetikleme için bir skill'in açıklamasını optimize etmek istediğinde kullanın.",
+ "scenario": "Yeni bir skill yazılırken, mevcut bir skill'in davranışı ya da tetiklenmesi iyileştirilirken veya bir skill'in işe yarayıp yaramadığı test edilip ölçülürken.",
+ "example": "Bir rapor skill'i için 3 test prompt'u skill'li ve skill'siz çalıştırılır, sonuçlar görüntüleyicide yan yana incelenir ve geri bildirime göre SKILL.md yeniden yazılır."
+}

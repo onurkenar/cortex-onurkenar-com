@@ -1,0 +1,1001 @@
+{
+  "schema_version": "1.0",
+  "organization": "Rasyo Holding",
+  "department": {
+    "code": "10",
+    "name_tr": "Kurumsal İletişim ve İtibar Yönetimi",
+    "name_en": "Corporate Communications and Reputation Management",
+    "mission": "Şirketin kurumsal anlatısını, kamuoyu algısını, itibarını ve paydaşlarla güven ilişkisini yönetmek.",
+    "reporting_to": {
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer"
+    },
+    "department_head": {
+      "title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü",
+      "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer"
+    },
+    "hierarchy_standard": [
+      "Departman lideri",
+      "Birim müdürü",
+      "Ekip yöneticisi",
+      "Uzman pozisyon"
+    ]
+  },
+  "organization_chart": {
+    "root": {
+      "id": "CEO",
+      "title_tr": "Genel Müdür / CEO",
+      "title_en": "Chief Executive Officer",
+      "children": [
+        {
+          "id": "COMMS-DIR",
+          "title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü",
+          "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer",
+          "children": [
+            {
+              "unit_ref": "10.01"
+            },
+            {
+              "unit_ref": "10.02"
+            },
+            {
+              "unit_ref": "10.03"
+            },
+            {
+              "unit_ref": "10.04"
+            },
+            {
+              "unit_ref": "10.05"
+            },
+            {
+              "unit_ref": "10.06"
+            },
+            {
+              "unit_ref": "10.07"
+            },
+            {
+              "unit_ref": "10.08"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "department_leadership": [
+    {
+      "id": "COMMS-DIR",
+      "title_tr": "Kurumsal İletişim ve İtibar Yönetimi Direktörü",
+      "title_en": "Corporate Communications and Reputation Director / Chief Communications Officer",
+      "reports_to": "CEO"
+    },
+    {
+      "id": "DEPUTY-COMMS-DIR",
+      "title_tr": "Kurumsal İletişim Direktör Yardımcısı",
+      "title_en": "Deputy Corporate Communications Director",
+      "reports_to": "COMMS-DIR",
+      "status": "Şirket ölçeğine göre opsiyonel"
+    },
+    {
+      "id": "REPUTATION-DIR",
+      "title_tr": "İtibar Yönetimi Direktörü",
+      "title_en": "Reputation Management Director",
+      "reports_to": "COMMS-DIR",
+      "status": "Büyük ölçekli yapılarda opsiyonel"
+    },
+    {
+      "id": "SENIOR-ADVISOR",
+      "title_tr": "Kurumsal İletişim Başdanışmanı",
+      "title_en": "Senior Corporate Communications Advisor",
+      "reports_to": "COMMS-DIR",
+      "status": "Opsiyonel"
+    }
+  ],
+  "units": [
+    {
+      "id": "10.01",
+      "name_tr": "Kurumsal İletişim Stratejisi ve Mesaj Yönetimi",
+      "name_en": "Corporate Communications Strategy and Messaging",
+      "manager": {
+        "title_tr": "Kurumsal İletişim Stratejisi Müdürü",
+        "title_en": "Corporate Communications Strategy Manager"
+      },
+      "responsibilities": [
+        "Kurumsal iletişim stratejisini ve ana anlatıyı geliştirmek",
+        "Mesaj hiyerarşisi, kurumsal dil ve terminolojiyi yönetmek",
+        "Grup şirketleri iletişim yönetişimini kurmak",
+        "Yıllık iletişim planı ve içerik takvimini koordine etmek",
+        "Paydaş algısı, itibar araştırmaları ve iletişim KPI'larını izlemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Kurumsal Anlatı ve Mesaj Mimarisi",
+          "name_en": "Corporate Narrative and Messaging",
+          "lead": {
+            "title_tr": "Kurumsal Anlatı ve Mesaj Mimarisi Yöneticisi",
+            "title_en": "Corporate Narrative and Messaging Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kurumsal Mesaj Uzmanı",
+              "title_en": "Senior Corporate Messaging Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Anlatı Uzmanı",
+              "title_en": "Corporate Narrative Specialist"
+            },
+            {
+              "title_tr": "Mesaj Mimarisi Uzmanı",
+              "title_en": "Messaging Architecture Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Dil ve Terminoloji Uzmanı",
+              "title_en": "Corporate Language and Terminology Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "İletişim Planlama ve Yönetişim",
+          "name_en": "Communications Planning and Governance",
+          "lead": {
+            "title_tr": "İletişim Planlama ve Yönetişim Yöneticisi",
+            "title_en": "Communications Planning and Governance Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İletişim Planlama Uzmanı",
+              "title_en": "Senior Communications Planning Specialist"
+            },
+            {
+              "title_tr": "İletişim Yönetişimi Uzmanı",
+              "title_en": "Communications Governance Specialist"
+            },
+            {
+              "title_tr": "Grup Şirketleri İletişim Koordinatörü",
+              "title_en": "Group Companies Communications Coordinator"
+            },
+            {
+              "title_tr": "İletişim Takvimi ve Operasyon Uzmanı",
+              "title_en": "Communications Calendar and Operations Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Araştırma ve İletişim Analitiği",
+          "name_en": "Communications Research and Analytics",
+          "lead": {
+            "title_tr": "İletişim Araştırmaları ve Analitik Yöneticisi",
+            "title_en": "Communications Research and Analytics Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "İtibar Araştırmaları Uzmanı",
+              "title_en": "Reputation Research Specialist"
+            },
+            {
+              "title_tr": "İletişim Veri Analisti",
+              "title_en": "Communications Data Analyst"
+            },
+            {
+              "title_tr": "Paydaş Algı Araştırmaları Uzmanı",
+              "title_en": "Stakeholder Perception Research Specialist"
+            },
+            {
+              "title_tr": "İletişim Performans Analisti",
+              "title_en": "Communications Performance Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.02",
+      "name_tr": "Medya İlişkileri ve Basın Yönetimi",
+      "name_en": "Media Relations and Press Management",
+      "manager": {
+        "title_tr": "Medya İlişkileri ve Basın Müdürü",
+        "title_en": "Media Relations and Press Manager"
+      },
+      "responsibilities": [
+        "Basın ve medya ilişkilerini yönetmek",
+        "Basın bülteni, bilgi notu ve medya içeriklerini hazırlamak",
+        "Basın toplantısı, röportaj ve yayın koordinasyonunu yürütmek",
+        "Medya görünürlüğü, haber tonu ve söylem analizlerini izlemek",
+        "Yanlış veya eksik haberlerde düzeltme süreçlerini koordine etmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Basın ve Medya İlişkileri",
+          "name_en": "Press and Media Relations",
+          "lead": {
+            "title_tr": "Basın ve Medya İlişkileri Yöneticisi",
+            "title_en": "Press and Media Relations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Medya İlişkileri Uzmanı",
+              "title_en": "Senior Media Relations Specialist"
+            },
+            {
+              "title_tr": "Basın İlişkileri Uzmanı",
+              "title_en": "Press Relations Specialist"
+            },
+            {
+              "title_tr": "Medya İlişkileri Uzmanı",
+              "title_en": "Media Relations Specialist"
+            },
+            {
+              "title_tr": "Basın Koordinasyon Uzmanı",
+              "title_en": "Press Coordination Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Basın İçeriği ve Haber Yönetimi",
+          "name_en": "Press Content and News Management",
+          "lead": {
+            "title_tr": "Basın İçeriği ve Haber Yönetimi Yöneticisi",
+            "title_en": "Press Content and News Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Basın İçeriği Uzmanı",
+              "title_en": "Senior Press Content Specialist"
+            },
+            {
+              "title_tr": "Basın Bülteni Yazarı",
+              "title_en": "Press Release Writer"
+            },
+            {
+              "title_tr": "Kurumsal Haber Editörü",
+              "title_en": "Corporate News Editor"
+            },
+            {
+              "title_tr": "Basın Dosyası ve Bilgi Notu Uzmanı",
+              "title_en": "Press Kit and Briefing Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Medya Takibi ve Analizi",
+          "name_en": "Media Monitoring and Analysis",
+          "lead": {
+            "title_tr": "Medya Takibi ve Analizi Yöneticisi",
+            "title_en": "Media Monitoring and Analysis Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Medya Takip Uzmanı",
+              "title_en": "Media Monitoring Specialist"
+            },
+            {
+              "title_tr": "Medya Analisti",
+              "title_en": "Media Analyst"
+            },
+            {
+              "title_tr": "Haber ve Söylem Analisti",
+              "title_en": "News and Discourse Analyst"
+            },
+            {
+              "title_tr": "Medya Raporlama Uzmanı",
+              "title_en": "Media Reporting Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.03",
+      "name_tr": "İtibar, Gündem ve Kriz İletişimi",
+      "name_en": "Reputation, Issues and Crisis Communications",
+      "manager": {
+        "title_tr": "İtibar ve Kriz İletişimi Müdürü",
+        "title_en": "Reputation and Crisis Communications Manager"
+      },
+      "responsibilities": [
+        "Kurumsal itibar risklerini ve paydaş algısını izlemek",
+        "Gündem, hassas konu ve erken uyarı sistemini yönetmek",
+        "Kriz iletişim planı, senaryo ve tatbikatlarını hazırlamak",
+        "Kriz mesajları, açıklamalar ve sözcülük süreçlerini koordine etmek",
+        "Kriz sonrası itibar iyileştirme ve dezenformasyon müdahalesini yönetmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "İtibar Takibi ve Risk Analizi",
+          "name_en": "Reputation Monitoring and Risk Analysis",
+          "lead": {
+            "title_tr": "İtibar Takibi ve Risk Analizi Yöneticisi",
+            "title_en": "Reputation Monitoring and Risk Analysis Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İtibar Yönetimi Uzmanı",
+              "title_en": "Senior Reputation Management Specialist"
+            },
+            {
+              "title_tr": "İtibar Risk Uzmanı",
+              "title_en": "Reputation Risk Specialist"
+            },
+            {
+              "title_tr": "Algı ve Duygu Analisti",
+              "title_en": "Perception and Sentiment Analyst"
+            },
+            {
+              "title_tr": "Erken Uyarı ve Gündem Analisti",
+              "title_en": "Early Warning and Agenda Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Gündem ve Konu Yönetimi",
+          "name_en": "Issues and Agenda Management",
+          "lead": {
+            "title_tr": "Gündem ve Konu Yönetimi Yöneticisi",
+            "title_en": "Issues and Agenda Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Konu Yönetimi Uzmanı",
+              "title_en": "Senior Issues Management Specialist"
+            },
+            {
+              "title_tr": "Gündem Takip Uzmanı",
+              "title_en": "Agenda Monitoring Specialist"
+            },
+            {
+              "title_tr": "Hassas Konular İletişim Uzmanı",
+              "title_en": "Sensitive Issues Communications Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Pozisyonlandırma Uzmanı",
+              "title_en": "Corporate Positioning Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kriz İletişimi",
+          "name_en": "Crisis Communications",
+          "lead": {
+            "title_tr": "Kriz İletişimi Yöneticisi",
+            "title_en": "Crisis Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kriz İletişimi Uzmanı",
+              "title_en": "Senior Crisis Communications Specialist"
+            },
+            {
+              "title_tr": "Kriz Senaryoları ve Hazırlık Uzmanı",
+              "title_en": "Crisis Scenarios and Preparedness Specialist"
+            },
+            {
+              "title_tr": "Kriz İçerik ve Sözcülük Uzmanı",
+              "title_en": "Crisis Content and Spokesperson Specialist"
+            },
+            {
+              "title_tr": "Kriz İzleme ve Koordinasyon Uzmanı",
+              "title_en": "Crisis Monitoring and Coordination Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.04",
+      "name_tr": "Yönetici ve Liderlik İletişimi",
+      "name_en": "Executive and Leadership Communications",
+      "manager": {
+        "title_tr": "Yönetici ve Liderlik İletişimi Müdürü",
+        "title_en": "Executive and Leadership Communications Manager"
+      },
+      "responsibilities": [
+        "CEO ve üst yönetim iletişim stratejisini yönetmek",
+        "Yönetici mesajları, konuşma metinleri ve bilgi notları hazırlamak",
+        "Röportaj, konferans ve panel hazırlıklarını koordine etmek",
+        "Düşünce liderliği içerikleri geliştirmek",
+        "Yönetici görünürlüğü ve dijital iletişimini yönetmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "CEO ve Üst Yönetim İletişimi",
+          "name_en": "CEO and Executive Communications",
+          "lead": {
+            "title_tr": "CEO ve Üst Yönetim İletişimi Yöneticisi",
+            "title_en": "CEO and Executive Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Yönetici İletişimi Uzmanı",
+              "title_en": "Senior Executive Communications Specialist"
+            },
+            {
+              "title_tr": "CEO İletişimi Uzmanı",
+              "title_en": "CEO Communications Specialist"
+            },
+            {
+              "title_tr": "Üst Yönetim İletişimi Uzmanı",
+              "title_en": "Executive Communications Specialist"
+            },
+            {
+              "title_tr": "Yönetici İletişim Planlama Uzmanı",
+              "title_en": "Executive Communications Planning Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Konuşma ve Mesaj Geliştirme",
+          "name_en": "Speechwriting and Message Development",
+          "lead": {
+            "title_tr": "Konuşma ve Mesaj Geliştirme Yöneticisi",
+            "title_en": "Speechwriting and Message Development Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Konuşma Metni Yazarı",
+              "title_en": "Senior Speechwriter"
+            },
+            {
+              "title_tr": "Konuşma Metni Yazarı",
+              "title_en": "Speechwriter"
+            },
+            {
+              "title_tr": "Yönetici Sunum İçeriği Uzmanı",
+              "title_en": "Executive Presentation Content Specialist"
+            },
+            {
+              "title_tr": "Yönetici Bilgi Notu Uzmanı",
+              "title_en": "Executive Briefing Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Lider Görünürlüğü ve Düşünce Liderliği",
+          "name_en": "Leadership Visibility and Thought Leadership",
+          "lead": {
+            "title_tr": "Düşünce Liderliği Yöneticisi",
+            "title_en": "Thought Leadership Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Düşünce Liderliği İçerik Uzmanı",
+              "title_en": "Thought Leadership Content Specialist"
+            },
+            {
+              "title_tr": "Yönetici Görünürlüğü Uzmanı",
+              "title_en": "Executive Visibility Specialist"
+            },
+            {
+              "title_tr": "Konferans ve Panel Koordinasyon Uzmanı",
+              "title_en": "Conference and Panel Coordination Specialist"
+            },
+            {
+              "title_tr": "Yönetici Dijital İletişim Uzmanı",
+              "title_en": "Executive Digital Communications Specialist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.05",
+      "name_tr": "İç İletişim ve Çalışan Katılımı",
+      "name_en": "Internal Communications and Employee Engagement",
+      "manager": {
+        "title_tr": "İç İletişim ve Çalışan Katılımı Müdürü",
+        "title_en": "Internal Communications and Employee Engagement Manager"
+      },
+      "responsibilities": [
+        "İç iletişim stratejisi ve kanallarını yönetmek",
+        "Yönetim mesajlarını çalışanlara aktarmak",
+        "Değişim ve dönüşüm iletişimini koordine etmek",
+        "Kurum kültürü ve çalışan katılımı iletişimini yürütmek",
+        "Çalışan geri bildirimlerini ve iç iletişim performansını izlemek"
+      ],
+      "teams": [
+        {
+          "name_tr": "İç İletişim Kanalları",
+          "name_en": "Internal Communications Channels",
+          "lead": {
+            "title_tr": "İç İletişim Kanalları Yöneticisi",
+            "title_en": "Internal Communications Channels Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli İç İletişim Uzmanı",
+              "title_en": "Senior Internal Communications Specialist"
+            },
+            {
+              "title_tr": "İç İletişim Uzmanı",
+              "title_en": "Internal Communications Specialist"
+            },
+            {
+              "title_tr": "İntranet ve Dijital Kanallar Uzmanı",
+              "title_en": "Intranet and Digital Channels Specialist"
+            },
+            {
+              "title_tr": "Çalışan Bülteni Editörü",
+              "title_en": "Employee Newsletter Editor"
+            }
+          ]
+        },
+        {
+          "name_tr": "Değişim İletişimi",
+          "name_en": "Change Communications",
+          "lead": {
+            "title_tr": "Değişim İletişimi Yöneticisi",
+            "title_en": "Change Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Değişim İletişimi Uzmanı",
+              "title_en": "Senior Change Communications Specialist"
+            },
+            {
+              "title_tr": "Dönüşüm Programları İletişim Uzmanı",
+              "title_en": "Transformation Communications Specialist"
+            },
+            {
+              "title_tr": "Değişim Paydaş Analisti",
+              "title_en": "Change Stakeholder Analyst"
+            },
+            {
+              "title_tr": "Değişim İçerikleri Uzmanı",
+              "title_en": "Change Content Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Çalışan Katılımı ve Kültür İletişimi",
+          "name_en": "Employee Engagement and Culture Communications",
+          "lead": {
+            "title_tr": "Çalışan Katılımı ve Kültür İletişimi Yöneticisi",
+            "title_en": "Employee Engagement and Culture Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Çalışan Katılımı Uzmanı",
+              "title_en": "Employee Engagement Specialist"
+            },
+            {
+              "title_tr": "Kültür İletişimi Uzmanı",
+              "title_en": "Culture Communications Specialist"
+            },
+            {
+              "title_tr": "Çalışan Etkinlikleri İletişim Uzmanı",
+              "title_en": "Employee Events Communications Specialist"
+            },
+            {
+              "title_tr": "Çalışan Geri Bildirim Analisti",
+              "title_en": "Employee Feedback Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.06",
+      "name_tr": "Paydaş, Kamu ve Sektör İletişimi",
+      "name_en": "Stakeholder, Public and Industry Communications",
+      "manager": {
+        "title_tr": "Paydaş ve Kamu İletişimi Müdürü",
+        "title_en": "Stakeholder and Public Affairs Communications Manager"
+      },
+      "responsibilities": [
+        "Paydaş haritalama ve iletişim planlarını geliştirmek",
+        "Kamuoyu ve sektör iletişimini yönetmek",
+        "Meslek örgütleri, sektörel platformlar ve kurumsal üyelikleri koordine etmek",
+        "Kurumsal temsil ve paydaş toplantılarını yönetmek",
+        "Şirket görüş ve pozisyonlarının iletişimini sağlamak"
+      ],
+      "teams": [
+        {
+          "name_tr": "Kurumsal Paydaş İletişimi",
+          "name_en": "Corporate Stakeholder Communications",
+          "lead": {
+            "title_tr": "Kurumsal Paydaş İletişimi Yöneticisi",
+            "title_en": "Corporate Stakeholder Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Paydaş İletişimi Uzmanı",
+              "title_en": "Senior Stakeholder Communications Specialist"
+            },
+            {
+              "title_tr": "Paydaş İletişimi Uzmanı",
+              "title_en": "Stakeholder Communications Specialist"
+            },
+            {
+              "title_tr": "Paydaş Haritalama Analisti",
+              "title_en": "Stakeholder Mapping Analyst"
+            },
+            {
+              "title_tr": "Kurumsal İlişkiler Koordinatörü",
+              "title_en": "Corporate Relations Coordinator"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kamu ve Sektör İletişimi",
+          "name_en": "Public and Industry Communications",
+          "lead": {
+            "title_tr": "Kamu ve Sektör İletişimi Yöneticisi",
+            "title_en": "Public and Industry Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kamu İletişimi Uzmanı",
+              "title_en": "Public Affairs Communications Specialist"
+            },
+            {
+              "title_tr": "Sektörel İletişim Uzmanı",
+              "title_en": "Industry Communications Specialist"
+            },
+            {
+              "title_tr": "Meslek Örgütleri İletişim Uzmanı",
+              "title_en": "Professional Associations Communications Specialist"
+            },
+            {
+              "title_tr": "Kamu Gündemi Analisti",
+              "title_en": "Public Agenda Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kurumsal Temsil ve İlişkiler",
+          "name_en": "Corporate Representation and Relations",
+          "lead": {
+            "title_tr": "Kurumsal Temsil ve İlişkiler Yöneticisi",
+            "title_en": "Corporate Representation and Relations Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kurumsal Temsil Uzmanı",
+              "title_en": "Corporate Representation Specialist"
+            },
+            {
+              "title_tr": "Protokol İletişimi Uzmanı",
+              "title_en": "Protocol Communications Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Üyelikler Uzmanı",
+              "title_en": "Corporate Memberships Specialist"
+            },
+            {
+              "title_tr": "Paydaş Toplantıları Koordinatörü",
+              "title_en": "Stakeholder Meetings Coordinator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.07",
+      "name_tr": "Sponsorluk, Kurumsal Etkinlik ve Sosyal Etki",
+      "name_en": "Sponsorships, Corporate Events and Social Impact",
+      "manager": {
+        "title_tr": "Sponsorluk ve Kurumsal Etkinlikler Müdürü",
+        "title_en": "Sponsorships and Corporate Events Manager"
+      },
+      "responsibilities": [
+        "Kurumsal sponsorluk stratejisi ve değerlendirme kriterlerini yönetmek",
+        "Sponsorluk aktivasyonlarını ve etki ölçümünü koordine etmek",
+        "Kurumsal ve paydaş etkinliklerini yönetmek",
+        "Sosyal etki ve kurumsal sosyal sorumluluk iletişimini yürütmek",
+        "Sürdürülebilirlik anlatısı ve iletişim çıktıları geliştirmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Sponsorluk Yönetimi",
+          "name_en": "Sponsorship Management",
+          "lead": {
+            "title_tr": "Sponsorluk Yönetimi Yöneticisi",
+            "title_en": "Sponsorship Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Sponsorluk Uzmanı",
+              "title_en": "Senior Sponsorship Specialist"
+            },
+            {
+              "title_tr": "Sponsorluk Uzmanı",
+              "title_en": "Sponsorship Specialist"
+            },
+            {
+              "title_tr": "Sponsorluk Aktivasyon Uzmanı",
+              "title_en": "Sponsorship Activation Specialist"
+            },
+            {
+              "title_tr": "Sponsorluk Etki Analisti",
+              "title_en": "Sponsorship Impact Analyst"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kurumsal Etkinlikler",
+          "name_en": "Corporate Events",
+          "lead": {
+            "title_tr": "Kurumsal Etkinlikler Yöneticisi",
+            "title_en": "Corporate Events Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kurumsal Etkinlik Uzmanı",
+              "title_en": "Senior Corporate Events Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Etkinlik Uzmanı",
+              "title_en": "Corporate Events Specialist"
+            },
+            {
+              "title_tr": "Etkinlik Operasyonları Uzmanı",
+              "title_en": "Event Operations Specialist"
+            },
+            {
+              "title_tr": "Etkinlik İletişimi Uzmanı",
+              "title_en": "Event Communications Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi",
+          "name_en": "Social Impact and Sustainability Communications",
+          "lead": {
+            "title_tr": "Sosyal Etki ve Sürdürülebilirlik İletişimi Yöneticisi",
+            "title_en": "Social Impact and Sustainability Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Sosyal Etki İletişimi Uzmanı",
+              "title_en": "Social Impact Communications Specialist"
+            },
+            {
+              "title_tr": "Sürdürülebilirlik İletişimi Uzmanı",
+              "title_en": "Sustainability Communications Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Sosyal Sorumluluk Uzmanı",
+              "title_en": "Corporate Social Responsibility Specialist"
+            },
+            {
+              "title_tr": "Sosyal Etki Raporlama Analisti",
+              "title_en": "Social Impact Reporting Analyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.08",
+      "name_tr": "Kurumsal Yayınlar ve Dijital İletişim Yönetişimi",
+      "name_en": "Corporate Publications and Digital Communications Governance",
+      "manager": {
+        "title_tr": "Kurumsal Yayınlar ve Dijital İletişim Müdürü",
+        "title_en": "Corporate Publications and Digital Communications Manager"
+      },
+      "responsibilities": [
+        "Faaliyet ve sürdürülebilirlik raporlarının editoryal yönetimini yürütmek",
+        "Kurumsal sunum, profil ve yayınları yönetmek",
+        "Kurumsal web ve sosyal medya içeriklerini yönetmek",
+        "Dijital itibar ve kurumsal içerik takvimini izlemek",
+        "Editoryal standartlar, kalite ve kurumsal arşivi yönetmek"
+      ],
+      "teams": [
+        {
+          "name_tr": "Kurumsal Yayınlar ve Dokümantasyon",
+          "name_en": "Corporate Publications and Documentation",
+          "lead": {
+            "title_tr": "Kurumsal Yayınlar Yöneticisi",
+            "title_en": "Corporate Publications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kurumsal Yayınlar Uzmanı",
+              "title_en": "Senior Corporate Publications Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Yayınlar Uzmanı",
+              "title_en": "Corporate Publications Specialist"
+            },
+            {
+              "title_tr": "Faaliyet Raporu Editörü",
+              "title_en": "Annual Report Editor"
+            },
+            {
+              "title_tr": "Kurumsal Dokümantasyon Uzmanı",
+              "title_en": "Corporate Documentation Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kurumsal Dijital ve Sosyal Medya",
+          "name_en": "Corporate Digital and Social Media",
+          "lead": {
+            "title_tr": "Kurumsal Dijital İletişim Yöneticisi",
+            "title_en": "Corporate Digital Communications Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kurumsal Dijital İletişim Uzmanı",
+              "title_en": "Corporate Digital Communications Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Sosyal Medya Uzmanı",
+              "title_en": "Corporate Social Media Specialist"
+            },
+            {
+              "title_tr": "Dijital İtibar İzleme Uzmanı",
+              "title_en": "Digital Reputation Monitoring Specialist"
+            },
+            {
+              "title_tr": "Kurumsal Web İçerik Uzmanı",
+              "title_en": "Corporate Web Content Specialist"
+            }
+          ]
+        },
+        {
+          "name_tr": "Kurumsal İçerik ve Editoryal Yönetim",
+          "name_en": "Corporate Content and Editorial Management",
+          "lead": {
+            "title_tr": "Kurumsal İçerik ve Editoryal Yönetim Yöneticisi",
+            "title_en": "Corporate Content and Editorial Management Lead"
+          },
+          "positions": [
+            {
+              "title_tr": "Kıdemli Kurumsal İçerik Editörü",
+              "title_en": "Senior Corporate Content Editor"
+            },
+            {
+              "title_tr": "Kurumsal İçerik Yazarı",
+              "title_en": "Corporate Content Writer"
+            },
+            {
+              "title_tr": "Editoryal Kalite Uzmanı",
+              "title_en": "Editorial Quality Specialist"
+            },
+            {
+              "title_tr": "Kurumsal İçerik Takvimi Uzmanı",
+              "title_en": "Corporate Content Calendar Specialist"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "organization_summary": {
+    "unit_count": 8,
+    "team_count": 24,
+    "team_lead_count": 24,
+    "specialist_position_types": 96
+  },
+  "content_ownership": [
+    {
+      "content_type": "Basın bülteni ve medya açıklaması",
+      "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"
+    },
+    {
+      "content_type": "CEO mesajı ve konuşma metni",
+      "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"
+    },
+    {
+      "content_type": "Kriz açıklaması",
+      "primary_owner": "Kurumsal İletişim + Hukuk + ilgili kriz sahibi"
+    },
+    {
+      "content_type": "Faaliyet raporu editoryal yönetimi",
+      "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"
+    },
+    {
+      "content_type": "Kurumsal sosyal medya",
+      "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"
+    },
+    {
+      "content_type": "Reklam ve kampanya içeriği",
+      "primary_owner": "09 - Pazarlama ve Büyüme"
+    },
+    {
+      "content_type": "Blog, SEO/GEO ve lead içeriği",
+      "primary_owner": "09 - Pazarlama ve Büyüme"
+    },
+    {
+      "content_type": "Grafik, video ve kreatif üretim",
+      "primary_owner": "19 - Tasarım ve Yaratıcı Hizmetler"
+    },
+    {
+      "content_type": "İşveren markası stratejisi",
+      "primary_owner": "04 - İnsan Kaynakları ve Organizasyon"
+    },
+    {
+      "content_type": "İşveren markası iletişim uygulaması",
+      "primary_owner": "İnsan Kaynakları + Kurumsal İletişim"
+    },
+    {
+      "content_type": "Ürün mesajı ve değer önerisi",
+      "primary_owner": "18 - Ürün Yönetimi + 09 - Pazarlama"
+    },
+    {
+      "content_type": "Sürdürülebilirlik verisi ve performansı",
+      "primary_owner": "21 - İSG, Çevre ve Sürdürülebilirlik"
+    },
+    {
+      "content_type": "Sürdürülebilirlik anlatısı",
+      "primary_owner": "10 - Kurumsal İletişim ve İtibar Yönetimi"
+    }
+  ],
+  "staffing_models": [
+    {
+      "model": "Yalın yapı",
+      "recommended_structure": "1 iletişim lideri, 3 ekip sorumlusu ve 5-8 uzman"
+    },
+    {
+      "model": "Orta ölçekli şirket",
+      "recommended_structure": "1 direktör, 4-6 müdür ve 10-20 uzman"
+    },
+    {
+      "model": "Holding yapısı",
+      "recommended_structure": "1 direktör, 1 direktör yardımcısı, 8 müdür ve şirket iletişim sorumluları"
+    },
+    {
+      "model": "Tam fonksiyonel yapı",
+      "recommended_structure": "8 müdürlük ve 24 fonksiyonel ekibin ayrı kadrolanması"
+    }
+  ],
+  "department_boundaries": [
+    {
+      "interface_department": "09 - Pazarlama ve Büyüme",
+      "communications_owns": "Kurumsal anlatı, medya ve itibar",
+      "other_department_owns": "Talep, kampanya, reklam ve lead"
+    },
+    {
+      "interface_department": "19 - Tasarım ve Yaratıcı Hizmetler",
+      "communications_owns": "Brief, mesaj ve iletişim amacı",
+      "other_department_owns": "Görsel tasarım, video ve prodüksiyon"
+    },
+    {
+      "interface_department": "04 - İnsan Kaynakları ve Organizasyon",
+      "communications_owns": "İç iletişim kanalları ve çalışan mesajları",
+      "other_department_owns": "Çalışan deneyimi ve işveren markası stratejisi"
+    },
+    {
+      "interface_department": "05 - Hukuk İşleri",
+      "communications_owns": "Kurumsal açıklamanın iletişimi",
+      "other_department_owns": "Hukuki görüş ve risk kontrolü"
+    },
+    {
+      "interface_department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+      "communications_owns": "Mesaj ve iletişim danışmanlığı",
+      "other_department_owns": "Kurumsal karar ve açıklama yetkisi"
+    },
+    {
+      "interface_department": "21 - İSG, Çevre ve Sürdürülebilirlik",
+      "communications_owns": "Sürdürülebilirlik anlatısı",
+      "other_department_owns": "Veri, hedef ve performans sahipliği"
+    },
+    {
+      "interface_department": "12 - Operasyon Yönetimi",
+      "communications_owns": "Krizin paydaş ve kamuoyu iletişimi",
+      "other_department_owns": "Operasyonel krizin çözümü"
+    },
+    {
+      "interface_department": "08 - Satış ve Gelir Yönetimi",
+      "communications_owns": "Kurumsal temsil ve itibar mesajları",
+      "other_department_owns": "Müşteri teklifi ve ticari müzakere"
+    }
+  ],
+  "scope_exclusions": [
+    "Performans reklamlarını yönetmek",
+    "Lead üretim hedefinin sahibi olmak",
+    "Satış işlemini kapatmak",
+    "Grafik tasarım veya video prodüksiyonunu doğrudan üstlenmek",
+    "Hukuki görüş veya hukuki kriz onayı vermek",
+    "Operasyonel krizi çözmek",
+    "Sürdürülebilirlik verisini üretmek",
+    "İnsan Kaynakları politikalarını belirlemek",
+    "Yönetim adına yetkisiz açıklama yapmak",
+    "Ürün yol haritasını veya ürün fiyatını belirlemek"
+  ],
+  "notes": [
+    "Kurumsal İletişim şirketin ne söylediğini ve nasıl algılandığını yönetir; Pazarlama talep yaratır; Tasarım mesajı görsel ve yaratıcı çıktıya dönüştürür.",
+    "İlgili iş birimi, kurumsal açıklamanın dayandığı karar ve verinin sahibidir.",
+    "Pozisyonlar hedef organizasyon modelidir ve mevcut çalışan sayısını ifade etmez.",
+    "Birimler şirket ölçeğine göre birleştirilebilir; sözcülük yetkisi, onay akışı ve görevler ayrılığı korunmalıdır."
+  ]
+}

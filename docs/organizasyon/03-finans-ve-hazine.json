@@ -1,0 +1,1818 @@
+{
+  "schema_version": "1.0",
+  "department": {
+    "code": "03",
+    "name_tr": "Finans ve Hazine",
+    "name_en": "Finance and Treasury",
+    "mission": "Şirketin geleceğe dönük finansal planlamasını, bütçesini, nakdini, finansman kaynaklarını, çalışma sermayesini, yatırımlarını ve finansal risklerini yönetmek.",
+    "administrative_reporting_to": {"title_tr": "CFO / Mali İşler ve Finans Başkanı", "title_en": "Chief Financial Officer"},
+    "department_head": {"title_tr": "Finans ve Hazine Direktörü", "title_en": "Finance and Treasury Director"},
+    "deputy_head": {"title_tr": "Finans ve Hazine Direktör Yardımcısı", "title_en": "Deputy Finance and Treasury Director", "status": "Şirket ölçeğine göre opsiyonel"}
+  },
+  "organization_chart": {
+    "root": {
+      "id": "EXE-CFO",
+      "title_tr": "CFO / Mali İşler ve Finans Başkanı",
+      "title_en": "Chief Financial Officer",
+      "children": [
+        {
+          "id": "DIR-FIN",
+          "title_tr": "Finans ve Hazine Direktörü",
+          "title_en": "Finance and Treasury Director",
+          "children": [
+            {"unit_ref": "03.01"}, {"unit_ref": "03.02"}, {"unit_ref": "03.03"}, {"unit_ref": "03.04"},
+            {"unit_ref": "03.05"}, {"unit_ref": "03.06"}, {"unit_ref": "03.07"}, {"unit_ref": "03.08"}
+          ]
+        }
+      ]
+    }
+  },
+  "units": [
+    {
+      "id": "03.01",
+      "name_tr": "Finansal Strateji ve Planlama Müdürlüğü",
+      "name_en": "Financial Strategy and Planning Department",
+      "manager": {"title_tr": "Finansal Planlama ve Strateji Müdürü", "title_en": "Financial Planning and Strategy Manager"},
+      "teams": [
+        {"name_tr": "Bütçe ve Tahminleme", "name_en": "Budgeting and Forecasting", "positions": [
+          {"title_tr": "Bütçe ve Planlama Takım Lideri", "title_en": "Budget and Planning Team Lead"},
+          {"title_tr": "Kıdemli Bütçe ve Planlama Uzmanı", "title_en": "Senior Budget and Planning Specialist"},
+          {"title_tr": "Bütçe ve Planlama Uzmanı", "title_en": "Budget and Planning Specialist"},
+          {"title_tr": "Finansal Tahminleme Uzmanı", "title_en": "Financial Forecasting Specialist"},
+          {"title_tr": "Bütçe Analisti", "title_en": "Budget Analyst"}]},
+        {"name_tr": "Uzun Vadeli Finansal Planlama", "name_en": "Long-Term Financial Planning", "positions": [
+          {"title_tr": "Finansal Strateji Takım Lideri", "title_en": "Financial Strategy Team Lead"},
+          {"title_tr": "Kıdemli Finansal Strateji Uzmanı", "title_en": "Senior Financial Strategy Specialist"},
+          {"title_tr": "Finansal Modelleme Uzmanı", "title_en": "Financial Modelling Specialist"},
+          {"title_tr": "Senaryo Planlama Analisti", "title_en": "Scenario Planning Analyst"}]}
+      ],
+      "responsibilities": ["Yıllık bütçe ve bütçe revizyonları", "Rolling forecast", "Çok yıllı finansal plan", "Gelir, gider ve kârlılık tahminleri", "Senaryo ve hassasiyet analizleri", "Finansal hedeflerin departmanlara dağıtılması", "Bütçe takvimi ve bütçe yönetişimi"]
+    },
+    {
+      "id": "03.02",
+      "name_tr": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+      "name_en": "Financial Analysis and Management Reporting Department",
+      "manager": {"title_tr": "Finansal Analiz ve Raporlama Müdürü", "title_en": "FP&A and Management Reporting Manager"},
+      "teams": [
+        {"name_tr": "Finansal Performans Analizi", "name_en": "Financial Performance Analysis", "positions": [
+          {"title_tr": "Finansal Analiz Takım Lideri", "title_en": "Financial Analysis Team Lead"},
+          {"title_tr": "Kıdemli Finansal Analist", "title_en": "Senior Financial Analyst"},
+          {"title_tr": "Finansal Analist", "title_en": "Financial Analyst"},
+          {"title_tr": "Kârlılık Analisti", "title_en": "Profitability Analyst"},
+          {"title_tr": "Maliyet ve Verimlilik Analisti", "title_en": "Cost and Efficiency Analyst"}]},
+        {"name_tr": "Yönetim Raporlaması", "name_en": "Management Reporting", "positions": [
+          {"title_tr": "Yönetim Raporlama Takım Lideri", "title_en": "Management Reporting Team Lead"},
+          {"title_tr": "Kıdemli Yönetim Raporlama Uzmanı", "title_en": "Senior Management Reporting Specialist"},
+          {"title_tr": "Yönetim Raporlama Uzmanı", "title_en": "Management Reporting Specialist"},
+          {"title_tr": "Finansal Veri ve BI Uzmanı", "title_en": "Financial Data and BI Specialist"}]}
+      ],
+      "responsibilities": ["Bütçe-gerçekleşen karşılaştırmaları", "Sapma ve kök neden analizleri", "Şirket, marka, ürün ve hizmet kârlılığı", "Finansal ve operasyonel KPI analizi", "Yönetim raporları ve dashboardlar", "Departman bazlı finansal performans", "Karar destek analizleri"]
+    },
+    {
+      "id": "03.03",
+      "name_tr": "Hazine ve Nakit Yönetimi Müdürlüğü",
+      "name_en": "Treasury and Cash Management Department",
+      "manager": {"title_tr": "Hazine ve Nakit Yönetimi Müdürü", "title_en": "Treasury and Cash Management Manager"},
+      "teams": [
+        {"name_tr": "Nakit Akışı ve Likidite", "name_en": "Cash Flow and Liquidity", "positions": [
+          {"title_tr": "Nakit Yönetimi Takım Lideri", "title_en": "Cash Management Team Lead"},
+          {"title_tr": "Kıdemli Nakit Yönetimi Uzmanı", "title_en": "Senior Cash Management Specialist"},
+          {"title_tr": "Nakit Akış Planlama Uzmanı", "title_en": "Cash Flow Planning Specialist"},
+          {"title_tr": "Likidite Yönetimi Uzmanı", "title_en": "Liquidity Management Specialist"},
+          {"title_tr": "Hazine Analisti", "title_en": "Treasury Analyst"}]},
+        {"name_tr": "Ödeme ve Hazine Operasyonları", "name_en": "Payment and Treasury Operations", "positions": [
+          {"title_tr": "Hazine Operasyonları Takım Lideri", "title_en": "Treasury Operations Team Lead"},
+          {"title_tr": "Hazine Operasyonları Uzmanı", "title_en": "Treasury Operations Specialist"},
+          {"title_tr": "Ödeme Planlama Uzmanı", "title_en": "Payment Planning Specialist"},
+          {"title_tr": "Banka Operasyonları Uzmanı", "title_en": "Banking Operations Specialist"}]}
+      ],
+      "responsibilities": ["Günlük, haftalık ve aylık nakit projeksiyonları", "Likidite ve banka bakiyesi yönetimi", "Nakit havuzu ve hesap optimizasyonu", "Onaylı ödeme takviminin oluşturulması", "Banka talimatları", "Kısa vadeli fonlama ihtiyacının belirlenmesi", "Atıl nakdin değerlendirilmesi", "Görevler ayrılığına uygun ödeme kontrolü"]
+    },
+    {
+      "id": "03.04",
+      "name_tr": "Banka İlişkileri ve Finansman Müdürlüğü",
+      "name_en": "Banking Relations and Financing Department",
+      "manager": {"title_tr": "Banka İlişkileri ve Finansman Müdürü", "title_en": "Banking Relations and Financing Manager"},
+      "teams": [
+        {"name_tr": "Banka İlişkileri", "name_en": "Banking Relations", "positions": [
+          {"title_tr": "Banka İlişkileri Takım Lideri", "title_en": "Banking Relations Team Lead"},
+          {"title_tr": "Kıdemli Banka İlişkileri Uzmanı", "title_en": "Senior Banking Relations Specialist"},
+          {"title_tr": "Banka İlişkileri Uzmanı", "title_en": "Banking Relations Specialist"},
+          {"title_tr": "Finansman Operasyonları Uzmanı", "title_en": "Financing Operations Specialist"}]},
+        {"name_tr": "Kredi ve Borçlanma", "name_en": "Credit and Debt Financing", "positions": [
+          {"title_tr": "Kurumsal Finansman Takım Lideri", "title_en": "Corporate Finance Team Lead"},
+          {"title_tr": "Kredi ve Borçlanma Uzmanı", "title_en": "Credit and Debt Specialist"},
+          {"title_tr": "Proje Finansmanı Uzmanı", "title_en": "Project Finance Specialist"},
+          {"title_tr": "Finansman Analisti", "title_en": "Financing Analyst"}]}
+      ],
+      "responsibilities": ["Banka ve finans kuruluşlarıyla ilişkiler", "Kredi limitleri ve teminat yapısı", "Kredi ve finansman alternatifleri", "Borçlanma maliyeti ve vade optimizasyonu", "Proje finansmanı", "Finansal sözleşme yükümlülükleri", "Kredi derecelendirme süreçleri", "Borç portföyü takibi"]
+    },
+    {
+      "id": "03.05",
+      "name_tr": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+      "name_en": "Receivables and Working Capital Department",
+      "manager": {"title_tr": "Tahsilat ve Çalışma Sermayesi Müdürü", "title_en": "Receivables and Working Capital Manager"},
+      "teams": [
+        {"name_tr": "Tahsilat Planlama ve Takip", "name_en": "Collection Planning and Monitoring", "positions": [
+          {"title_tr": "Tahsilat Yönetimi Takım Lideri", "title_en": "Collection Management Team Lead"},
+          {"title_tr": "Kıdemli Tahsilat Uzmanı", "title_en": "Senior Collection Specialist"},
+          {"title_tr": "Tahsilat Takip Uzmanı", "title_en": "Collection Tracking Specialist"},
+          {"title_tr": "Alacak Risk Analisti", "title_en": "Receivables Risk Analyst"}]},
+        {"name_tr": "Çalışma Sermayesi Optimizasyonu", "name_en": "Working Capital Optimisation", "positions": [
+          {"title_tr": "Çalışma Sermayesi Takım Lideri", "title_en": "Working Capital Team Lead"},
+          {"title_tr": "Çalışma Sermayesi Uzmanı", "title_en": "Working Capital Specialist"},
+          {"title_tr": "Nakit Dönüşüm Döngüsü Analisti", "title_en": "Cash Conversion Cycle Analyst"},
+          {"title_tr": "Ticari Finans Analisti", "title_en": "Commercial Finance Analyst"}]}
+      ],
+      "responsibilities": ["Tahsilat planlaması ve gecikme takibi", "Yaşlandırma ve gecikmiş alacak analizi", "DSO ve nakit dönüşüm döngüsü yönetimi", "Müşteri finansal limit önerileri", "Tahsilat risklerinin izlenmesi", "Satış ve müşteri ekipleriyle tahsilat koordinasyonu", "Alacak, borç ve stok dengesinin optimizasyonu"]
+    },
+    {
+      "id": "03.06",
+      "name_tr": "Finansal Risk Yönetimi Müdürlüğü",
+      "name_en": "Financial Risk Management Department",
+      "manager": {"title_tr": "Finansal Risk Yönetimi Müdürü", "title_en": "Financial Risk Manager"},
+      "teams": [
+        {"name_tr": "Piyasa ve Likidite Riski", "name_en": "Market and Liquidity Risk", "positions": [
+          {"title_tr": "Piyasa Riski Takım Lideri", "title_en": "Market Risk Team Lead"},
+          {"title_tr": "Kur ve Faiz Riski Uzmanı", "title_en": "FX and Interest Rate Risk Specialist"},
+          {"title_tr": "Likidite Riski Uzmanı", "title_en": "Liquidity Risk Specialist"},
+          {"title_tr": "Finansal Risk Analisti", "title_en": "Financial Risk Analyst"}]},
+        {"name_tr": "Karşı Taraf Riski ve Finansal Kontroller", "name_en": "Counterparty Risk and Financial Controls", "positions": [
+          {"title_tr": "Karşı Taraf Riski Takım Lideri", "title_en": "Counterparty Risk Team Lead"},
+          {"title_tr": "Kredi Riski Uzmanı", "title_en": "Credit Risk Specialist"},
+          {"title_tr": "Finansal Kontrol ve Limit Uzmanı", "title_en": "Financial Controls and Limits Specialist"},
+          {"title_tr": "Risk Modelleme Analisti", "title_en": "Risk Modelling Analyst"}]}
+      ],
+      "responsibilities": ["Kur, faiz ve likidite risklerinin ölçülmesi", "Karşı taraf ve kredi riski analizi", "Finansal risk limitlerinin izlenmesi", "Stres testi ve senaryo analizi", "Hedging stratejileri", "Finansal risk azaltma önerileri", "Risk göstergeleri ve erken uyarı sistemi"]
+    },
+    {
+      "id": "03.07",
+      "name_tr": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+      "name_en": "Investment and Capital Management Department",
+      "manager": {"title_tr": "Yatırım ve Sermaye Yönetimi Müdürü", "title_en": "Investment and Capital Management Manager"},
+      "teams": [
+        {"name_tr": "Yatırım Değerlendirme", "name_en": "Investment Evaluation", "positions": [
+          {"title_tr": "Yatırım Analizi Takım Lideri", "title_en": "Investment Analysis Team Lead"},
+          {"title_tr": "Kıdemli Yatırım Analisti", "title_en": "Senior Investment Analyst"},
+          {"title_tr": "Yatırım Analisti", "title_en": "Investment Analyst"},
+          {"title_tr": "Fizibilite ve Değerleme Uzmanı", "title_en": "Feasibility and Valuation Specialist"}]},
+        {"name_tr": "Sermaye Yapısı ve Kaynak Tahsisi", "name_en": "Capital Structure and Allocation", "positions": [
+          {"title_tr": "Sermaye Planlama Takım Lideri", "title_en": "Capital Planning Team Lead"},
+          {"title_tr": "Sermaye Planlama Uzmanı", "title_en": "Capital Planning Specialist"},
+          {"title_tr": "Kurumsal Finans Uzmanı", "title_en": "Corporate Finance Specialist"},
+          {"title_tr": "Kaynak Tahsisi Analisti", "title_en": "Capital Allocation Analyst"}]}
+      ],
+      "responsibilities": ["Yatırım fizibilitesi", "NPV, IRR ve geri ödeme süresi analizleri", "Şirket ve proje değerlemeleri", "Sermaye maliyeti hesaplamaları", "Kaynak tahsisi önerileri", "Sermaye yapısının optimizasyonu", "Yatırım sonrası performans takibi", "Birleşme ve satın almalarda finansal analiz"]
+    },
+    {
+      "id": "03.08",
+      "name_tr": "Yatırımcı İlişkileri Müdürlüğü",
+      "name_en": "Investor Relations Department",
+      "activation_rule": "Şirketin ortaklık, yatırımcı veya sermaye piyasası yapısına göre aktive edilir.",
+      "manager": {"title_tr": "Yatırımcı İlişkileri Müdürü", "title_en": "Investor Relations Manager"},
+      "teams": [
+        {"name_tr": "Yatırımcı İletişimi ve Bilgilendirme", "name_en": "Investor Communications and Disclosure", "positions": [
+          {"title_tr": "Yatırımcı İletişimi Takım Lideri", "title_en": "Investor Communications Team Lead"},
+          {"title_tr": "Yatırımcı İlişkileri Uzmanı", "title_en": "Investor Relations Specialist"},
+          {"title_tr": "Yatırımcı Sunum ve Raporlama Uzmanı", "title_en": "Investor Presentation and Reporting Specialist"}]},
+        {"name_tr": "Sermaye Piyasaları ve Paydaş Analizi", "name_en": "Capital Markets and Stakeholder Analysis", "positions": [
+          {"title_tr": "Sermaye Piyasaları Uzmanı", "title_en": "Capital Markets Specialist"},
+          {"title_tr": "Yatırımcı Veri Analisti", "title_en": "Investor Data Analyst"},
+          {"title_tr": "Paydaş Analizi Uzmanı", "title_en": "Stakeholder Analysis Specialist"}]}
+      ],
+      "responsibilities": ["Yatırımcılara yönelik finansal bilgilendirme", "Yatırımcı sunumları ve toplantıları", "Finansal sonuç anlatısının hazırlanması", "Yatırımcı soru ve geri bildirimlerinin yönetimi", "Sermaye piyasası beklentilerinin takibi", "Yatırımcı algı ve paydaş analizleri"]
+    }
+  ],
+  "finance_business_partner_role": {
+    "title_tr": "Finans İş Ortağı",
+    "title_en": "Finance Business Partner",
+    "organizational_model": "Merkezi finans organizasyonuna bağlı, iş birimleriyle matris çalışan rol",
+    "responsibilities": ["İş birimi kararlarına finansal danışmanlık sağlamak", "Bütçe ve performans sonuçlarını iş birimleriyle değerlendirmek", "Ticari ve operasyonel kararların finansal etkisini analiz etmek", "Finansal hedefler ile iş birimi hedeflerini uyumlandırmak"]
+  },
+  "title_standard": [
+    {"level": "C-Level", "title_tr": "CFO / Mali İşler ve Finans Başkanı", "title_en": "Chief Financial Officer"},
+    {"level": "Direktör", "title_tr": "Direktör", "title_en": "Director"},
+    {"level": "Direktör Yardımcısı", "title_tr": "Direktör Yardımcısı", "title_en": "Deputy Director"},
+    {"level": "Müdür", "title_tr": "Müdür", "title_en": "Manager"},
+    {"level": "Takım Lideri", "title_tr": "Takım Lideri", "title_en": "Team Lead"},
+    {"level": "Kıdemli Uzman", "title_tr": "Kıdemli Uzman", "title_en": "Senior Specialist"},
+    {"level": "Uzman", "title_tr": "Uzman", "title_en": "Specialist"},
+    {"level": "Analist", "title_tr": "Analist", "title_en": "Analyst"},
+    {"level": "Uzman Yardımcısı", "title_tr": "Uzman Yardımcısı", "title_en": "Associate Specialist"}
+  ],
+  "cross_department_boundaries": [
+    {"process": "Muhasebe işlemleri", "finance_and_treasury_owns": "Nakit etkisini planlamak ve yönetimsel analiz yapmak", "other_department": "02 - Muhasebe ve Mali İşler", "other_department_owns": "Muhasebe kaydını oluşturmak ve yasal raporlamayı yürütmek"},
+    {"process": "Ödeme", "finance_and_treasury_owns": "Ödeme zamanını, nakit kaynağını ve banka talimatını yönetmek", "other_department": "02 - Muhasebe ve Mali İşler", "other_department_owns": "Belgeyi, borcu, cari hesabı ve muhasebe kaydını doğrulamak"},
+    {"process": "Tahsilat", "finance_and_treasury_owns": "Tahsilat takvimini, finansal riski ve çalışma sermayesi etkisini yönetmek", "other_department": "08 - Satış ve Gelir Yönetimi", "other_department_owns": "Müşteri ilişkisini, ticari müzakereyi ve satış kapanışını yönetmek"},
+    {"process": "Gecikmiş alacak", "finance_and_treasury_owns": "Finansal risk analizi ve tahsilat aksiyonu önermek", "other_department": "05 - Hukuk İşleri", "other_department_owns": "Hukuki takip, ihtar, icra ve dava süreçlerini yönetmek"},
+    {"process": "Bütçe", "finance_and_treasury_owns": "Bütçe sistemini, takvimini, konsolidasyonunu ve analizini yönetmek", "other_department": "Tüm departmanlar", "other_department_owns": "Kendi bütçe ihtiyaçlarını, varsayımlarını ve operasyonel hedeflerini oluşturmak"},
+    {"process": "Yatırım", "finance_and_treasury_owns": "Finansal fizibilite, değerleme, kaynak ve risk analizi yapmak", "other_department": "01 - Üst Yönetim ve Kurumsal Yönetişim", "other_department_owns": "Yetki matrisine göre nihai yatırım ve kaynak tahsisi kararını vermek"},
+    {"process": "Finansal risk", "finance_and_treasury_owns": "Kur, faiz, likidite, kredi ve karşı taraf risklerini yönetmek", "other_department": "06 - Uyum, Kurumsal Risk ve İç Kontrol", "other_department_owns": "Şirket genelindeki bütünleşik risk ve iç kontrol sistemini yönetmek"}
+  ],
+  "scope_exclusions": ["Muhasebe kaydı oluşturmak", "Fatura düzenlemek", "Vergi beyannamesi hazırlamak", "Cari hesap mutabakatının kayıt sorumluluğunu üstlenmek", "Yasal finansal tablo hazırlamak", "Belgesiz veya yetkisiz ödeme gerçekleştirmek", "Tek başına yatırım veya borçlanma kararı vermek", "Müşteriyle satış sözleşmesini kapatmak", "Hukuki alacak takibini yürütmek"],
+  "implementation_notes": [
+    "Bu yapı hedef organizasyon modelidir; ekipler şirket ölçeğine göre birleştirilebilir.",
+    "Ödeme, finansman, banka talimatı ve yatırım süreçlerinde görevler ayrılığı matrisi uygulanmalıdır.",
+    "Muhasebe geçmişte gerçekleşen işlemi kaydeder; Finans ve Hazine gelecekteki nakdi, bütçeyi, finansmanı ve finansal kararları yönetir.",
+    "Yatırımcı İlişkileri Müdürlüğü, ortaklık ve sermaye piyasası yapısına göre opsiyoneldir."
+  ],
+  "standard": {
+    "status": "taslak",
+    "prepared_at": "2026-10-30",
+    "note": "Mevcut departman yapısından türetilmiş öneridir. Görev ve sorumluluklar, yetki alanları ve birlikte çalışılan birimler onaylanana kadar uygulamada gösterilmez; onaylandığında status \"onaylandı\" yapılır.",
+    "department": {
+      "responsibilities": [
+        "Yıllık bütçeyi, tahminleri ve çok yıllı finansal planı hazırlamak ve yönetmek",
+        "Bütçe-gerçekleşen, kârlılık ve sapma analizleriyle yönetime karar desteği sağlamak",
+        "Nakit akışını, likiditeyi ve onaylı ödeme takvimini yönetmek",
+        "Banka ilişkilerini, kredi limitlerini ve finansman kaynaklarını yönetmek",
+        "Tahsilat planlamasını ve çalışma sermayesi dengesini yönetmek",
+        "Kur, faiz, likidite, kredi ve karşı taraf risklerini ölçmek ve yönetmek",
+        "Yatırımların finansal fizibilitesini, değerlemesini ve yatırım sonrası performansını değerlendirmek",
+        "Yatırımcılara yönelik finansal bilgilendirmeyi ve sermaye piyasası ilişkilerini yürütmek"
+      ],
+      "authorities": [
+        "Bütçe takvimini, bütçe formatlarını ve tahminleme varsayımlarını belirler",
+        "Konsolide bütçeyi ve bütçe revizyonlarını CFO aracılığıyla üst yönetim onayına sunar",
+        "Muhasebece doğrulanan yükümlülüklerin ödeme önceliğini, tarihini ve nakit kaynağını belirler",
+        "Yetki matrisindeki limitler içinde banka talimatlarını ve kısa vadeli fon kullanımını onaylar",
+        "Yatırım ve borçlanma kararları için finansal analiz ve öneriyi yetkili karar merciine sunar",
+        "Onaylı risk limitleri içinde kur ve faiz riskinden korunma işlemlerini onaylar",
+        "Gecikmiş alacakların hukuki takibe aktarılması için Hukuk İşlerine öneride bulunur"
+      ],
+      "collaborations": [
+        {
+          "department": "02 - Muhasebe ve Mali İşler",
+          "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+          "topic": "Ödeme öncesi belge, borç ve cari hesap doğrulaması"
+        },
+        {
+          "department": "02 - Muhasebe ve Mali İşler",
+          "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+          "topic": "Gerçekleşen finansal verilerin planlama ve yönetim raporlamasında kullanılması"
+        },
+        {
+          "department": "08 - Satış ve Gelir Yönetimi",
+          "unit": "Satış Performansı ve Gelir Planlama",
+          "topic": "Gelir planı, satış hedefleri ve tahsilat takvimi"
+        },
+        {
+          "department": "05 - Hukuk İşleri",
+          "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+          "topic": "Gecikmiş alacakların hukuki takip, ihtar ve icra süreçlerine devri"
+        },
+        {
+          "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+          "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+          "topic": "Yatırım ve kaynak tahsisi kararları için finansal fizibilite ve risk analizi"
+        },
+        {
+          "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+          "unit": "Kurumsal Risk Yönetimi",
+          "topic": "Finansal risklerin bütünleşik risk ve iç kontrol sistemiyle uyumu"
+        },
+        {
+          "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+          "unit": "Satın Alma ve Tedarikçi Yönetimi",
+          "topic": "Tedarikçi ödeme koşulları ve stok yatırımının çalışma sermayesine etkisi"
+        },
+        {
+          "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+          "unit": "Paydaş, Kamu ve Sektör İletişimi",
+          "topic": "Yatırımcı ve paydaş iletişiminde finansal mesaj tutarlılığı"
+        },
+        {
+          "department": "04 - İnsan Kaynakları ve Organizasyon",
+          "unit": "Ücret ve Yan Haklar",
+          "topic": "Personel maliyeti bütçesi ve ücret artış senaryoları"
+        }
+      ],
+      "kpis": [
+        "Bütçe tahmin doğruluk oranı",
+        "Rolling forecast sapma oranı",
+        "Yönetim raporlarının zamanında yayımlanma oranı",
+        "Nakit projeksiyon doğruluk oranı",
+        "Asgari likidite tamponuna uyum oranı",
+        "Ödeme takvimine uyum oranı",
+        "Ortalama borçlanma maliyeti",
+        "Finansal sözleşme yükümlülüklerine uyum oranı",
+        "Alacak tahsil süresi (DSO)",
+        "Nakit dönüşüm döngüsü (gün)",
+        "Vadesi geçmiş alacak oranı",
+        "Finansal risk limit aşımı sayısı",
+        "Kur riskinden korunma oranı",
+        "Yatırım sonrası planlanan ve gerçekleşen getiri sapması",
+        "Yatırımcı sorularına ortalama yanıt süresi"
+      ],
+      "staffing_models": [
+        {
+          "model": "Yalın",
+          "min": 36,
+          "max": 63
+        },
+        {
+          "model": "Standart",
+          "min": 75,
+          "max": 128
+        },
+        {
+          "model": "Genişletilmiş",
+          "min": 129,
+          "max": 163
+        }
+      ],
+      "recommended_staffing": {
+        "total_min": 75,
+        "total_max": 128,
+        "composition": [
+          {
+            "role_group": "Departman yönetimi",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "role_group": "Birim Müdürü",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "role_group": "Ekip Yöneticisi",
+            "min": 15,
+            "max": 15
+          },
+          {
+            "role_group": "Kıdemli Uzman",
+            "min": 8,
+            "max": 16
+          },
+          {
+            "role_group": "Uzman",
+            "min": 27,
+            "max": 56
+          },
+          {
+            "role_group": "Analist",
+            "min": 15,
+            "max": 30
+          }
+        ]
+      }
+    },
+    "units": [
+      {
+        "unit_id": "03.01",
+        "name_tr": "Finansal Strateji ve Planlama Müdürlüğü",
+        "responsibilities": [
+          "Yıllık bütçeyi ve bütçe revizyonlarını bütçe takvimine göre hazırlamak",
+          "Rolling forecast ile gelir, gider ve kârlılık tahminlerini güncellemek",
+          "Çok yıllı finansal planı ve finansal modeli oluşturmak",
+          "Senaryo ve hassasiyet analizleriyle plan varsayımlarını sınamak",
+          "Finansal hedefleri departmanlara dağıtmak ve bütçe yönetişimini işletmek"
+        ],
+        "authorities": [
+          "Bütçe takvimini, şablonlarını ve planlama varsayımlarını belirler",
+          "Departman bütçe tekliflerini tutarlılık açısından inceler ve revizyon ister",
+          "Konsolide bütçe ve çok yıllı plan taslağını direktör onayına sunar",
+          "Bütçe dışı harcama taleplerinde bütçe etkisine ilişkin görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Stratejik plan ile bütçe ve çok yıllı finansal planın uyumu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+            "topic": "Bütçe-gerçekleşen karşılaştırmaları ve tahmin güncellemeleri"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Bütçe ve tahminlerin nakit projeksiyonlarına aktarılması"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Satış Performansı ve Gelir Planlama",
+            "topic": "Satış hedefleri ve gelir planının bütçeye yansıtılması"
+          },
+          {
+            "department": "04 - İnsan Kaynakları ve Organizasyon",
+            "unit": "İK Planlama ve Organizasyonel Gelişim",
+            "topic": "Kadro planı ve personel maliyeti bütçesi"
+          }
+        ],
+        "kpis": [
+          "Bütçe tahmin doğruluk oranı",
+          "Rolling forecast sapma oranı",
+          "Bütçe takvimine uyum oranı",
+          "Zamanında teslim edilen departman bütçesi oranı",
+          "Dönem içi bütçe revizyonu sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.01",
+            "level": "Birim Müdürü",
+            "title_tr": "Finansal Planlama ve Strateji Müdürü",
+            "title_en": "Financial Planning and Strategy Manager"
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Bütçe ve Planlama Takım Lideri",
+            "title_en": "Budgeting and Planning Team Lead"
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/kidemli-butce-ve-planlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Bütçe ve Planlama Uzmanı",
+            "title_en": "Senior Budget and Planning Specialist"
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/butce-ve-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Bütçe ve Planlama Uzmanı",
+            "title_en": "Budget and Planning Specialist"
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/finansal-tahminleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Tahminleme Uzmanı",
+            "title_en": "Financial Forecasting Specialist"
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/butce-analisti",
+            "level": "Analist",
+            "title_tr": "Bütçe Analisti",
+            "title_en": "Budget Analyst"
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Finansal Strateji Takım Lideri",
+            "title_en": "Financial Strategy Team Lead"
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/kidemli-finansal-strateji-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Finansal Strateji Uzmanı",
+            "title_en": "Senior Financial Strategy Specialist"
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/finansal-modelleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Modelleme Uzmanı",
+            "title_en": "Financial Modelling Specialist"
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/senaryo-planlama-analisti",
+            "level": "Analist",
+            "title_tr": "Senaryo Planlama Analisti",
+            "title_en": "Scenario Planning Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 16
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 17,
+            "max": 22
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.01",
+            "title_tr": "Finansal Planlama ve Strateji Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme",
+            "title_tr": "Bütçe ve Planlama Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/kidemli-butce-ve-planlama-uzmani",
+            "title_tr": "Kıdemli Bütçe ve Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/butce-ve-planlama-uzmani",
+            "title_tr": "Bütçe ve Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/finansal-tahminleme-uzmani",
+            "title_tr": "Finansal Tahminleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/butce-ve-tahminleme/butce-analisti",
+            "title_tr": "Bütçe Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama",
+            "title_tr": "Finansal Strateji Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/kidemli-finansal-strateji-uzmani",
+            "title_tr": "Kıdemli Finansal Strateji Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/finansal-modelleme-uzmani",
+            "title_tr": "Finansal Modelleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.01/uzun-vadeli-finansal-planlama/senaryo-planlama-analisti",
+            "title_tr": "Senaryo Planlama Analisti",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      },
+      {
+        "unit_id": "03.02",
+        "name_tr": "Finansal Analiz ve Yönetim Raporlaması Müdürlüğü",
+        "responsibilities": [
+          "Bütçe-gerçekleşen karşılaştırmalarını, sapma ve kök neden analizlerini yapmak",
+          "Şirket, marka, ürün ve hizmet kârlılığını analiz etmek",
+          "Finansal ve operasyonel KPI'ları izlemek ve analiz etmek",
+          "Yönetim raporlarını ve finansal gösterge panellerini hazırlamak",
+          "Departman bazlı finansal performansı raporlamak ve karar destek analizleri üretmek"
+        ],
+        "authorities": [
+          "Finansal yönetim raporlarının içeriğini ve dağıtım listesini belirler; takvimi Üst Yönetimin yönetim raporlama takvimine uyar",
+          "Önemli bütçe sapmaları için departmanlardan açıklama ve aksiyon planı ister",
+          "Kârlılık analizi yöntemini ve dağıtım varsayımlarını direktör onayına sunar",
+          "Fiyatlandırma ve ürün kararlarında kârlılık etkisine ilişkin görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Gerçekleşen finansal verilerin yönetim raporlamasına aktarılması"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Maliyet Muhasebesi",
+            "topic": "Maliyet verisinin kârlılık analizlerinde kullanılması"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Karar Yönetimi ve Yönetim Raporlama Müdürlüğü",
+            "topic": "Finansal sonuçların üst yönetim raporlarına tutarlı aktarımı"
+          },
+          {
+            "department": "17 - Veri, Analitik ve Yapay Zekâ",
+            "unit": "İş Zekâsı, Raporlama ve Karar Destek",
+            "topic": "Finansal gösterge panelleri ve raporlama veri altyapısı"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Fiyatlandırma ve Ticari Yönetişim",
+            "topic": "Ürün ve müşteri kârlılığının fiyatlandırma kararlarına girdi olması"
+          }
+        ],
+        "kpis": [
+          "Yönetim raporlarının zamanında yayımlanma oranı",
+          "Sapma analizinin tamamlanma süresi",
+          "Rapor veri tutarlılık oranı",
+          "Açıklaması alınan önemli sapma oranı",
+          "Finansal gösterge paneli kullanım oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.02",
+            "level": "Birim Müdürü",
+            "title_tr": "Finansal Analiz ve Raporlama Müdürü",
+            "title_en": "FP&A and Management Reporting Manager"
+          },
+          {
+            "position": "03.02/finansal-performans-analizi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Finansal Analiz Takım Lideri",
+            "title_en": "Financial Analysis Team Lead"
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/kidemli-finansal-analist",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Finansal Analist",
+            "title_en": "Senior Financial Analyst"
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/finansal-analist",
+            "level": "Analist",
+            "title_tr": "Finansal Analist",
+            "title_en": "Financial Analyst"
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/karlilik-analisti",
+            "level": "Analist",
+            "title_tr": "Kârlılık Analisti",
+            "title_en": "Profitability Analyst"
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/maliyet-ve-verimlilik-analisti",
+            "level": "Analist",
+            "title_tr": "Maliyet ve Verimlilik Analisti",
+            "title_en": "Cost and Efficiency Analyst"
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yönetim Raporlama Takım Lideri",
+            "title_en": "Management Reporting Team Lead"
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/kidemli-yonetim-raporlama-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yönetim Raporlama Uzmanı",
+            "title_en": "Senior Management Reporting Specialist"
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/yonetim-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yönetim Raporlama Uzmanı",
+            "title_en": "Management Reporting Specialist"
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/finansal-veri-ve-bi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Veri ve BI Uzmanı",
+            "title_en": "Financial Data and BI Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 18
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 18,
+            "max": 23
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.02",
+            "title_tr": "Finansal Analiz ve Raporlama Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.02/finansal-performans-analizi",
+            "title_tr": "Finansal Analiz Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/kidemli-finansal-analist",
+            "title_tr": "Kıdemli Finansal Analist",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/finansal-analist",
+            "title_tr": "Finansal Analist",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/karlilik-analisti",
+            "title_tr": "Kârlılık Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.02/finansal-performans-analizi/maliyet-ve-verimlilik-analisti",
+            "title_tr": "Maliyet ve Verimlilik Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi",
+            "title_tr": "Yönetim Raporlama Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/kidemli-yonetim-raporlama-uzmani",
+            "title_tr": "Kıdemli Yönetim Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/yonetim-raporlama-uzmani",
+            "title_tr": "Yönetim Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.02/yonetim-raporlamasi/finansal-veri-ve-bi-uzmani",
+            "title_tr": "Finansal Veri ve BI Uzmanı",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "03.03",
+        "name_tr": "Hazine ve Nakit Yönetimi Müdürlüğü",
+        "responsibilities": [
+          "Günlük, haftalık ve aylık nakit projeksiyonlarını hazırlamak",
+          "Likiditeyi, banka bakiyelerini ve nakit havuzunu yönetmek",
+          "Muhasebece doğrulanan yükümlülüklerden onaylı ödeme takvimini oluşturmak",
+          "Banka talimatlarını görevler ayrılığına uygun kontrollerle yürütmek",
+          "Kısa vadeli fonlama ihtiyacını belirlemek ve atıl nakdi değerlendirmek"
+        ],
+        "authorities": [
+          "Nakit durumuna göre ödeme önceliği ve tarih önerisini direktör onayına sunar",
+          "Belgesiz veya yetki matrisine uymayan ödeme taleplerini işleme almayı reddeder",
+          "Yetki limitleri içinde banka talimatlarını onaylar",
+          "Atıl nakdin onaylı araçlarda değerlendirilmesine limitler içinde karar verir"
+        ],
+        "collaborations": [
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Ödeme öncesi borç ve bakiye doğrulaması ve ödeme listesi mutabakatı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Genel Muhasebe ve Dönem Kapanışı",
+            "topic": "Banka hareketlerinin muhasebe kayıtlarıyla mutabakatı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Banka İlişkileri ve Finansman Müdürlüğü",
+            "topic": "Kısa vadeli fonlama ihtiyacının kredi limitleriyle karşılanması"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Finansal Risk Yönetimi Müdürlüğü",
+            "topic": "Likidite riski göstergeleri ve limit takibi"
+          },
+          {
+            "department": "15 - Bilgi Teknolojileri",
+            "unit": "Kurumsal Uygulamalar ve İş Sistemleri",
+            "topic": "Banka entegrasyonları ve hazine sistemlerinin işletimi"
+          }
+        ],
+        "kpis": [
+          "Nakit projeksiyon doğruluk oranı",
+          "Asgari likidite tamponuna uyum oranı",
+          "Ödeme takvimine uyum oranı",
+          "Hatalı veya mükerrer ödeme sayısı",
+          "Atıl nakit oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.03",
+            "level": "Birim Müdürü",
+            "title_tr": "Hazine ve Nakit Yönetimi Müdürü",
+            "title_en": "Treasury and Cash Management Manager"
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Nakit Yönetimi Takım Lideri",
+            "title_en": "Cash Management Team Lead"
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/kidemli-nakit-yonetimi-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Nakit Yönetimi Uzmanı",
+            "title_en": "Senior Cash Management Specialist"
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/nakit-akis-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Nakit Akış Planlama Uzmanı",
+            "title_en": "Cash Flow Planning Specialist"
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/likidite-yonetimi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Likidite Yönetimi Uzmanı",
+            "title_en": "Liquidity Management Specialist"
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/hazine-analisti",
+            "level": "Analist",
+            "title_tr": "Hazine Analisti",
+            "title_en": "Treasury Analyst"
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Hazine Operasyonları Takım Lideri",
+            "title_en": "Treasury Operations Team Lead"
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/hazine-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Hazine Operasyonları Uzmanı",
+            "title_en": "Treasury Operations Specialist"
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/odeme-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Ödeme Planlama Uzmanı",
+            "title_en": "Payment Planning Specialist"
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/banka-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Banka Operasyonları Uzmanı",
+            "title_en": "Banking Operations Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "model": "Standart",
+            "min": 10,
+            "max": 19
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 19,
+            "max": 24
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.03",
+            "title_tr": "Hazine ve Nakit Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite",
+            "title_tr": "Nakit Yönetimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/kidemli-nakit-yonetimi-uzmani",
+            "title_tr": "Kıdemli Nakit Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/nakit-akis-planlama-uzmani",
+            "title_tr": "Nakit Akış Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/likidite-yonetimi-uzmani",
+            "title_tr": "Likidite Yönetimi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.03/nakit-akisi-ve-likidite/hazine-analisti",
+            "title_tr": "Hazine Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari",
+            "title_tr": "Hazine Operasyonları Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/hazine-operasyonlari-uzmani",
+            "title_tr": "Hazine Operasyonları Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/odeme-planlama-uzmani",
+            "title_tr": "Ödeme Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.03/odeme-ve-hazine-operasyonlari/banka-operasyonlari-uzmani",
+            "title_tr": "Banka Operasyonları Uzmanı",
+            "min": 1,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "unit_id": "03.04",
+        "name_tr": "Banka İlişkileri ve Finansman Müdürlüğü",
+        "responsibilities": [
+          "Banka ve finans kuruluşlarıyla ilişkileri yönetmek",
+          "Kredi limitlerini ve teminat yapısını izlemek ve yenilemek",
+          "Kredi ve finansman alternatiflerini maliyet ve vade açısından değerlendirmek",
+          "Borç portföyünü ve finansal sözleşme yükümlülüklerini takip etmek",
+          "Proje finansmanı ve kredi derecelendirme süreçlerini yürütmek"
+        ],
+        "authorities": [
+          "Borçlanma ve finansman tekliflerini karşılaştırmalı analizle yetkili karar merciine sunar",
+          "Banka ve finans kuruluşlarıyla müzakereyi direktör yetkisi çerçevesinde yürütür",
+          "Teminat ve limit yapısında değişiklik ihtiyacını direktöre önerir",
+          "Finansal sözleşme yükümlülüklerine aykırılık riskini erken uyarı olarak bildirir"
+        ],
+        "collaborations": [
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Sözleşmeler ve Ticari Hukuk",
+            "topic": "Kredi ve finansman sözleşmelerinin hukuki incelemesi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Fonlama ihtiyacı ve kredi kullanım planı"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+            "topic": "Yatırımların finansman yapısının belirlenmesi"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Finansal sözleşme yükümlülüğü hesaplamalarında kullanılan finansal tablo verileri"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Kurumsal Yönetişim Müdürlüğü",
+            "topic": "Borçlanma işlemlerinde yetki matrisi ve onay akışları"
+          }
+        ],
+        "kpis": [
+          "Ortalama borçlanma maliyeti",
+          "Kullanılabilir kredi limiti oranı",
+          "Finansal sözleşme yükümlülüklerine uyum oranı",
+          "Vadesi yaklaşan borçların zamanında yeniden finansman oranı",
+          "Teminat kullanım oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.04",
+            "level": "Birim Müdürü",
+            "title_tr": "Banka İlişkileri ve Finansman Müdürü",
+            "title_en": "Banking Relations and Financing Manager"
+          },
+          {
+            "position": "03.04/banka-iliskileri",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Banka İlişkileri Takım Lideri",
+            "title_en": "Bank Relations Team Lead"
+          },
+          {
+            "position": "03.04/banka-iliskileri/kidemli-banka-iliskileri-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Banka İlişkileri Uzmanı",
+            "title_en": "Senior Banking Relations Specialist"
+          },
+          {
+            "position": "03.04/banka-iliskileri/banka-iliskileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Banka İlişkileri Uzmanı",
+            "title_en": "Banking Relations Specialist"
+          },
+          {
+            "position": "03.04/banka-iliskileri/finansman-operasyonlari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansman Operasyonları Uzmanı",
+            "title_en": "Financing Operations Specialist"
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Kurumsal Finansman Takım Lideri",
+            "title_en": "Corporate Financing Team Lead"
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/kredi-ve-borclanma-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kredi ve Borçlanma Uzmanı",
+            "title_en": "Credit and Debt Specialist"
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/proje-finansmani-uzmani",
+            "level": "Uzman",
+            "title_tr": "Proje Finansmanı Uzmanı",
+            "title_en": "Project Finance Specialist"
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/finansman-analisti",
+            "level": "Analist",
+            "title_tr": "Finansman Analisti",
+            "title_en": "Financing Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "model": "Standart",
+            "min": 9,
+            "max": 15
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 15,
+            "max": 19
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.04",
+            "title_tr": "Banka İlişkileri ve Finansman Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.04/banka-iliskileri",
+            "title_tr": "Banka İlişkileri Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.04/banka-iliskileri/kidemli-banka-iliskileri-uzmani",
+            "title_tr": "Kıdemli Banka İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.04/banka-iliskileri/banka-iliskileri-uzmani",
+            "title_tr": "Banka İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.04/banka-iliskileri/finansman-operasyonlari-uzmani",
+            "title_tr": "Finansman Operasyonları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma",
+            "title_tr": "Kurumsal Finansman Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/kredi-ve-borclanma-uzmani",
+            "title_tr": "Kredi ve Borçlanma Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/proje-finansmani-uzmani",
+            "title_tr": "Proje Finansmanı Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.04/kredi-ve-borclanma/finansman-analisti",
+            "title_tr": "Finansman Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "03.05",
+        "name_tr": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+        "responsibilities": [
+          "Tahsilat planlamasını yapmak ve gecikmeleri takip etmek",
+          "Alacak yaşlandırmasını ve gecikmiş alacakları analiz etmek",
+          "DSO ve nakit dönüşüm döngüsünü izlemek ve iyileştirmek",
+          "Satış ve müşteri ekipleriyle tahsilat aksiyonlarını koordine etmek",
+          "Alacak, borç ve stok dengesini çalışma sermayesi açısından optimize etmek"
+        ],
+        "authorities": [
+          "Müşteri finansal limitleri için risk analizine dayalı öneri sunar",
+          "Tahsilat önceliklerini ve takip takvimini belirler",
+          "Hukuki takibe aktarılacak gecikmiş alacakları Hukuk İşlerine önerir",
+          "Vade ve ödeme koşulu değişikliklerinde çalışma sermayesi etkisine ilişkin görüş verir"
+        ],
+        "collaborations": [
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Kurumsal Satış",
+            "topic": "Kurumsal müşterilerde tahsilat koordinasyonu ve vade müzakeresine finansal girdi"
+          },
+          {
+            "department": "08 - Satış ve Gelir Yönetimi",
+            "unit": "Fiyatlandırma ve Ticari Yönetişim",
+            "topic": "Ödeme koşulu ve vade politikalarının ticari yönetişimle uyumu"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Dava, İcra ve Uyuşmazlık Yönetimi",
+            "topic": "Gecikmiş alacakların hukuki takip, icra ve dava süreçlerine devri"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Cari Hesaplar ve Borç-Alacak Muhasebesi",
+            "topic": "Alacak bakiyeleri ve yaşlandırma verisinin mutabakatı"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Malzeme, Stok ve Depo Yönetimi",
+            "topic": "Stok seviyelerinin çalışma sermayesi hedefleriyle uyumu"
+          }
+        ],
+        "kpis": [
+          "Alacak tahsil süresi (DSO)",
+          "Nakit dönüşüm döngüsü (gün)",
+          "Vadesi geçmiş alacak oranı",
+          "Tahsilat planı gerçekleşme oranı",
+          "Hukuki takibe devredilen alacak oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.05",
+            "level": "Birim Müdürü",
+            "title_tr": "Tahsilat ve Çalışma Sermayesi Müdürü",
+            "title_en": "Receivables and Working Capital Manager"
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Tahsilat Yönetimi Takım Lideri",
+            "title_en": "Collections Management Team Lead"
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/kidemli-tahsilat-uzmani",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Tahsilat Uzmanı",
+            "title_en": "Senior Collection Specialist"
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/tahsilat-takip-uzmani",
+            "level": "Uzman",
+            "title_tr": "Tahsilat Takip Uzmanı",
+            "title_en": "Collection Tracking Specialist"
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/alacak-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Alacak Risk Analisti",
+            "title_en": "Receivables Risk Analyst"
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Çalışma Sermayesi Takım Lideri",
+            "title_en": "Working Capital Team Lead"
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/calisma-sermayesi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Çalışma Sermayesi Uzmanı",
+            "title_en": "Working Capital Specialist"
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/nakit-donusum-dongusu-analisti",
+            "level": "Analist",
+            "title_tr": "Nakit Dönüşüm Döngüsü Analisti",
+            "title_en": "Cash Conversion Cycle Analyst"
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/ticari-finans-analisti",
+            "level": "Analist",
+            "title_tr": "Ticari Finans Analisti",
+            "title_en": "Commercial Finance Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 4,
+            "max": 8
+          },
+          {
+            "model": "Standart",
+            "min": 9,
+            "max": 16
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 16,
+            "max": 20
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.05",
+            "title_tr": "Tahsilat ve Çalışma Sermayesi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip",
+            "title_tr": "Tahsilat Yönetimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/kidemli-tahsilat-uzmani",
+            "title_tr": "Kıdemli Tahsilat Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/tahsilat-takip-uzmani",
+            "title_tr": "Tahsilat Takip Uzmanı",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "position": "03.05/tahsilat-planlama-ve-takip/alacak-risk-analisti",
+            "title_tr": "Alacak Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu",
+            "title_tr": "Çalışma Sermayesi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/calisma-sermayesi-uzmani",
+            "title_tr": "Çalışma Sermayesi Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/nakit-donusum-dongusu-analisti",
+            "title_tr": "Nakit Dönüşüm Döngüsü Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.05/calisma-sermayesi-optimizasyonu/ticari-finans-analisti",
+            "title_tr": "Ticari Finans Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "03.06",
+        "name_tr": "Finansal Risk Yönetimi Müdürlüğü",
+        "responsibilities": [
+          "Kur, faiz ve likidite risklerini ölçmek ve raporlamak",
+          "Karşı taraf ve kredi riskini analiz etmek",
+          "Finansal risk limitlerini izlemek ve limit aşımlarını bildirmek",
+          "Stres testi ve senaryo analizleri yapmak",
+          "Riskten korunma stratejileri ve risk azaltma önerileri geliştirmek",
+          "Finansal risk göstergelerini ve erken uyarı sistemini işletmek"
+        ],
+        "authorities": [
+          "Finansal risk limitlerini ve riskten korunma politikasını direktör aracılığıyla onaya sunar",
+          "Risk ölçüm yöntemini, stres senaryolarını ve erken uyarı eşiklerini belirler",
+          "Limit aşımlarında ilgili birimlerden düzeltici aksiyon ister",
+          "Karşı taraf limitlerine ilişkin risk görüşü verir"
+        ],
+        "collaborations": [
+          {
+            "department": "06 - Uyum, Kurumsal Risk ve İç Kontrol",
+            "unit": "Kurumsal Risk Yönetimi",
+            "topic": "Finansal risklerin kurumsal risk envanterine ve risk raporlamasına entegrasyonu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Hazine ve Nakit Yönetimi Müdürlüğü",
+            "topic": "Likidite riski ve nakit tamponu takibi"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Tahsilat ve Çalışma Sermayesi Müdürlüğü",
+            "topic": "Müşteri kredi riski ve alacak risk analizi"
+          },
+          {
+            "department": "13 - Üretim, Tedarik Zinciri ve Lojistik",
+            "unit": "Satın Alma ve Tedarikçi Yönetimi",
+            "topic": "Döviz bazlı satın almalar ve tedarikçi karşı taraf riskleri"
+          },
+          {
+            "department": "07 - İç Denetim",
+            "unit": "Finansal Denetim",
+            "topic": "Finansal risk kontrollerine ilişkin denetim bulgularının takibi"
+          }
+        ],
+        "kpis": [
+          "Finansal risk limit aşımı sayısı",
+          "Kur riskinden korunma oranı",
+          "Risk raporlarının zamanında yayımlanma oranı",
+          "Stres testi takvimine uyum oranı",
+          "Karşı taraf limit kullanım oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.06",
+            "level": "Birim Müdürü",
+            "title_tr": "Finansal Risk Yönetimi Müdürü",
+            "title_en": "Financial Risk Manager"
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Piyasa Riski Takım Lideri",
+            "title_en": "Market Risk Team Lead"
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/kur-ve-faiz-riski-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kur ve Faiz Riski Uzmanı",
+            "title_en": "FX and Interest Rate Risk Specialist"
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/likidite-riski-uzmani",
+            "level": "Uzman",
+            "title_tr": "Likidite Riski Uzmanı",
+            "title_en": "Liquidity Risk Specialist"
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/finansal-risk-analisti",
+            "level": "Analist",
+            "title_tr": "Finansal Risk Analisti",
+            "title_en": "Financial Risk Analyst"
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Karşı Taraf Riski Takım Lideri",
+            "title_en": "Counterparty Risk Team Lead"
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/kredi-riski-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kredi Riski Uzmanı",
+            "title_en": "Credit Risk Specialist"
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/finansal-kontrol-ve-limit-uzmani",
+            "level": "Uzman",
+            "title_tr": "Finansal Kontrol ve Limit Uzmanı",
+            "title_en": "Financial Controls and Limits Specialist"
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/risk-modelleme-analisti",
+            "level": "Analist",
+            "title_tr": "Risk Modelleme Analisti",
+            "title_en": "Risk Modelling Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "model": "Standart",
+            "min": 9,
+            "max": 15
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 15,
+            "max": 19
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.06",
+            "title_tr": "Finansal Risk Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski",
+            "title_tr": "Piyasa Riski Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/kur-ve-faiz-riski-uzmani",
+            "title_tr": "Kur ve Faiz Riski Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/likidite-riski-uzmani",
+            "title_tr": "Likidite Riski Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.06/piyasa-ve-likidite-riski/finansal-risk-analisti",
+            "title_tr": "Finansal Risk Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller",
+            "title_tr": "Karşı Taraf Riski Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/kredi-riski-uzmani",
+            "title_tr": "Kredi Riski Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/finansal-kontrol-ve-limit-uzmani",
+            "title_tr": "Finansal Kontrol ve Limit Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.06/karsi-taraf-riski-ve-finansal-kontroller/risk-modelleme-analisti",
+            "title_tr": "Risk Modelleme Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "03.07",
+        "name_tr": "Yatırım ve Sermaye Yönetimi Müdürlüğü",
+        "responsibilities": [
+          "Yatırım projelerinin fizibilitesini ve NPV, IRR ve geri ödeme analizlerini yapmak",
+          "Şirket ve proje değerlemelerini hazırlamak",
+          "Sermaye maliyetini hesaplamak ve sermaye yapısını optimize etmek",
+          "Kaynak tahsisi önerilerini finansal analize dayalı hazırlamak",
+          "Yatırım sonrası performansı izlemek ve planla karşılaştırmak",
+          "Birleşme ve satın almalarda finansal analiz yürütmek"
+        ],
+        "authorities": [
+          "Yatırım tekliflerinin finansal değerlendirmesini yetki matrisine göre karar merciine sunar",
+          "Fizibilite ve değerleme yöntemini ve iskonto oranı varsayımlarını belirler",
+          "Asgari getiri eşiğini karşılamayan yatırımlar için olumsuz finansal görüş verir",
+          "Yatırım sonrası sapmalarda proje sahibinden açıklama ve düzeltici plan ister"
+        ],
+        "collaborations": [
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Stratejik Projeler ve Dönüşüm Ofisi",
+            "topic": "Stratejik proje ve yatırımların finansal değerlendirmesi ve fayda takibi"
+          },
+          {
+            "department": "01 - Üst Yönetim ve Kurumsal Yönetişim",
+            "unit": "Strateji ve Kurumsal Performans Direktörlüğü",
+            "topic": "Kaynak tahsisi önerilerinin stratejik önceliklerle uyumu"
+          },
+          {
+            "department": "03 - Finans ve Hazine",
+            "unit": "Banka İlişkileri ve Finansman Müdürlüğü",
+            "topic": "Yatırımların finansman yapısı ve borçlanma ihtiyacı"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Sabit Kıymet ve Amortisman Muhasebesi",
+            "topic": "Yatırım harcamalarının aktifleştirme ve sabit kıymet takibi"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Şirketler ve Ticaret Hukuku",
+            "topic": "Birleşme, satın alma ve iştirak işlemlerinin hukuki süreçleri"
+          }
+        ],
+        "kpis": [
+          "Yatırım sonrası planlanan ve gerçekleşen getiri sapması",
+          "Fizibilite analizlerinin zamanında tamamlanma oranı",
+          "Yatırım sonrası değerlendirmesi yapılan proje oranı",
+          "Ağırlıklı ortalama sermaye maliyeti",
+          "Yatırım bütçesi gerçekleşme oranı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.07",
+            "level": "Birim Müdürü",
+            "title_tr": "Yatırım ve Sermaye Yönetimi Müdürü",
+            "title_en": "Investment and Capital Management Manager"
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yatırım Analizi Takım Lideri",
+            "title_en": "Investment Analysis Team Lead"
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/kidemli-yatirim-analisti",
+            "level": "Kıdemli Uzman",
+            "title_tr": "Kıdemli Yatırım Analisti",
+            "title_en": "Senior Investment Analyst"
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/yatirim-analisti",
+            "level": "Analist",
+            "title_tr": "Yatırım Analisti",
+            "title_en": "Investment Analyst"
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/fizibilite-ve-degerleme-uzmani",
+            "level": "Uzman",
+            "title_tr": "Fizibilite ve Değerleme Uzmanı",
+            "title_en": "Feasibility and Valuation Specialist"
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Sermaye Planlama Takım Lideri",
+            "title_en": "Capital Planning Team Lead"
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/sermaye-planlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sermaye Planlama Uzmanı",
+            "title_en": "Capital Planning Specialist"
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/kurumsal-finans-uzmani",
+            "level": "Uzman",
+            "title_tr": "Kurumsal Finans Uzmanı",
+            "title_en": "Corporate Finance Specialist"
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/kaynak-tahsisi-analisti",
+            "level": "Analist",
+            "title_tr": "Kaynak Tahsisi Analisti",
+            "title_en": "Capital Allocation Analyst"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "model": "Standart",
+            "min": 9,
+            "max": 15
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 15,
+            "max": 19
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.07",
+            "title_tr": "Yatırım ve Sermaye Yönetimi Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme",
+            "title_tr": "Yatırım Analizi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/kidemli-yatirim-analisti",
+            "title_tr": "Kıdemli Yatırım Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/yatirim-analisti",
+            "title_tr": "Yatırım Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.07/yatirim-degerlendirme/fizibilite-ve-degerleme-uzmani",
+            "title_tr": "Fizibilite ve Değerleme Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi",
+            "title_tr": "Sermaye Planlama Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/sermaye-planlama-uzmani",
+            "title_tr": "Sermaye Planlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/kurumsal-finans-uzmani",
+            "title_tr": "Kurumsal Finans Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.07/sermaye-yapisi-ve-kaynak-tahsisi/kaynak-tahsisi-analisti",
+            "title_tr": "Kaynak Tahsisi Analisti",
+            "min": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "unit_id": "03.08",
+        "name_tr": "Yatırımcı İlişkileri Müdürlüğü",
+        "responsibilities": [
+          "Yatırımcılara yönelik finansal bilgilendirmeyi zamanında ve tutarlı yürütmek",
+          "Yatırımcı sunumlarını ve toplantılarını hazırlamak ve organize etmek",
+          "Finansal sonuç anlatısını onaylı finansal verilere dayalı hazırlamak",
+          "Yatırımcı soru ve geri bildirimlerini yönetmek",
+          "Sermaye piyasası beklentilerini, yatırımcı algısını ve paydaş eğilimlerini analiz etmek"
+        ],
+        "authorities": [
+          "Yatırımcı sunumlarını ve finansal sonuç anlatısını direktör ve CFO onayına sunar",
+          "Yatırımcı toplantı takvimini ve görüşme önceliklerini belirler",
+          "Kamuya açıklanmamış bilginin paylaşılmasını gerektiren yatırımcı taleplerini reddeder",
+          "Yatırımcı geri bildirimlerine dayalı iletişim önerilerini üst yönetime sunar"
+        ],
+        "collaborations": [
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Paydaş, Kamu ve Sektör İletişimi",
+            "topic": "Paydaş ve kamu iletişiminde finansal mesaj tutarlılığı"
+          },
+          {
+            "department": "10 - Kurumsal İletişim ve İtibar Yönetimi",
+            "unit": "Medya İlişkileri ve Basın Yönetimi",
+            "topic": "Finansal sonuç duyurularının medya ve basın iletişimi"
+          },
+          {
+            "department": "02 - Muhasebe ve Mali İşler",
+            "unit": "Yasal Finansal Raporlama, Konsolidasyon ve Denetim",
+            "topic": "Yatırımcılara açıklanan finansal tablo ve dipnot verilerinin doğrulanması"
+          },
+          {
+            "department": "05 - Hukuk İşleri",
+            "unit": "Mevzuat ve Düzenleyici Hukuk",
+            "topic": "Sermaye piyasası mevzuatı ve kamuyu aydınlatma yükümlülükleri"
+          },
+          {
+            "department": "23 - Sekreterya, Yönetici Destek ve Protokol",
+            "unit": "Yönetim Kurulu ve Komite Sekreteryası",
+            "topic": "Genel kurul ve yönetim kurulu süreçlerine yatırımcı bilgilendirme girdileri"
+          }
+        ],
+        "kpis": [
+          "Yatırımcı sorularına ortalama yanıt süresi",
+          "Yatırımcı toplantısı ve sunum sayısı",
+          "Finansal sonuç sunumlarının zamanında yayımlanma oranı",
+          "Yatırımcı algı anketi puanı",
+          "Düzeltme gerektiren yatırımcı açıklaması sayısı"
+        ],
+        "title_standard": [
+          {
+            "position": "03.08",
+            "level": "Birim Müdürü",
+            "title_tr": "Yatırımcı İlişkileri Müdürü",
+            "title_en": "Investor Relations Manager"
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme",
+            "level": "Ekip Yöneticisi",
+            "title_tr": "Yatırımcı İletişimi Takım Lideri",
+            "title_en": "Investor Communications Team Lead"
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme/yatirimci-iliskileri-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yatırımcı İlişkileri Uzmanı",
+            "title_en": "Investor Relations Specialist"
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme/yatirimci-sunum-ve-raporlama-uzmani",
+            "level": "Uzman",
+            "title_tr": "Yatırımcı Sunum ve Raporlama Uzmanı",
+            "title_en": "Investor Presentation and Reporting Specialist"
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/sermaye-piyasalari-uzmani",
+            "level": "Uzman",
+            "title_tr": "Sermaye Piyasaları Uzmanı",
+            "title_en": "Capital Markets Specialist"
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/yatirimci-veri-analisti",
+            "level": "Analist",
+            "title_tr": "Yatırımcı Veri Analisti",
+            "title_en": "Investor Data Analyst"
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/paydas-analizi-uzmani",
+            "level": "Uzman",
+            "title_tr": "Paydaş Analizi Uzmanı",
+            "title_en": "Stakeholder Analysis Specialist"
+          }
+        ],
+        "staffing_models": [
+          {
+            "model": "Yalın",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "model": "Standart",
+            "min": 7,
+            "max": 11
+          },
+          {
+            "model": "Genişletilmiş",
+            "min": 11,
+            "max": 14
+          }
+        ],
+        "recommended_staffing": [
+          {
+            "position": "03.08",
+            "title_tr": "Yatırımcı İlişkileri Müdürü",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme",
+            "title_tr": "Yatırımcı İletişimi Takım Lideri",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme/yatirimci-iliskileri-uzmani",
+            "title_tr": "Yatırımcı İlişkileri Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.08/yatirimci-iletisimi-ve-bilgilendirme/yatirimci-sunum-ve-raporlama-uzmani",
+            "title_tr": "Yatırımcı Sunum ve Raporlama Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/sermaye-piyasalari-uzmani",
+            "title_tr": "Sermaye Piyasaları Uzmanı",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/yatirimci-veri-analisti",
+            "title_tr": "Yatırımcı Veri Analisti",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "position": "03.08/sermaye-piyasalari-ve-paydas-analizi/paydas-analizi-uzmani",
+            "title_tr": "Paydaş Analizi Uzmanı",
+            "min": 1,
+            "max": 1
+          }
+        ]
+      }
+    ]
+  }
+}

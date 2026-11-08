@@ -1,0 +1,189 @@
+<style id="v26-ux-refresh">
+/* V26 UI/UX yenileme (2026-11-06, kullanıcı onayı: "tüm geliştirmeleri onaylıyorum"): modül şeridi, katlanır menü grupları (ilerlemeli), proje başlatma ekranı (kilit kutusu yerine), Proje Özeti sayfası, görünüm anahtarı, seçenek araç çubuğu (arama, Proje Türü grupları, senaryo/örnek anahtarı), tek karar görünümünde yan panel, mobilde ⋯ menüsü, üst şerit tipografisi. Eski bloklar değiştirilmedi. 2026-11-07 regresyon düzeltmeleri: "Neden önemli?" kutusu alan genişliğinde; 901–1120 px'te kenar çubuğu açıkken JSON İndir / İçe Aktar / tema düğmeleri ⋯ menüsüne geçer (üst şerit taşıyordu). */
+:root{--railW:76px;--v26Accent:#2453d6;--v26AccentText:#1d45b8;--v26AccentSoft:#edf2ff}
+#modRail,#moreBtn{display:none}
+.mrBtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:58px;padding:8px 2px;border:0;border-radius:12px;background:transparent;color:#4f565f;font:inherit;font-size:11px;font-weight:700;line-height:13px;text-align:center;cursor:pointer}
+.mrBtn svg{width:22px;height:22px;flex:0 0 auto}
+.mrBtn:hover{background:#f3f4f6;color:#111}
+.mrBtn.active{background:var(--v26AccentSoft);color:var(--v26AccentText)}
+.mrBtn:focus-visible,.ngHead:focus-visible,.v26Views button:focus-visible,.v26Chip:focus-visible,.ovCard:focus-visible,.ssBox button:focus-visible{outline:2px solid var(--v26Accent);outline-offset:2px}
+.mrLogo{width:40px;height:40px;margin:2px auto 10px;border-radius:11px;background:#070707;color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px}
+.mrSep{flex:1 1 auto;min-height:8px}
+html:not(.sideHidden):not(.v26NoSide) .mrLogo{display:none}
+.v26Card>span{font-size:14px;line-height:21px}
+.v26Card>span.v26SelN{font-size:16px;line-height:22px}
+@media(min-width:901px){
+ #modRail{position:fixed;z-index:61;left:0;top:0;bottom:0;width:var(--railW);box-sizing:border-box;padding:16px 7px;background:#fff;border-right:1px solid #e5e8eb;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+ body{padding-left:calc(310px + var(--railW))}
+ .sidebarShell{left:var(--railW)}
+ header{left:calc(310px + var(--railW))}
+ html.sideHidden body{padding-left:var(--railW)}
+ html.sideHidden header{left:var(--railW)}
+ header #themeBtn{display:none}
+ html.v26NoSide .sidebarShell{display:none}
+ html.v26NoSide body{padding-left:var(--railW)}
+ html.v26NoSide header{left:var(--railW)}
+ html.v26NoSide .sideShow{display:none}
+ html.v26NoSide header .progress{margin-left:0}
+ .sideFooter{display:none}
+ #sideNav{padding-bottom:40px}
+ header .actions .btn{font-size:13.5px;font-weight:700;height:40px;padding:0 14px;border-radius:12px}
+ header .actions .themeBtn{width:40px;padding:0}
+}
+/* Menü grupları */
+.navGroupTitle.v26Hidden{display:none}
+.ngHead{width:100%;display:flex;align-items:center;gap:8px;border:0;background:transparent;padding:10px 10px 6px;border-radius:10px;cursor:pointer;font:inherit;color:#202329;text-align:left}
+.ngHead:hover{background:#f5f6f7}
+.ngT{flex:1;font-size:11px;font-weight:800;letter-spacing:.07em}
+.ngN{font-size:11px;font-weight:700;color:#5f6670}
+.ngChev{width:14px;height:14px;color:#5f6670;transition:transform .15s}
+.navGroup:not(.ngClosed) .ngChev{transform:rotate(90deg)}
+.ngBar{display:block;height:3px;border-radius:2px;background:#eceef1;margin:0 10px 6px;overflow:hidden}
+.ngBar i{display:block;height:100%;background:var(--v26Accent)}
+#sideNav:not(.searching) .navGroup.ngClosed .menuSection{display:none}
+#sideNav.searching .ngBar{display:none}
+/* Kilit notu: kısa şerit */
+.lockNote.v26Lock{padding:10px 14px;gap:12px;align-items:center}
+.lockNote.v26Lock .btn{height:36px;padding:0 12px;font-size:13px}
+/* Proje başlatma ekranı */
+.ssWrap{position:fixed;inset:0;z-index:200;background:rgba(15,17,21,.45);display:grid;place-items:center;padding:16px;box-sizing:border-box;overflow-y:auto}
+.ssWrap[hidden]{display:none}
+.ssBox{position:relative;width:min(960px,100%);background:#f5f6f8;color:#14161b;border-radius:22px;padding:36px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:22px;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.ssHead{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ssHead h2{margin:4px 0 0;font-size:28px;line-height:34px}
+.ssHead p{margin:0;max-width:560px;color:#59606b;font-size:15px;line-height:23px}
+.ssLogo{width:42px;height:42px;border-radius:12px;background:#070707;color:#fff;display:grid;place-items:center;font-weight:900}
+.ssGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.ssCard{background:#fff;border:1px solid #e1e4e9;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.ssCard.main{border:2px solid var(--v26Accent)}
+.ssCard .ssK{font-size:12px;font-weight:800;letter-spacing:.08em;color:#59606b}
+.ssCard.main .ssK{color:var(--v26AccentText)}
+.ssCard label{font-size:14px;font-weight:700}
+.ssCard input{height:46px;padding:0 14px;border-radius:12px;border:1px solid #c9ced6;font:inherit;font-size:16px;background:#fff;color:inherit}
+.ssCard input[aria-invalid=true]{border-color:#b42318}
+.ssCard p{margin:0;font-size:14px;line-height:21px;color:#59606b}
+.ssCard .btn{height:48px;font-size:15px;margin-top:auto;border-radius:12px}
+.ssFoot{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;font-size:14px;color:#59606b}
+.ssFoot span{display:flex;align-items:center;gap:8px}
+.ssFoot i{font-style:normal;width:22px;height:22px;border-radius:50%;background:#e8eaee;color:#14161b;display:grid;place-items:center;font-weight:800;font-size:12px}
+.ssLater{border:0;background:transparent;font:inherit;font-weight:700;color:var(--v26AccentText);text-decoration:underline;cursor:pointer;padding:4px}
+.ssX{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:12px;border:1px solid #e1e4e9;background:#fff;color:#59606b;font-size:18px;cursor:pointer}
+/* Görünüm anahtarı */
+.v26Views{display:inline-flex;gap:2px;padding:4px;border-radius:12px;background:#eef0f3;margin:4px 0 14px}
+.v26Views button{height:36px;padding:0 14px;border:0;border-radius:9px;background:transparent;color:#59606b;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.v26Views button[aria-selected=true]{background:#fff;color:#14161b;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+/* Neden önemli? */
+details.v26Why{border:1px solid #e1e4e9;border-radius:14px;background:#fff;margin:0 0 14px}
+details.v26Why>summary{list-style:none;display:flex;align-items:center;gap:10px;min-height:46px;padding:0 16px;cursor:pointer;font-weight:700;font-size:14px}
+details.v26Why>summary::-webkit-details-marker{display:none}
+details.v26Why>summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .15s}
+details.v26Why[open]>summary::after{transform:rotate(-135deg)}
+details.v26Why>.fieldMeta{margin:0 16px 16px}
+/* Seçenek araç çubuğu */
+.v26OptBar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.v26OptBar input[type=search]{flex:1 1 220px;max-width:360px;height:38px;padding:0 14px;border:1px solid #dfe3e7;border-radius:19px;background:#f5f6f7;font:inherit;font-size:13.5px;outline:none;color:inherit}
+.v26Chip{height:36px;padding:0 13px;border-radius:18px;border:1px solid #dfe3e7;background:#fff;color:#14161b;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.v26Chip[aria-pressed=true]{background:#14161b;border-color:#14161b;color:#fff}
+.v26Chip small{font-size:12px;opacity:.7;font-weight:600;margin-left:3px}
+.v26MetaT{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#59606b;margin-left:auto;cursor:pointer}
+.v26MetaT input{width:16px;height:16px}
+.v26None{font-size:14px;color:#59606b;padding:6px 2px}
+body:not(.v26Meta) .option:not(.selected) .optMeta{display:none}
+.option.v26Off{display:none}
+/* Tek karar: yan panel */
+.v26Aside{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+.v26Card{border:1px solid #e1e4e9;border-radius:16px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:8px}
+.v26Card>b{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:#59606b}
+.v26Card .v26SelN{font-size:16px;font-weight:800}
+.v26Card .optMeta{display:block!important;margin:0}
+.v26Aside .rule{margin:0}
+.v26Aside .fAgents{margin:0}
+.v26Sel{display:none}
+@media(min-width:1280px){
+ body.singleField .field.v26Split{display:grid;grid-template-columns:minmax(0,1fr) 300px;column-gap:28px;align-items:start}
+ body.singleField .field.v26Split>*{grid-column:1}
+ body.singleField .field.v26Split>.v26Aside{grid-column:2;grid-row:1/span 40;margin-top:0;position:sticky;top:calc(var(--hdH,76px) + 16px)}
+ body.singleField .v26Sel{display:flex}
+ body.singleField:not(.v26Meta) .field.v26Split .option.selected .optMeta{display:none}
+}
+/* Proje Özeti */
+#overviewPage{display:none}
+#overviewPage.active{display:block}
+.ovTop{display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;margin-bottom:22px}
+.ovHero{flex:999 1 480px;background:#fff;border:1px solid #e1e4e9;border-radius:20px;padding:26px;display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+.ovRing{position:relative;width:128px;height:128px;flex:0 0 128px}
+.ovRing div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ovRing b{font-size:28px;line-height:30px}.ovRing span{font-size:13px;color:#59606b;font-weight:600}
+.ovTxt{flex:1 1 260px;display:flex;flex-direction:column;gap:8px}
+.ovTxt h1{margin:0;font-size:30px;line-height:36px}
+.ovTxt p{margin:0;color:#59606b;font-size:15px;line-height:23px}
+.ovBtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.ovSide{flex:1 1 280px;display:flex;flex-direction:column;gap:12px}
+.ovWarn{background:#fff3dc;color:#6b3a00;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.ovWarn b.k,.ovBox b.k{font-size:12px;font-weight:800;letter-spacing:.08em}
+.ovWarn .n{font-size:30px;font-weight:800;line-height:34px}
+.ovWarn ul{margin:2px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2px}
+.ovWarn button,.ovBox button.lk{border:0;background:transparent;padding:3px 0;font:inherit;font-size:14px;font-weight:700;color:inherit;text-decoration:underline;cursor:pointer;text-align:left}
+.ovBox{background:#fff;border:1px solid #e1e4e9;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.ovBox b.k{color:#59606b}
+.ovBox>span,.ovWarn>span{font-size:14px;line-height:21px}
+.ovBox button.lk{color:var(--v26AccentText)}
+.ovH2{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin:8px 0 12px}
+.ovH2 h2{margin:0;font-size:20px}
+.ovH2 span{font-size:14px;color:#59606b}
+.ovGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px;margin-bottom:24px}
+.ovCard{text-align:left;font:inherit;color:inherit;background:#fff;border:1px solid #e1e4e9;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;min-height:150px;cursor:pointer}
+.ovCard:hover{border-color:#b9c0ca}
+.ovCard .t{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:800}
+.ovCard .no{width:28px;height:28px;border-radius:8px;background:#eef0f3;color:#59606b;display:grid;place-items:center;font-size:13px;flex:0 0 28px}
+.ovCard.on .no{background:var(--v26Accent);color:#fff}
+.ovCard .d{font-size:13.5px;line-height:20px;color:#59606b}
+.ovCard .m{margin-top:auto;display:flex;justify-content:space-between;font-size:13px;font-weight:700}
+.ovCard .m span:last-child{color:#59606b}
+.ovCard .ovBar{display:block;height:6px;border-radius:3px;background:#eef0f3;overflow:hidden}
+.ovCard .ovBar i{display:block;height:100%;background:var(--v26Accent)}
+.ovCard .go{margin-top:auto;font-size:14px;font-weight:800;color:var(--v26AccentText)}
+/* Mobil ⋯ menüsü */
+.moreMenu{position:fixed;z-index:120;min-width:220px;background:#fff;border:1px solid #e1e4e9;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.16);padding:6px;display:flex;flex-direction:column}
+.moreMenu[hidden]{display:none}
+.moreMenu button{min-height:44px;border:0;background:transparent;border-radius:10px;text-align:left;padding:0 12px;font:inherit;font-size:14px;font-weight:700;color:inherit;cursor:pointer}
+.moreMenu button:hover{background:#f3f4f6}
+@media(min-width:901px) and (max-width:1120px){
+ html:not(.sideHidden):not(.v26NoSide) header #exportBtn,html:not(.sideHidden):not(.v26NoSide) header #importBtn,html:not(.sideHidden):not(.v26NoSide) header #themeBtn,html:not(.sideHidden):not(.v26NoSide) header #agDlBtn{display:none}
+ html:not(.sideHidden):not(.v26NoSide) #moreBtn{display:grid;place-items:center;flex:0 0 auto;width:40px;padding:0;font-size:18px;line-height:1}
+}
+@media(max-width:900px){
+ header #exportBtn,header #importBtn,header #themeBtn,header #agDlBtn{display:none}
+ #moreBtn{display:grid;place-items:center;flex:0 0 auto;width:40px;height:36px;padding:0;font-size:18px;line-height:1}
+ .ssBox{padding:28px 18px}
+ .ssHead h2{font-size:24px;line-height:30px}
+}
+/* Koyu tema */
+[data-theme="dark"] #modRail{background:var(--bg);border-color:var(--border)}
+[data-theme="dark"] .mrBtn{color:var(--muted)}
+[data-theme="dark"] .mrBtn:hover{background:var(--hover);color:var(--text)}
+[data-theme="dark"] .mrBtn.active{background:#1a2440;color:#9db8ff}
+[data-theme="dark"] .mrLogo,[data-theme="dark"] .ssLogo{background:var(--inv-bg);color:var(--inv-fg)}
+[data-theme="dark"] .ngHead{color:var(--text)}
+[data-theme="dark"] .ngHead:hover{background:var(--hover)}
+[data-theme="dark"] .ngN,[data-theme="dark"] .ngChev{color:var(--muted)}
+[data-theme="dark"] .ngBar,[data-theme="dark"] .ovCard .ovBar,[data-theme="dark"] .ovCard .no{background:var(--active)}
+[data-theme="dark"] .ngBar i,[data-theme="dark"] .ovCard .ovBar i{background:#7ea2ff}
+[data-theme="dark"] .ssBox{background:var(--bg);color:var(--text)}
+[data-theme="dark"] .ssCard,[data-theme="dark"] .ssX,[data-theme="dark"] details.v26Why,[data-theme="dark"] .v26Card,[data-theme="dark"] .ovHero,[data-theme="dark"] .ovBox,[data-theme="dark"] .ovCard,[data-theme="dark"] .moreMenu,[data-theme="dark"] .v26Chip{background:var(--surface);border-color:var(--border-2);color:var(--text)}
+[data-theme="dark"] .ssCard.main{border-color:#7ea2ff}
+[data-theme="dark"] .ssCard input,[data-theme="dark"] .v26OptBar input[type=search]{background:var(--bg);border-color:var(--border-2);color:var(--text)}
+[data-theme="dark"] .ssHead p,[data-theme="dark"] .ssCard p,[data-theme="dark"] .ssCard .ssK,[data-theme="dark"] .ssFoot,[data-theme="dark"] .v26MetaT,[data-theme="dark"] .v26None,[data-theme="dark"] .v26Card>b,[data-theme="dark"] .ovTxt p,[data-theme="dark"] .ovRing span,[data-theme="dark"] .ovBox b.k,[data-theme="dark"] .ovH2 span,[data-theme="dark"] .ovCard .d,[data-theme="dark"] .ovCard .m span:last-child,[data-theme="dark"] .ssX{color:var(--muted)}
+[data-theme="dark"] .ssCard.main .ssK,[data-theme="dark"] .ssLater,[data-theme="dark"] .ovBox button.lk,[data-theme="dark"] .ovCard .go{color:#9db8ff}
+[data-theme="dark"] .ssFoot i{background:var(--active);color:var(--text)}
+[data-theme="dark"] .v26Views{background:var(--surface)}
+[data-theme="dark"] .v26Views button{color:var(--muted)}
+[data-theme="dark"] .v26Views button[aria-selected=true]{background:var(--active);color:var(--text)}
+[data-theme="dark"] .v26Chip[aria-pressed=true]{background:var(--inv-bg);border-color:var(--inv-bg);color:var(--inv-fg)}
+[data-theme="dark"] .ovCard:hover{border-color:var(--muted)}
+[data-theme="dark"] .ovCard.on .no{background:#7ea2ff;color:#0e1013}
+[data-theme="dark"] .ovWarn{background:#3a2a10;color:#f2c27a}
+[data-theme="dark"] .moreMenu button:hover{background:var(--hover)}
+[data-theme="dark"] .ovRing circle.trk{stroke:var(--active)}
+[data-theme="dark"] .ovRing circle.val{stroke:#7ea2ff}
+</style>

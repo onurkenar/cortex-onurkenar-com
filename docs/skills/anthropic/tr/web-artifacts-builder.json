@@ -1,0 +1,7 @@
+{
+ "name": "Web Artifact Oluşturucu",
+ "desc": "React, TypeScript, Tailwind CSS ve shadcn/ui ile çok bileşenli claude.ai artifact'leri kurar ve hepsini tek bir HTML dosyasında paketler.",
+ "trigger": "Modern frontend web teknolojileri (React, Tailwind CSS, shadcn/ui) kullanarak ayrıntılı, çok bileşenli claude.ai HTML artifact'leri oluşturmaya yönelik araç takımı. Durum yönetimi, yönlendirme (routing) ya da shadcn/ui bileşenleri gerektiren karmaşık artifact'ler için kullan — basit, tek dosyalık HTML/JSX artifact'leri için değil.",
+ "scenario": "Durum yönetimi, yönlendirme ya da shadcn/ui bileşenleri gerektiren karmaşık bir artifact yapılırken; basit tek dosyalık sayfalarda değil.",
+ "example": "scripts/init-artifact.sh ile bir React projesi kurulur, sekmeli bir panel geliştirilir ve scripts/bundle-artifact.sh ile kendi kendine yeten bundle.html üretilip paylaşılır."
+}

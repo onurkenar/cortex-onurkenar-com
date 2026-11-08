@@ -1,0 +1,841 @@
+{
+  "title": "İş Akış Genel Şeması",
+  "version": "1.0",
+  "date": "2026-10-30",
+  "status": "taslak",
+  "nature": "Mevcut departman yapısından ve departmanlar arası sınırlardan türetilmiş öneri; kullanıcı onayı bekliyor",
+  "purpose": "Bir talebin girişten kapanışa kadar departmanlar arasında nasıl alındığını, değerlendirildiğini ve işlendiğini adım adım tanımlar. Ajan yapısında işi her zaman ana asistan dağıtır; her adımı o adımın sahibi olan pozisyonun ajanı yürütür, ajanlar birbirini çağırmaz.",
+  "principles": [
+    "Her talebin tek bir sahip departmanı ve sahip birimi olur; destek veren departmanlar görüş ya da iş paketi verir, sahipliği devralmaz",
+    "Departmanlar arası devir, departmanların sınır tablolarına göre yapılır; sahipliği belirsiz talebi ana asistan yönlendirir",
+    "Karar, yetki basamaklarında talebin büyüklüğüne uygun en alt makamda verilir; yetkiyi aşan konu bir üst makama taşınır",
+    "Kişisel veri ve gizli bilgi içeren talep girişte gizlilik sınıfıyla işaretlenir ve yalnız gereken birimlerle paylaşılır",
+    "Her adımın çıktısı kayıt altına alınır; talep sahibi her durum değişikliğinde bilgilendirilir"
+  ],
+  "phases": [
+    {
+      "id": "A",
+      "name": "Talep girişi",
+      "desc": "Talep tek bir kayıtla alınır, acil durum ayrılır"
+    },
+    {
+      "id": "B",
+      "name": "Sınıflandırma ve yönlendirme",
+      "desc": "Tür, öncelik ve gizlilik belirlenir; sahip departman ve birim atanır"
+    },
+    {
+      "id": "C",
+      "name": "Değerlendirme ve karar",
+      "desc": "Sahip birim değerlendirir, zorunlu görüşler alınır, yetkili makam karar verir"
+    },
+    {
+      "id": "D",
+      "name": "İşleme",
+      "desc": "Plan, kaynak ve uygulama; sapma eskale edilir"
+    },
+    {
+      "id": "E",
+      "name": "Kontrol ve kapanış",
+      "desc": "Kabul, bildirim, kayıt ve iyileştirme"
+    }
+  ],
+  "steps": [
+    {
+      "id": "A1",
+      "phase": "A",
+      "type": "start",
+      "title": "Talep gelir",
+      "text": "Müşteri, çalışan, yönetim, tedarikçi, düzenleyici kurum ya da bir sistem olayı talep oluşturur."
+    },
+    {
+      "id": "A2",
+      "phase": "A",
+      "type": "process",
+      "title": "Giriş noktasında tek kayıt",
+      "text": "Talep, türüne uygun giriş noktasında numaralandırılarak kaydedilir: talep sahibi, kanal, konu, istenen sonuç, son tarih ve ekler. Aynı konudaki mükerrer talepler birleştirilir.",
+      "actor": "Giriş noktasındaki pozisyon ajanı; ana asistan kaydı açar",
+      "entries": [
+        {
+          "name": "Müşteri talebi ve şikâyeti",
+          "dept": "11",
+          "unit": "11.04"
+        },
+        {
+          "name": "Çalışanın BT talebi",
+          "dept": "15",
+          "unit": "15.08"
+        },
+        {
+          "name": "Çalışanın idari ve ofis talebi",
+          "dept": "20",
+          "unit": "20.03"
+        },
+        {
+          "name": "Yönetim ve kurul talebi",
+          "dept": "23",
+          "unit": "23.02"
+        },
+        {
+          "name": "Tedarikçi talebi",
+          "dept": "13",
+          "unit": "13.05"
+        },
+        {
+          "name": "Düzenleyici kurum ve resmî yazı",
+          "dept": "05",
+          "unit": "05.05"
+        },
+        {
+          "name": "Güvenlik ya da sistem olayı",
+          "dept": "16",
+          "unit": "16.04"
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "phase": "A",
+      "type": "decision",
+      "title": "Acil durum ya da güvenlik olayı mı?",
+      "main": "Hayır",
+      "side": {
+        "label": "Evet",
+        "title": "Olay müdahale akışı",
+        "text": "Olay sınıfına göre müdahale ekibi hemen devreye girer: siber olay, fiziksel güvenlik olayı, iş kazası ya da acil durum, hizmet kesintisi. Kriz iletişimi ve iş sürekliliği paralel yürür. Olay kontrol altına alınınca kök neden ve iyileştirme adımına bağlanır.",
+        "depts": [
+          {
+            "dept": "16",
+            "unit": "16.04"
+          },
+          {
+            "dept": "22",
+            "unit": "22.03"
+          },
+          {
+            "dept": "21",
+            "unit": "21.08"
+          },
+          {
+            "dept": "12",
+            "unit": "12.02"
+          },
+          {
+            "dept": "15",
+            "unit": "15.02"
+          },
+          {
+            "dept": "10",
+            "unit": "10.03"
+          },
+          {
+            "dept": "06",
+            "unit": "06.07"
+          }
+        ],
+        "goto": "E4"
+      }
+    },
+    {
+      "id": "B1",
+      "phase": "B",
+      "type": "process",
+      "title": "Sınıflandır",
+      "text": "Talep türü yönlendirme tablosundan, öncelik aciliyet ve etkiye göre (P1–P4), gizlilik sınıfı genel / iç / gizli / kişisel veri olarak belirlenir.",
+      "actor": "Ana asistan"
+    },
+    {
+      "id": "B2",
+      "phase": "B",
+      "type": "process",
+      "title": "Sahip departmanı ve birimi ata",
+      "text": "Yönlendirme tablosundan sahip departman ve birim seçilir; talep o birimin kuyruğuna düşer, sorumlu pozisyon atanır ve önceliğe göre hedef süre başlar.",
+      "actor": "Ana asistan → sahip birimin pozisyon ajanı"
+    },
+    {
+      "id": "B3",
+      "phase": "B",
+      "type": "decision",
+      "title": "Sahip departmanın kapsamında mı?",
+      "main": "Evet",
+      "side": {
+        "label": "Hayır",
+        "title": "Doğru departmana devret",
+        "text": "Departman sınır tablosuna göre talep gerekçesiyle ilgili departmana devredilir; devir kaydedilir ve talep sahibine bildirilir. Sahiplik iki departman arasında belirsizse ana asistan karar verir, gerekirse ortak üst makama sorulur.",
+        "goto": "B2"
+      }
+    },
+    {
+      "id": "B4",
+      "phase": "B",
+      "type": "decision",
+      "title": "Birden çok departmanın işi mi?",
+      "main": "Hayır",
+      "side": {
+        "label": "Evet",
+        "title": "Çapraz fonksiyonlu yürütme",
+        "text": "Sahip departman lider olur, diğer departmanlar iş paketi üstlenir. Süreklilik gerektiren konu ilgili komitenin gündemine, belirli bir teslimat ise çalışma grubu şablonuyla kurulan geçici ekibe verilir; değerlendirme lider departmanda devam eder.",
+        "links": [
+          "committees",
+          "workingGroups"
+        ],
+        "goto": "C1"
+      }
+    },
+    {
+      "id": "C1",
+      "phase": "C",
+      "type": "process",
+      "title": "Ön değerlendirme",
+      "text": "Sahip birim kapsamı, fizibiliteyi, gereken kaynağı, maliyeti, süreyi ve riskleri değerlendirir.",
+      "actor": "Sahip birimin pozisyon ajanları"
+    },
+    {
+      "id": "C2",
+      "phase": "C",
+      "type": "decision",
+      "title": "Talep eksiksiz ve uygulanabilir mi?",
+      "main": "Evet",
+      "side": {
+        "label": "Hayır",
+        "title": "Eksik bilgi ya da revizyon",
+        "text": "Eksik bilgi ve belge talep sahibinden istenir; talep tamamlanınca ön değerlendirme yeniden yapılır. Uygulanamayacağı açıksa gerekçeli ret karar adımına taşınır.",
+        "goto": "C1"
+      }
+    },
+    {
+      "id": "C3",
+      "phase": "C",
+      "type": "parallel",
+      "title": "Zorunlu görüşler (paralel)",
+      "text": "Talep bir tetikleyiciye takılıyorsa ilgili departmanlar aynı anda görüş verir. Bağlayıcı görüş olumsuzsa talep o hâliyle ilerlemez.",
+      "actor": "Görüş veren departmanların ajanları",
+      "from": "reviews"
+    },
+    {
+      "id": "C4",
+      "phase": "C",
+      "type": "process",
+      "title": "Yetkili makamı belirle",
+      "text": "Talebin bütçesi, etkisi ve kapsamı yetki basamaklarıyla karşılaştırılır; karar yetkili en alt makamda verilir, yetkiyi aşan konu bir üst basamağa taşınır.",
+      "actor": "Sahip departman lideri",
+      "from": "authority"
+    },
+    {
+      "id": "C5",
+      "phase": "C",
+      "type": "decision",
+      "title": "Onaylandı mı?",
+      "main": "Evet",
+      "side": {
+        "label": "Hayır",
+        "title": "Gerekçeli ret ya da revizyon",
+        "text": "Ret gerekçesi ve varsa alternatif çözüm talep sahibine bildirilir. Revizyon istenirse talep ön değerlendirmeye döner; ret kesinse bildirim ve kayıt adımında kapatılır.",
+        "goto": "E3"
+      }
+    },
+    {
+      "id": "D1",
+      "phase": "D",
+      "type": "process",
+      "title": "Planla ve kaynak ayır",
+      "text": "İş paketleri, sorumlular (RACI), takvim ve hedef süre belirlenir. Kaynak gerekiyorsa ilgili departmandan istenir: kadro, bütçe ve ödeme, satın alma, BT altyapısı, tasarım.",
+      "actor": "Sahip birimin yöneticisi",
+      "depts": [
+        {
+          "dept": "04",
+          "unit": "ik-planlama-ve-organizasyonel-gelisim"
+        },
+        {
+          "dept": "03",
+          "unit": "03.01"
+        },
+        {
+          "dept": "13",
+          "unit": "13.05"
+        },
+        {
+          "dept": "15",
+          "unit": "15.02"
+        },
+        {
+          "dept": "19",
+          "unit": "19.08"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "phase": "D",
+      "type": "process",
+      "title": "Uygula",
+      "text": "Sahip birim ve destek veren birimler iş paketlerini yürütür. Ana asistan işi pozisyon ajanlarına dağıtır ve sonuçları birleştirir; çıktılar kayıt altına alınır.",
+      "actor": "Pozisyon ajanları ve katalog ajanları"
+    },
+    {
+      "id": "D3",
+      "phase": "D",
+      "type": "decision",
+      "title": "Plan ve hedef süre içinde mi?",
+      "main": "Evet",
+      "side": {
+        "label": "Hayır",
+        "title": "Eskalasyon ve düzeltici faaliyet",
+        "text": "Sapma bir üst yetki basamağına bildirilir; kapsam, kaynak ya da takvim yeniden planlanır. Tekrarlayan sapma düzeltici ve önleyici faaliyet sürecine girer.",
+        "depts": [
+          {
+            "dept": "14",
+            "unit": "14.06"
+          }
+        ],
+        "goto": "D1"
+      }
+    },
+    {
+      "id": "E1",
+      "phase": "E",
+      "type": "process",
+      "title": "Kalite kontrol ve kabul",
+      "text": "Çıktı teslim kriterlerine göre kontrol edilir: ürün ve süreç uygunluğu Kalite'de, kullanıcı kabulü talep sahibindedir.",
+      "actor": "Sahip birim; gerektiğinde Kalite",
+      "depts": [
+        {
+          "dept": "14",
+          "unit": "14.03"
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "phase": "E",
+      "type": "decision",
+      "title": "Kabul edildi mi?",
+      "main": "Evet",
+      "side": {
+        "label": "Hayır",
+        "title": "Düzeltme",
+        "text": "Kabul edilmeyen kalemler gerekçeleriyle uygulamaya geri döner; düzeltilen çıktı yeniden kontrol edilir.",
+        "goto": "D2"
+      }
+    },
+    {
+      "id": "E3",
+      "phase": "E",
+      "type": "process",
+      "title": "Teslim, bildirim ve kayıt",
+      "text": "Sonuç talep sahibine bildirilir: müşteriye Müşteri Deneyimi'nden, dış duyuru gerekiyorsa Kurumsal İletişim'den. Belgeler arşivlenir; mali etkisi olan işlem muhasebe kaydına geçer.",
+      "actor": "Sahip birim",
+      "depts": [
+        {
+          "dept": "11",
+          "unit": "11.04"
+        },
+        {
+          "dept": "10",
+          "unit": "10.01"
+        },
+        {
+          "dept": "20",
+          "unit": "20.07"
+        },
+        {
+          "dept": "02",
+          "unit": "general_accounting_closing"
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "phase": "E",
+      "type": "process",
+      "title": "Ölç ve iyileştir",
+      "text": "Süre, kalite ve memnuniyet ölçülür; tekrarlayan sorunların kök nedeni incelenir ve süreç iyileştirilir. İç Denetim akışı örneklemle denetler.",
+      "actor": "Sahip birim; raporlama ve iyileştirme birimleri",
+      "depts": [
+        {
+          "dept": "17",
+          "unit": "17.04"
+        },
+        {
+          "dept": "11",
+          "unit": "11.06"
+        },
+        {
+          "dept": "14",
+          "unit": "14.06"
+        },
+        {
+          "dept": "12",
+          "unit": "12.06"
+        },
+        {
+          "dept": "07",
+          "unit": "07.03"
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "phase": "E",
+      "type": "end",
+      "title": "Talep kapanır",
+      "text": "Kapanış nedeni (tamamlandı, reddedildi, devredildi) ve süreler kayıtta kalır."
+    }
+  ],
+  "routes": [
+    {
+      "type": "Müşteri talebi, arıza, şikâyet",
+      "owner": {
+        "dept": "11",
+        "unit": "11.06"
+      },
+      "support": [
+        "12",
+        "15",
+        "14"
+      ]
+    },
+    {
+      "type": "Satış, teklif, ihale",
+      "owner": {
+        "dept": "08",
+        "unit": "08.05"
+      },
+      "support": [
+        "03",
+        "05"
+      ]
+    },
+    {
+      "type": "Fiyat ve ticari koşul",
+      "owner": {
+        "dept": "08",
+        "unit": "08.07"
+      },
+      "support": [
+        "03",
+        "06"
+      ]
+    },
+    {
+      "type": "Pazarlama, kampanya, dijital içerik",
+      "owner": {
+        "dept": "09",
+        "unit": "campaign_event_marketing"
+      },
+      "support": [
+        "19",
+        "10"
+      ]
+    },
+    {
+      "type": "Basın, kurumsal duyuru, itibar",
+      "owner": {
+        "dept": "10",
+        "unit": "10.02"
+      },
+      "support": [
+        "01",
+        "05"
+      ]
+    },
+    {
+      "type": "Ürün özelliği ve yeni ürün",
+      "owner": {
+        "dept": "18",
+        "unit": "18.03"
+      },
+      "support": [
+        "15",
+        "17",
+        "19"
+      ]
+    },
+    {
+      "type": "BT hizmeti, yazılım değişikliği",
+      "owner": {
+        "dept": "15",
+        "unit": "15.08"
+      },
+      "support": [
+        "16"
+      ]
+    },
+    {
+      "type": "Erişim yetkisi, bilgi güvenliği",
+      "owner": {
+        "dept": "16",
+        "unit": "16.05"
+      },
+      "support": [
+        "15",
+        "06"
+      ]
+    },
+    {
+      "type": "Veri, rapor, analitik, yapay zekâ",
+      "owner": {
+        "dept": "17",
+        "unit": "17.04"
+      },
+      "support": [
+        "15",
+        "16"
+      ]
+    },
+    {
+      "type": "Satın alma, tedarikçi",
+      "owner": {
+        "dept": "13",
+        "unit": "13.05"
+      },
+      "support": [
+        "03",
+        "05",
+        "14"
+      ]
+    },
+    {
+      "type": "Üretim, stok, lojistik",
+      "owner": {
+        "dept": "13",
+        "unit": "13.03"
+      },
+      "support": [
+        "12",
+        "14"
+      ]
+    },
+    {
+      "type": "Hizmet teslimatı, operasyon, kapasite",
+      "owner": {
+        "dept": "12",
+        "unit": "12.02"
+      },
+      "support": [
+        "13",
+        "15"
+      ]
+    },
+    {
+      "type": "Kalite uygunsuzluğu, CAPA",
+      "owner": {
+        "dept": "14",
+        "unit": "14.06"
+      },
+      "support": [
+        "12",
+        "13"
+      ]
+    },
+    {
+      "type": "Sözleşme, hukuki görüş",
+      "owner": {
+        "dept": "05",
+        "unit": "05.02"
+      },
+      "support": [
+        "06"
+      ]
+    },
+    {
+      "type": "Dava, icra, uyuşmazlık",
+      "owner": {
+        "dept": "05",
+        "unit": "05.03"
+      },
+      "support": [
+        "03"
+      ]
+    },
+    {
+      "type": "Mevzuat uyumu, KVKK",
+      "owner": {
+        "dept": "06",
+        "unit": "06.01"
+      },
+      "support": [
+        "05",
+        "16"
+      ]
+    },
+    {
+      "type": "Etik, ihbar, suistimal",
+      "owner": {
+        "dept": "06",
+        "unit": "06.04"
+      },
+      "support": [
+        "05",
+        "07",
+        "22"
+      ]
+    },
+    {
+      "type": "İşe alım, kadro, eğitim, çalışan",
+      "owner": {
+        "dept": "04",
+        "unit": "ise-alim-ve-yetenek-kazanimi"
+      },
+      "support": [
+        "03",
+        "05"
+      ]
+    },
+    {
+      "type": "Ödeme, fatura, masraf",
+      "owner": {
+        "dept": "02",
+        "unit": "accounts_receivable_payable"
+      },
+      "support": [
+        "03"
+      ]
+    },
+    {
+      "type": "Bütçe, yatırım, finansman",
+      "owner": {
+        "dept": "03",
+        "unit": "03.01"
+      },
+      "support": [
+        "01",
+        "02"
+      ]
+    },
+    {
+      "type": "Tesis, ofis, araç, seyahat",
+      "owner": {
+        "dept": "20",
+        "unit": "20.03"
+      },
+      "support": [
+        "21",
+        "22"
+      ]
+    },
+    {
+      "type": "İSG, çevre, sürdürülebilirlik",
+      "owner": {
+        "dept": "21",
+        "unit": "21.02"
+      },
+      "support": [
+        "20",
+        "13"
+      ]
+    },
+    {
+      "type": "Fiziksel güvenlik, soruşturma",
+      "owner": {
+        "dept": "22",
+        "unit": "22.04"
+      },
+      "support": [
+        "05",
+        "06"
+      ]
+    },
+    {
+      "type": "Tasarım, kreatif, prodüksiyon",
+      "owner": {
+        "dept": "19",
+        "unit": "19.08"
+      },
+      "support": [
+        "09"
+      ]
+    },
+    {
+      "type": "Yönetim talebi, toplantı, protokol",
+      "owner": {
+        "dept": "23",
+        "unit": "23.02"
+      },
+      "support": [
+        "01"
+      ]
+    },
+    {
+      "type": "Strateji, kurumsal proje, dönüşüm",
+      "owner": {
+        "dept": "01",
+        "unit": "stratejik-projeler-ve-donusum-ofisi"
+      },
+      "support": [
+        "03",
+        "17"
+      ]
+    },
+    {
+      "type": "Özel inceleme, denetim danışmanlığı",
+      "owner": {
+        "dept": "07",
+        "unit": "07.06"
+      },
+      "support": [
+        "06"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "dept": "05",
+      "unit": "05.02",
+      "trigger": "Sözleşme, taahhüt, uyuşmazlık, fikrî mülkiyet, resmî yazışma",
+      "binding": true
+    },
+    {
+      "dept": "06",
+      "unit": "06.06",
+      "trigger": "Kişisel veri işleme, mevzuat yükümlülüğü, etik ve üçüncü taraf riski",
+      "binding": true
+    },
+    {
+      "dept": "16",
+      "unit": "16.02",
+      "trigger": "Yeni sistem ya da entegrasyon, veri erişimi, dış hizmet sağlayıcı",
+      "binding": true
+    },
+    {
+      "dept": "21",
+      "unit": "21.02",
+      "trigger": "Saha, tesis, ekipman, kimyasal ya da çevre etkisi",
+      "binding": true
+    },
+    {
+      "dept": "10",
+      "unit": "10.01",
+      "trigger": "Dış duyuru, basın açıklaması, itibar riski",
+      "binding": true
+    },
+    {
+      "dept": "03",
+      "unit": "03.01",
+      "trigger": "Bütçe dışı harcama, yatırım, kur ve finansman etkisi",
+      "binding": false
+    },
+    {
+      "dept": "04",
+      "unit": "ik-planlama-ve-organizasyonel-gelisim",
+      "trigger": "Kadro, rol, ücret ya da organizasyon değişikliği",
+      "binding": false
+    },
+    {
+      "dept": "14",
+      "unit": "14.02",
+      "trigger": "Ürün ya da hizmet şartı, süreç değişikliği",
+      "binding": false
+    },
+    {
+      "dept": "17",
+      "unit": "17.02",
+      "trigger": "Yeni veri kaynağı, veri tanımı, model kullanımı",
+      "binding": false
+    }
+  ],
+  "authority": [
+    {
+      "level": "Birim müdürü",
+      "when": "Tanımlı süreç içinde, birimin bütçesi ve hedef süresi içinde kalan rutin talepler"
+    },
+    {
+      "level": "Departman direktörü",
+      "when": "Departman politikası ve bütçesi içinde; birden çok birimi etkileyen ya da istisna gerektiren talepler"
+    },
+    {
+      "level": "Üst yönetim (CEO ve C-seviye)",
+      "when": "Birden çok departmanı etkileyen, departman bütçesini aşan ya da politika değişikliği gerektiren talepler",
+      "dept": "01"
+    },
+    {
+      "level": "Komite",
+      "when": "Komitenin yetki alanındaki konular (ör. risk, yatırım, etik, kalite); karar komitenin karar sürecine göre",
+      "link": "committees"
+    },
+    {
+      "level": "Kurul / Yönetim Kurulu",
+      "when": "Strateji, büyük yatırım, risk iştahı ve yasal olarak kurul kararı gerektiren konular",
+      "link": "boards"
+    }
+  ],
+  "priority": [
+    {
+      "code": "P1",
+      "name": "Kritik",
+      "when": "Hizmet kesintisi, güvenlik olayı, yasal süre ya da can güvenliği",
+      "response": "Hemen başlar, kapanana kadar sürekli izlenir"
+    },
+    {
+      "code": "P2",
+      "name": "Yüksek",
+      "when": "Birden çok müşteriyi, geliri ya da kritik süreci etkileyen",
+      "response": "Aynı iş günü içinde başlar"
+    },
+    {
+      "code": "P3",
+      "name": "Normal",
+      "when": "Tek kullanıcıyı ya da tek birimi etkileyen",
+      "response": "Sıraya alınır, birimin hedef süresinde kapanır"
+    },
+    {
+      "code": "P4",
+      "name": "Düşük",
+      "when": "Bilgi talebi, iyileştirme önerisi",
+      "response": "Planlı dönemde ele alınır"
+    }
+  ],
+  "algorithm": [
+    {
+      "code": "talep ← kaydet(giriş noktası)",
+      "ref": "A2"
+    },
+    {
+      "code": "EĞER acil durum ya da güvenlik olayı İSE olay müdahalesi; GİT ölç ve iyileştir",
+      "ref": "A3"
+    },
+    {
+      "code": "tür, öncelik, gizlilik ← sınıflandır(talep)",
+      "ref": "B1"
+    },
+    {
+      "code": "TEKRARLA: sahip ← yönlendirme tablosu[tür]; EĞER kapsam dışı İSE sınır tablosuyla devret",
+      "ref": "B2–B3"
+    },
+    {
+      "code": "EĞER birden çok departman İSE lider ← sahip; komite ya da çalışma grubu",
+      "ref": "B4"
+    },
+    {
+      "code": "TEKRARLA: ön değerlendirme; EĞER eksik İSE talep sahibinden bilgi iste",
+      "ref": "C1–C2"
+    },
+    {
+      "code": "HER tetiklenen görüş İÇİN paralel: görüş ← departman; bağlayıcı ve olumsuz İSE dur",
+      "ref": "C3"
+    },
+    {
+      "code": "makam ← yetki basamağı(bütçe, etki, kapsam); karar ← makam",
+      "ref": "C4–C5"
+    },
+    {
+      "code": "EĞER ret İSE gerekçeyi bildir; GİT teslim, bildirim ve kayıt",
+      "ref": ""
+    },
+    {
+      "code": "TEKRARLA: planla → uygula; EĞER sapma İSE eskale et ve yeniden planla",
+      "ref": "D1–D3"
+    },
+    {
+      "code": "TEKRARLA: kontrol et; EĞER kabul edilmedi İSE düzelt",
+      "ref": "E1–E2"
+    },
+    {
+      "code": "bildir; arşivle; mali etkisi varsa muhasebeleştir",
+      "ref": "E3"
+    },
+    {
+      "code": "ölç; kök neden; iyileştir; talebi kapat",
+      "ref": "E4–E5"
+    }
+  ]
+}

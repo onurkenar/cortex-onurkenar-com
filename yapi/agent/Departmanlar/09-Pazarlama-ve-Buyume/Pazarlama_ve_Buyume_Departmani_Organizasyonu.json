@@ -1,0 +1,138 @@
+{
+  "department": {
+    "id": 9,
+    "name_tr": "Pazarlama ve Büyüme Departmanı",
+    "name_en": "Marketing and Growth Department",
+    "purpose": "Pazar talebi yaratmak, müşteri kazanımını hızlandırmak ve ölçülebilir büyümeyi desteklemek.",
+    "reports_to": "Genel Müdür / CEO",
+    "leader": {"title_tr": "Pazarlama ve Büyüme Direktörü", "title_en": "Chief Marketing Officer", "abbreviation": "CMO"},
+    "scope": ["Pazarlama stratejisi", "Marka ve konumlandırma", "Hedef kitle ve persona", "Dijital pazarlama", "Performans reklamları", "SEO ve GEO", "İçerik pazarlaması", "Sosyal medya pazarlaması", "Pazarlama otomasyonu", "Lead generation ve nurturing", "Dönüşüm optimizasyonu", "Growth marketing", "Ürün pazarlaması", "Kampanya yönetimi", "Etkinlik pazarlaması", "Pazar ve rakip araştırmaları", "Pazarlama analitiği", "Bütçe ve yatırım getirisi"],
+    "boundary": "Satış işlemini kapatmaz; talep ve nitelikli lead üretir. Kurumsal açıklamalar, medya ilişkileri ve kriz söylemi Kurumsal İletişim tarafından yönetilir."
+  },
+  "units": [
+    {
+      "id": "marketing_strategy_brand",
+      "name_tr": "Pazarlama Stratejisi ve Marka Yönetimi",
+      "leader": "Pazarlama Stratejisi ve Marka Yönetimi Direktörü",
+      "teams": [
+        {"manager": "Pazarlama Stratejisi Müdürü", "roles": ["Pazarlama Stratejisi Uzmanı", "Segmentasyon ve Persona Uzmanı"]},
+        {"manager": "Marka Yönetimi Müdürü", "roles": ["Marka Yöneticisi", "Marka Uzmanı", "Konumlandırma Uzmanı"]},
+        {"manager": "Marka Portföyü ve Mimari Müdürü", "roles": ["Marka Mimarisi Uzmanı", "Marka Uyum Uzmanı"]},
+        {"manager": "Stratejik Planlama Yöneticisi", "roles": ["Pazarlama Planlama Uzmanı", "Talep Planlama Analisti"]}
+      ]
+    },
+    {
+      "id": "digital_demand_generation",
+      "name_tr": "Dijital Pazarlama ve Talep Yaratma",
+      "leader": "Dijital Pazarlama ve Talep Yaratma Direktörü",
+      "teams": [
+        {"manager": "Performans Pazarlama Müdürü", "roles": ["Arama Motoru Reklamları Uzmanı", "Ücretli Sosyal Medya Uzmanı", "Medya Planlama Uzmanı", "Programatik Reklam Uzmanı"]},
+        {"manager": "SEO ve GEO Müdürü", "roles": ["SEO Yöneticisi", "Teknik SEO Uzmanı", "İçerik SEO Uzmanı", "GEO ve AI Görünürlük Yöneticisi", "AI Arama Görünürlüğü Uzmanı"]},
+        {"manager": "Talep Yaratma Müdürü", "roles": ["Demand Generation Yöneticisi", "Lead Generation Uzmanı", "ABM Uzmanı", "Yeniden Pazarlama Uzmanı"]},
+        {"manager": "Web Pazarlama Müdürü", "roles": ["Web Pazarlama Yöneticisi", "Landing Page Uzmanı", "Dijital Ölçümleme Uzmanı"]}
+      ]
+    },
+    {
+      "id": "content_marketing",
+      "name_tr": "İçerik Pazarlaması",
+      "leader": "İçerik Pazarlaması Direktörü",
+      "teams": [
+        {"manager": "Editoryal Yönetim Müdürü", "roles": ["Kıdemli Editör", "İçerik Editörü", "İçerik Kalite ve Doğrulama Uzmanı"]},
+        {"manager": "İçerik Üretimi Müdürü", "roles": ["İçerik Yazarı", "Copywriter", "Teknik İçerik Yazarı", "Vaka Çalışması Uzmanı", "SEO ve GEO İçerik Uzmanı"]},
+        {"manager": "Multimedya İçerik Müdürü", "roles": ["Video İçerik Yapımcısı", "Podcast Yapımcısı", "Webinar İçerik Uzmanı"]},
+        {"manager": "İçerik Dağıtım Yöneticisi", "roles": ["İçerik Dağıtım Uzmanı", "İçerik Dönüştürme Uzmanı"]}
+      ]
+    },
+    {
+      "id": "social_media_marketing",
+      "name_tr": "Sosyal Medya Pazarlaması",
+      "leader": "Sosyal Medya Pazarlaması Müdürü",
+      "teams": [
+        {"manager": "Kanal Yönetimi Yöneticisi", "roles": ["LinkedIn Uzmanı", "Instagram ve Facebook Uzmanı", "YouTube ve TikTok Uzmanı", "X ve Threads Uzmanı", "WhatsApp ve Telegram Uzmanı"]},
+        {"manager": "Topluluk Büyütme Yöneticisi", "roles": ["Topluluk Uzmanı", "Moderasyon Uzmanı"]},
+        {"manager": "Influencer ve İçerik Üreticileri Yöneticisi", "roles": ["Influencer Pazarlama Uzmanı", "İçerik Üreticisi İş Birlikleri Uzmanı"]},
+        {"manager": "Sosyal Dinleme ve Analitik Yöneticisi", "roles": ["Sosyal Dinleme Uzmanı", "Sosyal Medya Analisti"]}
+      ]
+    },
+    {
+      "id": "product_solution_marketing",
+      "name_tr": "Ürün ve Çözüm Pazarlaması",
+      "leader": "Ürün ve Çözüm Pazarlaması Direktörü",
+      "teams": [
+        {"manager": "Ürün Pazarlaması Müdürü", "roles": ["Ürün Pazarlama Yöneticisi", "Değer Önerisi Uzmanı", "Persona ve Kullanım Senaryosu Uzmanı"]},
+        {"manager": "GTM ve Lansman Müdürü", "roles": ["GTM Strateji Uzmanı", "Lansman Uzmanı", "Kanal Pazarlama Uzmanı"]},
+        {"manager": "Satış Etkinleştirme Müdürü", "roles": ["Satış Etkinleştirme Uzmanı", "Satış İçeriği Uzmanı", "Demo ve Eğitim Uzmanı"]},
+        {"manager": "Rekabet İstihbaratı Yöneticisi", "roles": ["Rekabet Analisti", "Fiyatlandırma ve Paketleme Analisti"]},
+        {"manager": "Müşteri Pazarlaması Yöneticisi", "roles": ["Müşteri Referans Programları Uzmanı", "Çapraz Satış Pazarlaması Uzmanı"]}
+      ]
+    },
+    {
+      "id": "growth_conversion",
+      "name_tr": "Growth Marketing ve Dönüşüm",
+      "leader": "Growth Marketing ve Dönüşüm Direktörü",
+      "teams": [
+        {"manager": "Growth Marketing Müdürü", "roles": ["Büyüme Uzmanı", "Kanal Deneyleri Uzmanı"]},
+        {"manager": "CRO ve Deney Yönetimi Müdürü", "roles": ["Kullanıcı Davranışı Analisti", "A/B Test Uzmanı", "Funnel Optimizasyon Uzmanı"]},
+        {"manager": "Yaşam Döngüsü Pazarlama Müdürü", "roles": ["Lead Nurturing Uzmanı", "Elde Tutma Pazarlaması Uzmanı", "Yeniden Aktivasyon Uzmanı"]},
+        {"manager": "Müşteri Kazanımı Yöneticisi", "roles": ["Edinim Stratejisi Uzmanı", "Referans ve Yönlendirme Programı Uzmanı"]}
+      ]
+    },
+    {
+      "id": "marketing_operations_crm_martech",
+      "name_tr": "Pazarlama Operasyonları, CRM ve MarTech",
+      "leader": "Pazarlama Operasyonları, CRM ve MarTech Direktörü",
+      "teams": [
+        {"manager": "Kampanya Operasyonları Müdürü", "roles": ["Kampanya Koordinatörü", "Kampanya Kalite Uzmanı"]},
+        {"manager": "CRM ve Lead Yönetimi Müdürü", "roles": ["CRM Uzmanı", "Lead Yönetimi Uzmanı", "Lead Skorlama Uzmanı", "E-posta Pazarlama Uzmanı", "Pazarlama Otomasyonu Uzmanı"]},
+        {"manager": "MarTech ve Entegrasyon Müdürü", "roles": ["Pazarlama Teknolojileri Uzmanı", "Entegrasyon Uzmanı", "Pazarlama Sistemleri Yöneticisi"]},
+        {"manager": "Pazarlama Verisi ve Raporlama Müdürü", "roles": ["Pazarlama Veri Analisti", "BI ve Dashboard Uzmanı", "Atıf Analitiği Uzmanı", "Veri Kalitesi Uzmanı"]},
+        {"manager": "Bütçe ve Tedarikçi Yönetimi Müdürü", "roles": ["Bütçe ve Operasyon Uzmanı", "Tedarikçi Yönetimi Uzmanı"]}
+      ]
+    },
+    {
+      "id": "market_research_analytics",
+      "name_tr": "Pazar Araştırmaları ve Pazarlama Analitiği",
+      "leader": "Pazar Araştırmaları ve Pazarlama Analitiği Direktörü",
+      "teams": [
+        {"manager": "Pazar Araştırmaları Müdürü", "roles": ["Nitel Araştırma Uzmanı", "Nicel Araştırma Uzmanı", "Pazar Büyüklüğü Analisti"]},
+        {"manager": "Müşteri İçgörüleri Müdürü", "roles": ["Müşteri İçgörüleri Uzmanı", "Segmentasyon Uzmanı", "Müşterinin Sesi Uzmanı"]},
+        {"manager": "Rekabet ve Sektör İstihbaratı Müdürü", "roles": ["Rekabet Analisti", "Sektör ve Trend Analisti", "Fiyat Araştırma Uzmanı"]},
+        {"manager": "Pazarlama Analitiği Müdürü", "roles": ["Pazarlama Veri Analisti", "ROI ve Gelir Analisti", "Talep Tahminleme Analisti"]}
+      ]
+    },
+    {
+      "id": "campaign_event_marketing",
+      "name_tr": "Kampanya ve Etkinlik Pazarlaması",
+      "leader": "Kampanya ve Etkinlik Pazarlaması Müdürü",
+      "teams": [
+        {"manager": "Entegre Kampanya Yöneticisi", "roles": ["Kampanya Uzmanı", "Kampanya Takvimi Uzmanı"]},
+        {"manager": "Etkinlik Pazarlaması Yöneticisi", "roles": ["Webinar Pazarlaması Uzmanı", "Saha Etkinlikleri Uzmanı", "Etkinlik Lead Yönetimi Uzmanı"]},
+        {"manager": "İş Ortaklığı Pazarlaması Yöneticisi", "roles": ["Kanal Pazarlama Uzmanı", "Ortak Kampanya Uzmanı"]},
+        {"manager": "Pazarlama Proje Koordinatörü", "roles": []}
+      ]
+    }
+  ],
+  "lead_handoff": {
+    "marketing_owns": ["Farkındalık", "Etkileşim", "Lead", "MQL", "Nurturing"],
+    "joint_ownership": ["MQL kabul veya ret kontrolü", "Çapraz satış iletişimi"],
+    "sales_owns": ["SQL", "Fırsat", "Teklif", "Müzakere", "Satış kapanışı"],
+    "handoff_point": "Tanımlanmış MQL kriterlerini karşılayan lead'in eksiksiz biçimde Satışa aktarılması"
+  },
+  "title_standard": [
+    {"level": "C-Level", "title_tr": "Pazarlama ve Büyüme Direktörü", "title_en": "Chief Marketing Officer"},
+    {"level": "Fonksiyon yönetimi", "title_tr": "Direktör", "title_en": "Director / Head of Function"},
+    {"level": "Birim yönetimi", "title_tr": "Müdür", "title_en": "Manager / Head of Team"},
+    {"level": "Ekip yönetimi", "title_tr": "Yönetici", "title_en": "Lead / Senior Manager"},
+    {"level": "İleri uzmanlık", "title_tr": "Kıdemli Uzman", "title_en": "Senior Specialist"},
+    {"level": "Uzmanlık", "title_tr": "Uzman", "title_en": "Specialist"},
+    {"level": "Başlangıç", "title_tr": "Uzman Yardımcısı", "title_en": "Junior Specialist / Associate"},
+    {"level": "Operasyon", "title_tr": "Koordinatör", "title_en": "Coordinator"},
+    {"level": "Destek", "title_tr": "Asistan", "title_en": "Assistant"}
+  ],
+  "department_kpis": {
+    "demand_and_revenue": ["Pazarlama kaynaklı pipeline", "Pazarlama etkili gelir", "MQL ve SQL sayısı", "MQL-SQL dönüşüm oranı", "Müşteri edinme maliyeti", "Pazarlama yatırım getirisi", "Lead başına maliyet", "Pipeline başına pazarlama maliyeti"],
+    "brand_and_visibility": ["Marka bilinirliği", "Arama payı", "Organik görünürlük", "GEO ve AI görünürlük oranı", "Doğrudan trafik", "İçerik erişimi ve etkileşimi", "Hedef segment penetrasyonu"],
+    "conversion": ["Ziyaretçi-lead dönüşüm oranı", "Landing page dönüşüm oranı", "Form tamamlama oranı", "MQL oranı", "Kampanya dönüşüm oranı", "Nurturing dönüşümü", "A/B testlerinden elde edilen artış"],
+    "operations": ["Kampanya yayına alma süresi", "Lead yönlendirme süresi", "CRM veri doğruluğu", "Bütçe gerçekleşme oranı", "Kanal bazında ROI ve ROAS", "Satışın MQL kabul oranı", "Dashboard ve raporlama güncelliği"]
+  }
+}
