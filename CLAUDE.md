@@ -71,7 +71,7 @@ Tek dosyalık uygulama: `web-proje-gelistirme.html`. Kullanıcı proje kararlar�
 
 ## Düzenleme yöntemi
 
-- Klasör git'te değil. Her değişiklikten önce `_yedek/` altına tarihli kopya al.
+- Klasör 2026-11-08'den beri git'te: herkese açık **https://github.com/onurkenar/cortex-onurkenar-com** (dal `main`). `.gitignore` `_yedek/`, `yayin/node_modules`, `yayin/.wrangler` ve `yayinla.sh`'nin ürettiği `yayin/public/index.html(.br/.gz)` kopyalarını dışarıda tutar. Repo herkese açık: gizli değer (API anahtarı, token, kişisel veri) eklemeyin — GitHub gizli bilgi koruması gönderimi durdurur. Anthropic dizinindeki AccuWeather MCP adresinin `?tracker=zpka_…` parametresi bu yüzden `docs/mcp/anthropic-dizini.json`'dan ve uygulamadan silindi; `dizin_cek.py` dizini yeniden çekerse geri gelir, `mcp_ekle.py`'den önce yeniden silin. Commit ve push yalnız kullanıcı isteyince. Her değişiklikten önce yine `_yedek/` altına tarihli kopya al.
 - Edit aracı yerine Python ile tam-eşleşme değiştirme yap: her eski metnin dosyada **tam 1 kez** geçtiğini assert et, sonra değiştir. Python'u `-I` ile çalıştır.
 - Koyu tema renkleri `v17-dark-mode` bloğundaki CSS değişkenlerinden gelir (`--bg`, `--surface`, `--text`, `--muted` …). Yeni bileşen eklerken koyu tema karşılığını da aynı bloğa ekle.
 
