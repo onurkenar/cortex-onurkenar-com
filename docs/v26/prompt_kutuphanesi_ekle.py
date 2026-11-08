@@ -5,11 +5,13 @@ Kullanım: python3 -I docs/v26/prompt_kutuphanesi_ekle.py <girdi.html> <çıktı
 - <style id="v26-prompt-library"> : docs/v26/v26-prompt-library.css (head'de v26-panel-portal stilinden sonra)
 - <script id="v26-prompt-library">: docs/v26/v26-prompt-library.js, içindeki /*PL_DATA*/ yerine
   docs/v26/v26-prompt-library-data.js (body sonunda, son betik)
-- KVKK / GDPR & Çerez Yönetimi promptu: docs/v26/prompt-kutuphanesi/kvkk-gdpr-cerez.md (veride /*PL_KVKK_PROMPT*/ yerine JSON metni)
+- Hazır modül metinleri docs/v26/prompt-kutuphanesi/: veride /*PL_FILE:ad*/"" yerine dosyanın JSON metni,
+  /*PL_IMGS:klasör*/[] yerine klasördeki gorseller.json sırasıyla WebP görseller (alt metin ve açıklama dokümandan)
+- Sayfa 25 MiB'ı (Cloudflare statik dosya sınırı) aşarsa durur
 - Dokümantasyon sayfasına "Hazır Prompt Kütüphanesi" maddesi (Pazarlama maddesinden önce)
 Bloklar zaten varsa içerikleri yenilenir (tekrar çalıştırılabilir). DATA satırına dokunmaz.
 """
-import json, os, re, sys
+import base64, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 src, dst = sys.argv[1], sys.argv[2]
@@ -18,9 +20,37 @@ css = open(os.path.join(HERE, "v26-prompt-library.css"), encoding="utf-8").read(
 js = open(os.path.join(HERE, "v26-prompt-library.js"), encoding="utf-8").read()
 data = open(os.path.join(HERE, "v26-prompt-library-data.js"), encoding="utf-8").read().strip()
 assert js.count("/*PL_DATA*/") == 1
-kvkk = open(os.path.join(HERE, "prompt-kutuphanesi", "kvkk-gdpr-cerez.md"), encoding="utf-8").read().strip()
-assert data.count('/*PL_KVKK_PROMPT*/""') == 1 and "17. Kabul Kriterleri" in kvkk and "Kaynak kullanım kuralları" in kvkk
-data = data.replace('/*PL_KVKK_PROMPT*/""', json.dumps(kvkk, ensure_ascii=False))
+LIB = os.path.join(HERE, "prompt-kutuphanesi")
+
+
+def pl_file(m):
+    txt = open(os.path.join(LIB, m.group(1)), encoding="utf-8").read().strip()
+    return json.dumps(txt, ensure_ascii=False)
+
+
+def pl_imgs(m):
+    d = os.path.join(LIB, m.group(1))
+    man = json.load(open(os.path.join(d, "gorseller.json"), encoding="utf-8"))
+    doc = open(os.path.join(LIB, man["dokuman"]), encoding="utf-8").read()
+    out = []
+    for i, name in enumerate(man["sira"]):
+        ref = re.search(r"!\[([^\]]*)\]\([^)]*?/" + re.escape(name) + r"\.png\)", doc)
+        assert ref, "dokümanda görsel yok: " + name
+        heads = [h for h in re.finditer(r"^#{2,3}\s+(.+)$", doc[:ref.start()], re.M)]
+        cap = heads[-1].group(1).strip() if heads else ""
+        cap = ("§" + cap) if re.match(r"\d", cap) else cap
+        raw = open(os.path.join(d, name + ".webp"), "rb").read()
+        assert raw[:4] == b"RIFF" and raw[8:12] == b"WEBP", name
+        out.append({"id": "img-%d" % (i + 1), "name": name, "src": "data:image/webp;base64," + base64.b64encode(raw).decode(),
+                    "alt": ref.group(1).strip(), "caption": cap})
+    return json.dumps(out, ensure_ascii=False)
+
+
+data, n1 = re.subn(r'/\*PL_FILE:([\w.-]+)\*/""', pl_file, data)
+data, n2 = re.subn(r"/\*PL_IMGS:([\w.-]+)\*/\[\]", pl_imgs, data)
+assert n1 == 3 and n2 == 1, (n1, n2)
+for need in ("17. Kabul Kriterleri", "Kaynak kullanım kuralları", "## 20. Tamamlanma ve Kabul Kriterleri", "### Nihai teslimat"):
+    assert need in data, need
 js = js.replace("/*PL_DATA*/", data).strip()
 for name, body in (("css", css), ("js", js)):
     low = body.lower()
@@ -74,5 +104,7 @@ else:
 
 for k in ('<style id="v26-prompt-library">', '<script id="v26-prompt-library">', 'id="docPromptLib"'):
     assert html.count(k) == 1, k
+size = len(html.encode("utf-8"))
+assert size < 25 * 1024 * 1024, "sayfa 25 MiB sınırını aşıyor: %d" % size
 open(dst, "w", encoding="utf-8").write(html)
 print("ok", len(html))

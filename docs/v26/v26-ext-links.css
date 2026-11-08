@@ -1,0 +1,12 @@
+/* Dış bağlantılar (2026-11-08, kullanıcı isteği): GitHub reposu ve onurkenar.com — modül şeridinde (> 900 px) ve mobil çekmecenin alt menüsünde (≤ 900 px) */
+a.mrBtn.mrExt{text-decoration:none}
+.mrExt svg{width:20px;height:20px}
+.sideExt{display:flex;gap:6px;margin:6px 0 0;padding:6px 0 0;border-top:1px solid #eceff2}
+.sideExt a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border:1px solid #e2e5e9;border-radius:12px;background:#fff;color:#1f2933;font-size:13px;font-weight:750;text-decoration:none;white-space:nowrap}
+.sideExt a:hover{background:#f3f4f6}
+.sideExt a:focus-visible{outline:2px solid var(--v26Accent,#2453d6);outline-offset:2px}
+.sideExt svg{width:16px;height:16px;flex:0 0 auto}
+@media(max-width:900px){#sideNav{padding-bottom:290px}.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:365px}}
+[data-theme="dark"] .sideExt{border-color:var(--border)}
+[data-theme="dark"] .sideExt a{background:var(--surface);border-color:var(--border-2);color:var(--text)}
+[data-theme="dark"] .sideExt a:hover{background:var(--hover)}

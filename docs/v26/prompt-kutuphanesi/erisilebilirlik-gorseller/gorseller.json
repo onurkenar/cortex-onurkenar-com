@@ -1,0 +1,5 @@
+{
+  "aciklama": "Erişilebilirlik modülünün referans görselleri (kullanıcı kararı 2026-11-08: 52 ekran görüntüsünden 16'sı sayfaya gömülür — yayın boyut sınırı). Kaynak PNG'ler onurkenar-com/docs/erisilebilirlik-modulu/; WebP: cwebp -preset text -q 55 -m 6, genişlik en çok 1280 px. Alt metin dokümandaki görsel bağlantısından, açıklama görselin bulunduğu bölüm başlığından alınır. İlk görsel kart küçük resmidir.",
+  "dokuman": "erisilebilirlik-dokuman.md",
+  "sira": ["02-panel-genel", "01-baslatici", "03-hizli-ayarlar", "05-profil-ayrinti", "11-kartlar-etkin", "12-bilgi-dugmesi", "13-yazili-komut", "14-sayfa-yapisi", "16-mod-yuksek-kontrast-koyu", "18-mod-disleksi-araliklar", "27-sade-okuma", "28-mobil-panel", "40-admin-genel-bakis", "45-admin-sorun-detayi", "51c-admin-acr-kanit-tablosu", "53-admin-asistan-ayarlari"]
+}

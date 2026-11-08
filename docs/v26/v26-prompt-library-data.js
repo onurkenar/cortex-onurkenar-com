@@ -18,15 +18,15 @@ const PL_IMG={
  prefs:PL_SVG(800,500,`<rect width="800" height="500" fill="#9aa1ab"/><rect x="150" y="40" width="500" height="420" rx="16" fill="#fff"/><text x="180" y="82" font-size="20" font-weight="700" fill="#111">Çerez tercihleri</text><text x="620" y="80" font-size="20" fill="#4b5563" text-anchor="middle">×</text>${[["Zorunlu","Oturum, güvenlik, onay kaydı · kapatılamaz",1,1],["İşlevsel","Sohbet aracı, harita",0,0],["Analitik","Ziyaret istatistikleri · Sağlayıcı: GA4",0,0],["Pazarlama","Reklam ölçümü · Sağlayıcı: Meta, Google Ads",0,0]].map((r,i)=>{let y=110+i*68;return `<rect x="180" y="${y}" width="440" height="56" rx="10" fill="#f7f8fa" stroke="#e1e4e8"/><text x="198" y="${y+24}" font-size="15" font-weight="700" fill="#111">${r[0]}</text><text x="198" y="${y+43}" font-size="12" fill="#4b5563">${r[1]}</text><rect x="552" y="${y+16}" width="48" height="24" rx="12" fill="${r[2]?"#9ca3af":"#d1d5db"}"/><circle cx="${r[2]?588:564}" cy="${y+28}" r="9" fill="#fff"/>${r[3]?`<text x="576" y="${y+54}" font-size="10" fill="#6b7280" text-anchor="middle">her zaman açık</text>`:""}`}).join("")}${["Tümünü Kabul Et","Tümünü Reddet","Seçimi Kaydet"].map((b,i)=>`<rect x="${180+i*152}" y="398" width="136" height="38" rx="19" fill="#1f2937"/><text x="${248+i*152}" y="422" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">${b}</text>`).join("")}`),
  form:PL_SVG(800,560,`<rect x="160" y="24" width="480" height="512" rx="16" fill="#fff" stroke="#d9dde2"/><text x="190" y="66" font-size="20" font-weight="700" fill="#111">Teklif isteyin</text>${[["Ad Soyad *",92],["E-posta *",162],["Mesajınız *",232]].map(r=>`<text x="190" y="${r[1]}" font-size="13" font-weight="700" fill="#1f2937">${r[0]}</text><rect x="190" y="${r[1]+8}" width="420" height="${r[0].startsWith("Mesaj")?70:38}" rx="8" fill="#fff" stroke="#9ca3af"/>`).join("")}<rect x="190" y="332" width="420" height="58" rx="8" fill="#f1f5ff"/><text x="204" y="354" font-size="12" fill="#1f2937">Kişisel verileriniz teklif hazırlamak amacıyla işlenir.</text><text x="204" y="374" font-size="12" fill="#2453d6" text-decoration="underline">Aydınlatma Metni'nin tamamı</text><rect x="190" y="406" width="20" height="20" rx="4" fill="#fff" stroke="#4b5563" stroke-width="2"/><text x="220" y="421" font-size="12" fill="#1f2937">Kampanya e-postaları almak istiyorum (isteğe bağlı)</text><rect x="190" y="440" width="20" height="20" rx="4" fill="#fff" stroke="#4b5563" stroke-width="2"/><text x="220" y="455" font-size="12" fill="#1f2937">SMS ile bilgilendirilmek istiyorum (isteğe bağlı)</text><rect x="190" y="480" width="160" height="40" rx="20" fill="#1f2937"/><text x="270" y="505" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">Gönder</text><text x="660" y="370" font-size="12" fill="#2453d6">← aydınlatma: bilgi, onay kutusu değil</text><text x="660" y="440" font-size="12" fill="#2453d6">← rıza: amaç başına, ön işaretsiz</text>`),
  dsar:PL_SVG(900,300,`${[["Başvuru","form · hesap · e-posta"],["Kimlik doğrulama","orantılı yöntem"],["Kayıt ve süre","no + son tarih (30 gün)"],["İnceleme","envanter + saklama kuralı"],["Yanıt","dışa aktarım · silme · ret"]].map((r,i)=>{let x=20+i*176;return `<rect x="${x}" y="90" width="150" height="90" rx="12" fill="#fff" stroke="#1f2937" stroke-width="2"/><text x="${x+75}" y="128" font-size="15" font-weight="700" fill="#111" text-anchor="middle">${r[0]}</text><text x="${x+75}" y="152" font-size="11" fill="#4b5563" text-anchor="middle">${r[1]}</text>${i<4?`<path d="M${x+152} 135h20" stroke="#1f2937" stroke-width="2"/><path d="M${x+166} 129l7 6-7 6" fill="none" stroke="#1f2937" stroke-width="2"/>`:""}`}).join("")}<rect x="20" y="214" width="854" height="44" rx="10" fill="#eef2ff" stroke="#c7d2fe"/><text x="447" y="241" font-size="13" fill="#1d45b8" text-anchor="middle">Her adım değiştirilemez denetim günlüğüne yazılır · son 7 günde panel uyarısı</text><text x="447" y="56" font-size="18" font-weight="700" fill="#111" text-anchor="middle">İlgili kişi başvuru akışı</text>`),
- retention:PL_SVG(800,360,`<text x="40" y="48" font-size="18" font-weight="700" fill="#111">Saklama politikası → periyodik imha işi</text><rect x="40" y="70" width="720" height="40" rx="8" fill="#1f2937"/>${["Veri kategorisi","Hukuki sebep","Süre","Yöntem"].map((h,i)=>`<text x="${60+i*180}" y="96" font-size="13" font-weight="700" fill="#fff">${h}</text>`).join("")}${[["İletişim formu","Meşru menfaat","2 yıl","Silme"],["Sipariş / fatura","Kanuni yükümlülük","10 yıl","Arşiv → silme"],["Uygulama logu","Meşru menfaat","90 gün","Silme"],["Pazarlama izni","Açık rıza","Geri alınana dek","Anonimleştirme"]].map((r,j)=>`<rect x="40" y="${114+j*44}" width="720" height="40" rx="6" fill="${j%2?"#fff":"#f9fafb"}" stroke="#e5e7eb"/>${r.map((c,i)=>`<text x="${60+i*180}" y="${139+j*44}" font-size="13" fill="#1f2937">${c}</text>`).join("")}`).join("")}<text x="40" y="320" font-size="12" fill="#2453d6">Süreler örnektir; projenin hukuki değerlendirmesine göre doldurulur. İmha işi her çalışmada tutanak yazar.</text>`),
- focus:PL_SVG(800,360,`<text x="40" y="48" font-size="18" font-weight="700" fill="#111">Görünür odak ve hedef boyutu</text><rect x="60" y="90" width="200" height="48" rx="24" fill="#1f2937"/><text x="160" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Odaksız</text><rect x="300" y="90" width="200" height="48" rx="24" fill="#1f2937"/><rect x="295" y="85" width="210" height="58" rx="29" fill="none" stroke="#2453d6" stroke-width="3"/><text x="400" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Odakta</text><text x="400" y="166" font-size="12" fill="#2453d6" text-anchor="middle">en az 2 px, 3:1 kontrastlı halka, ofsetli</text><rect x="560" y="90" width="200" height="48" rx="24" fill="#1f2937"/><text x="660" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">outline: none ✗</text><rect x="60" y="214" width="24" height="24" fill="#2453d6"/><text x="96" y="232" font-size="13" fill="#1f2937">24 × 24 CSS px — WCAG 2.2 · 2.5.8 asgari hedef</text><rect x="60" y="262" width="44" height="44" fill="none" stroke="#2453d6" stroke-width="2" stroke-dasharray="4 3"/><text x="116" y="290" font-size="13" fill="#1f2937">44 × 44 önerilen dokunma alanı (görsel küçük olsa da tıklama alanı büyük)</text><rect x="430" y="214" width="330" height="96" rx="10" fill="#fff" stroke="#d9dde2"/><rect x="430" y="214" width="330" height="30" rx="10" fill="#1f2937"/><text x="446" y="234" font-size="12" fill="#fff">Yapışkan başlık</text><rect x="446" y="252" width="140" height="30" rx="6" fill="none" stroke="#2453d6" stroke-width="3"/><text x="600" y="272" font-size="11" fill="#1f2937">odaklanan öğe başlığın</text><text x="600" y="288" font-size="11" fill="#1f2937">altında kalmaz (2.4.11)</text>`),
- errors:PL_SVG(800,520,`<rect x="160" y="20" width="480" height="480" rx="16" fill="#fff" stroke="#d9dde2"/><rect x="190" y="44" width="420" height="96" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/><text x="208" y="72" font-size="15" font-weight="700" fill="#991b1b">2 alanda hata var</text><text x="208" y="96" font-size="13" fill="#b91c1c" text-decoration="underline">E-posta adresi geçerli değil</text><text x="208" y="120" font-size="13" fill="#b91c1c" text-decoration="underline">Telefon numarası 10 haneli olmalı</text><text x="190" y="176" font-size="13" font-weight="700" fill="#1f2937">E-posta *</text><rect x="190" y="186" width="420" height="40" rx="8" fill="#fff" stroke="#b91c1c" stroke-width="2"/><text x="204" y="211" font-size="13" fill="#1f2937">ornek@</text><text x="190" y="246" font-size="12" fill="#b91c1c">⚠ Geçerli bir e-posta yazın, ör. ad@alanadi.com</text><text x="190" y="286" font-size="13" font-weight="700" fill="#1f2937">Telefon *</text><rect x="190" y="296" width="420" height="40" rx="8" fill="#fff" stroke="#b91c1c" stroke-width="2"/><text x="190" y="356" font-size="12" fill="#b91c1c">⚠ 10 haneli numara yazın, ör. 5321234567</text><rect x="190" y="420" width="160" height="40" rx="20" fill="#1f2937"/><text x="270" y="445" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">Gönder</text><text x="20" y="96" font-size="11" fill="#2453d6">özet: odak buraya,</text><text x="20" y="112" font-size="11" fill="#2453d6">bağlantılar alana gider</text><text x="20" y="246" font-size="11" fill="#2453d6">aria-describedby +</text><text x="20" y="262" font-size="11" fill="#2453d6">aria-invalid="true"</text>`),
- dialog:PL_SVG(800,460,`<rect width="800" height="460" fill="#9aa1ab"/><text x="400" y="34" font-size="12" fill="#fff" text-anchor="middle">Arka plan inert — odak ve ekran okuyucu dışarı çıkamaz</text><rect x="180" y="60" width="440" height="330" rx="16" fill="#fff"/><text x="210" y="104" font-size="20" font-weight="700" fill="#111">Adresi sil</text><rect x="572" y="80" width="32" height="32" rx="8" fill="none" stroke="#2453d6" stroke-width="3"/><text x="588" y="103" font-size="18" fill="#111" text-anchor="middle">×</text><text x="210" y="140" font-size="13" fill="#4b5563">Kayıtlı adres kalıcı olarak silinecek.</text><text x="210" y="160" font-size="13" fill="#4b5563">Bu işlem geri alınamaz.</text><rect x="210" y="320" width="170" height="42" rx="21" fill="#fff" stroke="#1f2937" stroke-width="2"/><text x="295" y="346" font-size="14" font-weight="700" fill="#111" text-anchor="middle">Vazgeç</text><rect x="400" y="320" width="190" height="42" rx="21" fill="#b91c1c"/><text x="495" y="346" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">Kalıcı olarak sil</text><text x="400" y="420" font-size="12" fill="#fff" text-anchor="middle">aria-labelledby = başlık · Esc kapatır · kapanınca odak açan düğmeye döner</text><path d="M560 230 q30 40 -20 80" fill="none" stroke="#2453d6" stroke-width="2" stroke-dasharray="5 4"/><text x="470" y="228" font-size="11" fill="#2453d6">Tab döngüsü pencere içinde</text>`)
+ retention:PL_SVG(800,360,`<text x="40" y="48" font-size="18" font-weight="700" fill="#111">Saklama politikası → periyodik imha işi</text><rect x="40" y="70" width="720" height="40" rx="8" fill="#1f2937"/>${["Veri kategorisi","Hukuki sebep","Süre","Yöntem"].map((h,i)=>`<text x="${60+i*180}" y="96" font-size="13" font-weight="700" fill="#fff">${h}</text>`).join("")}${[["İletişim formu","Meşru menfaat","2 yıl","Silme"],["Sipariş / fatura","Kanuni yükümlülük","10 yıl","Arşiv → silme"],["Uygulama logu","Meşru menfaat","90 gün","Silme"],["Pazarlama izni","Açık rıza","Geri alınana dek","Anonimleştirme"]].map((r,j)=>`<rect x="40" y="${114+j*44}" width="720" height="40" rx="6" fill="${j%2?"#fff":"#f9fafb"}" stroke="#e5e7eb"/>${r.map((c,i)=>`<text x="${60+i*180}" y="${139+j*44}" font-size="13" fill="#1f2937">${c}</text>`).join("")}`).join("")}<text x="40" y="320" font-size="12" fill="#2453d6">Süreler örnektir; projenin hukuki değerlendirmesine göre doldurulur. İmha işi her çalışmada tutanak yazar.</text>`)
 };
 const PL_D="2026-11-08";
 /* KVKK modülünün promptu docs/v26/prompt-kutuphanesi/kvkk-gdpr-cerez.md'den gelir (prompt_kutuphanesi_ekle.py JSON olarak yazar). Kabul kriterleri promptun "17. Kabul Kriterleri" maddeleri, resmî kaynaklar "9." bölümündeki adreslerdir — tek kaynak. */
-const PL_KVKK_PROMPT=/*PL_KVKK_PROMPT*/"";
+const PL_KVKK_PROMPT=/*PL_FILE:kvkk-gdpr-cerez.md*/"";
+/* Erişilebilirlik modülü: master prompt, referans uygulamanın işleyiş dokümanı (onurkenar.com) ve 16 referans görsel (WebP; ad, alt metin dokümandan, açıklama dokümandaki bölümden) — betik yazar. */
+const PL_A11Y_PROMPT=/*PL_FILE:erisilebilirlik.md*/"",PL_A11Y_DOC=/*PL_FILE:erisilebilirlik-dokuman.md*/"",PL_A11Y_IMGS=/*PL_IMGS:erisilebilirlik-gorseller*/[];
 const plSec=(t,a,b)=>{let i=t.indexOf(a);if(i<0)return"";let j=b?t.indexOf(b,i+a.length):-1;return t.slice(i+a.length,j<0?undefined:j)};
+const PL_A11Y_CRIT=plSec(PL_A11Y_PROMPT,"\n## 20. Tamamlanma ve Kabul Kriterleri","\n### Nihai teslimat").split("\n").map(l=>/^\d+\.\s+(.+)$/.exec(l)).filter(Boolean).map(m=>m[1].trim());
 const PL_KVKK_CRIT=plSec(PL_KVKK_PROMPT,"\n17. Kabul Kriterleri","\nTeslimat:").split("\n").map(l=>/^\d+\.\s+(.+)$/.exec(l)).filter(Boolean).map(m=>m[1].trim());
 const PL_KVKK_REFS=[...plSec(PL_KVKK_PROMPT,"\n9. Yasal Metinlerde Resmi Kaynak","\nKaynak kullanım kuralları").matchAll(/^\d+\.\s+(.+?)\s+—\s+(https?:\/\/\S+)$/gm)].map(m=>({t:m[1],u:m[2]}));
 /* Bölümler: iki hazır modülün (KVKK / GDPR & Çerez Yönetimi, Erişilebilirlik) içeriği — tek başına modül değildir (kullanıcı kararı 2026-11-08: her alan tek başlık, tek prompt). */
@@ -234,222 +234,7 @@ Süreler ISO 8601 biçiminde; değerler örnektir, hukuki değerlendirmeyle beli
 
 ## Test
 - Sabit saat ile işi çalıştır: yalnız süresi dolan kayıtlar etkileniyor, tutanak sayısı eşleşiyor.
-- İş iki kez çalışınca ikinci tutanak 0 kayıt.`},
-{id:"a11y-wcag22-temel",short:"Temel",cat:"a11y",version:"1.0.0",updated:PL_D,title:"WCAG 2.2 AA Temel Uyum",
- desc:"Sayfa yapısı, metin alternatifleri, kontrast, yeniden akış, hareket ve WCAG 2.2 ile gelen yeni ölçütleri kapsayan, bütün sayfalarda geçerli erişilebilirlik temeli.",
- tags:["wcag","kontrast","landmark","alt-metin","ekran-okuyucu","reduced-motion"],deps:[],
- prompt:`Sitenin bütün sayfa şablonlarını WCAG 2.2 AA düzeyine getir. Her sayfada doğru lang özniteliği, anlamlı title, tek h1 ve atlamasız başlık hiyerarşisi, header / nav / main / footer yer işaretleri ve "İçeriğe atla" bağlantısı olsun. Bilgi taşıyan her görselin anlamlı alt metni olsun, süs görselleri alt="" ile gizlensin. Metin kontrastı en az 4.5:1 (büyük metin 3:1), arayüz bileşenleri ve odak göstergesi en az 3:1 olsun; bilgi yalnız renkle verilmesin. Sayfa 320 CSS px genişlikte ve %200 yakınlaştırmada yatay kaydırmasız okunabilsin, metin aralığı artırıldığında içerik kırpılmasın. prefers-reduced-motion'a uy, otomatik oynayan içeriği durdurulabilir yap. WCAG 2.2'nin yeni ölçütlerini (2.4.11 odak gizlenmemeli, 2.5.7 sürükleme alternatifi, 2.5.8 hedef boyutu, 3.2.6 tutarlı yardım, 3.3.7 tekrarlı giriş, 3.3.8 erişilebilir kimlik doğrulama) uygula. Değişiklikleri otomatik araçla (axe vb.) ve elle (klavye + ekran okuyucu) doğrula.`,
- criteria:["Her şablonda lang, anlamlı title, tek h1, atlamasız başlıklar ve header / nav / main / footer yer işaretleri var.","\"İçeriğe atla\" bağlantısı ilk Tab'da görünüyor ve main'e odak taşıyor.","Bilgi taşıyan görsellerin alt metni anlamlı; süs görselleri alt=\"\"; ikon düğmelerin erişilebilir adı var.","Metin kontrastı ≥ 4.5:1 (büyük metin ≥ 3:1), arayüz bileşenleri ve odak göstergesi ≥ 3:1 — açık ve koyu temada ölçüldü.","320 CSS px genişlikte ve %200 yakınlaştırmada yatay kaydırma yok (veri tabloları ve haritalar hariç), içerik kaybolmuyor.","prefers-reduced-motion: reduce iken animasyonlar kapalı ya da azaltılmış; 5 saniyeden uzun otomatik hareket durdurulabiliyor.","Tıklama hedefleri en az 24 × 24 CSS px ya da yeterli boşluklu (2.5.8).","axe (ya da eşdeğeri) taramasında kritik / ciddi ihlal yok; elle klavye ve ekran okuyucu testi raporlandı."],
- images:[{id:"img-1",src:PL_IMG.focus,alt:"Üç düğme: odaksız, mavi halkalı odakta ve outline none ile görünmez odak; altında 24 piksel ve 44 piksel hedef boyutu kareleri ve yapışkan başlığın altında kalmayan odak örneği",caption:"Odak göstergesi, hedef boyutu ve gizlenmeyen odak."}],
- refs:[{t:"W3C — Web Content Accessibility Guidelines (WCAG) 2.2",u:"https://www.w3.org/TR/WCAG22/"},{t:"W3C — How to Meet WCAG (Quick Reference)",u:"https://www.w3.org/WAI/WCAG22/quickref/"},{t:"W3C — Understanding WCAG 2.2",u:"https://www.w3.org/WAI/WCAG22/Understanding/"},{t:"Understanding 2.5.8 Target Size (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"}],
- doc:`# WCAG 2.2 AA Temel Uyum — Teknik Doküman
-
-## Sayfa iskeleti
-\`\`\`html
-<html lang="tr">
-<body>
-  <a class="skip" href="#main">İçeriğe atla</a>
-  <header>…<nav aria-label="Ana menü">…</nav></header>
-  <main id="main" tabindex="-1"><h1>Sayfa başlığı</h1>…</main>
-  <footer>…</footer>
-</body>
-\`\`\`
-- Birden fazla \`nav\` varsa her birine farklı \`aria-label\`.
-- Dil değişen bölümlerde \`lang\` (ör. \`<span lang="en">\`).
-
-## Metin alternatifleri
-| Görsel türü | Kural |
-|---|---|
-| Bilgi taşıyan | İşlevi / içeriği anlatan alt metin |
-| Süs | \`alt=""\` ya da CSS arka planı |
-| İkon düğme | \`aria-label\` ya da görsel olarak gizli metin |
-| Grafik / diyagram | Kısa alt + yakında ayrıntılı açıklama ya da tablo |
-
-## Renk ve kontrast
-- Normal metin 4.5:1, büyük metin (≈ 24 px ya da 18.66 px kalın) 3:1 (1.4.3).
-- Arayüz bileşeni sınırları ve odak göstergesi 3:1 (1.4.11).
-- Hata, zorunlu alan, durum yalnız renkle değil, metin ya da ikonla da belirtilir (1.4.1).
-- Tasarım token'larında her ön plan / arka plan çifti açık ve koyu tema için ölçülür.
-
-## Yeniden akış ve metin aralığı
-- 320 CSS px'te tek sütun; yatay kaydırma yok (1.4.10).
-- Satır yüksekliği 1.5, paragraf aralığı 2×, harf 0.12em, kelime 0.16em uygulanınca içerik kırpılmaz (1.4.12) — sabit yükseklikli metin kutusu kullanma.
-
-## Hareket
-\`\`\`css
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important; transition-duration: .01ms !important;
-    scroll-behavior: auto !important; }
-}
-\`\`\`
-- Kaydırıcı / video gibi 5 saniyeden uzun otomatik hareket için durdur düğmesi (2.2.2).
-
-## WCAG 2.2 ile gelen AA ölçütleri
-| No | Ölçüt | Uygulama |
-|---|---|---|
-| 2.4.11 | Odak gizlenmemeli (asgari) | \`scroll-padding-top\` = yapışkan başlık yüksekliği; çerez banner'ı odağı kapatmamalı |
-| 2.5.7 | Sürükleme hareketleri | Sürükle-bırak için düğme / seçim alternatifi |
-| 2.5.8 | Hedef boyutu (asgari) | 24 × 24 CSS px ya da boşluk istisnası |
-| 3.2.6 | Tutarlı yardım | Yardım / iletişim bağlantısı her sayfada aynı yerde |
-| 3.3.7 | Tekrarlı giriş | Aynı süreçte girilen bilgi yeniden istenmez, otomatik doldurulur |
-| 3.3.8 | Erişilebilir kimlik doğrulama | Bilişsel test yok; yapıştırma ve parola yöneticisi serbest |
-
-## Test
-- Otomatik: axe-core / Lighthouse erişilebilirlik — CI'da kritik ihlal kapısı.
-- Elle: yalnız klavye ile ana akışlar; NVDA + Firefox / Chrome ve VoiceOver + Safari ile başlık ve yer işareti gezintisi; %200 ve %400 yakınlaştırma.`},
-{id:"a11y-klavye-odak",short:"Klavye ve odak",cat:"a11y",version:"1.0.0",updated:PL_D,title:"Klavye Erişimi ve Odak Yönetimi",
- desc:"Bütün işlevlerin yalnız klavyeyle kullanılabilmesini, mantıklı odak sırasını, her zaman görünür ve gizlenmeyen odak göstergesini ve dinamik içerikte odağın doğru yere taşınmasını sağlar.",
- tags:["klavye","odak","focus-visible","tab-sırası","wcag"],deps:["a11y-wcag22-temel"],
- prompt:`Sitedeki her etkileşimi yalnız klavyeyle kullanılabilir yap. Tıklanabilir her öğe yerel button / a / input olsun; div ve span'e onclick verme. Tab sırası görsel okuma sırasını izlesin, pozitif tabindex kullanma. Bütün odaklanabilir öğelerde :focus-visible ile en az 2 px, çevresine karşı en az 3:1 kontrastlı odak göstergesi olsun; outline'ı göstergesiz kaldırma. Yapışkan başlık, çerez banner'ı ya da sohbet balonu odaklanan öğeyi kapatmasın (scroll-padding). Klavye tuzağı olmasın; menü, sekme ve liste kutusu gibi bileşik bileşenlerde ok tuşları ve roving tabindex uygula. Sayfa içi yönlendirme, filtre sonucu, açılan panel ve kapanan pencere sonrasında odağı mantıklı yere taşı ve gerekiyorsa aria-live ile duyur. Tek karakterli kısayollar varsa kapatılabilir ya da değiştirilebilir olsun.`,
- criteria:["Bütün işlevler fare kullanmadan Tab, Shift+Tab, Enter, Space, ok tuşları ve Esc ile yapılabiliyor.","Tıklanabilir div / span yok; etkileşimli öğeler yerel HTML öğesi ya da tam ARIA kalıbı.","Pozitif tabindex yok; odak sırası görsel sırayla aynı.","Her odaklanabilir öğede görünür odak göstergesi var (≥ 2 px, ≥ 3:1); outline: none yalnız yerine gösterge konmuşsa.","Yapışkan başlık ya da banner odaklanan öğeyi tamamen kapatmıyor (2.4.11).","Klavye tuzağı yok; gömülü içerikten (harita, video) Tab ile çıkılabiliyor.","Bileşik bileşenlerde ok tuşları çalışıyor, bileşene tek Tab ile girilip çıkılıyor.","Dinamik değişiklikten sonra (filtre, sayfalama, pencere kapanması) odak tanımlı bir yere gidiyor; sonuç sayısı aria-live ile duyuruluyor."],
- images:[{id:"img-1",src:PL_IMG.focus,alt:"Üç düğme: odaksız, mavi halkalı odakta ve outline none ile görünmez odak; altında hedef boyutu kareleri ve yapışkan başlığın altında kalmayan odak örneği",caption:"Görünür ve gizlenmeyen odak."}],
- refs:[{t:"W3C — ARIA Authoring Practices Guide (APG)",u:"https://www.w3.org/WAI/ARIA/apg/"},{t:"Understanding 2.4.11 Focus Not Obscured (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"},{t:"W3C — WCAG 2.2",u:"https://www.w3.org/TR/WCAG22/"}],
- doc:`# Klavye Erişimi ve Odak Yönetimi — Teknik Doküman
-
-## Temel kurallar
-- Yerel öğe önce: \`<button>\` eylem, \`<a href>\` gezinti. \`role="button"\` gerekiyorsa \`tabindex="0"\` + Enter ve Space işleyicisi.
-- \`tabindex\`: yalnız \`0\` (sıraya ekle) ve \`-1\` (programla odak). Pozitif değer yasak.
-- DOM sırası = görsel sıra. CSS \`order\` / \`flex-direction: row-reverse\` ile sırayı ters çevirme.
-
-## Odak göstergesi
-\`\`\`css
-:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-:focus:not(:focus-visible) { outline: none; }
-html { scroll-padding-top: var(--header-h); }   /* 2.4.11 */
-\`\`\`
-- \`--focus\` hem açık hem koyu temada çevresine karşı ≥ 3:1.
-
-## Bileşik bileşenler (roving tabindex)
-1. Gruptaki yalnız bir öğe \`tabindex="0"\`, diğerleri \`-1\`.
-2. Ok tuşları odağı taşır ve \`tabindex\` değerlerini değiştirir; Home / End uçlara gider.
-3. Gruptan Tab ile tek adımda çıkılır.
-Kalıplar: sekmeler, menü çubuğu, araç çubuğu, liste kutusu, ağaç — APG'deki klavye tablolarına uyulur.
-
-## Dinamik içerik
-| Olay | Odak | Duyuru |
-|---|---|---|
-| SPA sayfa geçişi | Yeni sayfanın h1'i (\`tabindex="-1"\`) | Sayfa başlığı |
-| Filtre uygulandı | Odak yerinde kalır | \`aria-live="polite"\`: "24 sonuç" |
-| Pencere kapandı | Açan öğe | — |
-| Öğe silindi | Sonraki öğe ya da liste başlığı | "Silindi" |
-| Form hatası | Hata özeti | Özet başlığı |
-
-## Test
-- Fareyi kaldırıp ana akışları baştan sona tamamla (kayıt, arama, sepet, iletişim).
-- Her adımda odağın nerede olduğu görünüyor mu? Yapışkan başlık kapatıyor mu?
-- Tab ile sayfa sonuna kadar git ve geri dön; tuzak yok.`},
-{id:"a11y-formlar",short:"Formlar",cat:"a11y",version:"1.0.0",updated:PL_D,title:"Erişilebilir Formlar ve Hata Yönetimi",
- desc:"Etiket, yardım metni, otomatik doldurma, zorunlu alan, hata mesajı ve hata özeti kalıplarıyla formların ekran okuyucu, klavye ve bilişsel erişilebilirlik açısından eksiksiz çalışmasını sağlar.",
- tags:["form","etiket","hata-mesajı","autocomplete","aria","wcag"],deps:["a11y-wcag22-temel","a11y-klavye-odak"],
- prompt:`Sitedeki bütün formları erişilebilir hale getir. Her alanın görünür ve programatik olarak bağlı bir label'ı olsun (placeholder etiket yerine geçmesin); yardım metni ve hata mesajı aria-describedby ile alana bağlansın. Kişisel bilgi alanlarında doğru autocomplete değerleri kullan. Zorunlu alanları metinle ("zorunlu" ya da * ve açıklaması) belirt. Doğrulamayı gönderimde yap; hatalı alanda aria-invalid="true" ve sorunu ve çözümü anlatan metin göster, form üstünde alanlara bağlantılı hata özeti çıkar ve odağı özete taşı. Kullanıcının girdiği veriyi hata sonrası silme. Aynı süreçte daha önce girilen bilgiyi yeniden isteme (3.3.7); girişte bilişsel test isteme, parola alanında yapıştırmayı ve parola yöneticilerini engelleme (3.3.8). Radyo ve onay kutusu gruplarını fieldset / legend ile grupla. Başarılı gönderimi aria-live ya da odak taşıyarak duyur.`,
- criteria:["Her alanın görünür label'ı for / id ile bağlı; yalnız placeholder ile etiketlenmiş alan yok.","Yardım ve hata metinleri aria-describedby ile alana bağlı; ekran okuyucu alanla birlikte okuyor.","Ad, e-posta, telefon, adres, posta kodu gibi alanlarda uygun autocomplete değeri var.","Zorunlu alanlar metinle belirtilmiş ve formun başında açıklanmış.","Gönderimde hatalı alanlar aria-invalid=\"true\" alıyor; mesaj sorunu ve çözüm örneğini söylüyor; renk tek gösterge değil.","Form üstünde hata özeti çıkıyor, odak özete gidiyor, özetteki bağlantılar ilgili alana odaklıyor.","Hata sonrası girilmiş değerler korunuyor; aynı süreçte tekrar giriş istenmiyor (3.3.7).","Parola alanında yapıştırma serbest, autocomplete=\"current-password\" / \"new-password\" doğru; CAPTCHA varsa bilişsel test içermeyen alternatif var (3.3.8).","Radyo / onay grupları fieldset + legend ile; başarı mesajı duyuruluyor."],
- images:[{id:"img-1",src:PL_IMG.errors,alt:"Formun üstünde kırmızı çerçeveli hata özeti ve iki bağlantı; altında kırmızı çerçeveli e-posta ve telefon alanları ve uyarı ikonlu çözüm önerili hata mesajları",caption:"Hata özeti + alan altı mesajlar."}],
- refs:[{t:"W3C WAI — Forms Tutorial",u:"https://www.w3.org/WAI/tutorials/forms/"},{t:"MDN — HTML autocomplete attribute",u:"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"},{t:"Understanding 3.3.7 Redundant Entry",u:"https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"},{t:"Understanding 3.3.8 Accessible Authentication (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"}],
- doc:`# Erişilebilir Formlar ve Hata Yönetimi — Teknik Doküman
-
-## Alan kalıbı
-\`\`\`html
-<div class="field">
-  <label for="email">E-posta <span aria-hidden="true">*</span><span class="sr-only">(zorunlu)</span></label>
-  <p id="email-help" class="help">Teklifi bu adrese göndereceğiz.</p>
-  <input id="email" name="email" type="email" autocomplete="email" required
-         aria-describedby="email-help email-err">
-  <p id="email-err" class="error" hidden></p>
-</div>
-\`\`\`
-- Hata görününce: \`aria-invalid="true"\`, \`#email-err\` metni dolar ve \`hidden\` kalkar.
-
-## Hata özeti
-\`\`\`html
-<div id="error-summary" role="alert" tabindex="-1">
-  <h2>2 alanda hata var</h2>
-  <ul><li><a href="#email">E-posta adresi geçerli değil</a></li>…</ul>
-</div>
-\`\`\`
-- Gönderimde hata varsa özet çizilir ve \`focus()\` edilir; bağlantı tıklanınca alan odaklanır.
-
-## Hata metni yazımı
-| Kötü | İyi |
-|---|---|
-| Geçersiz giriş | Geçerli bir e-posta yazın, ör. ad@alanadi.com |
-| Hata! | Telefon numarası 10 haneli olmalı, ör. 5321234567 |
-| Zorunlu | Adınızı yazın |
-
-## autocomplete değerleri
-\`name\`, \`given-name\`, \`family-name\`, \`email\`, \`tel\`, \`street-address\`, \`address-level1\` (il), \`address-level2\` (ilçe), \`postal-code\`, \`country\`, \`organization\`, \`current-password\`, \`new-password\`, \`one-time-code\`.
-
-## Gruplar
-\`\`\`html
-<fieldset><legend>İletişim tercihi</legend>
-  <input type="radio" id="c1" name="c" value="email"><label for="c1">E-posta</label>
-  …
-</fieldset>
-\`\`\`
-
-## Kimlik doğrulama (3.3.8)
-- Parola ve kod alanlarında yapıştırma engellenmez; \`one-time-code\` ile SMS kodu otomatik dolar.
-- Bulmaca / resim seçme CAPTCHA'sı tek yol olamaz; görünmez doğrulama (ör. Turnstile) ya da e-posta bağlantısı alternatif olur.
-
-## Test
-- Ekran okuyucuyla her alanda etiket + yardım + hata okunuyor.
-- Boş formu gönder: odak özete gidiyor, bağlantılar çalışıyor, değerler korunuyor.`},
-{id:"a11y-etkilesimli-bilesenler",short:"Bileşenler",cat:"a11y",version:"1.0.0",updated:PL_D,title:"Erişilebilir Etkileşimli Bileşenler",
- desc:"Modal pencere, açılır menü, sekmeler, akordeon ve bildirim gibi etkileşimli bileşenleri WAI-ARIA kalıplarına göre klavye ve ekran okuyucu uyumlu kurar.",
- tags:["modal","dialog","menü","sekme","akordeon","aria","wcag"],deps:["a11y-klavye-odak"],
- prompt:`Sitedeki etkileşimli bileşenleri WAI-ARIA Authoring Practices kalıplarına göre yeniden düzenle. Modal pencerelerde yerel <dialog> ve showModal() kullan; başlığı aria-labelledby ile bağla, açılınca odağı ilk anlamlı öğeye taşı, odağı pencere içinde tut, Esc ile kapat, kapanınca odağı açan öğeye geri ver, arka planı etkileşimsiz yap. Açılır menü ve akordeonda tetikleyici button olsun ve aria-expanded / aria-controls taşısın. Sekmelerde tablist / tab / tabpanel rolleri, aria-selected ve ok tuşlarıyla gezinti olsun. Bildirim ve toast mesajlarını aria-live bölgesiyle duyur, kendiliğinden kaybolan kritik mesaj kullanma. Bileşenleri tek bir bileşen kütüphanesinde topla ve her birinin klavye etkileşim tablosunu belgede yaz.`,
- criteria:["Modal: <dialog> + showModal(); aria-labelledby başlığa bağlı; açılınca odak içeride; Tab döngüsü pencere içinde; Esc kapatıyor; kapanınca odak açan öğede.","Modal açıkken arka plan inert (fare, klavye ve ekran okuyucu ile erişilemiyor), sayfa kaydırması kilitli.","Açılır menü ve akordeon tetikleyicileri button; aria-expanded durumu doğru güncelleniyor; aria-controls panel id'sine bağlı.","Sekmelerde tablist / tab / tabpanel rolleri, aria-selected, ok tuşları ve Home / End çalışıyor; panel sekmeye aria-labelledby ile bağlı.","Bildirimler aria-live=\"polite\" (kritik hata assertive) ile duyuruluyor; kritik mesaj kendiliğinden kaybolmuyor.","Her bileşenin klavye etkileşim tablosu bileşen belgesinde var ve testle doğrulanıyor.","Bileşenler açık ve koyu temada kontrast ölçütlerini sağlıyor; hareketleri prefers-reduced-motion'a uyuyor."],
- images:[{id:"img-1",src:PL_IMG.dialog,alt:"Gri arka plan üzerinde Adresi sil başlıklı pencere: kapatma düğmesi odakta, Vazgeç ve kırmızı Kalıcı olarak sil düğmeleri; Tab döngüsünün pencere içinde kaldığını ve Esc ile kapandığını anlatan notlar",caption:"Modal pencere: odak içeride, arka plan inert, kapanınca odak geri döner."}],
- refs:[{t:"W3C APG — Dialog (Modal) Pattern",u:"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"},{t:"W3C APG — Disclosure (Show/Hide) Pattern",u:"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"},{t:"MDN — <dialog> element",u:"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"},{t:"MDN — inert global attribute",u:"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"}],
- doc:`# Erişilebilir Etkileşimli Bileşenler — Teknik Doküman
-
-## Modal pencere
-\`\`\`html
-<button type="button" id="del-open">Adresi sil</button>
-<dialog id="del-dlg" aria-labelledby="del-title">
-  <h2 id="del-title">Adresi sil</h2>
-  <p>Kayıtlı adres kalıcı olarak silinecek.</p>
-  <button type="button" value="cancel" autofocus>Vazgeç</button>
-  <button type="button" value="ok">Kalıcı olarak sil</button>
-</dialog>
-\`\`\`
-\`\`\`js
-const dlg = document.getElementById('del-dlg'), opener = document.getElementById('del-open');
-opener.addEventListener('click', () => dlg.showModal());
-dlg.addEventListener('close', () => opener.focus());
-\`\`\`
-- \`showModal()\` arka planı tarayıcı düzeyinde etkileşimsiz yapar ve Esc'i yönetir; özel pencere yazılıyorsa arka plana \`inert\` verilir.
-- Yıkıcı işlemde odak "Vazgeç"te başlar.
-
-## Açılır menü / akordeon (disclosure)
-\`\`\`html
-<button type="button" aria-expanded="false" aria-controls="faq1">Teslimat ne kadar sürer?</button>
-<div id="faq1" hidden>…</div>
-\`\`\`
-- Tıklama \`aria-expanded\`'ı ve \`hidden\`'ı birlikte değiştirir.
-
-## Sekmeler
-| Tuş | Davranış |
-|---|---|
-| ← / → | Önceki / sonraki sekme (sona gelince başa döner) |
-| Home / End | İlk / son sekme |
-| Tab | Sekme listesinden etkin panele |
-Seçim ok tuşuyla otomatik ya da Enter / Space ile elle yapılabilir; panel yükleme gecikmesi varsa elle seçim tercih edilir.
-
-## Bildirimler
-\`\`\`html
-<div id="toast" role="status" aria-live="polite"></div>
-<div id="alert" role="alert"></div>
-\`\`\`
-- \`#toast\` bilgi mesajları için, \`#alert\` yalnız kritik hatalar için.
-- Bölge sayfa yüklenirken DOM'da boş olarak bulunur; metin sonradan yazılır.
-
-## Bileşen belgesi şablonu
-Her bileşen için: amaç, HTML yapısı, ARIA öznitelikleri, klavye tablosu, odak davranışı, ekran okuyucu çıktısı, açık / koyu tema kontrastı, hareket davranışı, test senaryoları.
-
-## Test
-- Her bileşen yalnız klavyeyle; NVDA ve VoiceOver ile rol, ad ve durum okunuyor.
-- Modal açıkken Tab 20 kez basıldığında odak hiç dışarı çıkmıyor.`}
+- İş iki kez çalışınca ikinci tutanak 0 kayıt.`}
 ];
 const PL_PART=Object.fromEntries(PL_PARTS.map(p=>[p.id,p]));
 /* Bölümleri tek modülde birleştirir (meta.cover: görselleri önce gelen bölüm — kart küçük resmi): doküman = baş + "## N. Bölüm" (bölüm başlıkları bir düzey aşağı) + son; kriterler "Bölüm: …"; görsel ve kaynaklar tekrarsız. */
@@ -461,30 +246,15 @@ function plJoin(meta,ids){const P=ids.map(i=>PL_PART[i]),seenI=new Set(),seenR=n
   refs:(meta.refs||[]).concat(P.flatMap(p=>p.refs)).filter(r=>!seenR.has(r.u)&&seenR.add(r.u)),
   doc:[meta.docHead.trim(),...P.map((p,i)=>`## ${i+1}. ${p.title}\n\n${sh(p.doc).trim()}`),meta.docTail.trim()].join("\n\n")}}
 const PL_BUILTIN=[
-plJoin({id:"erisilebilirlik",cat:"a11y",title:"Erişilebilirlik (WCAG 2.2 AA)",
- desc:"Sayfa yapısı, metin alternatifleri, kontrast, yeniden akış, klavye ve odak yönetimi, formlar ve etkileşimli bileşenlerle bütün sitenin WCAG 2.2 AA düzeyinde erişilebilir olmasını sağlayan tek modül.",
- tags:["wcag","erişilebilirlik","klavye","odak","form","aria","modal","kontrast","ekran-okuyucu"],
- prompt:`Sitenin bütün sayfa şablonlarını ve bileşenlerini WCAG 2.2 AA düzeyine getir. Aşağıdaki dört bölümü bu sırayla uygula ve her birini teknik dokümandaki ilgili bölüme göre doğrula:
-1. Temel uyum: her sayfada doğru lang, anlamlı title, tek h1 ve atlamasız başlıklar, header / nav / main / footer yer işaretleri ve "İçeriğe atla" bağlantısı olsun. Bilgi taşıyan görsellere anlamlı alt metin ver, süsleri alt="" ile gizle. Metin kontrastı en az 4.5:1 (büyük metin 3:1), arayüz bileşenleri ve odak göstergesi en az 3:1 olsun; bilgi yalnız renkle verilmesin. Sayfa 320 CSS px'te ve %200 yakınlaştırmada yatay kaydırmasız okunsun, metin aralığı artınca kırpılmasın; prefers-reduced-motion'a uy, otomatik hareketi durdurulabilir yap; WCAG 2.2'nin yeni ölçütlerini (2.4.11, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8) uygula.
-2. Klavye ve odak: her işlev yalnız klavyeyle kullanılabilsin; etkileşimli öğeler yerel button / a / input olsun, pozitif tabindex kullanma, odak sırası görsel sırayı izlesin. :focus-visible ile her zaman görünür odak göstergesi ver; yapışkan başlık ya da banner odağı kapatmasın; klavye tuzağı olmasın; bileşik bileşenlerde ok tuşları ve roving tabindex kullan; dinamik değişiklikten sonra odağı mantıklı yere taşı ve sonucu aria-live ile duyur.
-3. Formlar: her alana görünür ve bağlı label ver, yardım ve hata metnini aria-describedby ile bağla, doğru autocomplete değerlerini kullan, zorunlu alanları metinle belirt. Gönderimde hatalı alanlara aria-invalid ve çözüm öneren mesaj ver, form üstünde alanlara bağlantılı hata özeti çıkarıp odağı oraya taşı, girilen veriyi silme; aynı süreçte bilgiyi tekrar isteme, parola alanında yapıştırmayı ve parola yöneticilerini engelleme; grupları fieldset / legend ile kur.
-4. Etkileşimli bileşenler: modal pencerede yerel <dialog> + showModal() kullan (başlık aria-labelledby ile bağlı, odak içeride, Esc kapatır, kapanınca odak açan öğeye döner, arka plan etkileşimsiz); açılır menü ve akordeonda aria-expanded / aria-controls, sekmelerde tablist / tab / tabpanel ve ok tuşları; bildirimleri aria-live ile duyur. Bileşenleri tek bileşen kütüphanesinde topla ve her birinin klavye etkileşim tablosunu belgele.
-Değişiklikleri axe (ya da eşdeğeri) ile otomatik, yalnız klavye ve ekran okuyucuyla (NVDA, VoiceOver) elle doğrula; kontrastı açık ve koyu temada ölç; doğrulanamayan kriteri gerekçesiyle raporla.`,
- docHead:`# Erişilebilirlik (WCAG 2.2 AA) — Teknik Doküman
+{id:"erisilebilirlik",cat:"a11y",version:"2.0.0",updated:PL_D,title:"Erişilebilirlik (WCAG 2.2 AA)",
+ history:[{version:"1.0.0",date:PL_D,note:"Dört bölümlü kısa prompt (temel uyum, klavye-odak, formlar, etkileşimli bileşenler) ve 3 şematik çizim. 2026-11-08'de kullanıcının \"Evrensel Web Erişilebilirlik Modülü\" master promptu, referans uygulamanın işleyiş dokümanı ve 16 ekran görüntüsüyle değiştirildi.",data:null}],
+ desc:"Ziyaretçi Erişilebilirlik Asistanı (28 hızlı ayar, 9 profil, ayrıntılı kontroller, sesli okuma ve komut), 11 bölümlü Erişilebilirlik Merkezi ve Playwright + axe-core denetim altyapısıyla (CI kapısı, CMS yayın kontrolleri, raporlar) WCAG 2.2 A/AA'yı destekleyen, üçüncü taraf widget'a bağımlı olmayan modül.",
+ tags:["wcag","erişilebilirlik","asistan","profiller","axe-core","playwright","ci","cms","ekran-okuyucu","klavye"],deps:[],
+ prompt:PL_A11Y_PROMPT,criteria:PL_A11Y_CRIT,images:PL_A11Y_IMGS,
+ doc:`> **Bu doküman hakkında (Prompt Kütüphanesi notu).** Aşağıdaki metin, bu master promptla geliştirilmiş referans uygulamanın (onurkenar.com · v1 · 8 Kasım 2026) işleyiş dokümanıdır. Yollar, port, tablo ve dosya adları, komutlar, e-posta sağlayıcısı ve ürün adları o projeye özgüdür; yeni bir projede bağlayıcı olan prompttur ve o projenin mimarisine uyarlanır. Dokümandaki ekran görüntülerinden 16'sı bu modülün referans görselleridir; diğerleri yalnız açıklamasıyla anılır.
 
-## Kapsam ve uygulama sırası
-| Sıra | Bölüm | Çıktı |
-|---|---|---|
-| 1 | Temel uyum | Sayfa iskeleti, metin alternatifleri, kontrast, yeniden akış, hareket |
-| 2 | Klavye ve odak | Odak göstergesi, odak sırası, dinamik içerikte odak yönetimi |
-| 3 | Formlar | Alan kalıbı, hata özeti, otomatik doldurma, kimlik doğrulama |
-| 4 | Etkileşimli bileşenler | Modal, açılır menü, sekmeler, bildirimler |
-- Bölümler tek modüldür; sıra, sonraki bölümün öncekinin kurallarını kullanmasından gelir (formlar ve bileşenler klavye / odak kurallarına dayanır).`,
- docTail:`## Ortak test ve teslim
-- Otomatik: axe-core / Lighthouse erişilebilirlik taraması CI'da; kritik ve ciddi ihlal yayını durdurur.
-- Elle: ana akışlar (kayıt, arama, iletişim, satın alma) yalnız klavyeyle; NVDA + Chrome / Firefox ve VoiceOver + Safari ile başlık, yer işareti, form ve pencere gezintisi; %200 ve %400 yakınlaştırma; açık ve koyu temada kontrast ölçümü.
-- Teslimde: kabul kriterleri tablosu (geçti / kaldı / kanıt), bilinen sınırlamalar ve düzeltme planı.`},
- ["a11y-wcag22-temel","a11y-klavye-odak","a11y-formlar","a11y-etkilesimli-bilesenler"]),
+`+PL_A11Y_DOC,
+ refs:[{t:"W3C — Web Content Accessibility Guidelines (WCAG) 2.2",u:"https://www.w3.org/TR/WCAG22/"},{t:"W3C — How to Meet WCAG (Quick Reference)",u:"https://www.w3.org/WAI/WCAG22/quickref/"},{t:"W3C — Understanding WCAG 2.2",u:"https://www.w3.org/WAI/WCAG22/Understanding/"},{t:"W3C — ARIA Authoring Practices Guide (APG)",u:"https://www.w3.org/WAI/ARIA/apg/"},{t:"W3C APG — Dialog (Modal) Pattern",u:"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"},{t:"W3C — Accessibility Conformance Testing (ACT)",u:"https://www.w3.org/WAI/standards-guidelines/act/"},{t:"W3C — Developing an Accessibility Statement",u:"https://www.w3.org/WAI/planning/statements/"},{t:"Understanding 2.4.11 Focus Not Obscured (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"},{t:"Understanding 2.5.8 Target Size (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"},{t:"Understanding 3.3.8 Accessible Authentication (Minimum)",u:"https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"},{t:"axe-core (Deque) — kural motoru",u:"https://github.com/dequelabs/axe-core"},{t:"Playwright — Accessibility testing",u:"https://playwright.dev/docs/accessibility-testing"},{t:"MDN — Web Speech API",u:"https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"},{t:"MDN — CSS Custom Highlight API",u:"https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API"},{t:"MDN — inert global attribute",u:"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"}]},
 plJoin({id:"kvkk-gdpr-cerez",cat:"kvkk",title:"KVKK / GDPR & Çerez Yönetimi",version:"2.0.0",
  history:[{version:"1.0.0",date:PL_D,note:"Dört bölümlü kısa prompt (saklama-imha, aydınlatma-rıza, çerez, başvuru). 2026-11-08'de kullanıcının \"KVKK, GDPR, Yasal Belgeler ve Çerez Yönetim Sistemi\" geliştirme promptuyla değiştirildi; kabul kriterleri ve resmî kaynaklar o prompttan alınır.",data:null}],
  desc:"Yasal belgeler ve uygunluk taraması, gerçek tarayıcıyla çerez taraması ve envanter, çerez politikasına otomatik tablo, default deny rıza motoru, eşit öncelikli banner ve sol alt çerez ikonu, Consent Mode, rıza kayıtları, veri sahibi başvuruları ve çok dilli içerikleri CMS üzerinden yöneten KVKK / GDPR modülü.",
