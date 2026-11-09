@@ -1,0 +1,37 @@
+/* Çalışma saatleri (2026-11-09, kullanıcı isteği): gün bazında anahtar + saat. Kaynak docs/v26/v26-hours.css → calisma_saatleri_ekle.py */
+.hrField{display:flex;flex-direction:column;gap:12px}
+.hrTools{display:flex;flex-wrap:wrap;gap:8px}
+.hrBtn{font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:1px solid #d5d9df;border-radius:999px;background:#fff;color:#1f2933;cursor:pointer}
+.hrBtn:hover{background:#f3f5f8}
+.hrBtn:focus-visible,.hrSw:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
+.hrBtnQ{color:#8a1c12}
+.hrDays{list-style:none;margin:0;padding:0;border:1px solid #e1e4e9;border-radius:14px;background:#fff;overflow:hidden}
+.hrDay{display:grid;grid-template-columns:minmax(92px,120px) auto 54px minmax(0,1fr);align-items:center;gap:12px;min-height:56px;padding:8px 14px;border-top:1px solid #eceff2}
+.hrDay:first-child{border-top:0}
+.hrName{font-weight:750;font-size:14.5px}
+.hrDay:not(.on) .hrName{color:#59606b}
+.hrSw{position:relative;width:46px;height:26px;padding:0;border:0;border-radius:999px;background:#c5cad1;cursor:pointer;transition:background .15s}
+.hrKnob{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
+.hrSw[aria-checked="true"]{background:#16794c}
+.hrSw[aria-checked="true"] .hrKnob{transform:translateX(20px)}
+.hrState{font-size:13px;font-weight:700;color:#59606b}
+.hrDay.on .hrState{color:#16794c}
+.hrTimes{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.hrT.control{width:auto;min-width:112px;padding:7px 10px}
+.hrDash{color:#59606b}
+.hrHint{font-size:12.5px;color:#8a5a00;font-weight:700}
+.hrSum{margin:0;font-size:13.5px;color:#4b5260}
+.hrSum b{color:#1f2933}
+@media(prefers-reduced-motion:reduce){.hrSw,.hrKnob{transition:none}}
+@media(max-width:560px){.hrDay{grid-template-columns:1fr auto 48px;row-gap:8px}.hrTimes{grid-column:1/-1}}
+[data-theme="dark"] .hrBtn{background:var(--surface);border-color:var(--border-2);color:var(--text)}
+[data-theme="dark"] .hrBtn:hover{background:var(--hover)}
+[data-theme="dark"] .hrBtnQ{color:#f4a39a}
+[data-theme="dark"] .hrDays{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .hrDay{border-color:var(--border)}
+[data-theme="dark"] .hrDay:not(.on) .hrName,[data-theme="dark"] .hrState,[data-theme="dark"] .hrDash,[data-theme="dark"] .hrSum{color:var(--muted)}
+[data-theme="dark"] .hrSum b{color:var(--text)}
+[data-theme="dark"] .hrSw{background:#4a5059}
+[data-theme="dark"] .hrSw[aria-checked="true"]{background:#2f9e6a}
+[data-theme="dark"] .hrDay.on .hrState{color:#6fd3a0}
+[data-theme="dark"] .hrHint{color:#f2c97d}

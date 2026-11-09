@@ -208,12 +208,12 @@
      "new": {
       "label": "Çalışma Saatleri",
       "en": "Opening Hours",
-      "type": "textarea",
-      "placeholder": "Örn. Pazartesi–Cuma 09:00–19:00\nCumartesi 10:00–16:00\nPazar kapalı",
+      "type": "hours",
+      "placeholder": "Örn. Resmî tatillerde kapalı; 12:30–13:30 öğle arası; Cumartesi yalnız randevuyla",
       "rule": "Çalışma saatleri: {value}. İletişim sayfası, alt bilgi, yerel işletme yapısal verisi (openingHoursSpecification), Google İşletme Profili ve reklamlardaki işletme bilgileri bu saatlerle aynı tutulur; resmî tatil ve özel gün saatleri ayrıca duyurulur.",
-      "explanation": "İşletmenin müşteri kabul ettiği, telefon ya da canlı destekle ulaşılabildiği saatler. Her satıra bir gün ya da gün aralığı yazın.",
+      "explanation": "İşletmenin müşteri kabul ettiği, telefon ya da canlı destekle ulaşılabildiği saatler. Her gün için anahtarı açın ve açılış / kapanış saatini girin; kapalı günlerin anahtarı kapalı kalır. 24 saat açık gün için açılış ve kapanışı aynı saat (00:00–00:00) girin; kapanış açılıştan önceyse ertesi güne sarkar. Resmî tatil, öğle arası ya da randevu bilgisi ek nota yazılır.",
       "scenario": "Fiziksel bir mekân, randevu ya da telefon desteği varsa doldurun; sitede, haritada ve İşletme Profili'nde farklı saatler görünmesi güveni düşürür.",
-      "example": "“Pazartesi–Cuma 09:00–19:00, Cumartesi 10:00–16:00, Pazar kapalı” yazılır; iletişim sayfası, yapısal veri ve İşletme Profili aynı saatleri gösterir.",
+      "example": "Pazartesi–Cuma anahtarları açık ve 09:00–19:00, Cumartesi açık ve 10:00–16:00, Pazar kapalı; kural “Pazartesi–Cuma 09:00–19:00; Cumartesi 10:00–16:00; Pazar kapalı” olarak yazılır, yapısal veriye “Mo-Fr 09:00-19:00, Sa 10:00-16:00” biçimi gider.",
       "agents": [
        "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
       ]
@@ -241,14 +241,65 @@
      "new": {
       "label": "Vergi ve Sicil Bilgileri",
       "en": "Tax and Registry IDs",
-      "type": "textarea",
-      "placeholder": "Örn. Vergi dairesi: Kadıköy\nVergi no: 0000000000\nMERSİS no: 0000000000000000",
+      "type": "accounts",
+      "placeholder": "Örn. ETBİS kayıt no: …\nVergi levhası adresi: …",
       "rule": "Vergi ve sicil bilgileri: {value}. Bu bilgiler yalnız künye, mesafeli satış ve ön bilgilendirme metinleri, fatura ve yasal zorunluluk olan yerlerde kullanılır; kişisel T.C. kimlik numarası yazılmaz.",
-      "explanation": "Vergi dairesi, vergi numarası, MERSİS numarası ve gerekiyorsa ticaret sicil numarası. Her bilgiyi ayrı satıra “Ad: değer” biçiminde yazın.",
+      "explanation": "Vergi dairesi, vergi kimlik numarası, MERSİS numarası, ticaret sicil bilgileri, bağlı olunan oda ve KEP adresi ayrı kutulara girilir; yalnız işletmeniz için geçerli olanları doldurun. Biçimi beklenenden farklı olan değer uyarıyla işaretlenir ama yine kaydedilir.",
       "scenario": "E-ticaret, rezervasyon ya da ücretli hizmet satışı varsa mesafeli satış ve ön bilgilendirme metinleri için zorunludur; şahıs işletmesinde kişisel T.C. kimlik numarası yerine vergi numarası kullanılır.",
-      "example": "Üç satır yazılır: “Vergi dairesi: Kadıköy”, “Vergi no: 1234567890”, “MERSİS no: 0123456789000015”; mesafeli satış sözleşmesinin satıcı bilgileri bölümü bunlardan oluşur.",
+      "example": "Bir limited şirket vergi dairesini, 10 haneli vergi kimlik numarasını, 16 haneli MERSİS numarasını, ticaret sicil müdürlüğünü ve sicil numarasını ayrı kutulara yazar; mesafeli satış sözleşmesinin satıcı bilgileri ve sitenin künyesi bunlardan oluşur.",
       "agents": [
        "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani"
+      ],
+      "otherLabel": "Diğer kayıt bilgileri",
+      "accounts": [
+       {
+        "k": "vd",
+        "label": "Vergi dairesi",
+        "ph": "Örn. Kadıköy Vergi Dairesi",
+        "re": "^.{2,60}$"
+       },
+       {
+        "k": "vkn",
+        "label": "Vergi kimlik no (VKN)",
+        "ph": "Örn. 1234567890 (10 hane)",
+        "re": "^[0-9]{10}$"
+       },
+       {
+        "k": "mersis",
+        "label": "MERSİS no",
+        "ph": "Örn. 0123456789000015 (16 hane)",
+        "re": "^[0-9]{16}$"
+       },
+       {
+        "k": "sicil_office",
+        "label": "Ticaret sicil müdürlüğü",
+        "ph": "Örn. İstanbul Ticaret Sicil Müdürlüğü",
+        "re": "^.{2,80}$"
+       },
+       {
+        "k": "sicil",
+        "label": "Ticaret sicil no",
+        "ph": "Örn. 123456-5",
+        "re": "^[0-9A-Za-z/ .-]{1,20}$"
+       },
+       {
+        "k": "chamber",
+        "label": "Bağlı olduğu oda",
+        "ph": "Örn. İstanbul Ticaret Odası",
+        "re": "^.{2,80}$"
+       },
+       {
+        "k": "chamber_no",
+        "label": "Oda sicil no",
+        "ph": "Örn. 987654",
+        "re": "^[0-9A-Za-z/ .-]{1,20}$"
+       },
+       {
+        "k": "kep",
+        "label": "KEP adresi",
+        "ph": "Örn. firma@hs01.kep.tr",
+        "re": "^[^@\\s]+@[^@\\s]+\\.kep\\.tr$"
+       }
       ]
      }
     }
@@ -511,16 +562,31 @@
     {
      "id": "oc_geo",
      "new": {
-      "label": "Konum Koordinatı (enlem, boylam)",
+      "label": "Konum Koordinatı",
       "en": "Geo Coordinates",
-      "type": "text",
-      "placeholder": "Örn. 38.45512, 27.21234",
-      "explanation": "İşletmenin enlem ve boylamıdır. Haritadaki işaretin doğru binaya düşmesi ve yerel işletme yapısal verisi için kullanılır.",
-      "rule": "Konum koordinatı: {value}. LocalBusiness yapısal verisinin geo alanında (latitude, longitude) en az 5 ondalık basamakla verilir; iletişim sayfasındaki harita bu konumu gösterir.",
+      "type": "accounts",
+      "placeholder": "Örn. 38.45512",
+      "explanation": "İşletmenin enlemi ve boylamı ayrı kutulara, ondalık derece olarak ve ondalık ayırıcı nokta ile girilir (enlem −90 ile 90, boylam −180 ile 180 arası). Haritadaki işaretin doğru binaya düşmesi ve yerel işletme yapısal verisi için kullanılır.",
+      "rule": "Konum koordinatı: {value}. LocalBusiness yapısal verisinin geo alanında (latitude = enlem, longitude = boylam) en az 5 ondalık basamakla verilir; iletişim sayfasındaki harita bu konumu gösterir.",
       "scenario": "Fiziksel konumu olan ve haritada bulunmak isteyen işletmelerde; adresin harita servislerinde yanlış konuma düştüğü durumlarda özellikle önemlidir.",
-      "example": "Bir restoran haritadan kapısının üzerindeki koordinatı kopyalar; yapısal verideki konum ve sitedeki harita aynı noktayı gösterir.",
+      "example": "Bir restoran haritadan kapısının üzerindeki konumu bulur; enlem kutusuna 38.45512, boylam kutusuna 27.21234 yazar. Yapısal verideki konum ve sitedeki harita aynı noktayı gösterir.",
       "agents": [
        "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+      ],
+      "noOther": true,
+      "accounts": [
+       {
+        "k": "lat",
+        "label": "Enlem (latitude)",
+        "ph": "Örn. 38.45512",
+        "re": "^-?(90(\\.0+)?|[0-8]?[0-9](\\.[0-9]+)?)$"
+       },
+       {
+        "k": "lng",
+        "label": "Boylam (longitude)",
+        "ph": "Örn. 27.21234",
+        "re": "^-?(180(\\.0+)?|(1[0-7][0-9]|[0-9]{1,2})(\\.[0-9]+)?)$"
+       }
       ]
      }
     },
