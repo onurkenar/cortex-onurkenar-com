@@ -1,0 +1,817 @@
+{
+ "version": 1,
+ "fields_into": [],
+ "guide_add": {},
+ "section": {
+  "id": "cdn",
+  "after": "hosting",
+  "group": "Sunucu & Altyapı",
+  "icon": "◍",
+  "name": "CDN & Önbellek",
+  "en": "CDN & Edge Caching",
+  "desc": "Sitenin dosyalarının ve sayfalarının ziyaretçiye yakın sunuculardan (içerik dağıtım ağı) nasıl sunulacağını, önbellek ve temizleme kurallarını, CDN katmanındaki güvenliği, açık CDN kütüphanelerinin kullanımını ve CDN'in kişisel veri boyutunu belirler"
+ },
+ "guide": {
+  "purpose": "CDN (içerik dağıtım ağı), sitenin kopyalarını dünyanın farklı noktalarındaki sunucularda tutar ve ziyaretçiye en yakın noktadan sunar. Doğru kurulursa sayfa açılışı hızlanır, ani trafikte kaynak sunucu ayakta kalır ve saldırıların büyük kısmı kenarda durdurulur. Yanlış kurulursa eski içerik takılı kalır, bir kullanıcının kişisel sayfası başka birine gösterilebilir ya da kaynak sunucu CDN'i atlayarak doğrudan saldırıya açık kalır. Bu bölüm CDN'in kullanılıp kullanılmayacağını, neyin önbelleğe alınacağını, nasıl temizleneceğini ve nasıl korunacağını karara bağlar.",
+  "criteria": [
+   "Ziyaretçiler sunucudan uzaksa (yurt dışı trafik, birden çok şehir) ya da kampanya dönemlerinde trafik birden artıyorsa CDN neredeyse her zaman kazandırır.",
+   "Yayın platformunun dahili CDN'i (Cloudflare Pages / Workers, Vercel, Netlify) varsa ayrı bir CDN eklemek çoğu zaman gereksizdir; iki katmanlı önbellek temizleme ve hata ayıklamayı zorlaştırır.",
+   "Önbelleğe alınacak içerik türü ayrı ayrı seçilir: hash'li statik dosyalar uzun süre, HTML kısa süre önbelleğe alınır; oturum açmış kullanıcıya özel yanıt hiç alınmaz.",
+   "Temizleme (purge) yöntemi içerik yönetimiyle birlikte düşünülür: CMS'te yayınlanan bir düzeltme dakikalar içinde ziyaretçiye ulaşmalıdır.",
+   "CDN kullanılıyorsa kaynak sunucu yalnız CDN'den gelen isteğe açılır; aksi hâlde WAF ve DDoS koruması atlanabilir.",
+   "jQuery, ikon seti, font gibi dosyalar açık CDN'den (jsDelivr, cdnjs, Google Fonts) yüklenecekse ziyaretçinin IP adresi üçüncü tarafa gider; KVKK aydınlatması ve SRI gerekir."
+  ],
+  "pitfalls": [
+   "Set-Cookie taşıyan ya da oturuma bağlı yanıtı önbelleğe almak: bir kullanıcının sepeti veya profil sayfası başka ziyaretçilere sunulabilir (web cache deception).",
+   "Hash'siz dosya adlarına (style.css, app.js) uzun önbellek süresi vermek: yayından sonra ziyaretçiler günlerce eski dosyayı görür.",
+   "utm_*, fbclid gibi izleme parametrelerini önbellek anahtarında bırakmak: aynı sayfa yüzlerce kez ayrı önbelleğe alınır, isabet oranı düşer.",
+   "Önbellek anahtarına girmeyen başlıklara (X-Forwarded-Host gibi) göre sayfa içeriğini değiştirmek: önbellek zehirlenmesine (cache poisoning) yol açar.",
+   "Kaynak sunucunun IP adresini açık bırakmak ya da eski DNS kayıtlarında unutmak: saldırgan CDN'i atlayıp doğrudan sunucuya gider.",
+   "CDN kesintisini hiç düşünmemek: tek bir sağlayıcıya bağlı sitede kenar arızası bütün siteyi kapatır; geri dönüş planı ve izleme olmalıdır."
+  ],
+  "resources": [
+   {
+    "title": "MDN — Cache-Control",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+    "note": "max-age, s-maxage, immutable, no-store, private ve stale-* yönergelerinin başvuru kaynağı."
+   },
+   {
+    "title": "RFC 9111 — HTTP Caching",
+    "url": "https://www.rfc-editor.org/info/rfc9111/",
+    "note": "Paylaşılan (CDN) ve özel önbelleklerin davranışını tanımlayan IETF standardı."
+   },
+   {
+    "title": "RFC 5861 — stale-while-revalidate ve stale-if-error",
+    "url": "https://www.rfc-editor.org/info/rfc5861/",
+    "note": "Bayat içeriği arka planda yenileme ve kaynak hatasında bayat içerik sunma uzantıları."
+   },
+   {
+    "title": "web.dev — HTTP önbelleğiyle gereksiz ağ isteklerini önleme",
+    "url": "https://web.dev/articles/http-cache",
+    "note": "Hash'li dosya adı + uzun önbellek, HTML için yeniden doğrulama stratejisi."
+   },
+   {
+    "title": "web.dev — stale-while-revalidate",
+    "url": "https://web.dev/articles/stale-while-revalidate",
+    "note": "Kısa süreli HTML önbelleğinde hız ile güncelliği dengeleme."
+   },
+   {
+    "title": "MDN — Subresource Integrity (SRI)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity",
+    "note": "Açık CDN'den yüklenen betik ve stillerin değiştirilmediğini integrity özniteliğiyle doğrulama."
+   },
+   {
+    "title": "PortSwigger — Web cache poisoning",
+    "url": "https://portswigger.net/web-security/web-cache-poisoning",
+    "note": "Önbellek anahtarına girmeyen girdilerle önbelleğin zehirlenmesi ve önlemleri."
+   },
+   {
+    "title": "PortSwigger — Web cache deception",
+    "url": "https://portswigger.net/web-security/web-cache-deception",
+    "note": "Kişisel yanıtların statik dosya gibi önbelleğe alınması ve önlemleri."
+   },
+   {
+    "title": "Cloudflare — Varsayılan önbellek davranışı",
+    "url": "https://developers.cloudflare.com/cache/concepts/default-cache-behavior/",
+    "note": "Hangi dosya türlerinin varsayılan olarak önbelleğe alındığı, HTML'in neden alınmadığı."
+   }
+  ]
+ },
+ "fields": [
+  {
+   "id": "cdn_use",
+   "type": "select",
+   "label": "CDN Kullanımı",
+   "en": "CDN Usage",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "explanation": "Sitenin bir içerik dağıtım ağı (CDN) üzerinden sunulup sunulmayacağını ve hangi yapıda sunulacağını belirler. Bu bölümdeki diğer CDN kararları buradaki seçime göre açılır.",
+   "scenario": "Ziyaretçiler farklı şehir ya da ülkelerden geliyorsa, sitede çok görsel varsa ya da kampanya dönemlerinde trafik birden artıyorsa CDN kullanılır.",
+   "example": "Bir turizm acentesinin sitesi Almanya'dan açıldığında görseller İstanbul'daki sunucudan değil Frankfurt'taki CDN noktasından gelir; sayfa belirgin biçimde hızlı açılır.",
+   "rule": "CDN kullanımı: {label}.",
+   "recommend": {
+    "field": "deploy_platform",
+    "map": {
+     "Cloudflare": [
+      "platform"
+     ],
+     "Vercel": [
+      "platform"
+     ],
+     "AWS": [
+      "cloud"
+     ],
+     "Azure": [
+      "cloud"
+     ],
+     "Google Cloud": [
+      "cloud"
+     ],
+     "DigitalOcean": [
+      "proxy"
+     ],
+     "Hostinger": [
+      "proxy"
+     ],
+     "VPS": [
+      "proxy"
+     ],
+     "Other": [
+      "proxy"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "none",
+     "label": "CDN kullanılmayacak",
+     "explanation": "Site doğrudan kaynak sunucudan sunulur. Ziyaretçiler sunucuya yakın ve trafik düşükse yeterlidir; ani yoğunlukta ve uzak ziyaretçide yavaşlık riski vardır.",
+     "scenario": "Yalnız bir ilçede hizmet veren, aylık birkaç bin ziyaret alan bir veteriner kliniğinin tanıtım sitesi.",
+     "example": "Bütün dosyalar sitenin barındırıldığı sunucudan gelir; sunucu bakımdayken site tamamen kapanır.",
+     "ruleDetail": "CDN kullanılmayacak; statik dosyalar yine de uzun önbellek süresi ve hash'li dosya adlarıyla sunulur, sıkıştırma (Brotli / gzip) kaynak sunucuda açılır."
+    },
+    {
+     "value": "platform",
+     "label": "Yayın platformunun dahili CDN'i (önerilen)",
+     "explanation": "Cloudflare Pages / Workers, Vercel ya da Netlify gibi platformlar siteyi kendi küresel ağlarından sunar; ayrı bir CDN kurmaya gerek kalmaz, yayın ve önbellek temizleme birlikte yönetilir.",
+     "scenario": "Next.js, Astro ya da statik site üreticisiyle geliştirilip Vercel, Netlify veya Cloudflare'da yayınlanan kurumsal site ve bloglar.",
+     "example": "Her yayında platform yeni sürümü bütün kenar noktalarına dağıtır; eski sürümün önbelleği kendiliğinden geçersiz olur.",
+     "ruleDetail": "Site yayın platformunun dahili CDN'inden sunulacak; platformun önüne ikinci bir CDN eklenmeyecek, önbellek kuralları platformun yapılandırma dosyasında (ör. _headers, vercel.json, wrangler.jsonc) sürüm kontrolünde tutulacaktır."
+    },
+    {
+     "value": "proxy",
+     "label": "Ayrı CDN / ters vekil sunucunun önünde",
+     "explanation": "Kaynak sunucu (VPS, paylaşımlı barındırma, kendi sunucusu) olduğu gibi kalır; alan adı Cloudflare, Fastly, Akamai ya da Bunny gibi bir CDN'e yönlendirilir ve bütün trafik CDN üzerinden geçer.",
+     "scenario": "WordPress, Laravel ya da .NET ile kendi sunucusunda çalışan ve hız ile saldırı koruması istenen kurumsal site veya e-ticaret.",
+     "example": "Alan adının DNS kaydı CDN'e verilir; ziyaretçi CDN'e bağlanır, CDN gerekli olduğunda kaynak sunucudan içerik çeker.",
+     "ruleDetail": "Bütün trafik CDN üzerinden geçecek; kaynak sunucu yalnız CDN'den gelen isteklere açılacak, CDN ile kaynak sunucu arasında da TLS kullanılacaktır."
+    },
+    {
+     "value": "cloud",
+     "label": "Bulut sağlayıcısının CDN'i",
+     "explanation": "AWS CloudFront, Azure Front Door ya da Google Cloud CDN gibi, uygulamanın çalıştığı bulutun kendi CDN hizmetidir; yük dengeleyici, nesne depolama ve sertifika yönetimiyle aynı yerde kurulur.",
+     "scenario": "AWS, Azure ya da Google Cloud üzerinde çalışan, altyapısı kodla (Terraform vb.) yönetilen orta ve büyük ölçekli uygulamalar.",
+     "example": "Görseller S3'ten CloudFront ile sunulur; uygulama sunucusu yük dengeleyicinin arkasında CDN'in kaynağı olur.",
+     "ruleDetail": "CDN bulut sağlayıcısının hizmetiyle kurulacak ve altyapı koduyla (IaC) yönetilecek; nesne depolama yalnız CDN üzerinden erişilebilir olacak (ör. Origin Access Control)."
+    },
+    {
+     "value": "assets",
+     "label": "Yalnız statik dosyalar ve görseller için ayrı CDN",
+     "explanation": "HTML sayfalar kaynak sunucudan, görsel, video, JS / CSS ve indirme dosyaları ayrı bir CDN alan adından (ör. cdn.alanadi.com) sunulur.",
+     "scenario": "Sayfaları kişiye özel ve dinamik olan, ancak çok sayıda ürün görseli ya da indirme dosyası barındıran portal ve e-ticaret siteleri.",
+     "example": "Ürün sayfasının HTML'i kaynak sunucudan gelir; ürün fotoğrafları cdn.alanadi.com adresinden, ziyaretçiye yakın noktadan yüklenir.",
+     "ruleDetail": "Statik dosyalar ve görseller ayrı CDN alan adından sunulacak; bu alan adında çerez kullanılmayacak, CORS ve Content-Security-Policy bu alan adına göre ayarlanacak, preconnect eklenecektir."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_provider",
+   "type": "select",
+   "label": "CDN Sağlayıcı",
+   "en": "CDN Provider",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN hizmetini verecek sağlayıcıyı belirler. Sağlayıcı seçimi WAF, görsel optimizasyonu, kenar fonksiyonları, fiyatlandırma ve verinin hangi bölgelerde işlendiği gibi konuları da belirler.",
+   "scenario": "Yayın platformu, DNS sağlayıcı ve bulut altyapısı zaten belliyse çoğu zaman aynı sağlayıcının CDN'i seçilir; özel bir ihtiyaç (video, çok büyük trafik, bölgesel veri sınırı) varsa ayrıca değerlendirilir.",
+   "example": "DNS'i Cloudflare'da olan bir site için CDN de Cloudflare seçilir; alan adının proxy (turuncu bulut) ayarı açılınca site CDN üzerinden sunulmaya başlar.",
+   "rule": "CDN sağlayıcı: {label}.",
+   "recommend": [
+    {
+     "field": "deploy_platform",
+     "map": {
+      "Cloudflare": [
+       "Cloudflare"
+      ],
+      "Vercel": [
+       "Vercel"
+      ],
+      "AWS": [
+       "CloudFront"
+      ],
+      "Azure": [
+       "Front Door"
+      ],
+      "Google Cloud": [
+       "Google Cloud CDN"
+      ]
+     }
+    },
+    {
+     "field": "dns_provider",
+     "map": {
+      "Cloudflare": [
+       "Cloudflare"
+      ],
+      "Route 53": [
+       "CloudFront"
+      ],
+      "Azure DNS": [
+       "Front Door"
+      ],
+      "Google Cloud DNS": [
+       "Google Cloud CDN"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "Cloudflare",
+     "label": "Cloudflare",
+     "explanation": "Geniş küresel ağ, ücretsiz pakette bile CDN, DDoS koruması ve TLS; WAF, bot yönetimi, görsel dönüştürme ve Workers ile kenarda kod çalıştırma sunar.",
+     "scenario": "DNS'i Cloudflare'da olan ya da Cloudflare Pages / Workers ile yayınlanan siteler; düşük bütçeyle hız ve koruma isteyen KOBİ siteleri.",
+     "example": "Alan adı Cloudflare'a taşınır, proxy açılır; önbellek kuralları panelden ya da kodla tanımlanır."
+    },
+    {
+     "value": "Fastly",
+     "label": "Fastly",
+     "explanation": "Programlanabilir kenar (VCL / Compute), çok hızlı ve etiket bazlı önbellek temizleme sunan, yüksek trafikli yayıncıların tercih ettiği CDN.",
+     "scenario": "Saniyeler içinde güncellenmesi gereken haber siteleri ve yüksek trafikli içerik platformları.",
+     "example": "Bir haber yayımlandığında yalnız o habere ve ilgili liste sayfalarına ait önbellek etiketle anında temizlenir."
+    },
+    {
+     "value": "Akamai",
+     "label": "Akamai",
+     "explanation": "En geniş kurumsal CDN ağlarından biridir; büyük ölçekli medya, finans ve kamu projelerinde gelişmiş güvenlik ve bölgesel kapsamla kullanılır.",
+     "scenario": "Çok yüksek trafikli banka, telekom ya da medya kuruluşlarının kurumsal sözleşmeyle aldığı CDN.",
+     "example": "Kampanya gününde milyonlarca isteği kaynak sunucuya yük bindirmeden kenardan karşılar."
+    },
+    {
+     "value": "CloudFront",
+     "label": "Amazon CloudFront",
+     "explanation": "AWS'nin CDN hizmetidir; S3, yük dengeleyici ve Lambda@Edge / CloudFront Functions ile bütünleşik çalışır.",
+     "scenario": "Uygulaması ve dosyaları AWS'de duran projeler.",
+     "example": "S3'teki görseller yalnız CloudFront üzerinden erişilebilir; doğrudan S3 adresi kapalıdır."
+    },
+    {
+     "value": "Front Door",
+     "label": "Azure Front Door",
+     "explanation": "Microsoft Azure'un küresel CDN ve uygulama hızlandırma hizmetidir; WAF ve yük dengelemeyi birlikte sunar.",
+     "scenario": "Azure üzerinde çalışan .NET uygulamaları ve Microsoft altyapısını kullanan kurumlar.",
+     "example": "Front Door, Batı Avrupa ve Kuzey Avrupa'daki iki uygulama kopyası arasında trafiği yönlendirir ve statik içeriği önbelleğe alır."
+    },
+    {
+     "value": "Google Cloud CDN",
+     "label": "Google Cloud CDN",
+     "explanation": "Google Cloud yük dengeleyicisiyle çalışan CDN hizmetidir.",
+     "scenario": "Google Cloud (Cloud Run, GKE, Cloud Storage) üzerinde çalışan projeler.",
+     "example": "Cloud Storage'daki görseller yük dengeleyici arkasında Cloud CDN ile önbelleğe alınır."
+    },
+    {
+     "value": "Bunny",
+     "label": "Bunny CDN",
+     "explanation": "Kullandıkça öde fiyatlı, kurulumu kolay, Avrupa merkezli bir CDN; görsel optimizasyonu ve video akışı hizmetleri vardır.",
+     "scenario": "Bütçesi sınırlı, görsel ve video ağırlıklı siteler; Avrupa'da veri işlenmesini tercih eden projeler.",
+     "example": "Ürün görselleri Bunny Optimizer ile cihaza göre boyutlandırılıp WebP olarak sunulur."
+    },
+    {
+     "value": "Vercel",
+     "label": "Vercel Edge Network",
+     "explanation": "Vercel'de yayınlanan projelerin dahili CDN'idir; ISR ve önbellek kuralları çerçeveyle (Next.js) birlikte yönetilir.",
+     "scenario": "Next.js ile geliştirilip Vercel'de yayınlanan siteler.",
+     "example": "Blog yazısı güncellenince yalnız o sayfa yeniden üretilir ve önbelleği yenilenir (ISR)."
+    },
+    {
+     "value": "Netlify",
+     "label": "Netlify",
+     "explanation": "Netlify'da yayınlanan sitelerin dahili CDN'idir; atomik yayın ve anında geri alma sunar.",
+     "scenario": "Statik site üreticisiyle (Astro, Hugo, Eleventy) hazırlanıp Netlify'da yayınlanan siteler.",
+     "example": "Hatalı bir yayın tek tıkla önceki sürüme döndürülür ve bütün kenar noktaları hemen eski sürümü sunar."
+    },
+    {
+     "value": "Other",
+     "label": "Diğer",
+     "explanation": "Listede olmayan bir CDN sağlayıcısı (ör. KeyCDN, Gcore, yerel bir sağlayıcı) kullanılacaktır.",
+     "scenario": "Kurumun mevcut sözleşmesi ya da bölgesel veri gereksinimi nedeniyle başka bir sağlayıcı seçilmişse.",
+     "example": "Kamu projesinde veri yerelleştirmesi nedeniyle Türkiye'de uç noktası olan yerel bir CDN kullanılır."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_scope",
+   "type": "multiselect",
+   "label": "CDN Üzerinden Sunulacak İçerik",
+   "en": "CDN Scope",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi",
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN'in hangi içerik türlerini kenarda önbelleğe alıp sunacağını belirler. Her tür için önbellek süresi ve kuralları farklıdır; kişiye özel içerik hiçbir zaman bu listeye girmez.",
+   "scenario": "Statik dosyalar ve görseller neredeyse her projede seçilir; HTML sayfa önbelleği içerik çoğunlukla herkese aynıysa (kurumsal site, blog, katalog) seçilir.",
+   "example": "Bir blogda JS / CSS ve görseller bir yıl, makale sayfalarının HTML'i beş dakika kenarda tutulur; yazar paneli ve yorum gönderme hiç önbelleğe alınmaz.",
+   "rule": "CDN üzerinden sunulacak içerik: {labels}.",
+   "recommend": {
+    "field": "rendering_strategy",
+    "map": {
+     "SSG": [
+      "static",
+      "images",
+      "html"
+     ],
+     "Hybrid Rendering": [
+      "static",
+      "images",
+      "html"
+     ],
+     "SSR": [
+      "static",
+      "images"
+     ],
+     "SPA": [
+      "static",
+      "images",
+      "html"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "static",
+     "label": "Statik dosyalar (JS, CSS, font)",
+     "explanation": "Derleme sırasında üretilen ve adında içerik özeti (hash) bulunan dosyalardır; içerik değişince adı da değiştiği için çok uzun süre önbellekte kalabilir.",
+     "scenario": "Derleme aracı (Vite, webpack, Next.js) kullanan bütün projeler.",
+     "example": "app.3f9a1c.js dosyası bir yıl boyunca kenarda ve tarayıcıda kalır; yeni sürümde app.7b20e4.js adıyla gelir.",
+     "ruleDetail": "Hash'li statik dosyalar \"Cache-Control: public, max-age=31536000, immutable\" ile sunulur; hash'siz dosyalara uzun önbellek verilmez."
+    },
+    {
+     "value": "images",
+     "label": "Görseller",
+     "explanation": "Ürün, içerik ve arayüz görselleri kenarda önbelleğe alınır.",
+     "scenario": "Görsel ağırlıklı her site: e-ticaret, emlak, turizm, portfolyo.",
+     "example": "Bir ürünün fotoğrafı ilk istekten sonra o bölgedeki bütün ziyaretçilere kenardan sunulur.",
+     "ruleDetail": "Görseller uzun süre önbelleğe alınır; görsel değiştiğinde dosya adı ya da sürüm parametresi değişir."
+    },
+    {
+     "value": "image_opt",
+     "label": "Görsel dönüştürme ve optimizasyon",
+     "explanation": "CDN görseli istek anında yeniden boyutlandırır, sıkıştırır ve tarayıcının desteklediği biçime (AVIF / WebP) çevirir.",
+     "scenario": "Kullanıcının ya da editörün büyük boyutlu görsel yüklediği CMS, ilan ve e-ticaret siteleri.",
+     "example": "Editör 4000 piksellik fotoğraf yükler; telefondaki ziyaretçiye 800 piksellik WebP sürümü gider.",
+     "ruleDetail": "Görseller CDN'in görsel dönüştürme hizmetiyle cihaz genişliğine göre boyutlandırılıp AVIF / WebP olarak sunulur; srcset ve sizes bu adreslerle üretilir, özgün dosya korunur."
+    },
+    {
+     "value": "html",
+     "label": "HTML sayfaların kenar önbelleği",
+     "explanation": "Herkese aynı görünen sayfaların HTML'i de kenarda kısa süreli tutulur; kaynak sunucuya giden istek büyük ölçüde azalır.",
+     "scenario": "Kurumsal site, blog, haber, katalog ve kampanya sayfaları gibi oturumsuz, herkese aynı içerik.",
+     "example": "Anasayfa beş dakika kenarda kalır; kampanya duyurusu sosyal medyada yayılsa da kaynak sunucu zorlanmaz.",
+     "ruleDetail": "Herkese açık HTML sayfaları kısa süre (s-maxage) ve stale-while-revalidate ile kenarda önbelleğe alınır; çerez, oturum ya da kişiselleştirme içeren yanıtlar önbelleğe alınmaz."
+    },
+    {
+     "value": "api",
+     "label": "Herkese açık API yanıtları (GET)",
+     "explanation": "Kimlik doğrulama gerektirmeyen ve herkese aynı dönen API yanıtları (ör. ürün listesi, kategori ağacı) kısa süre kenarda tutulur.",
+     "scenario": "Ön yüzü ayrı (SPA, mobil uygulama) olan ve aynı katalog verisini sık isteyen projeler.",
+     "example": "Kategori listesi API'si bir dakika kenarda kalır; binlerce eşzamanlı istek veritabanına ulaşmaz.",
+     "ruleDetail": "Yalnız kimlik doğrulamasız GET yanıtları, açık Cache-Control ile ve Authorization başlığı taşıyan isteklerde önbellek atlanarak kenarda önbelleğe alınır."
+    },
+    {
+     "value": "media",
+     "label": "Video ve ses akışı",
+     "explanation": "Video ve podcast dosyaları parçalı akış (HLS / DASH) olarak CDN üzerinden sunulur.",
+     "scenario": "Eğitim platformları, kendi videosunu barındıran kurumsal siteler ve podcast yayıncıları.",
+     "example": "Ders videosu izleyicinin bağlantı hızına göre kalite değiştirerek kenardan akar.",
+     "ruleDetail": "Video ve ses HLS / DASH parçaları olarak CDN üzerinden sunulur; ücretli içerikte imzalı adres ya da belirteç kullanılır."
+    },
+    {
+     "value": "downloads",
+     "label": "Büyük indirme dosyaları",
+     "explanation": "Katalog PDF'leri, yazılım kurulum dosyaları ve basın kitleri CDN üzerinden indirilir.",
+     "scenario": "Ürün kataloğu, teknik doküman ya da yazılım dağıtan kurumlar.",
+     "example": "80 MB'lık katalog PDF'i kaynak sunucuya yük bindirmeden kenardan indirilir.",
+     "ruleDetail": "Büyük dosyalar CDN üzerinden, Range isteklerini destekleyecek biçimde sunulur; kişiye özel belgeler bu kapsama girmez."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_cache_rules",
+   "type": "multiselect",
+   "label": "Önbellek Kuralları",
+   "en": "Caching Rules",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi",
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN ve tarayıcı önbelleğinin hangi kurallarla çalışacağını belirler: süreler, kişisel yanıtların dışlanması, önbellek anahtarı, sıkıştırma ve kaynak hatasında davranış.",
+   "scenario": "CDN kullanan her projede; özellikle üyelik, sepet ya da panel gibi kişiye özel sayfaları olan sitelerde \"kişisel yanıt önbelleğe alınmaz\" kuralı zorunludur.",
+   "example": "Hesabım sayfası \"private, no-store\" ile döner ve hiçbir kullanıcının sayfası başka bir ziyaretçiye gösterilmez; blog yazısı ise beş dakika kenarda kalır.",
+   "rule": "CDN önbellek kuralları: {labels}.",
+   "options": [
+    {
+     "value": "immutable",
+     "label": "Hash'li dosyalarda uzun ve değişmez önbellek",
+     "explanation": "Adında içerik özeti olan dosyalar bir yıl ve \"immutable\" ile önbelleğe alınır; tarayıcı bunları yeniden doğrulamaz.",
+     "scenario": "Derleme aracı kullanan bütün projeler.",
+     "example": "Tekrar ziyarette JS ve CSS dosyaları hiç istek atılmadan tarayıcıdan yüklenir.",
+     "ruleDetail": "Hash'li dosyalar \"public, max-age=31536000, immutable\" ile sunulur."
+    },
+    {
+     "value": "html_swr",
+     "label": "HTML için kısa süre + stale-while-revalidate",
+     "explanation": "HTML kenarda kısa süre tutulur; süre dolduğunda ziyaretçiye bayat sürüm hemen verilir, yenisi arka planda çekilir.",
+     "scenario": "İçeriği gün içinde birkaç kez değişen kurumsal site, blog ve kataloglar.",
+     "example": "Ziyaretçi her zaman hızlı yanıt alır; düzeltme en geç birkaç dakikada yayılır.",
+     "ruleDetail": "HTML \"s-maxage\" kısa (ör. 300 sn) ve \"stale-while-revalidate\" ile sunulur; tarayıcıda \"max-age=0, must-revalidate\" kullanılır."
+    },
+    {
+     "value": "no_private",
+     "label": "Kişisel yanıtlar önbelleğe alınmaz",
+     "explanation": "Oturum açmış kullanıcıya özel, çerez ayarlayan ya da kişisel veri içeren yanıtlar hiçbir katmanda önbelleğe alınmaz.",
+     "scenario": "Üyelik, sepet, panel, ödeme ya da form içeren her proje.",
+     "example": "Sepet ve profil sayfaları her istekte kaynak sunucudan gelir.",
+     "ruleDetail": "Oturumlu, Set-Cookie içeren ya da kişisel veri dönen yanıtlar \"Cache-Control: private, no-store\" ile döner; CDN'de bu yollar ve Authorization / oturum çerezi taşıyan istekler önbellek dışı tutulur."
+    },
+    {
+     "value": "cache_key",
+     "label": "Önbellek anahtarı sadeleştirilir",
+     "explanation": "utm_*, gclid, fbclid gibi izleme parametreleri önbellek anahtarından çıkarılır; parametre sırası normalize edilir.",
+     "scenario": "Reklam ve e-posta kampanyalarından trafik alan siteler.",
+     "example": "Aynı sayfanın yüz farklı utm'li adresi tek önbellek kaydını kullanır.",
+     "ruleDetail": "İzleme parametreleri (utm_*, gclid, fbclid, msclkid) önbellek anahtarına girmez, analitiğe ise iletilmeye devam eder."
+    },
+    {
+     "value": "vary",
+     "label": "Vary başlığı yalnız gerektiği kadar",
+     "explanation": "Yanıt yalnız gerçekten değişen başlıklara göre ayrılır (çoğunlukla Accept-Encoding); User-Agent ya da Cookie'ye göre ayırmak önbelleği işe yaramaz hâle getirir.",
+     "scenario": "Dil ya da cihaz bazlı içerik sunan siteler.",
+     "example": "Dil seçimi başlık yerine adresle (/en/) yapılır; önbellek dil başına tek kayıt tutar.",
+     "ruleDetail": "Vary yalnız gerekli başlıkları içerir; dil ve cihaz farkı adres yapısıyla çözülür, Vary: Cookie / User-Agent kullanılmaz."
+    },
+    {
+     "value": "compression",
+     "label": "Brotli / gzip sıkıştırma ve HTTP/3",
+     "explanation": "Metin dosyaları kenarda Brotli (desteklemeyen tarayıcıda gzip) ile sıkıştırılır; HTTP/2 ve HTTP/3 açılır.",
+     "scenario": "Bütün projeler.",
+     "example": "Ana sayfanın HTML'i 120 KB yerine yaklaşık 25 KB olarak iner.",
+     "ruleDetail": "HTML, CSS, JS, JSON ve SVG kenarda Brotli / gzip ile sıkıştırılır; HTTP/2 ve HTTP/3 etkin olur."
+    },
+    {
+     "value": "stale_error",
+     "label": "Kaynak hatasında bayat içerik (stale-if-error)",
+     "explanation": "Kaynak sunucu çökerse ya da hata dönerse CDN önbellekteki son sağlam sürümü sunmaya devam eder.",
+     "scenario": "Kesintinin itibar ya da gelir kaybı yarattığı kurumsal ve e-ticaret siteleri.",
+     "example": "Sunucu bakımda iken ziyaretçiler hata sayfası yerine son yayınlanan içeriği görür.",
+     "ruleDetail": "Herkese açık sayfalarda \"stale-if-error\" ile kaynak hatasında bayat içerik sunulur; kişisel sayfalarda kullanılmaz."
+    },
+    {
+     "value": "shield",
+     "label": "Kaynak kalkanı (origin shield) / katmanlı önbellek",
+     "explanation": "Kenar noktaları kaynak sunucuya doğrudan değil, tek bir ara önbellek katmanı üzerinden gider; kaynağa giden istek azalır.",
+     "scenario": "Kaynak sunucusu zayıf ya da pahalı olan, küresel trafik alan projeler.",
+     "example": "Yeni bir görsel 200 kenar noktasında istense de kaynak sunucuya yalnız bir istek gider.",
+     "ruleDetail": "Kaynak kalkanı (origin shield / tiered cache) açılır; kalkan bölgesi kaynak sunucuya en yakın bölge seçilir."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_purge",
+   "type": "select",
+   "label": "Önbellek Temizleme (Purge)",
+   "en": "Cache Purge",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "Yayından ya da içerik değişikliğinden sonra CDN'deki eski kopyaların nasıl temizleneceğini belirler. Yanlış seçim ya eski içeriğin takılı kalmasına ya da her değişiklikte bütün önbelleğin boşalıp sunucunun zorlanmasına yol açar.",
+   "scenario": "CMS ile sık içerik güncellenen sitelerde hedefli temizleme, ayda birkaç kez yayın yapılan statik sitelerde yayında tam temizleme yeterlidir.",
+   "example": "Editör bir ürünün fiyatını düzelttiğinde yalnız o ürün sayfası ve ürünün göründüğü kategori sayfaları temizlenir; site genelinde önbellek korunur.",
+   "rule": "CDN önbellek temizleme yöntemi: {label}.",
+   "options": [
+    {
+     "value": "deploy_all",
+     "label": "Her yayında tamamı otomatik",
+     "explanation": "Her yayında (deploy) CDN önbelleğinin tamamı otomatik temizlenir. Basittir; büyük sitelerde yayın sonrası kaynak sunucuya ani yük biner.",
+     "scenario": "Ayda birkaç kez yayınlanan, içeriği koddan gelen küçük ve orta ölçekli statik siteler.",
+     "example": "CI/CD hattının son adımı CDN API'siyle \"purge everything\" çağırır.",
+     "ruleDetail": "CI/CD hattının son adımında CDN önbelleği API ile tamamen temizlenir; anahtar CI gizli değişkeninde tutulur."
+    },
+    {
+     "value": "targeted",
+     "label": "Yayında ve içerik değişince yol / etiket bazlı hedefli (önerilen)",
+     "explanation": "Yayında değişen dosyalar, CMS'te içerik güncellenince yalnız etkilenen sayfalar (adres ya da önbellek etiketi ile) temizlenir.",
+     "scenario": "CMS ile sık güncellenen kurumsal site, blog, haber ve e-ticaret.",
+     "example": "Bir blog yazısı güncellenince o yazının adresi ve \"blog-listesi\" etiketi temizlenir.",
+     "ruleDetail": "Önbellek temizleme hedefli yapılır: CMS yayın / güncelleme / silme olaylarında etkilenen adresler ya da önbellek etiketleri (Cache-Tag / Surrogate-Key) API ile temizlenir; hash'li dosyalar temizlenmez."
+    },
+    {
+     "value": "ttl",
+     "label": "Yalnız süre dolunca (TTL)",
+     "explanation": "Önbellek elle ya da otomatik temizlenmez; içerik süre dolunca yenilenir. Kısa süreli HTML önbelleğiyle birlikte kullanılabilir.",
+     "scenario": "Değişikliğin birkaç dakika gecikmesinin sorun olmadığı, sade içerik siteleri.",
+     "example": "Ana sayfa beş dakikalık süre dolunca kendiliğinden yenilenir.",
+     "ruleDetail": "Önbellek temizlenmez, süre dolunca yenilenir; bu yüzden HTML önbellek süresi kısa tutulur ve acil durumlar için elle temizleme yetkisi tanımlanır."
+    },
+    {
+     "value": "manual",
+     "label": "Elle",
+     "explanation": "Temizleme, gerektiğinde CDN panelinden elle yapılır. Unutulma riski yüksektir.",
+     "scenario": "Teknik ekibi olmayan, çok nadir güncellenen tanıtım siteleri.",
+     "example": "Logo değiştiğinde yönetici panelden \"önbelleği temizle\" düğmesine basar.",
+     "ruleDetail": "Önbellek elle temizlenir; hangi değişiklikten sonra kimin temizleyeceği yayın kontrol listesine yazılır."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_security",
+   "type": "multiselect",
+   "label": "CDN Katmanında Güvenlik",
+   "en": "CDN Security",
+   "agents": [
+    "poz:siber-guvenlik:16.03/ag-bulut-ve-uc-nokta-guvenligi/bulut-guvenligi-uzmani",
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN katmanında alınacak güvenlik önlemlerini belirler: saldırıların kenarda durdurulması, kaynak sunucunun gizlenmesi, şifreleme ve önbellek kaynaklı açıkların önlenmesi.",
+   "scenario": "CDN üzerinden sunulan her sitede; özellikle form, üyelik, ödeme ya da yönetim paneli olan projelerde kaynak sunucunun kilitlenmesi ve önbellek açıklarına karşı önlemler zorunludur.",
+   "example": "Kaynak sunucunun güvenlik duvarı yalnız CDN'in IP aralıklarına açıktır; sunucunun IP adresini bulan saldırgan doğrudan bağlanamaz.",
+   "rule": "CDN katmanında uygulanacak güvenlik önlemleri: {labels}.",
+   "options": [
+    {
+     "value": "waf",
+     "label": "WAF ve bot yönetimi",
+     "explanation": "Web uygulama güvenlik duvarı bilinen saldırı kalıplarını (SQL enjeksiyonu, XSS) ve kötü botları kenarda durdurur.",
+     "scenario": "Form, üyelik, arama ya da panel içeren siteler.",
+     "example": "Giriş formuna yapılan otomatik deneme saldırısı CDN'de engellenir.",
+     "ruleDetail": "CDN'de WAF yönetilen kural setleriyle açılır, önce izleme modunda denenip sonra engelleme moduna alınır; kötü botlar için bot yönetimi kuralları tanımlanır."
+    },
+    {
+     "value": "ddos",
+     "label": "DDoS koruması",
+     "explanation": "Ağ ve uygulama katmanı yoğunluk saldırıları kenarda emilir.",
+     "scenario": "Bütün herkese açık siteler; özellikle kampanya ve seçim dönemi gibi hedef olabilecek siteler.",
+     "example": "Saniyede yüz binlerce sahte istek kaynak sunucuya ulaşmaz.",
+     "ruleDetail": "CDN'in DDoS koruması etkin tutulur ve saldırı durumunda uyarı alınır."
+    },
+    {
+     "value": "rate_limit",
+     "label": "İstek sınırlama (rate limiting)",
+     "explanation": "Giriş, şifre sıfırlama, form ve API uçlarında IP ya da oturum başına istek sayısı sınırlanır.",
+     "scenario": "Giriş, iletişim formu, arama ve API uçları olan projeler.",
+     "example": "Aynı IP'den dakikada 10'dan fazla giriş denemesi geçici olarak engellenir.",
+     "ruleDetail": "Giriş, şifre sıfırlama, form gönderme ve API uçlarında kenarda istek sınırı uygulanır; sınır uygulama tarafındaki sınırlamanın yerine değil, ona ek olarak kullanılır."
+    },
+    {
+     "value": "origin_lock",
+     "label": "Kaynak sunucu yalnız CDN'den erişilebilir",
+     "explanation": "Kaynak sunucu doğrudan internete kapatılır; yalnız CDN'in IP aralıkları, kimlik doğrulamalı kaynak çekme (mTLS) ya da tünel üzerinden erişilir.",
+     "scenario": "CDN'in ters vekil olarak kullanıldığı bütün projeler.",
+     "example": "Sunucunun gerçek IP adresi bilinse bile doğrudan bağlantı reddedilir.",
+     "ruleDetail": "Kaynak sunucu yalnız CDN'den gelen isteğe açılır (CDN IP izin listesi, authenticated origin pulls / mTLS ya da tünel); eski DNS kayıtları ve alt alan adları kaynak IP'yi sızdırmayacak biçimde temizlenir."
+    },
+    {
+     "value": "tls",
+     "label": "Uçtan uca TLS ve HSTS",
+     "explanation": "Ziyaretçi ile CDN arasında ve CDN ile kaynak sunucu arasında geçerli sertifikayla şifreleme yapılır; HSTS açılır, eski TLS sürümleri kapatılır.",
+     "scenario": "Bütün projeler.",
+     "example": "CDN kaynak sunucuya da HTTPS ile ve sertifikayı doğrulayarak bağlanır.",
+     "ruleDetail": "TLS 1.2 ve üstü zorunlu, HSTS etkin olur; CDN ile kaynak sunucu arasında geçerli sertifikayla doğrulanmış TLS (ör. Full Strict) kullanılır."
+    },
+    {
+     "value": "signed",
+     "label": "Özel dosyalar için imzalı adres",
+     "explanation": "Ücretli içerik, fatura ya da kişisel belge gibi özel dosyalar süreli ve imzalı adreslerle (signed URL / cookie) sunulur.",
+     "scenario": "Ücretli eğitim, üyelere özel belge ya da kişisel dosya indirilen projeler.",
+     "example": "Ders videosunun adresi 10 dakika geçerlidir; paylaşılsa bile süre dolunca açılmaz.",
+     "ruleDetail": "Özel dosyalar CDN'de süreli imzalı adres ya da imzalı çerezle sunulur; imza anahtarı gizli anahtar yöneticisinde tutulur."
+    },
+    {
+     "value": "headers",
+     "label": "Güvenlik başlıkları kenarda",
+     "explanation": "Content-Security-Policy, X-Content-Type-Options, Referrer-Policy, Permissions-Policy gibi başlıklar CDN katmanında da eklenir ya da korunur.",
+     "scenario": "Statik barındırma kullanan ve başlıkları sunucuda ayarlayamayan projeler.",
+     "example": "Statik sitede güvenlik başlıkları CDN kuralıyla her yanıta eklenir.",
+     "ruleDetail": "Güvenlik başlıkları CDN katmanında eklenir ya da kaynak sunucudan gelenler korunur; önbellekten dönen yanıtlarda da bulunduğu test edilir."
+    },
+    {
+     "value": "cache_poison",
+     "label": "Önbellek zehirlenmesi ve aldatmasına karşı önlem",
+     "explanation": "Önbellek anahtarına girmeyen başlıklara göre içerik değiştirilmez; kişisel sayfalar statik dosya gibi görünen adreslerde (ör. /hesap/profil.css) önbelleğe alınmaz.",
+     "scenario": "HTML ya da API önbelleği kullanan, üyelik ya da panel içeren projeler.",
+     "example": "/hesabim/x.css adresi istenince kişisel sayfa önbelleğe alınmaz, 404 döner.",
+     "ruleDetail": "Önbellek anahtarına girmeyen başlıklar (X-Forwarded-Host vb.) yanıtı değiştirmez; önbelleğe alma kararı uzantıya göre değil, yanıtın Cache-Control başlığına göre verilir; bilinmeyen yol ekleri 404 döner."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_third_party",
+   "type": "select",
+   "label": "Açık (Üçüncü Taraf) CDN Kaynakları",
+   "en": "Public CDN Libraries",
+   "agents": [
+    "poz:siber-guvenlik:16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani",
+    "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani"
+   ],
+   "explanation": "jQuery, ikon setleri, grafik kütüphaneleri ya da fontların jsDelivr, cdnjs, unpkg veya Google Fonts gibi açık CDN'lerden yüklenip yüklenmeyeceğini belirler. Bu karar sitenin kendi CDN kullanımından bağımsızdır.",
+   "scenario": "Her projede verilir; kişisel veri hassasiyeti yüksek (sağlık, hukuk, finans) ya da AB'deki ziyaretçileri hedefleyen projelerde kendi sunucudan sunmak öne çıkar.",
+   "example": "Bir özel hastanenin sitesi ikon setini ve fontu kendi sunucusundan yükler; ziyaretçinin IP adresi hiçbir üçüncü tarafa gitmez.",
+   "rule": "Açık (üçüncü taraf) CDN kullanımı: {label}.",
+   "options": [
+    {
+     "value": "self",
+     "label": "Hepsi kendi sunucumuzdan / kendi CDN'imizden (önerilen)",
+     "explanation": "Bütün kütüphane, ikon ve font dosyaları projeye dahil edilip sitenin kendi alan adından sunulur. Ziyaretçi verisi üçüncü tarafa gitmez, dış sağlayıcı kesintisi siteyi etkilemez, CSP sade kalır.",
+     "scenario": "Kişisel veri hassasiyeti yüksek ya da KVKK / GDPR uyumunun önemli olduğu bütün projeler.",
+     "example": "Grafik kütüphanesi npm ile kurulur ve derlemeye dahil edilir; sayfa kaynağında başka bir alan adına istek yoktur.",
+     "ruleDetail": "Kütüphaneler, ikonlar ve fontlar paket yöneticisiyle projeye dahil edilip sitenin kendi alan adından sunulur; açık CDN'den (jsDelivr, cdnjs, unpkg, Google Fonts vb.) dosya yüklenmez."
+    },
+    {
+     "value": "sri",
+     "label": "Açık CDN'den, sürüm sabit + SRI ile",
+     "explanation": "Dosyalar açık CDN'den yüklenir ama sürüm numarası sabitlenir ve integrity (SRI) özniteliğiyle dosyanın değiştirilmediği doğrulanır. Ziyaretçi IP'si CDN sağlayıcısına gider.",
+     "scenario": "Hızlı prototip, kampanya sayfası ya da derleme aracı olmayan basit siteler.",
+     "example": "Betik etiketi kütüphanenin tam sürümünü (ör. @3.7.1) ve integrity değerini içerir; dosya değiştirilirse tarayıcı çalıştırmaz.",
+     "ruleDetail": "Açık CDN kaynakları tam sürüm numarasıyla, integrity (SRI) ve crossorigin=\"anonymous\" öznitelikleriyle yüklenir; \"latest\" ya da sürümsüz adres kullanılmaz, kaynak CSP'de tek tek izinlenir ve KVKK aydınlatma metninde IP aktarımı belirtilir."
+    },
+    {
+     "value": "allowlist",
+     "label": "Yalnız zorunlu sağlayıcı betikleri izinli",
+     "explanation": "Kendi kodumuzdaki kütüphaneler kendi sunucumuzdan sunulur; yalnız sağlayıcının kendi alan adından yüklenmesini şart koştuğu betikler (ödeme, harita, video gömme, bot koruması) izin listesindedir.",
+     "scenario": "Ödeme sağlayıcısı, harita ya da reCAPTCHA / Turnstile gibi zorunlu dış betik kullanan projeler.",
+     "example": "iyzico ödeme formu ve harita betiği kendi alan adlarından yüklenir; geri kalan bütün dosyalar sitenin kendi sunucusundandır.",
+     "ruleDetail": "Yalnız sağlayıcının zorunlu kıldığı dış betikler (ödeme, harita, video, bot koruması) izin listesindedir; bunlar CSP'de tek tek tanımlanır, mümkünse rıza sonrası yüklenir ve KVKK aydınlatma metninde belirtilir."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_privacy",
+   "type": "select",
+   "label": "CDN ve Kişisel Veri",
+   "en": "CDN Data Privacy",
+   "agents": [
+    "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+    "poz:siber-guvenlik:16.03/ag-bulut-ve-uc-nokta-guvenligi/bulut-guvenligi-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN sağlayıcısı ziyaretçinin IP adresini, istek kayıtlarını ve (önbellek dışı olsa da) geçen trafiği işler. Sağlayıcı yurt dışındaysa bu, kişisel verinin yurt dışına aktarımı sayılabilir. Bu karar CDN'in kişisel veri boyutunun nasıl ele alınacağını belirler.",
+   "scenario": "CDN kullanan her projede verilir; kamu, sağlık, finans gibi düzenlemeye tabi sektörlerde veri yerelleştirme gereksinimi ayrıca değerlendirilir.",
+   "example": "Bir e-ticaret sitesi aydınlatma metninde CDN sağlayıcısını ve IP adresinin yurt dışında işlenebileceğini belirtir; CDN loglarının saklama süresini 30 gün ile sınırlar.",
+   "rule": "CDN ve kişisel veri: {label}.",
+   "options": [
+    {
+     "value": "global",
+     "label": "Küresel ağ, aktarım aydınlatmada belirtilir",
+     "explanation": "Sağlayıcının küresel ağı kullanılır. IP adresi ve istek kayıtlarının yurt dışında işlenebileceği aydınlatma metninde belirtilir, sağlayıcıyla veri işleme sözleşmesi yapılır.",
+     "scenario": "Düzenlemeye tabi olmayan kurumsal site, blog ve e-ticaret projelerinin çoğu.",
+     "example": "Gizlilik politikasında \"İçerik dağıtım hizmeti: Cloudflare, Inc.\" satırı ve yurt dışı aktarım açıklaması yer alır.",
+     "ruleDetail": "CDN sağlayıcısı veri işleyen olarak aydınlatma metninde ve VERBİS kaydında belirtilir; sağlayıcıyla veri işleme sözleşmesi yapılır, yurt dışı aktarımın hukuki dayanağı (KVKK m. 9, ör. standart sözleşme) hukuk / uyum birimiyle belirlenir; kişisel veri içeren yanıtlar önbelleğe alınmaz, CDN logları en kısa gerekli süre saklanır."
+    },
+    {
+     "value": "regional",
+     "label": "Bölgesel veri sınırı (ör. AB)",
+     "explanation": "Sağlayıcının bölgesel hizmetleriyle (ör. AB veri sınırı, bölgesel kenar noktaları) TLS sonlandırma, önbellek ve kayıtlar belirli bir bölgede tutulur.",
+     "scenario": "AB'deki ziyaretçilere hizmet veren ve GDPR kapsamında veri bölgesi taahhüdü isteyen projeler.",
+     "example": "TLS anahtarları ve CDN logları yalnız AB veri merkezlerinde tutulur.",
+     "ruleDetail": "CDN'in bölgesel hizmetleri (veri bölgesi, bölgesel TLS sonlandırma, log saklama bölgesi) açılır; seçilen bölge aydınlatma metninde ve veri işleme sözleşmesinde belirtilir."
+    },
+    {
+     "value": "local",
+     "label": "Türkiye'de uç noktası olan / yerel sağlayıcı",
+     "explanation": "Veri yerelleştirme gerektiren durumlarda Türkiye'de uç noktası ve veri merkezi olan bir sağlayıcı ya da yalnız yurt içi uç noktalar kullanılır.",
+     "scenario": "Kamu kurumları, bankacılık ve sağlık gibi mevzuatın veri yerelleştirme istediği projeler.",
+     "example": "Belediye hizmet portalının CDN'i yalnız Türkiye'deki veri merkezlerini kullanır.",
+     "ruleDetail": "CDN yalnız Türkiye'deki uç noktalar ve veri merkezleriyle kurulur; sektör mevzuatının veri yerelleştirme gereksinimleri hukuk / uyum birimiyle doğrulanır."
+    }
+   ],
+   "section": "cdn"
+  },
+  {
+   "id": "cdn_monitoring",
+   "type": "multiselect",
+   "label": "CDN İzleme ve Doğrulama",
+   "en": "CDN Monitoring",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/site-guvenilirlik-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "cdn_use",
+     "in": [
+      "platform",
+      "proxy",
+      "cloud",
+      "assets"
+     ]
+    }
+   ],
+   "explanation": "CDN'in beklendiği gibi çalıştığının nasıl ölçüleceğini ve kesintiye nasıl hazırlanılacağını belirler.",
+   "scenario": "CDN kullanan her projede en az önbellek başlıklarının yayın sonrası otomatik denetimi önerilir; trafiği yüksek projelerde isabet oranı ve bölgesel hız da izlenir.",
+   "example": "Her yayından sonra otomatik test, statik dosyaların \"immutable\" ile, hesap sayfasının \"no-store\" ile döndüğünü doğrular; hata olursa yayın geri alınır.",
+   "rule": "CDN izleme ve doğrulama: {labels}.",
+   "options": [
+    {
+     "value": "headers_test",
+     "label": "Yayın sonrası önbellek başlığı testi",
+     "explanation": "Her yayından sonra seçilen adreslerin Cache-Control, Age ve CDN önbellek durumu başlıkları otomatik denetlenir.",
+     "scenario": "CDN kullanan bütün projeler.",
+     "example": "Test, sepet sayfasının önbellekten (HIT) döndüğünü yakalarsa yayın durdurulur.",
+     "ruleDetail": "Yayın sonrası otomatik test statik dosya, HTML ve kişisel sayfa örneklerinin önbellek başlıklarını denetler; kişisel sayfa önbellekten dönerse yayın başarısız sayılır."
+    },
+    {
+     "value": "hit_ratio",
+     "label": "Önbellek isabet oranı hedefi",
+     "explanation": "CDN panelinden ya da loglardan önbellek isabet oranı izlenir; düşerse önbellek anahtarı ve kurallar gözden geçirilir.",
+     "scenario": "Trafiği yüksek ya da kaynak sunucusu maliyetli projeler.",
+     "example": "Statik dosyalarda isabet oranı %95'in altına düşünce uyarı gelir.",
+     "ruleDetail": "Önbellek isabet oranı izlenir (statik dosyalarda hedef %90 ve üzeri); hedefin altına düşünce uyarı üretilir."
+    },
+    {
+     "value": "rum",
+     "label": "Bölge bazında gerçek kullanıcı ölçümü",
+     "explanation": "Gerçek ziyaretçilerin TTFB ve LCP değerleri ülke / bölge bazında izlenir; CDN'in hangi bölgede yetersiz kaldığı görülür.",
+     "scenario": "Yurt dışı ya da çok şehirli trafik alan projeler.",
+     "example": "Körfez ülkelerindeki ziyaretçilerde TTFB yüksek çıkar; kalkan bölgesi değiştirilir.",
+     "ruleDetail": "Gerçek kullanıcı ölçümüyle (RUM) TTFB ve LCP bölge bazında izlenir."
+    },
+    {
+     "value": "logs",
+     "label": "CDN logları ve saklama süresi",
+     "explanation": "CDN istek ve güvenlik logları merkezi log sistemine aktarılır; saklama süresi kişisel veri ilkelerine göre sınırlanır.",
+     "scenario": "Güvenlik olaylarını incelemesi gereken ve denetime tabi projeler.",
+     "example": "Engellenen saldırı istekleri 30 gün boyunca log sisteminde aranabilir.",
+     "ruleDetail": "CDN istek ve WAF logları merkezi log sistemine aktarılır; IP adresi içeren loglar saklama ve imha politikasındaki süre kadar tutulur."
+    },
+    {
+     "value": "failover",
+     "label": "CDN kesintisi için geri dönüş planı",
+     "explanation": "CDN sağlayıcısı kesintiye uğrarsa DNS ile doğrudan kaynağa ya da ikinci bir CDN'e geçiş planı hazırlanır ve denenir.",
+     "scenario": "Kesintinin ciddi gelir ya da itibar kaybı yaratacağı projeler.",
+     "example": "CDN kesintisinde DNS kaydı kısa TTL sayesinde dakikalar içinde yedek yola çevrilir.",
+     "ruleDetail": "CDN kesintisi için geri dönüş planı (düşük DNS TTL, doğrudan kaynak ya da ikinci CDN) runbook'a yazılır ve yılda en az bir kez denenir."
+    }
+   ],
+   "section": "cdn"
+  }
+ ]
+}

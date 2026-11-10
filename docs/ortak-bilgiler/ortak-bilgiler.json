@@ -1081,6 +1081,57 @@
      }
     },
     {
+     "id": "oc_palette",
+     "new": {
+      "label": "Renk Paleti",
+      "en": "Color Palette",
+      "type": "palette",
+      "explanation": "Ana, ikincil ve vurgu renklerini, metin, zemin ve çizgi için yardımcı renkleri ve (kılavuzda tanımlıysa) durum renklerini tek yerde seçersiniz. Her rengin altında, kullanılacağı yerdeki kontrast oranı WCAG 2.2'ye göre hesaplanır; yetersiz çiftler üstteki uyarı kutusunda önerilen tonla birlikte listelenir.",
+      "scenario": "Kurumsal kimlik kılavuzundaki renkler siteye, pazarlama görsellerine ve brief'lere aktarılırken; özellikle marka rengi açık bir tonsa (sarı, turuncu, açık mavi, açık yeşil) metnin ve buton yazısının okunup okunmadığını görmek için.",
+      "example": "Ana renk olarak #F5A623 (turuncu) seçilirse beyaz zeminde bağlantı metni 2,0:1 çıkar ve uyarı verilir; öneri olarak metin ve bağlantıda koyulaştırılmış bir ton (ör. #9A6413), butonda ise koyu yazı gösterilir.",
+      "rule": "Renk paletinin kontrastı WCAG 2.2 AA ölçütüne göre denetlenmiştir. {contrast} Kontrastı 4,5:1'in altındaki renk çiftleri normal metinde, 3:1'in altındakiler büyük metin, ikon, form kenarlığı ve odak çerçevesinde kullanılmaz; yetersiz çiftler için önerilen koyu / açık tonlar ayrı token olarak tanımlanır (ör. --color-primary-text) ve durum hiçbir zaman yalnız renkle anlatılmaz.",
+      "agents": [
+       "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani",
+       "poz:tasarim:19.02/marka-kimligi-tasarimi/gorsel-kimlik-uzmani"
+      ],
+      "palette": [
+       {
+        "title": "Ana renkler",
+        "desc": "Markayı temsil eden renkler: butonlar, bağlantılar, aktif durumlar ve vurgu alanları.",
+        "ids": [
+         "brand_color_primary",
+         "brand_color_secondary",
+         "brand_color_accent"
+        ]
+       },
+       {
+        "title": "Yardımcı renkler",
+        "desc": "Metin, zemin ve çizgi renkleri; sayfanın okunabilirliğini en çok bunlar belirler.",
+        "ids": [
+         "brand_color_dark",
+         "brand_color_light",
+         "brand_color_neutral"
+        ]
+       },
+       {
+        "title": "Durum renkleri",
+        "desc": "Başarı, uyarı, hata ve bilgi mesajları, rozetler ve form doğrulama.",
+        "ids": [
+         "brand_color_success",
+         "brand_color_warning",
+         "brand_color_error",
+         "brand_color_info"
+        ],
+        "gate": {
+         "field": "brand_status_colors",
+         "text": "Durum renkleri kurumsal kılavuzda tanımlıysa burada seçilir; şu an Kurumsal Kimlik › Durum Renkleri kararında “Kurumsal kılavuzdaki tanımlar” seçili değil.",
+         "link": "Durum Renkleri kararına git"
+        }
+       }
+      ]
+     }
+    },
+    {
      "id": "oc_color_print",
      "new": {
       "label": "Baskı Renk Kodları (CMYK)",

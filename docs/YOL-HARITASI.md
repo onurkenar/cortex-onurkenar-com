@@ -197,6 +197,11 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
 - [x] Güvenlik eklemeleri (2026-11-10, kullanıcı isteği): Güvenlik Mühendisliği'ne "Zafiyet Sınıfları ve Savunmaları" (XSS kalıcı / DOM, IDOR / BOLA, BFLA, toplu atama, SSRF, açık yönlendirme, yol geçişi, dosya yükleme, clickjacking, yarış durumu, numaralandırma) ve Güvenlik & Gizlilik'e "Penetrasyon (Sızma) Testi" bölümü (12 karar, rehber, 8 doğrulanmış kaynak). Test 24/24; karar verilmemiş projede prompt değişmedi.
   - [ ] İstenirse: Canlıya Çıkış kalite kapısına (`golive_gate`) "Sızma testi bulguları kapandı" seçeneği / `pentest_gate`'ten öneri; Test Katmanları'ndaki "Security" ile bağ.
 
+- [x] Renk Paleti ve kontrast denetimi (2026-11-10, kullanıcı isteği): Ortak Bilgiler › Marka Görünümü'ndeki on renk kararı tek "Renk Paleti" kararında (ana / yardımcı / durum renkleri); her rengin altında WCAG 2.2 kontrast oranı, üstte yetersiz çiftler ve önerilen ton, örnek kart önizlemesi, kontrast tablosu; kural metnine kontrast özeti. Test 35/35; renk seçilmemiş projede çıktı değişmedi.
+  - [ ] İstenirse: koyu tema (Renk / Yüzey Teması koyu mod) için ayrı kontrast denetimi; pazarlama promptuna kontrast kuralı.
+- [x] CDN & Önbellek bölümü (2026-11-10, kullanıcı isteği): Sunucu & Altyapı'da 27. bölüm, 9 karar (kullanım, sağlayıcı, kapsam, önbellek kuralları, temizleme, güvenlik, açık CDN kaynakları, kişisel veri, izleme), rehber ve 9 doğrulanmış kaynak. Test 20/20; karar verilmemiş projede prompt değişmedi (yalnız bölüm numaraları kaydı).
+  - [ ] İstenirse: Performans Standartları'ndaki "CDN / Edge Cache" ve Font Kaynağı'ndaki "Google Fonts (CDN)" seçenekleriyle öneri bağı (`cdn_use` / `cdn_third_party`).
+
 ## Açık işler
 
 ### Şirket şeması (kullanıcı adım adım veriyor)
