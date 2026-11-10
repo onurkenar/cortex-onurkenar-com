@@ -194,6 +194,9 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
   - [ ] Kullanıcı kararı: seçili modüller CLAUDE-TALIMATLARI.md'ye ayrı bir faz / ek olarak da yazılsın mı? (Şu an yalnız ayrı talimat olarak kopyalanıyor / indiriliyor.)
   - [ ] İstenirse: kütüphaneyi cihazlar arasında eşitleme (şu an dışa / içe aktarma ile).
 
+- [x] Güvenlik eklemeleri (2026-11-10, kullanıcı isteği): Güvenlik Mühendisliği'ne "Zafiyet Sınıfları ve Savunmaları" (XSS kalıcı / DOM, IDOR / BOLA, BFLA, toplu atama, SSRF, açık yönlendirme, yol geçişi, dosya yükleme, clickjacking, yarış durumu, numaralandırma) ve Güvenlik & Gizlilik'e "Penetrasyon (Sızma) Testi" bölümü (12 karar, rehber, 8 doğrulanmış kaynak). Test 24/24; karar verilmemiş projede prompt değişmedi.
+  - [ ] İstenirse: Canlıya Çıkış kalite kapısına (`golive_gate`) "Sızma testi bulguları kapandı" seçeneği / `pentest_gate`'ten öneri; Test Katmanları'ndaki "Security" ile bağ.
+
 ## Açık işler
 
 ### Şirket şeması (kullanıcı adım adım veriyor)

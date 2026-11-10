@@ -1,0 +1,1024 @@
+{
+ "version": 1,
+ "fields_into": [
+  {
+   "id": "vuln_controls",
+   "section": "security_eng",
+   "after": "security_controls",
+   "type": "multiselect",
+   "label": "Zafiyet Sınıfları ve Savunmaları",
+   "en": "Vulnerability Classes & Defenses",
+   "agents": [
+    "poz:siber-guvenlik:16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani",
+    "poz:siber-guvenlik:16.06/devsecops-ve-kod-guvenligi/kod-guvenligi-uzmani"
+   ],
+   "explanation": "XSS, IDOR gibi en sık istismar edilen açık türlerinin her biri için kodda uygulanacak somut savunmayı belirler. \"Uygulama Güvenlik Kontrolleri\" genel başlıkları seçer; bu karar her açık türünün nasıl önleneceğini ve nasıl test edileceğini kurala yazar.",
+   "scenario": "Üyelik, panel, API, dosya yükleme ya da kullanıcı içeriği olan her projede; özellikle bir kullanıcının başka kullanıcının ya da organizasyonun kaydına ulaşabileceği B2B, SaaS, e-ticaret ve portal projelerinde.",
+   "example": "IDOR seçilince sipariş detayı uç noktası /api/orders/1043 isteğinde kaydın oturumdaki kullanıcıya ait olup olmadığını denetler; başkasının siparişi istendiğinde 404 döner ve bu durum otomatik testle kanıtlanır.",
+   "rule": "Aşağıdaki zafiyet sınıflarına karşı belirtilen savunmalar uygulanacak ve her biri en az bir otomatik testle kanıtlanacaktır: {labels}.",
+   "options": [
+    {
+     "value": "xss",
+     "label": "XSS: kalıcı ve yansıyan (sunucu tarafı çıktı)",
+     "explanation": "Kullanıcıdan gelen ve veritabanına kaydedilen (kalıcı) ya da adres / form üzerinden sayfaya geri yansıyan (yansıyan) içeriğin betik olarak çalışmasını önler. Savunma, verinin girişte değil, ekrana basıldığı bağlama göre kodlanmasıdır.",
+     "scenario": "Yorum, ürün değerlendirmesi, profil, forum ya da arama sonucu gösteren her sayfada.",
+     "example": "Bir yorumcunun yazdığı <script> etiketi sayfada düz metin olarak görünür, diğer ziyaretçilerin tarayıcısında çalışmaz.",
+     "ruleDetail": "XSS (kalıcı / yansıyan): çıktı bağlama göre kodlanacak (HTML gövdesi, öznitelik, URL, JavaScript, CSS ayrı); şablon motorunun otomatik kaçışı kapatılmayacak; zengin metin yalnız sunucuda izin listeli bir temizleyiciyle (ör. DOMPurify / sanitize-html, izinli etiket ve öznitelik listesi) kaydedilecek; CSP nonce tabanlı script-src ile ikinci savunma kurulacak; çerezler HttpOnly olacak. Test: her girdi alanına bilinen XSS yükleri gönderilip çıktıda kaçırıldığı doğrulanacak."
+    },
+    {
+     "value": "xss_dom",
+     "label": "XSS: DOM tabanlı (tarayıcı tarafı)",
+     "explanation": "Sunucuya hiç gitmeden tarayıcıdaki JavaScript'in adres çubuğu, hash, postMessage ya da API yanıtındaki veriyi güvensiz biçimde sayfaya yazmasıyla oluşur. Sunucu tarafı kaçış bunu engellemez.",
+     "scenario": "Tek sayfa uygulamaları (React, Vue, Svelte), arama / filtre parametrelerini sayfaya yazan ön yüzler, üçüncü taraf widget'ları.",
+     "example": "Arama sayfası ?q= değerini textContent ile yazar; innerHTML yerine kullanıldığı için <img onerror> yükü çalışmaz.",
+     "ruleDetail": "DOM tabanlı XSS: kullanıcı kaynaklı veri innerHTML, outerHTML, document.write, insertAdjacentHTML, eval, new Function, setTimeout(string) ve javascript: adreslerine verilmeyecek; metin textContent ile yazılacak; çerçeve kaçış kapıları (dangerouslySetInnerHTML, v-html, {@html}) yalnız DOMPurify ile temizlenmiş içerikle kullanılacak; mümkünse CSP require-trusted-types-for 'script' ile Trusted Types zorunlu tutulacak; postMessage alıcıları origin denetleyecek."
+    },
+    {
+     "value": "idor",
+     "label": "IDOR / BOLA (nesne düzeyinde yetki)",
+     "explanation": "İstekle gelen bir kayıt kimliğinin (sipariş, fatura, belge, kullanıcı id) oturumdaki kullanıcıya veya etkin organizasyona ait olup olmadığının denetlenmemesidir. OWASP API Security Top 10'da birinci sıradadır; kimliği tahmin edilemez (UUID) yapmak tek başına çözüm değildir.",
+     "scenario": "Kullanıcının kendi kayıtlarını gördüğü her panel, portal ve API; özellikle çok organizasyonlu ve çok kiracılı projeler.",
+     "example": "/api/invoices/8812 isteğinde sorgu \"WHERE id = ? AND organization_id = <oturumdaki organizasyon>\" ile çalışır; başka şirketin faturası istenince 404 döner.",
+     "ruleDetail": "IDOR / BOLA: istemciden gelen her nesne kimliği sunucuda sahiplik / organizasyon koşuluyla sorgulanacak (WHERE id = ? AND owner_id / organization_id = oturumdaki değer); kimlik yetki kanıtı sayılmayacak, UUID kullanımı denetimin yerine geçmeyecek; yetkisiz erişimde kaydın varlığını sızdırmamak için 404 dönülecek; liste, dışa aktarma, dosya indirme ve toplu işlem uç noktaları da aynı denetimden geçecek; her uç nokta için \"ikinci kullanıcı / ikinci organizasyon\" testi yazılacak."
+    },
+    {
+     "value": "bfla",
+     "label": "Fonksiyon düzeyinde yetki atlatma (BFLA)",
+     "explanation": "Yalnız yöneticinin çağırması gereken bir işlemin (kullanıcı silme, rol değiştirme, iade onaylama) normal kullanıcı tarafından doğrudan API'ye istek atılarak çalıştırılabilmesidir. Menüde düğmeyi gizlemek koruma sağlamaz.",
+     "scenario": "Yönetim paneli, rol / izin yapısı ve ayrı yetki seviyeleri olan her projede.",
+     "example": "Üye rolündeki kullanıcı DELETE /api/admin/users/15 isteğini elle gönderdiğinde 403 alır; işlem denetim kaydına yazılır.",
+     "ruleDetail": "Fonksiyon düzeyinde yetki: yönetim ve yetkili işlemler sunucuda rol / izin denetiminden geçecek, varsayılan olarak reddedilecek; arayüzde gizleme yetkilendirme sayılmayacak; aynı kaynağın bütün HTTP yöntemleri (GET, POST, PUT, PATCH, DELETE) ayrı ayrı denetlenecek; yetkisiz deneme denetim kaydına yazılacak."
+    },
+    {
+     "value": "mass_assignment",
+     "label": "Toplu atama (mass assignment)",
+     "explanation": "İstek gövdesindeki alanların doğrudan veritabanı modeline bağlanması sonucu kullanıcının rol, sahip, fiyat, durum, bakiye gibi kendisinin değiştirmemesi gereken alanları değiştirebilmesidir.",
+     "scenario": "Profil güncelleme, kayıt, sipariş ve ayar formları olan her projede.",
+     "example": "Profil güncelleme isteğine {\"role\":\"admin\"} eklense de yalnız ad, telefon ve dil alanları kaydedilir.",
+     "ruleDetail": "Toplu atama: istek gövdesi modele doğrudan bağlanmayacak; her uç nokta izin listeli giriş modeli (DTO / şema) kullanacak; rol, sahip, organizasyon, fiyat, tutar, durum, onay ve bakiye gibi alanlar yalnız sunucu mantığıyla atanacak; bilinmeyen alanlar reddedilecek ya da yok sayılacak."
+    },
+    {
+     "value": "ssrf",
+     "label": "SSRF (sunucu taraflı istek sahteciliği)",
+     "explanation": "Kullanıcının verdiği bir adresi sunucunun çağırması (bağlantı önizlemesi, webhook, görsel indirme, PDF oluşturma) üzerinden iç ağa, bulut metaveri servisine (169.254.169.254) veya yerel servislere erişilmesidir.",
+     "scenario": "Webhook, bağlantı önizlemesi, adresten görsel / dosya içe aktarma, PDF ya da ekran görüntüsü üreten projelerde.",
+     "example": "Webhook adresi olarak http://169.254.169.254/latest/meta-data/ girildiğinde istek reddedilir; yalnız https ve herkese açık adreslere izin verilir.",
+     "ruleDetail": "SSRF: sunucunun çağırdığı kullanıcı kaynaklı adresler izin listesine göre denetlenecek; yalnız https; özel IP aralıkları, localhost, link-local ve bulut metaveri adresleri ad çözümlemesinden SONRA engellenecek; yönlendirmeler izlenmeyecek ya da her adımda yeniden denetlenecek; yanıt boyutu ve süresi sınırlanacak; bu istekler ayrı, yetkisi kısıtlı bir ağ çıkışından yapılacak."
+    },
+    {
+     "value": "open_redirect",
+     "label": "Açık yönlendirme (open redirect)",
+     "explanation": "Girişten sonra ?next=, ?returnUrl= gibi parametrelerle kullanıcının saldırganın sitesine yönlendirilebilmesidir; oltalama ve OAuth jetonu çalmada kullanılır.",
+     "scenario": "Giriş sonrası dönüş adresi, çıkış, ödeme dönüşü veya kampanya yönlendirmesi olan projelerde.",
+     "example": "/giris?next=https://kotu-site.com isteğinde kullanıcı ana sayfaya yönlendirilir; yalnız sitenin kendi yolları kabul edilir.",
+     "ruleDetail": "Açık yönlendirme: yönlendirme parametreleri yalnız sitenin kendi göreli yollarını (/ ile başlayan, // ile başlamayan) ya da izin listesindeki adresleri kabul edecek; geçersiz değerde varsayılan sayfaya dönülecek; OAuth dönüş adresleri tam eşleşmeyle kayıtlı olacak."
+    },
+    {
+     "value": "path_traversal",
+     "label": "Dosya yolu geçişi (path traversal)",
+     "explanation": "Dosya adı ya da yolu içeren parametrelerle (../../etc/passwd) uygulamanın izinli klasör dışındaki dosyaları okuması veya yazmasıdır.",
+     "scenario": "Belge indirme, şablon seçme, dil dosyası yükleme veya dosya önizleme olan projelerde.",
+     "example": "/indir?dosya=../../.env isteği reddedilir; indirme kimlikle yapılır ve kimlik veritabanındaki dosya yoluna çevrilir.",
+     "ruleDetail": "Dosya yolu geçişi: kullanıcı girdisi dosya sistemi yoluna eklenmeyecek; dosyalara kimlikle erişilip yol sunucuda eşlenecek; zorunlu durumda yol normalize edilip izinli kök klasörün içinde kaldığı doğrulanacak; arşiv açarken (zip slip) her öğenin yolu denetlenecek."
+    },
+    {
+     "value": "file_upload",
+     "label": "Güvensiz dosya yükleme",
+     "explanation": "Yüklenen dosyanın sunucuda çalıştırılabilmesi, HTML / SVG olarak aynı kökende açılıp XSS'e dönüşmesi, aşırı büyük dosyalarla hizmetin durdurulması veya zararlı yazılım dağıtılmasıdır.",
+     "scenario": "Profil fotoğrafı, belge, CV, başvuru eki ya da medya yükleme olan her projede.",
+     "example": "Yüklenen fatura.pdf.html dosyası içerik imzasıyla reddedilir; kabul edilen dosyalar rastgele adla ayrı depolama alanında saklanır ve indirme olarak sunulur.",
+     "ruleDetail": "Dosya yükleme: tür uzantıyla değil içerik imzasıyla (magic bytes) ve izin listesiyle denetlenecek; boyut ve sayı sınırı olacak; dosya rastgele adla, web kökü dışında ya da ayrı bir alan adındaki depolamada saklanacak; HTML, SVG ve betik içerebilen türler satır içi sunulmayacak (Content-Disposition: attachment, X-Content-Type-Options: nosniff); görseller yeniden işlenip metaverisi silinecek; gerekiyorsa zararlı yazılım taraması yapılacak."
+    },
+    {
+     "value": "clickjacking",
+     "label": "Clickjacking (tıklama kaçırma)",
+     "explanation": "Sitenin görünmez bir çerçeve içine alınıp kullanıcının farkında olmadan düğmelere tıklatılmasıdır (ödeme onayı, ayar değiştirme).",
+     "scenario": "Oturum açılan, ödeme ya da ayar değiştirme işlemi olan her sitede.",
+     "example": "Başka bir site panel sayfasını iframe içinde açmaya çalıştığında tarayıcı çerçeveyi göstermez.",
+     "ruleDetail": "Clickjacking: CSP frame-ancestors 'none' (gömülmesi gereken sayfalarda yalnız izinli kökenler) ve eski tarayıcılar için X-Frame-Options: DENY gönderilecek."
+    },
+    {
+     "value": "race",
+     "label": "Yarış durumu ve iş mantığı açıkları",
+     "explanation": "Aynı isteğin aynı anda birden çok kez gönderilmesiyle kuponun iki kez kullanılması, stoktan fazla satış, bakiyenin eksiye düşmesi ya da onay adımlarının atlanması gibi mantık hatalarıdır; otomatik tarayıcılar bunları genellikle bulamaz.",
+     "scenario": "Ödeme, kupon, puan, stok, rezervasyon, oylama veya çok adımlı onay akışı olan projelerde.",
+     "example": "Aynı kupon kodu 20 eşzamanlı istekle denendiğinde yalnız biri başarılı olur; diğerleri \"kupon kullanıldı\" yanıtı alır.",
+     "ruleDetail": "Yarış durumu ve iş mantığı: tutar, stok, kupon, bakiye ve rezervasyon işlemleri veritabanı işlemi ve satır kilidi / benzersizlik kısıtıyla atomik yapılacak; ödeme ve sipariş uç noktaları idempotency anahtarı kullanacak; çok adımlı akışlarda adım sırası sunucuda doğrulanacak; eşzamanlı istek testleri yazılacak."
+    },
+    {
+     "value": "enumeration",
+     "label": "Hesap ve kayıt numaralandırma",
+     "explanation": "Giriş, kayıt ya da parola sıfırlamada farklı hata mesajlarıyla hangi e-postanın kayıtlı olduğunun anlaşılması veya sıralı kimliklerle kayıtların taranmasıdır.",
+     "scenario": "Üyelik, parola sıfırlama, davet ya da herkese açık profil sayfası olan projelerde.",
+     "example": "Parola sıfırlama formu e-posta kayıtlı olsun olmasın aynı mesajı verir: \"Bu adres kayıtlıysa bağlantı gönderildi.\"",
+     "ruleDetail": "Numaralandırma: giriş, kayıt ve parola sıfırlama yanıtları ve süreleri hesabın varlığını ele vermeyecek; bu uç noktalar IP ve hesap bazında hız sınırlı olacak; herkese açık adreslerde sıralı kimlik yerine tahmin edilemez kimlik kullanılacak (yetki denetiminin yerine geçmez)."
+    }
+   ],
+   "recommend": [
+    {
+     "field": "security_controls",
+     "map": {
+      "XSS": [
+       "xss",
+       "xss_dom"
+      ],
+      "OWASP": [
+       "xss",
+       "xss_dom",
+       "idor",
+       "bfla",
+       "mass_assignment",
+       "ssrf",
+       "open_redirect",
+       "file_upload",
+       "clickjacking"
+      ]
+     }
+    },
+    {
+     "field": "member_mode",
+     "map": {
+      "Open": [
+       "xss",
+       "xss_dom",
+       "idor",
+       "bfla",
+       "mass_assignment",
+       "enumeration"
+      ],
+      "Approval": [
+       "xss",
+       "xss_dom",
+       "idor",
+       "bfla",
+       "mass_assignment",
+       "enumeration"
+      ],
+      "Invite": [
+       "idor",
+       "bfla",
+       "mass_assignment"
+      ]
+     }
+    },
+    {
+     "field": "panel_tenancy",
+     "map": {
+      "multi_org": [
+       "idor",
+       "bfla",
+       "mass_assignment"
+      ],
+      "multi_tenant": [
+       "idor",
+       "bfla",
+       "mass_assignment"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "ecommerce": [
+       "race",
+       "idor"
+      ],
+      "booking": [
+       "race",
+       "idor"
+      ],
+      "community": [
+       "xss",
+       "xss_dom",
+       "file_upload"
+      ],
+      "forum": [
+       "xss",
+       "xss_dom",
+       "file_upload"
+      ],
+      "listings": [
+       "xss",
+       "file_upload",
+       "idor"
+      ],
+      "career": [
+       "file_upload",
+       "idor"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "guide_add": {
+  "security_eng": [
+   {
+    "title": "OWASP – Cross Site Scripting Prevention Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+    "note": "Bağlama göre çıktı kodlama, güvenli DOM yöntemleri ve HTML temizleme kuralları."
+   },
+   {
+    "title": "MDN – Trusted Types API",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API",
+    "note": "DOM tabanlı XSS'i tarayıcı düzeyinde engelleyen CSP require-trusted-types-for yönergesi."
+   },
+   {
+    "title": "OWASP – Insecure Direct Object Reference Prevention",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
+    "note": "IDOR'un nedenleri ve her nesne erişiminde sahiplik denetimi."
+   },
+   {
+    "title": "OWASP API Security Top 10 (2023)",
+    "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+    "note": "BOLA, kimlik doğrulama, nesne özelliği düzeyinde yetki (toplu atama), fonksiyon düzeyinde yetki ve SSRF dahil en kritik API açıkları."
+   },
+   {
+    "title": "OWASP – Server Side Request Forgery Prevention",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "note": "İzin listesi, ad çözümlemesi sonrası IP denetimi ve ağ katmanı önlemleri."
+   },
+   {
+    "title": "OWASP – Mass Assignment Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
+    "note": "İzin listeli giriş modelleri (DTO) ile toplu atamanın önlenmesi."
+   },
+   {
+    "title": "OWASP – File Upload Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+    "note": "Dosya türü denetimi, depolama, adlandırma ve sunum kuralları."
+   },
+   {
+    "title": "OWASP – Unvalidated Redirects and Forwards",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+    "note": "Açık yönlendirmenin önlenmesi."
+   }
+  ]
+ },
+ "section": {
+  "id": "pentest",
+  "after": "security_eng",
+  "group": "Güvenlik & Gizlilik",
+  "icon": "◈",
+  "name": "Penetrasyon (Sızma) Testi",
+  "en": "Penetration Testing",
+  "desc": "Sitenin ve uygulamanın gerçek bir saldırganın yöntemleriyle, yetkili ve kontrollü olarak denenmesini planlar: kapsam, yaklaşım, standart, zamanlama, testi yapan, ortam, otomatik taramalar, test kuralları, rapor içeriği, düzeltme süreleri ve canlıya çıkış kapısı."
+ },
+ "guide": {
+  "purpose": "Penetrasyon (sızma) testi, yazılan güvenlik kontrollerinin gerçekten çalıştığını bir saldırganın gözüyle sınar. Kod incelemesi ve otomatik taramalar bilinen kalıpları yakalar; yetki atlatma, IDOR, iş mantığı ve zincirlenmiş açıklar ise çoğunlukla ancak insan eliyle yapılan testte ortaya çıkar. Bu bölüm testin neyi, nasıl, ne zaman, kim tarafından ve hangi kurallarla yapılacağını; bulguların nasıl raporlanıp hangi sürede kapatılacağını önceden belirler.",
+  "criteria": [
+   "Kapsamı panellere, API'ye, ödeme ve dosya yükleme akışlarına göre seçin; test edilmeyen her bölüm raporda “kapsam dışı” olarak açıkça yazılmalıdır.",
+   "Gri kutu (test hesaplarıyla) yaklaşım çoğu proje için en verimli olanıdır: yetki ve IDOR açıkları ancak oturum açmış farklı rollerle denenince görünür.",
+   "Bir standarda göre test isteyin (OWASP WSTG, ASVS, API Top 10); böylece testin neyi kapsadığı ve eksik kalan konular ölçülebilir olur.",
+   "Canlıya çıkıştan önce en az bir kez, sonra büyük değişikliklerde ve yılda bir test planlayın; aradaki dönemi otomatik taramalar ve açık bildirim politikası (security.txt) doldurur.",
+   "Test başlamadan yazılı yetki ve kapsam belgesi imzalanmalıdır. İzinsiz test, Türk Ceza Kanunu m. 243–244 kapsamında suç oluşturabilir.",
+   "Bulgular CVSS puanıyla önceliklendirilir; kritik ve yüksek açıklar için düzeltme süresi ve yeniden test önceden kararlaştırılır."
+  ],
+  "pitfalls": [
+   "Yalnız otomatik tarayıcı çıktısını “sızma testi” saymak. Tarayıcılar IDOR, yetki atlatma ve iş mantığı açıklarının çoğunu bulamaz.",
+   "Testi gerçek müşteri verisi bulunan canlı ortamda, kapsam ve acil durdurma kuralları olmadan yapmak.",
+   "Raporu alıp düzeltme sonrası yeniden test yaptırmamak; kapatıldığı varsayılan açıkların bir kısmı yanlış ya da eksik düzeltilmiş olur.",
+   "Bulguları e-posta ekinde şifresiz paylaşmak; sızma testi raporu saldırgan için hazır bir saldırı planıdır.",
+   "Kapsamı yalnız ana siteyle sınırlayıp yönetim panellerini, API'yi ve alt alan adlarını dışarıda bırakmak."
+  ],
+  "resources": [
+   {
+    "title": "OWASP Web Security Testing Guide (WSTG)",
+    "url": "https://owasp.org/www-project-web-security-testing-guide/",
+    "note": "Web uygulaması sızma testinin kapsamlı yöntem rehberi; test başlıkları ve adımları."
+   },
+   {
+    "title": "OWASP Application Security Verification Standard (ASVS)",
+    "url": "https://owasp.org/www-project-application-security-verification-standard/",
+    "note": "Üç seviyeli doğrulama gereksinimleri; testin kabul ölçütü olarak kullanılır."
+   },
+   {
+    "title": "OWASP API Security Top 10 (2023)",
+    "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+    "note": "API testinde öncelikli on risk (BOLA, kimlik doğrulama, BFLA, SSRF …)."
+   },
+   {
+    "title": "OWASP Top 10",
+    "url": "https://owasp.org/Top10/",
+    "note": "Web uygulamalarında en kritik güvenlik risklerinin güncel listesi."
+   },
+   {
+    "title": "NIST SP 800-115 – Technical Guide to Information Security Testing and Assessment",
+    "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+    "note": "Güvenlik testinin planlanması, yürütülmesi ve raporlanması için NIST rehberi."
+   },
+   {
+    "title": "FIRST – CVSS v4.0",
+    "url": "https://www.first.org/cvss/v4-0/",
+    "note": "Bulguların önem derecesini puanlamak için kullanılan ortak sistem."
+   },
+   {
+    "title": "RFC 9116 – security.txt",
+    "url": "https://www.rfc-editor.org/rfc/rfc9116",
+    "note": "Güvenlik araştırmacılarının açık bildirebileceği iletişim bilgisinin yayımlanma biçimi."
+   },
+   {
+    "title": "ZAP (Zed Attack Proxy)",
+    "url": "https://www.zaproxy.org/",
+    "note": "Açık kaynak dinamik uygulama güvenliği tarayıcısı; CI hattında otomatik tarama için."
+   }
+  ]
+ },
+ "fields": [
+  {
+   "id": "pentest_scope",
+   "type": "multiselect",
+   "label": "Test Kapsamı",
+   "en": "Test Scope",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Sızma testinde hangi bölümlerin deneneceğini belirler. Seçilmeyen bölümler raporda “kapsam dışı” olarak yazılır.",
+   "scenario": "Üyelik, panel, API veya ödeme olan projelerde web uygulamasıyla birlikte kimlik doğrulama, yetkilendirme ve API mutlaka kapsama alınmalıdır.",
+   "example": "Kapsam: web uygulaması, kimlik doğrulama, yetkilendirme, API ve yönetim paneli; ödeme sağlayıcısının kendi sayfası kapsam dışı.",
+   "rule": "Sızma testinin kapsamı: {labels}. Kapsam dışı bırakılan bölümler raporda açıkça yazılacaktır.",
+   "options": [
+    {
+     "value": "web",
+     "label": "Web uygulaması ve herkese açık sayfalar",
+     "explanation": "Formlar, arama, içerik sayfaları, çerez ve güvenlik başlıkları, istemci tarafı kod.",
+     "scenario": "Her projede.",
+     "example": "İletişim formu, arama ve blog sayfaları XSS, yönlendirme ve başlık açısından denenir.",
+     "ruleDetail": "Herkese açık sayfalar, formlar, güvenlik başlıkları ve istemci tarafı kod test edilecek."
+    },
+    {
+     "value": "auth",
+     "label": "Kimlik doğrulama ve oturum yönetimi",
+     "explanation": "Giriş, kayıt, parola sıfırlama, çok adımlı doğrulama, oturum çerezi, çıkış ve oturum süresi.",
+     "scenario": "Üyelik veya panel girişi olan her projede.",
+     "example": "Parola sıfırlama bağlantısının yeniden kullanılıp kullanılamadığı ve oturumun çıkıştan sonra geçersizleştiği denenir.",
+     "ruleDetail": "Giriş, kayıt, parola sıfırlama, MFA ve oturum yaşam döngüsü test edilecek."
+    },
+    {
+     "value": "authz",
+     "label": "Yetkilendirme: IDOR / BOLA ve yetki yükseltme",
+     "explanation": "Farklı rol ve organizasyonlardaki test hesaplarıyla başkasının kaydına erişim ve yetkisiz işlem denemeleri.",
+     "scenario": "Birden fazla rolü ya da organizasyonu olan her projede.",
+     "example": "A şirketinin kullanıcısı B şirketinin fatura kimliğini isteyerek erişim dener.",
+     "ruleDetail": "Her rol ve organizasyon çifti için IDOR / BOLA ve yetki yükseltme denemeleri yapılacak."
+    },
+    {
+     "value": "api",
+     "label": "API uç noktaları",
+     "explanation": "REST / GraphQL uç noktaları, belgelenmemiş uç noktalar, hız sınırı, toplu atama, CORS.",
+     "scenario": "Ayrı API'si, mobil uygulaması veya entegrasyonu olan projelerde.",
+     "example": "Belgelenmemiş /api/v1/admin/export uç noktası normal kullanıcı jetonuyla denenir.",
+     "ruleDetail": "API uç noktaları (belgelenmemişler dahil) OWASP API Top 10'a göre test edilecek."
+    },
+    {
+     "value": "admin",
+     "label": "Yönetim panelleri",
+     "explanation": "Panel girişi, rol ayrımı, toplu işlemler, dışa aktarma ve ayarlar.",
+     "scenario": "CMS, operasyon ya da süper yönetici paneli olan projelerde.",
+     "example": "Editör rolüyle ayarlar uç noktası çağrılarak yetki atlatma denenir.",
+     "ruleDetail": "Yönetim panelleri ve panel alt alan adları kapsama dahil edilecek."
+    },
+    {
+     "value": "payment",
+     "label": "Ödeme, iade ve kupon akışları",
+     "explanation": "Tutarın istemcide değiştirilmesi, kuponun tekrar kullanılması, ödeme dönüşü (callback) sahteciliği, yarış durumları.",
+     "scenario": "E-ticaret, rezervasyon ve abonelik projelerinde.",
+     "example": "Sepet tutarı istekte 1 TL yapılarak gönderilir; sunucu tutarı kendisi hesapladığı için sipariş gerçek tutarla oluşur.",
+     "ruleDetail": "Ödeme, iade, kupon ve ödeme dönüşü akışları tutar bütünlüğü ve yarış durumu açısından test edilecek; ödeme sağlayıcısının kendi altyapısı test edilmeyecek."
+    },
+    {
+     "value": "upload",
+     "label": "Dosya yükleme ve indirme",
+     "explanation": "Zararlı içerikli dosya, tür atlatma, yol geçişi, başkasının dosyasını indirme.",
+     "scenario": "Belge, görsel veya ek yüklenen projelerde.",
+     "example": "SVG içinde betik yüklenip açıldığında çalışıp çalışmadığı denenir.",
+     "ruleDetail": "Dosya yükleme ve indirme uç noktaları tür, boyut, yol ve yetki açısından test edilecek."
+    },
+    {
+     "value": "infra",
+     "label": "Altyapı: sunucu, TLS, DNS ve e-posta",
+     "explanation": "Açık portlar, TLS yapılandırması, alt alan adı ele geçirme, SPF / DKIM / DMARC, yönetim arayüzleri.",
+     "scenario": "Kendi sunucusu veya birden çok alt alan adı olan projelerde.",
+     "example": "Kullanılmayan bir alt alan adının boşta kalan bir hizmete yönlendiği (subdomain takeover) tespit edilir.",
+     "ruleDetail": "Sunucu, TLS, DNS (alt alan adı ele geçirme dahil) ve e-posta kimlik doğrulama kayıtları test edilecek."
+    },
+    {
+     "value": "cloud",
+     "label": "Bulut, CDN ve depolama yapılandırması",
+     "explanation": "Herkese açık bırakılmış depolama alanları, yanlış izinler, gizli anahtar sızıntısı.",
+     "scenario": "AWS, Azure, Google Cloud, Cloudflare R2 vb. kullanan projelerde.",
+     "example": "Yüklenen belgelerin bulunduğu depolama alanının listelenebilir olup olmadığı denenir.",
+     "ruleDetail": "Bulut depolama, CDN ve kimlik / izin yapılandırması gözden geçirilecek."
+    },
+    {
+     "value": "social",
+     "label": "Sosyal mühendislik ve oltalama",
+     "explanation": "Çalışanlara yönelik oltalama e-postası ve telefon senaryoları. Ayrı yazılı onay ve iletişim planı gerektirir.",
+     "scenario": "Kurum içi farkındalığın ölçülmesi isteniyorsa; çoğu web projesinde kapsam dışıdır.",
+     "example": "Yönetim paneli kullanıcılarına izinli bir oltalama e-postası gönderilir, tıklama oranı raporlanır.",
+     "ruleDetail": "Sosyal mühendislik testi yalnız ayrı yazılı onay ve bilgilendirme planıyla yapılacak."
+    }
+   ],
+   "recommend": [
+    {
+     "field": "member_mode",
+     "map": {
+      "Open": [
+       "web",
+       "auth",
+       "authz",
+       "api"
+      ],
+      "Approval": [
+       "web",
+       "auth",
+       "authz",
+       "api"
+      ],
+      "Invite": [
+       "web",
+       "auth",
+       "authz"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "ecommerce": [
+       "payment"
+      ],
+      "booking": [
+       "payment"
+      ],
+      "lms": [
+       "payment"
+      ],
+      "career": [
+       "upload"
+      ],
+      "listings": [
+       "upload"
+      ],
+      "portal": [
+       "authz",
+       "api"
+      ]
+     }
+    },
+    {
+     "field": "vuln_controls",
+     "map": {
+      "file_upload": [
+       "upload"
+      ],
+      "idor": [
+       "authz"
+      ],
+      "bfla": [
+       "authz",
+       "admin"
+      ]
+     }
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_approach",
+   "type": "select",
+   "label": "Test Yaklaşımı",
+   "en": "Testing Approach",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Test yapanın sistem hakkında ne kadar bilgiyle başlayacağını belirler. Bilgi arttıkça test daha derin ve verimli olur.",
+   "scenario": "Çoğu proje için gri kutu en iyi maliyet / bulgu oranını verir; kritik finans ya da sağlık sistemlerinde beyaz kutu tercih edilir.",
+   "example": "Gri kutuda test ekibine her rolden birer test hesabı ve API belgesi verilir; kaynak kodu verilmez.",
+   "rule": "Sızma testi {label} yaklaşımıyla yapılacaktır.",
+   "options": [
+    {
+     "value": "black",
+     "label": "Kara kutu (dış saldırgan)",
+     "explanation": "Test ekibine yalnız adres verilir; hesap ve belge verilmez. Dış saldırganı en gerçekçi biçimde taklit eder ama oturum içi açıkları büyük ölçüde kaçırır.",
+     "scenario": "Yalnız herkese açık bir site ya da dış saldırı yüzeyinin ölçülmesi isteniyorsa.",
+     "example": "Ekip yalnız alanadi.com adresiyle başlar.",
+     "ruleDetail": "Test ekibine yalnız hedef adresler verilecek."
+    },
+    {
+     "value": "grey",
+     "label": "Gri kutu (test hesaplarıyla) (önerilen)",
+     "explanation": "Her rolden test hesapları ve API belgesi verilir. Yetki, IDOR ve iş mantığı açıklarını bulmanın en verimli yoludur.",
+     "scenario": "Üyelik, panel veya API olan projelerin çoğunda.",
+     "example": "Müşteri, editör ve yönetici rollerinden birer test hesabı, iki ayrı test organizasyonu ve API belgesi verilir.",
+     "ruleDetail": "Test ekibine her rolden ve en az iki organizasyondan test hesabı ile API belgesi verilecek."
+    },
+    {
+     "value": "white",
+     "label": "Beyaz kutu (kaynak kodla)",
+     "explanation": "Kaynak kod, mimari ve yapılandırma da paylaşılır; kod incelemesi ile canlı test birleştirilir. En kapsamlıdır, en çok zaman alır.",
+     "scenario": "Finans, sağlık, kimlik doğrulama sağlayıcısı gibi yüksek riskli sistemlerde.",
+     "example": "Ekip kaynak koddaki yetki ara katmanını inceleyip atlanabilen bir rotayı canlı ortamda doğrular.",
+     "ruleDetail": "Test ekibiyle kaynak kod, mimari ve yapılandırma gizlilik sözleşmesiyle paylaşılacak."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_standard",
+   "type": "multiselect",
+   "label": "Test Standardı ve Metodoloji",
+   "en": "Testing Standard",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Testin hangi standarda göre yapılacağını ve raporun neye göre eşleneceğini belirler. Standart, testin neyi kapsadığını ölçülebilir kılar.",
+   "scenario": "Web projelerinde OWASP WSTG ile ASVS birlikte; API ağırlıklı projelerde ayrıca OWASP API Top 10.",
+   "example": "Rapordaki her bulgu WSTG test kimliği ve ASVS gereksinim numarasıyla eşlenir.",
+   "rule": "Sızma testi şu standart ve metodolojilere göre yapılacak ve raporlanacaktır: {labels}.",
+   "options": [
+    {
+     "value": "wstg",
+     "label": "OWASP Web Security Testing Guide (WSTG)",
+     "explanation": "Web uygulaması testinin adım adım yöntem rehberi.",
+     "scenario": "Her web projesinde.",
+     "example": "Bulgu: WSTG-ATHZ-04 (IDOR)."
+    },
+    {
+     "value": "asvs",
+     "label": "OWASP ASVS",
+     "explanation": "Seviyeli doğrulama gereksinimleri; testin kabul ölçütü olarak kullanılır.",
+     "scenario": "Gereksinim bazlı güvence istenen projelerde.",
+     "example": "ASVS 4.1.2 gereksinimi karşılanmadı olarak işaretlenir."
+    },
+    {
+     "value": "api_top10",
+     "label": "OWASP API Security Top 10",
+     "explanation": "API'lere özgü en kritik on risk.",
+     "scenario": "Ayrı API'si olan projelerde.",
+     "example": "Bulgu: API1:2023 Broken Object Level Authorization."
+    },
+    {
+     "value": "ptes",
+     "label": "PTES (Penetration Testing Execution Standard)",
+     "explanation": "Ön görüşmeden raporlamaya kadar sızma testi sürecinin aşamaları.",
+     "scenario": "Test sürecinin sözleşmede aşama aşama tanımlanması istenirse.",
+     "example": "Ön görüşme, istihbarat toplama, tehdit modelleme, istismar ve raporlama aşamaları."
+    },
+    {
+     "value": "nist115",
+     "label": "NIST SP 800-115",
+     "explanation": "Güvenlik testinin planlanması ve yürütülmesi için NIST rehberi.",
+     "scenario": "Kamu, düzenlemeye tabi ya da uluslararası denetime giren projelerde.",
+     "example": "Test planı NIST SP 800-115 aşamalarına göre hazırlanır."
+    }
+   ],
+   "recommend": {
+    "field": "pentest_scope",
+    "map": {
+     "web": [
+      "wstg",
+      "asvs"
+     ],
+     "api": [
+      "api_top10"
+     ],
+     "authz": [
+      "wstg"
+     ]
+    }
+   },
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_asvs_level",
+   "type": "select",
+   "label": "ASVS Doğrulama Seviyesi",
+   "en": "ASVS Verification Level",
+   "agents": [
+    "poz:siber-guvenlik:16.06/guvenli-yazilim-gelistirme-yasam-dongusu/kidemli-uygulama-guvenligi-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "pentest_standard",
+     "in": [
+      "asvs"
+     ]
+    }
+   ],
+   "explanation": "OWASP ASVS'nin hangi seviyesine göre doğrulama yapılacağını belirler. Seviye yükseldikçe gereksinim sayısı ve derinliği artar.",
+   "scenario": "Kişisel veri işleyen çoğu iş uygulaması için Seviye 2; yalnız tanıtım sitelerinde Seviye 1; finans, sağlık ve kritik altyapıda Seviye 3.",
+   "example": "Seviye 2 seçilince oturum yönetimi, erişim denetimi ve kriptografi gereksinimlerinin tamamı kontrol listesine girer.",
+   "rule": "Doğrulama OWASP ASVS {label} gereksinimlerine göre yapılacaktır.",
+   "options": [
+    {
+     "value": "L1",
+     "label": "Seviye 1 (temel)",
+     "explanation": "Kara kutu testle doğrulanabilen asgari gereksinimler.",
+     "scenario": "Kişisel veri işlemeyen, düşük riskli siteler.",
+     "example": "Tanıtım sitesi ve iletişim formu."
+    },
+    {
+     "value": "L2",
+     "label": "Seviye 2 (standart) (önerilen)",
+     "explanation": "Hassas veri işleyen uygulamaların çoğu için önerilen seviye.",
+     "scenario": "Üyelik, e-ticaret, B2B portal ve SaaS uygulamaları.",
+     "example": "Müşteri portalı ve yönetim paneli olan bir B2B platform."
+    },
+    {
+     "value": "L3",
+     "label": "Seviye 3 (yüksek güvence)",
+     "explanation": "Kritik işlemler ve yüksek değerli veriler için en derin doğrulama.",
+     "scenario": "Bankacılık, sağlık, kimlik doğrulama sağlayıcıları, kritik altyapı.",
+     "example": "Ödeme kuruluşunun müşteri paneli."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_schedule",
+   "type": "multiselect",
+   "label": "Test Zamanlaması",
+   "en": "Testing Schedule",
+   "agents": [
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti",
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Sızma testinin ve sürekli güvenlik kontrollerinin ne zaman yapılacağını belirler.",
+   "scenario": "En az canlıya çıkıştan önce bir test ve yılda bir tekrar; büyük değişikliklerde ek test; aradaki dönem için otomatik tarama ve açık bildirim politikası.",
+   "example": "Yayından iki hafta önce gri kutu test, her sürümde otomatik DAST taraması, sitede /.well-known/security.txt dosyası.",
+   "rule": "Güvenlik testleri şu zamanlarda yapılacaktır: {labels}.",
+   "options": [
+    {
+     "value": "prelaunch",
+     "label": "Canlıya çıkmadan önce",
+     "explanation": "İlk yayından önce, düzeltmeye zaman kalacak biçimde yapılan test.",
+     "scenario": "Her yeni projede.",
+     "example": "Yayın tarihinden en az iki hafta önce test, bir hafta önce yeniden test.",
+     "ruleDetail": "İlk canlıya çıkıştan önce, düzeltme ve yeniden test için zaman bırakılarak sızma testi yapılacak."
+    },
+    {
+     "value": "major",
+     "label": "Büyük sürüm ve mimari değişiklikten sonra",
+     "explanation": "Yeni modül, ödeme, kimlik doğrulama ya da altyapı değişikliğinden sonra yapılan odaklı test.",
+     "scenario": "Sürekli geliştirilen ürünlerde.",
+     "example": "Yeni bayi portalı yayına girmeden önce yalnız o portal test edilir.",
+     "ruleDetail": "Kimlik doğrulama, yetki, ödeme ya da altyapıyı değiştiren büyük sürümlerden sonra odaklı test yapılacak."
+    },
+    {
+     "value": "annual",
+     "label": "Yılda en az bir kez",
+     "explanation": "Düzenli tam kapsamlı test.",
+     "scenario": "Kişisel veri işleyen ve sürekli yayında olan projelerde; birçok uyum çerçevesi bunu bekler.",
+     "example": "Her yıl Mart ayında dış firma testi.",
+     "ruleDetail": "Yılda en az bir kez tam kapsamlı sızma testi yapılacak."
+    },
+    {
+     "value": "ci_dast",
+     "label": "Her sürümde otomatik tarama (DAST)",
+     "explanation": "Test ortamına her dağıtımda otomatik dinamik güvenlik taraması; insan testinin yerine geçmez.",
+     "scenario": "Sık yayın yapan ekiplerde.",
+     "example": "Staging dağıtımından sonra ZAP taraması çalışır, yüksek bulguda hat durur.",
+     "ruleDetail": "Her sürümde test ortamında otomatik DAST taraması çalışacak; yüksek önemli bulgu yayını durduracak."
+    },
+    {
+     "value": "vdp",
+     "label": "Sürekli: açık bildirim politikası ve security.txt",
+     "explanation": "Dışarıdan bulunan açıkların nasıl bildirileceğini ve iyi niyetli araştırmacının korunacağını açıklayan politika.",
+     "scenario": "Herkese açık her sitede önerilir.",
+     "example": "/.well-known/security.txt dosyasında güvenlik e-postası ve politika adresi yer alır.",
+     "ruleDetail": "Açık bildirim politikası yayımlanacak ve /.well-known/security.txt (RFC 9116) dosyası eklenecek."
+    },
+    {
+     "value": "bounty",
+     "label": "Hata ödül programı (bug bounty)",
+     "explanation": "Bulunan açıklar için araştırmacılara ödül verilen, kapsamı ve kuralları belirli program.",
+     "scenario": "Olgun güvenlik süreçleri ve hızlı düzeltme kapasitesi olan büyük ürünlerde.",
+     "example": "Program platformda kapsam, ödül tablosu ve kurallarla yayımlanır.",
+     "ruleDetail": "Kapsamı, kuralları ve ödül tablosu yazılı bir hata ödül programı yürütülecek."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_executor",
+   "type": "select",
+   "label": "Testi Yapan",
+   "en": "Test Performed By",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Sızma testini kimin yapacağını belirler. Bağımsızlık, bulguların tarafsızlığını ve denetimlerde kabul görmesini sağlar.",
+   "scenario": "Canlıya çıkış ve yıllık testlerde bağımsız dış uzman; ara dönemde iç ekip ve otomatik araçlar.",
+   "example": "Hibrit modelde her sürümde otomatik tarama ve iç inceleme yapılır, yılda bir bağımsız firma tam test yapar.",
+   "rule": "Sızma testini {label} yapacaktır.",
+   "options": [
+    {
+     "value": "external",
+     "label": "Bağımsız dış firma / sertifikalı uzman",
+     "explanation": "Geliştirme ekibinden bağımsız, deneyimli (ör. OSCP, OSWE, CREST sertifikalı) test ekibi.",
+     "scenario": "Canlıya çıkış, yıllık test ve denetim gereken durumlarda.",
+     "example": "Sözleşmeli güvenlik firması iki hafta gri kutu test yapar."
+    },
+    {
+     "value": "internal",
+     "label": "Kurum içi güvenlik ekibi",
+     "explanation": "Şirketin kendi uygulama güvenliği ekibi.",
+     "scenario": "Güvenlik ekibi olan kurumlarda, ara dönem testlerinde.",
+     "example": "İç ekip her büyük sürümde odaklı test yapar."
+    },
+    {
+     "value": "hybrid",
+     "label": "Hibrit: otomatik tarama + iç inceleme + yıllık dış test",
+     "explanation": "Sürekli otomatik tarama ve iç incelemeyi yılda en az bir bağımsız testle birleştirir.",
+     "scenario": "Sürekli geliştirilen ürünlerin çoğunda.",
+     "example": "CI'da DAST, sürümlerde iç inceleme, yılda bir dış firma."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_env",
+   "type": "select",
+   "label": "Test Ortamı",
+   "en": "Test Environment",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani",
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti"
+   ],
+   "explanation": "Testin hangi ortamda yapılacağını belirler. Test ortamı canlıya ne kadar benzerse bulgular o kadar gerçekçidir.",
+   "scenario": "Önerilen, canlının birebir kopyası olan ama gerçek kişisel veri içermeyen test (staging) ortamıdır.",
+   "example": "staging.alanadi.com canlıyla aynı sürüm ve yapılandırmada, sentetik verilerle test edilir.",
+   "rule": "Sızma testi {label} ortamında yapılacaktır.",
+   "options": [
+    {
+     "value": "staging",
+     "label": "Canlı benzeri test ortamı (önerilen)",
+     "explanation": "Aynı sürüm ve yapılandırma, sentetik veri; canlı sistem ve gerçek kullanıcılar etkilenmez.",
+     "scenario": "Çoğu projede.",
+     "example": "Test için ayrı veritabanı ve sahte ödeme anahtarları kullanılır.",
+     "ruleDetail": "Test ortamı canlıyla aynı sürüm ve yapılandırmada olacak, gerçek kişisel veri içermeyecek."
+    },
+    {
+     "value": "production",
+     "label": "Canlı ortam (onaylı zaman penceresiyle)",
+     "explanation": "Gerçek yapılandırmayı test eder; kesinti ve veri riski nedeniyle onaylı zaman penceresi, yedek ve izleme gerektirir.",
+     "scenario": "Test ortamı kurulamıyorsa veya altyapı / yapılandırma testi gerekiyorsa.",
+     "example": "Gece 02:00–05:00 arasında, yedek alındıktan sonra, yıkıcı denemeler yapılmadan.",
+     "ruleDetail": "Canlı ortamda test yalnız onaylı zaman penceresinde, öncesinde yedek alınarak ve yıkıcı denemeler yapılmadan yürütülecek."
+    },
+    {
+     "value": "both",
+     "label": "İkisi birlikte",
+     "explanation": "Uygulama açıkları test ortamında, altyapı ve yapılandırma canlıda sınanır.",
+     "scenario": "Altyapısı ayrıca test edilmesi gereken projelerde.",
+     "example": "Uygulama staging'de, TLS ve DNS canlıda test edilir.",
+     "ruleDetail": "Uygulama testleri test ortamında, altyapı ve yapılandırma testleri canlıda onaylı pencerede yapılacak."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_tools",
+   "type": "multiselect",
+   "label": "Otomatik Güvenlik Taramaları",
+   "en": "Automated Security Scanning",
+   "agents": [
+    "poz:siber-guvenlik:16.06/devsecops-ve-kod-guvenligi/kod-guvenligi-uzmani",
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti"
+   ],
+   "explanation": "Sızma testleri arasındaki dönemi kapatan, geliştirme hattında (CI) çalışan otomatik taramaları belirler. İnsan eliyle yapılan testin yerine geçmez.",
+   "scenario": "Her projede en az bağımlılık ve gizli anahtar taraması; API ve panel olan projelerde DAST.",
+   "example": "Her birleştirme isteğinde Semgrep ve bağımlılık taraması, her staging dağıtımında ZAP taraması çalışır.",
+   "rule": "Geliştirme hattında şu otomatik güvenlik taramaları çalışacak, yüksek önemli bulgular birleştirmeyi ya da yayını durduracaktır: {labels}.",
+   "options": [
+    {
+     "value": "dast",
+     "label": "DAST – çalışan uygulama taraması (ör. ZAP)",
+     "explanation": "Çalışan uygulamaya dışarıdan saldırı denemeleri yapan tarayıcı.",
+     "scenario": "Test ortamı olan projelerde.",
+     "example": "Staging dağıtımından sonra ZAP temel taraması."
+    },
+    {
+     "value": "sast",
+     "label": "SAST – kaynak kod analizi (ör. Semgrep, CodeQL)",
+     "explanation": "Kodda güvensiz kalıpları (innerHTML, ham SQL, sahiplik denetimi olmayan sorgu) arayan statik analiz.",
+     "scenario": "Her projede.",
+     "example": "Birleştirme isteğinde innerHTML kullanımı uyarı olarak işaretlenir."
+    },
+    {
+     "value": "sca",
+     "label": "Bağımlılık açığı taraması (SCA)",
+     "explanation": "Kullanılan paketlerdeki bilinen açıkları (CVE) bulur.",
+     "scenario": "Her projede.",
+     "example": "npm audit / Dependabot yüksek önemli açıkta birleştirmeyi durdurur."
+    },
+    {
+     "value": "secrets",
+     "label": "Gizli anahtar taraması (ör. gitleaks)",
+     "explanation": "Depoya yanlışlıkla eklenen API anahtarı, parola ve jetonları bulur.",
+     "scenario": "Her projede; depo herkese açıksa zorunlu.",
+     "example": "Commit öncesi kanca ve GitHub gizli bilgi koruması."
+    },
+    {
+     "value": "iac",
+     "label": "Konteyner ve altyapı kodu taraması",
+     "explanation": "Docker imajları, Terraform / Kubernetes yapılandırmalarındaki açık ve yanlış ayarlar.",
+     "scenario": "Konteyner veya altyapı kodu kullanan projelerde.",
+     "example": "Trivy taraması kök kullanıcıyla çalışan imajı işaretler."
+    },
+    {
+     "value": "headers",
+     "label": "TLS ve güvenlik başlığı denetimi",
+     "explanation": "TLS sürümü, sertifika, HSTS, CSP ve diğer güvenlik başlıklarının düzenli kontrolü.",
+     "scenario": "Her canlı sitede.",
+     "example": "Haftalık otomatik denetim CSP'nin yanlışlıkla kaldırıldığını bildirir."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_rules",
+   "type": "multiselect",
+   "label": "Test Kuralları (Rules of Engagement)",
+   "en": "Rules of Engagement",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Test başlamadan kararlaştırılan, testin hukuki ve operasyonel sınırlarını çizen kurallardır.",
+   "scenario": "Her sızma testinde yazılı yetki ve kapsam belgesi zorunludur; diğer kurallar ortam ve kapsama göre seçilir.",
+   "example": "İmzalı yetki belgesinde kapsamdaki adresler, tarih aralığı, test IP'leri, yasak denemeler ve acil durum telefonu yer alır.",
+   "rule": "Sızma testi şu kurallarla yürütülecektir: {labels}.",
+   "options": [
+    {
+     "value": "auth_doc",
+     "label": "Yazılı yetki ve kapsam belgesi",
+     "explanation": "Kapsam, tarih aralığı, test IP adresleri ve yetkili kişilerin imzasını içeren belge. İzinsiz test TCK m. 243–244 kapsamında suç oluşturabilir.",
+     "scenario": "Her testte.",
+     "example": "Test, imzalı belge ulaşmadan başlamaz.",
+     "ruleDetail": "Test, kapsam, tarih aralığı ve test IP adreslerini içeren imzalı yetki belgesi olmadan başlamayacak."
+    },
+    {
+     "value": "accounts",
+     "label": "Test hesapları ve sentetik veri",
+     "explanation": "Her rol ve organizasyon için ayrı test hesabı; gerçek kişi verisi kullanılmaz.",
+     "scenario": "Gri ve beyaz kutu testlerde.",
+     "example": "Müşteri-A, Müşteri-B ve Yönetici test hesapları.",
+     "ruleDetail": "Her rol ve en az iki organizasyon için test hesabı ve sentetik veri hazırlanacak."
+    },
+    {
+     "value": "no_dos",
+     "label": "Hizmet engelleme ve yıkıcı deneme yasağı",
+     "explanation": "Yük / DoS saldırısı, veri silme ve kalıcı değişiklik yapılmaz; yük testi ayrı planlanır.",
+     "scenario": "Özellikle canlı ortamda.",
+     "example": "Kayıt silme açığı bulunduğunda yalnız kendi test kaydı üzerinde kanıtlanır.",
+     "ruleDetail": "Hizmet engelleme, veri silme ve kalıcı değişiklik içeren denemeler yapılmayacak."
+    },
+    {
+     "value": "data_safety",
+     "label": "Kişisel veriye erişimde dur ve bildir",
+     "explanation": "Test sırasında gerçek kişisel veriye ulaşılırsa test durdurulur, veri kopyalanmaz, kanıt maskelenir ve sorumluya hemen bildirilir.",
+     "scenario": "Kişisel veri işleyen her projede.",
+     "example": "IDOR ile gerçek müşteri kaydı görülünce yalnız kayıt kimliği maskelenerek raporlanır.",
+     "ruleDetail": "Gerçek kişisel veriye ulaşılırsa test durdurulacak, veri kopyalanmayacak, kanıt maskelenecek ve sorumluya hemen bildirilecek."
+    },
+    {
+     "value": "emergency",
+     "label": "Acil durdurma ve iletişim kişisi",
+     "explanation": "Kesinti veya beklenmeyen etki olduğunda testi durduracak, iki tarafta da 7/24 ulaşılabilir kişiler.",
+     "scenario": "Her testte.",
+     "example": "Test ekibi ve proje tarafından birer nöbetçi telefon.",
+     "ruleDetail": "İki tarafta da ulaşılabilir acil durum kişileri ve testi durdurma yöntemi tanımlanacak."
+    },
+    {
+     "value": "secure_share",
+     "label": "Bulguların şifreli paylaşımı ve saklama süresi",
+     "explanation": "Rapor ve kanıtlar şifreli kanaldan paylaşılır, saklama ve imha süresi belirlenir.",
+     "scenario": "Her testte.",
+     "example": "Rapor şifreli arşivle, parola ayrı kanaldan iletilir; test verisi 90 gün sonra imha edilir.",
+     "ruleDetail": "Rapor ve kanıtlar şifreli kanaldan paylaşılacak; saklama ve imha süresi belirlenecek."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_report",
+   "type": "multiselect",
+   "label": "Rapor İçeriği",
+   "en": "Report Contents",
+   "agents": [
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani",
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti"
+   ],
+   "explanation": "Sızma testi raporunda bulunması gereken bölümleri belirler.",
+   "scenario": "Her raporda önem puanı, kanıt, yeniden üretim adımları ve düzeltme önerisi; yönetime sunulacaksa yönetici özeti.",
+   "example": "Bulgu: IDOR · CVSS 8.1 · /api/invoices/{id} · adım adım yeniden üretim · düzeltme: organizasyon koşullu sorgu · ASVS 4.2.1.",
+   "rule": "Sızma testi raporu şunları içerecektir: {labels}.",
+   "options": [
+    {
+     "value": "exec",
+     "label": "Yönetici özeti",
+     "explanation": "Teknik olmayan okuyucu için genel risk durumu ve öncelikli eylemler.",
+     "scenario": "Yönetime veya müşteriye sunulacak raporlarda.",
+     "example": "Bir sayfalık özet: 1 kritik, 3 yüksek bulgu ve öncelikli üç eylem."
+    },
+    {
+     "value": "cvss",
+     "label": "CVSS v4.0 puanı ve iş etkisi",
+     "explanation": "Her bulgunun ortak ölçüyle önem derecesi ve projeye özgü etkisi.",
+     "scenario": "Her raporda.",
+     "example": "CVSS 8.1 (Yüksek) — müşteri faturaları başka şirketlerce görülebilir."
+    },
+    {
+     "value": "repro",
+     "label": "Kanıt ve adım adım yeniden üretim",
+     "explanation": "İstek / yanıt örnekleri, ekran görüntüleri ve geliştiricinin açığı tekrar oluşturabileceği adımlar.",
+     "scenario": "Her raporda.",
+     "example": "İstek, yanıt ve hangi hesapla denendiği."
+    },
+    {
+     "value": "fix",
+     "label": "Düzeltme önerisi ve referans",
+     "explanation": "Açığın nasıl kapatılacağı ve ilgili OWASP / CWE referansı.",
+     "scenario": "Her raporda.",
+     "example": "Öneri: sorguya organization_id koşulu; CWE-639."
+    },
+    {
+     "value": "mapping",
+     "label": "OWASP Top 10 / ASVS / WSTG eşlemesi",
+     "explanation": "Bulguların standart maddelerle eşlenmesi; kapsanan ve eksik kalan maddelerin listesi.",
+     "scenario": "Standarda göre yapılan testlerde.",
+     "example": "API1:2023, ASVS 4.2.1, WSTG-ATHZ-04."
+    },
+    {
+     "value": "retest",
+     "label": "Düzeltme sonrası yeniden test sonucu",
+     "explanation": "Her bulgunun kapatılıp kapatılmadığının yeniden test edilerek raporlanması.",
+     "scenario": "Her testte.",
+     "example": "Bulgu 3: düzeltildi (yeniden test 12 Aralık)."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_sla",
+   "type": "select",
+   "label": "Bulgu Düzeltme Süreleri",
+   "en": "Remediation SLA",
+   "agents": [
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti"
+   ],
+   "explanation": "Bulguların önem derecesine göre en geç ne kadar sürede kapatılacağını belirler.",
+   "scenario": "Kişisel veri veya ödeme işleyen projelerde sıkı süreler; düşük riskli tanıtım sitelerinde standart süreler.",
+   "example": "Kritik bir IDOR bulgusu 48 saat içinde kapatılır ve yeniden test edilir.",
+   "rule": "Bulgu düzeltme süreleri: {label}. Süresinde kapatılamayan bulgu için yazılı risk kabulü ve geçici önlem gerekecektir.",
+   "options": [
+    {
+     "value": "strict",
+     "label": "Sıkı: Kritik 48 saat · Yüksek 7 gün · Orta 30 gün · Düşük 90 gün",
+     "explanation": "Kişisel veri, ödeme veya kritik iş süreci olan projeler için.",
+     "scenario": "E-ticaret, SaaS, B2B portal, sağlık ve finans.",
+     "example": "Kritik bulgu hafta sonu bile 48 saat içinde kapatılır."
+    },
+    {
+     "value": "standard",
+     "label": "Standart: Kritik 7 gün · Yüksek 30 gün · Orta 90 gün · Düşük sonraki sürüm",
+     "explanation": "Orta riskli projeler için yaygın düzen.",
+     "scenario": "Kurumsal site, blog, içerik platformu.",
+     "example": "Yüksek bulgu bir sonraki iki haftalık sprintte kapatılır."
+    },
+    {
+     "value": "risk_based",
+     "label": "Risk bazlı: her bulgu için ayrı karar ve yazılı risk kabulü",
+     "explanation": "Süre bulgu bazında güvenlik sorumlusu ve proje sahibiyle belirlenir; kapatılmayan bulgu için yazılı risk kabulü alınır.",
+     "scenario": "Kaynakları kısıtlı ya da özel uyum gereksinimi olan projelerde.",
+     "example": "Orta bulgu için geçici WAF kuralı ve 60 günlük süre yazılı olarak kabul edilir."
+    }
+   ],
+   "section": "pentest"
+  },
+  {
+   "id": "pentest_gate",
+   "type": "boolean",
+   "label": "Kritik Bulguda Canlıya Çıkışı Durdur",
+   "en": "Block Release on Critical Findings",
+   "agents": [
+    "poz:siber-guvenlik:16.08/guvenlik-acigi-ve-maruziyet-yonetimi/zafiyet-analisti",
+    "poz:siber-guvenlik:16.06/uygulama-ve-api-guvenlik-testleri/kidemli-sizma-testi-uzmani"
+   ],
+   "explanation": "Kapatılmamış kritik veya yüksek önemli bir sızma testi bulgusu varken canlıya çıkışın engellenip engellenmeyeceğini belirler.",
+   "scenario": "Kişisel veri, ödeme ya da panel içeren her projede önerilir.",
+   "example": "Yeniden testte IDOR bulgusu hâlâ açıksa yayın tarihi ertelenir.",
+   "rule": "Kapatılmamış kritik veya yüksek önemli sızma testi bulgusu varken canlıya çıkış engellenmesi {booltext}.",
+   "yes": {
+    "scenario": "Müşteri verisi, ödeme veya yönetim paneli olan bir projede yayın tarihi güvenlikten önce gelmemeliyse.",
+    "example": "Canlıya Çıkış kalite kapısında “Açık kritik / yüksek bulgu yok” maddesi işaretlenmeden yayın yapılmaz."
+   },
+   "no": {
+    "scenario": "Kişisel veri işlemeyen, kısa ömürlü bir tanıtım sayfasında bulgular yayından sonra kapatılabilir.",
+    "example": "Orta önemli bir başlık eksikliği yayından sonraki ilk bakımda giderilir."
+   },
+   "section": "pentest"
+  }
+ ]
+}
