@@ -8574,6 +8574,40 @@
      ]
     }
    ]
+  },
+  {
+   "field": "mk_ids",
+   "after": "tiktok_pixel",
+   "rows": [
+    {
+     "k": "tiktok_ad_account",
+     "label": "TikTok Ads Manager — reklam hesabı kimliği (Advertiser ID)",
+     "ph": "7123456789012345678",
+     "re": "^\\d{10,20}$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "tiktok"
+       ]
+      }
+     ]
+    },
+    {
+     "k": "tiktok_bc",
+     "label": "TikTok Business Center — işletme merkezi kimliği",
+     "ph": "7123456789012345678",
+     "re": "^\\d{10,20}$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "tiktok"
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "templateFormats": {
