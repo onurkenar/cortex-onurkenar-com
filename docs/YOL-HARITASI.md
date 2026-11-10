@@ -202,6 +202,9 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
 - [x] CDN & Önbellek bölümü (2026-11-10, kullanıcı isteği): Sunucu & Altyapı'da 27. bölüm, 9 karar (kullanım, sağlayıcı, kapsam, önbellek kuralları, temizleme, güvenlik, açık CDN kaynakları, kişisel veri, izleme), rehber ve 9 doğrulanmış kaynak. Test 20/20; karar verilmemiş projede prompt değişmedi (yalnız bölüm numaraları kaydı).
   - [ ] İstenirse: Performans Standartları'ndaki "CDN / Edge Cache" ve Font Kaynağı'ndaki "Google Fonts (CDN)" seçenekleriyle öneri bağı (`cdn_use` / `cdn_third_party`).
 
+- [x] 4 Göz Onay Akışı (2026-11-10, kullanıcı yönergesi): Teknik Mimari'de yeni bölüm "İş Akışları ve Onay Mekanizmaları" — anahtarla etkinleşen isteğe bağlı modül, 15 karar (kapsam, 4 / 6 göz / çok aşamalı / kurala göre onay, görevler ayrılığı, dinamik kurallar, ek durumlar, bildirimler, SLA, yeniden onay, değiştirilemez denetim kaydı, yönetim paneli, arayüz, mimari), akış diyagramı ve durum göstergeleri, rehber ve 9 doğrulanmış kaynak. Test 42/42; karar verilmemiş projede çıktı değişmedi.
+  - [ ] İstenirse: Loglama Standardı'ndaki "Audit Log" ve Panel Yetkilendirme Modeli ile öneri bağı; onay modülü etkinken talimat dosyasına onay tabloları için örnek şema.
+
 ## Açık işler
 
 ### Şirket şeması (kullanıcı adım adım veriyor)
