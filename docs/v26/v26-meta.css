@@ -1,0 +1,7 @@
+/* Meta Servisleri — Pazarlama'nın dördüncü alt başlığı (2026-11-11). Kaynak docs/v26/v26-meta.css → docs/meta/arayuz_ekle.py */
+.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:395px}
+@media(max-width:900px){.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:445px}}
+#sideNav:not(.searching) .navGroup[data-area="meta"] .navGroupTitle{display:none}
+#sideNav.searching .navGroup[data-area="meta"] .navGroupTitle:before{content:"Pazarlama · "}
+.mtExport{scroll-margin-top:calc(var(--hdH,76px) + 14px)}
+.mtExport .mkPromptBox{min-height:380px;font-size:12.5px}

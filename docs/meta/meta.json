@@ -1,0 +1,2538 @@
+{
+ "version": "1.0",
+ "group": "Meta Servisleri",
+ "agents": {
+  "S": "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi",
+  "IG": "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/instagram-uzmani",
+  "FB": "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/facebook-uzmani",
+  "WA": "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/whatsapp-uzmani",
+  "PS": "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani",
+  "O": "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+  "K": "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+  "I": "poz:siber-guvenlik:16.05/kimlik-ve-erisim-yonetisimi/kidemli-kimlik-ve-erisim-uzmani",
+  "API": "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/api-ve-entegrasyon-uzmani",
+  "MI": "poz:pazarlama:marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/entegrasyon-uzmani",
+  "CX": "poz:musteri-deneyimi:11.04/cok-kanalli-destek/kidemli-cok-kanalli-destek-uzmani"
+ },
+ "idsAdd": [
+  {
+   "k": "meta_page",
+   "label": "Facebook Sayfası kimliği (Page ID)",
+   "ph": "123456789012345",
+   "re": "^\\d{6,20}$"
+  },
+  {
+   "k": "meta_ig",
+   "label": "Instagram profesyonel hesap kimliği",
+   "ph": "17841400000000000",
+   "re": "^\\d{6,20}$"
+  },
+  {
+   "k": "meta_catalog",
+   "label": "Meta katalog kimliği",
+   "ph": "1234567890123456",
+   "re": "^\\d{6,20}$"
+  },
+  {
+   "k": "meta_waba",
+   "label": "WhatsApp Business hesabı (WABA) kimliği",
+   "ph": "102345678901234",
+   "re": "^\\d{6,20}$"
+  },
+  {
+   "k": "meta_wa_phone",
+   "label": "WhatsApp telefon numarası kimliği (Phone number ID)",
+   "ph": "109876543210987",
+   "re": "^\\d{6,20}$"
+  }
+ ],
+ "idsWhen": {
+  "meta_business": [
+   "portfolio"
+  ],
+  "meta_pixel": [
+   "pixel"
+  ],
+  "meta_ad_account": [
+   "ads"
+  ],
+  "meta_page": [
+   "page"
+  ],
+  "meta_ig": [
+   "instagram"
+  ],
+  "meta_catalog": [
+   "catalog"
+  ],
+  "meta_waba": [
+   "whatsapp"
+  ],
+  "meta_wa_phone": [
+   "whatsapp"
+  ]
+ },
+ "sections": [
+  {
+   "id": "mt_scope",
+   "name": "Kapsam, İşletme Portföyü & Erişim",
+   "en": "Scope, Business Portfolio & Access",
+   "icon": "◉",
+   "agents": [
+    "S",
+    "I"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_legal_name",
+    "domain_name",
+    "mk_accounts",
+    "mk_ids"
+   ],
+   "desc": "Projede hangi Meta varlıklarının kurulacağını, bu varlıkların hangi işletme portföyüne ait olacağını ve kimin, hangi yetkiyle erişeceğini belirler; sonraki bölümler buradaki seçime göre açılır",
+   "guide": {
+    "purpose": "Facebook Sayfası, Instagram hesabı, WhatsApp numarası, reklam hesabı, piksel (veri kümesi) ve katalog Meta'da bir işletme portföyüne (eski adıyla Business Manager; yönetim ekranı Meta Business Suite) bağlanır. Portföyün sahibi bu varlıkların, reklam geçmişinin ve faturaların da sahibidir. Bu bölüm kurulacak varlıkları seçtirir, sahipliği kuruma bağlar ve erişimi en düşük yetki ilkesine göre düzenler. Seçtiğiniz varlıkların bölümleri menüde açılır; Ortak Bilgiler › Hesap ve Etiket Kimlikleri'nde de o varlıkların kimlik kutuları üste gelir.",
+    "criteria": [
+     "Bütün varlıklar kurumun kendi işletme portföyündedir; ajans varlıklara kendi portföyünden iş ortağı olarak erişir.",
+     "Portföyde tam kontrollü en az iki kurum çalışanı vardır ve iki faktörlü doğrulama herkes için zorunludur.",
+     "Reklam, WhatsApp Cloud API ya da yüksek mesaj limiti gerekiyorsa işletme doğrulaması tamamlanmıştır; ticari unvan ve adres belgelerle birebir aynıdır.",
+     "API entegrasyonları kişisel hesap jetonuyla değil, sistem kullanıcısıyla çalışır; kimin hangi varlıkta hangi yetkiye sahip olduğu yazılı bir erişim listesindedir."
+    ],
+    "pitfalls": [
+     "Sayfayı ya da reklam hesabını bir çalışanın kişisel profilinde veya ajansın portföyünde açmak: kişi ayrılınca ya da ajansla yollar ayrılınca varlıklar, takipçiler ve reklam geçmişi kurumdan kopar.",
+     "Tek yöneticiyle çalışmak: o kişinin Facebook hesabı kilitlenirse ya da ele geçirilirse portföye kimse erişemez.",
+     "Ajans çalışanlarını tek tek kişi olarak eklemek: ajans değişince kimin erişimi olduğu takip edilemez; iş ortağı erişimi tek noktadan kaldırılır.",
+     "Ticari unvanı belgelerden farklı yazmak: işletme doğrulaması reddedilir, WhatsApp ve reklam limitleri düşük kalır."
+    ],
+    "resources": [
+     {
+      "title": "Meta Business Suite'te işletme portföyü oluşturma",
+      "url": "https://www.facebook.com/business/help/1710077379203657",
+      "note": "Meta Yardım Merkezi: portföyün nasıl açıldığı."
+     },
+     {
+      "title": "İşletme doğrulaması",
+      "url": "https://www.facebook.com/business/help/2058515294227817",
+      "note": "Meta Yardım Merkezi: işletme doğrulamasının adımları ve istenen belgeler."
+     },
+     {
+      "title": "Bir iş ortağına varlık erişimi verme",
+      "url": "https://www.facebook.com/business/help/1717412048538897",
+      "note": "Ajansa varlıkları kendi portföyünden yönetme yetkisi vermek."
+     },
+     {
+      "title": "Sistem kullanıcıları (Business Management API)",
+      "url": "https://developers.facebook.com/docs/business-management-apis/system-users",
+      "note": "Sunucu ve yazılım entegrasyonları için kişiye bağlı olmayan kullanıcılar ve jetonlar."
+     },
+     {
+      "title": "Sistem kullanıcısı ekleme",
+      "url": "https://www.facebook.com/business/help/503306463479099",
+      "note": "Meta Yardım Merkezi: sistem kullanıcısını portföye ekleme."
+     },
+     {
+      "title": "Meta Verified",
+      "url": "https://about.fb.com/meta-verified/",
+      "note": "Meta'nın işletmeler için ücretli doğrulama ve destek aboneliği; ülkeye göre uygunluk değişir."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_services",
+     "label": "Kurulacak Meta Varlıkları",
+     "en": "Meta Assets to Set Up",
+     "type": "multiselect",
+     "explanation": "Bu projede kurulacak ya da düzenlenecek Meta varlıklarını seçer. Seçtiğiniz varlıkların kurulum bölümleri menüde açılır; seçilmeyenler gizli kalır ve kurallara girmez.",
+     "scenario": "Sosyal medyada görünür olmak isteyen çoğu işletme işletme portföyü, Facebook Sayfası ve Instagram'ı seçer; reklam verilecekse piksel ve reklam hesabı, mesajla satış ya da destek yapılacaksa WhatsApp Business, e-ticarette katalog eklenir.",
+     "example": "Bir güzellik salonu işletme portföyü, Sayfa, Instagram, WhatsApp Business, piksel ve reklam hesabını seçer; katalog bölümü menüde görünmez.",
+     "rule": "Kurulacak Meta varlıkları: {labels}.",
+     "recommend": [
+      {
+       "field": "mk_ads_channels",
+       "map": {
+        "meta": [
+         "portfolio",
+         "page",
+         "instagram",
+         "pixel",
+         "ads"
+        ]
+       }
+      },
+      {
+       "field": "mk_platforms",
+       "map": {
+        "instagram": [
+         "portfolio",
+         "instagram"
+        ],
+        "facebook": [
+         "portfolio",
+         "page"
+        ],
+        "threads": [
+         "instagram"
+        ],
+        "whatsapp": [
+         "whatsapp"
+        ],
+        "whatsapp_group": [
+         "whatsapp"
+        ],
+        "whatsapp_community": [
+         "whatsapp"
+        ]
+       }
+      },
+      {
+       "field": "mk_conversions",
+       "map": {
+        "whatsapp": [
+         "whatsapp"
+        ]
+       }
+      },
+      {
+       "field": "modules_extra",
+       "map": {
+        "ecommerce": [
+         "catalog",
+         "pixel"
+        ]
+       }
+      },
+      {
+       "field": "mk_meta_objectives",
+       "map": {
+        "catalog": [
+         "catalog"
+        ],
+        "messages": [
+         "whatsapp",
+         "page"
+        ],
+        "website": [
+         "pixel"
+        ],
+        "retargeting": [
+         "pixel"
+        ],
+        "instant_form": [
+         "page"
+        ]
+       }
+      },
+      {
+       "field": "mk_meta_prereq",
+       "map": {
+        "pixel": [
+         "pixel"
+        ],
+        "capi": [
+         "pixel"
+        ],
+        "domain": [
+         "pixel"
+        ],
+        "bm": [
+         "portfolio"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "portfolio",
+       "label": "İşletme portföyü (Meta Business Suite)",
+       "explanation": "Sayfa, Instagram, WhatsApp, reklam hesabı, piksel ve katalog gibi varlıkların bağlandığı kurumsal çatı hesaptır; kişiler, ajanslar ve yetkiler buradan yönetilir.",
+       "scenario": "Meta'da birden çok varlık kullanacak ya da ajansla çalışacak her işletme.",
+       "example": "Kurumun portföyünde iki yönetici, bir ajans iş ortağı ve beş varlık görünür.",
+       "ruleDetail": "Bütün Meta varlıkları kurumun işletme portföyünde toplanır; kişiler ve ajanslar yetkiyi portföy üzerinden alır."
+      },
+      {
+       "value": "page",
+       "label": "Facebook Sayfası",
+       "explanation": "İşletmenin Facebook'taki herkese açık profilidir; reklamların, Messenger'ın ve WhatsApp'a tıklama reklamlarının kimliği Sayfadır.",
+       "scenario": "Facebook'ta görünmek, Meta reklamı vermek ya da Messenger'dan mesaj almak isteyen işletmeler. Reklam verilecekse zorunludur.",
+       "example": "Sayfada logo, kapak, iletişim bilgileri, çalışma saatleri ve “WhatsApp'tan yaz” düğmesi görünür."
+      },
+      {
+       "value": "instagram",
+       "label": "Instagram profesyonel hesap",
+       "explanation": "İşletme ya da içerik üreticisi türündeki Instagram hesabıdır; istatistikler, iletişim düğmeleri, reklam ve API erişimi profesyonel hesapla gelir.",
+       "scenario": "Görsel içerik üreten, Instagram'dan mesaj alan ya da Instagram'da reklam verecek işletmeler.",
+       "example": "Profilde kategori, “Ara” ve “Mesaj gönder” düğmeleri ve biyografide beş bağlantı görünür."
+      },
+      {
+       "value": "whatsapp",
+       "label": "WhatsApp Business",
+       "explanation": "Müşterilerle WhatsApp üzerinden yazışmak için kurumsal hesaptır: telefondaki WhatsApp Business uygulaması ya da yazılımla bağlanan WhatsApp Cloud API.",
+       "scenario": "Teklif, randevu, sipariş ya da destek talepleri WhatsApp'tan gelen işletmeler; sitede “WhatsApp'tan yazın” düğmesi ya da WhatsApp'a yönlendiren reklam varsa.",
+       "example": "Müşteri sitedeki düğmeye basar, işletmenin onaylı adıyla açılan sohbete hazır mesajla yazar."
+      },
+      {
+       "value": "pixel",
+       "label": "Meta Pikseli ve Conversions API",
+       "explanation": "Sitedeki ziyaretçi işlemlerini (form, arama, satın alma) Meta'ya bildiren ölçüm altyapısıdır: tarayıcıda Piksel, sunucuda Conversions API; ikisi aynı veri kümesine (dataset) gönderir.",
+       "scenario": "Meta reklamlarının sitede dönüşüm getirip getirmediğini ölçmek, site ziyaretçilerine yeniden reklam göstermek ya da reklamı dönüşüme göre optimize etmek isteyen işletmeler.",
+       "example": "Randevu formu gönderilince “Lead” olayı tarayıcıdan ve sunucudan aynı olay kimliğiyle gider; Meta tek dönüşüm sayar."
+      },
+      {
+       "value": "ads",
+       "label": "Meta reklam hesabı",
+       "explanation": "Facebook, Instagram, Messenger ve WhatsApp'a tıklama reklamlarının açıldığı, ödeme yönteminin ve faturaların bağlı olduğu hesaptır.",
+       "scenario": "Meta'da ücretli reklam verecek işletmeler. Kampanya stratejisi Pazarlama Kararları › Meta Ads'te, hesap kurulumu burada belirlenir.",
+       "example": "Reklam hesabı kurumun portföyünde TRY para birimi ve İstanbul saat dilimiyle açılır; ajans iş ortağı erişimiyle kampanya yönetir."
+      },
+      {
+       "value": "catalog",
+       "label": "Katalog (Commerce Manager)",
+       "explanation": "Ürün ya da hizmetlerin adı, fiyatı, görseli ve bağlantısını Meta'ya veren listedir; katalog reklamları, Instagram ürün etiketleri ve WhatsApp kataloğu bunu kullanır.",
+       "scenario": "E-ticaret siteleri, çok sayıda hizmet ya da ürün paketi olan işletmeler, katalog satışı reklamı verecek olanlar.",
+       "example": "Sepeti terk eden ziyaretçiye, baktığı ürünün güncel fiyatlı görseli reklam olarak gösterilir."
+      }
+     ]
+    },
+    {
+     "id": "mt_owner",
+     "label": "Varlıkların Sahipliği",
+     "en": "Asset Ownership",
+     "type": "select",
+     "explanation": "Meta varlıklarının hangi işletme portföyüne ait olacağını belirler. Varlığın sahibi olan portföy, takipçileri, reklam geçmişini, ölçüm verisini ve faturaları da elinde tutar.",
+     "scenario": "Yeni kurulumda kurumun kendi portföyü; varlıklar daha önce ajansın ya da bir çalışanın hesabında açıldıysa kuruma taşıma seçilir.",
+     "example": "Ajansın portföyünde açılmış reklam hesabı kurumun portföyüne taşınır; ajans aynı hesabı iş ortağı erişimiyle yönetmeye devam eder.",
+     "rule": "Meta varlıklarının sahipliği: {label}.",
+     "options": [
+      {
+       "value": "own",
+       "label": "Kurumun kendi işletme portföyü (önerilen)",
+       "explanation": "Bütün varlıklar kurumun portföyünde açılır; ajans ve serbest çalışanlar yetkiyi bu portföyden alır.",
+       "scenario": "Yeni kurulan ya da varlıkları zaten kurumda olan işletmeler.",
+       "example": "Portföy “Kurum Adı A.Ş.” adına, iki çalışan tam kontrollü yönetici.",
+       "ruleDetail": "Varlıklar kurumun kendi işletme portföyünde açılır ve kalır; ajans yalnız iş ortağı erişimiyle çalışır, varlık sahipliği hiçbir zaman ajansa ya da kişisel profile geçmez."
+      },
+      {
+       "value": "migrate",
+       "label": "Ajansta ya da kişisel hesapta olan varlıklar kuruma taşınacak",
+       "explanation": "Daha önce ajansın portföyünde ya da bir çalışanın profilinde açılmış Sayfa, Instagram, reklam hesabı ve pikselin sahipliği kurumun portföyüne aktarılır.",
+       "scenario": "Ajans değişikliği, çalışan ayrılığı ya da “hesap ajansta kaldı” durumu.",
+       "example": "Ajans Sayfayı kurum portföyüne aktarır, kendisi iş ortağı erişimine geçer; eski reklam hesabının geçmişi raporlanıp saklanır.",
+       "ruleDetail": "Ajansın ya da kişisel profilin sahibi olduğu varlıklar kurumun portföyüne aktarılır; aktarılamayan varlıkta (ör. sahipliği devredilemeyen reklam hesabı) kurum portföyünde yenisi açılır ve eski hesabın raporları dışa aktarılıp saklanır."
+      },
+      {
+       "value": "agency",
+       "label": "Ajansın portföyünde kalacak",
+       "explanation": "Varlıklar ajansın portföyünde açılır, kurum yalnız erişim alır. Kurumun kontrolünü zayıflattığı için önerilmez.",
+       "scenario": "Yalnız kısa süreli, deneme amaçlı kampanyalar; sözleşmede devir maddesi varsa.",
+       "example": "Kampanya bitince ajans reklam hesabını kapatır, veriler ajansta kalır.",
+       "ruleDetail": "Varlıklar ajansın portföyündedir; sözleşmede devir ve veri teslimi maddesi bulunur, kurum en az bir yöneticiyle erişimi elinde tutar."
+      }
+     ]
+    },
+    {
+     "id": "mt_access",
+     "label": "Erişim ve Güvenlik",
+     "en": "Access & Security",
+     "type": "multiselect",
+     "explanation": "İşletme portföyüne kimin, hangi yetkiyle erişeceğini ve hesap güvenliğini belirler.",
+     "scenario": "En az iki yönetici ve herkes için iki faktörlü doğrulama her kurulumda seçilir; ajansla çalışılıyorsa iş ortağı erişimi, yazılım entegrasyonu varsa sistem kullanıcısı eklenir.",
+     "example": "Portföyde iki tam kontrollü çalışan, ajans iş ortağı olarak yalnız reklam hesabı ve pikselde; CRM entegrasyonu sistem kullanıcısının jetonuyla çalışır.",
+     "rule": "Meta işletme portföyünün erişim ve güvenlik kuralları: {labels}.",
+     "options": [
+      {
+       "value": "two_admins",
+       "label": "En az iki tam kontrollü yönetici",
+       "explanation": "Portföyde ve her varlıkta tam kontrole sahip en az iki kurum çalışanı bulunur.",
+       "scenario": "Her kurulum.",
+       "example": "Genel müdür ve pazarlama müdürü tam kontrollü.",
+       "ruleDetail": "İşletme portföyünde ve her varlıkta tam kontrole sahip en az iki kurum çalışanı bulunur; yönetici kurumsal e-posta adresiyle kayıtlıdır."
+      },
+      {
+       "value": "2fa_all",
+       "label": "Herkes için iki faktörlü doğrulama zorunlu",
+       "explanation": "Portföy ayarlarından iki faktörlü doğrulama bütün kişiler için zorunlu tutulur; doğrulamayı açmayan kişi varlıklara erişemez.",
+       "scenario": "Her kurulum.",
+       "example": "Yeni eklenen ajans çalışanı doğrulamayı açana kadar varlıkları göremez.",
+       "ruleDetail": "İşletme portföyünde iki faktörlü doğrulama herkes için zorunludur; tercihen doğrulama uygulaması ya da güvenlik anahtarı kullanılır, SMS yalnız yedektir."
+      },
+      {
+       "value": "verify",
+       "label": "İşletme doğrulaması",
+       "explanation": "Meta, işletmenin gerçekliğini ticari unvan, adres ve telefon belgeleriyle doğrular. WhatsApp Cloud API'de limitlerin yükselmesi, resmî işletme hesabı başvurusu ve bazı reklam özellikleri için gerekir.",
+       "scenario": "Reklam veren, WhatsApp Cloud API kullanan ya da mavi tik isteyen işletmeler.",
+       "example": "Portföy ayarlarında “Doğrulandı” durumu görünür.",
+       "ruleDetail": "İşletme doğrulaması ticari unvan, adres ve telefon Ortak Bilgiler'dekiyle ve resmî belgelerle birebir aynı olacak şekilde tamamlanır."
+      },
+      {
+       "value": "partner",
+       "label": "Ajansa iş ortağı erişimi",
+       "explanation": "Ajans kendi portföyüyle bağlanır, varlıklara yalnız gereken yetkiyle erişir; ajans değişince tek işlemle kaldırılır.",
+       "scenario": "Ajans ya da serbest çalışanla yürütülen hesaplar.",
+       "example": "Ajans yalnız reklam hesabı ve pikselde “kampanyaları yönet” yetkisiyle görünür.",
+       "ruleDetail": "Ajans varlıklara kendi işletme portföyünden iş ortağı erişimiyle bağlanır; ajans çalışanları kurumun portföyüne tek tek eklenmez."
+      },
+      {
+       "value": "system_user",
+       "label": "Entegrasyonlar için sistem kullanıcısı",
+       "explanation": "Sunucu ya da CRM gibi yazılımların Meta API'lerine erişimi için kişiye bağlı olmayan kullanıcıdır; jetonu çalışan ayrılınca geçersiz olmaz.",
+       "scenario": "Conversions API, WhatsApp Cloud API, katalog ya da lead entegrasyonu olan projeler.",
+       "example": "Conversions API sunucusu “capi-sunucu” sistem kullanıcısının jetonuyla çalışır.",
+       "ruleDetail": "API entegrasyonları kişisel kullanıcı jetonuyla değil, yalnız gereken varlık ve izinlere sahip sistem kullanıcısının jetonuyla çalışır; jeton sunucuda gizli anahtar deposunda tutulur ve düzenli yenilenir."
+      },
+      {
+       "value": "least",
+       "label": "En düşük yetki",
+       "explanation": "Her kişi ve iş ortağı yalnız ihtiyaç duyduğu varlıkta ve yetkide bulunur; tam kontrol yalnız yöneticilerde.",
+       "scenario": "Birden çok kişinin çalıştığı her portföy.",
+       "example": "Topluluk yöneticisi yalnız Sayfa ve Instagram'da içerik ve mesaj yetkisine sahip.",
+       "ruleDetail": "Kişi ve iş ortaklarına yalnız görevleri için gereken varlıkta, gereken kısmi yetki verilir; tam kontrol yalnız yöneticilerdedir."
+      },
+      {
+       "value": "review",
+       "label": "Üç ayda bir erişim gözden geçirme",
+       "explanation": "Portföydeki kişiler, iş ortakları, sistem kullanıcıları ve bağlı uygulamalar düzenli kontrol edilir.",
+       "scenario": "Her kurulum.",
+       "example": "Ocak, Nisan, Temmuz ve Ekim'de erişim listesi portföyle karşılaştırılır.",
+       "ruleDetail": "Portföydeki kişiler, iş ortakları, sistem kullanıcıları ve bağlı uygulamalar üç ayda bir gözden geçirilir; kullanılmayan erişim kaldırılır."
+      },
+      {
+       "value": "offboarding",
+       "label": "Ayrılan kişinin erişimi aynı gün kaldırılır",
+       "explanation": "Kurumdan ya da projeden ayrılan kişinin ve sona eren ajansın erişimi gecikmeden kaldırılır.",
+       "scenario": "Her kurulum.",
+       "example": "Çalışanın son gününde portföy, Sayfa ve WhatsApp erişimi kapatılır.",
+       "ruleDetail": "Kurumdan ya da projeden ayrılan kişinin ve sözleşmesi biten ajansın Meta erişimi aynı gün kaldırılır; paylaşılan jeton varsa yenilenir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_consent",
+   "name": "Rıza, KVKK & Ticari İleti",
+   "en": "Consent, Privacy & Commercial Messages",
+   "icon": "⚖",
+   "agents": [
+    "K",
+    "O"
+   ],
+   "desc": "Meta Pikseli ve Conversions API için çerez onayını, Meta'ya giden kişisel verinin hukuki dayanağını ve WhatsApp, Instagram, Messenger üzerinden gönderilecek ticari iletilerin onay kurallarını belirler",
+   "guide": {
+    "purpose": "Meta Pikseli ziyaretçinin tarayıcısına reklam çerezi yazar ve davranış verisini Meta'ya gönderir; Conversions API aynı veriyi sunucudan iletir. KVKK'nın Temmuz 2025 tarihli Çerez Uygulamaları Hakkında Rehberi davranışsal reklam çerezleri için açık rıza arar. Meta'ya giden veri yurt dışına aktarım sayılır ve 6698 sayılı Kanun'un 9. maddesine göre bir dayanağa bağlanmalıdır. WhatsApp, Instagram ve Messenger'dan gönderilen kampanya mesajları da ticari ileti niteliğindedir ve önceden onay ister. Bu bölüm bu üç konuyu kurulumdan önce netleştirir.",
+    "criteria": [
+     "Pazarlama çerezlerine onay verilmeden Meta Pikseli hiçbir istek göndermez ve Conversions API olayı gönderilmez; onay geri çekilince gönderim durur.",
+     "Aydınlatma metni ve çerez politikası Meta araçlarını, aktarılan veriyi ve yurt dışına aktarım dayanağını açıkça yazar.",
+     "Meta'ya sağlık, finans gibi hassas içerik ya da düz metin kişisel veri gitmez.",
+     "WhatsApp ve diğer kanallardan pazarlama mesajı yalnız önceden alınmış ve kaydı tutulan onayla gönderilir; ret talebi hemen uygulanır."
+    ],
+    "pitfalls": [
+     "Pikseli sayfa açılır açılmaz yükleyip onay penceresini yalnız görüntü olarak koymak: KVKK'ya göre onaydan önce çerez yazılmış olur.",
+     "Conversions API'yi “sunucu taraflı olduğu için onay gerekmez” diye düşünmek: onay reddedilen ziyaretçinin olayı sunucudan da gönderilmemelidir.",
+     "Yurt dışına aktarım için standart sözleşme imzalayıp Kurum'a 5 iş günü içinde bildirmeyi unutmak.",
+     "Telefon numarasını müşteri “bilgi için” verdi diye ona WhatsApp'tan kampanya mesajı göndermek."
+    ],
+    "resources": [
+     {
+      "title": "KVKK — Çerez Uygulamaları Hakkında Rehber (Temmuz 2025)",
+      "url": "https://kvkk.gov.tr/Icerik/7353/Cerez-Uygulamalari-Hakkinda-Rehber",
+      "note": "Davranışsal reklam çerezleri açık rıza gerektirir (§6.2)."
+     },
+     {
+      "title": "KVKK — Standart Sözleşmeler",
+      "url": "https://www.kvkk.gov.tr/Icerik/7929/Standart-Sozlesmeler",
+      "note": "Yurt dışına aktarımda kullanılan dört standart sözleşme metni."
+     },
+     {
+      "title": "KVKK — Standart Sözleşme Bildirim Modülü duyurusu",
+      "url": "https://www.kvkk.gov.tr/Icerik/8043/Standart-Sozlesme-Bildirim-Modulu-Hakkinda-Kamuoyu-Duyurusu",
+      "note": "Standart sözleşme imzadan itibaren 5 iş günü içinde Kurum'a bildirilir."
+     },
+     {
+      "title": "KVKK — Standart sözleşmelerde dikkat edilecek hususlar",
+      "url": "https://www.kvkk.gov.tr/Icerik/8170/Yurt-Disina-Kisisel-Veri-Aktariminda-Kullanilacak-Standart-Sozlesmelerde-Dikkat-Edilmesi-Gereken-Hususlara-Iliskin-Kamuoyu-Duyurusu",
+      "note": "Tarafların imza tarihleri sözleşmeye yazılır (5 Şubat 2025)."
+     },
+     {
+      "title": "6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun",
+      "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6563.pdf",
+      "note": "Ticari elektronik iletinin tanımı (m. 2) ve önceden onay şartı (m. 6)."
+     },
+     {
+      "title": "Meta Pikseli — onay (consent) API'si",
+      "url": "https://developers.facebook.com/docs/meta-pixel/implementation/gdpr",
+      "note": "fbq('consent','revoke') ve fbq('consent','grant') kullanımı."
+     },
+     {
+      "title": "WhatsApp Business Messaging Policy",
+      "url": "https://whatsappbusiness.com/policy/",
+      "note": "WhatsApp'ta onay (opt-in), ret ve mesaj kuralları."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_cm_mode",
+     "label": "Piksel Onay Yöntemi",
+     "en": "Pixel Consent Method",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "pixel",
+        "ads"
+       ]
+      }
+     ],
+     "explanation": "Meta Pikseli ve Conversions API'nin çerez onayına nasıl bağlanacağını belirler.",
+     "scenario": "Çoğu sitede pikselin onaydan önce hiç yüklenmemesi en sade ve güvenli yoldur; piksel Etiket Yöneticisi ya da bir eklentiyle yükleniyorsa onay API'si de doğru kurulabilir.",
+     "example": "Ziyaretçi çerez penceresinde “Pazarlama”yı açınca piksel yüklenir; reddederse ağ sekmesinde facebook.com'a hiçbir istek görünmez.",
+     "rule": "Meta Pikseli onay yöntemi: {label}.",
+     "options": [
+      {
+       "value": "block",
+       "label": "Onaydan önce piksel yüklenmez (önerilen)",
+       "explanation": "Piksel kodu yalnız ziyaretçi pazarlama çerezlerine onay verdikten sonra sayfaya eklenir.",
+       "scenario": "Çerez onay aracı (CMP) kullanan her site.",
+       "example": "Onay verilince piksel yüklenir ve PageView gönderilir.",
+       "ruleDetail": "Meta Pikseli kodu yalnız pazarlama çerezlerine onay verildikten sonra yüklenir; onaydan önce hiçbir Meta isteği gitmez, Conversions API olayı da onay bilgisi olmadan gönderilmez."
+      },
+      {
+       "value": "consent_api",
+       "label": "Piksel onay API'siyle (revoke → grant)",
+       "explanation": "Piksel yüklenir ama başlatılmadan önce fbq('consent','revoke') çağrılır; onay gelince fbq('consent','grant') ile gönderim başlar.",
+       "scenario": "Pikselin bir eklenti ya da Etiket Yöneticisi şablonuyla yüklendiği, onayın aynı sayfada değiştiği siteler.",
+       "example": "Çerez aracının “onay değişti” olayı fbq('consent','grant') çağırır.",
+       "ruleDetail": "Meta Pikseli başlatılmadan önce fbq('consent','revoke') çağrılır, pazarlama onayı verilince fbq('consent','grant') çağrılır, onay geri çekilince yeniden revoke edilir; Conversions API olayları da aynı onay durumuna bağlıdır."
+      },
+      {
+       "value": "none",
+       "label": "Onay yönetimi yok",
+       "explanation": "Piksel onaysız çalışır. KVKK Çerez Rehberi'ne aykırıdır; önerilmez.",
+       "scenario": "Yalnız pikselin hiç kullanılmadığı ya da yalnız Türkiye dışındaki, onay şartı olmayan bir pazara yönelik özel durumlar; hukuk birimi onayıyla.",
+       "example": "Piksel her ziyaretçide çalışır.",
+       "ruleDetail": "Meta Pikseli onay yönetimi olmadan çalışır; bu durum hukuk birimince yazılı olarak değerlendirilmiş ve gerekçesi kayda geçirilmiştir."
+      }
+     ]
+    },
+    {
+     "id": "mt_privacy",
+     "label": "Kişisel Veri ve Yurt Dışına Aktarım",
+     "en": "Personal Data & Cross-border Transfer",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "portfolio",
+        "page",
+        "instagram",
+        "whatsapp",
+        "pixel",
+        "ads",
+        "catalog"
+       ]
+      }
+     ],
+     "explanation": "Meta araçlarıyla işlenen kişisel veri için aydınlatma, çerez politikası, yurt dışına aktarım ve hassas veri kurallarını belirler.",
+     "scenario": "Piksel, reklam ya da WhatsApp kullanan her işletme aydınlatma ve çerez politikasını günceller; Meta'ya veri aktarılıyorsa aktarım dayanağı belirlenir.",
+     "example": "Çerez politikasında _fbp ve _fbc çerezleri amaç ve süreyle listelenir; aydınlatma metninde “Meta Platforms'a yurt dışına aktarım” paragrafı yer alır.",
+     "rule": "Meta araçlarında kişisel veri kuralları: {labels}.",
+     "options": [
+      {
+       "value": "notice",
+       "label": "Aydınlatma metninde Meta araçları",
+       "explanation": "Aydınlatma metni Meta Pikseli, Conversions API, reklam kitleleri ve WhatsApp yazışmalarında işlenen veriyi, amacı ve hukuki sebebi yazar.",
+       "scenario": "Meta aracı kullanan her site.",
+       "example": "“Reklamların ölçümü için Meta Pikseli…” paragrafı.",
+       "ruleDetail": "Aydınlatma metni Meta Pikseli, Conversions API, reklam kitleleri ve WhatsApp yazışmalarında işlenen kişisel veriyi, amacını, hukuki sebebini ve alıcı grubunu açıkça yazar."
+      },
+      {
+       "value": "cookie_policy",
+       "label": "Çerez politikasında Meta çerezleri",
+       "explanation": "Çerez politikası Meta'nın çerezlerini (ör. _fbp, _fbc) amaç ve süreyle listeler; tablo gerçek taramayla güncellenir.",
+       "scenario": "Pikselli her site.",
+       "example": "Çerez tablosunda “_fbp — Meta — pazarlama — 90 gün” satırı.",
+       "ruleDetail": "Çerez politikasındaki tablo Meta çerezlerini sağlayıcı, amaç, kategori ve süreyle listeler; tablo sitedeki gerçek çerez taramasıyla güncel tutulur."
+      },
+      {
+       "value": "transfer",
+       "label": "Yurt dışına aktarım dayanağı",
+       "explanation": "Meta'ya giden kişisel veri yurt dışına aktarımdır; 6698 m. 9'a göre dayanak belirlenir. Standart sözleşme kullanılırsa imzadan itibaren 5 iş günü içinde Kurum'a bildirilir.",
+       "scenario": "Piksel, Conversions API, müşteri listesi ya da WhatsApp Cloud API kullanan işletmeler.",
+       "example": "Hukuk birimi aktarım dayanağını belirler; bildirim Standart Sözleşme Bildirim Modülü'nden yapılır.",
+       "ruleDetail": "Meta'ya kişisel veri aktarımı için KVKK m. 9 kapsamında dayanak belirlenir; standart sözleşme kullanılırsa imzadan itibaren 5 iş günü içinde Kurum'a bildirilir ve kayıt saklanır."
+      },
+      {
+       "value": "no_sensitive",
+       "label": "Hassas veri ve düz metin kişisel veri gönderilmez",
+       "explanation": "Sağlık, finans, din, siyasi görüş gibi hassas bilgiler ve düz metin ad, e-posta, telefon Meta'ya gitmez.",
+       "scenario": "Özellikle sağlık, finans, hukuk ve eğitim siteleri.",
+       "example": "Klinik sitesinde olay adı “Lead”dir; “kanser_randevu” gibi tanı belirten özel olay yoktur.",
+       "ruleDetail": "Meta'ya giden olay adlarında, parametrelerde ve adreslerde sağlık, finans gibi hassas bilgi ya da düz metin kişisel veri bulunmaz; Events Manager'da veri kaynağının sektör kategorisi doğru beyan edilir."
+      },
+      {
+       "value": "customer_list",
+       "label": "Müşteri listesi kuralları",
+       "explanation": "Reklam için Meta'ya yüklenen müşteri listeleri (Özel Hedef Kitle) yalnız hukuki dayanağı olan kişilerden oluşur ve karma yapılarak yüklenir.",
+       "scenario": "Müşteri listesiyle reklam verecek işletmeler.",
+       "example": "Yalnız pazarlama onayı olan müşterilerin e-postaları yüklenir.",
+       "ruleDetail": "Meta'ya yüklenen müşteri listeleri yalnız pazarlama onayı ya da başka geçerli dayanağı olan kişilerden oluşur; liste karma yapılarak yüklenir, ret veren kişi sonraki yüklemeden çıkarılır."
+      },
+      {
+       "value": "retention",
+       "label": "Saklama ve silme",
+       "explanation": "Conversions API logları, WhatsApp yazışmaları ve indirilen lead dosyaları için saklama süresi belirlenir.",
+       "scenario": "Sunucu taraflı olay ya da WhatsApp entegrasyonu olan projeler.",
+       "example": "CAPI istek logları 30 gün, WhatsApp yazışmaları sözleşme süresince saklanır.",
+       "ruleDetail": "Conversions API istek logları, WhatsApp yazışmaları ve indirilen lead dosyaları için saklama süresi belirlenir; süre dolunca silinir ya da anonim hale getirilir."
+      }
+     ]
+    },
+    {
+     "id": "mt_msg_consent",
+     "label": "Ticari İleti Onayı (WhatsApp, Instagram, Messenger)",
+     "en": "Commercial Message Consent",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "whatsapp",
+        "page",
+        "instagram"
+       ]
+      }
+     ],
+     "explanation": "Meta kanallarından gönderilecek kampanya ve duyuru mesajlarının onay kurallarını belirler. 6563 sayılı Kanun ticari elektronik iletiyi geniş tanımlar ve önceden onay ister; WhatsApp'ın kendi politikası da onay (opt-in) şartı koyar.",
+     "scenario": "WhatsApp'tan kampanya, hatırlatma ya da duyuru gönderecek her işletme; yalnız gelen mesajlara yanıt veriliyorsa da ret ve kayıt kuralları seçilir.",
+     "example": "Sitedeki formda “WhatsApp üzerinden kampanya mesajı almak istiyorum” kutusu ayrıdır ve işaretsiz gelir; onay tarihi ve metni CRM'e yazılır.",
+     "rule": "Meta kanallarında ticari ileti kuralları: {labels}.",
+     "options": [
+      {
+       "value": "prior_consent",
+       "label": "Pazarlama mesajı için önceden onay",
+       "explanation": "Kampanya ve tanıtım mesajı yalnız kişinin önceden, ayrı bir onayla kabul ettiği kanala gönderilir.",
+       "scenario": "WhatsApp'tan pazarlama mesajı gönderecek her işletme.",
+       "example": "Formda işaretsiz gelen ayrı onay kutusu.",
+       "ruleDetail": "WhatsApp, Instagram ve Messenger'dan kampanya ve tanıtım mesajı yalnız kişinin önceden verdiği, kanal adını içeren ayrı onayla gönderilir; onay kutusu işaretsiz gelir."
+      },
+      {
+       "value": "iys",
+       "label": "İYS ve hukuki teyit",
+       "explanation": "SMS, e-posta ve arama onayları İleti Yönetim Sistemi'ne (İYS) kaydedilir; WhatsApp gibi kanalların İYS kapsamı hukuk birimiyle teyit edilir.",
+       "scenario": "Türkiye'de tüketicilere ticari ileti gönderen işletmeler.",
+       "example": "Hukuk birimi WhatsApp kampanya mesajları için onay ve İYS yaklaşımını yazılı olarak belirler.",
+       "ruleDetail": "Ticari ileti onayları 6563 sayılı Kanun'a göre yönetilir; SMS, e-posta ve arama onayları İYS'ye kaydedilir, WhatsApp ve diğer mesajlaşma kanallarının İYS kapsamı hukuk birimince teyit edilip yazılı hale getirilir."
+      },
+      {
+       "value": "record",
+       "label": "Onay kaydı",
+       "explanation": "Onayın tarihi, kanalı, metni ve kaynağı saklanır; istenince gösterilebilir.",
+       "scenario": "Onayla mesaj gönderen her işletme.",
+       "example": "CRM'de “WhatsApp pazarlama onayı: 2026-11-12, web formu, metin v3”.",
+       "ruleDetail": "Her onayın tarihi, kanalı, onay metni sürümü ve kaynağı kaydedilir ve onay süresince saklanır."
+      },
+      {
+       "value": "optout",
+       "label": "Ret hemen uygulanır",
+       "explanation": "“DUR”, “İPTAL” ya da sohbet içi ret talebi aynı gün uygulanır; kişi pazarlama listelerinden çıkar.",
+       "scenario": "Her işletme.",
+       "example": "Kişi “artık mesaj istemiyorum” yazınca otomatik yanıt ret kaydını onaylar.",
+       "ruleDetail": "Ret talebi (mesajla, engellemeyle ya da başka kanaldan) aynı gün uygulanır; kişi bütün pazarlama listelerinden ve Meta'ya yüklenen müşteri listelerinden çıkarılır."
+      },
+      {
+       "value": "b2b_exception",
+       "label": "Esnaf ve tacirlere gönderim ayrı değerlendirilir",
+       "explanation": "6563 sayılı Kanun'a göre esnaf ve tacirlere önceden onay alınmadan ileti gönderilebilir; ret hakkı yine tanınır.",
+       "scenario": "Ağırlıklı olarak işletmelere satış yapan (B2B) firmalar.",
+       "example": "Bayilere giden kampanya mesajında ret seçeneği bulunur.",
+       "ruleDetail": "Esnaf ve tacirlere gönderilecek iletiler için 6563 sayılı Kanun'daki istisna hukuk birimince değerlendirilir; bu iletilerde de ret seçeneği bulunur."
+      },
+      {
+       "value": "service_split",
+       "label": "Hizmet ve pazarlama mesajları ayrılır",
+       "explanation": "Sipariş, randevu, kargo gibi hizmet mesajları ile kampanya mesajları ayrı şablon, ayrı onay ve ayrı ölçümle yürütülür.",
+       "scenario": "Hem hizmet hem pazarlama mesajı gönderen işletmeler.",
+       "example": "Randevu hatırlatması yardımcı (utility), indirim duyurusu pazarlama şablonudur.",
+       "ruleDetail": "Hizmet mesajları (sipariş, randevu, teslimat, hesap) ile pazarlama mesajları ayrı şablon, ayrı onay ve ayrı raporla yürütülür; hizmet mesajına kampanya içeriği eklenmez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_pixel",
+   "name": "Meta Pikseli & Conversions API",
+   "en": "Meta Pixel & Conversions API",
+   "icon": "◇",
+   "agents": [
+    "O",
+    "API"
+   ],
+   "refs": [
+    "domain_name",
+    "staging_url",
+    "mk_ids"
+   ],
+   "desc": "Sitedeki dönüşümlerin Meta'ya nasıl ölçüleceğini belirler: tarayıcıdaki Meta Pikseli, sunucudaki Conversions API, olay tekilleştirme, müşteri bilgisi eşleştirmesi, alan adı doğrulama ve gönderilecek standart olaylar",
+   "guide": {
+    "purpose": "Meta reklamları hangi reklamın form, randevu ya da satış getirdiğini sitedeki olaylardan öğrenir. Tarayıcıdaki Meta Pikseli reklam engelleyicilerden ve tarayıcı kısıtlarından etkilenir; Conversions API aynı olayları sunucudan gönderir. İkisi birlikte kurulur, aynı olay kimliğiyle tekilleştirilir ve Meta'nın Events Manager ekranında tek veri kümesinde (dataset) görünür. Bu bölüm kurulum yöntemini, asgari ayarları ve gönderilecek olayları belirler.",
+    "criteria": [
+     "Piksel ve Conversions API aynı veri kümesine gönderir; aynı olay tarayıcıdan ve sunucudan aynı olay adı ve olay kimliğiyle gelir, Meta tek sayar.",
+     "Olay adları Meta'nın standart olaylarıdır (Lead, Contact, Schedule, Purchase …); özel olay yalnız standart karşılığı yoksa kullanılır.",
+     "Müşteri bilgisi parametreleri yalnız onay varken, normalize edilip SHA-256 ile karma yapılarak gönderilir.",
+     "Kurulum Test Olayları (Test Events) ekranında doğrulanır; test ortamı canlı veri kümesine veri göndermez."
+    ],
+    "pitfalls": [
+     "Pikseli hem kodla hem bir eklentiyle iki kez yüklemek: her olay iki kez sayılır, reklam optimizasyonu bozulur.",
+     "Conversions API'yi olay kimliği olmadan kurmak: tarayıcı ve sunucu olayları tekilleşmez, dönüşümler iki kat görünür.",
+     "Form adresine e-posta ya da telefonu sorgu parametresi olarak koymak: düz metin kişisel veri piksel üzerinden Meta'ya gider.",
+     "Conversions API erişim jetonunu ön yüze ya da depoya yazmak: jetonla herkes veri kümesine sahte olay gönderebilir."
+    ],
+    "resources": [
+     {
+      "title": "Meta Pikseli — standart olaylar referansı",
+      "url": "https://developers.facebook.com/docs/meta-pixel/reference",
+      "note": "Lead, Contact, Schedule, Purchase gibi standart olaylar ve parametreleri."
+     },
+     {
+      "title": "Piksel ve sunucu olaylarının tekilleştirilmesi",
+      "url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api/deduplicate-pixel-and-server-events",
+      "note": "eventID / event_id ve olay adı eşleşmesi; 48 saatlik tekilleştirme."
+     },
+     {
+      "title": "Conversions API — müşteri bilgisi parametreleri",
+      "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters",
+      "note": "em, ph, fn … SHA-256 ve normalizasyon; fbp, fbc, IP ve tarayıcı bilgisi karma yapılmaz."
+     },
+     {
+      "title": "Conversions API Gateway",
+      "url": "https://developers.facebook.com/documentation/ads-commerce/gateway-products/conversions-api-gateway",
+      "note": "Kendi bulut hesabınızda kodsuz sunucu taraflı gönderim."
+     },
+     {
+      "title": "Alan adı doğrulama (geliştirici belgesi)",
+      "url": "https://developers.facebook.com/docs/sharing/domain-verification",
+      "note": "DNS TXT kaydı ya da HTML dosyasıyla alan adı sahipliği."
+     },
+     {
+      "title": "Alan adı doğrulama (Yardım Merkezi)",
+      "url": "https://www.facebook.com/business/help/286768115176155",
+      "note": "İşletme ayarlarında alan adını doğrulama adımları."
+     },
+     {
+      "title": "Toplu Olay Ölçümü hakkında",
+      "url": "https://www.facebook.com/business/help/721422165168355",
+      "note": "Meta'nın olay ölçümü ve önceliklendirme yaklaşımı."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_px_method",
+     "label": "Kurulum Yöntemi",
+     "en": "Implementation Method",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "pixel"
+       ]
+      }
+     ],
+     "explanation": "Meta Pikseli ve Conversions API'nin nasıl kurulacağını belirler.",
+     "scenario": "Kendi kodu olan sitelerde Piksel + kendi sunucusundan Conversions API önerilir; hazır e-ticaret platformunda platformun resmî Meta entegrasyonu, kod yazmadan sunucu taraflı gönderim isteyenlerde Conversions API Gateway seçilir.",
+     "example": "Form gönderilince sunucu kaydı oluşturur, aynı olay kimliğiyle hem tarayıcıya fbq('track','Lead',{},{eventID}) hem Conversions API'ye Lead gönderir.",
+     "rule": "Meta ölçüm kurulum yöntemi: {label}.",
+     "options": [
+      {
+       "value": "server",
+       "label": "Piksel + kendi sunucumuzdan Conversions API (önerilen)",
+       "explanation": "Piksel tarayıcıda, Conversions API sitenin sunucusunda çalışır; olay kimliğini sunucu üretir.",
+       "scenario": "Kendi kodu olan ve form / sipariş kaydı sunucuda oluşan siteler.",
+       "example": "Sunucu Lead kaydını oluşturur, olay kimliğini sayfaya da verir.",
+       "ruleDetail": "Piksel tarayıcıda, Conversions API sitenin sunucusunda kurulur; olay kimliğini sunucu üretir ve iki kanala aynı olay adı ve kimliğiyle gönderir; erişim jetonu yalnız sunucudadır."
+      },
+      {
+       "value": "gateway",
+       "label": "Piksel + Conversions API Gateway",
+       "explanation": "Meta'nın kendi bulut hesabınızda (AWS ya da Google Cloud) çalışan, piksel olaylarını kodsuz sunucu taraflı ileten aracıdır.",
+       "scenario": "Kod değişikliği istemeyen, bulut hesabı olan işletmeler.",
+       "example": "Gateway alt alan adında çalışır, olay kimliğini kendisi üretir.",
+       "ruleDetail": "Conversions API Gateway kurumun bulut hesabında kurulur; piksel olayları Gateway üzerinden sunucu taraflı iletilir, Gateway'in bakım ve maliyet sorumlusu belirlenir."
+      },
+      {
+       "value": "partner",
+       "label": "Platformun resmî Meta entegrasyonu",
+       "explanation": "Shopify, WooCommerce, Ticimax, İdeasoft gibi platformların resmî Meta uygulaması piksel ve Conversions API'yi birlikte kurar.",
+       "scenario": "Hazır e-ticaret ya da site platformu kullananlar.",
+       "example": "Platformun Meta uygulamasında veri paylaşımı “En yüksek” seçilir.",
+       "ruleDetail": "Piksel ve Conversions API platformun resmî Meta entegrasyonuyla kurulur; sitede ayrıca elle piksel kodu eklenmez, çift gönderim olmadığı Test Olayları'nda doğrulanır."
+      },
+      {
+       "value": "sgtm",
+       "label": "Sunucu taraflı Etiket Yöneticisi üzerinden",
+       "explanation": "Google Tag Manager'ın sunucu kapsayıcısı Meta Conversions API etiketiyle olayları iletir.",
+       "scenario": "Sunucu taraflı Tag Manager'ı zaten kullanan siteler.",
+       "example": "Web kapsayıcısı olayı sunucu kapsayıcısına, o da Meta'ya gönderir.",
+       "ruleDetail": "Olaylar sunucu taraflı Etiket Yöneticisi kapsayıcısındaki Meta Conversions API etiketiyle gönderilir; olay kimliği web ve sunucu kapsayıcısında aynıdır."
+      },
+      {
+       "value": "pixel_only",
+       "label": "Yalnız Meta Pikseli",
+       "explanation": "Yalnız tarayıcı tarafı ölçüm. En kolayıdır ama reklam engelleyici ve tarayıcı kısıtlarında dönüşümlerin bir kısmı kaybolur.",
+       "scenario": "Küçük bütçeli, sunucu entegrasyonu yapılamayan siteler; sonradan Conversions API eklenmek üzere.",
+       "example": "Yalnız fbq('track','Lead').",
+       "ruleDetail": "Yalnız Meta Pikseli kurulur; dönüşüm kaybı kabul edilir ve Conversions API ileride eklenecek iş olarak kayda geçirilir."
+      }
+     ]
+    },
+    {
+     "id": "mt_px_settings",
+     "label": "Asgari Ölçüm Ayarları",
+     "en": "Minimum Measurement Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "pixel"
+       ]
+      }
+     ],
+     "explanation": "Piksel ve Conversions API kurulumunda yapılacak asgari ayarları belirler.",
+     "scenario": "Tekilleştirme, karma yapma, alan adı doğrulama ve Test Olayları her kurulumda seçilir; diğerleri sitenin yapısına göre eklenir.",
+     "example": "Events Manager'da veri kümesi, doğrulanmış alan adı, izinli alan adları listesi ve olay eşleşme kalitesi görünür.",
+     "rule": "Meta Pikseli ve Conversions API ayarları: {labels}.",
+     "options": [
+      {
+       "value": "dedup",
+       "label": "Olay tekilleştirme (event_id)",
+       "explanation": "Tarayıcı ve sunucu olayı aynı olay adı ve aynı olay kimliğiyle gönderilir; Meta 48 saat içinde gelen eşleri tek sayar.",
+       "scenario": "Piksel ve Conversions API birlikte kullanılıyorsa.",
+       "example": "eventID “lead-8f3c2” iki kanalda aynı.",
+       "ruleDetail": "Her olay tarayıcıda eventID, sunucuda event_id olarak aynı benzersiz kimlik ve aynı olay adıyla gönderilir."
+      },
+      {
+       "value": "hashing",
+       "label": "Müşteri bilgisi normalize + SHA-256",
+       "explanation": "E-posta küçük harfe çevrilip boşluklar atılır; telefon yalnız rakam ve ülke koduyla yazılır; sonra SHA-256 ile karma yapılır. fbp, fbc, IP ve tarayıcı bilgisi karma yapılmaz.",
+       "scenario": "Conversions API ya da gelişmiş eşleştirme kullanılıyorsa.",
+       "example": "ph: 905321234567 → SHA-256.",
+       "ruleDetail": "Müşteri bilgisi parametreleri (em, ph, fn, ln, ct, zp, country, external_id) Meta'nın belgelediği şekilde normalize edilip SHA-256 ile karma yapılır; fbp, fbc, client_ip_address ve client_user_agent karma yapılmadan, yalnız onay varken gönderilir."
+      },
+      {
+       "value": "domain",
+       "label": "Alan adı doğrulama",
+       "explanation": "Alan adının kuruma ait olduğu DNS TXT kaydı ya da HTML dosyasıyla doğrulanır; bağlantı önizlemelerini kimin düzenleyeceği de buna bağlıdır.",
+       "scenario": "Kendi alan adı olan her site.",
+       "example": "DNS'te facebook-domain-verification=… TXT kaydı.",
+       "ruleDetail": "Alan adı kurumun işletme portföyünde DNS TXT kaydı ya da HTML dosyasıyla doğrulanır; kayıt silinmez."
+      },
+      {
+       "value": "test_events",
+       "label": "Test Olayları ile doğrulama",
+       "explanation": "Kurulum Events Manager'ın Test Olayları ekranında test koduyla denenir.",
+       "scenario": "Her kurulum.",
+       "example": "Test ekranında Lead olayı “Tarayıcı” ve “Sunucu” olarak tekilleşmiş görünür.",
+       "ruleDetail": "Her olay Events Manager › Test Olayları'nda test koduyla denenir; test kodu canlıya alınmadan kaldırılır."
+      },
+      {
+       "value": "emq",
+       "label": "Olay eşleşme kalitesi izlenir",
+       "explanation": "Events Manager'daki eşleşme kalitesi ve olay kapsaması düzenli kontrol edilir.",
+       "scenario": "Conversions API kullanılan siteler.",
+       "example": "Lead olayında eşleşme kalitesi 6/10'dan 8/10'a çıkar.",
+       "ruleDetail": "Events Manager'daki olay eşleşme kalitesi ve tarayıcı / sunucu kapsaması ayda bir kontrol edilir; düşüşte eksik parametre araştırılır."
+      },
+      {
+       "value": "traffic",
+       "label": "İzinli alan adları (trafik izinleri)",
+       "explanation": "Veri kümesine yalnız kurumun alan adlarından olay kabul edilir; başka sitelerden gelen sahte olaylar engellenir.",
+       "scenario": "Piksel kimliği kaynak kodda göründüğü için her site.",
+       "example": "İzin listesinde yalnız ornek.com ve alt alan adları.",
+       "ruleDetail": "Veri kümesinin trafik izinlerinde yalnız kurumun alan adları izin listesindedir."
+      },
+      {
+       "value": "no_pii_url",
+       "label": "Adreste ve parametrede kişisel veri yok",
+       "explanation": "Form sonrası adreslerde, sorgu parametrelerinde ve özel parametrelerde ad, e-posta, telefon bulunmaz.",
+       "scenario": "Her site.",
+       "example": "Teşekkür sayfası /tesekkurler, ?email= yok.",
+       "ruleDetail": "Form ve sipariş sonrası sayfa adreslerinde, sorgu parametrelerinde ve özel olay parametrelerinde kişisel veri bulunmaz."
+      },
+      {
+       "value": "staging_off",
+       "label": "Test ortamında kapalı ya da ayrı veri kümesi",
+       "explanation": "Test ortamı canlı veri kümesine olay göndermez.",
+       "scenario": "Test ortamı olan projeler.",
+       "example": "Test ortamında META_PIXEL_ID boş.",
+       "ruleDetail": "Test ortamında piksel ve Conversions API kapalıdır ya da ayrı bir test veri kümesi kullanılır."
+      }
+     ]
+    },
+    {
+     "id": "mt_px_events",
+     "label": "Gönderilecek Standart Olaylar",
+     "en": "Standard Events to Send",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "pixel"
+       ]
+      }
+     ],
+     "explanation": "Sitedeki hangi işlemlerin hangi Meta standart olayıyla gönderileceğini belirler. PageView piksel yüklenince kendiliğinden gönderilir.",
+     "scenario": "Hizmet sitelerinde Lead ve Contact, randevulu işletmelerde Schedule, e-ticarette ViewContent, AddToCart, InitiateCheckout ve Purchase seçilir.",
+     "example": "İletişim formu gönderilince Lead, WhatsApp düğmesine basılınca Contact, sipariş tamamlanınca değer ve para birimiyle Purchase gider.",
+     "rule": "Meta'ya gönderilecek standart olaylar: {labels}. Olaylar işlem gerçekten tamamlanınca (form sunucuda kaydedilince, ödeme onaylanınca) gönderilir.",
+     "recommend": [
+      {
+       "field": "mk_conversions",
+       "map": {
+        "form": [
+         "lead"
+        ],
+        "phone": [
+         "contact"
+        ],
+        "whatsapp": [
+         "contact"
+        ],
+        "email": [
+         "contact"
+        ],
+        "purchase": [
+         "view_content",
+         "add_to_cart",
+         "initiate_checkout",
+         "purchase"
+        ],
+        "event_register": [
+         "complete_registration"
+        ]
+       }
+      },
+      {
+       "field": "modules_extra",
+       "map": {
+        "ecommerce": [
+         "view_content",
+         "add_to_cart",
+         "initiate_checkout",
+         "purchase",
+         "search"
+        ],
+        "booking": [
+         "schedule"
+        ],
+        "lms": [
+         "complete_registration",
+         "purchase"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "lead",
+       "label": "Lead — form gönderimi",
+       "explanation": "Teklif, iletişim ya da başvuru formu başarıyla gönderilince.",
+       "scenario": "Form toplayan her site.",
+       "example": "Teklif formu kaydedilince Lead.",
+       "ruleDetail": "Lead olayı form sunucuda başarıyla kaydedilince gönderilir; form türü content_name ile belirtilir."
+      },
+      {
+       "value": "contact",
+       "label": "Contact — telefon, WhatsApp, e-posta tıklaması",
+       "explanation": "Telefon, WhatsApp ya da e-posta bağlantısına tıklanınca.",
+       "scenario": "Arama ve mesajla iletişim alan işletmeler.",
+       "example": "WhatsApp düğmesine basılınca Contact.",
+       "ruleDetail": "Contact olayı telefon, WhatsApp ve e-posta bağlantılarına tıklanınca gönderilir; kanal özel parametreyle ayrılır."
+      },
+      {
+       "value": "schedule",
+       "label": "Schedule — randevu",
+       "explanation": "Randevu oluşturulunca.",
+       "scenario": "Klinik, salon, danışmanlık gibi randevulu işletmeler.",
+       "example": "Randevu onaylanınca Schedule.",
+       "ruleDetail": "Schedule olayı randevu kaydı oluşunca gönderilir."
+      },
+      {
+       "value": "complete_registration",
+       "label": "CompleteRegistration — kayıt",
+       "explanation": "Üyelik, etkinlik ya da eğitim kaydı tamamlanınca.",
+       "scenario": "Üyelik ya da etkinlik kaydı olan siteler.",
+       "example": "Webinar kaydı tamamlanınca.",
+       "ruleDetail": "CompleteRegistration olayı kayıt tamamlanınca gönderilir."
+      },
+      {
+       "value": "submit_application",
+       "label": "SubmitApplication — başvuru",
+       "explanation": "Kredi, iş, üyelik ya da program başvurusu gönderilince.",
+       "scenario": "Başvuru alan siteler.",
+       "example": "Bayilik başvurusu gönderilince.",
+       "ruleDetail": "SubmitApplication olayı başvuru kaydedilince gönderilir."
+      },
+      {
+       "value": "view_content",
+       "label": "ViewContent — ürün / hizmet sayfası",
+       "explanation": "Ürün ya da hizmet detay sayfası görüntülenince; katalogda ürün kimliğiyle.",
+       "scenario": "E-ticaret ve katalog reklamı verenler.",
+       "example": "Ürün sayfasında content_ids ile ViewContent.",
+       "ruleDetail": "ViewContent olayı ürün ya da hizmet sayfasında content_ids, content_type, value ve currency ile gönderilir."
+      },
+      {
+       "value": "search",
+       "label": "Search — site içi arama",
+       "explanation": "Site içinde arama yapılınca.",
+       "scenario": "Arama kutusu olan e-ticaret ve katalog siteleri.",
+       "example": "“siyah çanta” araması search_string ile.",
+       "ruleDetail": "Search olayı site içi aramada search_string ile gönderilir."
+      },
+      {
+       "value": "add_to_cart",
+       "label": "AddToCart — sepete ekleme",
+       "explanation": "Ürün sepete eklenince.",
+       "scenario": "E-ticaret.",
+       "example": "Sepete eklemede content_ids, value, currency.",
+       "ruleDetail": "AddToCart olayı sepete eklemede content_ids, value ve currency ile gönderilir."
+      },
+      {
+       "value": "initiate_checkout",
+       "label": "InitiateCheckout — ödeme başlangıcı",
+       "explanation": "Ödeme adımı başlayınca.",
+       "scenario": "E-ticaret.",
+       "example": "Ödeme sayfası açılınca.",
+       "ruleDetail": "InitiateCheckout olayı ödeme adımı başlayınca gönderilir."
+      },
+      {
+       "value": "purchase",
+       "label": "Purchase — satın alma",
+       "explanation": "Ödeme onaylanınca; değer ve para birimiyle.",
+       "scenario": "Online satış yapan siteler.",
+       "example": "Sipariş onayında value: 1250, currency: TRY.",
+       "ruleDetail": "Purchase olayı ödeme onaylanınca value, currency ve content_ids ile, sipariş numarasından türetilen olay kimliğiyle bir kez gönderilir."
+      },
+      {
+       "value": "subscribe",
+       "label": "Subscribe — ücretli abonelik",
+       "explanation": "Ücretli abonelik başlayınca (bülten kaydı değil).",
+       "scenario": "Abonelik satan siteler.",
+       "example": "Aylık plan başlayınca.",
+       "ruleDetail": "Subscribe olayı ücretli abonelik başlayınca value ve currency ile gönderilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_page",
+   "name": "Facebook Sayfası",
+   "en": "Facebook Page",
+   "icon": "▣",
+   "agents": [
+    "FB",
+    "S"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_tagline",
+    "domain_name",
+    "oc_phone",
+    "oc_whatsapp",
+    "oc_address",
+    "oc_hours",
+    "mk_accounts"
+   ],
+   "desc": "İşletmenin Facebook Sayfasının asgari profil ayarlarını, erişimini, moderasyonunu ve Messenger üzerinden gelen mesajların nasıl yanıtlanacağını belirler",
+   "guide": {
+    "purpose": "Facebook Sayfası işletmenin Facebook'taki kimliğidir; Meta reklamları, Messenger ve WhatsApp'a tıklama reklamları bir Sayfa adına yayınlanır. Bu bölüm Sayfanın Ortak Bilgiler'le tutarlı profilini, erişimini ve gelen mesajların yönetimini belirler.",
+    "criteria": [
+     "Sayfa adı, kullanıcı adı, kategori, telefon, adres, çalışma saatleri ve site adresi Ortak Bilgiler'le birebir aynıdır.",
+     "Sayfa kurumun işletme portföyündedir; tam kontrollü en az iki kişi vardır.",
+     "Eylem düğmesi işletmenin ana dönüşümüne (WhatsApp, arama, randevu, site) gider.",
+     "Gelen mesajlar tek gelen kutusundan, tanımlı yanıt süresiyle yanıtlanır."
+    ],
+    "pitfalls": [
+     "Kişisel profili işletme gibi kullanmak: reklam verilemez, istatistik ve erişim yönetimi yoktur.",
+     "Çalışma saatlerini ve telefonu sitede güncelleyip Sayfada unutmak.",
+     "Mesajlara günlerce yanıt vermemek: müşteri kaybolur, Sayfada yanıt süresi kötü görünür.",
+     "Yorumlardaki hakaret ve spam'i elle takip etmeye çalışmak: moderasyon filtreleri kurulmalıdır."
+    ],
+    "resources": [
+     {
+      "title": "İşletmeniz için Facebook Sayfası oluşturma",
+      "url": "https://www.facebook.com/business/help/473994396650734",
+      "note": "Meta Yardım Merkezi: Sayfa oluşturma adımları."
+     },
+     {
+      "title": "Sayfa erişimi: Facebook erişimi ve görev erişimi",
+      "url": "https://www.messenger.com/help/289207354498410",
+      "note": "Tam / kısmi kontrol ve Business Suite üzerinden görev erişimi."
+     },
+     {
+      "title": "Yeni Sayfa deneyimi",
+      "url": "https://creators.facebook.com/new-pages-experience/",
+      "note": "Beğeni yerine takipçi, yeni yönetim yapısı."
+     },
+     {
+      "title": "Messenger Platformu",
+      "url": "https://developers.facebook.com/docs/messenger-platform/overview",
+      "note": "Sayfa ve Instagram mesajlarına otomatik ya da canlı temsilciyle yanıt."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_page_settings",
+     "label": "Asgari Sayfa Ayarları",
+     "en": "Minimum Page Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "page"
+       ]
+      }
+     ],
+     "explanation": "Facebook Sayfasında yapılacak asgari profil ve yönetim ayarlarını belirler.",
+     "scenario": "Kategori, kullanıcı adı, iletişim bilgileri, eylem düğmesi ve erişim her Sayfada seçilir; moderasyon ve bağlı hesaplar eklenir.",
+     "example": "Sayfada logo, kapak, “WhatsApp'tan yaz” düğmesi, çalışma saatleri ve Instagram bağlantısı görünür.",
+     "rule": "Facebook Sayfası ayarları: {labels}.",
+     "options": [
+      {
+       "value": "identity",
+       "label": "Ad, kullanıcı adı ve kategori",
+       "explanation": "Sayfa adı marka adıyla, kullanıcı adı diğer hesaplarla aynı; kategori işletmenin asıl işi.",
+       "scenario": "Her Sayfa.",
+       "example": "facebook.com/ornekklinik, kategori “Diş Hekimi”.",
+       "ruleDetail": "Sayfa adı marka adıyla aynıdır; kullanıcı adı diğer sosyal hesaplarla tutarlıdır; kategori işletmenin asıl işini anlatır."
+      },
+      {
+       "value": "contact",
+       "label": "İletişim, adres ve çalışma saatleri",
+       "explanation": "Telefon, WhatsApp, e-posta, adres, saatler ve site adresi Ortak Bilgiler'den aynen girilir.",
+       "scenario": "Her Sayfa.",
+       "example": "Saatler Ortak Bilgiler'deki tabloyla aynı.",
+       "ruleDetail": "Sayfadaki telefon, WhatsApp, e-posta, adres, çalışma saatleri ve site adresi Ortak Bilgiler'le birebir aynıdır ve değişiklikte aynı gün güncellenir."
+      },
+      {
+       "value": "visuals",
+       "label": "Profil ve kapak görseli",
+       "explanation": "Profilde logo, kapakta güncel kampanya ya da marka görseli; mobilde kırpılmayacak şekilde.",
+       "scenario": "Her Sayfa.",
+       "example": "Logo kare, kapak 16:9 güvenli alanla.",
+       "ruleDetail": "Profil görseli logo, kapak görseli mobilde kırpılmayacak güvenli alanla hazırlanır."
+      },
+      {
+       "value": "cta",
+       "label": "Eylem düğmesi",
+       "explanation": "Sayfanın ana düğmesi (WhatsApp, Ara, Randevu al, Siteyi ziyaret et) işletmenin ana dönüşümüne gider.",
+       "scenario": "Her Sayfa.",
+       "example": "“WhatsApp'tan mesaj gönder” düğmesi.",
+       "ruleDetail": "Sayfanın eylem düğmesi işletmenin ana dönüşümüne yönlenir; bağlantı UTM parametresiyle verilir."
+      },
+      {
+       "value": "about",
+       "label": "Hakkında ve site bağlantısı",
+       "explanation": "Kısa tanıtım ve site bağlantısı Ortak Bilgiler'deki kısa tanıtımla tutarlıdır.",
+       "scenario": "Her Sayfa.",
+       "example": "Hakkında: tek cümlelik tanıtım + site.",
+       "ruleDetail": "Hakkında alanında Ortak Bilgiler'deki kısa tanıtım ve UTM'li site bağlantısı bulunur."
+      },
+      {
+       "value": "access",
+       "label": "Erişim portföyden",
+       "explanation": "Sayfa kurumun portföyündedir; tam kontrol en az iki kişide, diğerleri görev erişimiyle.",
+       "scenario": "Her Sayfa.",
+       "example": "İçerik ekibi yalnız içerik ve mesaj görevinde.",
+       "ruleDetail": "Sayfa kurumun işletme portföyüne bağlıdır; tam kontrol en az iki kurum çalışanındadır, diğer kişiler yalnız görev erişimi alır."
+      },
+      {
+       "value": "moderation",
+       "label": "Moderasyon filtreleri",
+       "explanation": "Küfür filtresi ve engellenecek kelime listesi açılır; spam ve hakaret otomatik gizlenir.",
+       "scenario": "Yorum alan her Sayfa.",
+       "example": "Rakip adı ve küfürler içeren yorumlar gizlenir.",
+       "ruleDetail": "Sayfada küfür filtresi ve engellenen kelime listesi açıktır; gizlenen yorumlar haftalık kontrol edilir."
+      },
+      {
+       "value": "linked",
+       "label": "Instagram ve WhatsApp bağlantısı",
+       "explanation": "Instagram hesabı ve WhatsApp numarası Sayfaya bağlanır; reklam ve tek gelen kutusu için gerekir.",
+       "scenario": "Instagram ya da WhatsApp kullanan işletmeler.",
+       "example": "Sayfa ayarlarında bağlı hesaplar listelenir.",
+       "ruleDetail": "Instagram profesyonel hesabı ve WhatsApp Business numarası Sayfaya bağlanır."
+      }
+     ]
+    },
+    {
+     "id": "mt_page_inbox",
+     "label": "Mesaj Yönetimi (Messenger ve Gelen Kutusu)",
+     "en": "Messaging & Inbox",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "page",
+        "instagram"
+       ]
+      }
+     ],
+     "explanation": "Facebook Sayfası ve Instagram'a gelen mesajların nasıl yanıtlanacağını belirler.",
+     "scenario": "Tek gelen kutusu, anında yanıt ve yanıt süresi hedefi her işletmede seçilir; yoğun mesaj alanlarda kayıtlı yanıtlar, CRM'e aktarım ve canlı temsilciye devir eklenir.",
+     "example": "Business Suite gelen kutusunda Messenger ve Instagram mesajları birlikte görünür; mesai dışında otomatik yanıt çalışma saatlerini söyler.",
+     "rule": "Meta mesajlarının yönetimi: {labels}.",
+     "options": [
+      {
+       "value": "inbox",
+       "label": "Tek gelen kutusu",
+       "explanation": "Messenger, Instagram (ve bağlıysa WhatsApp) mesajları Business Suite gelen kutusunda ya da destek yazılımında toplanır.",
+       "scenario": "Mesaj alan her işletme.",
+       "example": "Ekip mesajları tek ekrandan görür ve birbirine atar.",
+       "ruleDetail": "Messenger ve Instagram mesajları tek gelen kutusunda toplanır; mesajlar kişiye atanır ve yanıtlanmamış mesaj kalmaz."
+      },
+      {
+       "value": "auto_reply",
+       "label": "Anında yanıt ve mesai dışı mesajı",
+       "explanation": "İlk mesaja otomatik karşılama, mesai dışında çalışma saatlerini bildiren yanıt.",
+       "scenario": "Her işletme.",
+       "example": "“Merhaba, 09:00–18:00 arasında yanıtlıyoruz.”",
+       "ruleDetail": "İlk mesaja otomatik karşılama, mesai dışında çalışma saatlerini ve acil iletişim yolunu bildiren yanıt gönderilir."
+      },
+      {
+       "value": "saved",
+       "label": "Kayıtlı yanıtlar ve sık sorulanlar",
+       "explanation": "Fiyat, adres, randevu gibi sık sorulara onaylı hazır yanıtlar.",
+       "scenario": "Sık aynı soruyu alan işletmeler.",
+       "example": "“Adres ve yol tarifi” kayıtlı yanıtı.",
+       "ruleDetail": "Sık sorulan sorular için pazarlama ve hukuk onaylı kayıtlı yanıtlar kullanılır."
+      },
+      {
+       "value": "sla",
+       "label": "Yanıt süresi hedefi",
+       "explanation": "Mesai içinde mesajlar belirlenen sürede yanıtlanır.",
+       "scenario": "Her işletme.",
+       "example": "Mesai içi en geç 1 saat.",
+       "ruleDetail": "Mesai içinde mesajlar en geç belirlenen sürede (ör. 1 saat) yanıtlanır; süre aylık raporlanır."
+      },
+      {
+       "value": "handoff",
+       "label": "Otomasyondan temsilciye devir",
+       "explanation": "Bot ya da otomatik akış çözemediğinde sohbet canlı temsilciye devredilir.",
+       "scenario": "Otomatik mesaj akışı kullananlar.",
+       "example": "“Temsilciye bağlan” seçeneği.",
+       "ruleDetail": "Otomatik akışta her adımda canlı temsilciye geçiş seçeneği vardır; devir sohbet geçmişiyle yapılır."
+      },
+      {
+       "value": "crm",
+       "label": "Mesajdan gelen talepler CRM'e",
+       "explanation": "Teklif ve randevu talepleri CRM'e kaynağıyla kaydedilir.",
+       "scenario": "Satış takibi yapılan işletmeler.",
+       "example": "CRM'de kaynak: Instagram DM.",
+       "ruleDetail": "Mesajdan gelen teklif ve randevu talepleri CRM'e kaynak kanalıyla kaydedilir."
+      },
+      {
+       "value": "no_sensitive",
+       "label": "Mesajla hassas veri istenmez",
+       "explanation": "Kart bilgisi, T.C. kimlik numarası, sağlık bilgisi mesajla istenmez; güvenli forma yönlendirilir.",
+       "scenario": "Her işletme.",
+       "example": "“Ödeme için güvenli bağlantıyı kullanın.”",
+       "ruleDetail": "Mesaj kanallarında kart bilgisi, T.C. kimlik numarası ya da sağlık bilgisi istenmez; gerekirse güvenli forma yönlendirilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_ig",
+   "name": "Instagram Profesyonel Hesap",
+   "en": "Instagram Professional Account",
+   "icon": "◍",
+   "agents": [
+    "IG",
+    "S"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_tagline",
+    "domain_name",
+    "mk_accounts"
+   ],
+   "desc": "Instagram hesabının türünü, işletme portföyüne ve Facebook Sayfasına bağlantısını, asgari profil ve güvenlik ayarlarını ve sitede Instagram verisi kullanılacaksa API yöntemini belirler",
+   "guide": {
+    "purpose": "Instagram'da istatistik, iletişim düğmeleri, reklam ve API erişimi profesyonel hesapla gelir. Hesabın işletme portföyüne ve Facebook Sayfasına bağlanması reklamlar, ürün etiketleri ve bazı API özellikleri için gerekir. Sitede Instagram akışı gösterilecekse eski Basic Display API 4 Aralık 2024'te kapandığı için güncel Instagram API yöntemi seçilmelidir.",
+    "criteria": [
+     "Hesap profesyonel hesaptır ve kurumun işletme portföyündedir; şifre paylaşılmaz, erişim portföyden verilir.",
+     "Kullanıcı adı, biyografi, iletişim düğmeleri ve bağlantılar Ortak Bilgiler'le tutarlıdır; bağlantılar UTM'lidir.",
+     "İki faktörlü doğrulama açıktır.",
+     "Sitede Instagram verisi kullanılıyorsa güncel Instagram API'si ve sistem kullanıcısı / uzun ömürlü jetonla çalışılır."
+    ],
+    "pitfalls": [
+     "Hesap şifresini ajansla paylaşmak: şifre değiştirilince erişim kopar, güvenlik kaydı tutulamaz.",
+     "Sitede Basic Display API kullanan eski bir eklentiyle Instagram akışı göstermeye çalışmak: 4 Aralık 2024'ten beri çalışmaz.",
+     "Biyografi bağlantısını UTM'siz vermek: Instagram'dan gelen ziyaretçiler analitikte “direct” görünür.",
+     "Yorum filtrelerini açmamak: spam ve hakaret yorumları markayı yıpratır."
+    ],
+    "resources": [
+     {
+      "title": "Instagram Platform — genel bakış",
+      "url": "https://developers.facebook.com/docs/instagram-platform/overview",
+      "note": "Instagram Login ile ve Facebook Login ile Instagram API farkları."
+     },
+     {
+      "title": "Instagram Basic Display API'nin kapanması",
+      "url": "https://developers.facebook.com/blog/post/2024/09/04/update-on-instagram-basic-display-api",
+      "note": "4 Aralık 2024'te kapandı; yerine Instagram API."
+     },
+     {
+      "title": "Ticaret uygunluk gereklilikleri",
+      "url": "https://www.facebook.com/business/help/2347002662267537",
+      "note": "Ürün etiketleri ve alışveriş özelliklerinin uygunluk şartları."
+     },
+     {
+      "title": "Threads API — genel bakış",
+      "url": "https://developers.facebook.com/documentation/threads/overview",
+      "note": "Threads'te içerik yayınlama API'si (isteğe bağlı kanal)."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_ig_type",
+     "label": "Hesap Türü",
+     "en": "Account Type",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "instagram"
+       ]
+      }
+     ],
+     "explanation": "Instagram hesabının işletme mi içerik üreticisi mi olacağını belirler. İkisi de profesyonel hesaptır; işletme hesabı iletişim düğmeleri, entegrasyonlar ve API için genellikle daha uygundur.",
+     "scenario": "Kurumlar, mağazalar ve hizmet işletmeleri işletme hesabı; kişisel marka, yazar ya da etkileyici (influencer) içerik üreticisi hesabı seçer.",
+     "example": "Bir klinik işletme hesabıyla “Ara”, “Yol tarifi” ve “Mesaj” düğmelerini kullanır.",
+     "rule": "Instagram hesap türü: {label}.",
+     "options": [
+      {
+       "value": "business",
+       "label": "İşletme hesabı (önerilen)",
+       "explanation": "Kurumlar için profesyonel hesap; iletişim düğmeleri, kategori, entegrasyonlar ve API erişimi.",
+       "scenario": "Kurumsal markalar, mağazalar, hizmet işletmeleri.",
+       "example": "Profilde kategori ve iletişim düğmeleri.",
+       "ruleDetail": "Instagram hesabı işletme türünde profesyonel hesaptır."
+      },
+      {
+       "value": "creator",
+       "label": "İçerik üreticisi hesabı",
+       "explanation": "Kişisel marka ve içerik üreticileri için profesyonel hesap; bazı entegrasyonlar işletme hesabındaki kadar geniş değildir.",
+       "scenario": "Kişisel marka, uzman, yazar, etkileyici.",
+       "example": "Profilde “Dijital içerik üreticisi” kategorisi.",
+       "ruleDetail": "Instagram hesabı içerik üreticisi türünde profesyonel hesaptır; gereken entegrasyonun bu hesap türünü desteklediği kurulumdan önce kontrol edilir."
+      }
+     ]
+    },
+    {
+     "id": "mt_ig_settings",
+     "label": "Asgari Instagram Ayarları",
+     "en": "Minimum Instagram Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "instagram"
+       ]
+      }
+     ],
+     "explanation": "Instagram profesyonel hesabında yapılacak asgari ayarları belirler.",
+     "scenario": "Portföy bağlantısı, iki faktörlü doğrulama, profil ve bağlantılar her hesapta seçilir; yorum filtreleri ve Threads isteğe göre eklenir.",
+     "example": "Biyografide kısa tanıtım ve UTM'li beş bağlantı, profilde “Ara” ve “WhatsApp” düğmeleri.",
+     "rule": "Instagram ayarları: {labels}.",
+     "options": [
+      {
+       "value": "portfolio",
+       "label": "İşletme portföyüne ve Sayfaya bağlı",
+       "explanation": "Hesap kurumun portföyüne eklenir ve Facebook Sayfasına bağlanır; reklam, ürün etiketleri ve tek gelen kutusu için gerekir.",
+       "scenario": "Reklam veren ya da ekiple yönetilen hesaplar.",
+       "example": "Portföyde Instagram hesabı varlık olarak görünür.",
+       "ruleDetail": "Instagram hesabı kurumun işletme portföyüne eklenir ve Facebook Sayfasına bağlanır; erişim portföyden verilir, şifre paylaşılmaz."
+      },
+      {
+       "value": "2fa",
+       "label": "İki faktörlü doğrulama",
+       "explanation": "Hesapta doğrulama uygulamasıyla iki faktörlü doğrulama açılır, yedek kodlar güvenli yerde saklanır.",
+       "scenario": "Her hesap.",
+       "example": "Doğrulama uygulaması açık, yedek kodlar parola kasasında.",
+       "ruleDetail": "Instagram hesabında doğrulama uygulamasıyla iki faktörlü doğrulama açıktır; yedek kodlar kurumun parola kasasında saklanır."
+      },
+      {
+       "value": "profile",
+       "label": "Profil: ad, kategori, biyografi",
+       "explanation": "Ad ve kullanıcı adı marka adıyla, biyografi kısa tanıtımla tutarlı; kategori asıl iş.",
+       "scenario": "Her hesap.",
+       "example": "@ornekklinik · Diş Hekimi · tek cümle tanıtım.",
+       "ruleDetail": "Instagram adı, kullanıcı adı, kategori ve biyografi Ortak Bilgiler'deki marka adı ve kısa tanıtımla tutarlıdır."
+      },
+      {
+       "value": "contact",
+       "label": "İletişim düğmeleri",
+       "explanation": "Telefon, e-posta, adres ve WhatsApp düğmeleri Ortak Bilgiler'deki bilgilerle.",
+       "scenario": "Müşteriyle doğrudan iletişim isteyen işletmeler.",
+       "example": "“Ara” ve “WhatsApp” düğmeleri.",
+       "ruleDetail": "Profildeki iletişim düğmeleri Ortak Bilgiler'deki telefon, e-posta, adres ve WhatsApp hattıyla aynıdır."
+      },
+      {
+       "value": "links",
+       "label": "Biyografi bağlantıları UTM'li",
+       "explanation": "Biyografiye en çok beş bağlantı eklenebilir; hepsi UTM parametreli verilir.",
+       "scenario": "Her hesap.",
+       "example": "?utm_source=instagram&utm_medium=social&utm_campaign=bio",
+       "ruleDetail": "Biyografi bağlantıları utm_source=instagram ve utm_medium=social parametreleriyle verilir; bağlantılar ayda bir kontrol edilir."
+      },
+      {
+       "value": "comments",
+       "label": "Yorum ve mesaj filtreleri",
+       "explanation": "Gizli kelimeler, saldırgan yorum filtresi ve istenmeyen mesaj filtreleri açılır.",
+       "scenario": "Etkileşimi yüksek ya da tartışmalı sektörlerdeki hesaplar.",
+       "example": "Küfür ve spam yorumlar otomatik gizlenir.",
+       "ruleDetail": "Instagram'da gizli kelime listesi ve saldırgan yorum / mesaj filtreleri açıktır."
+      },
+      {
+       "value": "insights",
+       "label": "İstatistikler raporlanır",
+       "explanation": "Erişim, etkileşim, takipçi ve bağlantı tıklamaları aylık rapora girer.",
+       "scenario": "Her hesap.",
+       "example": "Aylık raporda erişim ve profil ziyaretleri.",
+       "ruleDetail": "Instagram istatistikleri (erişim, etkileşim, takipçi, bağlantı tıklamaları) aylık pazarlama raporuna eklenir."
+      },
+      {
+       "value": "threads",
+       "label": "Threads profili",
+       "explanation": "Instagram hesabıyla Threads profili açılır; isteğe bağlı metin kanalı.",
+       "scenario": "Kısa metin paylaşımı ve topluluk etkileşimi isteyen markalar.",
+       "example": "Threads'te aynı kullanıcı adı.",
+       "ruleDetail": "Threads profili Instagram hesabıyla aynı kullanıcı adıyla açılır ve Ortak Bilgiler › Sosyal Hesap Adresleri'ne yazılır."
+      }
+     ]
+    },
+    {
+     "id": "mt_ig_api",
+     "label": "Sitede Instagram Verisi (API)",
+     "en": "Instagram Data on Site (API)",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "instagram"
+       ]
+      }
+     ],
+     "explanation": "Sitede Instagram gönderileri gösterilecek ya da Instagram verisi bir yazılıma çekilecekse hangi API yönteminin kullanılacağını belirler.",
+     "scenario": "Sitede Instagram akışı yoksa “Kullanılmayacak”; yalnız gönderi gösterilecekse Instagram Login ile API; ürün etiketleme, hashtag araması ya da iş ortaklığı reklamları gerekiyorsa Facebook Login ile API seçilir.",
+     "example": "Ana sayfadaki son 6 gönderi, sunucunun günde bir kez Instagram API'den çektiği ve önbelleğe aldığı veriden çizilir.",
+     "rule": "Sitede Instagram verisi: {label}.",
+     "options": [
+      {
+       "value": "none",
+       "label": "Kullanılmayacak",
+       "explanation": "Sitede Instagram akışı ya da entegrasyon yok; profil bağlantısı yeterli.",
+       "scenario": "Çoğu kurumsal site.",
+       "example": "Altbilgide yalnız Instagram simgesi.",
+       "ruleDetail": "Sitede Instagram API kullanılmaz; yalnız profil bağlantısı verilir."
+      },
+      {
+       "value": "ig_login",
+       "label": "Instagram Login ile Instagram API",
+       "explanation": "Facebook Sayfası bağlantısı gerektirmeyen güncel yöntem; gönderi, yorum ve mesaj yönetimi.",
+       "scenario": "Sitede kendi gönderilerini gösterecek işletmeler.",
+       "example": "Sunucu günde bir kez son gönderileri çeker.",
+       "ruleDetail": "Instagram verisi Instagram Login ile Instagram API'den sunucu tarafında çekilir ve önbelleğe alınır; jeton yalnız sunucuda tutulur ve süresi dolmadan yenilenir; Basic Display API kullanılmaz."
+      },
+      {
+       "value": "fb_login",
+       "label": "Facebook Login ile Instagram API",
+       "explanation": "Sayfaya bağlı hesap ister; ürün etiketleme, hashtag araması ve iş ortaklığı reklamları gibi ek özellikler bu yöntemle çalışır.",
+       "scenario": "Ürün etiketi, hashtag araması ya da reklam entegrasyonu gereken projeler.",
+       "example": "Sistem kullanıcısı jetonuyla gönderi ve ürün etiketi yönetimi.",
+       "ruleDetail": "Instagram verisi Facebook Login for Business ile Instagram API'den, sistem kullanıcısı jetonuyla sunucu tarafında çekilir; Basic Display API kullanılmaz."
+      },
+      {
+       "value": "tool",
+       "label": "Üçüncü taraf araç / eklenti",
+       "explanation": "Akış bir hizmet ya da eklentiyle gösterilir.",
+       "scenario": "Kod yazmak istemeyen küçük siteler.",
+       "example": "Eklentinin Instagram bağlantısı yenilenir.",
+       "ruleDetail": "Instagram akışı güncel Instagram API'yi kullanan bir araçla gösterilir; aracın Basic Display API'ye bağlı olmadığı ve kişisel veri işleme koşulları kurulumdan önce kontrol edilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_wa",
+   "name": "WhatsApp Business",
+   "en": "WhatsApp Business",
+   "icon": "✆",
+   "agents": [
+    "WA",
+    "CX",
+    "API"
+   ],
+   "refs": [
+    "oc_whatsapp",
+    "mk_brand_name",
+    "oc_hours",
+    "oc_address",
+    "domain_name",
+    "mk_accounts"
+   ],
+   "desc": "WhatsApp'ın uygulama mı Cloud API mi olacağını, numara ve profil ayarlarını, şablon ve mesaj kurallarını, ücretlendirmeyi ve sitedeki WhatsApp bağlantılarını belirler",
+   "guide": {
+    "purpose": "WhatsApp Business iki yolla kullanılır: telefondaki WhatsApp Business uygulaması ya da yazılımla bağlanan WhatsApp Business Platform (Cloud API). Cloud API'de işletmenin başlattığı mesajlar onaylı şablonla gönderilir ve mesaj başına ücretlendirilir (1 Temmuz 2025'ten beri); 1 Ekim 2026'dan beri hizmet mesajlarında da numara başına aylık 1.000 mesaj ücretsizdir, sonrası ücretlidir. Mesaj limitleri işletme portföyü düzeyindedir. Bu bölüm platformu, numara ve profil ayarlarını, mesaj kurallarını ve sitedeki bağlantıları belirler.",
+    "criteria": [
+     "WhatsApp numarası kuruma aittir, kişisel numara değildir; profil Ortak Bilgiler'le tutarlıdır.",
+     "İşletmenin başlattığı mesajlar yalnız onaylı şablonla ve onay (opt-in) alınmış kişilere gönderilir; şablon kategorisi doğrudur.",
+     "Cloud API kullanılıyorsa webhook imzası doğrulanır, jeton sunucuda tutulur, numara iki adımlı doğrulama PIN'iyle korunur.",
+     "Sitedeki WhatsApp bağlantıları uluslararası biçimdedir ve tıklama dönüşüm olarak ölçülür."
+    ],
+    "pitfalls": [
+     "Kişisel WhatsApp numarasını işletme hattı yapmak: çalışan ayrılınca müşteri yazışmaları ve numara kurumdan gider.",
+     "Kampanya içeriğini yardımcı (utility) şablon olarak göndermeye çalışmak: Meta şablonu pazarlama olarak yeniden sınıflandırır, ücret ve limit değişir.",
+     "Onay almadan toplu mesaj göndermek: kullanıcılar engeller, kalite düşer, numaranın mesaj limiti kısıtlanır.",
+     "1 Ekim 2026 ücret değişikliğini hesaba katmadan pencere içinde yoğun yardımcı mesaj göndermek."
+    ],
+    "resources": [
+     {
+      "title": "WhatsApp Business Platform — fiyatlandırma",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "note": "Mesaj başına ücret, ücretsiz giriş noktası ve 2026 değişiklikleri; Türkiye ayrı pazar."
+     },
+     {
+      "title": "Şablon kategorileri",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-categorization",
+      "note": "Pazarlama, yardımcı ve kimlik doğrulama; karışık içerik pazarlama sayılır."
+     },
+     {
+      "title": "WhatsApp Business Messaging Policy",
+      "url": "https://whatsappbusiness.com/policy/",
+      "note": "Onay, ret ve 24 saatlik müşteri hizmet penceresi kuralları."
+     },
+     {
+      "title": "Mesaj limitleri",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/messaging-limits",
+      "note": "Limitler işletme portföyü düzeyinde; kademeler ve yükselme koşulları."
+     },
+     {
+      "title": "Kullanıcı başına pazarlama mesajı limiti",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/marketing-templates/per-user-limits/",
+      "note": "131049 hatası ve yeniden deneme kuralı."
+     },
+     {
+      "title": "Görünen ad",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/display-names",
+      "note": "Görünen adın onayı ve değiştirilme sınırı."
+     },
+     {
+      "title": "Resmî işletme hesabı (mavi tik)",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/official-business-accounts",
+      "note": "Başvuru şartları: doğrulanmış portföy, iki adımlı doğrulama, onaylı görünen ad."
+     },
+     {
+      "title": "Telefon numaraları",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers",
+      "note": "Numara kaydı ve iki adımlı doğrulama PIN'i."
+     },
+     {
+      "title": "Business uygulaması kullanıcılarını Cloud API'ye bağlama (coexistence)",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users",
+      "note": "Aynı numarayı uygulamada ve Cloud API'de kullanma; sınırlar."
+     },
+     {
+      "title": "Çözüm sağlayıcılar",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/overview/",
+      "note": "Çözüm ortağı ile teknoloji sağlayıcı arasındaki faturalama farkı."
+     },
+     {
+      "title": "Webhook uç noktası oluşturma",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/create-webhook-endpoint",
+      "note": "X-Hub-Signature-256 ile imza doğrulama."
+     },
+     {
+      "title": "On-Premises API'nin kapanması",
+      "url": "https://developers.facebook.com/docs/whatsapp/on-premises/sunset",
+      "note": "Son sürüm 23 Ekim 2025'te sona erdi; Cloud API kullanılır."
+     },
+     {
+      "title": "WhatsApp — sohbet bağlantısı (wa.me)",
+      "url": "https://faq.whatsapp.com/5913398998672934",
+      "note": "Numara uluslararası biçimde, ?text= ile hazır mesaj."
+     },
+     {
+      "title": "WhatsApp'a tıklama reklamları rehberi",
+      "url": "https://whatsappbusiness.com/blog/click-to-whatsapp-ad-guide/",
+      "note": "Facebook ve Instagram reklamından WhatsApp sohbeti açmak."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_wa_platform",
+     "label": "WhatsApp Platformu",
+     "en": "WhatsApp Platform",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "whatsapp"
+       ]
+      }
+     ],
+     "explanation": "WhatsApp'ın telefon uygulamasıyla mı, yazılımla bağlanan Cloud API ile mi, ya da ikisiyle birlikte mi kullanılacağını belirler. On-Premises API 23 Ekim 2025'te kapandığı için API seçeneği Cloud API'dir.",
+     "scenario": "Az mesaj alan ve birkaç kişinin yanıtladığı işletmeler uygulamayı; CRM, otomatik bildirim, chatbot ya da çok temsilci gerekiyorsa Cloud API'yi; uygulamadaki sohbeti sürdürüp otomasyon da isteyenler birlikte kullanımı (coexistence) seçer.",
+     "example": "Randevu hatırlatmaları Cloud API'den yardımcı şablonla otomatik gider; müşteri yanıtlayınca temsilci aynı sohbeti destek yazılımından sürdürür.",
+     "rule": "WhatsApp platformu: {label}.",
+     "options": [
+      {
+       "value": "app",
+       "label": "WhatsApp Business uygulaması",
+       "explanation": "Telefonda (ve bağlı cihazlarda) çalışan ücretsiz uygulama; profil, katalog, hazır yanıtlar, etiketler.",
+       "scenario": "Günde az sayıda mesaj alan küçük işletmeler.",
+       "example": "İki çalışan bağlı cihazlardan yanıtlar.",
+       "ruleDetail": "WhatsApp Business uygulaması kurumun numarasıyla kullanılır; uygulama kurum telefonundadır, yazışma yedeği kurumsal hesaba alınır."
+      },
+      {
+       "value": "coexistence",
+       "label": "Uygulama + Cloud API aynı numarada (coexistence)",
+       "explanation": "Aynı numara hem uygulamada hem Cloud API'de çalışır; uygulamadan gönderilenler ücretsiz, API mesajları Cloud API fiyatıyla. Bazı uygulama özellikleri (grup, kaybolan mesaj vb.) desteklenmez; hız ve bağlı cihaz sınırları vardır.",
+       "scenario": "Uygulamayı bırakmadan otomasyon ve entegrasyon eklemek isteyenler.",
+       "example": "Elle yazışma uygulamadan, sipariş bildirimleri API'den.",
+       "ruleDetail": "Aynı numara WhatsApp Business uygulamasında ve Cloud API'de birlikte kullanılır; desteklenmeyen özellikler ve sınırlar kurulumdan önce kontrol edilir, ücretli API mesajları ayrı raporlanır."
+      },
+      {
+       "value": "cloud_bsp",
+       "label": "Cloud API — çözüm ortağı üzerinden",
+       "explanation": "Meta'nın çözüm ortağı (BSP) kurulum, gelen kutusu ve destek sağlar; faturalama ortağa göre değişir.",
+       "scenario": "Hazır gelen kutusu ve chatbot aracı isteyen işletmeler.",
+       "example": "Çözüm ortağının panelinde 5 temsilci aynı numaradan yanıtlar.",
+       "ruleDetail": "WhatsApp Cloud API bir Meta çözüm ortağı üzerinden kullanılır; WhatsApp hesabı ve numara kurumun işletme portföyündedir, ortak değişse de numara kurumda kalır."
+      },
+      {
+       "value": "cloud_direct",
+       "label": "Cloud API — doğrudan Meta'ya bağlı",
+       "explanation": "Kurumun kendi yazılımı Cloud API'ye doğrudan bağlanır; ödeme yöntemi kurumun portföyündedir.",
+       "scenario": "Kendi yazılım ekibi olan, CRM ya da sipariş sistemiyle entegre çalışacak işletmeler.",
+       "example": "Sipariş sistemi kargo bildirimini yardımcı şablonla gönderir.",
+       "ruleDetail": "WhatsApp Cloud API kurumun kendi yazılımından, sistem kullanıcısı jetonuyla doğrudan kullanılır; ödeme yöntemi kurumun işletme portföyündedir."
+      }
+     ]
+    },
+    {
+     "id": "mt_wa_settings",
+     "label": "Numara, Profil ve Hesap Ayarları",
+     "en": "Number, Profile & Account Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "whatsapp"
+       ]
+      }
+     ],
+     "explanation": "WhatsApp hattının numara, profil, güvenlik ve hesap ayarlarını belirler.",
+     "scenario": "Kurumsal numara, profil ve iki adımlı doğrulama her kurulumda seçilir; Cloud API'de ödeme yöntemi, webhook doğrulaması ve resmî hesap başvurusu eklenir.",
+     "example": "Profilde marka adı, kısa açıklama, adres, çalışma saatleri, site ve e-posta; numara iki adımlı doğrulama PIN'iyle korunur.",
+     "rule": "WhatsApp hesap ayarları: {labels}.",
+     "options": [
+      {
+       "value": "number",
+       "label": "Kuruma ait numara",
+       "explanation": "Kişisel değil, kuruma kayıtlı bir hat; sabit hat ya da sanal numara da olabilir.",
+       "scenario": "Her kurulum.",
+       "example": "Hat şirket adına kayıtlı.",
+       "ruleDetail": "WhatsApp hattı kurum adına kayıtlı bir numaradır; kişisel numara kullanılmaz ve numara Ortak Bilgiler › WhatsApp Hattı'yla aynıdır."
+      },
+      {
+       "value": "profile",
+       "label": "İşletme profili",
+       "explanation": "Ad, açıklama, kategori, adres, çalışma saatleri, site ve e-posta Ortak Bilgiler'den.",
+       "scenario": "Her kurulum.",
+       "example": "Profilde saatler ve site.",
+       "ruleDetail": "WhatsApp işletme profilindeki ad, açıklama, kategori, adres, çalışma saatleri, site ve e-posta Ortak Bilgiler'le aynıdır."
+      },
+      {
+       "value": "display_name",
+       "label": "Görünen ad marka adıyla uyumlu",
+       "explanation": "Cloud API'de görünen ad Meta onayından geçer; marka adıyla tutarlı olmalı, sık değiştirilmemeli.",
+       "scenario": "Cloud API kullananlar.",
+       "example": "Görünen ad “Örnek Klinik”.",
+       "ruleDetail": "WhatsApp görünen adı işletme adıyla tutarlıdır ve Meta onayından geçer; ad sık değiştirilmez."
+      },
+      {
+       "value": "pin",
+       "label": "İki adımlı doğrulama PIN'i",
+       "explanation": "Numara kaydında ve uygulamada iki adımlı doğrulama PIN'i açılır, kurumun parola kasasında saklanır.",
+       "scenario": "Her kurulum.",
+       "example": "PIN parola kasasında.",
+       "ruleDetail": "WhatsApp numarasında iki adımlı doğrulama PIN'i açıktır ve kurumun parola kasasında saklanır."
+      },
+      {
+       "value": "oba",
+       "label": "Resmî işletme hesabı (mavi tik) başvurusu",
+       "explanation": "Doğrulanmış portföy, iki adımlı doğrulama ve onaylı görünen adla mavi tik başvurusu yapılır.",
+       "scenario": "Tanınırlığı olan, sahte hesap riski taşıyan markalar.",
+       "example": "Görünen adın yanında mavi tik.",
+       "ruleDetail": "Şartlar sağlanınca resmî işletme hesabı (mavi tik) başvurusu yapılır; başvuru sonucu kayda geçirilir."
+      },
+      {
+       "value": "payment",
+       "label": "Ödeme yöntemi (Cloud API)",
+       "explanation": "Cloud API'de ücretli mesajlar için portföye ödeme yöntemi eklenir; 30 Eylül 2026'dan sonra ödeme yöntemi olmayan hesapların hizmet mesajları da teslim edilmez.",
+       "scenario": "Cloud API kullananlar.",
+       "example": "Kurumsal kart ve fatura bilgileri ekli.",
+       "ruleDetail": "Cloud API için işletme portföyüne kurumsal ödeme yöntemi ve fatura bilgileri eklenir; aylık WhatsApp maliyeti raporlanır."
+      },
+      {
+       "value": "webhook",
+       "label": "Webhook imza doğrulaması (Cloud API)",
+       "explanation": "Gelen webhook isteklerinin X-Hub-Signature-256 imzası uygulama gizli anahtarıyla doğrulanır.",
+       "scenario": "Cloud API'yi kendi sunucusuna bağlayanlar.",
+       "example": "İmzası tutmayan istek 401 ile reddedilir.",
+       "ruleDetail": "WhatsApp webhook'unda her isteğin X-Hub-Signature-256 imzası ham gövde ve uygulama gizli anahtarıyla HMAC-SHA256 olarak doğrulanır; doğrulanmayan istek işlenmez, gizli anahtar yalnız sunucudadır."
+      },
+      {
+       "value": "quality",
+       "label": "Kalite ve mesaj limiti izlenir",
+       "explanation": "Numaranın kalite durumu ve portföyün mesaj limiti düzenli izlenir; düşüşte kampanya durdurulur.",
+       "scenario": "Şablonla toplu mesaj gönderenler.",
+       "example": "Kalite düşünce pazarlama gönderimi durdurulur.",
+       "ruleDetail": "WhatsApp numarasının kalite durumu ve işletme portföyünün mesaj limiti haftalık izlenir; kalite düşerse pazarlama gönderimi durdurulup neden araştırılır."
+      },
+      {
+       "value": "catalog",
+       "label": "WhatsApp kataloğu",
+       "explanation": "Ürün ya da hizmetler WhatsApp'ta katalog olarak gösterilir; Meta kataloğuyla bağlanabilir.",
+       "scenario": "Ürün ya da paket satan işletmeler.",
+       "example": "Sohbette katalog düğmesi.",
+       "ruleDetail": "WhatsApp kataloğu Meta kataloğuyla bağlanır; fiyat ve stok sitedekiyle aynı tutulur."
+      }
+     ]
+    },
+    {
+     "id": "mt_wa_messaging",
+     "label": "Mesaj ve Şablon Kuralları",
+     "en": "Messaging & Template Rules",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "whatsapp"
+       ]
+      }
+     ],
+     "explanation": "WhatsApp'ta mesaj gönderme, şablon, otomatik yanıt ve maliyet kurallarını belirler.",
+     "scenario": "24 saat penceresi, şablon kategorisi ve ret kuralları Cloud API'de her kurulumda seçilir; uygulama kullananlar otomatik yanıt ve devir kurallarını seçer.",
+     "example": "Müşteri yazdıktan sonraki 24 saatte serbest yanıt; sonrasında yalnız onaylı yardımcı ya da pazarlama şablonu.",
+     "rule": "WhatsApp mesaj kuralları: {labels}.",
+     "options": [
+      {
+       "value": "window",
+       "label": "24 saatlik müşteri hizmet penceresi",
+       "explanation": "Müşterinin son mesajından sonraki 24 saat içinde şablonsuz mesaj gönderilebilir; dışında yalnız onaylı şablon.",
+       "scenario": "Cloud API kullananlar.",
+       "example": "25. saatte yanıt için şablon gerekir.",
+       "ruleDetail": "Müşterinin son mesajından sonraki 24 saat içinde serbest mesaj gönderilir; pencere dışında işletme yalnız onaylı şablonla yazar."
+      },
+      {
+       "value": "templates",
+       "label": "Doğru şablon kategorisi",
+       "explanation": "Pazarlama, yardımcı (utility) ve kimlik doğrulama şablonları amaca göre seçilir; karışık içerik pazarlama sayılır.",
+       "scenario": "Şablon kullanan herkes.",
+       "example": "Kargo bildirimi yardımcı, indirim duyurusu pazarlama.",
+       "ruleDetail": "Şablonlar amaca göre pazarlama, yardımcı ya da kimlik doğrulama kategorisinde açılır; yardımcı şablona pazarlama içeriği eklenmez; şablon listesi ve onay durumları kayıt altındadır."
+      },
+      {
+       "value": "per_user",
+       "label": "Kişi başına pazarlama limitine uyum",
+       "explanation": "Meta bir kişiye gidecek pazarlama mesajı sayısını sınırlayabilir; 131049 hatasında aynı mesaj hemen yeniden denenmez.",
+       "scenario": "Pazarlama şablonu gönderenler.",
+       "example": "Hata alınan kişiye en az 24 saat sonra yeniden denenir.",
+       "ruleDetail": "Pazarlama şablonunda 131049 hatası alınan kişiye aynı mesaj en az 24 saat yeniden gönderilmez; hata oranı raporlanır."
+      },
+      {
+       "value": "cost",
+       "label": "Maliyet izlenir",
+       "explanation": "Mesaj başına ücretlendirme (1 Temmuz 2025) ve 1 Ekim 2026 değişikliği (hizmet mesajlarında numara başına aylık 1.000 ücretsiz, pencere içi yardımcı mesajlar ücretli) bütçeye yansıtılır.",
+       "scenario": "Cloud API kullananlar.",
+       "example": "Aylık raporda kategoriye göre mesaj sayısı ve maliyet.",
+       "ruleDetail": "WhatsApp mesajları kategoriye göre sayılır ve maliyeti aylık raporlanır; Meta'nın güncel fiyat tablosu (Türkiye ayrı pazar) ve ücretsiz giriş noktası kuralları bütçeye yansıtılır."
+      },
+      {
+       "value": "auto",
+       "label": "Karşılama ve mesai dışı yanıtı",
+       "explanation": "İlk mesaja karşılama, mesai dışında çalışma saatlerini bildiren otomatik yanıt.",
+       "scenario": "Her işletme.",
+       "example": "“Mesainiz dışında yazdınız, 09:00'da dönüyoruz.”",
+       "ruleDetail": "WhatsApp'ta ilk mesaja karşılama ve mesai dışında çalışma saatlerini bildiren otomatik yanıt vardır."
+      },
+      {
+       "value": "handoff",
+       "label": "Bottan temsilciye devir",
+       "explanation": "Otomatik akış her adımda temsilciye geçiş sunar.",
+       "scenario": "Chatbot kullananlar.",
+       "example": "“Temsilciyle görüş” düğmesi.",
+       "ruleDetail": "WhatsApp otomatik akışında her adımda canlı temsilciye geçiş seçeneği bulunur; devir sohbet geçmişiyle yapılır."
+      },
+      {
+       "value": "optout",
+       "label": "Ret anahtar kelimeleri",
+       "explanation": "“DUR”, “İPTAL” gibi yanıtlar pazarlama listesinden otomatik çıkarır.",
+       "scenario": "Pazarlama mesajı gönderenler.",
+       "example": "“DUR” yazan kişi listeden çıkar ve onay mesajı alır.",
+       "ruleDetail": "Pazarlama şablonlarında ret yolu belirtilir; “DUR” ve benzeri yanıtlar kişiyi otomatik olarak pazarlama listesinden çıkarır."
+      }
+     ]
+    },
+    {
+     "id": "mt_wa_site",
+     "label": "Sitede ve Reklamda WhatsApp",
+     "en": "WhatsApp on Site & Ads",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "whatsapp"
+       ]
+      }
+     ],
+     "explanation": "Sitedeki WhatsApp düğmelerini, QR kodu, WhatsApp'a tıklama reklamlarını ve ölçümünü belirler.",
+     "scenario": "WhatsApp'tan talep alan her sitede wa.me bağlantısı ve tıklama ölçümü seçilir; reklam veriliyorsa WhatsApp'a tıklama reklamları eklenir.",
+     "example": "Sayfadaki “WhatsApp'tan yazın” düğmesi https://wa.me/905321234567?text=… adresine gider ve tıklamada GA4 ile Meta'ya olay gönderir.",
+     "rule": "Sitede ve reklamda WhatsApp: {labels}.",
+     "recommend": [
+      {
+       "field": "mk_conversions",
+       "map": {
+        "whatsapp": [
+         "wa_me",
+         "tracking"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "wa_me",
+       "label": "wa.me bağlantısı",
+       "explanation": "Bağlantı numarayı uluslararası biçimde (ülke kodu, başta 0, boşluk ve tire olmadan) kullanır; isteğe bağlı hazır mesaj ?text= ile.",
+       "scenario": "WhatsApp'tan talep alan her site.",
+       "example": "https://wa.me/905321234567?text=Merhaba%2C%20randevu",
+       "ruleDetail": "Sitedeki WhatsApp bağlantıları https://wa.me/ ile ülke kodlu, boşluksuz numaraya verilir; hazır mesaj ?text= ile ve URL kodlamasıyla eklenir; numara Ortak Bilgiler'deki WhatsApp hattıdır."
+      },
+      {
+       "value": "qr",
+       "label": "QR kod",
+       "explanation": "Mağaza, broşür ve kartvizitlerde wa.me bağlantısının QR kodu kullanılır.",
+       "scenario": "Fiziksel mağaza ya da basılı malzeme kullananlar.",
+       "example": "Kasada “WhatsApp'tan sipariş” QR kodu.",
+       "ruleDetail": "Basılı malzemelerde wa.me bağlantısının UTM bilgisi taşıyan hazır mesajlı QR kodu kullanılır."
+      },
+      {
+       "value": "tracking",
+       "label": "Tıklama dönüşüm olarak ölçülür",
+       "explanation": "WhatsApp bağlantısına tıklama analitikte ve Meta'da (Contact) olay olarak gönderilir.",
+       "scenario": "WhatsApp'ı dönüşüm sayan siteler.",
+       "example": "Tıklamada GA4 whatsapp_click ve Meta Contact.",
+       "ruleDetail": "WhatsApp bağlantısına tıklama analitik aracına ve onay varsa Meta'ya Contact olayı olarak gönderilir."
+      },
+      {
+       "value": "ctwa",
+       "label": "WhatsApp'a tıklama reklamları",
+       "explanation": "Facebook ve Instagram reklamı tıklanınca WhatsApp sohbeti açılır; WhatsApp hesabı Sayfaya bağlı olmalıdır. Bu reklamlardan gelen sohbette ücretsiz giriş noktası penceresi açılır.",
+       "scenario": "Mesajla satış ya da randevu alan, reklam veren işletmeler.",
+       "example": "Reklamdaki “WhatsApp'tan mesaj gönder” düğmesi.",
+       "ruleDetail": "WhatsApp'a tıklama reklamları için WhatsApp numarası Facebook Sayfasına bağlanır; reklamdan gelen sohbetler kaynaklarıyla etiketlenir ve satışa dönüşenler raporlanır."
+      },
+      {
+       "value": "channel",
+       "label": "WhatsApp Kanalı",
+       "explanation": "Tek yönlü duyuru kanalı; takipçi numaraları işletmeye görünmez.",
+       "scenario": "Duyuru ve içerik paylaşmak isteyen markalar.",
+       "example": "Kanal adresi Ortak Bilgiler'de.",
+       "ruleDetail": "WhatsApp Kanalı açılırsa adresi Ortak Bilgiler › Sosyal Hesap Adresleri'ne yazılır ve içerik takvimine eklenir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_ads",
+   "name": "Meta Reklam Hesabı Kurulumu",
+   "en": "Meta Ad Account Setup",
+   "icon": "◆",
+   "agents": [
+    "PS",
+    "I"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_legal_name",
+    "oc_tax_ids",
+    "mk_ids"
+   ],
+   "desc": "Meta reklam hesabının para birimi ve saat dilimini, ödeme ve fatura ayarlarını, özel reklam kategorilerini, marka güvenliğini ve hesaba bağlanacak varlıkları belirler; kampanya stratejisi Pazarlama Kararları › Meta Ads'te kalır",
+   "guide": {
+    "purpose": "Reklam hesabının para birimi ve saat dilimi hesap açılırken belirlenir ve sonradan değiştirilemez; değiştirmek için yeni hesap açmak gerekir, eski hesabın geçmişi ayrı kalır. Bu bölüm hesabı doğru açtırır, fatura ve ödeme bilgilerini kurumla eşler, Meta'nın özel reklam kategorilerini ve siyasi / sosyal konulu reklam kurallarını kontrol ettirir, hesaba veri kümesini, Sayfayı, Instagram'ı, WhatsApp'ı ve katalogu bağlar. Kampanya amaçları, kitleler ve kreatif kararları Pazarlama Kararları › Meta Ads'tedir.",
+    "criteria": [
+     "Reklam hesabı kurumun işletme portföyündedir; para birimi ve saat dilimi muhasebe ve raporlamayla uyumludur.",
+     "Fatura bilgileri ticari unvan, vergi dairesi ve vergi numarasıyla girilir; Meta faturalarındaki vergi ve ücret kalemleri muhasebeyle kontrol edilir.",
+     "Reklamın konusu özel reklam kategorisine giriyorsa doğru kategori seçilir; siyasi / sosyal konulu reklam için yetkilendirme yapılır.",
+     "Veri kümesi, Sayfa, Instagram hesabı, WhatsApp numarası ve katalog reklam hesabına bağlıdır."
+    ],
+    "pitfalls": [
+     "Hesabı USD ve yanlış saat dilimiyle açmak: raporlar ve faturalar muhasebeyle tutmaz, düzeltmek için yeni hesap gerekir.",
+     "Fatura bilgilerini eksik girmek: Meta faturası muhasebeye işlenemez.",
+     "Kredi, istihdam ya da konut ilanını normal reklam gibi açmak: reklam reddedilir ya da hesap kısıtlanır.",
+     "Advantage+ kreatif iyileştirmelerini kontrol etmeden açık bırakmak: marka kurallarına uymayan otomatik varyasyonlar yayınlanabilir."
+    ],
+    "resources": [
+     {
+      "title": "Özel reklam kategorileri (Marketing API)",
+      "url": "https://developers.facebook.com/docs/marketing-api/audiences/special-ad-category",
+      "note": "Konut, finansal ürün ve hizmetler, istihdam, sosyal konular / seçimler / siyaset."
+     },
+     {
+      "title": "Özel reklam kategorisi seçme",
+      "url": "https://www.facebook.com/business/help/298000447747885",
+      "note": "Meta Yardım Merkezi: kampanyada özel kategori seçimi."
+     },
+     {
+      "title": "Sosyal konular, seçimler ve siyaset reklamları için yetkilendirme",
+      "url": "https://www.facebook.com/business/help/208949576550051",
+      "note": "Yetkilendirme ve “Ödeyen” beyanı."
+     },
+     {
+      "title": "Meta reklamları için konum ücretleri",
+      "url": "https://www.facebook.com/business/help/1238737454289085",
+      "note": "Bazı ülkelere gösterilen reklamlara eklenen ücret; faturayla kontrol edilir."
+     },
+     {
+      "title": "Advantage+ kreatif iyileştirmeleri (Marketing API v22)",
+      "url": "https://developers.facebook.com/blog/post/2025/01/17/marketing-api-v22-impacts-to-advantage-plus-creative-enhancements/",
+      "note": "İyileştirmeler tek tek açılır ya da kapatılır."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_ads_account",
+     "label": "Para Birimi ve Saat Dilimi",
+     "en": "Currency & Time Zone",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "ads"
+       ]
+      }
+     ],
+     "explanation": "Reklam hesabının para birimini ve saat dilimini belirler. İkisi hesap açılırken seçilir ve sonradan değiştirilemez.",
+     "scenario": "Türkiye'de faturalanan ve TL ile muhasebeleşen işletmeler TRY ve İstanbul saat dilimini; döviz bütçeli ya da yurt dışı merkezli işletmeler kendi para birimini seçer.",
+     "example": "Hesap TRY ve (GMT+03:00) İstanbul ile açılır; günlük bütçe ve raporlar Türkiye gününe göre çalışır.",
+     "rule": "Meta reklam hesabının para birimi ve saat dilimi: {label}. Bu ayarlar sonradan değiştirilemez; değişiklik gerekirse yeni reklam hesabı açılır ve eski hesabın raporları saklanır.",
+     "options": [
+      {
+       "value": "try_ist",
+       "label": "TRY · İstanbul (önerilen)",
+       "explanation": "Türk lirası ve İstanbul saat dilimi.",
+       "scenario": "Türkiye'de faturalanan ve TL ile muhasebeleşen işletmeler.",
+       "example": "Bütçe 500 TL/gün, gün 00:00 İstanbul'da başlar.",
+       "ruleDetail": "Reklam hesabı TRY para birimi ve İstanbul saat dilimiyle açılır."
+      },
+      {
+       "value": "usd_ist",
+       "label": "USD · İstanbul",
+       "explanation": "ABD doları ve İstanbul saat dilimi.",
+       "scenario": "Bütçesi ve muhasebesi dolar bazlı olan işletmeler.",
+       "example": "Bütçe 20 USD/gün.",
+       "ruleDetail": "Reklam hesabı USD para birimi ve İstanbul saat dilimiyle açılır; kur farkı muhasebeyle önceden konuşulur."
+      },
+      {
+       "value": "eur_market",
+       "label": "EUR · hedef pazar saat dilimi",
+       "explanation": "Euro ve hedef pazarın saat dilimi.",
+       "scenario": "Avrupa'ya reklam veren, euro ile muhasebeleşen işletmeler.",
+       "example": "EUR ve Berlin saat dilimi.",
+       "ruleDetail": "Reklam hesabı EUR para birimi ve hedef pazarın saat dilimiyle açılır."
+      }
+     ]
+    },
+    {
+     "id": "mt_ads_settings",
+     "label": "Asgari Reklam Hesabı Ayarları",
+     "en": "Minimum Ad Account Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "ads"
+       ]
+      }
+     ],
+     "explanation": "Reklam hesabında yapılacak asgari sahiplik, ödeme, uyum ve marka güvenliği ayarlarını belirler.",
+     "scenario": "Sahiplik, roller, fatura bilgileri ve ödeme yöntemi her hesapta seçilir; reklam konusuna göre özel kategori ve siyasi reklam yetkilendirmesi, bütçe riskine göre harcama limiti eklenir.",
+     "example": "Faturada ticari unvan ve vergi numarası, kurumsal kart birincil, ikinci kart yedek; hesap harcama limiti üç aylık bütçe kadar.",
+     "rule": "Meta reklam hesabı ayarları: {labels}.",
+     "options": [
+      {
+       "value": "owner",
+       "label": "Kurumun portföyünde, rollerle",
+       "explanation": "Hesap kurumun portföyündedir; ajans iş ortağı erişimiyle, çalışanlar görevine göre rolle.",
+       "scenario": "Her hesap.",
+       "example": "Muhasebe yalnız fatura görüntüleme yetkisinde.",
+       "ruleDetail": "Reklam hesabı kurumun işletme portföyündedir; ajans iş ortağı erişimiyle, çalışanlar görevine uygun rolle (yönetme, reklam, analiz, fatura) eklenir."
+      },
+      {
+       "value": "billing",
+       "label": "Fatura bilgileri ve vergi",
+       "explanation": "Ticari unvan, adres, vergi dairesi ve vergi numarası girilir; Meta faturasındaki vergi ve ücret kalemleri muhasebeyle kontrol edilir.",
+       "scenario": "Her hesap.",
+       "example": "Aylık Meta faturası muhasebeye iletilir.",
+       "ruleDetail": "Reklam hesabının fatura bilgileri ticari unvan, adres, vergi dairesi ve vergi numarasıyla girilir; Meta faturaları her ay muhasebeye iletilir ve faturadaki vergi ile konum ücreti kalemleri muhasebe birimince kontrol edilir."
+      },
+      {
+       "value": "payment",
+       "label": "Ödeme yöntemi ve yedek",
+       "explanation": "Kurumsal kart ya da ön ödemeli bakiye birincil, ikinci bir yöntem yedek; kişisel kart kullanılmaz.",
+       "scenario": "Her hesap.",
+       "example": "Kurumsal kart + yedek kart.",
+       "ruleDetail": "Reklam hesabında kuruma ait birincil ve yedek ödeme yöntemi tanımlıdır; kişisel kart kullanılmaz."
+      },
+      {
+       "value": "spend_limit",
+       "label": "Hesap harcama limiti",
+       "explanation": "Hesabın toplam harcamasına üst sınır konur; hatalı bütçe girişine karşı güvenlik.",
+       "scenario": "Ajansla ya da çok kişiyle yönetilen hesaplar.",
+       "example": "Limit üç aylık onaylı bütçe.",
+       "ruleDetail": "Reklam hesabına onaylı bütçeyle uyumlu bir harcama limiti konur; limit bütçe onayıyla güncellenir."
+      },
+      {
+       "value": "special",
+       "label": "Özel reklam kategorisi kontrolü",
+       "explanation": "Kredi ve finansal ürün, istihdam, konut ya da sosyal konular / seçimler / siyaset reklamlarında özel kategori seçilir; hedefleme seçenekleri kısıtlanır.",
+       "scenario": "Finans, insan kaynakları, emlak, dernek ve siyasi içerikli reklamlar.",
+       "example": "İş ilanı kampanyası “İstihdam” kategorisinde.",
+       "ruleDetail": "Her kampanyada reklamın özel reklam kategorisine girip girmediği kontrol edilir; giriyorsa doğru kategori ve ülke seçilir."
+      },
+      {
+       "value": "political",
+       "label": "Siyasi / sosyal konulu reklam yetkilendirmesi",
+       "explanation": "Bu tür reklamlarda kullanıcı kimliği ve Sayfa yetkilendirilir, “Ödeyen” beyanı eklenir.",
+       "scenario": "Kamu politikası, seçim ya da toplumsal konularda reklam verecek kurumlar.",
+       "example": "Reklamda “Ödeyen: Örnek Derneği”.",
+       "ruleDetail": "Sosyal konular, seçimler ya da siyaset reklamı verilecekse reklamı yöneten kişiler ve Sayfa hedef ülke için yetkilendirilir ve “Ödeyen” beyanı eklenir."
+      },
+      {
+       "value": "brand_safety",
+       "label": "Marka güvenliği",
+       "explanation": "Engelleme listeleri ve envanter filtresiyle reklamın uygunsuz içeriklerin yanında görünmesi sınırlanır.",
+       "scenario": "Marka hassasiyeti yüksek işletmeler.",
+       "example": "Belirli yayıncılar engelleme listesinde.",
+       "ruleDetail": "Reklam hesabında engelleme listeleri ve envanter filtresi kurum politikasına göre ayarlanır."
+      },
+      {
+       "value": "advantage",
+       "label": "Otomatik kreatif iyileştirmeleri gözden geçirilir",
+       "explanation": "Advantage+ kreatif iyileştirmeleri tek tek değerlendirilir; marka kurallarına uymayanlar kapatılır.",
+       "scenario": "Marka kılavuzu olan işletmeler.",
+       "example": "Metin varyasyonu kapalı, görsel kırpma açık.",
+       "ruleDetail": "Advantage+ kreatif iyileştirmeleri her kampanyada tek tek gözden geçirilir; marka ve hukuk kurallarına uymayan otomatik varyasyonlar kapatılır."
+      },
+      {
+       "value": "naming",
+       "label": "Adlandırma ve UTM",
+       "explanation": "Kampanya, reklam seti ve reklam adları ile UTM şeması standarttır.",
+       "scenario": "Her hesap.",
+       "example": "2026-11_lead_istanbul_karusel",
+       "ruleDetail": "Kampanya, reklam seti ve reklam adları ile reklam bağlantılarındaki UTM parametreleri pazarlama kararlarındaki standarda göre verilir."
+      }
+     ]
+    },
+    {
+     "id": "mt_ads_links",
+     "label": "Reklam Hesabına Bağlanacaklar",
+     "en": "Linked Assets",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "ads"
+       ]
+      }
+     ],
+     "explanation": "Reklam hesabıyla birlikte çalışacak varlıkları ve aktarımları belirler.",
+     "scenario": "Veri kümesi, Sayfa ve Instagram her reklam hesabına bağlanır; mesaj reklamlarında WhatsApp, katalog satışında katalog, anlık form kullananlarda CRM aktarımı eklenir.",
+     "example": "Reklam hesabı veri kümesine, Sayfaya, Instagram'a ve WhatsApp numarasına bağlı; anlık form lead'leri CRM'e otomatik düşer.",
+     "rule": "Meta reklam hesabına bağlananlar: {labels}.",
+     "recommend": [
+      {
+       "field": "mt_services",
+       "map": {
+        "pixel": [
+         "dataset"
+        ],
+        "page": [
+         "page_ig"
+        ],
+        "instagram": [
+         "page_ig"
+        ],
+        "whatsapp": [
+         "whatsapp"
+        ],
+        "catalog": [
+         "catalog"
+        ]
+       }
+      },
+      {
+       "field": "mk_meta_objectives",
+       "map": {
+        "instant_form": [
+         "lead_crm"
+        ],
+        "messages": [
+         "whatsapp"
+        ],
+        "catalog": [
+         "catalog"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "dataset",
+       "label": "Veri kümesi (piksel)",
+       "explanation": "Dönüşüm ölçümü ve yeniden hedefleme için.",
+       "scenario": "Siteye trafik ya da dönüşüm reklamı verenler.",
+       "example": "Reklam setinde dönüşüm olayı Lead.",
+       "ruleDetail": "Veri kümesi (piksel) reklam hesabına bağlanır; kampanyalar standart olaylarla optimize edilir."
+      },
+      {
+       "value": "page_ig",
+       "label": "Facebook Sayfası ve Instagram hesabı",
+       "explanation": "Reklamların hangi kimlikle yayınlanacağı.",
+       "scenario": "Her hesap.",
+       "example": "Reklamda Sayfa adı ve Instagram kullanıcı adı.",
+       "ruleDetail": "Reklamlar kurumun Facebook Sayfası ve Instagram hesabı kimliğiyle yayınlanır."
+      },
+      {
+       "value": "whatsapp",
+       "label": "WhatsApp numarası",
+       "explanation": "WhatsApp'a tıklama reklamları için numara Sayfaya ve hesaba bağlanır.",
+       "scenario": "Mesaj reklamı verenler.",
+       "example": "Reklamın hedefi WhatsApp.",
+       "ruleDetail": "WhatsApp numarası Sayfaya bağlanır ve WhatsApp'a tıklama reklamlarında kullanılır."
+      },
+      {
+       "value": "catalog",
+       "label": "Katalog",
+       "explanation": "Katalog reklamları ve ürün etiketleri için.",
+       "scenario": "E-ticaret ve katalog satışı.",
+       "example": "Dinamik ürün reklamı.",
+       "ruleDetail": "Meta kataloğu reklam hesabına ve veri kümesine bağlanır; ürün kimlikleri piksel olaylarındaki content_ids ile aynıdır."
+      },
+      {
+       "value": "lead_crm",
+       "label": "Anlık form lead'leri CRM'e",
+       "explanation": "Anlık formdan gelen talepler CRM'e otomatik aktarılır; elle dosya indirmeye bırakılmaz.",
+       "scenario": "Anlık form (lead) reklamı verenler.",
+       "example": "Lead 5 dakika içinde CRM'de ve satışçıya atanmış.",
+       "ruleDetail": "Anlık form talepleri resmî entegrasyon ya da sistem kullanıcısı jetonuyla CRM'e otomatik aktarılır; aktarım hatası günlük kontrol edilir."
+      },
+      {
+       "value": "offline",
+       "label": "Satış sonuçları Conversions API ile",
+       "explanation": "CRM'de satışa dönen talepler Conversions API ile Meta'ya geri bildirilir.",
+       "scenario": "Satışı sitede değil telefonda ya da mağazada kapanan işletmeler.",
+       "example": "CRM'de “satış” aşamasına geçen lead Meta'ya Purchase olarak gider.",
+       "ruleDetail": "CRM'de satışa dönüşen talepler, onay ve hukuki dayanak varsa, Conversions API ile karma yapılmış müşteri bilgisiyle Meta'ya bildirilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_catalog",
+   "name": "Katalog & Commerce Manager",
+   "en": "Catalog & Commerce Manager",
+   "icon": "▤",
+   "agents": [
+    "MI",
+    "PS"
+   ],
+   "refs": [
+    "domain_name",
+    "oc_services"
+   ],
+   "desc": "Meta kataloğunun hangi kaynaktan besleneceğini, ürün verisinin asgari kalite kurallarını ve katalogun reklam, Instagram ve WhatsApp'ta nasıl kullanılacağını belirler",
+   "guide": {
+    "purpose": "Meta kataloğu ürün ya da hizmetlerin kimlik, ad, açıklama, fiyat, stok, görsel ve bağlantı bilgisini tutar. Katalog reklamları, Instagram ürün etiketleri ve WhatsApp kataloğu bu veriyi kullanır. Ürün kimlikleri piksel olaylarındaki content_ids ile aynı olmazsa katalog reklamları doğru ürünü gösteremez. Alışveriş özelliklerinin ülkeye göre uygunluğu değişir; Türkiye'deki durum işletmenin Commerce Manager hesabında kontrol edilmelidir.",
+    "criteria": [
+     "Katalog otomatik ve düzenli güncellenen bir kaynaktan beslenir; fiyat ve stok sitedekiyle aynıdır.",
+     "Ürün kimlikleri site, piksel (content_ids) ve katalogda aynıdır.",
+     "Zorunlu alanlar eksiksiz, görseller kurallara uygundur; teşhis ekranında hata yoktur.",
+     "Katalog kurumun portföyündedir ve veri kümesine bağlıdır."
+    ],
+    "pitfalls": [
+     "Katalogu elle yükleyip güncellememek: fiyatı değişen ürün reklamda eski fiyatla görünür.",
+     "Pikselde ürün kimliği yerine ürün adı göndermek: katalog reklamları ziyaretçiye baktığı ürünü gösteremez.",
+     "Görsellerde metin, logo ya da filigran yoğunluğu: ürünler reddedilebilir.",
+     "Alışveriş özelliklerinin Türkiye'de açık olduğunu varsaymak: uygunluk Commerce Manager'da kontrol edilmelidir."
+    ],
+    "resources": [
+     {
+      "title": "Ticaret uygunluk gereklilikleri",
+      "url": "https://www.facebook.com/business/help/2347002662267537",
+      "note": "Alışveriş ve ürün etiketi özelliklerinin uygunluk şartları."
+     },
+     {
+      "title": "Meta Pikseli — standart olaylar referansı",
+      "url": "https://developers.facebook.com/docs/meta-pixel/reference",
+      "note": "ViewContent, AddToCart, Purchase olaylarında content_ids ve content_type."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_cat_source",
+     "label": "Katalog Veri Kaynağı",
+     "en": "Catalog Data Source",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "catalog"
+       ]
+      }
+     ],
+     "explanation": "Meta kataloğunun hangi kaynaktan, nasıl güncelleneceğini belirler.",
+     "scenario": "Kendi kodlu e-ticaret sitesinde planlı veri feed'i; hazır platformda platformun Meta entegrasyonu; çok sık stok değişen büyük kataloglarda API seçilir.",
+     "example": "Site her gece /feeds/meta.xml dosyasını üretir, Meta saatte bir çeker; stok bitince ürün “out of stock” görünür.",
+     "rule": "Meta katalog veri kaynağı: {label}.",
+     "options": [
+      {
+       "value": "feed",
+       "label": "Planlı veri feed'i (önerilen)",
+       "explanation": "Site düzenli olarak bir ürün dosyası (XML, CSV) üretir; Meta belirlenen aralıkta çeker.",
+       "scenario": "Kendi kodlu e-ticaret siteleri.",
+       "example": "Günlük feed, saatlik fiyat güncellemesi.",
+       "ruleDetail": "Katalog sitenin ürettiği planlı veri feed'inden beslenir; feed en az günde bir güncellenir, fiyat ve stok değişikliği sık ise ek güncelleme planlanır."
+      },
+      {
+       "value": "platform",
+       "label": "Platformun Meta entegrasyonu",
+       "explanation": "Hazır e-ticaret platformunun resmî Meta uygulaması katalogu eşitler.",
+       "scenario": "Shopify, WooCommerce, Ticimax, İdeasoft kullananlar.",
+       "example": "Platform uygulamasında katalog eşitleme açık.",
+       "ruleDetail": "Katalog e-ticaret platformunun resmî Meta entegrasyonuyla eşitlenir; ürün kimlikleri piksel olaylarıyla aynıdır."
+      },
+      {
+       "value": "api",
+       "label": "Katalog API'si",
+       "explanation": "Ürün değişiklikleri sunucudan API ile anlık gönderilir.",
+       "scenario": "Büyük ve sık değişen kataloglar.",
+       "example": "Stok değişince ürün 1 dakikada güncellenir.",
+       "ruleDetail": "Katalog sunucudan Meta katalog API'siyle, sistem kullanıcısı jetonuyla güncellenir; değişiklikler kuyrukla ve yeniden deneme mantığıyla gönderilir."
+      },
+      {
+       "value": "manual",
+       "label": "Elle (tablo ya da tek tek)",
+       "explanation": "Ürünler Commerce Manager'da elle girilir ya da tablo yüklenir.",
+       "scenario": "Birkaç hizmet paketi ya da az ürünü olan işletmeler.",
+       "example": "Altı hizmet paketi elle girilmiş.",
+       "ruleDetail": "Katalog elle yönetilir; fiyat ya da içerik değiştiğinde aynı gün güncellenir ve ayda bir siteyle karşılaştırılır."
+      }
+     ]
+    },
+    {
+     "id": "mt_cat_settings",
+     "label": "Katalog Kalite ve Kullanım Ayarları",
+     "en": "Catalog Quality & Usage",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "mt_services",
+       "in": [
+        "catalog"
+       ]
+      }
+     ],
+     "explanation": "Katalog verisinin asgari kalite kurallarını ve katalogun nerelerde kullanılacağını belirler.",
+     "scenario": "Ürün kimliği eşleşmesi, zorunlu alanlar, fiyat / stok eşitliği ve teşhis takibi her katalogda seçilir; ürün setleri, Instagram ve WhatsApp kullanımı ihtiyaca göre eklenir.",
+     "example": "Teşhis ekranında 0 hata; “Kış koleksiyonu” ürün seti katalog reklamında kullanılır.",
+     "rule": "Meta katalog ayarları: {labels}.",
+     "options": [
+      {
+       "value": "ids",
+       "label": "Ürün kimlikleri pikselle aynı",
+       "explanation": "Katalogdaki id, pikselde content_ids olarak aynen gönderilir.",
+       "scenario": "Katalog reklamı verenler.",
+       "example": "SKU “TS-104” her yerde aynı.",
+       "ruleDetail": "Katalogdaki ürün kimliği sitedeki ürün kimliği ve piksel olaylarındaki content_ids ile aynıdır."
+      },
+      {
+       "value": "fields",
+       "label": "Zorunlu alanlar eksiksiz",
+       "explanation": "Kimlik, ad, açıklama, uygunluk, durum, fiyat, bağlantı, görsel ve marka.",
+       "scenario": "Her katalog.",
+       "example": "Teşhiste eksik alan uyarısı yok.",
+       "ruleDetail": "Katalogda kimlik, ad, açıklama, uygunluk, durum, fiyat, bağlantı, görsel ve marka alanları her üründe doludur."
+      },
+      {
+       "value": "price_stock",
+       "label": "Fiyat ve stok sitedekiyle aynı",
+       "explanation": "İndirimli fiyat ve stok bilgisi site ile katalogda aynı anda değişir.",
+       "scenario": "Her katalog.",
+       "example": "İndirim başlayınca sale_price feed'de.",
+       "ruleDetail": "Katalogdaki fiyat, indirimli fiyat ve stok sitedekiyle aynıdır; tutarsızlık teşhis ekranında haftalık kontrol edilir."
+      },
+      {
+       "value": "images",
+       "label": "Görsel kuralları",
+       "explanation": "Ürün net, arka plan sade; yoğun metin, filigran ve yanıltıcı görsel kullanılmaz.",
+       "scenario": "Her katalog.",
+       "example": "Beyaz arka planlı kare ürün görseli.",
+       "ruleDetail": "Katalog görsellerinde ürün net görünür; yoğun metin, filigran ve yanıltıcı görsel kullanılmaz."
+      },
+      {
+       "value": "sets",
+       "label": "Ürün setleri",
+       "explanation": "Kategori, sezon ya da kampanyaya göre ürün setleri oluşturulur.",
+       "scenario": "Katalog reklamı verenler.",
+       "example": "“İndirimdekiler” seti.",
+       "ruleDetail": "Katalog reklamları için kategori ve kampanyaya göre ürün setleri oluşturulur."
+      },
+      {
+       "value": "diagnostics",
+       "label": "Teşhis ekranı izlenir",
+       "explanation": "Commerce Manager teşhis ekranındaki hata ve uyarılar düzenli düzeltilir.",
+       "scenario": "Her katalog.",
+       "example": "Haftalık teşhis kontrolü.",
+       "ruleDetail": "Commerce Manager teşhis ekranı haftalık kontrol edilir; reddedilen ürünler düzeltilir."
+      },
+      {
+       "value": "ig_tags",
+       "label": "Instagram ürün etiketleri",
+       "explanation": "Uygunsa gönderilerde ürün etiketi kullanılır; Türkiye uygunluğu Commerce Manager'da kontrol edilir.",
+       "scenario": "Instagram'da ürün satan işletmeler.",
+       "example": "Gönderide ürün etiketi ve fiyat.",
+       "ruleDetail": "Instagram ürün etiketleri yalnız Commerce Manager'da hesabın uygun olduğu doğrulanınca kullanılır."
+      },
+      {
+       "value": "wa_catalog",
+       "label": "WhatsApp kataloğu",
+       "explanation": "Meta kataloğu WhatsApp Business hesabına bağlanır.",
+       "scenario": "WhatsApp'tan sipariş alan işletmeler.",
+       "example": "Sohbette ürün kartı.",
+       "ruleDetail": "Meta kataloğu WhatsApp Business hesabına bağlanır; WhatsApp'ta gösterilen fiyat sitedekiyle aynıdır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_report",
+   "name": "Kurulum Planı & Talimat",
+   "en": "Setup Plan & Instructions",
+   "icon": "☰",
+   "agents": [
+    "S",
+    "O"
+   ],
+   "desc": "Meta kurulumunun nasıl doğrulanacağını, teslimde hangi belgelerin verileceğini ve bakımını belirler; seçimlerden ayrı bir kurulum talimatı (.md) üretilir",
+   "guide": {
+    "purpose": "Kurulumun bittiği ancak doğrulanınca söylenebilir: onaysız ziyaretçide pikselin çalışmadığı, olayların tekilleştiği, WhatsApp şablonunun test numarasına ulaştığı, reklam önizlemesinin doğru Sayfa ve Instagram kimliğiyle göründüğü kontrol edilir. Teslimde erişim listesi, varlık ve kimlik tablosu, olay sözlüğü ve şablon listesi verilir. Aşağıdaki kart seçimlerinizden ayrı bir kurulum talimatı üretir.",
+    "criteria": [
+     "Her doğrulama adımı kanıtla (ekran görüntüsü, Test Olayları kaydı, ağ isteği) belgelenir.",
+     "Erişim listesi ve varlık / kimlik tablosu teslim edilir; kimlikler Ortak Bilgiler'e yazılır.",
+     "Olay sözlüğü ve WhatsApp şablon listesi güncel tutulur.",
+     "Erişim, onay ve maliyet üç ayda bir gözden geçirilir."
+    ],
+    "pitfalls": [
+     "Pikseli yalnız onay verilmiş tarayıcıda denemek: onay reddinde de istek gidip gitmediği görülmez.",
+     "Kurulum belgesini yalnız ajansta bırakmak: ajans değişince kimse yapıyı bilmez.",
+     "WhatsApp şablonlarını gerçek müşterilerde denemek: kalite puanı düşer.",
+     "Kimlikleri kaydetmemek: geliştirici, ajans ve analitik ekibi farklı varlıklara bağlanır."
+    ],
+    "resources": [
+     {
+      "title": "Piksel ve sunucu olaylarının tekilleştirilmesi",
+      "url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api/deduplicate-pixel-and-server-events",
+      "note": "Doğrulamada tarayıcı ve sunucu olaylarının tek sayılması."
+     },
+     {
+      "title": "WhatsApp — telefon numaraları ve test",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers",
+      "note": "Numara kaydı ve iki adımlı doğrulama."
+     },
+     {
+      "title": "Meta Pikseli — onay (consent) API'si",
+      "url": "https://developers.facebook.com/docs/meta-pixel/implementation/gdpr",
+      "note": "Onay reddinde gönderim olmadığının denetimi."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "mt_verify",
+     "label": "Doğrulama Adımları",
+     "en": "Verification Steps",
+     "type": "multiselect",
+     "explanation": "Kurulum bittiğinde yapılacak kontrolleri belirler.",
+     "scenario": "Onay testi ve Test Olayları pikselli her kurulumda, WhatsApp testi WhatsApp kurulumunda, reklam önizlemesi reklam hesabında seçilir.",
+     "example": "Rapor: onay reddinde facebook.com isteği yok; Lead tarayıcı + sunucu tekilleşmiş; şablon test numarasına ulaştı.",
+     "rule": "Meta kurulumunun doğrulanması: {labels}.",
+     "options": [
+      {
+       "value": "consent_test",
+       "label": "Onay reddi testi",
+       "explanation": "Çerezler reddedilince ağ sekmesinde Meta isteği olmadığı, kabul edilince başladığı denetlenir.",
+       "scenario": "Pikselli her kurulum.",
+       "example": "Ret: 0 istek; kabul: PageView.",
+       "ruleDetail": "Çerezler reddedilince tarayıcı ağ sekmesinde facebook.com / connect.facebook.net isteği olmadığı, kabul edilince pikselin başladığı denetlenir ve kaydedilir."
+      },
+      {
+       "value": "test_events",
+       "label": "Test Olayları ve tekilleştirme",
+       "explanation": "Her olay Test Olayları'nda tarayıcı ve sunucu kaynaklı tek olay olarak görünür.",
+       "scenario": "Piksel ve Conversions API kurulumu.",
+       "example": "Lead: tarayıcı + sunucu, tekilleştirildi.",
+       "ruleDetail": "Her standart olay Events Manager › Test Olayları'nda denenir; tarayıcı ve sunucu olayının tekilleştiği kaydedilir."
+      },
+      {
+       "value": "pixel_helper",
+       "label": "Meta Pixel Helper kontrolü",
+       "explanation": "Tarayıcı eklentisiyle sayfada tek piksel ve doğru olaylar olduğu görülür.",
+       "scenario": "Pikselli her site.",
+       "example": "Eklenti tek piksel kimliği gösterir.",
+       "ruleDetail": "Meta Pixel Helper ile her sayfa türünde tek piksel kimliği ve beklenen olaylar doğrulanır."
+      },
+      {
+       "value": "domain_check",
+       "label": "Alan adı doğrulandı",
+       "explanation": "İşletme ayarlarında alan adı “Doğrulandı” durumundadır.",
+       "scenario": "Kendi alan adı olan her site.",
+       "example": "Durum: Doğrulandı.",
+       "ruleDetail": "İşletme ayarlarında alan adının doğrulandığı kontrol edilir."
+      },
+      {
+       "value": "wa_test",
+       "label": "WhatsApp test mesajı",
+       "explanation": "Şablonlar ve otomatik yanıtlar test numarasında denenir; webhook imza doğrulaması çalışır.",
+       "scenario": "WhatsApp kurulumu.",
+       "example": "Şablon test numarasına ulaştı, webhook 200 döndü.",
+       "ruleDetail": "WhatsApp şablonları, otomatik yanıtlar ve webhook test numarasıyla denenir; gerçek müşteri listesi testte kullanılmaz."
+      },
+      {
+       "value": "ads_preview",
+       "label": "Reklam önizlemesi",
+       "explanation": "Reklam önizlemesi doğru Sayfa, Instagram kimliği, bağlantı ve UTM'yle görünür.",
+       "scenario": "Reklam hesabı kurulumu.",
+       "example": "Önizlemede UTM'li bağlantı.",
+       "ruleDetail": "İlk kampanyadan önce reklam önizlemesinde Sayfa, Instagram kimliği, bağlantı ve UTM parametreleri kontrol edilir."
+      },
+      {
+       "value": "devices",
+       "label": "Farklı tarayıcı ve cihazda deneme",
+       "explanation": "Mobil ve masaüstünde, en az iki tarayıcıda denenir.",
+       "scenario": "Her kurulum.",
+       "example": "Safari ve Chrome'da aynı sonuç.",
+       "ruleDetail": "Kurulum mobil ve masaüstünde, en az iki tarayıcıda denenir."
+      }
+     ]
+    },
+    {
+     "id": "mt_handover",
+     "label": "Teslim ve Bakım",
+     "en": "Handover & Maintenance",
+     "type": "multiselect",
+     "explanation": "Kurulumdan sonra teslim edilecek belgeleri ve dönemsel bakımı belirler.",
+     "scenario": "Erişim listesi ve varlık / kimlik tablosu her kurulumda teslim edilir; olay sözlüğü ve şablon listesi ilgili kurulumda eklenir.",
+     "example": "Teslim klasöründe erişim listesi, varlık tablosu, olay sözlüğü, WhatsApp şablon listesi ve değişiklik kaydı bulunur.",
+     "rule": "Meta kurulumunun teslim ve bakımı: {labels}.",
+     "options": [
+      {
+       "value": "access_list",
+       "label": "Erişim listesi",
+       "explanation": "Portföyde ve her varlıkta kim, hangi yetkiyle; iş ortakları ve sistem kullanıcıları.",
+       "scenario": "Her kurulum.",
+       "example": "Tablo: varlık, kişi / ortak, yetki, tarih.",
+       "ruleDetail": "Portföy ve varlık erişim listesi (kişiler, iş ortakları, sistem kullanıcıları ve yetkileri) teslim edilir."
+      },
+      {
+       "value": "asset_table",
+       "label": "Varlık ve kimlik tablosu",
+       "explanation": "Portföy, Sayfa, Instagram, reklam hesabı, veri kümesi, katalog, WhatsApp hesap ve numara kimlikleri; Ortak Bilgiler'e de yazılır.",
+       "scenario": "Her kurulum.",
+       "example": "Veri kümesi 123…, WABA 102…",
+       "ruleDetail": "Bütün Meta varlık kimlikleri tablo olarak teslim edilir ve Ortak Bilgiler › Hesap ve Etiket Kimlikleri'ne yazılır."
+      },
+      {
+       "value": "event_dict",
+       "label": "Olay sözlüğü",
+       "explanation": "Her olayın adı, tetiklendiği an, parametreleri ve reklamda kullanımı.",
+       "scenario": "Pikselli kurulum.",
+       "example": "Lead: form sunucuda kaydedilince; content_name.",
+       "ruleDetail": "Olay sözlüğü (olay adı, tetikleme anı, parametreler, reklamda kullanımı) teslim edilir ve değişiklikte güncellenir."
+      },
+      {
+       "value": "templates",
+       "label": "WhatsApp şablon listesi",
+       "explanation": "Şablon adı, kategori, dil, onay durumu ve kullanım yeri.",
+       "scenario": "WhatsApp Cloud API kurulumu.",
+       "example": "randevu_hatirlatma · yardımcı · tr · onaylı.",
+       "ruleDetail": "WhatsApp şablon listesi (ad, kategori, dil, onay durumu, kullanım yeri) teslim edilir ve güncel tutulur."
+      },
+      {
+       "value": "change_log",
+       "label": "Değişiklik kaydı",
+       "explanation": "Piksel, reklam hesabı, WhatsApp ve katalog ayar değişiklikleri tarih, kişi ve gerekçeyle.",
+       "scenario": "Birden çok kişinin çalıştığı hesaplar.",
+       "example": "“2026-12-01: Advantage+ metin varyasyonu kapatıldı.”",
+       "ruleDetail": "Meta varlıklarındaki ayar değişiklikleri tarih, kişi ve gerekçeyle değişiklik kaydına yazılır."
+      },
+      {
+       "value": "quarterly",
+       "label": "Üç ayda bir gözden geçirme",
+       "explanation": "Erişimler, onay testi, olay eşleşme kalitesi, WhatsApp kalitesi ve maliyeti, katalog teşhisi.",
+       "scenario": "Her kurulum.",
+       "example": "Ocak, Nisan, Temmuz, Ekim.",
+       "ruleDetail": "Meta kurulumu üç ayda bir gözden geçirilir: erişimler, onay testi, olay eşleşme kalitesi, WhatsApp kalite durumu ve maliyeti, katalog teşhisi ve Meta'nın kural / fiyat değişiklikleri."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

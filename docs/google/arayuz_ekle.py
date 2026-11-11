@@ -61,13 +61,13 @@ def main():
     s = once(s,
              'AREA=s=>s&&s.sub==="audit"?"audit":(s&&s.area)||"project",LAST={project:"project",marketing:"",audit:"",common:""},AREA_LB={marketing:"Pazarlama",audit:"SEO Denetimi",common:"Ortak Bilgiler"}',
              'AREA=s=>s&&(s.sub==="audit"||s.sub==="google")?s.sub:(s&&s.area)||"project",LAST={project:"project",marketing:"",audit:"",google:"",common:""},AREA_LB={marketing:"Pazarlama",audit:"SEO Denetimi",google:"Google Servisleri",common:"Ortak Bilgiler"}',
-             's.sub==="google")?s.sub')
+             's.sub==="google"')
 
     # Pazarlama alt başlıkları
     s = once(s, '<button id="sideAuditBtn" type="button" class="sideSubBtn">SEO Denetimi</button>',
              '<button id="sideAuditBtn" type="button" class="sideSubBtn">SEO Denetimi</button><button id="sideGoogleBtn" type="button" class="sideSubBtn">Google Servisleri</button>',
              'id="sideGoogleBtn"')
-    s = once(s, 'm=a==="marketing"||a==="audit";', 'm=a==="marketing"||a==="audit"||a==="google";', 'a==="audit"||a==="google";')
+    s = once(s, 'm=a==="marketing"||a==="audit";', 'm=a==="marketing"||a==="audit"||a==="google";', 'a==="audit"||a==="google"')
     s = once(s, 'sideAuditBtn.toggleAttribute("aria-current",a==="audit");',
              'sideAuditBtn.toggleAttribute("aria-current",a==="audit");sideGoogleBtn.classList.toggle("active",a==="google");sideGoogleBtn.toggleAttribute("aria-current",a==="google");',
              'sideGoogleBtn.classList.toggle')
@@ -77,10 +77,10 @@ def main():
     s = once(s, '${ca==="audit"?"Pazarlama › SEO Denetimi":ca==="common"?', '${ca==="audit"?"Pazarlama › SEO Denetimi":ca==="google"?"Pazarlama › Google Servisleri":ca==="common"?', '"Pazarlama › Google Servisleri"')
     s = once(s, '(g.a==="marketing"||g.a==="audit"?"Pazarlama · ":"")', '(g.a==="marketing"||g.a==="audit"||g.a==="google"?"Pazarlama · ":"")', 'g.a==="audit"||g.a==="google"')
     s = once(s, '"pazarlama marketing"+(AU(s)?" seo denetimi audit":"")', '"pazarlama marketing"+(AU(s)?" seo denetimi audit":AREA(s)==="google"?" google servisleri kurulum":"")', '" google servisleri kurulum"')
-    s = once(s, '((AREA(s)==="marketing"||AREA(s)==="audit"?"Pazarlama · ":"")', '((AREA(s)==="marketing"||AREA(s)==="audit"||AREA(s)==="google"?"Pazarlama · ":"")', 'AREA(s)==="audit"||AREA(s)==="google"?')
+    s = once(s, '((AREA(s)==="marketing"||AREA(s)==="audit"?"Pazarlama · ":"")', '((AREA(s)==="marketing"||AREA(s)==="audit"||AREA(s)==="google"?"Pazarlama · ":"")', 'AREA(s)==="audit"||AREA(s)==="google"')
 
     # kurallar ve prompt
-    s = once(s, 'mg=mkRuleGroups(),rg=g=>', 'mg=mkRuleGroups(),gg=ggRuleGroups(),rg=g=>', 'gg=ggRuleGroups(),rg=')
+    s = once(s, 'mg=mkRuleGroups(),rg=g=>', 'mg=mkRuleGroups(),gg=ggRuleGroups(),rg=g=>', 'mg=mkRuleGroups(),gg=ggRuleGroups(),')
     s = once(s, """(mg.length?'<h2 class="areaHead">Pazarlama</h2>'+mg.map(rg).join(""):"")""",
              """(mg.length?'<h2 class="areaHead">Pazarlama</h2>'+mg.map(rg).join(""):"")+(gg.length?'<h2 class="areaHead">Google Servisleri</h2>'+gg.map(rg).join(""):"")""",
              '<h2 class="areaHead">Google Servisleri</h2>')
@@ -94,8 +94,8 @@ def main():
     # JSON ve proje dosyası
     s = once(s, 'return a==="marketing"?"marketing":a==="audit"?"audit":"project"}return /^mk_/.test(k)?"marketing"',
              'return a==="marketing"||a==="google"?"marketing":a==="audit"?"audit":"project"}return /^(mk|gg)_/.test(k)?"marketing"',
-             '/^(mk|gg)_/')
-    s = once(s, 'f:"pazarlama-kararlari",areas:["marketing"],', 'f:"pazarlama-kararlari",areas:["marketing","google"],', 'areas:["marketing","google"]')
+             '/^(mk|gg')
+    s = once(s, 'f:"pazarlama-kararlari",areas:["marketing"],', 'f:"pazarlama-kararlari",areas:["marketing","google"],', 'areas:["marketing","google"')
     s = once(s, 'ölçüm, yayım ve dağıtım ile iş akışı kararları; pazarlama kuralları',
              'ölçüm, yayım ve dağıtım ile iş akışı kararları ve Google servisleri kurulumu (Tag Manager, Analytics, Ads, Search Console, İşletme Profili, Merchant Center, Looker Studio); pazarlama kuralları',
              've Google servisleri kurulumu (Tag Manager')
@@ -110,7 +110,7 @@ def main():
     s = once(s, ' audit:"M11 18a7', ' google:"M9 15l6-6M10 6l1-1a4 4 0 0 1 6 6l-1 1M14 18l-1 1a4 4 0 0 1-6-6l1-1",\n audit:"M11 18a7', ' google:"M9 15l6-6')
     s = once(s, 'au=ap("audit"),', 'au=ap("audit"),gg=ap("google"),', 'gg=ap("google"),')
     s = once(s, 'Denetimi planla","goArea(\'audit\')")}', 'Denetimi planla","goArea(\'audit\')")}${mod("Google Servisleri",`${gg[0]} / ${gg[1]} karar verildi.`,"Kurulumu planla","goArea(\'google\')")}', 'Kurulumu planla"')
-    s = once(s, '["audit","SEO Denetimi"]]', '["audit","SEO Denetimi"],["google","Google Servisleri"]]', '["google","Google Servisleri"]]')
+    s = once(s, '["audit","SEO Denetimi"]]', '["audit","SEO Denetimi"],["google","Google Servisleri"]]', '["google","Google Servisleri"]')
 
     # Dokümantasyon
     s = once(s, 'bir Claude oturumu için ayrı bir pazarlama promptu kopyalanır.</p></div>',
