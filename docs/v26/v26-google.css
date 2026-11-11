@@ -1,0 +1,7 @@
+/* Google Servisleri — Pazarlama'nın üçüncü alt başlığı (2026-11-11). Kaynak docs/v26/v26-google.css → docs/google/arayuz_ekle.py */
+.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:350px}
+@media(max-width:900px){.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:400px}}
+#sideNav:not(.searching) .navGroup[data-area="google"] .navGroupTitle{display:none}
+#sideNav.searching .navGroup[data-area="google"] .navGroupTitle:before{content:"Pazarlama · "}
+.ggExport{scroll-margin-top:calc(var(--hdH,76px) + 14px)}
+.ggExport .mkPromptBox{min-height:380px;font-size:12.5px}
