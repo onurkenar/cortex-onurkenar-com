@@ -6,13 +6,17 @@ set -eu
 cd "$(dirname "$0")"
 SRC=../web-proje-gelistirme.html
 LIMIT=26214400  # Cloudflare statik dosya sınırı: 25 MiB
-SIZE=$(wc -c < "$SRC" | tr -d ' ')
+# 2026-11-11: büyük veriler (skillDirectory, skillCatalog, mcpCatalog) yayın kopyasında gzip + base64 olarak gömülür,
+# tarayıcı açılışta açar (sikistir.py). Kaynak dosya değişmez; sınır yalnız yayın kopyasına uygulanır.
+python3 -I sikistir.py "$SRC" public/index.html.tmp
+SIZE=$(wc -c < public/index.html.tmp | tr -d ' ')
 if [ "$SIZE" -ge "$LIMIT" ]; then
-  echo "HATA: $SRC $SIZE bayt — 25 MiB sınırını aşıyor, yayınlanamaz." >&2
+  rm -f public/index.html.tmp
+  echo "HATA: yayın kopyası $SIZE bayt — 25 MiB sınırını aşıyor, yayınlanamaz." >&2
   exit 1
 fi
-cp "$SRC" public/index.html.tmp && mv public/index.html.tmp public/index.html
-echo "index.html: $SIZE bayt (sınırın %$((SIZE * 100 / LIMIT))'i)"
+mv public/index.html.tmp public/index.html
+echo "index.html: $SIZE bayt (sınırın %$((SIZE * 100 / LIMIT))'i; kaynak $(wc -c < "$SRC" | tr -d ' ') bayt)"
 node -e '
 const fs=require("fs"),z=require("zlib"),c=require("crypto");
 const b=fs.readFileSync("public/index.html");

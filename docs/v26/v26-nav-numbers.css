@@ -1,0 +1,8 @@
+/* Menü numaraları (2026-11-11). Kaynak docs/v26/v26-nav-numbers.css → docs/v26/menu_numara_ekle.py */
+.navNum{font-variant-numeric:tabular-nums;font-weight:700;margin-right:5px;opacity:.6;letter-spacing:0}
+#sideNav .ngT .navNum,#sideNav .areaBand .navNum{opacity:.8}
+#sideNav .subItem.active .navNum,#sideNav .menuSection.open>.menuParent .navNum{opacity:.85}
+#modRail .mrBtn .navNum{margin-right:2px;opacity:.75}
+#modRail .mrBtn.active .navNum{opacity:1}
+#title .navNum{margin-right:12px;opacity:.42;font-weight:800}
+#fieldBox .field>h2 .navNum{margin-right:10px;opacity:.45;font-weight:800}

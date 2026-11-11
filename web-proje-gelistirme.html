@@ -3249,6 +3249,29 @@ a.mrBtn.mrExt{text-decoration:none}
 .mtExport{scroll-margin-top:calc(var(--hdH,76px) + 14px)}
 .mtExport .mkPromptBox{min-height:380px;font-size:12.5px}
 </style>
+<style id="v26-active-red">
+/* 2026-11-11 (kullanıcı isteği: "hangi menüdeysem o kırmızı işaretlensin"): sol menüde o an açık olan yer kırmızı.
+   Tek karar görünümünde açık karar (.subItem.active), rehber / tüm kararlar görünümünde açık bölümün başlığı; açık bölümün
+   sol şeridi (açık karar varken) kırmızı ve başlığa sabit — önceden şerit konumlanmamış başlık yüzünden aşağıda kopuk görünüyordu. Kaynak docs/v26/v26-active-red.css → docs/v26/aktif_kirmizi_ekle.py */
+#sideNav .subItem.active,#sideNav .subItem.done.active{background:#fdeceb;color:#9f1c12;box-shadow:0 0 0 2px #d92d20;font-weight:800}
+#sideNav .menuSection>.menuParent{position:relative}
+#sideNav .menuSection.open>.menuParent:before{background:#d92d20;left:0;top:50%;transform:translateY(-50%)}
+#sideNav .menuSection.open:not(:has(.subItem.active))>.menuParent:before{display:none}
+#sideNav .menuSection.open:not(:has(.subItem.active))>.menuParent{background:#fdeceb;color:#9f1c12;box-shadow:inset 0 0 0 2px #d92d20}
+[data-theme="dark"] #sideNav .subItem.active,[data-theme="dark"] #sideNav .subItem.done.active{background:rgba(240,68,56,.18);color:#fff;box-shadow:0 0 0 2px #f04438}
+[data-theme="dark"] #sideNav .menuSection.open>.menuParent:before{background:#f04438}
+[data-theme="dark"] #sideNav .menuSection.open:not(:has(.subItem.active))>.menuParent{background:rgba(240,68,56,.18);color:#fff;box-shadow:inset 0 0 0 2px #f04438}
+</style>
+<style id="v26-nav-numbers">
+/* Menü numaraları (2026-11-11). Kaynak docs/v26/v26-nav-numbers.css → docs/v26/menu_numara_ekle.py */
+.navNum{font-variant-numeric:tabular-nums;font-weight:700;margin-right:5px;opacity:.6;letter-spacing:0}
+#sideNav .ngT .navNum,#sideNav .areaBand .navNum{opacity:.8}
+#sideNav .subItem.active .navNum,#sideNav .menuSection.open>.menuParent .navNum{opacity:.85}
+#modRail .mrBtn .navNum{margin-right:2px;opacity:.75}
+#modRail .mrBtn.active .navNum{opacity:1}
+#title .navNum{margin-right:12px;opacity:.42;font-weight:800}
+#fieldBox .field>h2 .navNum{margin-right:10px;opacity:.45;font-weight:800}
+</style>
 <style id="v26-approval">
 /* 4 Göz Onay Akışı — akış diyagramı ve anahtar (2026-11-10). Kaynak docs/v26/v26-approval.css → docs/v26/onay_arayuz_ekle.py */
 .apBox{border:1px solid #d9dee5;border-radius:16px;padding:16px 18px;margin:14px 0 18px;background:#fbfcfd;display:flex;flex-direction:column;gap:12px;container-type:inline-size}
@@ -6083,6 +6106,47 @@ function deco(){if(active!==SEC)return;
 const _rf=renderFields;renderFields=function(){let r=_rf.apply(this,arguments);try{deco()}catch(e){console.error("approval",e)}return r};
 const _ref=refreshField;refreshField=function(id){let r=_ref.apply(this,arguments);try{if(id===EN){let fe=fieldBox.querySelector(`.field[data-field-id="${EN}"]`);if(fe)toggle(fe)}}catch(e){console.error("approval",e)}return r};
 try{deco()}catch(e){console.error("approval",e)}
+})();
+</script>
+<script id="v26-nav-numbers">
+/* Menü numaralandırması (2026-11-11, kullanıcı istekleri: "her bir maddeyi 1. / 1.1 / 1.1.1 şeklinde numaralandır" ve aynı gün
+   "numaralandırma ana kategoriden başlamalı: 3. Pazarlama › 3.1. Strateji › 3.1.1 Pazarlama Planı ve Hedefler › 3.1.1.1 Plan
+   Dönemi; numaralandırılacak menüler: Ortak Bilgiler, Kararlar, Pazarlama, SEO Denetimi, Google, Meta").
+   Ana menü numarası modül şeridi sırasıdır (MT_NUM; şeritte Kararlar'ın kimliği "config"): 1 Ortak Bilgiler, 2 Kararlar, 3 Pazarlama, 4 SEO Denetimi, 5 Google,
+   6 Meta. Gruplu alanda (Kararlar, Pazarlama) ana menü › grup › bölüm › karar = "3." › "3.1." › "3.1.1" › "3.1.1.1";
+   tek gruplu alanda (grup başlığı gizli) ana menü › bölüm › karar = "6." › "6.1." › "6.1.1". İlk iki seviye noktayla biter
+   (kullanıcının örneği). Numara: modül şeridi etiketi, sol menünün başlık şeridi (.areaBand; Kararlar'da şerit yoktu, eklenir),
+   grup başlığı (.ngT), bölüm (.menuTitle), karar (.subText), sayfadaki bölüm ve karar başlıkları (titleNumber) ve ≤ 900 px çekmecedeki alt menü düğmeleri. Yalnız görünen öğeler
+   sayılır (koşullu karar açılınca sonrakiler kayar). Yalnız görünüm: kurallar, prompt ve bölüm kodları (00–120) değişmez.
+   renderSideNav sarmalanır (V26 sarmalayıcısından sonra). Kaynak docs/v26/v26-nav-numbers.js → docs/v26/menu_numara_ekle.py */
+(function(){
+const MT_NUM={common:1,project:2,marketing:3,audit:4,google:5,meta:6};
+window.MT_NUM=MT_NUM;
+const fmt=p=>p.join(".")+(p.length<=2?".":""),NUM={sec:{},fld:{}};
+function setNum(el,n){if(!el)return;let x=el.querySelector(":scope>.navNum");if(!n){if(x)x.remove();return}if(!x){x=document.createElement("span");x.className="navNum";el.prepend(x)}if(x.textContent!==n)x.textContent=n}
+function navNumber(){if(typeof sideNav==="undefined"||!sideNav)return;NUM.sec={};NUM.fld={};
+ // başlık şeridi: Kararlar'da yoksa ekle, hepsinde ana menü numarası
+ let ca=typeof curArea==="function"?curArea():"project";
+ if(ca==="project"&&!sideNav.querySelector(":scope>.areaBand")){let d=document.createElement("div"),b=document.createElement("b");d.className="areaBand nnBand";b.textContent="Kararlar";d.appendChild(b);sideNav.prepend(d)}
+ let band=sideNav.querySelector(":scope>.areaBand b");if(band&&MT_NUM[ca])setNum(band,MT_NUM[ca]+".");
+ const by={};sideNav.querySelectorAll(".navGroup").forEach(g=>{const a=g.dataset.area||"";(by[a]=by[a]||[]).push(g)});
+ Object.entries(by).forEach(([a,gs])=>{const A=MT_NUM[a];if(!A)return;const three=gs.length>1;
+  gs.forEach((g,gi)=>{const gp=three?[A,gi+1]:[A];if(three)setNum(g.querySelector(".ngHead .ngT"),fmt(gp));
+   [...g.children].filter(x=>x.classList.contains("menuSection")).forEach((sec,si)=>{const sp=gp.concat(si+1);
+    setNum(sec.querySelector(".menuParent .menuTitle"),fmt(sp));if(sec.dataset.section)NUM.sec[sec.dataset.section]=fmt(sp);
+    sec.querySelectorAll(".submenu>.subItem").forEach((b,di)=>{const n=fmt(sp.concat(di+1));setNum(b.querySelector(".subText")||b,n);if(b.dataset.fid)NUM.fld[b.dataset.fid]=n})})})});titleNumber()}
+/* Başlıklar (2026-11-11, kullanıcı isteği: "numaralandırmayı başlıkta da gösterelim fakat json dosyada mükerrerlik olmasın"):
+   bölüm başlığı h1#title ve karar başlıkları .field[data-field-id]>h2 menüdeki numarayı ayrı bir span.navNum olarak alır;
+   veri, etiket ve kayıt değişmez — JSON / kurallar / prompt numara içermez. Menüde olmayan alan (ör. Proje Adı) numarasız. */
+function titleNumber(){if(typeof title!=="undefined"&&title&&typeof active!=="undefined")setNum(title,NUM.sec[active]);
+ if(typeof fieldBox!=="undefined"&&fieldBox)fieldBox.querySelectorAll(".field[data-field-id]>h2").forEach(h=>setNum(h,NUM.fld[h.parentElement.dataset.fieldId]))}
+function railNumber(){document.querySelectorAll("#modRail .mrBtn[data-mod]").forEach(b=>{let n=MT_NUM[b.dataset.mod==="config"?"project":b.dataset.mod],l=b.querySelector(":scope>span");if(n&&l)setNum(l,n+".")});
+ [["sideCommonBtn","common"],["sideMkPlanBtn","marketing"],["sideAuditBtn","audit"],["sideGoogleBtn","google"],["sideMetaBtn","meta"]].forEach(([id,a])=>{let b=document.getElementById(id);if(!b||b.querySelector(".navNum"))return;let t=b.firstChild,m=t&&t.nodeType===3&&t.nodeValue.match(/^([^A-Za-zÇĞİÖŞÜçğıöşü]+)(.*)$/s),x=document.createElement("span");x.className="navNum";x.textContent=MT_NUM[a]+".";if(m){t.nodeValue=m[2];b.insertBefore(document.createTextNode(m[1]),t);b.insertBefore(x,t)}else b.prepend(x)})}
+window.navNumber=navNumber;
+const _rsn=renderSideNav;renderSideNav=function(){const r=_rsn.apply(this,arguments);navNumber();return r};
+const _rf=renderFields;renderFields=function(){const r=_rf.apply(this,arguments);titleNumber();return r};
+if(typeof refreshField==="function"){const _rfx=refreshField;refreshField=function(){const r=_rfx.apply(this,arguments);titleNumber();return r}}
+railNumber();navNumber();
 })();
 </script>
 </body></html>
