@@ -1,0 +1,8 @@
+/* Hesap ve Etiket Kimlikleri — seçilen kararlarla ilgili olmayan servis kutuları "Diğer servisler" altında (2026-11-11) */
+.accMore{margin-top:14px;border:1px solid #e3e7ec;border-radius:12px;background:#fbfcfd}
+.accMore>summary{cursor:pointer;padding:11px 14px;font-size:13.5px;font-weight:750;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.accMore>summary small{font-size:12.5px;font-weight:500;color:#68707a}
+.accMore>.accGrid{padding:2px 14px 14px}
+.accMore>summary:focus-visible{outline:2px solid #2563eb;outline-offset:2px;border-radius:12px}
+[data-theme="dark"] .accMore{background:var(--surface);border-color:var(--border-2)}
+[data-theme="dark"] .accMore>summary small{color:var(--muted)}

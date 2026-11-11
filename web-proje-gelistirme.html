@@ -3221,6 +3221,16 @@ a.mrBtn.mrExt{text-decoration:none}
 [data-theme="dark"] .palTbl td.n{color:#ff9d92}
 [data-theme="dark"] .palLink{color:#8ab4ff}
 </style>
+<style id="v26-acc-more">
+/* Hesap ve Etiket Kimlikleri — seçilen kararlarla ilgili olmayan servis kutuları "Diğer servisler" altında (2026-11-11) */
+.accMore{margin-top:14px;border:1px solid #e3e7ec;border-radius:12px;background:#fbfcfd}
+.accMore>summary{cursor:pointer;padding:11px 14px;font-size:13.5px;font-weight:750;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.accMore>summary small{font-size:12.5px;font-weight:500;color:#68707a}
+.accMore>.accGrid{padding:2px 14px 14px}
+.accMore>summary:focus-visible{outline:2px solid #2563eb;outline-offset:2px;border-radius:12px}
+[data-theme="dark"] .accMore{background:var(--surface);border-color:var(--border-2)}
+[data-theme="dark"] .accMore>summary small{color:var(--muted)}
+</style>
 <style id="v26-approval">
 /* 4 Göz Onay Akışı — akış diyagramı ve anahtar (2026-11-10). Kaynak docs/v26/v26-approval.css → docs/v26/onay_arayuz_ekle.py */
 .apBox{border:1px solid #d9dee5;border-radius:16px;padding:16px 18px;margin:14px 0 18px;background:#fbfcfd;display:flex;flex-direction:column;gap:12px;container-type:inline-size}
@@ -3403,7 +3413,7 @@ function mkLabs(k){let f=FI[k],v=mkV(k);return f&&v!==undefined&&isset(f)?(Array
 function accVal(f){let v=state[f.id];return typeof v==="string"?{diger:v}:v&&typeof v==="object"&&!Array.isArray(v)?v:{}}
 function accSel(f){let v=f.accountsFrom&&state[f.accountsFrom];return Array.isArray(v)?v:[]}
 function accWhen(a){return (a.when||[]).some(c=>{let v=state[c.field];return shown(FI[c.field])&&(Array.isArray(v)?v.some(x=>c.in.includes(x)):c.in.includes(v))})}
-function accRows(f){let v=accVal(f),has=a=>String(v[a.k]||"").trim();if(f.accountsFrom){let sel=accSel(f);return sel.length?[f.accounts.filter(a=>sel.includes(a.k)),f.accounts.filter(a=>!sel.includes(a.k))]:[f.accounts]}return [f.accounts.some(accWhen)?f.accounts.filter(a=>accWhen(a)||has(a)):f.accounts]}
+var ACC_MORE={};function accRows(f){let v=accVal(f),has=a=>String(v[a.k]||"").trim();if(f.accountsFrom){let sel=accSel(f);return sel.length?[f.accounts.filter(a=>sel.includes(a.k)),f.accounts.filter(a=>!sel.includes(a.k))]:[f.accounts]}if(!f.accounts.some(accWhen))return [f.accounts];let m=f.accounts.filter(a=>accWhen(a)||has(a));return [m,f.accounts.filter(a=>!m.includes(a))]}
 function accHost(u){return (String(u).replace(/^https?:\/\//i,"").split(/[\/?#]/)[0]||"").toLowerCase()}
 function accBad(a,u){u=String(u||"").trim();if(a.re)return !!u&&!new RegExp(a.re).test(u);return !!u&&(!URL_RE.test(u)||!!a.hosts&&!a.hosts.some(h=>accHost(u)===h||accHost(u).endsWith("."+h)))}
 function accHint(a,u){u=String(u||"").trim();if(!u)return"";if(a.re)return accBad(a,u)?`<span class="fiWarn">Beklenen biçim:</span> ${E(a.ph)}`:"";let h=urlHint(u);if(h)return h;return accBad(a,u)?`<span class="fiWarn">${E(a.label)} adresi gibi görünmüyor.</span> Örnek: ${E(a.ph)}`:""}
@@ -3411,8 +3421,8 @@ function accList(f){let v=accVal(f);return f.accounts.filter(a=>String(v[a.k]||"
 function accText(f){return accList(f).map(([l,u])=>l+": "+u).join("; ")}
 function accLink(x){return `<button type="button" class="linkBtn" style="margin:0" onclick="goToField('${x.section}','${x.id}')">${E(x.label)}</button>`}
 function accCell(f,a){let u=String(accVal(f)[a.k]||""),id="acc-"+f.id+"-"+a.k;return `<label class="accRow" for="${id}"><span>${E(a.label)}</span><input class="control" id="${id}" type="${a.re?"text":"url"}" inputmode="${a.re?"text":"url"}" autocomplete="off" spellcheck="false" value="${E(u)}" placeholder="${E(a.ph)}" aria-describedby="${id}-h" aria-invalid="${accBad(a,u)}" oninput="setAcc('${f.id}','${a.k}',this)"><small class="fontInfo" id="${id}-h" aria-live="polite">${accHint(a,u)}</small></label>`}
-function accGroups(f,g,src){let grid=r=>`<div class="accGrid">${r.map(a=>accCell(f,a)).join("")}</div>`;return g.length<2?grid(g[0]):`<p class="accSub">${accLink(src)} kararında seçtikleriniz</p>${grid(g[0])}${g[1].length?`<p class="accSub">Diğer platformlar</p>${grid(g[1])}`:""}`}
-function accInput(f){let v=accVal(f),sel=accSel(f),g=accRows(f),src=FI[f.accountsFrom],nf=(f.noteFrom||[]).map(k=>FI[k]).filter(Boolean),all=!f.accountsFrom&&!f.accounts.some(accWhen);return `<div class="accField">${f.note?`<p class="accNote accSafe">${E(f.note)}</p>`:""}${!sel.length&&src?`<p class="accNote">${accLink(src)} kararında platform seçerseniz seçtikleriniz listenin başına alınır.</p>`:""}${all&&nf.length?`<p class="accNote">${nf.map(accLink).join(" ve ")} kararlarında ilgili servis seçilmediği için bütün servisler listeleniyor; seçim yapınca yalnız ilgili kutular görünür.</p>`:""}${accGroups(f,g,src)}${f.noOther?"":`<label class="accRow accOther" for="acc-${f.id}-diger"><span>${E(f.otherLabel||"Diğer hesaplar")}</span><textarea class="control" id="acc-${f.id}-diger" placeholder="${E(f.placeholder||"")}" oninput="setAcc('${f.id}','diger',this)">${E(v.diger||"")}</textarea></label>`}</div>`}
+function accGroups(f,g,src){let grid=r=>`<div class="accGrid">${r.map(a=>accCell(f,a)).join("")}</div>`;if(g.length>1&&!src)return (g[0].length?grid(g[0]):"")+(g[1].length?`<details class="accMore" data-v26${ACC_MORE[f.id]?" open":""} ontoggle="ACC_MORE['${f.id}']=this.open"><summary data-v26>Diğer servisler (${g[1].length}) <small>${E(g[1].map(a=>String(a.label).split(" — ")[0]).filter((x,i,l)=>l.indexOf(x)===i).join(", "))}</small></summary>${grid(g[1])}</details>`:"");return g.length<2?grid(g[0]):`<p class="accSub">${accLink(src)} kararında seçtikleriniz</p>${grid(g[0])}${g[1].length?`<p class="accSub">Diğer platformlar</p>${grid(g[1])}`:""}`}
+function accInput(f){let v=accVal(f),sel=accSel(f),g=accRows(f),src=FI[f.accountsFrom],nf=(f.noteFrom||[]).map(k=>FI[k]).filter(Boolean),all=!f.accountsFrom&&!f.accounts.some(accWhen);return `<div class="accField">${f.note?`<p class="accNote accSafe">${E(f.note)}</p>`:""}${!sel.length&&src?`<p class="accNote">${accLink(src)} kararında platform seçerseniz seçtikleriniz listenin başına alınır.</p>`:""}${all&&nf.length?`<p class="accNote">${nf.map(accLink).join(" ve ")} kararlarında ilgili servis seçilmediği için bütün servisler listeleniyor; seçim yapınca ilgili kutular üstte, diğerleri “Diğer servisler” altında görünür.</p>`:""}${accGroups(f,g,src)}${f.noOther?"":`<label class="accRow accOther" for="acc-${f.id}-diger"><span>${E(f.otherLabel||"Diğer hesaplar")}</span><textarea class="control" id="acc-${f.id}-diger" placeholder="${E(f.placeholder||"")}" oninput="setAcc('${f.id}','diger',this)">${E(v.diger||"")}</textarea></label>`}</div>`}
 function setAcc(id,k,el){if(!requireProject())return;let f=FI[id],v=Object.assign({},accVal(f)),t=k==="diger"?el.value:el.value.trim();if(String(t).trim())v[k]=t;else delete v[k];if(Object.keys(v).length)state[id]=v;else delete state[id];if(k!=="diger"){let a=f.accounts.find(x=>x.k===k),h=document.getElementById(el.id+"-h");el.setAttribute("aria-invalid",String(accBad(a,t)));if(h)h.innerHTML=accHint(a,t)}save();renderRules();renderProgress();refreshRule(f)}
 function mkId(k){let f=FI.mk_ids;return f&&shown(f)?String(accVal(f)[k]||"").trim():""}
 function mkUrl(u){u=String(u||"").trim();return !u||/^https?:\/\//i.test(u)?u:/^[^\s\/]+\.[^\s\/]+/.test(u)?"https://"+u.replace(/^\/+/,""):""}
