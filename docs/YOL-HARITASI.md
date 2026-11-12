@@ -208,6 +208,8 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
 
 ## Açık işler
 
+- **Revize Modüler V3 — seçilmeyen maddeler (2026-11-12):** `Kılavuzlar/Web_Sayfasi_Projesi_Revize_Moduler_V3.docx` listesinden kullanıcı A3, A5, A10, A13–A18, B2–B9, B11, B20, C1, C2, C8'i seçti ve eklendi (CLAUDE.md › "Revize Modüler V3 maddeleri"). Bekleyenler: A1 çoklu marka / holding / white-label, A2 modül sahipliği, A4 404 ve yönlendirme kuralları, A6 site içi arama, A7 üst / alt bilgi alanı ve global ayarlar, A8 sayfa oluşturucu, A9 medya kütüphanesi kuralları, A11 entegrasyon katmanı, A12 veri akış haritası, B1 teklif / sözleşme / e-imza, B10 panel içi yapay zekâ asistanı, B12 medya merkezi ve basın kiti, B13 tedarikçi, B14 iş ortağı puanlama, B15 tema yönetimi panelden, B16–B19 ve B21 var olan modüllerin ayrıntıları (e-ticaret mesafeli satış, rezervasyon, LMS, etkinlik, müşteri portalı), C3–C7 ve C9–C14 (A/B testi, yapışkan CTA, web push, kampanya ↔ açılış sayfası, atıf modeli, personel profilleri, referans standardı, içerik performans döngüsü, brief hedefi, otomatik reklam metni, segment). Ayrıca: yeni iş modülleri için CMS Modülleri'ne panel menüsü (`cms_modules` seçenekleri / alt menüleri) henüz eklenmedi.
+
 ### Şirket şeması (kullanıcı adım adım veriyor)
 - [x] 1. Departman listesi (23) — şemada.
 - [x] 2. Her departmanın hiyerarşisi (birimler / pozisyonlar) — kullanıcı departman departman veriyor; JSON `docs/organizasyon/NN-ad.json` olarak saklanır, `docs/organizasyon/departman_ekle.py` ile işlenir, mevcut ajanlara pozisyon elle atanır.

@@ -8,7 +8,7 @@
    Kaynak docs/v26/v26-todo.{js,css} → docs/v26/yapilacaklar_ekle.py */
 (()=>{
 const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pazarlama"],["audit","SEO Denetimi"],["google","Google Servisleri"],["meta","Meta Servisleri"],["ai","Yapay Zekâ"]],
- PH=[["Proje temeli ve mimari",["Başlangıç","Teknik Mimari","Sunucu & Altyapı"]],["Tasarım ve arayüz",["Tasarım & Arayüz"]],["İçerik ve yönetim",["İçerik & Yönetim"]],["SEO ve görünürlük",["SEO & Görünürlük"]],["Güvenlik ve gizlilik",["Güvenlik & Gizlilik"]],["Performans, test ve geliştirme süreci",["Performans & Test","Geliştirme Süreci"]],["Yayın ve operasyon",["Yayın & Operasyon"]]],
+ PH=[["Proje temeli ve mimari",["Başlangıç","Teknik Mimari","Sunucu & Altyapı"]],["Tasarım ve arayüz",["Tasarım & Arayüz"]],["İçerik ve yönetim",["İçerik & Yönetim"]],["İş modülleri",["İş Modülleri"]],["SEO ve görünürlük",["SEO & Görünürlük"]],["Güvenlik ve gizlilik",["Güvenlik & Gizlilik"]],["Performans, test ve geliştirme süreci",["Performans & Test","Geliştirme Süreci"]],["Yayın ve operasyon",["Yayın & Operasyon"]]],
  ICON="M10 6h10M10 12h10M10 18h10M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5 2.5-2.5M3.5 18l1.5 1.5 2.5-2.5",
  TD={q:"",f:"all",a:"all"},
  day=()=>new Date().toLocaleDateString("sv-SE"),
