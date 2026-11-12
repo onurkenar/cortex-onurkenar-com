@@ -6918,6 +6918,38 @@
    "agents": [
     "poz:tasarim:19.02/kurumsal-kimlik-uygulamalari/kurumsal-kimlik-uygulama-uzmani"
    ]
+  },
+  {
+   "id": "mk_social_rival_li",
+   "section": "mk_social",
+   "after": "mk_post_times",
+   "label": "LinkedIn Sayfasında Rakip Takibi",
+   "en": "Competitor Tracking on the LinkedIn Page",
+   "type": "boolean",
+   "explanation": "Markanın LinkedIn şirket sayfasında Analizler › Rakipler bölümüne rakiplerin LinkedIn sayfalarının eklenmesini yapılacak iş olarak plana koyar. LinkedIn bu bölümde eklenen rakiplerin takipçi artışını, gönderi sayısını, etkileşimini ve öne çıkan gönderilerini sizin sayfanızla karşılaştırır. Ücretsiz sayfada yalnız 1 rakip izlenebilir; 9 rakip için Premium Company Page aboneliği gerekir (LinkedIn, 15 Ekim 2025'ten beri).",
+   "rule": "Markanın LinkedIn şirket sayfasında rakip takibi {booltext}. Sayfa yöneticisi Analizler › Rakipler › Rakipleri düzenle adımından Ortak Bilgiler › Rakipler listesindeki rakiplerin LinkedIn şirket sayfalarını ekler; önce doğrudan rakipler eklenir. Ücretsiz sayfada yalnız 1 rakip izlenebildiği için en öncelikli doğrudan rakip seçilir; birden fazla rakip izlenecekse Premium Company Page aboneliği (en çok 9 rakip) ayrı bir bütçe kararı olarak sunulur. LinkedIn sayfası bulunamayan rakip için “LinkedIn sayfası yok” not edilir. Rakipler bölümünün verisi her ay Dışa aktar ile indirilir; takipçi artışı, gönderi sayısı, etkileşim oranı ve öne çıkan gönderiler Rakip Analizi'nin rakip tablosuna kaynak ve tarihle yazılır. Rakip listesi Ortak Bilgiler'deki listeyle aynı tutulur; listeye yeni rakip girince LinkedIn'deki takip de güncellenir.",
+   "scenario": "LinkedIn markanın mecraları arasındaysa ve rakipler de LinkedIn'de şirket sayfasıyla yer alıyorsa önem kazanır; özellikle B2B satış yapan, kurumsal müşteriye ya da işveren markasına yatırım yapan işletmelerde.",
+   "example": "Bir ortak çalışma alanı işletmesi şirket sayfasının Analizler › Rakipler bölümüne en yakın rakibinin sayfasını ekler; aylık dışa aktarımda rakibin takipçi artışının kendisinden yüksek, etkileşim oranının ise düşük olduğunu görür ve bunu Rakip Analizi tablosuna işler.",
+   "yes": {
+    "scenario": "LinkedIn'de düzenli içerik üretilecek ve sayfanın performansı rakiplerle karşılaştırılarak değerlendirilecekse.",
+    "example": "Sayfa yöneticisi rakip sayfasını ekler; her ayın ilk iş günü Rakipler verisi dışa aktarılır ve Rakip Analizi tablosundaki LinkedIn sütunu güncellenir."
+   },
+   "no": {
+    "scenario": "LinkedIn yalnız şirket bilgisinin durduğu pasif bir sayfaysa ya da rakiplerin LinkedIn sayfası yoksa.",
+    "example": "LinkedIn sayfasında Rakipler bölümü boş bırakılır; rakip karşılaştırması web sitesi, Instagram ve Google İşletme Profili üzerinden yapılır."
+   },
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "linkedin"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ]
   }
  ],
  "optionAdd": [
