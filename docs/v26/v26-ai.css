@@ -1,0 +1,7 @@
+/* Yapay Zekâ menüsü — Pazarlama'nın beşinci alt başlığı, modül şeridinde "Yapay Zekâ" (2026-11-12). Kaynak docs/v26/v26-ai.css → docs/yapay-zeka/arayuz_ekle.py */
+.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:440px}
+@media(max-width:900px){.sidebarShell:has(#sideMarketingSub:not([hidden])) #sideNav{padding-bottom:490px}}
+#sideNav:not(.searching) .navGroup[data-area="ai"] .navGroupTitle{display:none}
+#sideNav.searching .navGroup[data-area="ai"] .navGroupTitle:before{content:"Pazarlama · "}
+.yzExport{scroll-margin-top:calc(var(--hdH,76px) + 14px)}
+.yzExport .mkPromptBox{min-height:380px;font-size:12.5px}

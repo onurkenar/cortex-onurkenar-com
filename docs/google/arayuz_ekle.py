@@ -40,6 +40,16 @@ def once(s, old, new, done_marker):
     return s.replace(old, new)
 
 
+def put(s, pattern, block, anchor, before=True):
+    """Blok varsa yerinde yeniler (sırası korunur), yoksa anchor'dan önce ekler. Tekrar çalıştırmada dosya aynı kalır."""
+    m = re.search(pattern, s, flags=re.S)
+    if m:
+        return s[:m.start()] + block + s[m.end():]
+    if s.count(anchor) != 1:
+        fail("bağlantı noktası tek değil: " + anchor[:60])
+    return s.replace(anchor, block + anchor if before else anchor + block)
+
+
 def main():
     if len(sys.argv) != 2:
         fail("kullanım: arayuz_ekle.py <html>")
@@ -50,12 +60,10 @@ def main():
             fail("kaynakta </script ya da <!-- var")
 
     # stil bloğu
-    s = re.sub(r'<style id="v26-google">.*?</style>\n?', "", s, flags=re.S)
-    s = once(s, '<style id="v26-approval">', '<style id="v26-google">\n' + CSS + '\n</style>\n<style id="v26-approval">', "@@never@@")
+    s = put(s, r'<style id="v26-google">.*?</style>\n', '<style id="v26-google">\n' + CSS + '\n</style>\n', '<style id="v26-approval">')
 
     # kod bloğu
-    s = re.sub(r"/\*V26-GOOGLE:BEGIN\*/.*?/\*V26-GOOGLE:END\*/\n?", "", s, flags=re.S)
-    s = once(s, "function mkRuleGroups(){", "/*V26-GOOGLE:BEGIN*/\n" + JS + "\n/*V26-GOOGLE:END*/\nfunction mkRuleGroups(){", "@@never@@")
+    s = put(s, r"/\*V26-GOOGLE:BEGIN\*/.*?/\*V26-GOOGLE:END\*/\n", "/*V26-GOOGLE:BEGIN*/\n" + JS + "\n/*V26-GOOGLE:END*/\n", "function mkRuleGroups(){")
 
     # alan tanımı
     s = once(s,

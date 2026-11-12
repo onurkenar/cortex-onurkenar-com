@@ -17,11 +17,15 @@ def main():
         sys.exit("kullanım: aktif_kirmizi_ekle.py <html>")
     p = sys.argv[1]
     s = open(p, encoding="utf-8").read()
-    s = re.sub(r'<style id="v26-active-red">.*?</style>\n?', "", s, flags=re.S)
-    anchor = '<style id="v26-approval">'
-    if s.count(anchor) != 1 or s.index('<style id="v26-done-items">') > s.index(anchor):
-        sys.exit("HATA: v26-approval / v26-done-items stil bloğu beklenen yerde değil")
-    s = s.replace(anchor, '<style id="v26-active-red">\n' + CSS + "\n</style>\n" + anchor)
+    block = '<style id="v26-active-red">\n' + CSS + "\n</style>\n"
+    m = re.search(r'<style id="v26-active-red">.*?</style>\n', s, flags=re.S)
+    if m:  # yerinde yenile: sıra korunur, tekrar çalıştırmada dosya aynı kalır
+        s = s[:m.start()] + block + s[m.end():]
+    else:
+        anchor = '<style id="v26-approval">'
+        if s.count(anchor) != 1 or s.index('<style id="v26-done-items">') > s.index(anchor):
+            sys.exit("HATA: v26-approval / v26-done-items stil bloğu beklenen yerde değil")
+        s = s.replace(anchor, block + anchor)
     open(p, "w", encoding="utf-8").write(s)
     print("tamam")
 

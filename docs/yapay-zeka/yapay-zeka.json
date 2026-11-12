@@ -1,0 +1,1979 @@
+{
+ "version": "1.0",
+ "group": "Yapay Zekâ",
+ "agents": {
+  "M": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru",
+  "T": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+  "W": "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru",
+  "O": "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+  "P": "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru",
+  "R": "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+  "K": "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+  "L": "poz:hukuk:05.07/teknoloji-ve-dijital-urun-hukuku-ekibi/yapay-zeka-hukuku-uzmani",
+  "AG": "poz:veri-analitik:17.06/akilli-otomasyon-ve-yapay-zeka-ajanlari/yapay-zeka-ajanlari-muhendisi",
+  "GEN": "poz:veri-analitik:17.06/uretken-yapay-zeka-cozumleri/kidemli-uretken-yapay-zeka-muhendisi",
+  "STR": "poz:veri-analitik:17.01/veri-ve-yapay-zeka-stratejisi/kidemli-veri-ve-yapay-zeka-stratejisi-uzmani",
+  "MI": "poz:pazarlama:marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/entegrasyon-uzmani",
+  "I": "poz:siber-guvenlik:16.05/kimlik-ve-erisim-yonetisimi/kidemli-kimlik-ve-erisim-uzmani",
+  "CX": "poz:musteri-deneyimi:11.04/cok-kanalli-destek/kidemli-cok-kanalli-destek-uzmani"
+ },
+ "idsAdd": [],
+ "idsWhen": {},
+ "sections": [
+  {
+   "id": "yz_scope",
+   "name": "Kapsam & Hazırlık",
+   "en": "AI Scope & Readiness",
+   "icon": "✦",
+   "agents": [
+    "M",
+    "STR"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_legal_name",
+    "domain_name",
+    "oc_tagline",
+    "oc_address",
+    "oc_phone",
+    "oc_hours"
+   ],
+   "desc": "İşletmenin, ürünlerinin ve hizmetlerinin hangi yapay zekâ platformlarında ve hangi başlıklarda ele alınacağını seçer, platform kayıtlarından önce gereken hazırlığı belirler; sonraki bölümler buradaki seçime göre açılır",
+   "guide": {
+    "purpose": "İnsanlar işletme, ürün ve hizmet ararken artık ChatGPT, Google AI Mode / Gemini, Microsoft Copilot, Perplexity ve Claude gibi yapay zekâ asistanlarına da soruyor. Bu asistanlar bilgiyi sitenizden, işletme profillerinden, ürün beslemelerinden ve başka kaynaklardan derliyor. Bu menü, bu platformlarda işletmenizin doğru görünmesi için yapılacakları karar olarak toplar: ChatGPT'de işletme profilinin sahiplenilmesi (Businesses in ChatGPT, 10 Kasım 2026'da beta), ChatGPT reklamları, yapay zekâ üzerinden alışveriş, diğer platformların işletme programları, yapay zekâ tarayıcılarına izinler, sitedeki yapay zekâ asistanı ve ölçüm. Proje Kararları'ndaki robots.txt, GEO / AIO ve llms.txt kararları burada tekrar edilmez, öneriyle bağlanır.",
+    "criteria": [
+     "İşletme adı, adres, telefon, çalışma saatleri, kategori, fiyat ve iade koşulları sitede, Ortak Bilgiler'de ve bütün platformlarda aynıdır; tek doğru kaynak Ortak Bilgiler'dir.",
+     "Platform kayıtları için alan adlı kurumsal e-posta, DNS erişimi ve yetkili kişinin resmî belgeleri (vergi levhası, sicil, yetki belgesi) hazırdır.",
+     "Her platformun Türkiye'de sunulup sunulmadığı kayıttan önce güncel resmî belgeden kontrol edilir.",
+     "Platform hesapları kişisel değil kurumsal hesaplarla açılır; erişim ekibe ve ajansa ayrı ayrı verilir."
+    ],
+    "pitfalls": [
+     "Yapay zekâ platformlarında görünmek için özel bir dosya ya da işaretleme şart sanmak: Google, yapay zekâ özellikleri için normal SEO dışında ek gereklilik olmadığını söylüyor.",
+     "Sitede, profilde ve beslemede farklı fiyat, saat ya da adres bırakmak: asistanlar çelişkili bilgiyi yanlış aktarır.",
+     "ABD'de duyurulan bir özelliğin (ör. yapay zekâ içinde ödeme) Türkiye'de de açık olduğunu varsaymak.",
+     "Arama botlarını da engelleyen genel bir yapay zekâ engeli koymak: işletme yapay zekâ yanıtlarında kaynak olarak görünmez."
+    ],
+    "resources": [
+     {
+      "title": "Businesses in ChatGPT (OpenAI)",
+      "url": "https://openai.com/business/businesses-in-chatgpt/",
+      "note": "İşletmenin ChatGPT'deki profilini sahiplenmesi, doğrulaması ve güncellemesi."
+     },
+     {
+      "title": "Introducing Businesses in ChatGPT",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "note": "10 Kasım 2026 duyurusu: Business Hub, ürün beslemesi, istatistikler, Business Agent."
+     },
+     {
+      "title": "ChatGPT'nin sunulduğu ülkeler",
+      "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+      "note": "Türkiye listede; işletme özelliklerinin uygunluğu ayrıca kontrol edilmeli."
+     },
+     {
+      "title": "Google: yapay zekâ özellikleri ve web siteniz",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "note": "AI Overviews ve AI Mode için ek dosya ya da işaretleme gerekmez; profil ve Merchant Center güncel tutulur."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_services",
+     "label": "Ele Alınacak Başlıklar",
+     "en": "AI Topics to Cover",
+     "type": "multiselect",
+     "explanation": "Bu projede yapay zekâ ile ilgili hangi başlıkların ele alınacağını seçer. Seçtiğiniz başlıkların bölümleri menüde açılır; seçilmeyenler gizli kalır ve kurallara girmez.",
+     "scenario": "Her işletme için ChatGPT'de işletme profili, yapay zekâ tarayıcıları ve ölçüm önerilir; e-ticarette alışveriş, yerel işletmede Google / Apple / Microsoft profilleri, sitede sohbet asistanı varsa asistan bölümü eklenir.",
+     "example": "Bir diş kliniği ChatGPT işletme profili, Google, Apple, tarayıcı izinleri, sitedeki asistan ve ölçümü seçer; alışveriş ve reklam bölümleri menüde görünmez.",
+     "rule": "Yapay zekâ görünürlüğü için ele alınan başlıklar: {labels}.",
+     "recommend": [
+      {
+       "field": "geo_aio",
+       "map": {
+        "true": [
+         "chatgpt_business",
+         "crawlers",
+         "monitoring"
+        ]
+       }
+      },
+      {
+       "field": "modules_extra",
+       "map": {
+        "ecommerce": [
+         "shopping",
+         "chatgpt_business"
+        ],
+        "support_ai": [
+         "assistant"
+        ]
+       }
+      },
+      {
+       "field": "gbp",
+       "map": {
+        "true": [
+         "google",
+         "apple",
+         "microsoft"
+        ]
+       }
+      },
+      {
+       "field": "robots_policy",
+       "map": {
+        "AiSearchAllow": [
+         "crawlers"
+        ],
+        "AiTrainBlock": [
+         "crawlers"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "chatgpt_business",
+       "label": "ChatGPT'de işletme profili (Businesses in ChatGPT)",
+       "explanation": "İşletmenin ChatGPT'deki kaydını Business Hub'da sahiplenmek, doğrulamak ve bilgilerini güncellemek. 10 Kasım 2026'da beta olarak açıldı; uygunluk ülkeye, sektöre ve doğrulamaya bağlı.",
+       "scenario": "Web sitesi olan her işletme; özellikle ChatGPT'den müşteri gelmesini isteyenler.",
+       "example": "ChatGPT'de işletme adı arandığında mavi tikli profil, doğru site, logo ve iade politikası görünür.",
+       "ruleDetail": "İşletmenin ChatGPT'deki kaydı Business Hub'da sahiplenilir ve doğrulanır; uygunluk (Türkiye dahil) başvurudan önce kontrol edilir."
+      },
+      {
+       "value": "chatgpt_ads",
+       "label": "ChatGPT reklamları",
+       "explanation": "ChatGPT'nin ücretsiz ve Go planlarında yanıtın altında gösterilen reklamlar. Ads Manager self-servis kullanımında Türkiye listede.",
+       "scenario": "ChatGPT kullanıcılarına ücretli ulaşmak isteyen işletmeler.",
+       "example": "“İstanbul'da diş beyazlatma” sohbetinin altında kliniğin reklamı.",
+       "ruleDetail": "ChatGPT reklam hesabı kurumsal hesapla açılır; reklamlar yanıtları etkilemez, hedefleme ve ölçüm kuralları bölümünde belirlenir."
+      },
+      {
+       "value": "shopping",
+       "label": "Yapay zekâ üzerinden alışveriş ve ürün beslemeleri",
+       "explanation": "Ürünlerin ChatGPT, Google AI Mode / Gemini, Copilot ve Perplexity alışveriş sonuçlarında görünmesi için ürün beslemeleri ve ödeme programları. Programların çoğu şimdilik ABD odaklı.",
+       "scenario": "E-ticaret yapan işletmeler.",
+       "example": "Ürün beslemesi günde bir güncellenir; ChatGPT'de ürün önerildiğinde satın alma sitede tamamlanır.",
+       "ruleDetail": "Ürünlerin yapay zekâ alışveriş sonuçlarında doğru görünmesi için ürün verisi ve beslemeler hazırlanır; Türkiye'de açık olmayan programlar için hazırlık yapılır."
+      },
+      {
+       "value": "google",
+       "label": "Google AI Mode / Gemini",
+       "explanation": "Google'ın yapay zekâ özellikleri İşletme Profili, Merchant Center ve site içeriğini kullanır; ek dosya gerekmez. Kurulum Google Servisleri menüsündedir, burada yapay zekâya özgü kontroller var.",
+       "scenario": "Google'da görünen her işletme.",
+       "example": "AI Mode'daki yanıtta işletmenin güncel saatleri ve ürün fiyatı doğru görünür.",
+       "ruleDetail": "Google AI Mode / Gemini için İşletme Profili, Merchant Center ve yapısal veri güncel ve siteyle tutarlı tutulur."
+      },
+      {
+       "value": "microsoft",
+       "label": "Microsoft Copilot ve Bing",
+       "explanation": "Bing Places for Business, Bing Webmaster Tools'taki AI Performance raporu ve IndexNow; Copilot yanıtları Bing dizinine dayanır.",
+       "scenario": "Bing ve Copilot'tan da trafik isteyen işletmeler.",
+       "example": "Bing Webmaster Tools'ta sitenin Copilot yanıtlarında kaç kez kaynak gösterildiği izlenir.",
+       "ruleDetail": "Microsoft tarafında Bing Places kaydı, Bing Webmaster Tools ve IndexNow kurulur."
+      },
+      {
+       "value": "apple",
+       "label": "Apple Business (Haritalar, Siri, Safari)",
+       "explanation": "Apple Business ile işletmenin Apple Haritalar'daki kartı sahiplenilir; Türkiye'de marka ve konum yönetimi açık.",
+       "scenario": "Fiziksel konumu olan işletmeler.",
+       "example": "iPhone'da Haritalar'da işletmenin logosu, saatleri ve fotoğrafları görünür.",
+       "ruleDetail": "Apple Business'ta işletmenin konum kartı sahiplenilir ve Ortak Bilgiler'le aynı bilgilerle güncellenir."
+      },
+      {
+       "value": "perplexity",
+       "label": "Perplexity",
+       "explanation": "Perplexity'nin ücretsiz satıcı programı ve arama botu. Perplexity içinden satın alma ABD'deki Pro kullanıcılarla sınırlı.",
+       "scenario": "Teknoloji ve araştırma odaklı kitleye satış yapanlar.",
+       "example": "Perplexity'de ürün araştırmasında işletmenin ürünleri listelenir.",
+       "ruleDetail": "Perplexity için arama botuna izin verilir; satıcı programı uygunsa başvurulur."
+      },
+      {
+       "value": "meta_ai",
+       "label": "Meta Business Agent (WhatsApp / Messenger)",
+       "explanation": "Meta'nın işletmeler için WhatsApp ve Messenger'da müşteri sorularını yanıtlayan yapay zekâ ajanı; 3 Haziran 2026'da duyuruldu, kademeli açılıyor.",
+       "scenario": "WhatsApp ya da Messenger'dan çok soru alan işletmeler.",
+       "example": "Gece gelen “saat kaçta açıksınız?” sorusunu ajan yanıtlar, karmaşık soruyu temsilciye bırakır.",
+       "ruleDetail": "Meta Business Agent kullanılacaksa yanıt kapsamı, yapay zekâ bildirimi ve temsilciye devir kuralları belirlenir."
+      },
+      {
+       "value": "crawlers",
+       "label": "Yapay zekâ tarayıcılarına izinler",
+       "explanation": "OpenAI, Anthropic, Perplexity, Apple, Meta ve Google'ın arama / yanıt botları ile model eğitimi botlarına robots.txt ve sunucu kurallarıyla verilecek izinler.",
+       "scenario": "Her site.",
+       "example": "OAI-SearchBot ve Claude-SearchBot'a izin, GPTBot ve ClaudeBot'a kurum kararına göre izin ya da engel.",
+       "ruleDetail": "Yapay zekâ tarayıcılarının izinleri arama / yanıt ve model eğitimi ayrımıyla belirlenir."
+      },
+      {
+       "value": "assistant",
+       "label": "Sitedeki yapay zekâ asistanı",
+       "explanation": "Sitede müşterilere yanıt veren sohbet asistanının şeffaflık, kişisel veri ve doğruluk kuralları (AB Yapay Zekâ Yasası m. 50, KVKK üretken yapay zekâ rehberi).",
+       "scenario": "Sitede ya da uygulamada yapay zekâ sohbeti olan işletmeler.",
+       "example": "Sohbet penceresi “Yapay zekâ asistanıyla konuşuyorsunuz” diye başlar.",
+       "ruleDetail": "Sitedeki yapay zekâ asistanı için şeffaflık, kişisel veri ve doğruluk kuralları uygulanır."
+      },
+      {
+       "value": "monitoring",
+       "label": "Ölçüm ve takip",
+       "explanation": "Yapay zekâ kaynaklı ziyaretlerin, ChatGPT ve Bing istatistiklerinin ve yanıt doğruluğunun düzenli izlenmesi.",
+       "scenario": "Her işletme.",
+       "example": "Aylık raporda chatgpt.com ve perplexity.ai'dan gelen ziyaret ve dönüşümler ayrı satırda.",
+       "ruleDetail": "Yapay zekâ kaynaklı trafik, platform istatistikleri ve yanıt doğruluğu düzenli izlenir."
+      }
+     ]
+    },
+    {
+     "id": "yz_prep",
+     "label": "Hazırlık",
+     "en": "Readiness",
+     "type": "multiselect",
+     "explanation": "Platform kayıtlarından önce hazır olması gerekenleri belirler. ChatGPT'de profil yayımlamak için kimlik ve işletme belgesi doğrulaması da istenebilir.",
+     "scenario": "Tek doğru kaynak ve kurumsal e-posta her işletmede; DNS erişimi ve resmî belgeler profil sahiplenilecekse seçilir.",
+     "example": "Ortak Bilgiler eksiksiz, info@alanadi.com.tr çalışıyor, DNS paneline erişim var, vergi levhası ve imza sirküleri PDF olarak hazır.",
+     "rule": "Yapay zekâ platformlarına hazırlık: {labels}.",
+     "options": [
+      {
+       "value": "single_source",
+       "label": "Tek doğru kaynak: Ortak Bilgiler",
+       "explanation": "Ad, ticari unvan, adres, telefon, saatler, kategori ve kısa tanıtım önce Ortak Bilgiler'de tamamlanır; platformlara buradan girilir.",
+       "scenario": "Her işletme.",
+       "example": "Saat değişince önce Ortak Bilgiler, aynı gün sitede ve profillerde güncellenir.",
+       "ruleDetail": "İşletme bilgileri önce Ortak Bilgiler'de tamamlanır; bütün yapay zekâ platformlarına buradan, birebir aynı yazımla girilir."
+      },
+      {
+       "value": "domain_email",
+       "label": "Alan adlı kurumsal e-posta",
+       "explanation": "Sahiplik doğrulaması için sitenin alan adıyla aynı alan adında e-posta (ör. info@alanadi.com.tr).",
+       "scenario": "Profil sahiplenecek her işletme.",
+       "example": "Doğrulama kodu info@ adresine gelir.",
+       "ruleDetail": "Platform kayıtları sitenin alan adıyla aynı alan adındaki kurumsal e-postayla yapılır."
+      },
+      {
+       "value": "dns",
+       "label": "DNS erişimi",
+       "explanation": "Sahiplik doğrulamasında DNS TXT kaydı eklenebilmesi için alan adı paneline erişim.",
+       "scenario": "Profil sahiplenecek ve alan adını doğrulayacak işletmeler.",
+       "example": "Cloudflare DNS'e doğrulama TXT kaydı eklenir.",
+       "ruleDetail": "Doğrulama TXT kayıtları DNS'e eklenir, ne için eklendiği not edilir ve doğrulamadan sonra silinmez."
+      },
+      {
+       "value": "documents",
+       "label": "Yetkili kişi ve resmî belgeler",
+       "explanation": "Kimlik doğrulaması için yetkili kişinin resmî kimliği, işletme sicil bilgisi ve yetki belgesi; ad, adres ve vergi / sicil numarası resmî kayıtlarla eşleşmeli.",
+       "scenario": "Profil yayımlayacak işletmeler.",
+       "example": "Vergi levhası, ticaret sicil gazetesi ve imza sirküleri hazır.",
+       "ruleDetail": "Platformlardaki kimlik doğrulamasını yetkili kişi yapar; ticari unvan, adres ve vergi / sicil numarası resmî kayıtlarla birebir aynıdır."
+      },
+      {
+       "value": "availability",
+       "label": "Türkiye uygunluk kontrolü",
+       "explanation": "Her platformun özelliği kayıttan önce güncel resmî belgeden kontrol edilir; açık değilse tarih notuyla bekleme listesine alınır.",
+       "scenario": "Her işletme.",
+       "example": "“Businesses in ChatGPT — Türkiye: henüz değil, 2027-01'de yeniden bak.”",
+       "ruleDetail": "Her yapay zekâ platformu özelliğinin Türkiye'de açık olup olmadığı kayıttan önce resmî belgeden kontrol edilir; açık değilse kontrol tarihi takvime yazılır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_chatgpt",
+   "name": "ChatGPT'de İşletme (Business Hub)",
+   "en": "Businesses in ChatGPT",
+   "icon": "◎",
+   "agents": [
+    "M",
+    "W"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_legal_name",
+    "domain_name",
+    "oc_tagline",
+    "oc_address",
+    "oc_phone",
+    "oc_hours",
+    "mk_accounts"
+   ],
+   "desc": "İşletmenin ChatGPT'deki kaydının Business Hub'da sahiplenilmesini, doğrulanmasını, güncellenmesini ve izlenmesini belirler",
+   "guide": {
+    "purpose": "Businesses in ChatGPT (10 Kasım 2026, beta) işletmelerin ChatGPT'deki kayıtlarını sahiplenip doğrulamasını, bilgilerini güncellemesini ve istatistikleri görmesini sağlar. Kayıt ChatGPT'nin kenar çubuğundaki İşletme Merkezi'nden (Business Hub) bulunur; sahiplik işletme telefonu, işletme e-postası, DNS TXT kaydı ya da Shopify ile doğrulanır. Değişiklik yayımlamak, besleme bağlamak ve istatistik görmek için ayrıca kimlik doğrulaması istenir. Sahiplenilen profile mavi tik gelir; sahiplenmek daha üst sıra ya da satış garantisi vermez ve ChatGPT başka kaynakları da kullanmaya devam eder. Uygunluk ülkeye, sektöre, doğrulamaya ve bütünlük kontrollerine bağlıdır; Türkiye'deki işletmeler için durum başvurudan önce kontrol edilmelidir.",
+    "criteria": [
+     "Kayıt yetkili kişi tarafından sahiplenilir ve doğrulanır; kimlik doğrulamasındaki ad, adres ve vergi / sicil numarası resmî kayıtlarla eşleşir.",
+     "Profildeki web sitesi, açıklama, kategori, logo, teslimat ve iade politikası sitedekiyle aynıdır.",
+     "Ekip ve ajans erişimi Business Hub'dan ayrı ayrı verilir; her marka ayrı yönetilir.",
+     "İstatistikler (son 28 gün: bahsedilme, site tıklaması, keşif konuları) aylık rapora girer."
+    ],
+    "pitfalls": [
+     "Profil güncellemesinin hemen yansıyacağını sanmak: OpenAI değişiklikleri inceleyip yayımlar, yanıtlara yansıması zaman alır.",
+     "Sahiplenmenin sıralama ya da satış garantisi verdiğini düşünmek.",
+     "Temsil etmediğiniz bir işletmeyi yönetmek, sahte yorum ya da hakları olmayan görsel kullanmak: politika ihlalidir.",
+     "Yerel işletme kaydı bulunamayınca yeni kayıt açmaya çalışmak: yerel mağaza ve restoranlar şu anda yalnız ABD'de var olan kaydı sahiplenebiliyor."
+    ],
+    "resources": [
+     {
+      "title": "Businesses in ChatGPT",
+      "url": "https://openai.com/business/businesses-in-chatgpt/",
+      "note": "Özelliğin tanıtımı, uygunluk ve Business Hub bağlantısı."
+     },
+     {
+      "title": "ChatGPT'de işletmenizi kurma (Türkçe)",
+      "url": "https://help.openai.com/tr-tr/articles/20001635-setting-up-your-business-on-chatgpt",
+      "note": "Sahiplenme, doğrulama yolları, kimlik doğrulaması, güncellenebilen alanlar, istatistikler."
+     },
+     {
+      "title": "Businesses in ChatGPT politikası",
+      "url": "https://openai.com/policies/businesses-in-chatgpt/",
+      "note": "Doğru ve güncel bilgi, sahte yorum yasağı, görsel hakları."
+     },
+     {
+      "title": "Business Agents politikası",
+      "url": "https://openai.com/policies/business-agents-policy/",
+      "note": "Ajan yapay zekâ olduğunu belirtir; baskı ve gereksiz kişisel veri isteği yasak."
+     },
+     {
+      "title": "Introducing Businesses in ChatGPT",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "note": "Business Agent ve ürün beslemesi; ajan ABD'deki uygun işletmelere açık."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_cg_claim",
+     "label": "Kayıt Durumu",
+     "en": "Listing Claim",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_business"
+       ]
+      }
+     ],
+     "explanation": "ChatGPT'deki işletme kaydı için ne yapılacağını belirler.",
+     "scenario": "Kayıt bulunuyorsa sahiplenilir; çevrimiçi işletmede kayıt yoksa “işletme ekle” görünebilir; Türkiye'de henüz açık değilse kontrol takvimi tutulur.",
+     "example": "Business Hub'da işletme adıyla aranır, kayıt seçilir, DNS ile doğrulanır.",
+     "rule": "ChatGPT işletme kaydı: {label}.",
+     "options": [
+      {
+       "value": "claim",
+       "label": "Var olan kaydı sahiplen ve doğrula (önerilen)",
+       "explanation": "ChatGPT kenar çubuğunda İşletme Merkezi açılır, işletme adıyla aranır, kayıt seçilip doğrulanır.",
+       "scenario": "ChatGPT'de kaydı bulunan işletmeler.",
+       "example": "Kayıt bulundu, doğrulama talebi gönderildi, sonuç e-postayla geldi.",
+       "ruleDetail": "ChatGPT'de var olan işletme kaydı Business Hub'da sahiplenilir ve doğrulanır; doğrulama sonucu ve tarihi kayda geçirilir."
+      },
+      {
+       "value": "add",
+       "label": "Kayıt yoksa işletme ekle (çevrimiçi işletme)",
+       "explanation": "Uygun çevrimiçi işletmelerde “işletme ekle” seçeneği görünebilir; yerel mağaza ve restoranlar şimdilik yalnız ABD'de var olan kaydı sahiplenebilir.",
+       "scenario": "Kaydı bulunmayan çevrimiçi işletmeler.",
+       "example": "Online eğitim sitesi “işletme ekle” ile kaydını oluşturur.",
+       "ruleDetail": "ChatGPT'de kayıt yoksa ve seçenek sunuluyorsa çevrimiçi işletme kaydı Ortak Bilgiler'deki bilgilerle eklenir."
+      },
+      {
+       "value": "wait",
+       "label": "Uygunluk açılana kadar izle",
+       "explanation": "Türkiye'de ya da sektörde sahiplenme açık değilse düzenli kontrol edilir; bu sırada site ve diğer kaynaklar düzeltilir.",
+       "scenario": "Sahiplenme seçeneği görünmeyen işletmeler.",
+       "example": "Her ayın ilk iş günü Business Hub kontrol edilir.",
+       "ruleDetail": "ChatGPT'de işletme sahiplenme seçeneği açık değilse her ay kontrol edilir; bu sürede site, yapısal veri ve diğer profiller güncel tutulur."
+      }
+     ]
+    },
+    {
+     "id": "yz_cg_verify",
+     "label": "Sahiplik Doğrulama Yöntemi",
+     "en": "Ownership Verification",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_business"
+       ]
+      }
+     ],
+     "explanation": "Business Hub'da sahipliğin nasıl doğrulanacağını belirler. Ayrıca değişiklik yayımlamak için kimlik doğrulaması (resmî kimlik, işletme sicil bilgisi, yetki belgesi) istenebilir.",
+     "scenario": "Alan adı kurumun elindeyse DNS TXT en kalıcı yoldur; Shopify kullananlar Shopify ile, DNS erişimi olmayanlar işletme e-postası ya da telefonuyla doğrular.",
+     "example": "DNS'e OpenAI'nin verdiği TXT kaydı eklenir, doğrulama tamamlanır, kayıt silinmez.",
+     "rule": "ChatGPT işletme sahipliği {label} ile doğrulanır; değişiklik yayımlamak için gereken kimlik doğrulamasını işletmenin yetkilisi yapar.",
+     "options": [
+      {
+       "value": "dns",
+       "label": "DNS TXT kaydı (önerilen)",
+       "explanation": "Alan adına TXT kaydı eklenir.",
+       "scenario": "Alan adı paneline erişimi olan işletmeler.",
+       "example": "Cloudflare'de TXT kaydı.",
+       "ruleDetail": "Doğrulama TXT kaydı DNS'te kalıcı tutulur ve DNS değişikliklerinde korunur."
+      },
+      {
+       "value": "email",
+       "label": "İşletme e-postası",
+       "explanation": "Alan adlı kurumsal e-postaya kod gelir.",
+       "scenario": "DNS erişimi olmayan ama alan adlı e-postası olanlar.",
+       "example": "info@ adresine doğrulama e-postası.",
+       "ruleDetail": "Doğrulama alan adlı kurumsal e-postayla yapılır; kişisel e-posta kullanılmaz."
+      },
+      {
+       "value": "phone",
+       "label": "İşletme telefonu (SMS / otomatik arama)",
+       "explanation": "Kayıttaki işletme telefonuna kod gönderilir.",
+       "scenario": "Telefonu kayıtta doğru görünen yerel işletmeler.",
+       "example": "Sabit hatta otomatik arama.",
+       "ruleDetail": "Doğrulama kayıttaki işletme telefonuyla yapılır; telefon Ortak Bilgiler'deki ana telefonla aynıdır."
+      },
+      {
+       "value": "shopify",
+       "label": "Shopify",
+       "explanation": "Shopify mağazası bağlanarak doğrulanır.",
+       "scenario": "Shopify kullanan e-ticaret siteleri.",
+       "example": "Shopify'daki ChatGPT uygulamasıyla doğrulama.",
+       "ruleDetail": "Doğrulama Shopify mağazası bağlanarak yapılır; mağaza kurumun hesabındadır."
+      }
+     ]
+    },
+    {
+     "id": "yz_cg_profile",
+     "label": "Profil Bilgileri",
+     "en": "Profile Information",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_business"
+       ]
+      }
+     ],
+     "explanation": "Business Hub'da güncellenecek profil alanlarını belirler. Değişiklikler OpenAI incelemesinden sonra yayımlanır.",
+     "scenario": "Web sitesi, açıklama, kategori ve logo her profilde; e-ticarette teslimat ve iade politikası eklenir.",
+     "example": "Açıklama Ortak Bilgiler'deki kısa tanıtımdır; iade politikası sitedeki sayfayla aynı.",
+     "rule": "ChatGPT işletme profilinde güncellenen bilgiler: {labels}. Her alan sitedeki ve Ortak Bilgiler'deki bilgiyle aynıdır.",
+     "options": [
+      {
+       "value": "website",
+       "label": "Web sitesi",
+       "explanation": "Sitenin canlı adresi.",
+       "scenario": "Her profil.",
+       "example": "https://www.alanadi.com.tr",
+       "ruleDetail": "Profildeki web sitesi Ortak Bilgiler › Canlı Site Adresi'dir."
+      },
+      {
+       "value": "description",
+       "label": "Açıklama",
+       "explanation": "İşletmenin ne yaptığını anlatan kısa metin; abartısız, doğrulanabilir.",
+       "scenario": "Her profil.",
+       "example": "Ortak Bilgiler'deki kısa tanıtım.",
+       "ruleDetail": "Profil açıklaması Ortak Bilgiler'deki kısa tanıtımdır; doğrulanamayan iddia (“en iyi”, “1 numara”) içermez."
+      },
+      {
+       "value": "category",
+       "label": "Ürün / hizmet kategorisi",
+       "explanation": "İşletmenin asıl işini anlatan kategori.",
+       "scenario": "Her profil.",
+       "example": "Diş hekimi · Estetik diş hekimliği.",
+       "ruleDetail": "Profil kategorisi işletmenin asıl işini anlatır ve diğer profillerdeki kategoriyle uyumludur."
+      },
+      {
+       "value": "logo",
+       "label": "Logo ve kapak fotoğrafı",
+       "explanation": "Kurumsal logo ve hakları kurumda olan kapak fotoğrafı.",
+       "scenario": "Her profil.",
+       "example": "Kare logo, gerçek mekân fotoğrafı.",
+       "ruleDetail": "Profilde kurumsal logo ve hakları kuruma ait kapak fotoğrafı kullanılır."
+      },
+      {
+       "value": "shipping_returns",
+       "label": "Teslimat ve iade politikası",
+       "explanation": "Sitedeki teslimat ve iade sayfasıyla aynı bilgi.",
+       "scenario": "Ürün satan işletmeler.",
+       "example": "14 gün iade, 2 iş günü kargo.",
+       "ruleDetail": "Profildeki teslimat ve iade bilgileri sitedeki politika sayfasıyla aynıdır; değişince aynı gün güncellenir."
+      },
+      {
+       "value": "local",
+       "label": "Adres, telefon ve saatler",
+       "explanation": "Yerel işletmede ad, adres, telefon ve çalışma saatleri.",
+       "scenario": "Fiziksel konumu olan işletmeler.",
+       "example": "Ortak Bilgiler'deki adres ve saat tablosu.",
+       "ruleDetail": "Profildeki ad, adres, telefon ve çalışma saatleri Ortak Bilgiler'le birebir aynıdır."
+      }
+     ]
+    },
+    {
+     "id": "yz_cg_ops",
+     "label": "Yönetim, İstatistik ve Ajan",
+     "en": "Management, Insights & Agent",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_business"
+       ]
+      }
+     ],
+     "explanation": "Business Hub'ın yönetimini, istatistiklerin izlenmesini, ürün beslemesini ve Business Agent'ı belirler.",
+     "scenario": "Ekip erişimi, istatistik takibi ve politika uyumu her profilde; ürün beslemesi ve Business Agent yalnız uygunsa.",
+     "example": "Ajans erişimi verilir; her ay bahsedilme ve site tıklaması raporlanır; Business Agent Türkiye'de açılınca değerlendirilir.",
+     "rule": "ChatGPT işletme profilinin yönetimi: {labels}.",
+     "options": [
+      {
+       "value": "team",
+       "label": "Ekip ve ajans erişimi",
+       "explanation": "Business Hub'da ekip arkadaşı ya da ajans erişimi verilir; her marka ayrı yönetilir.",
+       "scenario": "Birden çok kişinin yönettiği profiller.",
+       "example": "Ajans yalnız düzenleme yetkisiyle eklenmiş.",
+       "ruleDetail": "Business Hub erişimi ekip ve ajansa kişi bazında verilir; ayrılan kişinin erişimi aynı gün kaldırılır."
+      },
+      {
+       "value": "insights",
+       "label": "İstatistikler aylık raporlanır",
+       "explanation": "Son 28 günün toplu verisi: bahsedilme, site tıklaması, keşif konuları; tek tek istemler paylaşılmaz.",
+       "scenario": "Her profil.",
+       "example": "Aylık raporda “ChatGPT'de bahsedilme: 340”.",
+       "ruleDetail": "Business Hub istatistikleri (bahsedilme, site tıklaması, keşif konuları) aylık pazarlama raporuna eklenir."
+      },
+      {
+       "value": "policy",
+       "label": "Politika uyumu",
+       "explanation": "Yalnız temsil edilen işletme yönetilir; doğru ve güncel bilgi, sahte yorum yok, görsel hakları kurumda.",
+       "scenario": "Her profil.",
+       "example": "Kampanya bitince profildeki kampanya metni kaldırılır.",
+       "ruleDetail": "Profil Businesses in ChatGPT politikasına uyar: yalnız temsil edilen işletme, doğru ve güncel bilgi, sahte yorum yok, hakları kuruma ait görseller."
+      },
+      {
+       "value": "feed",
+       "label": "Ürün beslemesi (uygunsa)",
+       "explanation": "Business Hub'dan fiyat ve stok içeren ürün beslemesi bağlanır; standart besleme şimdilik ABD odaklı.",
+       "scenario": "Ürün satan ve uygun olan işletmeler.",
+       "example": "Günlük besleme, sitedeki fiyatla aynı.",
+       "ruleDetail": "Uygunsa Business Hub'a fiyat ve stok içeren ürün beslemesi bağlanır; besleme sitedeki fiyat ve stokla aynıdır."
+      },
+      {
+       "value": "agent",
+       "label": "Business Agent (uygunsa)",
+       "explanation": "ChatGPT içinde işletme adına soruları yanıtlayan ajan; şu an ABD'deki uygun e-ticaret ve çevrimiçi hizmet işletmelerine açık. Satın alma ya da rezervasyon yapmaz, siteye bağlantı verir.",
+       "scenario": "Uygunluk açıldığında çok soru alan işletmeler.",
+       "example": "Ajan “bu ürün hangi bedende var?” sorusunu yanıtlar ve ürün sayfasına yönlendirir.",
+       "ruleDetail": "Business Agent kullanılırsa ajan işletmeyi temsil eden bir yapay zekâ olduğunu açıkça belirtir, baskı ve sahte aciliyet kullanmaz, gereksiz kişisel veri istemez, lisans gerektiren tavsiye vermez; yanıtları sitedeki bilgiyle sınırlıdır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_ads",
+   "name": "ChatGPT Reklamları",
+   "en": "Ads in ChatGPT",
+   "icon": "◆",
+   "agents": [
+    "P",
+    "R"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_legal_name",
+    "domain_name"
+   ],
+   "desc": "ChatGPT reklam hesabının kurulumunu, hedefini ve ölçümünü belirler",
+   "guide": {
+    "purpose": "ChatGPT reklamları ücretsiz ve Go planlarında yanıtın altında gösterilir; Plus, Pro, Business, Enterprise ve Edu'da reklam yoktur. Reklamlar yanıtları etkilemez, sağlık ve siyaset gibi hassas konularda gösterilmez. Ads Manager self-servis kullanımında reklam veren tüzel kişinin ülkesi listede olmalıdır; Türkiye listede. Satın alma gösterim, tıklama ya da dönüşüm hedeflidir; ölçüm için piksel ve Conversions API vardır. Bu bölüm hesabı, hedefi ve ölçümü belirler.",
+    "criteria": [
+     "Reklam hesabı kurumun tüzel kişiliğiyle açılır; fatura bilgileri ticari unvanla aynıdır.",
+     "Ölçüm pikseli yalnız pazarlama çerezlerine onay verilince çalışır; dönüşümler tanımlıdır.",
+     "Açılış sayfaları OpenAI'nin reklam denetim botuna (OAI-AdsBot) açıktır.",
+     "Bağlantılar UTM'lidir ve reklam metni sitedeki bilgiyle tutarlıdır."
+    ],
+    "pitfalls": [
+     "Reklamın yanıtı etkileyeceğini ya da organik görünürlük sağlayacağını sanmak.",
+     "Hassas konularda (sağlık, siyaset) reklam beklemek: bu konularda gösterilmez.",
+     "Pikseli onaysız çalıştırmak.",
+     "Açılış sayfasında OAI-AdsBot'u engellemek: reklam denetimi başarısız olabilir."
+    ],
+    "resources": [
+     {
+      "title": "Ads in ChatGPT",
+      "url": "https://help.openai.com/en/articles/20001047-ads-in-chatgpt",
+      "note": "Reklamların hangi planlarda ve nasıl gösterildiği."
+     },
+     {
+      "title": "Ads Manager — ülkeler",
+      "url": "https://help.openai.com/en/articles/20001245-ads-manager-availability",
+      "note": "Self-servis kullanımın açık olduğu ülkeler (Türkiye dahil)."
+     },
+     {
+      "title": "Ads in ChatGPT — temel bilgiler",
+      "url": "https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics",
+      "note": "Reklam biçimi, satın alma hedefleri, teklif ve UTM."
+     },
+     {
+      "title": "OpenAI Ads geliştirici belgeleri",
+      "url": "https://developers.openai.com/ads",
+      "note": "Ölçüm pikseli, Conversions API ve Advertiser API."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_ads_goal",
+     "label": "Satın Alma Hedefi",
+     "en": "Buying Goal",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_ads"
+       ]
+      }
+     ],
+     "explanation": "ChatGPT reklamlarının neye göre satın alınacağını belirler.",
+     "scenario": "Ölçüm kurulmuşsa dönüşüm; yeni markada tıklama ya da gösterim.",
+     "example": "Dönüşüm hedefiyle randevu formu ölçülür; başlangıç teklifleri küçük tutulup sonuçla ayarlanır.",
+     "rule": "ChatGPT reklamlarının satın alma hedefi: {label}.",
+     "options": [
+      {
+       "value": "conversions",
+       "label": "Dönüşüm",
+       "explanation": "Piksel ya da Conversions API ile ölçülen dönüşüme göre.",
+       "scenario": "Ölçümü kurulu siteler.",
+       "example": "Randevu formu dönüşüm.",
+       "ruleDetail": "Reklamlar dönüşüm hedefiyle satın alınır; dönüşüm olayları Pazarlama › Dönüşüm Olayları'yla aynıdır."
+      },
+      {
+       "value": "clicks",
+       "label": "Tıklama",
+       "explanation": "Siteye gelen tıklamaya göre (CPC).",
+       "scenario": "Ölçümü henüz kurulmamış ya da trafik hedefli kampanyalar.",
+       "example": "Ürün sayfasına trafik.",
+       "ruleDetail": "Reklamlar tıklama hedefiyle satın alınır; teklif ve bütçe haftalık gözden geçirilir."
+      },
+      {
+       "value": "impressions",
+       "label": "Gösterim",
+       "explanation": "Görünürlüğe göre (CPM).",
+       "scenario": "Yeni marka ve lansman.",
+       "example": "Lansman haftası.",
+       "ruleDetail": "Reklamlar gösterim hedefiyle satın alınır; kampanya sonunda erişim raporlanır."
+      }
+     ]
+    },
+    {
+     "id": "yz_ads_setup",
+     "label": "Asgari Reklam Ayarları",
+     "en": "Minimum Ad Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "chatgpt_ads"
+       ]
+      }
+     ],
+     "explanation": "ChatGPT reklam hesabının asgari kurulum ve ölçüm ayarlarını belirler.",
+     "scenario": "Kurumsal hesap, fatura, UTM ve açılış sayfası her kurulumda; piksel ölçüm yapılacaksa.",
+     "example": "Hesap şirket adına, piksel onaydan sonra çalışıyor, bağlantılar utm_source=chatgpt ile.",
+     "rule": "ChatGPT reklam ayarları: {labels}.",
+     "options": [
+      {
+       "value": "account",
+       "label": "Kurumsal hesap ve fatura",
+       "explanation": "Hesap tüzel kişi adına, fatura bilgileri ticari unvan ve vergi numarasıyla.",
+       "scenario": "Her hesap.",
+       "example": "Ads Manager'da şirket bilgileri.",
+       "ruleDetail": "ChatGPT reklam hesabı kurumun tüzel kişiliği adına açılır; fatura bilgileri ticari unvan ve vergi numarasıyla girilir."
+      },
+      {
+       "value": "pixel",
+       "label": "Ölçüm pikseli / Conversions API (onaylı)",
+       "explanation": "Dönüşüm ölçümü; yalnız pazarlama çerezi onayıyla.",
+       "scenario": "Dönüşüm ölçen hesaplar.",
+       "example": "Onay verilince piksel yüklenir.",
+       "ruleDetail": "OpenAI reklam pikseli yalnız pazarlama çerezlerine onay verilince çalışır; sunucu taraflı olaylar da aynı onaya bağlıdır ve kişisel veri düz metin gönderilmez."
+      },
+      {
+       "value": "utm",
+       "label": "UTM parametreleri",
+       "explanation": "Reklam bağlantıları UTM'li; yapay zekâ kaynaklı trafik analitikte ayrılır.",
+       "scenario": "Her hesap.",
+       "example": "?utm_source=chatgpt&utm_medium=cpc",
+       "ruleDetail": "ChatGPT reklam bağlantıları UTM parametreleriyle verilir; analitikte ayrı kanal olarak raporlanır."
+      },
+      {
+       "value": "landing",
+       "label": "Açılış sayfası denetime açık",
+       "explanation": "Açılış sayfası OAI-AdsBot'a açık, hızlı ve reklam metniyle tutarlı.",
+       "scenario": "Her hesap.",
+       "example": "robots.txt OAI-AdsBot'u engellemiyor.",
+       "ruleDetail": "Reklam açılış sayfaları OAI-AdsBot'a açıktır ve reklam metnindeki teklif sayfada aynen bulunur."
+      },
+      {
+       "value": "review",
+       "label": "Haftalık gözden geçirme",
+       "explanation": "Teklif, bütçe ve sonuçlar haftalık kontrol edilir.",
+       "scenario": "Her hesap.",
+       "example": "Pazartesi raporu.",
+       "ruleDetail": "ChatGPT reklam sonuçları ve teklifleri haftalık gözden geçirilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_shop",
+   "name": "Yapay Zekâ ile Alışveriş & Ürün Beslemeleri",
+   "en": "AI Shopping & Product Feeds",
+   "icon": "▤",
+   "agents": [
+    "MI",
+    "P"
+   ],
+   "refs": [
+    "domain_name",
+    "oc_services"
+   ],
+   "desc": "Ürünlerin ChatGPT, Google AI Mode / Gemini, Copilot ve Perplexity alışveriş sonuçlarında doğru görünmesi için ürün verisini, beslemeleri ve ödeme programlarını belirler",
+   "guide": {
+    "purpose": "Yapay zekâ asistanları ürün önerirken ürün beslemelerini, yapısal veriyi ve satıcı bilgilerini kullanır. ChatGPT'de Shopify satıcılarının ürünleri Shopify Catalog üzerinden zaten listelenir; doğrudan ürün beslemesi onaylı ortaklara açıktır ve standart besleme şimdilik ABD odaklıdır. OpenAI Mart 2026'da Instant Checkout'u daralttı; satın alma artık satıcının sitesinde tamamlanıyor. Google'ın AI Mode / Gemini içi ödemesi (UCP) ABD, Kanada ve Avustralya'da; Copilot Checkout ABD'de; Perplexity içi satın alma ABD'deki Pro kullanıcılarla sınırlı. Türkiye'deki bir işletme için bugün yapılacak iş, ürün verisini bu beslemelere hazır ve sitedekiyle tutarlı hale getirmektir.",
+    "criteria": [
+     "Her ürünün sabit bir kimliği vardır; kimlik site, yapısal veri, analitik ve bütün beslemelerde aynıdır.",
+     "Zorunlu alanlar (kimlik, başlık, açıklama, bağlantı, marka, satıcı adı, görsel, stok durumu, fiyat) eksiksizdir; fiyat ve stok sitedekiyle aynıdır.",
+     "Ürün sayfalarındaki Product / Offer yapısal verisi sayfada görünen bilgiyle aynıdır.",
+     "Satış, ödeme ve iade satıcının sitesinde, satıcının sorumluluğunda tamamlanır."
+    ],
+    "pitfalls": [
+     "ABD'ye özgü ödeme programlarına Türkiye'den başvurmaya çalışmak.",
+     "Beslemede sitedekinden farklı fiyat ya da stok bırakmak: ürün yanlış önerilir ya da reddedilir.",
+     "Yasaklı ürünleri (alkol, nikotin, kumar, reçeteli ilaç, silah) beslemeye koymak.",
+     "Ürün kimliklerini sonradan değiştirmek: geçmiş veri ve eşleşmeler kopar."
+    ],
+    "resources": [
+     {
+      "title": "OpenAI ürün beslemesi şartnamesi",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "note": "Zorunlu dokuz alan ve isteğe bağlı alanlar."
+     },
+     {
+      "title": "OpenAI ürün beslemesi teslimi",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/overview",
+      "note": "SFTP, biçimler, en az günde bir tam snapshot."
+     },
+     {
+      "title": "OpenAI Commerce — başlarken",
+      "url": "https://developers.openai.com/commerce/guides/get-started",
+      "note": "Onaylı ortaklar, başvuru ve yasaklı ürünler."
+     },
+     {
+      "title": "ChatGPT ile alışveriş",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "note": "Shopify Catalog ve satıcı sıralamasını etkileyenler."
+     },
+     {
+      "title": "Powering product discovery in ChatGPT",
+      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+      "note": "Mart 2026: satın alma satıcının sitesinde tamamlanır."
+     },
+     {
+      "title": "Google UCP ile ödeme (Merchant Center)",
+      "url": "https://support.google.com/merchants/answer/16837055?hl=en",
+      "note": "AI Mode ve Gemini'de ödeme; ABD, Kanada, Avustralya."
+     },
+     {
+      "title": "Microsoft Copilot Checkout",
+      "url": "https://about.ads.microsoft.com/en/solutions/technology/agentic-commerce",
+      "note": "Copilot içinde ödeme; ABD'ye satış yapan satıcılar."
+     },
+     {
+      "title": "Perplexity Merchant Program",
+      "url": "https://www.perplexity.ai/hub/blog/shop-like-a-pro",
+      "note": "Ücretsiz satıcı programı."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_shop_channels",
+     "label": "Alışveriş Kanalları",
+     "en": "AI Shopping Channels",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "shopping"
+       ]
+      }
+     ],
+     "explanation": "Ürünlerin hangi yapay zekâ alışveriş kanallarına hazırlanacağını belirler. Ülke uygunluğu her kanal için seçenek açıklamasında yazar.",
+     "scenario": "Türkiye'de satış yapan işletme için Google Merchant Center beslemesi ve Shopify (kullanılıyorsa) bugün işe yarar; diğerleri uygunluk açılınca.",
+     "example": "Google Merchant Center beslemesi güncel; OpenAI beslemesi için başvuru formu takvime yazıldı.",
+     "rule": "Ürünlerin hazırlandığı yapay zekâ alışveriş kanalları: {labels}.",
+     "options": [
+      {
+       "value": "google_mc",
+       "label": "Google Merchant Center (AI Mode / Gemini)",
+       "explanation": "Google'ın yapay zekâ özellikleri Merchant Center ürün verisini kullanır; kurulum Google Servisleri › Merchant Center'da. AI Mode içi ödeme (UCP) şimdilik ABD, Kanada, Avustralya.",
+       "scenario": "Google'da ürün gösteren işletmeler.",
+       "example": "Merchant Center teşhis ekranında 0 hata.",
+       "ruleDetail": "Ürünler Google Merchant Center beslemesiyle güncel tutulur; AI Mode / Gemini içi ödeme yalnız uygun ülkelerde açılınca değerlendirilir."
+      },
+      {
+       "value": "shopify",
+       "label": "Shopify Catalog (ChatGPT)",
+       "explanation": "Shopify satıcılarının ürünleri Shopify Catalog üzerinden ChatGPT'de zaten listelenir; ayrıca ChatGPT uygulaması var.",
+       "scenario": "Shopify kullanan mağazalar.",
+       "example": "Shopify'da ChatGPT uygulaması kurulu.",
+       "ruleDetail": "Shopify kullanılıyorsa ürünlerin ChatGPT'de Shopify Catalog üzerinden göründüğü kontrol edilir; ürün verisi Shopify'da güncel tutulur."
+      },
+      {
+       "value": "openai_feed",
+       "label": "OpenAI ürün beslemesi (onaylı ortak)",
+       "explanation": "Doğrudan ChatGPT'ye ürün beslemesi; onaylı ortaklara açık, standart besleme şimdilik ABD odaklı.",
+       "scenario": "Uygunluk açıldığında büyük kataloglu satıcılar.",
+       "example": "Başvuru formu dolduruldu, sonuç bekleniyor.",
+       "ruleDetail": "OpenAI ürün beslemesi uygunsa başvurulur; besleme şartnamesindeki zorunlu alanlarla, en az günde bir tam snapshot olarak hazırlanır."
+      },
+      {
+       "value": "copilot",
+       "label": "Microsoft Merchant Center (Copilot)",
+       "explanation": "Copilot alışverişi Microsoft Merchant Center'ı kullanır; Copilot Checkout şimdilik ABD'ye satış yapan satıcılar için.",
+       "scenario": "Bing / Copilot'ta ürün göstermek isteyenler.",
+       "example": "Microsoft Merchant Center'a besleme bağlı.",
+       "ruleDetail": "Ürünler Microsoft Merchant Center'a beslenir; Copilot içi ödeme uygun ülkelerde açılınca değerlendirilir."
+      },
+      {
+       "value": "perplexity",
+       "label": "Perplexity Merchant Program",
+       "explanation": "Ücretsiz satıcı programı; Perplexity içinden satın alma şimdilik ABD.",
+       "scenario": "Perplexity'de görünmek isteyen satıcılar.",
+       "example": "Program formu gönderildi.",
+       "ruleDetail": "Perplexity Merchant Program uygunsa başvurulur; ürün bilgileri sitedekiyle aynıdır."
+      }
+     ]
+    },
+    {
+     "id": "yz_shop_data",
+     "label": "Ürün Verisi Kuralları",
+     "en": "Product Data Rules",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "shopping"
+       ]
+      }
+     ],
+     "explanation": "Bütün yapay zekâ alışveriş kanallarında ortak ürün verisi kurallarını belirler.",
+     "scenario": "Kimlik, zorunlu alanlar, fiyat / stok eşitliği ve yapısal veri her e-ticaret sitesinde seçilir.",
+     "example": "Ürün TS-104 her yerde aynı kimlikle; fiyat ve stok saat başı eşitleniyor.",
+     "rule": "Yapay zekâ alışverişi için ürün verisi kuralları: {labels}.",
+     "options": [
+      {
+       "value": "ids",
+       "label": "Sabit ürün kimliği",
+       "explanation": "Ürün kimliği değişmez; site, yapısal veri, analitik ve beslemelerde aynı.",
+       "scenario": "Her e-ticaret sitesi.",
+       "example": "SKU TS-104.",
+       "ruleDetail": "Her ürünün sabit bir kimliği vardır; kimlik site, yapısal veri, analitik olayları ve bütün beslemelerde aynıdır ve sonradan değiştirilmez."
+      },
+      {
+       "value": "required",
+       "label": "Zorunlu alanlar eksiksiz",
+       "explanation": "Kimlik, başlık, açıklama, bağlantı, marka, satıcı adı, görsel, stok durumu, fiyat (para birimiyle).",
+       "scenario": "Her besleme.",
+       "example": "price: 1250.00 TRY",
+       "ruleDetail": "Her üründe kimlik, başlık, açıklama, bağlantı, marka, satıcı adı, görsel, stok durumu ve para birimli fiyat doludur."
+      },
+      {
+       "value": "sync",
+       "label": "Fiyat ve stok eşitliği",
+       "explanation": "Beslemedeki fiyat ve stok sitedekiyle aynı; besleme en az günde bir güncellenir.",
+       "scenario": "Her besleme.",
+       "example": "Günlük tam besleme + fiyat değişiminde ek güncelleme.",
+       "ruleDetail": "Beslemelerdeki fiyat, indirimli fiyat ve stok sitedekiyle aynıdır; beslemeler en az günde bir tam olarak güncellenir."
+      },
+      {
+       "value": "structured",
+       "label": "Product / Offer yapısal verisi",
+       "explanation": "Ürün sayfalarında sayfada görünen bilgiyle aynı Product ve Offer işaretlemesi.",
+       "scenario": "Her ürün sayfası.",
+       "example": "Sayfadaki fiyat ile JSON-LD fiyatı aynı.",
+       "ruleDetail": "Ürün sayfalarında Product ve Offer yapısal verisi sayfada görünen ad, fiyat, stok ve görselle birebir aynıdır."
+      },
+      {
+       "value": "policies",
+       "label": "Teslimat ve iade bilgisi",
+       "explanation": "Teslimat süresi, ücret ve iade koşulları sitede açık ve beslemelerde aynı.",
+       "scenario": "Ürün satan her site.",
+       "example": "Ücretsiz kargo 500 TL üzeri, 14 gün iade.",
+       "ruleDetail": "Teslimat ve iade koşulları sitede açık bir sayfadadır ve beslemelerde aynı bilgiyle verilir."
+      },
+      {
+       "value": "prohibited",
+       "label": "Yasaklı ürün kontrolü",
+       "explanation": "Platform politikalarında yasak ürünler (alkol, nikotin, kumar, reçeteli ilaç, silah …) beslemeye konmaz.",
+       "scenario": "Geniş kataloglu satıcılar.",
+       "example": "Yasaklı kategoriler beslemeden filtrelenir.",
+       "ruleDetail": "Platform politikalarında yasaklı ürünler beslemelere konmaz; filtre kuralı belgelenir."
+      },
+      {
+       "value": "checkout_site",
+       "label": "Satış sitede tamamlanır",
+       "explanation": "Ödeme, sözleşme ve iade süreci satıcının sitesinde; mesafeli satış yükümlülükleri satıcıdadır.",
+       "scenario": "Her satıcı.",
+       "example": "Yapay zekâdan gelen kullanıcı ürün sayfasına iner, ödemeyi sitede yapar.",
+       "ruleDetail": "Yapay zekâ kanallarından gelen satın almalar satıcının sitesinde tamamlanır; ön bilgilendirme, mesafeli satış sözleşmesi ve iade süreci sitedeki akışla aynıdır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_platforms",
+   "name": "Google, Microsoft, Apple, Perplexity & Meta",
+   "en": "Other AI Platforms",
+   "icon": "◇",
+   "agents": [
+    "M",
+    "T"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "domain_name",
+    "oc_address",
+    "oc_phone",
+    "oc_hours",
+    "mk_accounts"
+   ],
+   "desc": "ChatGPT dışındaki yapay zekâ platformlarında işletme ve ürün bilgilerinin doğru görünmesi için platform başına yapılacakları belirler",
+   "guide": {
+    "purpose": "Google AI Mode / Gemini, Microsoft Copilot, Apple'ın Siri ve Safari'si, Perplexity ve Meta'nın işletme ajanı işletme bilgisini kendi kaynaklarından alır: Google İşletme Profili ve Merchant Center, Bing Places ve Bing dizini, Apple Business, Perplexity'nin arama botu, WhatsApp / Messenger. Bu bölüm her platform için asgari işleri belirler. Google'ın kurulumu Google Servisleri menüsünde, Meta'nınki Meta Servisleri menüsündedir; burada yalnız yapay zekâya özgü kontroller var.",
+    "criteria": [
+     "Her platformdaki işletme kaydı kurumun hesabındadır ve Ortak Bilgiler'le aynıdır.",
+     "Google için ek yapay zekâ dosyası ya da işaretlemesi aranmaz; İşletme Profili, Merchant Center ve yapısal veri güncel tutulur.",
+     "Bing Webmaster Tools'ta AI Performance raporu izlenir; yeni ve değişen sayfalar IndexNow ile bildirilir.",
+     "Apple Business'ta konum kartı sahiplenilmiştir (Türkiye'de marka ve konum yönetimi açık)."
+    ],
+    "pitfalls": [
+     "Google-Extended'ı engelleyince AI Overviews'tan çıkılacağını sanmak: Google-Extended Gemini eğitimi ve Gemini Apps'teki dayanaklandırma içindir, Arama'yı etkilemez.",
+     "Applebot-Extended'ı Applebot sanmak: Applebot-Extended yalnız Apple modellerinin eğitimini kontrol eder; aramayı etkilemez.",
+     "Bing Places'ı eski adresinde aramak: Ekim 2025'te bing.com/forbusiness'a taşındı.",
+     "Meta Business Agent'ı yapay zekâ olduğunu belirtmeden kullanmak."
+    ],
+    "resources": [
+     {
+      "title": "Google: yapay zekâ özellikleri ve web siteniz",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "note": "Ek gereklilik yok; profil ve Merchant Center güncel tutulur."
+     },
+     {
+      "title": "Google'ın ortak tarayıcıları (Google-Extended)",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "note": "Google-Extended'ın neyi kontrol ettiği."
+     },
+     {
+      "title": "Yeni Bing Places for Business",
+      "url": "https://blogs.bing.com/search/October-2025/Introducing-the-New-Bing-Places-for-Business-Built-for-Business-Owners,-Powered-by-Research",
+      "note": "Ekim 2025: bing.com/forbusiness."
+     },
+     {
+      "title": "Bing Webmaster Tools — AI Performance",
+      "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+      "note": "Copilot ve Bing yapay zekâ yanıtlarında kaynak gösterilme."
+     },
+     {
+      "title": "IndexNow",
+      "url": "https://www.indexnow.org/",
+      "note": "Bing, Yandex, Naver, Seznam ve Yep'e anında bildirim (Google katılmıyor)."
+     },
+     {
+      "title": "IndexNow — belgeler",
+      "url": "https://www.indexnow.org/documentation",
+      "note": "Anahtar dosyası (<anahtar>.txt), keyLocation, toplu gönderim ve yanıt kodları."
+     },
+     {
+      "title": "IndexNow — sık sorulanlar",
+      "url": "https://www.indexnow.org/faq",
+      "note": "Anahtar dosyasının yeri, tekrar gönderim ve hata kodları."
+     },
+     {
+      "title": "Apple Business",
+      "url": "https://business.apple.com/",
+      "note": "Apple Haritalar'da konum kartı, logo, saatler, eylemler."
+     },
+     {
+      "title": "Apple Business — ülkelere göre özellikler",
+      "url": "https://support.apple.com/126603",
+      "note": "Türkiye: marka ve konum yönetimi, markalı e-posta."
+     },
+     {
+      "title": "Applebot ve Applebot-Extended",
+      "url": "https://support.apple.com/en-us/119829",
+      "note": "Applebot arama; Applebot-Extended yalnız eğitim."
+     },
+     {
+      "title": "Perplexity botları",
+      "url": "https://docs.perplexity.ai/guides/bots",
+      "note": "PerplexityBot ve Perplexity-User."
+     },
+     {
+      "title": "Meta Business Agent",
+      "url": "https://about.fb.com/news/2026/06/meta-business-agent/",
+      "note": "WhatsApp ve Messenger'da işletme ajanı (3 Haziran 2026)."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_google",
+     "label": "Google AI Mode / Gemini",
+     "en": "Google AI Mode / Gemini",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "google"
+       ]
+      }
+     ],
+     "explanation": "Google'ın yapay zekâ özelliklerinde doğru görünmek için yapılacak kontrolleri belirler. Kurulum Google Servisleri menüsündedir.",
+     "scenario": "Profil, Merchant Center ve yapısal veri her işletmede; snippet kontrolleri ve Google-Extended kararı bilinçli verilir.",
+     "example": "İşletme Profili saatleri siteyle aynı; ürün yapısal verisi sayfadaki fiyatla aynı; Google-Extended kararı yazılı.",
+     "rule": "Google AI Mode / Gemini için: {labels}.",
+     "options": [
+      {
+       "value": "profile",
+       "label": "İşletme Profili güncel",
+       "explanation": "Ad, adres, telefon, saatler, kategori, ürün / hizmetler.",
+       "scenario": "Yerel işletmeler.",
+       "example": "Bayram saatleri önceden girilir.",
+       "ruleDetail": "Google İşletme Profili Ortak Bilgiler'le aynıdır; özel gün saatleri önceden girilir."
+      },
+      {
+       "value": "merchant",
+       "label": "Merchant Center güncel",
+       "explanation": "Ürün fiyatı, stok ve politikalar.",
+       "scenario": "Ürün satanlar.",
+       "example": "Teşhis ekranında 0 hata.",
+       "ruleDetail": "Merchant Center ürün verisi siteyle aynıdır ve teşhis ekranı haftalık kontrol edilir."
+      },
+      {
+       "value": "structured",
+       "label": "Yapısal veri sayfayla aynı",
+       "explanation": "Organization / LocalBusiness / Product işaretlemesi sayfada görünen metinle aynı.",
+       "scenario": "Her site.",
+       "example": "JSON-LD'deki telefon sayfadakiyle aynı.",
+       "ruleDetail": "Yapısal veri sayfada görünen bilgiyle birebir aynıdır; görünmeyen bilgi işaretlenmez."
+      },
+      {
+       "value": "no_extra",
+       "label": "Ek yapay zekâ dosyası şart değil",
+       "explanation": "Google, AI Overviews ve AI Mode için yeni makine okunur dosya ya da işaretleme gerekmediğini söylüyor.",
+       "scenario": "Her site.",
+       "example": "llms.txt kararı yalnız diğer platformlar için ayrı değerlendirilir.",
+       "ruleDetail": "Google'ın yapay zekâ özellikleri için ek dosya ya da işaretleme eklenmez; standart SEO ve içerik kalitesi esastır."
+      },
+      {
+       "value": "snippet",
+       "label": "Snippet kontrolleri bilinçli",
+       "explanation": "nosnippet, data-nosnippet, max-snippet ve noindex yapay zekâ özelliklerindeki gösterimi de etkiler.",
+       "scenario": "Fiyat ya da gizli içerik gösterimini sınırlamak isteyenler.",
+       "example": "Kampanya kuralları bloğunda data-nosnippet.",
+       "ruleDetail": "nosnippet, data-nosnippet, max-snippet ve noindex yalnız gerekçeli yerlerde kullanılır; yapay zekâ özelliklerindeki gösterimi de etkilediği bilinir."
+      },
+      {
+       "value": "extended",
+       "label": "Google-Extended kararı",
+       "explanation": "Gemini eğitimi ve Gemini Apps'teki dayanaklandırma için izin ya da engel; Arama'yı ve sıralamayı etkilemez.",
+       "scenario": "Her site.",
+       "example": "robots.txt'de Google-Extended satırı kurum kararına göre.",
+       "ruleDetail": "Google-Extended için kurum kararı (izin / engel) robots.txt'de uygulanır; bu kararın Google Arama ve AI Overviews görünürlüğünü etkilemediği bilinir."
+      }
+     ]
+    },
+    {
+     "id": "yz_microsoft",
+     "label": "Microsoft Copilot ve Bing",
+     "en": "Microsoft Copilot & Bing",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "microsoft"
+       ]
+      }
+     ],
+     "explanation": "Copilot ve Bing yapay zekâ yanıtları için yapılacakları belirler.",
+     "scenario": "Bing Webmaster Tools, IndexNow bildirimi ve anahtar dosyası her site için; Bing Places yerel işletmeler için.",
+     "example": "Bing Webmaster Tools'ta AI Performance raporu aylık okunur; yayınlanan her sayfa IndexNow ile bildirilir.",
+     "rule": "Microsoft Copilot ve Bing için: {labels}.",
+     "options": [
+      {
+       "value": "places",
+       "label": "Bing Places kaydı",
+       "explanation": "İşletme kaydı bing.com/forbusiness üzerinden; Ortak Bilgiler'le aynı.",
+       "scenario": "Yerel işletmeler.",
+       "example": "Bing Places'ta doğrulanmış kayıt.",
+       "ruleDetail": "Bing Places for Business kaydı sahiplenilir ve Ortak Bilgiler'le aynı tutulur."
+      },
+      {
+       "value": "bwt",
+       "label": "Bing Webmaster Tools + AI Performance",
+       "explanation": "Site doğrulanır, site haritası gönderilir; AI Performance raporu Copilot'ta kaynak gösterilmeyi izler.",
+       "scenario": "Her site.",
+       "example": "Aylık AI Performance okuma.",
+       "ruleDetail": "Site Bing Webmaster Tools'ta doğrulanır, site haritası gönderilir; AI Performance raporu aylık izlenir."
+      },
+      {
+       "value": "indexnow",
+       "label": "IndexNow bildirimi",
+       "explanation": "Yeni, değişen, yönlendirilen ve silinen sayfalar yayın anında bildirilir; tek gönderim IndexNow'a katılan bütün arama motorlarıyla (Bing, Yandex, Naver, Seznam, Yep) paylaşılır. Google katılmıyor.",
+       "scenario": "İçeriği sık değişen siteler.",
+       "example": "Yayın sonrası https://api.indexnow.org/indexnow adresine değişen adresler gönderilir.",
+       "ruleDetail": "Yeni, değişen, yönlendirilen (301 / 302) ve silinen (404 / 410) sayfalar yayın anında IndexNow ile bildirilir: tek adres GET ?url=…&key=…, toplu gönderim POST /indexnow (JSON: host, key, urlList; istek başına en çok 10.000 adres) tek bir uç noktaya yapılır. Değişmemiş adres tekrar gönderilmez; sitenin bütün adresleri için site haritası kullanılır. 200 / 202 başarılı, 400 biçim hatası, 403 anahtar bulunamadı ya da eşleşmedi, 422 adres başka alan adına ait ya da anahtar uyumsuz, 429 çok sık gönderim (Retry-After beklenir) olarak ele alınır ve hata kaydedilir."
+      },
+      {
+       "value": "indexnow_key",
+       "label": "IndexNow anahtar dosyası (<anahtar>.txt)",
+       "explanation": "IndexNow, siteye konan bir anahtar dosyasıyla sahipliği doğrular: anahtar 8–128 karakterdir (a-z, A-Z, 0-9, tire), sitenin köküne <anahtar>.txt adıyla, içinde yalnız anahtar olan UTF-8 metin dosyası konur. Dosya başka klasördeyse keyLocation verilir ve yalnız o klasörün altındaki adresleri kapsar. Anahtar herkese açık bir doğrulama değeridir, gizli anahtar sayılmaz.",
+       "scenario": "IndexNow kullanan her site.",
+       "example": "https://www.alanadi.com.tr/3f8a1c0e9b7d4e21a6c5.txt dosyası açılınca yalnız 3f8a1c0e9b7d4e21a6c5 yazar.",
+       "ruleDetail": "IndexNow anahtarı 8–128 karakter (a-z, A-Z, 0-9, tire) olarak bir kez üretilir ve ortam ayarında tutulur; sitenin köküne <anahtar>.txt adıyla, içinde yalnız anahtar bulunan UTF-8 düz metin dosyası olarak yayımlanır (giriş gerektirmez, 200 döner, yönlendirme yok). Dosya kökte değilse keyLocation parametresi verilir ve dosya yalnız bulunduğu klasörün altındaki adresleri kapsar. Her alan adı / alt alan adı kendi anahtar dosyasını sunar; anahtar dosyası robots.txt, CDN kuralı ya da yayın temizliğiyle engellenmez veya silinmez; anahtar değiştirilirse eski dosya yenisi doğrulanana kadar kalır."
+      },
+      {
+       "value": "mmc",
+       "label": "Microsoft Merchant Center",
+       "explanation": "Ürünlerin Bing ve Copilot alışverişinde görünmesi için.",
+       "scenario": "Ürün satanlar.",
+       "example": "Microsoft Merchant Center'da besleme.",
+       "ruleDetail": "Ürün satılıyorsa Microsoft Merchant Center'a besleme bağlanır ve siteyle eşit tutulur."
+      }
+     ]
+    },
+    {
+     "id": "yz_apple",
+     "label": "Apple Business",
+     "en": "Apple Business",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "apple"
+       ]
+      }
+     ],
+     "explanation": "Apple Haritalar, Siri ve Safari'de işletmenin doğru görünmesi için yapılacakları belirler.",
+     "scenario": "Fiziksel konumu olan işletmeler konum kartını sahiplenir; Applebot izni her sitede.",
+     "example": "Apple Haritalar'da işletmenin logosu, saatleri ve randevu eylemi görünür.",
+     "rule": "Apple Business için: {labels}.",
+     "options": [
+      {
+       "value": "claim",
+       "label": "Konum kartını sahiplen",
+       "explanation": "Apple Business'ta konum doğrulanır; Türkiye'de marka ve konum yönetimi açık.",
+       "scenario": "Fiziksel konumu olan işletmeler.",
+       "example": "Konum doğrulandı.",
+       "ruleDetail": "Apple Business'ta işletmenin konum kartı sahiplenilir ve doğrulanır."
+      },
+      {
+       "value": "details",
+       "label": "Logo, saatler, fotoğraflar",
+       "explanation": "Kart bilgileri Ortak Bilgiler'le aynı.",
+       "scenario": "Her kart.",
+       "example": "Bayram saatleri önceden girilir.",
+       "ruleDetail": "Apple Haritalar kartındaki logo, saatler, fotoğraflar ve iletişim bilgileri Ortak Bilgiler'le aynıdır."
+      },
+      {
+       "value": "actions",
+       "label": "Eylemler (randevu, sipariş)",
+       "explanation": "Kartta randevu ya da sipariş bağlantısı.",
+       "scenario": "Randevu ya da sipariş alan işletmeler.",
+       "example": "“Randevu al” düğmesi.",
+       "ruleDetail": "Apple Haritalar kartına sitedeki randevu ya da sipariş sayfası eylem olarak eklenir."
+      },
+      {
+       "value": "applebot",
+       "label": "Applebot'a izin",
+       "explanation": "Applebot Siri, Spotlight ve Safari aramasını besler; Applebot-Extended yalnız eğitim içindir.",
+       "scenario": "Her site.",
+       "example": "robots.txt Applebot'u engellemiyor.",
+       "ruleDetail": "Applebot'a izin verilir; Applebot-Extended için kurum kararı ayrıca uygulanır."
+      }
+     ]
+    },
+    {
+     "id": "yz_perplexity",
+     "label": "Perplexity",
+     "en": "Perplexity",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "perplexity"
+       ]
+      }
+     ],
+     "explanation": "Perplexity yanıtlarında ve alışverişinde görünmek için yapılacakları belirler.",
+     "scenario": "Bot izni her site; satıcı programı ürün satanlar için.",
+     "example": "PerplexityBot'a izin; Merchant Program formu gönderildi.",
+     "rule": "Perplexity için: {labels}.",
+     "options": [
+      {
+       "value": "bot",
+       "label": "PerplexityBot'a izin",
+       "explanation": "PerplexityBot siteleri Perplexity sonuçlarında gösterir ve bağlantı verir; eğitim için kullanılmaz.",
+       "scenario": "Her site.",
+       "example": "robots.txt'de PerplexityBot izinli.",
+       "ruleDetail": "PerplexityBot'a robots.txt'de izin verilir."
+      },
+      {
+       "value": "user_fetch",
+       "label": "Kullanıcı istekli erişimi bilmek",
+       "explanation": "Perplexity-User kullanıcının istediği sayfayı getirir ve genellikle robots.txt'yi uygulamaz; gizli içerik yalnız erişim kontrolüyle korunur.",
+       "scenario": "Üye içeriği olan siteler.",
+       "example": "Üye sayfaları oturum ister.",
+       "ruleDetail": "Gizli ya da üyeye özel içerik robots.txt'ye değil erişim kontrolüne dayanır."
+      },
+      {
+       "value": "merchant",
+       "label": "Merchant Program",
+       "explanation": "Ücretsiz satıcı programı; satın alma şimdilik ABD'deki Pro kullanıcılarla sınırlı.",
+       "scenario": "Ürün satanlar.",
+       "example": "Program formu gönderildi.",
+       "ruleDetail": "Ürün satılıyorsa Perplexity Merchant Program uygunluğu kontrol edilir ve uygunsa başvurulur."
+      }
+     ]
+    },
+    {
+     "id": "yz_meta_ai",
+     "label": "Meta Business Agent",
+     "en": "Meta Business Agent",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "meta_ai"
+       ]
+      }
+     ],
+     "explanation": "WhatsApp ve Messenger'da müşteri sorularını yanıtlayan Meta yapay zekâ ajanının kullanılıp kullanılmayacağını belirler. Kademeli açılıyor; bazı özellikler bekleme listesinde, Türkiye uygunluğu doğrulanamadı.",
+     "scenario": "Çok sayıda tekrarlayan soru alan işletmeler değerlendirir; hassas sektörlerde (sağlık, finans, hukuk) dikkatle ya da hiç kullanılmaz.",
+     "example": "Ajan çalışma saatleri ve konum sorularını yanıtlar, fiyat teklifini temsilciye bırakır.",
+     "rule": "Meta Business Agent: {label}.",
+     "options": [
+      {
+       "value": "use",
+       "label": "Kullan (kapsamı sınırlı, temsilciye devirli)",
+       "explanation": "Ajan yalnız onaylı bilgilerle yanıt verir; çözemediğini temsilciye devreder.",
+       "scenario": "Tekrarlayan soruları çok olan işletmeler.",
+       "example": "Saat, adres, kargo durumu soruları.",
+       "ruleDetail": "Meta Business Agent yalnız onaylı bilgi kaynağıyla yanıt verir, yapay zekâ olduğunu belirtir, her adımda temsilciye geçiş sunar; yanıtlar haftalık örneklenip kontrol edilir."
+      },
+      {
+       "value": "waitlist",
+       "label": "Bekleme listesi / uygunluk kontrolü",
+       "explanation": "Türkiye'de açılınca değerlendirmek üzere izlenir.",
+       "scenario": "Henüz erişimi olmayan işletmeler.",
+       "example": "Ayda bir kontrol.",
+       "ruleDetail": "Meta Business Agent'ın Türkiye'deki uygunluğu ayda bir kontrol edilir; açılınca kapsam ve kurallar belirlenip kullanılır."
+      },
+      {
+       "value": "no",
+       "label": "Kullanma",
+       "explanation": "Mesajlar yalnız insan temsilcilerle yanıtlanır.",
+       "scenario": "Hassas sektörler ya da kişisel iletişimi önemli markalar.",
+       "example": "Bütün mesajlar destek ekibinde.",
+       "ruleDetail": "Meta Business Agent kullanılmaz; mesajlar insan temsilcilerle yanıtlanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_crawlers",
+   "name": "Yapay Zekâ Tarayıcıları & İçerik İzinleri",
+   "en": "AI Crawlers & Content Permissions",
+   "icon": "⌁",
+   "agents": [
+    "T",
+    "L"
+   ],
+   "refs": [
+    "domain_name"
+   ],
+   "desc": "Yapay zekâ şirketlerinin arama / yanıt botlarına ve model eğitimi botlarına hangi izinlerin verileceğini, robots.txt ve sunucu / CDN kurallarıyla nasıl uygulanacağını belirler; proje kararındaki robots.txt standardıyla uyumludur",
+   "guide": {
+    "purpose": "Yapay zekâ şirketlerinin botları üç gruba ayrılır: arama / yanıt botları (siteyi yapay zekâ yanıtlarında kaynak olarak gösterir — OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot, Meta-WebIndexer), model eğitimi botları (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent) ve kullanıcının istediği sayfayı getiren botlar (ChatGPT-User, Claude-User, Perplexity-User, Meta-ExternalFetcher — bazıları robots.txt'yi uygulamayabilir). Görünür olmak isteyen işletme arama / yanıt botlarına izin verir; eğitime izin kurum kararıdır. robots.txt değişiklikleri birkaç saat ile bir gün içinde yansır; CDN'in bot yönetimi robots.txt ile çelişmemelidir. Proje › SEO / Semantik › robots.txt Standardı'ndaki yapay zekâ seçenekleri bu bölümle aynı olmalıdır.",
+    "criteria": [
+     "Arama / yanıt botlarına robots.txt'de izin verilir ve CDN / güvenlik duvarı bu botları engellemez (OpenAI, OAI-SearchBot IP aralıklarını yayımlar).",
+     "Eğitim botları için kurum kararı yazılıdır ve robots.txt'de uygulanır.",
+     "Her alt alan adının kendi robots.txt'si vardır.",
+     "Kural değişikliği sunucu loglarında gerçek bot istekleriyle doğrulanır."
+    ],
+    "pitfalls": [
+     "Bütün yapay zekâ botlarını tek kuralla engellemek: işletme yapay zekâ yanıtlarında kaynak olarak görünmez.",
+     "GPTBot'u engelleyince ChatGPT aramasından çıkılacağını sanmak: arama için OAI-SearchBot belirleyicidir.",
+     "robots.txt'nin gizli içeriği koruduğunu sanmak: kullanıcı istekli botlar uygulamayabilir; gizli içerik erişim kontrolüyle korunur.",
+     "CDN'in “yapay zekâ botlarını engelle” ayarını robots.txt'yi kontrol etmeden açmak."
+    ],
+    "resources": [
+     {
+      "title": "OpenAI tarayıcıları",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "note": "OAI-SearchBot, GPTBot, ChatGPT-User, OAI-AdsBot ve IP listeleri."
+     },
+     {
+      "title": "Anthropic tarayıcıları",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "note": "ClaudeBot, Claude-SearchBot, Claude-User."
+     },
+     {
+      "title": "Perplexity botları",
+      "url": "https://docs.perplexity.ai/guides/bots",
+      "note": "PerplexityBot ve Perplexity-User."
+     },
+     {
+      "title": "Meta tarayıcıları",
+      "url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "note": "Meta-ExternalAgent, Meta-ExternalFetcher, Meta-WebIndexer."
+     },
+     {
+      "title": "Applebot",
+      "url": "https://support.apple.com/en-us/119829",
+      "note": "Applebot ve Applebot-Extended."
+     },
+     {
+      "title": "Google'ın ortak tarayıcıları",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "note": "Google-Extended."
+     },
+     {
+      "title": "Cloudflare Content Signals Policy",
+      "url": "https://blog.cloudflare.com/content-signals-policy/",
+      "note": "robots.txt'de search / ai-input / ai-train tercihleri."
+     },
+     {
+      "title": "llms.txt önerisi",
+      "url": "https://llmstxt.org/",
+      "note": "Resmî standart değil, öneri (2024)."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_bots_search",
+     "label": "Arama / Yanıt Botlarına İzin",
+     "en": "Search / Answer Bots Allowed",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "crawlers"
+       ]
+      }
+     ],
+     "explanation": "Siteyi yapay zekâ yanıtlarında kaynak olarak gösteren botlardan hangilerine izin verileceğini belirler. Bunları engellemek o platformun yanıtlarında görünmemek demektir.",
+     "scenario": "Görünür olmak isteyen işletmeler hepsine izin verir.",
+     "example": "robots.txt'de OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot ve Meta-WebIndexer için Allow: /",
+     "rule": "Yapay zekâ arama / yanıt botlarından izin verilenler: {labels}. Bu botlar CDN ve güvenlik duvarında da engellenmez.",
+     "recommend": [
+      {
+       "field": "robots_policy",
+       "map": {
+        "AiSearchAllow": [
+         "oai_search",
+         "claude_search",
+         "perplexity",
+         "applebot",
+         "meta_index"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "oai_search",
+       "label": "OAI-SearchBot (ChatGPT arama)",
+       "explanation": "ChatGPT arama sonuçları için; engellenen site arama yanıtlarında gösterilmez. OpenAI IP aralıklarını yayımlar.",
+       "scenario": "ChatGPT'de görünmek isteyen her site.",
+       "example": "WAF'ta searchbot.json aralıkları açık.",
+       "ruleDetail": "OAI-SearchBot'a robots.txt'de izin verilir ve OpenAI'nin yayımladığı IP aralıkları güvenlik duvarında engellenmez."
+      },
+      {
+       "value": "claude_search",
+       "label": "Claude-SearchBot (Claude arama)",
+       "explanation": "Claude'un arama kalitesi için dizinler; engellemek Claude yanıtlarında görünürlüğü azaltabilir.",
+       "scenario": "Claude'da görünmek isteyenler.",
+       "example": "Allow: /",
+       "ruleDetail": "Claude-SearchBot'a robots.txt'de izin verilir."
+      },
+      {
+       "value": "perplexity",
+       "label": "PerplexityBot",
+       "explanation": "Perplexity sonuçlarında gösterir ve bağlantı verir; eğitim için kullanılmaz.",
+       "scenario": "Perplexity'de görünmek isteyenler.",
+       "example": "Allow: /",
+       "ruleDetail": "PerplexityBot'a robots.txt'de izin verilir."
+      },
+      {
+       "value": "applebot",
+       "label": "Applebot (Siri, Spotlight, Safari)",
+       "explanation": "Apple'ın arama ve öneri özelliklerini besler.",
+       "scenario": "Apple kullanıcılarına görünmek isteyenler.",
+       "example": "Allow: /",
+       "ruleDetail": "Applebot'a robots.txt'de izin verilir."
+      },
+      {
+       "value": "meta_index",
+       "label": "Meta-WebIndexer (Meta AI arama)",
+       "explanation": "Meta AI aramasının kalitesi ve kaynak gösterme için.",
+       "scenario": "Meta AI'da görünmek isteyenler.",
+       "example": "Allow: /",
+       "ruleDetail": "Meta-WebIndexer'a robots.txt'de izin verilir."
+      },
+      {
+       "value": "bing",
+       "label": "Bingbot (Copilot)",
+       "explanation": "Copilot yanıtları Bing dizinine dayanır; Bingbot normal arama botudur.",
+       "scenario": "Copilot'ta görünmek isteyenler.",
+       "example": "Bingbot engellenmiyor.",
+       "ruleDetail": "Bingbot engellenmez; Copilot yanıtları Bing dizinine dayanır."
+      }
+     ]
+    },
+    {
+     "id": "yz_bots_train",
+     "label": "Model Eğitimi Botları",
+     "en": "AI Training Bots",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "crawlers"
+       ]
+      }
+     ],
+     "explanation": "Yapay zekâ modellerinin eğitimi için içerik toplayan botlara (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent) izin verilip verilmeyeceğini belirler. Bu karar arama görünürlüğünü doğrudan belirlemez; Meta-ExternalAgent ayrıca dizinleme de yaptığı için ayrı değerlendirilir.",
+     "scenario": "Markasının modeller tarafından bilinmesini isteyen işletmeler izin verir; özgün içerik, araştırma ya da ücretli içerik üretenler engelleyebilir; karar hukuk birimiyle verilir.",
+     "example": "Blog yazıları eğitime açık, ücretli eğitim içerikleri dizini eğitim botlarına kapalı.",
+     "rule": "Yapay zekâ model eğitimi botları: {label}.",
+     "recommend": [
+      {
+       "field": "robots_policy",
+       "map": {
+        "AiTrainBlock": [
+         "block"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "allow",
+       "label": "İzin ver",
+       "explanation": "Eğitim botları siteyi tarayabilir.",
+       "scenario": "Marka bilinirliği öncelikli işletmeler.",
+       "example": "Eğitim botları için ayrı kural yok.",
+       "ruleDetail": "Model eğitimi botlarına izin verilir; karar yıllık gözden geçirilir."
+      },
+      {
+       "value": "block",
+       "label": "Engelle",
+       "explanation": "GPTBot, ClaudeBot, Google-Extended, Applebot-Extended ve (dizinleme etkisi değerlendirilerek) Meta-ExternalAgent robots.txt'de engellenir; arama botları açık kalır.",
+       "scenario": "Özgün ve emek yoğun içerik üretenler.",
+       "example": "User-agent: GPTBot · Disallow: /",
+       "ruleDetail": "Model eğitimi botları robots.txt'de engellenir; arama / yanıt botları açık kalır ve iki grup ayrı satırlarda yazılır."
+      },
+      {
+       "value": "partial",
+       "label": "İçerik türüne göre",
+       "explanation": "Herkese açık tanıtım içeriği eğitime açık, özgün / ücretli içerik dizinleri kapalı.",
+       "scenario": "Hem tanıtım hem özgün içerik üretenler.",
+       "example": "/blog/ açık, /egitimler/ kapalı.",
+       "ruleDetail": "Model eğitimi botları yalnız belirlenen dizinlerde engellenir; dizin listesi robots.txt'de ve içerik politikasında aynıdır."
+      }
+     ]
+    },
+    {
+     "id": "yz_bots_tech",
+     "label": "Teknik Uygulama",
+     "en": "Technical Implementation",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "crawlers"
+       ]
+      }
+     ],
+     "explanation": "Bot izinlerinin teknik olarak nasıl uygulanacağını ve doğrulanacağını belirler.",
+     "scenario": "CDN uyumu, alt alan adları ve log doğrulaması her sitede; Content-Signal ve llms.txt isteğe bağlı.",
+     "example": "Cloudflare'in bot ayarı robots.txt'yle karşılaştırıldı; loglarda OAI-SearchBot 200 dönüyor.",
+     "rule": "Yapay zekâ bot izinlerinin uygulanması: {labels}.",
+     "options": [
+      {
+       "value": "cdn",
+       "label": "CDN / güvenlik duvarı uyumu",
+       "explanation": "CDN'in bot yönetimi ve güvenlik duvarı izin verilen botları engellemez.",
+       "scenario": "CDN kullanan siteler.",
+       "example": "Cloudflare AI Crawl Control ayarı robots.txt ile aynı.",
+       "ruleDetail": "CDN ve güvenlik duvarı kuralları robots.txt'deki yapay zekâ bot kararlarıyla aynıdır; izin verilen botlar engellenmez."
+      },
+      {
+       "value": "subdomains",
+       "label": "Her alt alan adında robots.txt",
+       "explanation": "Kurallar alt alan adı başına geçerlidir.",
+       "scenario": "Alt alan adı olan siteler.",
+       "example": "blog. ve magaza. alt alanlarında da robots.txt.",
+       "ruleDetail": "Her alt alan adında kendi robots.txt'si bulunur ve aynı yapay zekâ bot kararlarını uygular."
+      },
+      {
+       "value": "logs",
+       "label": "Loglarda doğrulama",
+       "explanation": "Kural değişikliğinden sonra sunucu loglarında botların isteği ve yanıt kodu kontrol edilir.",
+       "scenario": "Her site.",
+       "example": "OAI-SearchBot → 200, GPTBot → robots ile engelli.",
+       "ruleDetail": "robots.txt ya da CDN değişikliğinden sonra sunucu loglarında bot istekleri ve yanıt kodları kontrol edilir; sonuç kayda geçirilir."
+      },
+      {
+       "value": "private",
+       "label": "Gizli içerik erişim kontrolüyle",
+       "explanation": "Kullanıcı istekli botlar (ChatGPT-User, Claude-User, Perplexity-User, Meta-ExternalFetcher) robots.txt'yi uygulamayabilir.",
+       "scenario": "Üye ya da ücretli içerik sunanlar.",
+       "example": "Üye sayfaları oturum ister.",
+       "ruleDetail": "Gizli, üyeye özel ya da ücretli içerik robots.txt'ye değil oturum ve yetki kontrolüne dayanır."
+      },
+      {
+       "value": "content_signal",
+       "label": "Content-Signal satırı",
+       "explanation": "Cloudflare'in önerdiği robots.txt satırı: search / ai-input / ai-train tercihleri; tercih bildirir, teknik koruma değildir.",
+       "scenario": "Tercihlerini açıkça yazmak isteyen siteler.",
+       "example": "Content-Signal: search=yes, ai-train=no",
+       "ruleDetail": "robots.txt'de Content-Signal satırıyla search, ai-input ve ai-train tercihleri kurum kararına göre yazılır."
+      },
+      {
+       "value": "llms",
+       "label": "llms.txt (proje kararıyla)",
+       "explanation": "llms.txt resmî standart değil, bir öneri; Google kullanmıyor. Karar Proje › AI Arama (GEO / AIO) › llms.txt'dedir.",
+       "scenario": "Belgelendirme ağırlıklı siteler.",
+       "example": "llms.txt kararı projede “değerlendir”.",
+       "ruleDetail": "llms.txt yalnız proje kararı “kullan” ise yayımlanır; içeriği sitedeki sayfalarla tutarlıdır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_assistant",
+   "name": "Sitedeki Yapay Zekâ Asistanı",
+   "en": "On-site AI Assistant",
+   "icon": "✎",
+   "agents": [
+    "AG",
+    "L",
+    "K"
+   ],
+   "refs": [
+    "mk_brand_name",
+    "oc_hours",
+    "oc_phone"
+   ],
+   "desc": "Sitede ya da uygulamada müşterilere yanıt veren yapay zekâ asistanının şeffaflık, bilgi kaynağı, kişisel veri ve doğruluk kurallarını belirler",
+   "guide": {
+    "purpose": "AB Yapay Zekâ Yasası'nın 50. maddesi, insanlarla etkileşen yapay zekâ sistemlerinin kişiye bir yapay zekâyla konuştuğunu bildirmesini ister; bu yükümlülük 2 Ağustos 2026'dan beri uygulanır ve AB'deki kullanıcılara hizmet veren Türk işletmelerini de ilgilendirebilir. KVKK'nın 24 Kasım 2025 tarihli Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi hukuki dayanak, yurt dışına aktarım, şeffaflık, ilgili kişi hakları ve güvenliği ele alır. Bu bölüm sitedeki asistanın bu çerçevede nasıl çalışacağını belirler; proje kararındaki “Canlı destek ve AI sohbet” modülüyle birlikte uygulanır.",
+    "criteria": [
+     "Asistan konuşmanın başında yapay zekâ olduğunu açıkça söyler; insan temsilciye geçiş her zaman mümkündür.",
+     "Asistan yalnız onaylı bilgi kaynağıyla yanıt verir; fiyat, stok ve politika bilgisini uydurmaz.",
+     "Gereksiz ya da hassas kişisel veri istenmez; aydınlatma metni asistanı ve model sağlayıcısını (yurt dışı aktarım dahil) kapsar.",
+     "Konuşma kayıtlarının saklama süresi ve erişimi belirlidir; yanıtlar düzenli örneklenip kontrol edilir."
+    ],
+    "pitfalls": [
+     "Asistanı insan temsilci gibi tanıtmak.",
+     "Asistana sağlık, hukuk, finans gibi lisans gerektiren tavsiye verdirmek.",
+     "Konuşmalarda T.C. kimlik numarası, kart bilgisi ya da sağlık bilgisi toplamak.",
+     "Model sağlayıcısına veri aktarımını aydınlatma metninde belirtmemek."
+    ],
+    "resources": [
+     {
+      "title": "AB Yapay Zekâ Yasası — Madde 50 (şeffaflık)",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "note": "İnsanlarla etkileşen yapay zekâ sistemleri kendini bildirir."
+     },
+     {
+      "title": "AB Yapay Zekâ Yasası — Madde 113 (yürürlük)",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+      "note": "Genel uygulama 2 Ağustos 2026."
+     },
+     {
+      "title": "Avrupa Komisyonu — yapay zekâ düzenleyici çerçevesi",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "note": "Şeffaflık kuralları Ağustos 2026."
+     },
+     {
+      "title": "KVKK — Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi",
+      "url": "https://www.kvkk.gov.tr/Icerik/8547/uretken-yapay-zeka-ve-kisisel-verilerin-korunmasi-rehberi-15-soruda",
+      "note": "24 Kasım 2025; hukuki dayanak, aktarım, şeffaflık, haklar."
+     },
+     {
+      "title": "OpenAI Business Agents politikası",
+      "url": "https://openai.com/policies/business-agents-policy/",
+      "note": "Ajanların kendini tanıtması, baskı ve veri kuralları (örnek ilke seti)."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_as_source",
+     "label": "Bilgi Kaynağı",
+     "en": "Knowledge Source",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "assistant"
+       ]
+      }
+     ],
+     "explanation": "Asistanın hangi bilgilerle yanıt vereceğini belirler.",
+     "scenario": "Çoğu işletmede yalnız site içeriği ve onaylı belgeler; e-ticarette ürün kataloğu ve sipariş durumu eklenir.",
+     "example": "Asistan SSS, hizmet sayfaları ve fiyat listesinden yanıt verir; bilmediğinde temsilciye yönlendirir.",
+     "rule": "Sitedeki yapay zekâ asistanının bilgi kaynağı: {label}.",
+     "options": [
+      {
+       "value": "site_only",
+       "label": "Yalnız site içeriği ve onaylı belgeler (önerilen)",
+       "explanation": "Asistan yalnız sitedeki sayfalar ve onaylanmış belgelerle yanıt verir.",
+       "scenario": "Hizmet işletmeleri ve kurumsal siteler.",
+       "example": "Kaynak: SSS, hizmetler, fiyat listesi.",
+       "ruleDetail": "Asistan yalnız site içeriği ve onaylı belgelerle yanıt verir; kaynakta olmayan bilgi için “bilmiyorum” der ve temsilciye yönlendirir."
+      },
+      {
+       "value": "site_catalog",
+       "label": "Site + ürün kataloğu ve sipariş durumu",
+       "explanation": "Ürün, stok ve kimliği doğrulanmış kullanıcının sipariş durumu da kullanılır.",
+       "scenario": "E-ticaret siteleri.",
+       "example": "“Siparişim nerede?” sorusu oturumlu kullanıcıda yanıtlanır.",
+       "ruleDetail": "Asistan site içeriği, ürün kataloğu ve yalnız kimliği doğrulanmış kullanıcının kendi sipariş bilgisiyle yanıt verir; başkasının verisine erişemez."
+      },
+      {
+       "value": "general",
+       "label": "Genel model bilgisi + site",
+       "explanation": "Model genel bilgisini de kullanır; uydurma riski daha yüksektir.",
+       "scenario": "Genel bilgi sorularının da yanıtlandığı eğitim / içerik siteleri.",
+       "example": "Genel kavram açıklamaları.",
+       "ruleDetail": "Asistan genel model bilgisini kullanabilir; fiyat, politika ve işletmeye özgü bilgide yalnız site kaynaklarına dayanır ve bunu yanıtta belirtir."
+      }
+     ]
+    },
+    {
+     "id": "yz_as_rules",
+     "label": "Şeffaflık, Veri ve Güvenlik Kuralları",
+     "en": "Transparency, Data & Safety Rules",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "assistant"
+       ]
+      }
+     ],
+     "explanation": "Sitedeki asistanın uyması gereken kuralları belirler.",
+     "scenario": "Bildirim, temsilciye devir, hassas veri yasağı ve aydınlatma her asistanda seçilir.",
+     "example": "Pencere “Yapay zekâ asistanı” başlığıyla açılır; kart numarası yazılırsa maskelenir; “temsilciye bağlan” her zaman görünür.",
+     "rule": "Sitedeki yapay zekâ asistanının kuralları: {labels}.",
+     "options": [
+      {
+       "value": "disclose",
+       "label": "Yapay zekâ olduğunu bildirir",
+       "explanation": "Konuşma başında ve pencere başlığında yapay zekâ olduğu açıkça yazar (AB YZ Yasası m. 50).",
+       "scenario": "Her asistan.",
+       "example": "“Yapay zekâ asistanıyla konuşuyorsunuz.”",
+       "ruleDetail": "Asistan konuşmanın başında ve pencere başlığında yapay zekâ olduğunu açıkça bildirir; kendini insan gibi tanıtmaz."
+      },
+      {
+       "value": "handoff",
+       "label": "İnsan temsilciye geçiş",
+       "explanation": "Her adımda temsilciye geçiş; mesai dışında iletişim yolu.",
+       "scenario": "Her asistan.",
+       "example": "“Temsilciye bağlan” düğmesi.",
+       "ruleDetail": "Her adımda insan temsilciye geçiş sunulur; mesai dışında çalışma saatleri ve iletişim yolu bildirilir."
+      },
+      {
+       "value": "no_sensitive",
+       "label": "Gereksiz / hassas veri istenmez",
+       "explanation": "T.C. kimlik, kart, sağlık bilgisi istenmez; yazılırsa maskelenir.",
+       "scenario": "Her asistan.",
+       "example": "Kart numarası *** ile maskelenir.",
+       "ruleDetail": "Asistan gereksiz ya da hassas kişisel veri istemez; kullanıcı yazarsa kayıtta maskelenir."
+      },
+      {
+       "value": "notice",
+       "label": "Aydınlatma ve yurt dışı aktarım",
+       "explanation": "Aydınlatma metni asistanı, model sağlayıcısını ve yurt dışına aktarımı (KVKK m. 9) kapsar.",
+       "scenario": "Her asistan.",
+       "example": "Aydınlatma metninde “sohbet asistanı” paragrafı.",
+       "ruleDetail": "Aydınlatma metni sohbet asistanında işlenen veriyi, model sağlayıcısını ve yurt dışına aktarım dayanağını açıkça yazar."
+      },
+      {
+       "value": "no_advice",
+       "label": "Lisans gerektiren tavsiye yok",
+       "explanation": "Sağlık, hukuk, finans tavsiyesi verilmez; uzmana yönlendirilir.",
+       "scenario": "Sağlık, hukuk, finans sektörleri.",
+       "example": "“Bu konuda hekiminize danışın.”",
+       "ruleDetail": "Asistan sağlık, hukuk ve finans gibi lisans gerektiren konularda tavsiye vermez, uzmana yönlendirir."
+      },
+      {
+       "value": "retention",
+       "label": "Kayıt saklama süresi",
+       "explanation": "Konuşma kayıtlarının süresi, erişimi ve silinmesi belirli.",
+       "scenario": "Her asistan.",
+       "example": "Kayıtlar 90 gün, sonra anonim.",
+       "ruleDetail": "Konuşma kayıtlarının saklama süresi ve erişim yetkisi belirlidir; süre dolunca silinir ya da anonimleştirilir; model eğitimine verilmez."
+      },
+      {
+       "value": "quality",
+       "label": "Yanıt kalitesi örneklemesi",
+       "explanation": "Yanıtlar haftalık örneklenir; yanlış bilgi kaynağıyla düzeltilir.",
+       "scenario": "Her asistan.",
+       "example": "Haftada 30 konuşma incelenir.",
+       "ruleDetail": "Asistan yanıtları haftalık örneklenip doğruluk açısından kontrol edilir; yanlış yanıtın kaynağı düzeltilir ve kayda geçirilir."
+      },
+      {
+       "value": "abuse",
+       "label": "Kötüye kullanım ve istem saldırısı koruması",
+       "explanation": "İstem enjeksiyonu, sistem talimatını sızdırma ve kötüye kullanım denemelerine karşı sınırlar.",
+       "scenario": "Herkese açık asistanlar.",
+       "example": "Hız sınırı ve araç yetkisi kısıtı.",
+       "ruleDetail": "Asistanın araç ve veri erişimi en düşük yetkiyle sınırlıdır; istem enjeksiyonu ve kötüye kullanıma karşı hız sınırı ve girdi denetimi uygulanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_monitor",
+   "name": "Ölçüm & Takip",
+   "en": "AI Measurement & Monitoring",
+   "icon": "◷",
+   "agents": [
+    "O",
+    "M"
+   ],
+   "refs": [
+    "domain_name",
+    "oc_keywords"
+   ],
+   "desc": "Yapay zekâ kaynaklı ziyaretlerin, platform istatistiklerinin ve yapay zekâ yanıtlarındaki bilgi doğruluğunun nasıl izleneceğini belirler",
+   "guide": {
+    "purpose": "Yapay zekâ asistanlarından gelen ziyaretler ve platform istatistikleri (ChatGPT Business Hub'da son 28 günün bahsedilme ve tıklama verisi, Bing Webmaster Tools'ta AI Performance) düzenli izlenmezse emeğin karşılığı görülmez. Ayrıca asistanların işletme hakkında yanlış bilgi verip vermediği belirli sorularla düzenli test edilmelidir; SEO Denetimi'ndeki AI test sorguları aynı soru setini kullanabilir.",
+    "criteria": [
+     "Analitikte yapay zekâ kaynaklı oturumlar (chatgpt.com, perplexity.ai, copilot.microsoft.com, gemini.google.com …) ayrı kanal olarak raporlanır.",
+     "Platform istatistikleri aylık rapora girer.",
+     "Belirlenen test soruları ayda bir platformlarda sorulur; yanlış bilgi kaynağına göre düzeltilir.",
+     "Değişiklikler ve sonuçlar tarihli olarak kaydedilir."
+    ],
+    "pitfalls": [
+     "Yapay zekâ trafiğini “referral” içinde kaybetmek.",
+     "Yanıtlardaki yanlış bilgiyi platforma yazarak düzeltmeye çalışmak: kaynak (site, profil, besleme) düzeltilmeden kalıcı düzelmez.",
+     "Tek bir soruyla genel sonuç çıkarmak: yanıtlar kişiye ve zamana göre değişir.",
+     "Bahsedilme sayısını sıralama ya da satış garantisi sanmak."
+    ],
+    "resources": [
+     {
+      "title": "ChatGPT'de işletmenizi kurma — istatistikler (Türkçe)",
+      "url": "https://help.openai.com/tr-tr/articles/20001635-setting-up-your-business-on-chatgpt",
+      "note": "Son 28 günün bahsedilme, site tıklaması ve keşif konuları."
+     },
+     {
+      "title": "Bing Webmaster Tools — AI Performance",
+      "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+      "note": "Copilot ve Bing yapay zekâ yanıtlarında kaynak gösterilme."
+     },
+     {
+      "title": "ChatGPT ile web araması",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "note": "ChatGPT aramasının kaynakları; OAI-SearchBot izni."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_monitor_set",
+     "label": "İzleme",
+     "en": "Monitoring",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "yz_services",
+       "in": [
+        "monitoring"
+       ]
+      }
+     ],
+     "explanation": "Yapay zekâ görünürlüğünün nasıl izleneceğini belirler.",
+     "scenario": "Ayrı kanal, platform istatistikleri ve aylık test soruları her işletmede.",
+     "example": "Aylık rapor: yapay zekâ kanalından 420 oturum, 18 form; ChatGPT'de 340 bahsedilme; 10 test sorusundan 9'unda doğru bilgi.",
+     "rule": "Yapay zekâ görünürlüğünün izlenmesi: {labels}.",
+     "options": [
+      {
+       "value": "channel",
+       "label": "Analitikte ayrı kanal",
+       "explanation": "chatgpt.com, perplexity.ai, copilot.microsoft.com, gemini.google.com, claude.ai gibi kaynaklar özel bir kanal grubunda.",
+       "scenario": "Analitik kullanan her site.",
+       "example": "GA4'te “Yapay zekâ” kanal grubu.",
+       "ruleDetail": "Analitikte yapay zekâ asistanlarından gelen oturumlar yönlendiren alan adına göre ayrı bir kanal grubunda raporlanır; liste yeni platformlarla güncellenir."
+      },
+      {
+       "value": "hub_insights",
+       "label": "ChatGPT Business Hub istatistikleri",
+       "explanation": "Bahsedilme, site tıklaması, keşif konuları (son 28 gün).",
+       "scenario": "ChatGPT profilini sahiplenenler.",
+       "example": "Aylık raporda ChatGPT satırı.",
+       "ruleDetail": "ChatGPT Business Hub istatistikleri aylık raporlanır."
+      },
+      {
+       "value": "bing_ai",
+       "label": "Bing AI Performance",
+       "explanation": "Copilot ve Bing yapay zekâ yanıtlarında kaynak gösterilme ve dayanak sorguları.",
+       "scenario": "Bing Webmaster Tools kullananlar.",
+       "example": "Aylık AI Performance özeti.",
+       "ruleDetail": "Bing Webmaster Tools AI Performance raporu aylık okunur ve raporlanır."
+      },
+      {
+       "value": "prompt_tests",
+       "label": "Aylık test soruları",
+       "explanation": "Ortak Bilgiler › Hedef Sorgular'dan türetilen sorular ChatGPT, Gemini, Copilot, Perplexity ve Claude'da sorulur; doğruluk ve kaynak kaydedilir.",
+       "scenario": "Her işletme.",
+       "example": "“[şehir]'de en iyi [hizmet] hangisi?” ve “[marka] saat kaçta açık?”",
+       "ruleDetail": "Hedef sorgulardan türetilen test soruları ayda bir başlıca yapay zekâ asistanlarında sorulur; işletmenin geçip geçmediği, bilginin doğruluğu ve gösterilen kaynak kaydedilir."
+      },
+      {
+       "value": "fix_flow",
+       "label": "Yanlış bilgi düzeltme süreci",
+       "explanation": "Yanlış bilgi görülünce kaynağı (site, profil, besleme, dış kaynak) bulunur ve orada düzeltilir.",
+       "scenario": "Her işletme.",
+       "example": "Eski adres bir rehber sitesinde kalmış; düzeltme talebi gönderildi.",
+       "ruleDetail": "Yapay zekâ yanıtında yanlış bilgi görülünce kaynağı bulunur ve kaynağında düzeltilir; takip kaydı tutulur."
+      },
+      {
+       "value": "quarterly",
+       "label": "Üç ayda bir gözden geçirme",
+       "explanation": "Platform uygunlukları (Türkiye), bot kuralları, profiller ve beslemeler düzenli gözden geçirilir.",
+       "scenario": "Her işletme.",
+       "example": "Ocak, Nisan, Temmuz, Ekim.",
+       "ruleDetail": "Yapay zekâ platformlarının Türkiye uygunluğu, bot kuralları, profiller ve beslemeler üç ayda bir gözden geçirilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yz_report",
+   "name": "Kurulum Planı & Talimat",
+   "en": "Setup Plan & Instructions",
+   "icon": "☰",
+   "agents": [
+    "M",
+    "STR"
+   ],
+   "desc": "Yapay zekâ ayarlarının teslim ve bakımını belirler; seçimlerden ayrı bir talimat (.md) üretilir",
+   "guide": {
+    "purpose": "Platform kayıtları, bot kuralları ve beslemeler birçok kişinin elinden geçer; ne yapıldığı kayda geçmezse ajans ya da çalışan değişince bilgi kaybolur. Bu bölüm teslim edilecekleri belirler; aşağıdaki kart seçimlerinizden ayrı bir talimat üretir.",
+    "criteria": [
+     "Hangi platformda hangi hesabın, kimin yetkisiyle açıldığı listelenir.",
+     "Doğrulama kayıtları (DNS TXT, e-posta) ve tarihleri saklanır.",
+     "robots.txt ve CDN bot kurallarındaki her değişiklik tarih ve gerekçeyle kaydedilir.",
+     "Test soruları ve sonuçları aylık arşivlenir."
+    ],
+    "pitfalls": [
+     "Doğrulama TXT kaydını “gereksiz” diye silmek: doğrulama düşer.",
+     "Platform hesaplarını kişisel e-postayla açmak.",
+     "Bot kuralını değiştirip kaydını tutmamak: görünürlük düşüşünün nedeni bulunamaz.",
+     "Türkiye'de açılan yeni özellikleri izlememek."
+    ],
+    "resources": [
+     {
+      "title": "Businesses in ChatGPT",
+      "url": "https://openai.com/business/businesses-in-chatgpt/",
+      "note": "Business Hub ve uygunluk."
+     },
+     {
+      "title": "OpenAI tarayıcıları",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "note": "Bot değişikliklerinin yansıma süresi ve IP listeleri."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "yz_handover",
+     "label": "Teslim ve Bakım",
+     "en": "Handover & Maintenance",
+     "type": "multiselect",
+     "explanation": "Yapay zekâ ayarlarının teslim edilecek belgelerini ve bakımını belirler.",
+     "scenario": "Platform ve erişim listesi her kurulumda; diğerleri seçilen başlıklara göre.",
+     "example": "Teslim klasöründe platform listesi, doğrulama kayıtları, robots.txt değişiklik geçmişi ve aylık test sonuçları.",
+     "rule": "Yapay zekâ ayarlarının teslim ve bakımı: {labels}.",
+     "options": [
+      {
+       "value": "platforms",
+       "label": "Platform ve erişim listesi",
+       "explanation": "Platform, hesap, sahip, erişimi olanlar, durum (açık / bekleniyor).",
+       "scenario": "Her kurulum.",
+       "example": "ChatGPT Business Hub — doğrulandı — 2 kişi.",
+       "ruleDetail": "Yapay zekâ platformları listesi (hesap, sahip, erişimi olanlar, uygunluk durumu) teslim edilir."
+      },
+      {
+       "value": "verifications",
+       "label": "Doğrulama kayıtları",
+       "explanation": "DNS TXT kayıtları, doğrulama e-postaları ve tarihleri.",
+       "scenario": "Profil sahiplenen kurulumlar.",
+       "example": "TXT: openai-domain-verification=… (2026-11-15).",
+       "ruleDetail": "Doğrulama kayıtları ve tarihleri teslim edilir; DNS'teki doğrulama kayıtlarının neye ait olduğu not edilir."
+      },
+      {
+       "value": "bot_log",
+       "label": "Bot kuralı değişiklik geçmişi",
+       "explanation": "robots.txt ve CDN bot kurallarındaki değişiklikler tarih ve gerekçeyle.",
+       "scenario": "Bot izinleri belirlenen kurulumlar.",
+       "example": "2026-11-20: GPTBot engellendi (hukuk kararı).",
+       "ruleDetail": "robots.txt ve CDN bot kurallarındaki değişiklikler tarih, kişi ve gerekçeyle kaydedilir."
+      },
+      {
+       "value": "tests",
+       "label": "Test soruları ve sonuçlar",
+       "explanation": "Aylık test sorularının yanıtları ve doğruluk notu.",
+       "scenario": "İzleme yapılan kurulumlar.",
+       "example": "Kasım: 10 sorudan 9'u doğru.",
+       "ruleDetail": "Aylık test soruları ve sonuçları arşivlenir."
+      },
+      {
+       "value": "review",
+       "label": "Üç ayda bir gözden geçirme",
+       "explanation": "Uygunluk, kurallar, profiller, beslemeler ve asistan kayıtları.",
+       "scenario": "Her kurulum.",
+       "example": "Ocak, Nisan, Temmuz, Ekim.",
+       "ruleDetail": "Yapay zekâ ayarları üç ayda bir gözden geçirilir."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
