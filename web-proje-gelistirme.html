@@ -3447,6 +3447,64 @@ a.mrBtn.mrExt{text-decoration:none}
 [data-theme="dark"] .apSw[aria-checked="true"]{background:#2e9d50}
 [data-theme="dark"] .apNo{background:var(--surface);border-color:var(--border-2);color:var(--text)}
 </style>
+<style id="v26-mobile">
+/* V26 mobil kullanım (2026-11-12, kullanıcı isteği: "mobil cihazlarda kullanımı iyileştir").
+   Yalnız ≤ 900 px ve dokunmatik ekran; masaüstü görünümü değişmez. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+@media (max-width:900px){
+  /* Çekmece: alt menü akışta durur, karar menüsü kalan bütün yüksekliği kullanır
+     (önceden alt menü listenin üstüne biniyordu, liste ekranın yarısında kalıyordu) */
+  #sideNav{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-bottom:16px!important}
+  .sidebarShell .sideFooter{position:static!important;flex:0 0 auto;display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:row dense;gap:4px;max-height:46vh;max-height:46dvh;overflow-y:auto;overscroll-behavior:contain;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .sidebarShell .sideFooter>button,.sidebarShell .sideFooter>.sideSub>button{width:100%;min-height:44px;margin:0;padding:8px 10px;font-size:13px;line-height:1.25;white-space:normal;text-align:left;display:flex;align-items:center;gap:2px}
+  .sidebarShell .sideFooter>.sideSub{min-width:0;margin:0}
+  .sidebarShell .sideFooter>.sideSub:has(.sideSubList:not([hidden])),.sidebarShell .sideFooter>.sideExt{grid-column:1/-1}
+  .sidebarShell .sideFooter .sideSubBtn{min-height:40px;font-size:13px}
+  .sidebarShell .sideFooter .sideCaret{margin-left:auto}
+  .sidebarShell .sideFooter>.sideExt{margin:2px 0 0}
+  .sidebarShell .sideFooter>.sideExt a{min-height:44px}
+
+  /* Açılır paneller ekrana sığar, kendi içinde kayar (iOS'ta 100vh görünür alandan uzundur) */
+  .exMenu,#moreMenu{max-height:calc(100vh - 84px);max-height:calc(100dvh - 84px);overscroll-behavior:contain}
+
+  /* Ekrandan taşan tablolar kendi içinde yatay kayar (betik işaretler) */
+  table.v26Scroll{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+
+  /* Klavye açıkken alttaki önceki / sonraki şeridi yapışık kalmaz, yazılan alanın üstünü kapatmaz */
+  html.v26Typing #configPage .stepNav{position:static;box-shadow:none}
+}
+
+/* Telefon: önceki / sonraki şeridi daha alçak (88 → ~66 px), içerik alanı büyür */
+@media (max-width:600px){
+  #configPage .stepNav{gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+  #configPage .stepBtn{padding:8px 12px;gap:2px;border-radius:12px}
+  #configPage .stepBtn small{font-size:9.5px}
+}
+
+/* Yatay telefon: ekran kısa — şerit yapışık değil */
+@media (max-width:900px) and (max-height:500px) and (orientation:landscape){
+  #configPage .stepNav{position:static;box-shadow:none}
+}
+
+@media (max-width:900px) and (pointer:coarse){
+  /* iOS 16 px altındaki yazı kutusuna odaklanınca sayfayı yakınlaştırır */
+  input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]):not([type=file]):not([readonly]),select,textarea:not([readonly]){font-size:16px!important}
+  /* Çift dokunma yakınlaştırması beklemesi olmadan tepki */
+  button,a,summary,label,select,[role=button],[role=switch]{touch-action:manipulation}
+
+  /* Üst şerit düğmeleri */
+  header .actions .btn,header .navToggle{min-height:40px}
+
+  /* Metin bağlantıları: görünüm aynı, dokunma alanı çevresine genişler */
+  .linkBtn,.crumbLink,.faGo,.mcName,.wfLink,.wfGoto,.plLink,.amMore,.plTitle,.hrSw,#overviewPage li>button{position:relative}
+  .linkBtn::before,.crumbLink::before,.faGo::before,.mcName::before,.wfLink::before,.wfGoto::before,.plLink::before,.amMore::before,.plTitle::before,.hrSw::before,#overviewPage li>button::before{content:"";position:absolute;inset:-9px -4px}
+
+  /* Çip ve küçük düğmeler: en az 32 px yükseklik */
+  .kmDept,.amAgChip,.amSkChip,.faOn,.wfDept,.plTag,.dsCh,.pzChip,.kmMore,.mcGuideTg,.dsGal,.dsLive a,.hrBtn,.amDeptLink,summary{min-height:32px;align-content:center}
+  .agToggle,.faX{min-width:32px;min-height:32px}
+}
+</style>
 </head><body><aside class="sidebarShell" id="sideNavShell" aria-label="Yapılandırma menüsü">
 <div class="sideBrand"><div class="sideLogo">W</div><div class="sideBrandText"><b>Onur Kenar</b><span>PROJE SPESİFİKASYONU</span></div><button class="sbBtn fsBtn" id="fsBtn" type="button" hidden aria-pressed="false" aria-label="Tam ekran" title="Tam ekran" onclick="fsToggle()"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button><button class="sbBtn sideHideBtn" id="sideHideBtn" type="button" aria-controls="sideNavShell" aria-expanded="true" aria-label="Menüyü daralt" title="Menüyü daralt" onclick="sideSet(true)"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16M16 10l-2 2 2 2"/></svg></button><button class="navClose" id="navClose" type="button" aria-label="Menüyü kapat">✕</button></div>
 <div class="sideSearch"><input id="sideSearchInput" placeholder="Menüde ara..."></div>
@@ -6419,12 +6477,37 @@ function row(p,x){let on=ok(x),s=st(x);return `<li class="dlRow${on?"":" off"}">
 function inside(x){try{return x.inside?x.inside():nm(x)}catch(e){return x.t}}
 function card(p){let n=p.items.filter(ok).length,inl=p.items.filter(ok).map(inside);return `<article class="dlPk" data-pk="${p.k}"><div class="dlPkH"><h3>${E(p.t)}</h3><span class="dlPkN">${n}/${p.items.length} dosya</span></div><p class="dlPkD">${E(p.d)}</p><ul class="dlList">${p.items.map(x=>row(p,x)).join("")}</ul><div class="dlPkF"><button type="button" class="btn dark" onclick="dlPack('${p.k}')"${n?"":" disabled"}>Paketi zip olarak indir</button><p class="dlPkIn">${n?`<b>Zip'in içinde:</b> ${inl.map(E).join(", ")}`:"Bu pakette henüz dosya yok."}</p></div></article>`}
 function html(){return `<section class="dlPkgs" id="dlPkgs" aria-labelledby="dlH"><div class="dlHead"><div><h2 id="dlH">İndirmeler</h2><p>Projenin ürettiği bütün dosyalar ve promptlar paketler hâlinde. Dosyalar indirme anındaki seçimlerden üretilir; seçim değişince yeniden indirin. Paketi zip olarak alabilir ya da bütün paketleri klasörler hâlinde tek zip olarak indirebilirsiniz.</p></div><button type="button" class="btn dark" onclick="dlAll()">Tümünü zip olarak indir</button></div><div class="dlGrid">${PK.map(card).join("")}</div><div id="dlToast" class="dlToast" role="status" aria-live="polite"></div></section>`}
-window.dlRender=()=>{let ov=document.getElementById("overviewPage");if(!ov)return;let old=document.getElementById("dlPkgs");if(old)old.remove();ov.insertAdjacentHTML("beforeend",html())};
-const _sp=showPage;showPage=function(p){const r=_sp.apply(this,arguments);if(p==="overview")dlRender();return r};
+/* Ad "dlRender" değil: o ad tasarım kütüphanesinin layout önizleme işlevidir (çakışma 2026-11-12). */
+window.dlPkgRender=()=>{let ov=document.getElementById("overviewPage");if(!ov)return;let old=document.getElementById("dlPkgs");if(old)old.remove();ov.insertAdjacentHTML("beforeend",html())};
+const _sp=showPage;showPage=function(p){const r=_sp.apply(this,arguments);if(p==="overview")dlPkgRender();return r};
 const ov=document.getElementById("overviewPage");
-if(ov){new MutationObserver(()=>{if(ov.classList.contains("active")&&!document.getElementById("dlPkgs"))dlRender()}).observe(ov,{childList:true,attributes:true,attributeFilter:["class"]});
- if(ov.classList.contains("active"))dlRender()}
+if(ov){new MutationObserver(()=>{if(ov.classList.contains("active")&&!document.getElementById("dlPkgs"))dlPkgRender()}).observe(ov,{childList:true,attributes:true,attributeFilter:["class"]});
+ if(ov.classList.contains("active"))dlPkgRender()}
 window.dlDebug={PK,pkFiles,readme};
+})();
+</script>
+<script id="v26-mobile">
+/* V26 mobil kullanım (2026-11-12): ekrandan taşan tabloları işaretler, klavye açıkken alt şeridi serbest bırakır.
+   Yalnız görünüm — veri, kural, prompt ve kayıt değişmez. */
+(function(){
+"use strict";
+var MQ=matchMedia("(max-width:900px)"),root=document.documentElement,raf=0;
+function scrolled(el){for(var p=el.parentElement;p&&p!==document.body;p=p.parentElement){var o=getComputedStyle(p).overflowX;if(o==="auto"||o==="scroll")return true}return false}
+function tables(){raf=0;var all=document.querySelectorAll("table");for(var i=0;i<all.length;i++){var t=all[i];
+ if(!MQ.matches){t.classList.remove("v26Scroll");continue}
+ if(t.classList.contains("v26Scroll")||!t.offsetWidth)continue;
+ var p=t.parentElement;if(p&&t.offsetWidth>p.clientWidth+1&&!scrolled(t))t.classList.add("v26Scroll")}}
+function later(){if(!raf)raf=requestAnimationFrame(tables)}
+new MutationObserver(later).observe(document.body,{childList:true,subtree:true});
+(MQ.addEventListener?MQ.addEventListener("change",later):MQ.addListener(later));
+addEventListener("resize",later);
+function typing(el){if(!el||!el.matches)return false;if(el.isContentEditable)return true;
+ if(el.matches("textarea:not([readonly]),select"))return true;
+ return el.matches("input:not([readonly])")&&!/^(checkbox|radio|range|color|file|button|submit|reset|image)$/.test(el.type)}
+document.addEventListener("focusin",function(e){if(MQ.matches&&typing(e.target))root.classList.add("v26Typing")});
+document.addEventListener("focusout",function(){setTimeout(function(){if(!typing(document.activeElement))root.classList.remove("v26Typing")},0)});
+later();
+window.v26MobileDebug={tables:tables};
 })();
 </script>
 </body></html>

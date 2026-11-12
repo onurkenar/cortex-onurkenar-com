@@ -64,10 +64,11 @@ function row(p,x){let on=ok(x),s=st(x);return `<li class="dlRow${on?"":" off"}">
 function inside(x){try{return x.inside?x.inside():nm(x)}catch(e){return x.t}}
 function card(p){let n=p.items.filter(ok).length,inl=p.items.filter(ok).map(inside);return `<article class="dlPk" data-pk="${p.k}"><div class="dlPkH"><h3>${E(p.t)}</h3><span class="dlPkN">${n}/${p.items.length} dosya</span></div><p class="dlPkD">${E(p.d)}</p><ul class="dlList">${p.items.map(x=>row(p,x)).join("")}</ul><div class="dlPkF"><button type="button" class="btn dark" onclick="dlPack('${p.k}')"${n?"":" disabled"}>Paketi zip olarak indir</button><p class="dlPkIn">${n?`<b>Zip'in içinde:</b> ${inl.map(E).join(", ")}`:"Bu pakette henüz dosya yok."}</p></div></article>`}
 function html(){return `<section class="dlPkgs" id="dlPkgs" aria-labelledby="dlH"><div class="dlHead"><div><h2 id="dlH">İndirmeler</h2><p>Projenin ürettiği bütün dosyalar ve promptlar paketler hâlinde. Dosyalar indirme anındaki seçimlerden üretilir; seçim değişince yeniden indirin. Paketi zip olarak alabilir ya da bütün paketleri klasörler hâlinde tek zip olarak indirebilirsiniz.</p></div><button type="button" class="btn dark" onclick="dlAll()">Tümünü zip olarak indir</button></div><div class="dlGrid">${PK.map(card).join("")}</div><div id="dlToast" class="dlToast" role="status" aria-live="polite"></div></section>`}
-window.dlRender=()=>{let ov=document.getElementById("overviewPage");if(!ov)return;let old=document.getElementById("dlPkgs");if(old)old.remove();ov.insertAdjacentHTML("beforeend",html())};
-const _sp=showPage;showPage=function(p){const r=_sp.apply(this,arguments);if(p==="overview")dlRender();return r};
+/* Ad "dlRender" değil: o ad tasarım kütüphanesinin layout önizleme işlevidir (çakışma 2026-11-12). */
+window.dlPkgRender=()=>{let ov=document.getElementById("overviewPage");if(!ov)return;let old=document.getElementById("dlPkgs");if(old)old.remove();ov.insertAdjacentHTML("beforeend",html())};
+const _sp=showPage;showPage=function(p){const r=_sp.apply(this,arguments);if(p==="overview")dlPkgRender();return r};
 const ov=document.getElementById("overviewPage");
-if(ov){new MutationObserver(()=>{if(ov.classList.contains("active")&&!document.getElementById("dlPkgs"))dlRender()}).observe(ov,{childList:true,attributes:true,attributeFilter:["class"]});
- if(ov.classList.contains("active"))dlRender()}
+if(ov){new MutationObserver(()=>{if(ov.classList.contains("active")&&!document.getElementById("dlPkgs"))dlPkgRender()}).observe(ov,{childList:true,attributes:true,attributeFilter:["class"]});
+ if(ov.classList.contains("active"))dlPkgRender()}
 window.dlDebug={PK,pkFiles,readme};
 })();
