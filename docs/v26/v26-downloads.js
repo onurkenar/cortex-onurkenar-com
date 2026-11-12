@@ -18,6 +18,7 @@ const dec=a=>{let [n,N]=areaN(a);return n?`${n}/${N} karar`:"Henüz karar verilm
 const PK=[
  {k:"claude",t:"Claude Code proje paketi",d:"Siteyi geliştirecek Claude oturumu için: talimat dosyası, promptlar, proje kararları, ajan ve skill dosyaları ve projede seçildiyse MCP, tasarım ve panel yapılandırmaları.",dir:"1-claude-code",items:[
   {k:"md",t:"CLAUDE-TALIMATLARI.md",ty:"MD",d:"Fazlara bölünmüş ana talimat dosyası; Claude Code'da proje köküne konur.",name:()=>"CLAUDE-TALIMATLARI.md",gen:()=>prMd(),ok:()=>has("prMd"),copy:false},
+  {k:"todo",t:"YAPILACAKLAR.md",ty:"MD",d:"Verilen kararlardan oluşan, işaretlenebilir görev listesi (Yapılacaklar sayfasındaki işaretlerle).",name:()=>"YAPILACAKLAR.md",gen:()=>todoMd(),ok:()=>has("todoMd"),copy:false},
   {k:"start",t:"Başlatma promptu",ty:"PROMPT",d:"Talimat dosyasını fazlar hâlinde uygulatan kısa prompt.",name:()=>"BASLATMA-PROMPTU.md",gen:()=>prStart(),ok:()=>has("prStart"),copy:true},
   {k:"master",t:"Claude promptu (tam)",ty:"PROMPT",d:"Bütün kuralların tek parça hâli (talimat dosyasının yerine kullanılabilir).",name:()=>"CLAUDE-PROMPTU.md",gen:()=>{renderRules();return master.value},ok:()=>true,copy:true},
   {k:"project",t:"Proje Kararları",ty:"JSON",d:"Proje ve Ortak Bilgiler kararları, kurallar, ajanlar, skill'ler ve Claude promptu.",name:()=>exName("project"),gen:()=>J(exData("project")),ok:()=>has("exData"),st:()=>dec("project")},

@@ -40,7 +40,7 @@ function railProgress(){if(typeof navF!=="function")return;document.querySelecto
  const V=railF(a),n=V.filter(isset).length,N=V.length,p=N?Math.round(n/N*100):0,t=`${n}/${N} - %${p}`;
  let x=b.querySelector(":scope>.mrProg");if(!x){x=document.createElement("span");x.className="mrProg";b.appendChild(x)}
  if(x.textContent!==t)x.textContent=t;x.classList.toggle("done",N>0&&n===N);b.title=b.querySelector(":scope>span").textContent.replace(/^\d+\.\s*/,"")+" — "+n+"/"+N+" karar verildi (%"+p+")"})}
-window.navNumber=navNumber;
+window.navNumber=navNumber;window.NAV_NUM=NUM;
 const _rsn=renderSideNav;renderSideNav=function(){const r=_rsn.apply(this,arguments);navNumber();return r};
 const _rf=renderFields;renderFields=function(){const r=_rf.apply(this,arguments);titleNumber();return r};
 if(typeof refreshField==="function"){const _rfx=refreshField;refreshField=function(){const r=_rfx.apply(this,arguments);titleNumber();return r}}
