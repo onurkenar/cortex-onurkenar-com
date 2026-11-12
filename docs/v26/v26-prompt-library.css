@@ -254,3 +254,28 @@
 [data-theme="dark"] .plFormActs{background:linear-gradient(transparent,var(--bg) 30%)}
 [data-theme="dark"] .plToast{background:var(--inv-bg);color:var(--inv-fg)}
 [data-theme="dark"] .plToast.err{background:#ffb4ab;color:#3b0a06}
+/* Bu projenin promptları (2026-11-12): menülerin ürettiği promptlar listenin başında canlı kartlar */
+.plProj{margin:6px 0 26px}
+.plProjHead h2{margin:0 0 6px;font-size:18px}
+.plProjHead p{margin:0 0 14px;max-width:1200px;color:#5a616b;font-size:14px;line-height:1.55}
+.plProjGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px}
+.plProjCard{display:flex;flex-direction:column;gap:8px;min-width:0;padding:16px 16px 14px;background:#f7f9fc;border:1px solid #dfe5ee;border-radius:15px}
+.plProjSrc{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#59616c}
+.plProjCard h3{margin:0;font-size:16px}
+.plProjCard p{margin:0;font-size:13.5px;line-height:1.5;color:#3f454d}
+.plProjFacts{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
+.plProjFacts li{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:#eceff3;color:#3f454d}
+.plProjFacts li.warn{background:#fff3e0;color:#8a4b00}
+.plProjFacts li.ok{background:#e7f6ed;color:#17603a}
+.plProjFacts .plLink{font-size:12px;font-weight:700;padding:0}
+.plProjBtns{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto;padding-top:4px}
+.plProjBtns .btn{height:34px;padding:0 12px;font-size:13px}
+.plProjPrev summary{cursor:pointer;font-size:13px;font-weight:700}
+.plProjPrev textarea{width:100%;box-sizing:border-box;min-height:260px;margin-top:8px;padding:10px;border:1px solid #dfe5ee;border-radius:10px;font:12.5px/1.5 inherit;resize:vertical;background:#fff;color:inherit}
+.plProjWc{margin:6px 0 0!important;font-size:12px!important;color:#6b727c!important}
+[data-theme="dark"] .plProjCard{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .plProjHead p,[data-theme="dark"] .plProjCard p,[data-theme="dark"] .plProjSrc{color:var(--muted)}
+[data-theme="dark"] .plProjFacts li{background:var(--hover);color:var(--text)}
+[data-theme="dark"] .plProjFacts li.warn{background:#3a2a10;color:#f3c27a}
+[data-theme="dark"] .plProjFacts li.ok{background:#12301f;color:#8fe0b0}
+[data-theme="dark"] .plProjPrev textarea{background:var(--bg);border-color:var(--border-2)}

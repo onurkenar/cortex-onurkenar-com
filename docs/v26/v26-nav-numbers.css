@@ -6,3 +6,11 @@
 #modRail .mrBtn.active .navNum{opacity:1}
 #title .navNum{margin-right:12px;opacity:.42;font-weight:800}
 #fieldBox .field>h2 .navNum{margin-right:10px;opacity:.45;font-weight:800}
+#modRail .mrBtn .mrProg{display:block;margin-top:2px;font-size:9.5px;font-weight:650;line-height:1.2;letter-spacing:0;font-variant-numeric:tabular-nums;white-space:nowrap;opacity:.62}
+#modRail .mrBtn.active .mrProg{opacity:.9}
+#modRail .mrBtn .mrProg.done{color:#17803f;opacity:1}
+[data-theme="dark"] #modRail .mrBtn .mrProg.done{color:#3fb877}
+/* 2026-11-12 (kullanıcı isteği: "menüler arasında boşluk bırak"): ilerleme satırıyla düğmeler uzadı, şerit sabit yükseklikli esnek
+   sütun olduğu için düğmeler küçülüp üst üste biniyordu — küçülme kapalı (sığmazsa şerit kayar), aralık 2 → 8 px */
+#modRail{gap:8px}
+#modRail>*{flex-shrink:0}

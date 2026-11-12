@@ -31,9 +31,19 @@ function titleNumber(){if(typeof title!=="undefined"&&title&&typeof active!=="un
  if(typeof fieldBox!=="undefined"&&fieldBox)fieldBox.querySelectorAll(".field[data-field-id]>h2").forEach(h=>setNum(h,NUM.fld[h.parentElement.dataset.fieldId]))}
 function railNumber(){document.querySelectorAll("#modRail .mrBtn[data-mod]").forEach(b=>{let n=MT_NUM[b.dataset.mod==="config"?"project":b.dataset.mod],l=b.querySelector(":scope>span");if(n&&l)setNum(l,n+".")});
  [["sideCommonBtn","common"],["sideMkPlanBtn","marketing"],["sideAuditBtn","audit"],["sideGoogleBtn","google"],["sideMetaBtn","meta"],["sideAiBtn","ai"]].forEach(([id,a])=>{let b=document.getElementById(id);if(!b||b.querySelector(".navNum"))return;let t=b.firstChild,m=t&&t.nodeType===3&&t.nodeValue.match(/^([^A-Za-zÇĞİÖŞÜçğıöşü]+)(.*)$/s),x=document.createElement("span");x.className="navNum";x.textContent=MT_NUM[a]+".";if(m){t.nodeValue=m[2];b.insertBefore(document.createTextNode(m[1]),t);b.insertBefore(x,t)}else b.prepend(x)})}
+/* Modül şeridinde ilerleme (2026-11-12, kullanıcı isteği: "her bir ana kategoride kaç maddenin kaçı yapıldı yaz, örnek
+   1/27 - %4"): numaralı her ana menünün etiketinin altında verilen / toplam karar ve yüzde. Hesap üst şeritteki ilerlemeyle
+   aynı (renderProgress gibi: görünen ve menüde yer alan kararlar — shown + navF + AREA, Math.round); bütün kararlar verilince yeşil. renderProgress her
+   değişiklikte çalıştığı için onun sarmalayıcısında güncellenir. Yalnız görünüm. */
+const railF=a=>F.filter(f=>shown(f)&&navF(f)&&AREA(SI[f.section])===a);
+function railProgress(){if(typeof navF!=="function")return;document.querySelectorAll("#modRail .mrBtn[data-mod]").forEach(b=>{const a=b.dataset.mod==="config"?"project":b.dataset.mod;if(!MT_NUM[a])return;
+ const V=railF(a),n=V.filter(isset).length,N=V.length,p=N?Math.round(n/N*100):0,t=`${n}/${N} - %${p}`;
+ let x=b.querySelector(":scope>.mrProg");if(!x){x=document.createElement("span");x.className="mrProg";b.appendChild(x)}
+ if(x.textContent!==t)x.textContent=t;x.classList.toggle("done",N>0&&n===N);b.title=b.querySelector(":scope>span").textContent.replace(/^\d+\.\s*/,"")+" — "+n+"/"+N+" karar verildi (%"+p+")"})}
 window.navNumber=navNumber;
 const _rsn=renderSideNav;renderSideNav=function(){const r=_rsn.apply(this,arguments);navNumber();return r};
 const _rf=renderFields;renderFields=function(){const r=_rf.apply(this,arguments);titleNumber();return r};
 if(typeof refreshField==="function"){const _rfx=refreshField;refreshField=function(){const r=_rfx.apply(this,arguments);titleNumber();return r}}
-railNumber();navNumber();
+if(typeof renderProgress==="function"){const _rp=renderProgress;renderProgress=function(){const r=_rp.apply(this,arguments);try{railProgress()}catch(e){console.error("railProgress",e)}return r}}
+railNumber();navNumber();railProgress();
 })();

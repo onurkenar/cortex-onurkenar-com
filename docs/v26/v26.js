@@ -16,7 +16,7 @@ const ICON={
  audit:"M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4M8 13l2-2 2 1 2-3",
  common:"M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3ZM4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6",
  docs:"M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2V5ZM4 19a2 2 0 0 1 2-2h12M8 7h6"};
-const MODS=[["overview","Özet","v26Overview()"],["common","Ortak Bilgiler","goArea('common')"],["config","Kararlar","goArea('project')"],["marketing","Pazarlama","goArea('marketing')"],["audit","SEO Denetimi","goArea('audit')"],["rules","Kurallar","showPage('rules')"],["docs","Doküman","showPage('docs')"],["agents","Ajanlar","showPage('agents')"]];
+const MODS=[["overview","Dashboard","v26Overview()"],["common","Ortak Bilgiler","goArea('common')"],["config","Kararlar","goArea('project')"],["marketing","Pazarlama","goArea('marketing')"],["audit","SEO Denetimi","goArea('audit')"],["rules","Kurallar","showPage('rules')"],["docs","Doküman","showPage('docs')"],["agents","Ajanlar","showPage('agents')"]];
 
 /* 1. Modül şeridi */
 const rail=document.createElement("nav");rail.id="modRail";rail.setAttribute("aria-label","Modüller");
@@ -28,9 +28,9 @@ document.body.insertBefore(rail,document.body.firstChild);
 {let sf=document.querySelector(".sideFooter"),ab=document.getElementById("sideAgentsBtn");if(sf&&ab)sf.appendChild(ab)}
 function railCur(){let o=document.getElementById("overviewPage");if(o&&o.classList.contains("active"))return"overview";if(rulesPage.classList.contains("active"))return"rules";if(agentsPage.classList.contains("active"))return"agents";if(docsPage.classList.contains("active"))return"docs";let a=curArea();return a==="project"?"config":a}
 /* 2026-11-07 kullanıcı isteği: Kurallar, Doküman ve Ajanlar sayfalarında karar menüsü (kenar çubuğu) görünmez — html.v26NoSide */
-function railSync(){let c=railCur();document.documentElement.classList.toggle("v26NoSide",c==="rules"||c==="docs"||c==="agents");rail.querySelectorAll(".mrBtn").forEach(b=>{let on=b.dataset.mod===c;b.classList.toggle("active",on);b.toggleAttribute("aria-current",on)})}
+function railSync(){let c=railCur();document.documentElement.classList.toggle("v26NoSide",c==="overview"||c==="rules"||c==="docs"||c==="agents");rail.querySelectorAll(".mrBtn").forEach(b=>{let on=b.dataset.mod===c;b.classList.toggle("active",on);b.toggleAttribute("aria-current",on)})}
 
-/* 2. Proje Özeti sayfası */
+/* 2. Dashboard sayfası (2026-11-12: menü adı "Özet" → "Dashboard", kullanıcı isteği; açıkken karar menüsü gizli — v26NoSide) */
 const ov=document.createElement("section");ov.id="overviewPage";ov.setAttribute("aria-label","Proje özeti");
 configPage.parentNode.insertBefore(ov,configPage);
 const _showPage=showPage;
@@ -49,7 +49,7 @@ function renderOverview(){
  let gcard=(g,i)=>{let fs=V.filter(f=>g.list.some(s=>s.id===f.section)),d=fs.filter(isset).length,first=g.list.find(s=>fs.some(f=>f.section===s.id&&!isset(f)))||g.list[0],nm=g.list.map(s=>s.name),desc=nm.slice(0,4).join(", ")+(nm.length>4?` ve ${nm.length-4} bölüm daha`:"");return `<button type="button" class="ovCard${d?" on":""}" onclick="goStep('${E(first.id)}')"><span class="t"><span class="no">${i+1}</span>${E(g.t||"Proje")}</span><span class="d">${E(desc)}</span><span class="m"><span>${d} / ${fs.length} karar</span><span>${d===fs.length&&fs.length?"Tamamlandı":d?"Devam ediyor":"Başlanmadı"}</span></span><span class="ovBar"><i style="width:${fs.length?Math.round(d/fs.length*100):0}%"></i></span></button>`};
  let ap=a=>{let X=areaFields(a);return [X.filter(isset).length,X.length]},mk=ap("marketing"),au=ap("audit"),oc=ap("common"),rc=F.filter(f=>shown(f)&&isset(f)&&!auF(f)).length;
  let mod=(t,d,cta,fn)=>`<button type="button" class="ovCard" onclick="${fn}"><span class="t">${E(t)}</span><span class="d">${E(d)}</span><span class="go">${E(cta)} →</span></button>`;
- ov.innerHTML=`<div class="intro"><div class="eyebrow">PROJE ÖZETİ</div></div>
+ ov.innerHTML=`<div class="intro"><div class="eyebrow">DASHBOARD</div></div>
  ${pnCard()}
  <div class="ovTop"><div class="ovHero"><div class="ovRing"><svg width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Proje kararlarının yüzde ${p}'i verildi"><circle class="trk" cx="64" cy="64" r="54" fill="none" stroke="#eef0f3" stroke-width="12"/><circle class="val" cx="64" cy="64" r="54" fill="none" stroke="#2453d6" stroke-width="12" stroke-linecap="round" stroke-dasharray="${dash} ${C.toFixed(1)}" transform="rotate(-90 64 64)"/></svg><div><b>%${p}</b><span>${n} / ${t}</span></div></div>
  <div class="ovTxt"><h1>${E(name||"Adsız proje")}</h1><p>${n?`Proje yapılandırmasında ${n} karar verildi.`:"Henüz proje kararı verilmedi."} ${nx?`Sıradaki karar: <b>${E(SI[nx.section].name)} › ${E(nx.label)}</b>.`:"Bütün proje kararları verildi."}</p>
@@ -137,7 +137,7 @@ const acts=document.querySelector("header .actions"),mb=document.createElement("
 acts.insertBefore(mb,copyMaster);
 const mm=document.createElement("div");mm.id="moreMenu";mm.className="moreMenu";mm.setAttribute("role","menu");mm.hidden=true;document.body.appendChild(mm);
 function mmClose(f){mm.hidden=true;mb.setAttribute("aria-expanded","false");if(f)mb.focus()}
-mb.onclick=e=>{e.stopPropagation();if(!mm.hidden){mmClose();return}let dk=document.documentElement.dataset.theme==="dark";mm.innerHTML=`<button type="button" role="menuitem" data-a="ov">Proje Özeti</button><button type="button" role="menuitem" data-a="ag">Ajanları İndir</button><button type="button" role="menuitem" data-a="ex">JSON İndir</button><button type="button" role="menuitem" data-a="im">JSON İçe Aktar</button><button type="button" role="menuitem" data-a="th">${dk?"Açık temaya geç":"Koyu temaya geç"}</button>`;mm.hidden=false;mb.setAttribute("aria-expanded","true");let r=mb.getBoundingClientRect();mm.style.top=Math.round(r.bottom+8)+"px";mm.style.left=Math.round(Math.max(12,Math.min(r.right-mm.offsetWidth,innerWidth-mm.offsetWidth-12)))+"px";mm.querySelector("button").focus()};
+mb.onclick=e=>{e.stopPropagation();if(!mm.hidden){mmClose();return}let dk=document.documentElement.dataset.theme==="dark";mm.innerHTML=`<button type="button" role="menuitem" data-a="ov">Dashboard</button><button type="button" role="menuitem" data-a="ag">Ajanları İndir</button><button type="button" role="menuitem" data-a="ex">JSON İndir</button><button type="button" role="menuitem" data-a="im">JSON İçe Aktar</button><button type="button" role="menuitem" data-a="th">${dk?"Açık temaya geç":"Koyu temaya geç"}</button>`;mm.hidden=false;mb.setAttribute("aria-expanded","true");let r=mb.getBoundingClientRect();mm.style.top=Math.round(r.bottom+8)+"px";mm.style.left=Math.round(Math.max(12,Math.min(r.right-mm.offsetWidth,innerWidth-mm.offsetWidth-12)))+"px";mm.querySelector("button").focus()};
 mm.onclick=e=>{let b=e.target.closest("button");if(!b)return;e.stopPropagation();mmClose();if(b.dataset.a==="ex"){exportBtn.click();let x=document.getElementById("exMenu");if(x&&!x.hidden){let r=mb.getBoundingClientRect();x.style.top=Math.round(r.bottom+8)+"px";x.style.left=Math.round(Math.max(12,innerWidth-x.offsetWidth-12))+"px"}}else if(b.dataset.a==="im")importBtn.click();else if(b.dataset.a==="ov")v26Overview();else if(b.dataset.a==="ag")dlOpen();else themeBtn.click()};
 document.addEventListener("mousedown",e=>{if(!mm.hidden&&!mm.contains(e.target)&&e.target!==mb)mmClose()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!mm.hidden)mmClose(true);if((e.metaKey||e.ctrlKey)&&!e.altKey&&(e.key==="k"||e.key==="K")){e.preventDefault();if(matchMedia("(max-width:900px)").matches)setNav(true);else if(document.documentElement.classList.contains("sideHidden")&&typeof sideSet==="function")sideSet(false);sideSearchInput.focus();sideSearchInput.select()}});

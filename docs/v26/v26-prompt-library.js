@@ -135,6 +135,52 @@ function plRender(){if(!plActive())return;let v=PL.view,h;
 function plRefresh(){if(!plActive())return;if(PL.view==="list"){plResDraw();plSelBarDraw();let o=document.getElementById("plOnlyN");if(o)o.textContent=plSel().length}else plRender()}
 function plIntro(){return `<div class="intro"><div class="eyebrow">HAZIR PROMPT KÜTÜPHANESİ</div><h1>Hazır Prompt Kütüphanesi</h1><p class="plLead">Sık tekrarlanan geliştirme işlerini hazır modüller olarak saklayın: her modülde kısa prompt, Markdown teknik doküman, referans görseller, kabul kriterleri, bağımlılıklar ve sürüm bulunur. Projeniz için modülleri seçin; araç seçtiklerinizi bağımlılıklarıyla birlikte doğru sırada <b>tek bir geliştirme talimatında</b> birleştirir. Kütüphane bu tarayıcıda saklanır ve bütün projelerde ortaktır; projedeki seçim proje dosyasına yazılır.</p>${LIB_MODE==="mem"?`<p class="plWarn" role="alert">Bu tarayıcı kütüphaneyi kalıcı olarak saklayamıyor (özel pencere ya da engellenmiş depolama). Yaptığınız değişiklikler sayfa kapanınca kaybolur; <button type="button" class="plLink" onclick="plExport('all')">kütüphaneyi dışa aktararak</button> yedekleyin.</p>`:""}</div>`}
 
+/* ---------- Bu projenin promptları (2026-11-12, kullanıcı isteği: "menüler içerisindeki bu promptları ayrıca prompt
+   kütüphanesine ekle") ----------
+   Menülerin ürettiği promptlar (SEO denetim promptu, pazarlama promptu, Google / Meta / Yapay Zekâ kurulum talimatları)
+   listenin başında canlı kartlar olarak durur: metin her açılışta projenin güncel seçimlerinden üretilir (üreticiler ana
+   betikte: auPrompt, mkMarketingPrompt, ggSetupMd, mtSetupMd, yzSetupMd). Kopyala / indir / önizle / menüde aç; "Kütüphaneye
+   kaydet" metnin anlık kopyasını "Proje Promptları" kategorisinde düzenlenebilir bir özel modül olarak saklar (kimlik
+   proje-<tür>-<proje adı>; tekrar kaydedilince küçük sürüm artar, önceki metin geçmişte kalır). Metin yalnız ilgili
+   önizleme açılınca ya da düğmeye basılınca üretilir (liste çizimi yavaşlamasın). */
+const PJ_CAT={id:"proje-promptlari",name:"Proje Promptları",desc:"Menülerin ürettiği promptların (SEO denetimi, pazarlama, Google, Meta, Yapay Zekâ) kütüphaneye kaydedilmiş kopyaları."};
+const PJ=[
+ {k:"marketing",t:"Pazarlama promptu",a:"marketing",s:"mk_planfile",d:"İçerik üretecek Claude oturumu için marka, kitle, kanal ve içerik kuralları.",g:()=>mkMarketingPrompt(),i:()=>typeof mkIssues==="function"?mkIssues():[],f:"pazarlama-promptu"},
+ {k:"seo",t:"SEO denetim promptu",a:"audit",s:"au_report",d:"Yayındaki siteyi denetleyecek Claude oturumu için tek prompt: kapsam, kontroller, çalışma kuralları ve rapor biçimi.",g:()=>auPrompt(),i:()=>typeof auIssues==="function"?auIssues():[],f:"seo-denetimi"},
+ {k:"google",t:"Google kurulum talimatı",a:"google",s:"gg_report",d:"Tag Manager, Analytics 4, Consent Mode, Search Console, Ads ve diğer Google servislerinin kurulum ve asgari ayar talimatı.",g:()=>ggSetupMd(),i:()=>typeof ggIssues==="function"?ggIssues():[],f:"google-kurulum"},
+ {k:"meta",t:"Meta kurulum talimatı",a:"meta",s:"mt_report",d:"İşletme portföyü, Facebook Sayfası, Instagram, WhatsApp, Meta Pikseli / Conversions API ve reklam hesabı kurulum talimatı.",g:()=>mtSetupMd(),i:()=>typeof mtIssues==="function"?mtIssues():[],f:"meta-kurulum"},
+ {k:"ai",t:"Yapay zekâ talimatı",a:"ai",s:"yz_report",d:"ChatGPT'de işletme, yapay zekâ platformları, tarayıcı izinleri, sitedeki asistan ve ölçüm talimatı.",g:()=>yzSetupMd(),i:()=>typeof yzIssues==="function"?yzIssues():[],f:"yapay-zeka"}];
+const PJ_CRIT={seo:["Rapordaki her bulgu kanıtla (adres, ekran görüntüsü, ölçüm) verilir.","Seçilen her kontrol rapor tablosunda yer alır; uygulanamayan kontrolün nedeni yazılır."],
+ marketing:["Üretilen içerik marka adını, tonu ve yasaklı ifadeleri prompttaki kurallara göre kullanır.","Her içerik seçilen kanal ve format kurallarına uyar."],
+ google:["Talimattaki her ayar için durum (yapıldı / kullanıcıya bırakıldı / engel) ve kanıt raporlanır.","Onay alınmadan analitik ve reklam etiketi çalışmaz."],
+ meta:["Talimattaki her ayar için durum (yapıldı / kullanıcıya bırakıldı / engel) ve kanıt raporlanır.","Onay alınmadan Meta Pikseli ve Conversions API veri göndermez."],
+ ai:["Talimattaki her ayar için durum (yapıldı / kullanıcıya bırakıldı / engel) ve kanıt raporlanır.","Türkiye'de sunulmayan platform özelliği kullanıcıya bildirilir."]};
+const PJ_GEN={seo:"auPrompt",marketing:"mkMarketingPrompt",google:"ggSetupMd",meta:"mtSetupMd",ai:"yzSetupMd"};
+const pjAvail=x=>typeof window[PJ_GEN[x.k]]==="function";
+function pjF(a){return F.filter(f=>shown(f)&&navF(f)&&AREA(SI[f.section])===a)}
+function pjName(){return String(state.project_name||state.mk_brand_name||"").trim()||"Proje"}
+function pjId(x){return "proje-"+x.k+"-"+(plSlug(pjName())||"proje")}
+function pjText(x){try{return String(x.g()||"").trim()}catch(e){console.error("proje promptu",x.k,e);return ""}}
+function pjSrc(x){let n=(window.MT_NUM||{})[x.a],an=(AREA_LB&&AREA_LB[x.a])||x.a,sn=SI[x.s]?SI[x.s].name:"";return (n?n+". ":"")+an+(sn?" › "+sn:"")}
+function pjCard(x){let V=pjF(x.a),n=V.filter(isset).length,I=x.i()||[],m=plMod(pjId(x));
+ return `<article class="plProjCard" data-pj="${x.k}"><div class="plProjSrc">${E(pjSrc(x))}</div><h3>${E(x.t)}</h3><p>${E(x.d)}</p><ul class="plProjFacts"><li>${n}/${V.length} karar</li><li class="${I.length?"warn":"ok"}">${I.length?I.length+" eksik bilgi":"Eksik bilgi yok"}</li>${m?`<li><button type="button" class="plLink" onclick="plOpen(${E(JSON.stringify(m.id))})">Kütüphanede · v${E(m.version||"1.0.0")}</button></li>`:""}</ul>
+ <div class="plProjBtns"><button type="button" class="btn dark" onclick="plProjCopy('${x.k}',this)">Kopyala</button><button type="button" class="btn" onclick="plProjDl('${x.k}')">İndir (.md)</button><button type="button" class="btn" onclick="plProjSave('${x.k}')">${m?"Kütüphanedeki kopyayı güncelle":"Kütüphaneye kaydet"}</button><button type="button" class="plLink" onclick="plProjGo('${x.k}')">Menüde aç →</button></div>
+ <details class="plProjPrev" ontoggle="plProjPrev('${x.k}',this)"><summary>Önizle</summary><textarea readonly aria-label="${E(x.t)} önizleme"></textarea><p class="plProjWc"></p></details></article>`}
+function plProjBox(){let L=PJ.filter(pjAvail);if(!L.length)return "";
+ return `<section class="plProj" aria-labelledby="plProjH"><div class="plProjHead"><h2 id="plProjH">Bu projenin promptları</h2><p>Menülerin ürettiği promptlar <b>${E(pjName())}</b> projesinin güncel seçimlerinden her açılışta yeniden üretilir. Kopyalayabilir, indirebilir ya da düzenlenebilir bir kopyasını <b>Proje Promptları</b> kategorisine kaydedebilirsiniz; kaydedilen kopya sonraki seçim değişikliklerinden etkilenmez.</p></div><div class="plProjGrid">${L.map(pjCard).join("")}</div></section>`}
+const pjBy=k=>PJ.find(x=>x.k===k);
+window.plProjPrev=(k,d)=>{if(!d.open)return;let t=pjText(pjBy(k));d.querySelector("textarea").value=t;let w=(t.match(/\S+/g)||[]).length;d.querySelector(".plProjWc").textContent=`${w.toLocaleString("tr-TR")} kelime · ${t.length.toLocaleString("tr-TR")} karakter`};
+window.plProjCopy=(k,btn)=>{let t=pjText(pjBy(k));if(!t){plToast("Prompt üretilemedi.",1);return}plCopy(t,btn)};
+window.plProjDl=k=>{let x=pjBy(k),t=pjText(x);if(!t){plToast("Prompt üretilemedi.",1);return}mkSave(t,x.f+"-"+(plSlug(pjName())||"proje")+".md","text/markdown")};
+window.plProjGo=k=>{let x=pjBy(k);showPage("config");if(typeof goArea==="function")goArea(x.a);goStep(x.s);window.scrollTo(0,0)};
+window.plProjSave=k=>{let x=pjBy(k),t=pjText(x);if(!t){plToast("Prompt üretilemedi.",1);return}
+ if(!plCats().some(c=>c.id===PJ_CAT.id)){LIB.cats.push(Object.assign({},PJ_CAT))}
+ let id=pjId(x),old=plMod(id),m={id,title:`${x.t} — ${pjName()}`,desc:`${x.d} Kaynak: ${pjSrc(x)} (${today()} tarihli seçimlerden).`,cat:PJ_CAT.id,tags:["proje",x.k],prompt:t,doc:"",images:[],criteria:PJ_CRIT[x.k].slice(),deps:[],refs:[],updated:today()};
+ if(old){if(old.prompt===m.prompt){plToast("Kütüphanedeki kopya zaten güncel.");return}m.version=plBump(old.version,"minor");m.history=[{version:old.version,date:old.updated||today(),note:"Menüden yeniden alındı.",data:plTextOnly(old)}].concat(old.history||[]).slice(0,PL_HIST)}
+ else{m.version="1.0.0";m.history=[]}
+ plStore(m);plSave();plToast(old?`Kütüphanedeki kopya güncellendi — v${m.version}.`:"Kütüphaneye kaydedildi.");plRefreshAll()};
+function plRefreshAll(){if(plActive()&&PL.view==="list")plRender()}
+
 /* ---------- Liste ---------- */
 function plHay(m){return norm([m.title,m.desc,plCatName(plCatOf(m)),(m.tags||[]).join(" "),m.prompt,(m.criteria||[]).join(" "),m.doc,m.id].join(" "))}
 function plFilter(){let q=norm(PL.q||""),sel=new Set(plSel());return plMods().filter(m=>(!PL.cat||plCatOf(m)===PL.cat)&&(!PL.tag||(m.tags||[]).includes(PL.tag))&&(!PL.only||sel.has(m.id))&&(!q||hit(plHay(m),q)))}
@@ -143,7 +189,7 @@ function plList(){let all=plMods(),sel=plSel(),cnt={};all.forEach(m=>{let c=plCa
  let cats=plCats().filter(c=>cnt[c.id]),tags={};all.forEach(m=>(m.tags||[]).forEach(t=>tags[t]=(tags[t]||0)+1));
  let T=Object.keys(tags).sort((a,b)=>tags[b]-tags[a]||a.localeCompare(b,"tr")),TS=PL.tagsAll?T:T.slice(0,14);if(PL.tag&&!TS.includes(PL.tag))TS.push(PL.tag);
  let chip=(on,lab,n,fn,extra="")=>`<button type="button" class="plChip${on?" on":""}" aria-pressed="${on}" onclick="${fn}"${extra}>${lab}${n!==undefined?` <span>${n}</span>`:""}</button>`;
- return plIntro()+`<div class="plBar"><div class="plSearch"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="plQ" type="search" autocomplete="off" placeholder="Modül, etiket ya da içerik ara…" aria-label="Kütüphanede ara" aria-describedby="plN" value="${E(PL.q)}" oninput="plQuery(this.value)" onkeydown="if(event.key==='Escape'){this.value='';plQuery('')}"><span id="plN" class="plN" aria-live="polite"></span></div>
+ return plIntro()+plProjBox()+`<div class="plBar"><div class="plSearch"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="plQ" type="search" autocomplete="off" placeholder="Modül, etiket ya da içerik ara…" aria-label="Kütüphanede ara" aria-describedby="plN" value="${E(PL.q)}" oninput="plQuery(this.value)" onkeydown="if(event.key==='Escape'){this.value='';plQuery('')}"><span id="plN" class="plN" aria-live="polite"></span></div>
  <label class="plSort"><span>Sırala</span><select onchange="plSortBy(this.value)">${[["cat","Kategoriye göre"],["title","Ada göre"],["updated","Son güncellenen"]].map(o=>`<option value="${o[0]}"${PL.sort===o[0]?" selected":""}>${o[1]}</option>`).join("")}</select></label>
  <div class="plActs"><button type="button" class="btn dark" onclick="plNew()">+ Yeni modül</button><button type="button" class="btn" onclick="plImportPick()">İçe aktar</button><button type="button" class="btn" onclick="plExport('all')">Tümünü dışa aktar</button></div></div>
  <div class="plChips" role="group" aria-label="Kategori filtresi">${chip(!PL.cat&&!PL.only,"Tümü",all.length,"plCat('')")}${cats.map(c=>chip(PL.cat===c.id,E(c.name),cnt[c.id],`plCat('${c.id}')`,` title="${E(c.desc||"")}"`)).join("")}${chip(PL.only,"Yalnız seçililer",undefined,"plOnly()").replace("</button>",` <span id="plOnlyN">${sel.length}</span></button>`)}</div>
