@@ -14,3 +14,11 @@
    sütun olduğu için düğmeler küçülüp üst üste biniyordu — küçülme kapalı (sığmazsa şerit kayar), aralık 2 → 8 px */
 #modRail{gap:8px}
 #modRail>*{flex-shrink:0}
+/* 2026-11-12 (kullanıcı isteği: "sol menü çok dar duruyor, veriler rahat sığacak şekilde genişlet"): şerit 76 → 120 px
+   (ölçüm: en uzun etiket "4. SEO Denetimi" 12 px'te ~92 px), etiket 11 → 12 px, ilerleme 9,5 → 10,5 px. --railW'yi kullanan
+   gövde, üst şerit ve kenar çubuğu konumları kendiliğinden kayar. */
+@media(min-width:901px){
+ :root{--railW:120px}
+ #modRail .mrBtn{font-size:12px;line-height:15px;padding:9px 4px}
+ #modRail .mrBtn .mrProg{font-size:10.5px}
+}
