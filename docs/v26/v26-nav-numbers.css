@@ -22,3 +22,7 @@
  #modRail .mrBtn{font-size:12px;line-height:15px;padding:9px 4px}
  #modRail .mrBtn .mrProg{font-size:10.5px}
 }
+/* 2026-11-12 (kullanıcı isteği: "ikonları kaldır" — işaretlenen yerler): modül şeridinin üstündeki "W" (.mrLogo; Dashboard,
+   Kurallar gibi kenar çubuğusuz sayfalarda görünüyordu) ve karar menüsü başlığındaki "W" (.sideLogo) gizli; "Web Configurator /
+   PROJE SPESİFİKASYONU" yazısı ve başlık düğmeleri kalır. Başlatma ekranındaki logo (.ssLogo) değişmedi. */
+#modRail .mrLogo,.sideBrand .sideLogo{display:none!important}

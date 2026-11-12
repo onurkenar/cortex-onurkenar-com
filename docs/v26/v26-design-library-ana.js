@@ -85,7 +85,7 @@ function dsSl(v){return v?dsSlug(v).replace(/^(grid|hero)-/,""):null}
 function dsCols(){let t=dsTok("design_grid");return t?t.cols:[12,8,4]}
 function dsConfig(){let B=x=>dsHex(state["brand_color_"+x]),C={};["primary","secondary","accent","dark","light","neutral","success","warning","error","info"].forEach(k=>{if(B(k))C[k]=B(k)});
  let col=dsCols(),den=dsTok("design_density")||{space:8,section:96,lh:1.6},refs=dsRefs(),P=dsPages(),ms=dsV("page_design_style");
- return {designSystemVersion:"2.0",source:"Web Project Configurator",primaryStyle:dsSl(ms),primaryStyleLabel:ms?dsLabel(ms):null,primaryStyleClasses:ms?(DS_META[ms]?.cls||[]):[],secondaryStyles:(dsV("secondary_design_styles")||[]).map(dsSl),
+ return {designSystemVersion:"2.0",source:"Cortex Configurator",primaryStyle:dsSl(ms),primaryStyleLabel:ms?dsLabel(ms):null,primaryStyleClasses:ms?(DS_META[ms]?.cls||[]):[],secondaryStyles:(dsV("secondary_design_styles")||[]).map(dsSl),
   surfaceEffect:dsSl(dsV("design_surface")),mediaApproach:dsSl(dsV("design_media")),themeInteraction:(dsV("design_theme_interaction")||[]).map(dsSl),
   references:Object.fromEntries(Object.entries(refs).map(([v,k])=>[dsSl(v),DS_LAY[v]?(DS_RL[k]||null):(DS_COMP[k]||null)])),
   layout:{global:dsSl(dsV("page_layout_approach")),secondary:(dsV("secondary_layout_approaches")||[]).map(dsSl),readingPattern:state.reading_pattern===true?"f-z":null,desktopColumns:col[0],tabletColumns:col[1],mobileColumns:col[2],maxWidth:(dsTok("design_container")||{max:"1200px"}).max,gutter:den.space*3+"px",breakpoints:{mobile:"640px",tablet:"1024px",desktop:"1280px"},pageOverrides:Object.fromEntries(Object.entries(P).map(([k,v])=>[k,dsSl(v)]))},
@@ -94,7 +94,7 @@ function dsConfig(){let B=x=>dsHex(state["brand_color_"+x]),C={};["primary","sec
   theme:{mode:dsV("color_theme")||null},interaction:{intensity:dsSl(dsV("design_interaction_intensity"))||"subtle",durationMs:parseInt((dsTok("design_interaction_intensity")||{dur:"150ms"}).dur,10),techniques:(dsV("motion_techniques")||[]).map(dsSl),reducedMotion:true},
   navigation:{pattern:dsSl(dsV("design_navigation"))||"top-nav"},accessibility:{target:DS_WCAG[dsV("wcag")]||"WCAG-2.2-AA",keyboardNavigation:true,visibleFocus:true,reducedMotion:true,principle:"accessible-first"}}}
 function dsTokensCss(c){c=c||dsConfig();let L=[],q=x=>`"${String(x).replace(/["\\]/g,"")}", system-ui, sans-serif`,den=dsTok("design_density")||{space:8,section:96,lh:1.6},sf=c.visual.surface;
- L.push("/* Tasarım token'ları — Web Project Configurator, tasarım yapılandırması 2.0 */",":root{");
+ L.push("/* Tasarım token'ları — Cortex Configurator ile üretildi, tasarım yapılandırması 2.0 */",":root{");
  Object.entries(c.color).forEach(([k,v])=>L.push(`  --color-${k}: ${v};`));
  if(c.typography.heading)L.push(`  --font-heading: ${q(c.typography.heading)};`);if(c.typography.body)L.push(`  --font-body: ${q(c.typography.body)};`);
  L.push(`  --space-unit: ${den.space}px;`,`  --space-1: calc(var(--space-unit) * 1);`,`  --space-2: calc(var(--space-unit) * 2);`,`  --space-3: calc(var(--space-unit) * 3);`,`  --space-4: calc(var(--space-unit) * 4);`,`  --space-6: calc(var(--space-unit) * 6);`,`  --space-8: calc(var(--space-unit) * 8);`,`  --section-gap: ${den.section}px;`,`  --line-height-body: ${den.lh};`);

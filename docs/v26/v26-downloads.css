@@ -34,3 +34,8 @@
 [data-theme="dark"] .dlRow,[data-theme="dark"] .dlPkF{border-color:var(--border)}
 [data-theme="dark"] .dlTy{background:#1a2440;color:#9db8ff}
 [data-theme="dark"] .dlTy-md{background:#12301f;color:#8fe0b0}[data-theme="dark"] .dlTy-prompt{background:#3a2a10;color:#f3c27a}[data-theme="dark"] .dlTy-zip{background:#2c1a40;color:#d3a8ff}[data-theme="dark"] .dlTy-css{background:#0f2c35;color:#8fd6ea}
+.dlPkF{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px}
+.dlPkIn{flex:1 1 220px;margin:0;font-size:12.5px;line-height:1.45;color:#59616c;word-break:break-word}
+.dlPkIn b{color:#2f343b}
+[data-theme="dark"] .dlPkIn{color:var(--muted)}
+[data-theme="dark"] .dlPkIn b{color:var(--text)}
