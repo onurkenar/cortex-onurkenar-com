@@ -1,0 +1,8 @@
+/* Para birimi biçimi (2026-11-14) — tutar kutusu + para birimi seçimi. Kaynak docs/v26/v26-currency.css → docs/v26/para_birimi_ekle.py */
+.curField{max-width:460px}
+.curBox{display:flex;gap:8px;align-items:stretch}
+.curBox .curAmt{flex:1 1 auto;min-width:0;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.curBox .curSel{flex:0 0 112px;width:112px;padding-right:6px}
+.curHint{display:block;margin-top:6px}
+.curRow .curHint{margin-top:0}
+.curRow .curBox{max-width:460px}
