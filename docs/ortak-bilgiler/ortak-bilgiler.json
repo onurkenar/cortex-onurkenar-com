@@ -239,19 +239,37 @@
     {
      "id": "oc_tax_ids",
      "new": {
-      "label": "Vergi ve Sicil Bilgileri",
-      "en": "Tax and Registry IDs",
+      "label": "Firma Bilgileri (Vergi ve Sicil)",
+      "en": "Company Information (Tax and Registry)",
       "type": "accounts",
       "placeholder": "Örn. ETBİS kayıt no: …\nVergi levhası adresi: …",
-      "rule": "Vergi ve sicil bilgileri: {value}. Bu bilgiler yalnız künye, mesafeli satış ve ön bilgilendirme metinleri, fatura ve yasal zorunluluk olan yerlerde kullanılır; kişisel T.C. kimlik numarası yazılmaz.",
-      "explanation": "Vergi dairesi, vergi kimlik numarası, MERSİS numarası, ticaret sicil bilgileri, bağlı olunan oda ve KEP adresi ayrı kutulara girilir; yalnız işletmeniz için geçerli olanları doldurun. Biçimi beklenenden farklı olan değer uyarıyla işaretlenir ama yine kaydedilir.",
-      "scenario": "E-ticaret, rezervasyon ya da ücretli hizmet satışı varsa mesafeli satış ve ön bilgilendirme metinleri için zorunludur; şahıs işletmesinde kişisel T.C. kimlik numarası yerine vergi numarası kullanılır.",
-      "example": "Bir limited şirket vergi dairesini, 10 haneli vergi kimlik numarasını, 16 haneli MERSİS numarasını, ticaret sicil müdürlüğünü ve sicil numarasını ayrı kutulara yazar; mesafeli satış sözleşmesinin satıcı bilgileri ve sitenin künyesi bunlardan oluşur.",
+      "rule": "Firma bilgileri (vergi ve sicil): {value}. Ticari unvanla birlikte sitenin künyesinde, mesafeli satış ve ön bilgilendirme metinlerinde, faturada ve yasal zorunluluk olan yerlerde bu yazımla kullanılır; hangi bilginin sitede gösterilmesinin zorunlu olduğu hukuk birimiyle teyit edilir. Kuruluş tarihi Organization yapısal verisinde foundingDate olarak verilir. Sicildeki merkez adresi iletişim adresinden farklıysa hukuki metinlerde sicil adresi kullanılır. Elektronik tebligat (UETS) adresi resmî yazışma içindir, sitede yayımlanmaz. Kişisel T.C. kimlik numarası yazılmaz.",
+      "explanation": "Şirketin ticaret sicilindeki ve vergi kaydındaki bilgileri ayrı kutulara girilir: kuruluş tarihi, firma durumu, MERSİS numarası, vergi dairesi ve vergi kimlik numarası, ticaret sicil / dosya numarası, firma türü, ticaret sicil müdürlüğü, şirket merkezinin şehri, toplam sermaye, sicildeki merkez adresi, elektronik tebligat (UETS) adresi, bağlı olunan oda ve KEP adresi. Ticari unvan bu bölümdeki “Ticari Unvan” kararındadır. Yalnız işletmeniz için geçerli olanları doldurun; biçimi beklenenden farklı olan değer uyarıyla işaretlenir ama yine kaydedilir.",
+      "scenario": "E-ticaret, rezervasyon ya da ücretli hizmet satışı varsa mesafeli satış ve ön bilgilendirme metinleri için zorunludur; sitede künye sayfası ya da kurumsal tanıtım (Hakkımızda) olacaksa da doldurun. Şahıs işletmesinde kişisel T.C. kimlik numarası yerine vergi numarası kullanılır; MERSİS, sermaye ve ticaret sicil kutuları boş kalabilir.",
+      "example": "Bir limited şirket kuruluş tarihini, “Aktif” durumunu, 16 haneli MERSİS numarasını, vergi dairesini ve 10 haneli vergi kimlik numarasını, ticaret sicil numarasını, firma türünü, sicil müdürlüğünü, şehrini, sermayesini ve sicildeki merkez adresini ayrı kutulara yazar; künye sayfası ve mesafeli satış sözleşmesinin satıcı bilgileri bunlardan oluşur, UETS adresi yalnız şirket içi kayıtta kalır.",
       "agents": [
        "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani"
       ],
       "otherLabel": "Diğer kayıt bilgileri",
       "accounts": [
+       {
+        "k": "kurulus",
+        "label": "Kuruluş tarihi",
+        "ph": "Örn. 15.03.2018 (GG.AA.YYYY)",
+        "re": "^(0[1-9]|[12][0-9]|3[01])[./-](0[1-9]|1[0-2])[./-](18|19|20)[0-9]{2}$"
+       },
+       {
+        "k": "durum",
+        "label": "Firma durumu",
+        "ph": "Örn. Aktif",
+        "re": "^.{2,40}$"
+       },
+       {
+        "k": "mersis",
+        "label": "MERSİS no",
+        "ph": "Örn. 0123456789000015 (16 hane)",
+        "re": "^[0-9]{16}$"
+       },
        {
         "k": "vd",
         "label": "Vergi dairesi",
@@ -265,10 +283,16 @@
         "re": "^[0-9]{10}$"
        },
        {
-        "k": "mersis",
-        "label": "MERSİS no",
-        "ph": "Örn. 0123456789000015 (16 hane)",
-        "re": "^[0-9]{16}$"
+        "k": "sicil",
+        "label": "Ticaret sicil no / dosya no",
+        "ph": "Örn. 123456-5",
+        "re": "^[0-9A-Za-z/ .-]{1,20}$"
+       },
+       {
+        "k": "tur",
+        "label": "Firma türü",
+        "ph": "Örn. Limited Şirket",
+        "re": "^.{2,80}$"
        },
        {
         "k": "sicil_office",
@@ -277,10 +301,28 @@
         "re": "^.{2,80}$"
        },
        {
-        "k": "sicil",
-        "label": "Ticaret sicil no",
-        "ph": "Örn. 123456-5",
-        "re": "^[0-9A-Za-z/ .-]{1,20}$"
+        "k": "sehir",
+        "label": "Şehir (şirket merkezi)",
+        "ph": "Örn. İzmir",
+        "re": "^.{2,40}$"
+       },
+       {
+        "k": "sermaye",
+        "label": "Toplam sermaye",
+        "ph": "Örn. 250.000,00 TL",
+        "re": "^[0-9][0-9.]*(,[0-9]{1,2})? ?(TL|₺|TRY)?$"
+       },
+       {
+        "k": "adres",
+        "label": "Firma adresi (sicildeki merkez adresi)",
+        "ph": "Örn. Çınar Mah. Lale Sk. No: 5 Kat: 2 Bornova / İzmir",
+        "re": "^.{10,250}$"
+       },
+       {
+        "k": "uets",
+        "label": "Elektronik tebligat adresi (UETS)",
+        "ph": "Örn. 12345-67890-12345",
+        "re": "^[0-9]{5}-[0-9]{5}-[0-9]{5}$"
        },
        {
         "k": "chamber",
