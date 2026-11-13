@@ -45,5 +45,31 @@ const _rsn=renderSideNav;renderSideNav=function(){const r=_rsn.apply(this,argume
 const _rf=renderFields;renderFields=function(){const r=_rf.apply(this,arguments);titleNumber();return r};
 if(typeof refreshField==="function"){const _rfx=refreshField;refreshField=function(){const r=_rfx.apply(this,arguments);titleNumber();return r}}
 if(typeof renderProgress==="function"){const _rp=renderProgress;renderProgress=function(){const r=_rp.apply(this,arguments);try{railProgress()}catch(e){console.error("railProgress",e)}return r}}
+/* Numarayla arama (2026-11-13, kullanıcı isteği: "madde numarası ile arama yapılabilsin"): menü aramasına "2.11.3.1" yazılınca
+   o karar, "2.11.3" ya da "2.11" yazılınca o bölüm / grubun bütün kararları listelenir (numara ya da ondan başlayan alt numara;
+   sondaki nokta önemsiz). Numara ile kelime birlikte yazılabilir ("2.11 yedek"). Noktasız tek sayı ("4") hem numara hem metin
+   olarak aranır (ör. "Google Analytics 4"). Numaralar menüde görünen numaralardır (span.navNum). Enter tam eşleşen kararı ya da
+   bölümü açar. Kelime araması eskisiyle aynı (norm + hit); sideSearchInput.oninput bu işlevle değiştirilir. */
+const NQ=/^\d+(\.\d+)*\.?$/,nS=x=>String(x||"").replace(/\.$/,""),
+ numOf=el=>{let x=el&&el.querySelector(":scope>.navNum");return x?nS(x.textContent):""},
+ nHit=(n,t)=>{n=nS(n);t=nS(t);return !!n&&(n===t||n.startsWith(t+"."))},
+ tokOk=(t,h,n)=>NQ.test(t)?(nHit(n,t)||(!/\./.test(t)&&hit(h,norm(t)))):hit(h,norm(t));
+function sideSearch(){
+ let raw=sideSearchInput.value.trim(),toks=raw.split(/\s+/).filter(t=>norm(t)||NQ.test(t)),q=toks.length;
+ sideNav.querySelectorAll(".menuSection").forEach(sec=>{
+  let parent=sec.querySelector(".menuParent"),subs=[...sec.querySelectorAll(".subItem")];
+  if(!q){sec.style.display="";sec.classList.toggle("open",sec.dataset.section===openSection);subs.forEach(x=>x.style.display="");return}
+  let sn=numOf(parent&&parent.querySelector(".menuTitle")),ok=(h,n)=>toks.every(t=>tokOk(t,h,n)),
+   pm=ok(parent?.dataset.search||"",sn),sm=x=>ok(x.dataset.search||"",numOf(x.querySelector(".subText"))),m=subs.filter(sm);
+  sec.style.display=(pm||m.length)?"":"none";sec.classList.toggle("open",!!(pm||m.length));
+  subs.forEach(x=>x.style.display=(pm||m.includes(x))?"flex":"none")});
+ let ca=curArea();sideNav.classList.toggle("searching",!!q);sideNav.querySelectorAll(".navGroup").forEach(g=>{g.hidden=!q&&g.dataset.area!==ca;g.style.display=[...g.querySelectorAll(".menuSection")].some(x=>x.style.display!=="none")?"":"none"})}
+if(typeof sideSearchInput!=="undefined"&&sideSearchInput){sideSearchInput.oninput=sideSearch;
+ sideSearchInput.placeholder="Menüde ara ya da numara yaz… (⌘K)";
+ sideSearchInput.addEventListener("keydown",e=>{if(e.key!=="Enter")return;let t=sideSearchInput.value.trim();if(!NQ.test(t))return;t=nS(t);
+  let it=[...sideNav.querySelectorAll(".subItem")].find(x=>numOf(x.querySelector(".subText"))===t);
+  if(it){e.preventDefault();it.click();return}
+  let sec=[...sideNav.querySelectorAll(".menuParent")].find(x=>numOf(x.querySelector(".menuTitle"))===t);if(sec){e.preventDefault();sec.click()}})}
+window.navNumSearch=sideSearch;
 railNumber();navNumber();railProgress();
 })();

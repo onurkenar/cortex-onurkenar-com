@@ -115,7 +115,10 @@ function pass(it,s){let Lv=leaves(it),f=TD.f;
  if(f==="changed"&&!Lv.some(x=>x.st==="changed"))return false;
  if(f==="rec"&&!Lv.some(x=>x.per))return false;
  if(f==="due"&&!Lv.some(x=>x.st==="due"||x.st==="late"))return false;
- let q=norm(TD.q);return !q||hit(hay(it,s),q)}
+ let raw=String(TD.q||"").trim();if(!raw)return true;let h=hay(it,s),toks=raw.split(/\s+/).filter(t=>norm(t)||TD_NQ.test(t));if(!toks.length)return true;
+ /* madde numarasıyla arama (2026-11-13): "2.11.3.1" o karar, "2.11.3" / "2.11" altındakiler; noktasız sayı numara ya da metin */
+ return toks.every(t=>TD_NQ.test(t)?(tdNHit(it.num,t)||(!/\./.test(t)&&hit(h,norm(t)))):hit(h,norm(t)))}
+const TD_NQ=/^\d+(\.\d+)*\.?$/;function tdNHit(n,t){n=String(n||"").replace(/\.$/,"");t=String(t||"").replace(/\.$/,"");return !!n&&(n===t||n.startsWith(t+"."))}
 
 /* ---------- Sayfa ---------- */
 const PG=document.createElement("section");PG.id="todoPage";PG.setAttribute("aria-label","Yapılacaklar");
@@ -141,7 +144,7 @@ function render(){if(!isOn())return;let T=build(),L=allItems(T),S=stats(L);
  <div class="tdSum" role="group" aria-label="İlerleme"><div class="tdBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${S.p}" aria-label="Kurulum ilerlemesi"><i style="width:${S.p}%"></i></div><p><b>Kurulum: ${S.d}/${S.a} - %${S.p}</b> · ${S.o} açık${S.c?` · <span class="tdWarn">${S.c} karar değişti</span>`:""}</p>
  ${S.r?`<p class="tdMaint"><b>↻ Bakım:</b> ${S.r} yinelenen görev · ${S.ok} güncel${S.due?` · <span class="tdWarn">${S.due} zamanı geldi</span>`:""}${S.late?` · <span class="tdLate">${S.late} gecikti</span>`:""}${S.r-S.ok-S.due-S.late?` · ${S.r-S.ok-S.due-S.late} henüz yapılmadı`:""}</p>`:""}
  <div class="tdAreas">${T.map(A=>{let s=stats(areaItems(A));return `<button type="button" class="tdArea${TD.a===A.a?" on":""}${s.a&&s.d===s.a&&!s.due&&!s.late?" done":""}" data-td-area="${A.a}" aria-pressed="${TD.a===A.a}"><b>${A.n?A.n+". ":""}${E(A.t)}</b><span>${s.d}/${s.a} - %${s.p}</span>${s.due+s.late?`<em>${s.due+s.late} bakım zamanı</em>`:""}</button>`}).join("")}</div>${evBar(T)}</div>
- <div class="tdBarTools"><label class="tdSearch"><span class="sr">Görevlerde ara</span><input type="search" id="tdQ" placeholder="Görevlerde ara (karar, seçim, kural, sıklık, ajan)" value="${E(TD.q)}"></label>
+ <div class="tdBarTools"><label class="tdSearch"><span class="sr">Görevlerde ara</span><input type="search" id="tdQ" placeholder="Görevlerde ara (numara, karar, seçim, kural, sıklık, ajan)" value="${E(TD.q)}"></label>
  <div class="tdChips" role="group" aria-label="Duruma göre süz">${chip("all","Tümü",S.a,TD.f==="all","f")}${chip("open","Açık",S.o,TD.f==="open","f")}${chip("done","Tamamlanan",S.d,TD.f==="done","f")}${S.r?chip("rec","↻ Yinelenen",S.r,TD.f==="rec","f"):""}${S.due+S.late?chip("due","Zamanı gelen",S.due+S.late,TD.f==="due","f"):""}${S.c?chip("changed","Karar değişti",S.c,TD.f==="changed","f"):""}${TD.a!=="all"?chip("all","Bütün menüler",null,false,"area"):""}</div></div>
  <div id="tdList">${list(T)}</div>
  ${Object.keys(T0()).length?`<p class="tdFoot"><button type="button" class="linkBtn" data-td-act="reset">Bütün işaretleri ve geçmişi kaldır</button></p>`:""}`}
