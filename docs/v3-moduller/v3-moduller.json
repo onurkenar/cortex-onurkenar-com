@@ -438,6 +438,81 @@
    "after": "biz_subscription"
   },
   {
+   "id": "biz_einvoice",
+   "group": "İş Modülleri",
+   "icon": "⎘",
+   "name": "E-Fatura ve E-Arşiv Entegrasyonu",
+   "en": "E-Invoice and E-Archive Integration (GIB)",
+   "desc": "Sitede alınan ödemelerin GİB e-Belge düzenine göre otomatik faturalandırılması: belge türleri, entegrasyon yolu, düzenleme anı, alıcı yönlendirmesi, fatura içeriği, iptal ve iade, iletim, mutabakat ve saklama.",
+   "guide": {
+    "purpose": "Bu bölüm sitede alınan ödemelerin faturalandırılmasını Türkiye'deki e-Belge düzenine (GİB) bağlar: hangi belgelerin (e-Fatura, e-Arşiv Fatura, e-SMM, e-İrsaliye) düzenleneceği, entegrasyonun hangi yolla (özel entegratör, muhasebe yazılımı, GİB Portalı, doğrudan entegrasyon) yapılacağı, faturanın ne zaman kesileceği, alıcıya göre e-Fatura / e-Arşiv yönlendirmesi, faturaya girecek zorunlu bilgiler, iptal ve iade, alıcıya iletim, mutabakat ve saklama kuralları burada verilir. Fatura mali bir belgedir: tutar, vergi ve alıcı bilgisi sunucuda hesaplanır, kesilen fatura sonradan değiştirilmez; hata iptal ve yeni belgeyle düzeltilir. Mevzuattaki tutar ve süreler değişebilir; canlıya çıkmadan önce mali müşavir ya da vergi biriminin teyidi alınır.",
+    "criteria": [
+     "Alıcı GİB e-Fatura kayıtlı kullanıcı listesindeyse e-Fatura, değilse e-Arşiv Fatura düzenlenir; seçim sunucuda, düzenleme anındaki sorgu sonucuna göre yapılır (509 Sıra No'lu Tebliğ).",
+     "Her sipariş ya da tahsilat için en fazla bir fatura oluşur (idempotency); entegratör kesintisinde sipariş akışı durmaz, fatura kuyruğa alınıp yeniden denenir.",
+     "Fatura teslim ya da hizmet tarihinden itibaren en geç 7 gün içinde düzenlenir (VUK 231); bu süreye yaklaşan kesilmemiş siparişler için alarm vardır.",
+     "İnternet satışında e-Arşiv fatura alıcıya elektronik iletilir ve internet satışına özgü bilgileri (web adresi, ödeme şekli ve tarihi, gönderim tarihi, taşıyıcı) taşır; düzenleme saati ve dakikası yazılır.",
+     "İptal, iade ve düzeltme yalnız yetkili finans rolüyle, gerekçesiyle ve denetim kaydıyla yapılır; e-Arşiv iptali alıcıya iletimden itibaren 8 gün içinde yapılır.",
+     "Ödemeler, faturalar ve GİB'e iletilen e-Arşiv raporu her gün mutabık tutulur; belgeler Türkiye'de, en az yasal saklama süresince (VUK 5 yıl, TTK 10 yıl) erişilebilir saklanır."
+    ],
+    "pitfalls": [
+     "Faturayı tarayıcıda hesaplamak ya da tutarı istemciden almak: vergi, indirim ve toplam sunucuda, sipariş anındaki fiyatla hesaplanmalı.",
+     "Ödeme sağlayıcının geri çağrısı (callback) iki kez gelince iki fatura kesmek; sipariş başına tek fatura idempotency anahtarıyla garanti edilmeli.",
+     "Kayıtlı kullanıcı sorgusunu bir kez yapıp sonsuza dek önbellekte tutmak: alıcı sonradan e-Fatura'ya geçmiş olabilir, sorgu düzenleme anında yapılmalı.",
+     "Eski bilgiye güvenmek: GİB'in bazı tanıtım sayfalarında 5.000 / 30.000 TL sınırları hâlâ yazıyor; 1 Ocak 2026'dan itibaren e-Arşiv zorunluluğu tutardan bağımsızdır (basit usul ve işletme hesabı mükellefleri 1 Ocak 2027).",
+     "Kesilmiş faturayı panelde düzenlenebilir bırakmak: mali belge değiştirilmez; hata iptal ve yeni belgeyle düzeltilir, iki kayıt birbirine bağlanır.",
+     "Entegratör API anahtarını ya da faturadaki T.C. kimlik numarası, adres gibi kişisel verileri log'a, hata mesajına ya da analitik aracına yazmak."
+    ],
+    "resources": [
+     {
+      "title": "509 Sıra No'lu VUK Genel Tebliği — dipnotlu güncel metin (GİB)",
+      "url": "https://ebelge.gib.gov.tr/dosyalar/tebligler/Dipnotlu_Guncel_Sekli_ile_509_Sira_No'lu_VUK_Genel_Tebligi.pdf",
+      "note": "e-Fatura, e-Arşiv, e-SMM, e-İrsaliye zorunlulukları, internet satışı bilgileri, kullanım yöntemleri ve saklama kurallarının birincil kaynağı."
+     },
+     {
+      "title": "GİB e-Belge — e-Fatura mevzuat ve teknik mimari",
+      "url": "https://ebelge.gib.gov.tr/efaturamevzuat.html",
+      "note": "e-Fatura tebliğleri, kılavuzlar ve UBL-TR belgelerine giriş sayfası."
+     },
+     {
+      "title": "GİB e-Belge — e-Arşiv Fatura mevzuat ve teknik mimari",
+      "url": "https://ebelge.gib.gov.tr/earsivmevzuat.html",
+      "note": "e-Arşiv Fatura mevzuatı ve teknik belgelerine giriş sayfası."
+     },
+     {
+      "title": "e-Arşiv Teknik Kılavuzu v1.20 (GİB)",
+      "url": "https://ebelge.gib.gov.tr/dosyalar/kilavuzlar/e-Arsiv_Teknik_Kilavuzu_V.1.20.pdf",
+      "note": "e-Arşiv raporu, internet satışı bilgileri (internetSatisBilgi) ve rapor gönderim süresi."
+     },
+     {
+      "title": "UBL-TR 1.2.1 kılavuzları ve kod listeleri (GİB)",
+      "url": "https://ebelge.gib.gov.tr/dosyalar/kilavuzlar/UBLTR_1.2.1_Kilavuzlar.zip",
+      "note": "Fatura senaryoları (TEMELFATURA, TICARIFATURA, IHRACAT…) ve fatura tipleri (SATIS, IADE, TEVKIFAT…) kodları."
+     },
+     {
+      "title": "e-Fatura kayıtlı kullanıcılar listesi (GİB)",
+      "url": "https://ebelge.gib.gov.tr/efaturakayitlikullanicilar.html",
+      "note": "Alıcının e-Fatura'ya kayıtlı olup olmadığının resmî sorgu kaynağı."
+     },
+     {
+      "title": "e-Fatura ve e-Arşiv özel entegratörler listesi (GİB)",
+      "url": "https://ebelge.gib.gov.tr/efaturaozelentegratorlerlistesi.html",
+      "note": "GİB izinli özel entegratörlerin güncel listesi; e-Arşiv için ayrı liste de aynı sitede."
+     },
+     {
+      "title": "e-Arşiv uygulamaları iptal, ihtar / itiraz bildirim kılavuzu (GİB)",
+      "url": "https://ebelge.gib.gov.tr/dosyalar/kilavuzlar/e-Arsiv_Uygulamalari_Iptal_Ihtar_Itiraz_Bildirim_Kilavuzu_V.1.1.pdf",
+      "note": "e-Arşiv ve e-SMM iptalinin süresi ve yolları."
+     },
+     {
+      "title": "213 sayılı Vergi Usul Kanunu (mevzuat.gov.tr)",
+      "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+      "note": "Fatura düzenleme süresi (md. 231), düzenleme sınırı (md. 232) ve saklama süresi (md. 253)."
+     }
+    ]
+   },
+   "after": "biz_consulting"
+  },
+  {
    "id": "biz_certificates",
    "group": "İş Modülleri",
    "icon": "✪",
@@ -505,7 +580,7 @@
      }
     ]
    },
-   "after": "biz_consulting"
+   "after": "biz_einvoice"
   },
   {
    "id": "biz_notify",
@@ -5336,6 +5411,907 @@
      "ruleDetail": "Akış iletilerindeki bağlantılar UTM standardıyla etiketlenir; dönüşüm penceresi baştan tanımlanır ve raporda yazılır."
     }
    ]
+  },
+  {
+   "id": "ei_status",
+   "section": "biz_einvoice",
+   "type": "select",
+   "label": "Şirketin e-Belge Durumu",
+   "en": "Company e-Document Status",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Faturayı kesecek şirketin GİB e-Belge uygulamalarındaki durumu. Hangi belgelerin düzenleneceğini ve geçiş planı gerekip gerekmediğini belirler.",
+   "scenario": "Entegrasyon tasarlanmadan önce; özellikle şirket yeni kurulduysa, internetten satışa yeni başlıyorsa ya da cirosu e-Fatura eşiğine yaklaşıyorsa.",
+   "example": "Mali müşavir \"e-Fatura ve e-Arşiv'e kayıtlıyız, entegratörümüz X\" der; proje belgesine bu bilgi yazılır ve test ortamı bu entegratörde açılır.",
+   "rule": "Faturayı düzenleyecek şirketin e-Belge durumu: {label}.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+    "poz:muhasebe:tax_compliance/vergi-muhasebesi-yoneticisi/vergi-muhasebesi-uzmani"
+   ],
+   "options": [
+    {
+     "value": "both",
+     "label": "e-Fatura ve e-Arşiv'e kayıtlı (önerilen)",
+     "explanation": "Şirket e-Fatura'ya kayıtlı; e-Fatura'ya geçen mükellef aynı süre içinde e-Arşiv'e de geçer.",
+     "scenario": "Ciro eşiğini aşmış, internetten satış eşiğini aşmış ya da gönüllü geçmiş şirketlerde.",
+     "example": "Kurumsal alıcıya e-Fatura, bireysel alıcıya e-Arşiv Fatura aynı entegratörden kesilir.",
+     "ruleDetail": "Alıcıya göre e-Fatura ya da e-Arşiv Fatura düzenlenecek; iki belge türü de aynı entegrasyondan yönetilecektir."
+    },
+    {
+     "value": "earsiv",
+     "label": "Yalnız e-Arşiv (e-Fatura'ya kayıtlı değil)",
+     "explanation": "Şirket e-Fatura'ya kayıtlı değil. 1 Ocak 2026'dan itibaren e-Fatura'ya kayıtlı olmayanlar tutarına bakılmaksızın bütün faturalarını e-Arşiv olarak düzenler (basit usul ve işletme hesabı mükellefleri için 31 Aralık 2026'ya kadar 3.000 TL üstü, 1 Ocak 2027'den itibaren hepsi).",
+     "scenario": "Eşiklerin altında kalan küçük işletmelerde.",
+     "example": "Bütün faturalar e-Arşiv Fatura olarak kesilir; kurumsal alıcı da e-Arşiv faturası alır.",
+     "ruleDetail": "Bütün faturalar e-Arşiv Fatura olarak düzenlenecek; yine de alıcının e-Fatura kaydı düzenleme anında sorgulanacak, şirket e-Fatura'ya geçtiğinde kod değişmeden yönlendirme açılabilecektir."
+    },
+    {
+     "value": "transition",
+     "label": "Geçiş planlanıyor",
+     "explanation": "Şirket eşiği aşmış ya da aşacak. Genel eşik 2022 ve sonraki hesap dönemleri için 3 milyon TL brüt satış hasılatı; kendi sitesinden ya da aracı sitelerden internet satışı yapanlar için 500 bin TL. Geçiş eşiğin aşıldığı yılı izleyen yılın 7. ayı başına kadar yapılır; aracı hizmet sağlayıcılar ve ilan siteleri için hasılat şartı yoktur.",
+     "scenario": "Satışa yeni başlayan ya da hızla büyüyen projelerde.",
+     "example": "Geçiş tarihine kadar e-Arşiv, sonrasında e-Fatura + e-Arşiv; panelde geçiş tarihi ayarı.",
+     "ruleDetail": "Entegrasyon baştan e-Fatura + e-Arşiv için kurulacak; geçiş tarihi yapılandırmadan okunacak ve tarih geldiğinde yönlendirme kendiliğinden açılacaktır."
+    },
+    {
+     "value": "unknown",
+     "label": "Mali müşavirle teyit edilecek",
+     "explanation": "Durum bilinmiyor; mali müşavir ya da vergi birimi belirleyecek.",
+     "scenario": "Proje başında bilgi henüz yoksa.",
+     "example": "Kurulum adımlarında \"e-Belge durumu teyit edilmedi\" uyarısı.",
+     "ruleDetail": "Canlıya çıkmadan önce şirketin e-Belge durumu mali müşavirden yazılı olarak alınacak; o zamana kadar entegrasyon e-Fatura + e-Arşiv'e uygun kurulacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_docs",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Düzenlenecek e-Belgeler",
+   "en": "e-Documents to Issue",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Sitedeki satışlar için hangi elektronik belgelerin düzenleneceği.",
+   "scenario": "Satılan şeyin türüne (ürün, hizmet, serbest meslek hizmeti, ihracat) ve alıcıya (bireysel, kurumsal, yurt dışı) göre belirlenir.",
+   "example": "Bireysel müşteriye e-Arşiv, kurumsal müşteriye e-Fatura, fiziksel ürün gönderiminde e-İrsaliye kesilir.",
+   "rule": "Düzenlenecek e-Belgeler: {labels}. Belgeler UBL-TR 1.2.1 biçiminde, entegrasyon yolu üzerinden düzenlenir; belge türü ve senaryo sunucuda belirlenir.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+    "poz:muhasebe:tax_compliance/vergi-muhasebesi-yoneticisi/vergi-muhasebesi-uzmani"
+   ],
+   "recommend": {
+    "field": "modules_extra",
+    "map": {
+     "ecommerce": [
+      "efatura",
+      "earsiv"
+     ],
+     "subscription": [
+      "efatura",
+      "earsiv"
+     ],
+     "consulting": [
+      "efatura",
+      "earsiv"
+     ],
+     "lms": [
+      "efatura",
+      "earsiv"
+     ],
+     "booking": [
+      "efatura",
+      "earsiv"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "efatura",
+     "label": "e-Fatura (kayıtlı alıcılara)",
+     "explanation": "Alıcı GİB e-Fatura kayıtlı kullanıcısıysa fatura e-Fatura olarak GİB üzerinden alıcının e-Fatura adresine (etiketine) gönderilir.",
+     "scenario": "Kurumsal (B2B) satış varsa ve şirket e-Fatura'ya kayıtlıysa.",
+     "example": "Kurumsal müşterinin muhasebesi faturayı kendi e-Fatura kutusunda görür.",
+     "ruleDetail": "Alıcı e-Fatura'ya kayıtlıysa e-Fatura düzenlenecek; e-Fatura'ya kayıtlı iki mükellef arasında kâğıt ya da e-Arşiv fatura düzenlenmeyecektir."
+    },
+    {
+     "value": "earsiv",
+     "label": "e-Arşiv Fatura (kayıtlı olmayan alıcılara)",
+     "explanation": "Alıcı e-Fatura'ya kayıtlı değilse (bireysel tüketici ya da kayıtlı olmayan mükellef) e-Arşiv Fatura düzenlenir ve alıcıya elektronik iletilir.",
+     "scenario": "Bireysel (B2C) satış olan bütün projelerde.",
+     "example": "Müşteri faturayı e-posta ile PDF ve bağlantı olarak alır.",
+     "ruleDetail": "Alıcı e-Fatura'ya kayıtlı değilse e-Arşiv Fatura düzenlenecek, internet satışında alıcıya elektronik iletilecek ve düzenleme tarihiyle birlikte saat ve dakikası yazılacaktır."
+    },
+    {
+     "value": "export",
+     "label": "İhracat faturası (yurt dışına mal satışı)",
+     "explanation": "Yurt dışına mal satışında e-Fatura IHRACAT senaryosu kullanılır. Hizmet ihracının hangi belgeyle düzenleneceği mali müşavirle teyit edilir.",
+     "scenario": "Sitede yurt dışına ürün gönderiliyorsa.",
+     "example": "Almanya'daki müşteriye gönderilen ürünün faturası gümrük süreciyle birlikte ihracat faturası olarak kesilir.",
+     "ruleDetail": "Yurt dışına mal satışında ihracat faturası (IHRACAT senaryosu) düzenlenecek; ülke, para birimi ve teslim şekli siparişten alınacak, hizmet ihracının belge türü mali müşavir teyidiyle uygulanacaktır."
+    },
+    {
+     "value": "esmm",
+     "label": "e-SMM (serbest meslek makbuzu)",
+     "explanation": "Hizmeti veren serbest meslek erbabıysa (ör. danışman, avukat, psikolog) fatura yerine serbest meslek makbuzu düzenlenir. Vergiden muaf olmayan bütün serbest meslek erbabı e-SMM düzenlemek zorundadır.",
+     "scenario": "Online danışmanlık satışı serbest meslek kazancı olarak yapılıyorsa.",
+     "example": "Danışmanlık seansı ödendiğinde müşteriye e-SMM gönderilir.",
+     "ruleDetail": "Serbest meslek hizmeti satışında e-SMM düzenlenecek; stopaj (vergi kesintisi) ve alıcının kurumsal olup olmadığı makbuzda mali müşavirin belirlediği kurala göre işlenecektir."
+    },
+    {
+     "value": "eirsaliye",
+     "label": "e-İrsaliye (sevkiyat belgesi)",
+     "explanation": "Malın taşınması sırasında irsaliye elektronik düzenlenir. e-Fatura'ya kayıtlı ve brüt satış hasılatı 10 milyon TL ve üzeri olanlar için zorunludur; sektörel zorunluluklar ayrıca vardır.",
+     "scenario": "Fiziksel ürün sevkiyatı yapılan ve zorunluluk kapsamındaki şirketlerde.",
+     "example": "Kargoya verilen siparişte e-İrsaliye oluşur, fatura sonradan irsaliyeye bağlanır.",
+     "ruleDetail": "Sevkiyatta e-İrsaliye düzenlenecek ve faturaya irsaliye numarasıyla bağlanacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_method",
+   "section": "biz_einvoice",
+   "type": "select",
+   "label": "Entegrasyon Yöntemi",
+   "en": "Integration Method",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Sitenin faturayı GİB sistemine hangi yolla düzenleyeceği. 509 Sıra No'lu Tebliğ üç kullanım yöntemi tanımlar: GİB Portalı, özel entegratör ve doğrudan entegrasyon.",
+   "scenario": "Fatura hacmine, şirketin mevcut muhasebe yazılımına ve teknik kaynağa göre seçilir.",
+   "example": "Sipariş onaylanınca site entegratörün API'sine fatura verisini gönderir, entegratör belgeyi imzalayıp GİB'e iletir ve PDF'i döner.",
+   "rule": "e-Belge entegrasyon yöntemi: {label}.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi",
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani"
+   ],
+   "options": [
+    {
+     "value": "integrator",
+     "label": "GİB izinli özel entegratörün API'si (önerilen)",
+     "explanation": "Site, GİB listesindeki bir özel entegratörün API'siyle faturayı otomatik düzenler; imzalama, GİB'e iletim, e-Arşiv raporu ve saklama entegratördedir. Özel entegratörün yazılım ve donanımı Türkiye sınırları içinde olmak zorundadır.",
+     "scenario": "Sitede düzenli satış olan çoğu projede.",
+     "example": "Panelde \"Fatura: kesildi · e-Arşiv · 2026-000000123\" durumu ve PDF bağlantısı.",
+     "ruleDetail": "Faturalar GİB izinli özel entegratörün API'siyle sunucudan düzenlenecek; entegratör erişim bilgileri gizli değer olarak saklanacak, istemciye hiçbir zaman gönderilmeyecektir."
+    },
+    {
+     "value": "accounting",
+     "label": "Muhasebe / ön muhasebe ya da ERP yazılımının e-Belge modülü",
+     "explanation": "Site siparişi şirketin kullandığı muhasebe yazılımına aktarır; fatura o yazılımın (arkasındaki entegratörle) e-Belge modülünden kesilir.",
+     "scenario": "Şirket faturayı zaten bir muhasebe yazılımından kesiyorsa ve muhasebeci aynı yerde çalışmak istiyorsa.",
+     "example": "Sipariş muhasebe yazılımına \"satış faturası taslağı\" olarak düşer; onaylanınca e-Arşiv kesilir ve numarası siteye geri yazılır.",
+     "ruleDetail": "Siparişler muhasebe yazılımının API'sine aktarılacak, fatura numarası ve durumu geri okunup siparişe bağlanacaktır; aktarım idempotent olacaktır."
+    },
+    {
+     "value": "portal",
+     "label": "GİB e-Belge Portalı'nda elle",
+     "explanation": "Fatura GİB'in ücretsiz portalında elle düzenlenir; site yalnız fatura bilgisini hazırlar. Portal kullananların e-Arşiv raporu gönderme yükümlülüğü yoktur.",
+     "scenario": "Ayda birkaç satış olan çok küçük projelerde.",
+     "example": "Panelde \"Faturası kesilecek siparişler\" listesi; finans kullanıcısı portalda kesip numarayı panele girer.",
+     "ruleDetail": "Fatura GİB Portalı'nda elle düzenlenecek; site faturalanacak siparişleri listeleyecek, girilen fatura numarasını ve PDF'i siparişe bağlayacak ve 7 günlük düzenleme süresine yaklaşan siparişleri uyaracaktır."
+    },
+    {
+     "value": "direct",
+     "label": "Doğrudan GİB entegrasyonu (kendi bilgi işlem sistemi)",
+     "explanation": "Şirket kendi sistemini GİB'e doğrudan bağlar. GİB'in ciro, sektör, belge sayısı ve altyapı şartları aranır; entegrasyon başvurudan itibaren en geç 1 yılda tamamlanır.",
+     "scenario": "Çok yüksek hacimli ve GİB şartlarını sağlayan büyük şirketlerde.",
+     "example": "Şirketin kendi e-Belge servisi faturayı mali mühürle imzalar ve GİB'e iletir.",
+     "ruleDetail": "Doğrudan entegrasyon GİB'in şartlarına ve teknik kılavuzlarına göre ayrı bir servis olarak kurulacak; mali mühür anahtarı donanım güvenlik modülünde ya da eşdeğer korumada tutulacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_integrator",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Entegratör Seçim ve Sözleşme Ölçütleri",
+   "en": "Integrator Selection Criteria",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    },
+    {
+     "field": "ei_method",
+     "in": [
+      "integrator",
+      "accounting"
+     ]
+    }
+   ],
+   "explanation": "Özel entegratörde (ya da muhasebe yazılımının kullandığı entegratörde) aranacak teknik ve sözleşme şartları.",
+   "scenario": "Entegratör seçilirken ya da mevcut entegratörün siteye uygunluğu değerlendirilirken.",
+   "example": "Teklif tablosunda iki entegratör karşılaştırılır: API, test ortamı, SLA, saklama izni, KVKK sözleşmesi ve veri teslimi satırları.",
+   "rule": "Entegratörde aranacak şartlar: {labels}.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "options": [
+    {
+     "value": "listed",
+     "label": "GİB özel entegratör listesinde (önerilen)",
+     "explanation": "Entegratör GİB'in güncel e-Fatura ve e-Arşiv özel entegratör listelerinde yer alır.",
+     "scenario": "Her durumda.",
+     "example": "Sözleşmeden önce GİB listesi ekran görüntüsüyle kayda alınır.",
+     "ruleDetail": "Entegratör GİB'in güncel özel entegratör listelerinden seçilecek; listeden çıkarılma durumu yılda en az bir kez kontrol edilecektir."
+    },
+    {
+     "value": "api",
+     "label": "API, durum bildirimi ve kayıtlı kullanıcı sorgusu",
+     "explanation": "Fatura düzenleme, iptal, PDF / XML alma ve alıcının e-Fatura kaydını sorgulama API'leri; durum değişikliğinde bildirim (webhook) ya da sorgu.",
+     "scenario": "Otomatik faturalamada.",
+     "example": "Fatura \"GİB'e iletildi\" → \"Alıcıya ulaştı\" durumları panelde kendiliğinden güncellenir.",
+     "ruleDetail": "Entegratörün API'si düzenleme, iptal, belge alma ve kayıtlı kullanıcı sorgusu için kullanılacak; bildirimlerin imzası doğrulanacaktır."
+    },
+    {
+     "value": "sandbox",
+     "label": "Test ortamı ve test serisi",
+     "explanation": "Canlıdan ayrı test ortamı ve test belge serisi; geliştirme ve testlerde gerçek fatura kesilmez.",
+     "scenario": "Her durumda.",
+     "example": "Test ortamında kesilen faturalar \"TST\" serisiyle görünür.",
+     "ruleDetail": "Geliştirme ve test ortamları yalnız entegratörün test ortamına bağlanacak; canlı erişim bilgileri yalnız canlı ortamda bulunacaktır."
+    },
+    {
+     "value": "sla",
+     "label": "SLA, kesinti bildirimi ve destek",
+     "explanation": "Erişilebilirlik taahhüdü, planlı bakım duyurusu ve hata durumunda destek kanalı.",
+     "scenario": "Yüksek hacimli satışta.",
+     "example": "Entegratör bakım duyurusu e-postası finans ve teknik ekibe birlikte gider.",
+     "ruleDetail": "Entegratörün SLA ve kesinti bildirimleri izlenecek; kesinti süresince faturalar kuyrukta bekleyip sonra düzenlenecektir."
+    },
+    {
+     "value": "storage",
+     "label": "Saklama hizmeti ve GİB saklama izni",
+     "explanation": "e-Belgeler mali mühür ya da imzasıyla elektronik ortamda, Türkiye sınırları içinde saklanır; üçüncü kişide saklama için GİB saklama izni gerekir, asıl sorumluluk mükelleftedir.",
+     "scenario": "Saklama entegratöre bırakılacaksa.",
+     "example": "Sözleşmede \"belgeler 10 yıl, yurt içi veri merkezinde, GİB saklama izniyle\" maddesi.",
+     "ruleDetail": "Saklama entegratöre bırakılıyorsa saklama izni ve süresi sözleşmeye yazılacak; şirket belgelere süre boyunca erişebilecektir."
+    },
+    {
+     "value": "dpa",
+     "label": "KVKK veri işleyen sözleşmesi",
+     "explanation": "Entegratör faturadaki kişisel verileri (ad, T.C. kimlik numarası, adres, e-posta) şirket adına işler; veri işleyen sözleşmesi ve güvenlik tedbirleri yazılı olur.",
+     "scenario": "Bireysel alıcıya satış varsa.",
+     "example": "Sözleşme ekinde veri kategorileri, saklama süresi ve alt işleyenler.",
+     "ruleDetail": "Entegratörle KVKK veri işleyen sözleşmesi yapılacak; aydınlatma metninde fatura verisinin entegratör ve GİB ile paylaşıldığı belirtilecektir."
+    },
+    {
+     "value": "exit",
+     "label": "Veri teslimi ve entegratör değişikliği",
+     "explanation": "Entegratör değişirse geçmiş belgelerin XML ve PDF'lerinin toplu teslimi ve numaralandırmanın sürmesi.",
+     "scenario": "Uzun ömürlü projelerde.",
+     "example": "Sözleşmede \"ayrılışta 30 gün içinde bütün belgeler XML olarak teslim edilir\" maddesi.",
+     "ruleDetail": "Entegratör bağımlılığı adaptör katmanında tutulacak; entegratör değişikliği yalnız adaptörün değişmesini gerektirecektir."
+    }
+   ]
+  },
+  {
+   "id": "ei_trigger",
+   "section": "biz_einvoice",
+   "type": "select",
+   "label": "Faturanın Düzenlenme Anı",
+   "en": "When the Invoice Is Issued",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Faturanın siparişin hangi adımında düzenleneceği. Fatura teslim ya da hizmet tarihinden itibaren en geç 7 gün içinde düzenlenir; süresinde düzenlenmeyen fatura hiç düzenlenmemiş sayılır (VUK 231).",
+   "scenario": "Dijital hizmet, abonelik, fiziksel ürün ve kurumsal satışta farklı anlar uygun düşer.",
+   "example": "Abonelik yenilendiğinde ödeme onayıyla birlikte fatura kesilir; fiziksel üründe kargoya verildiği gün kesilir.",
+   "rule": "Fatura düzenleme anı: {label}. Her durumda fatura teslim ya da hizmet tarihinden itibaren en geç 7 gün içinde düzenlenir (VUK 231).",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "recommend": {
+    "field": "modules_extra",
+    "map": {
+     "subscription": [
+      "on_payment"
+     ],
+     "consulting": [
+      "on_payment"
+     ],
+     "lms": [
+      "on_payment"
+     ],
+     "ecommerce": [
+      "on_shipment"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "on_payment",
+     "label": "Ödeme onaylanınca otomatik (önerilen)",
+     "explanation": "Ödeme sağlayıcısı başarılı tahsilatı doğruladığında fatura kendiliğinden düzenlenir.",
+     "scenario": "Dijital ürün, abonelik, online danışmanlık, eğitim satışı.",
+     "example": "Ödeme sonrası onay e-postasında faturanın bağlantısı.",
+     "ruleDetail": "Fatura yalnız sunucuda doğrulanmış başarılı ödemeden sonra düzenlenecek; tarayıcıdan gelen \"ödendi\" bilgisine güvenilmeyecektir."
+    },
+    {
+     "value": "on_shipment",
+     "label": "Kargoya verilince",
+     "explanation": "Fiziksel üründe fatura sevkiyat anında düzenlenir; gönderim tarihi ve taşıyıcı bilgisi faturaya girer.",
+     "scenario": "Fiziksel ürün satılan e-ticarette.",
+     "example": "Depo \"Kargoya verildi\" işaretlediğinde fatura kesilir, paketle birlikte müşteriye e-postası gider.",
+     "ruleDetail": "Fatura sevkiyat kaydıyla düzenlenecek; gönderim tarihi ve taşıyıcı bilgisi sevkiyat kaydından alınacaktır."
+    },
+    {
+     "value": "approve",
+     "label": "Panelde onayla",
+     "explanation": "Fatura taslağı oluşur, finans kullanıcısı kontrol edip onaylar.",
+     "scenario": "Yüksek tutarlı ya da kurumsal satışta, özel fiyatlı siparişlerde.",
+     "example": "Panelde \"Onay bekleyen faturalar (4)\" listesi.",
+     "ruleDetail": "Fatura taslağı finans rolünün onayıyla düzenlenecek; onaylanmamış taslaklar 7 günlük süreye yaklaşınca uyarı üretecektir."
+    },
+    {
+     "value": "daily",
+     "label": "Gün sonunda toplu",
+     "explanation": "Günün siparişleri gece toplu faturalandırılır.",
+     "scenario": "Çok yüksek hacimde ve anlık fatura gerekmiyorsa.",
+     "example": "Her gece 23:30'da günün siparişleri faturalanır, sabah raporu gelir.",
+     "ruleDetail": "Toplu faturalama günlük çalışacak, her fatura gerçek düzenleme saatini taşıyacak; başarısız olanlar ertesi çalışmayı beklemeden yeniden denenecektir."
+    }
+   ]
+  },
+  {
+   "id": "ei_buyer",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Alıcı Bilgileri ve e-Fatura / e-Arşiv Yönlendirmesi",
+   "en": "Buyer Data and Routing",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Faturanın alıcısının bilgilerinin nasıl alınacağı ve faturanın e-Fatura mı e-Arşiv mi olacağına nasıl karar verileceği. Alıcı e-Fatura'ya kayıtlıysa e-Fatura, değilse e-Arşiv düzenlenir (509 Sıra No'lu Tebliğ).",
+   "scenario": "Ödeme adımında bireysel ve kurumsal müşteri ayrımı olan bütün projelerde.",
+   "example": "Ödeme adımında \"Kurumsal fatura istiyorum\" seçilince VKN, unvan ve vergi dairesi alanları açılır; VKN girilince sistem alıcının e-Fatura'ya kayıtlı olduğunu görür.",
+   "rule": "Alıcı bilgisi ve yönlendirme: {labels}.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "options": [
+    {
+     "value": "route",
+     "label": "Kayıtlı kullanıcı sorgusuyla otomatik seçim (önerilen)",
+     "explanation": "Fatura düzenlenirken alıcının VKN / TCKN'si GİB e-Fatura kayıtlı kullanıcı listesinde sorgulanır (entegratör API'si ya da GİB kullanıcı listesi).",
+     "scenario": "Hem bireysel hem kurumsal satışta.",
+     "example": "Aynı müşteri geçen ay e-Arşiv almışken e-Fatura'ya geçtiyse bu ay e-Fatura alır.",
+     "ruleDetail": "e-Fatura / e-Arşiv seçimi düzenleme anında kayıtlı kullanıcı sorgusuyla sunucuda yapılacak; sorgu sonucu yalnız kısa süre önbelleğe alınacak ve faturayla birlikte kaydedilecektir."
+    },
+    {
+     "value": "type",
+     "label": "Bireysel / kurumsal fatura seçimi",
+     "explanation": "Müşteri ödeme adımında bireysel ya da kurumsal fatura seçer.",
+     "scenario": "B2C ve B2B satışın birlikte olduğu sitelerde.",
+     "example": "\"Bireysel\" seçilince ad soyad ve T.C. kimlik numarası, \"Kurumsal\" seçilince unvan, VKN ve vergi dairesi istenir.",
+     "ruleDetail": "Ödeme adımında bireysel / kurumsal fatura seçimi olacak; kurumsal seçimde unvan, VKN ve vergi dairesi zorunlu tutulacaktır."
+    },
+    {
+     "value": "validate",
+     "label": "VKN / TCKN doğrulaması",
+     "explanation": "VKN 10, TCKN 11 hanedir; biçim ve kontrol hanesi sunucuda doğrulanır.",
+     "scenario": "Her durumda.",
+     "example": "Yanlış girilen TCKN'de \"Kimlik numarası geçersiz\" uyarısı.",
+     "ruleDetail": "VKN ve TCKN biçim ve kontrol hanesiyle sunucuda doğrulanacak; geçersiz numarayla fatura oluşturulmayacaktır."
+    },
+    {
+     "value": "no_tckn",
+     "label": "T.C. kimlik numarası vermeyen tüketici",
+     "explanation": "Tüketici TCKN paylaşmak istemiyorsa ya da TCKN'si yoksa GİB kılavuzundaki 11111111111 değeri kullanılabilir.",
+     "scenario": "Bireysel satışta TCKN'yi zorunlu tutmak istemiyorsanız.",
+     "example": "TCKN alanı boş bırakılınca faturada 11111111111 yazılır.",
+     "ruleDetail": "TCKN istenmeyecek ya da isteğe bağlı olacak; boşsa GİB kılavuzundaki 11111111111 değeri kullanılacak (uygulama mali müşavirle teyit edilir)."
+    },
+    {
+     "value": "foreign",
+     "label": "Yabancı alıcı",
+     "explanation": "Türkiye'de vergi numarası ya da TCKN'si olmayan alıcılar için kimlik / vergi alanının nasıl doldurulacağı mali müşavirin belirlediği kurala göre uygulanır.",
+     "scenario": "Yurt dışından bireysel ya da kurumsal müşteri varsa.",
+     "example": "Ülke \"Almanya\" seçilince vergi alanı yabancı alıcı kuralına göre doldurulur.",
+     "ruleDetail": "Yabancı alıcılar için kimlik, vergi ve adres alanları mali müşavirin belirlediği kurala göre doldurulacak; kural yapılandırmada tutulacaktır."
+    },
+    {
+     "value": "email",
+     "label": "E-posta zorunlu",
+     "explanation": "e-Arşiv faturanın elektronik iletimi için alıcının e-posta adresi zorunludur.",
+     "scenario": "İnternet satışında.",
+     "example": "Misafir alışverişte de e-posta alanı zorunlu.",
+     "ruleDetail": "Faturalanacak her siparişte alıcının e-posta adresi zorunlu tutulacaktır."
+    },
+    {
+     "value": "snapshot",
+     "label": "Fatura bilgisinin siparişte sabitlenmesi",
+     "explanation": "Fatura adı, adresi ve vergi bilgisi sipariş anında kopyalanır; müşteri profilini sonradan değiştirse de kesilen fatura değişmez.",
+     "scenario": "Her durumda.",
+     "example": "Müşteri adresini değiştirdiğinde eski siparişin faturası eski adresle kalır.",
+     "ruleDetail": "Fatura bilgileri sipariş anında siparişe kopyalanacak; profil değişikliği kesilmiş ya da kesilecek faturayı etkilemeyecektir."
+    }
+   ]
+  },
+  {
+   "id": "ei_content",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Fatura İçeriği ve Vergi Hesabı",
+   "en": "Invoice Content and Tax",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Faturaya girecek bilgiler ve vergi hesabının kuralları.",
+   "scenario": "Fiyat, KDV, indirim, tevkifat ya da döviz içeren her satışta.",
+   "example": "Faturada satır satır ürün, KDV oranı ve tutarı, indirim, toplam; altında \"Bu satış internet üzerinden yapılmıştır.\" ifadesi, web adresi, ödeme şekli ve tarihi, gönderim tarihi ve kargo firması.",
+   "rule": "Fatura içeriği: {labels}. Tutar, vergi ve indirim yalnız sunucuda, sipariş anındaki fiyatla hesaplanır; istemciden gelen tutar kullanılmaz.",
+   "agents": [
+    "poz:muhasebe:tax_compliance/vergi-muhasebesi-yoneticisi/vergi-muhasebesi-uzmani",
+    "poz:muhasebe:invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "recommend": {
+    "field": "modules_extra",
+    "map": {
+     "ecommerce": [
+      "vat",
+      "internet",
+      "time"
+     ],
+     "subscription": [
+      "vat",
+      "internet",
+      "time"
+     ],
+     "consulting": [
+      "vat",
+      "internet",
+      "time"
+     ],
+     "lms": [
+      "vat",
+      "internet",
+      "time"
+     ],
+     "booking": [
+      "vat",
+      "internet",
+      "time"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "vat",
+     "label": "Ürün / hizmet bazında KDV oranı (önerilen)",
+     "explanation": "Her ürün ya da hizmetin KDV oranı katalogda tutulur (genel oran %20, indirimli oranlar ürüne göre); satır bazında hesaplanır.",
+     "scenario": "Her durumda.",
+     "example": "Kitap %10, yazılım hizmeti %20 KDV ile aynı faturada.",
+     "ruleDetail": "KDV oranı ürün / hizmet kaydında tutulacak, satır bazında hesaplanıp yuvarlama tek bir kuralla yapılacak; oranlar mali müşavirin onayıyla güncellenecektir."
+    },
+    {
+     "value": "internet",
+     "label": "İnternet satışı bilgileri (önerilen)",
+     "explanation": "İnternetten satışta faturada \"Bu satış internet üzerinden yapılmıştır.\" ifadesi, satışın yapıldığı web adresi, ödeme şekli, ödeme tarihi, malın gönderildiği ya da hizmetin ifa edildiği tarih ve mal satışında taşıyıcının adı / unvanı ile VKN / TCKN'si bulunur; e-Arşiv raporundaki internet satışı bilgileriyle aynıdır.",
+     "scenario": "Sitede ödeme alınan her satışta.",
+     "example": "Fatura altında \"Ödeme: Kredi kartı · 12.11.2026 · Gönderim: 13.11.2026 · Kargo: X Kargo\".",
+     "ruleDetail": "İnternet satışı bilgileri (ifade, web adresi, ödeme şekli ve tarihi, gönderim / ifa tarihi, taşıyıcı adı ve VKN / TCKN'si) siparişten ve sevkiyattan otomatik doldurulacaktır."
+    },
+    {
+     "value": "time",
+     "label": "Düzenleme tarihi, saat ve dakikası",
+     "explanation": "e-Arşiv ve e-SMM'de düzenleme tarihiyle birlikte saat ve dakika zorunludur.",
+     "scenario": "Her durumda.",
+     "example": "\"Düzenleme: 13.11.2026 14:32\".",
+     "ruleDetail": "Faturaya gerçek düzenleme tarihi, saati ve dakikası Türkiye saatiyle yazılacaktır."
+    },
+    {
+     "value": "discount",
+     "label": "İndirim ve kupon satır bazında",
+     "explanation": "Kampanya, kupon ve indirim faturada satıra dağıtılmış olarak görünür.",
+     "scenario": "Kampanya ve kupon kullanılan sitelerde.",
+     "example": "\"%10 kupon\" satırların tutarına dağıtılır, toplam indirim ayrıca gösterilir.",
+     "ruleDetail": "İndirimler satırlara tek bir kuralla dağıtılacak ve faturadaki toplam ödeme kaydıyla kuruşu kuruşuna aynı olacaktır."
+    },
+    {
+     "value": "withholding",
+     "label": "Tevkifat",
+     "explanation": "KDV tevkifatı uygulanan hizmetlerde (alıcı kurumsalsa) fatura TEVKIFAT tipinde düzenlenir.",
+     "scenario": "Kurumsal alıcıya tevkifata tabi hizmet satılıyorsa.",
+     "example": "Kurumsal müşteriye kesilen hizmet faturasında KDV'nin bir kısmı tevkif edilir.",
+     "ruleDetail": "Tevkifat oranı ve kodu ürün / hizmet ve alıcı türüne göre mali müşavirin tanımladığı tablodan uygulanacaktır."
+    },
+    {
+     "value": "exemption",
+     "label": "İstisna, özel matrah ve ihraç kayıtlı",
+     "explanation": "KDV istisnası, özel matrah ya da ihraç kayıtlı satışta fatura ilgili tipte (ISTISNA, OZELMATRAH, IHRACKAYITLI) ve kodla düzenlenir.",
+     "scenario": "Bu tür satış varsa.",
+     "example": "İhraç kayıtlı satışta istisna kodu faturada görünür.",
+     "ruleDetail": "İstisna ve özel matrah kodları yapılandırmadan uygulanacak; kodlar UBL-TR kod listelerinin güncel sürümüne göre tutulacaktır."
+    },
+    {
+     "value": "currency",
+     "label": "Dövizli fatura",
+     "explanation": "Döviz cinsinden satışta tutarın TL karşılığı ve kullanılan kur faturada gösterilir; kur kaynağı mali müşavirle belirlenir.",
+     "scenario": "Yurt dışı ya da döviz fiyatlı satışta.",
+     "example": "\"100 EUR · Kur: 1 EUR = … TL\".",
+     "ruleDetail": "Dövizli faturada kur ve TL karşılığı belirlenen kaynaktan, düzenleme tarihine göre sunucuda alınacaktır."
+    },
+    {
+     "value": "ref",
+     "label": "Sipariş numarası ve ödeme referansı",
+     "explanation": "Faturada siparişin numarası ve ödeme işleminin referansı not olarak yer alır.",
+     "scenario": "Mutabakatı kolaylaştırmak için her durumda.",
+     "example": "Fatura notunda \"Sipariş #S-2026-10452 · Ödeme ref. 8F3K…\".",
+     "ruleDetail": "Sipariş numarası ve ödeme referansı faturaya not olarak yazılacak ve fatura kaydı siparişe bağlanacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_scenario",
+   "section": "biz_einvoice",
+   "type": "select",
+   "label": "e-Fatura Senaryosu",
+   "en": "e-Invoice Profile",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    },
+    {
+     "field": "ei_docs",
+     "in": [
+      "efatura"
+     ]
+    }
+   ],
+   "explanation": "e-Fatura'nın hangi senaryoyla gönderileceği. Temel faturada alıcı sistem üzerinden kabul ya da ret yanıtı veremez; ticari faturada alıcı iletimden itibaren 8 gün içinde ret yanıtı verebilir.",
+   "scenario": "Kurumsal müşterilere e-Fatura gönderiliyorsa.",
+   "example": "Ticari senaryoda kurumsal müşteri faturayı reddederse panelde \"Reddedildi\" durumu ve gerekçe görünür.",
+   "rule": "e-Fatura senaryosu: {label}.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+    "poz:muhasebe:invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani"
+   ],
+   "options": [
+    {
+     "value": "temel",
+     "label": "Temel fatura (TEMELFATURA) (önerilen)",
+     "explanation": "Alıcı sistem üzerinden kabul / ret yanıtı veremez; itiraz noter, taahhütlü mektup, telgraf ya da KEP gibi harici yollarla yapılır.",
+     "scenario": "Standart satışlarda.",
+     "example": "Fatura gönderildiği anda kesinleşmiş sayılır.",
+     "ruleDetail": "e-Faturalar TEMELFATURA senaryosuyla gönderilecektir."
+    },
+    {
+     "value": "ticari",
+     "label": "Ticari fatura (TICARIFATURA)",
+     "explanation": "Alıcı iletimden itibaren 8 gün içinde ret yanıtı verebilir; panel yanıtı izler.",
+     "scenario": "Kurumsal müşteriyle anlaşmaya göre kabul / ret süreci isteniyorsa.",
+     "example": "Panelde \"Yanıt bekleniyor (5 gün kaldı)\".",
+     "ruleDetail": "e-Faturalar TICARIFATURA senaryosuyla gönderilecek; alıcının yanıtı izlenecek, ret durumunda finans ekibine görev açılacaktır."
+    },
+    {
+     "value": "per_customer",
+     "label": "Müşteriye göre",
+     "explanation": "Senaryo kurumsal müşteri kaydındaki tercihe göre seçilir.",
+     "scenario": "Farklı müşterilerle farklı anlaşmalar varsa.",
+     "example": "Müşteri kartında \"e-Fatura senaryosu: Ticari\".",
+     "ruleDetail": "Senaryo kurumsal müşteri kaydındaki ayara göre seçilecek; ayar yoksa TEMELFATURA kullanılacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_corrections",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "İptal, İade ve Düzeltme",
+   "en": "Cancellation, Returns and Corrections",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Kesilmiş faturada hata, iade ya da sipariş iptali olduğunda izlenecek yol. Kesilmiş mali belge değiştirilmez.",
+   "scenario": "İade ve iptal olan her satışta.",
+   "example": "Müşteri ürünü iade edince sipariş \"İade edildi\" olur, ödeme iadesi ve faturanın iptali ya da iade faturası birbirine bağlı kayıtlarla izlenir.",
+   "rule": "İptal, iade ve düzeltme: {labels}. Kesilmiş fatura hiçbir durumda düzenlenmez; düzeltme iptal ve yeni belgeyle yapılır.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/satis-faturalama-yoneticisi/fatura-kontrol-uzmani",
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-fatura-uzmani",
+    "poz:ic-denetim:07.02/muhasebe-ve-mali-surecler-denetimi/e-belge-ve-mali-sistemler-denetcisi"
+   ],
+   "options": [
+    {
+     "value": "cancel",
+     "label": "8 gün içinde iptal (önerilen)",
+     "explanation": "e-Arşiv ve e-SMM, alıcıya iletildiği tarihten itibaren 8 gün içinde iptal edilebilir (entegratör üzerinden GİB'e iptal raporu; portal kullanıcıları portaldan). e-Fatura iptali de 8 gün içinde GİB'in e-Fatura İptal / İtiraz Portalı'ndan yapılır.",
+     "scenario": "Hatalı kesilen ya da ödemesi iade edilen faturada.",
+     "example": "Panelde \"Faturayı iptal et\" düğmesi 8. günden sonra pasif, yerine \"İade süreci başlat\".",
+     "ruleDetail": "İptal yalnız finans rolüyle, gerekçe girilerek ve 8 günlük süre içinde yapılacak; süre dolmuşsa iptal düğmesi yerine iade süreci önerilecektir."
+    },
+    {
+     "value": "return",
+     "label": "İade",
+     "explanation": "İnternet satışı e-Arşiv faturasında iade bölümü bulunur; alıcı e-Fatura'ya kayıtlıysa iade, alıcının düzenleyeceği iade faturasıyla (IADE tipi) karşılanır. Uygulama mali müşavirle teyit edilir.",
+     "scenario": "Ürün iadesi olan e-ticarette.",
+     "example": "Kurumsal müşterinin gönderdiği iade faturası siparişe bağlanır.",
+     "ruleDetail": "İade, faturanın türüne göre (e-Arşiv iade bölümü ya da alıcının iade faturası) işlenecek; iade belgesi, ödeme iadesi ve sipariş birbirine bağlanacaktır."
+    },
+    {
+     "value": "partial",
+     "label": "Kısmi iade",
+     "explanation": "Siparişin bir kısmı iade edildiğinde yalnız o satırlar için işlem yapılır.",
+     "scenario": "Çok ürünlü siparişlerde.",
+     "example": "3 üründen 1'i iade edilince yalnız o satırın tutarı iade edilir.",
+     "ruleDetail": "Kısmi iade satır bazında hesaplanacak ve ödeme iadesiyle aynı tutarda olacaktır."
+    },
+    {
+     "value": "reissue",
+     "label": "Hatalı faturada iptal + yeni fatura",
+     "explanation": "Yanlış unvan, adres ya da tutarla kesilen fatura iptal edilip doğrusu yeniden kesilir; iki kayıt birbirine bağlanır.",
+     "scenario": "Fatura bilgisi hatalı girildiğinde.",
+     "example": "Panelde \"Bu fatura 2026-…124 ile değiştirildi\" bağlantısı.",
+     "ruleDetail": "Düzeltme iptal ve yeni faturayla yapılacak; eski ve yeni belge birbirine bağlanacak ve denetim kaydına yazılacaktır."
+    },
+    {
+     "value": "objection",
+     "label": "İtirazların kaydı",
+     "explanation": "Alıcının itirazları (e-Fatura'da harici yollar, e-Arşiv'de GİB'e bildirim) kayıt altına alınır. Ticari ilişkide 8 gün içinde itiraz edilmeyen fatura içeriği kabul edilmiş sayılır (TTK 21).",
+     "scenario": "Kurumsal satışta.",
+     "example": "Panelde itiraz tarihi, kanalı ve sonucu.",
+     "ruleDetail": "Faturaya yapılan itirazlar tarih, kanal ve sonuçla faturaya bağlı kaydedilecektir."
+    }
+   ]
+  },
+  {
+   "id": "ei_delivery",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Alıcıya İletim ve Müşteri Paneli",
+   "en": "Delivery to Buyer",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Faturanın alıcıya nasıl ulaştırılacağı. İnternetten satışta e-Arşiv faturanın alıcıya elektronik iletilmesi zorunludur.",
+   "scenario": "Her satışta.",
+   "example": "Ödeme sonrası e-postada \"Faturanızı görüntüleyin\" bağlantısı; müşteri panelinde \"Faturalarım\" listesi.",
+   "rule": "Faturanın alıcıya iletimi: {labels}.",
+   "agents": [
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "options": [
+    {
+     "value": "email",
+     "label": "E-posta ile (önerilen)",
+     "explanation": "Fatura PDF'i ve bağlantısı alıcının e-posta adresine gönderilir.",
+     "scenario": "Her durumda.",
+     "example": "\"Faturanız hazır\" e-postası.",
+     "ruleDetail": "e-Arşiv fatura alıcıya e-postayla elektronik iletilecek; gönderim ve teslim durumu faturaya kaydedilecektir."
+    },
+    {
+     "value": "portal",
+     "label": "Müşteri panelinde \"Faturalarım\"",
+     "explanation": "Müşteri geçmiş faturalarını panelden görüntüler ve indirir.",
+     "scenario": "Üyelik ya da müşteri portalı varsa.",
+     "example": "Faturalarım: tarih, numara, tutar, PDF indir.",
+     "ruleDetail": "Müşteri yalnız kendi faturalarını görecek; her istekte sahiplik sunucuda denetlenecektir (IDOR)."
+    },
+    {
+     "value": "xml",
+     "label": "UBL-TR XML indirme",
+     "explanation": "Kurumsal müşteri faturanın XML'ini de indirebilir.",
+     "scenario": "Kurumsal müşteri varsa.",
+     "example": "Fatura satırında \"XML indir\".",
+     "ruleDetail": "Faturanın UBL-TR XML'i yalnız fatura sahibine sunulacaktır."
+    },
+    {
+     "value": "sms",
+     "label": "SMS ile bağlantı",
+     "explanation": "Fatura bağlantısı SMS ile de gönderilir.",
+     "scenario": "E-postayı az kullanan müşteri kitlesinde.",
+     "example": "\"Faturanız: kısa bağlantı\" SMS'i.",
+     "ruleDetail": "SMS'teki bağlantı süreli ve tahmin edilemez olacak, faturanın içeriği SMS'e yazılmayacaktır."
+    },
+    {
+     "value": "signed",
+     "label": "Süreli ve imzalı fatura bağlantıları",
+     "explanation": "E-posta ve SMS'teki bağlantılar tahmin edilemez, süreli ve imzalıdır; fatura numarasıyla erişilemez.",
+     "scenario": "Her durumda.",
+     "example": "Süresi dolan bağlantıda \"Faturanızı panelden indirebilirsiniz\".",
+     "ruleDetail": "Fatura dosyalarına yalnız imzalı, süreli bağlantıyla ya da oturumlu sahiplik denetimiyle erişilecektir."
+    }
+   ]
+  },
+  {
+   "id": "ei_ops",
+   "section": "biz_einvoice",
+   "type": "multiselect",
+   "label": "Güvenilirlik, Mutabakat ve Saklama",
+   "en": "Reliability, Reconciliation and Retention",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Fatura sürecinin hatasız, tekrarsız ve denetlenebilir çalışması için operasyon kuralları.",
+   "scenario": "Otomatik faturalamanın olduğu her projede.",
+   "example": "Finans panosunda \"Bugün: 214 ödeme · 214 fatura · 0 hata · e-Arşiv raporu iletildi\".",
+   "rule": "Fatura operasyonu: {labels}.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi",
+    "poz:muhasebe:invoicing_ebilling/e-fatura-ve-e-arsiv-operasyonlari-yoneticisi/e-arsiv-ve-entegrasyon-uzmani",
+    "poz:ic-denetim:07.02/muhasebe-ve-mali-surecler-denetimi/e-belge-ve-mali-sistemler-denetcisi"
+   ],
+   "options": [
+    {
+     "value": "idempotent",
+     "label": "Sipariş başına tek fatura (önerilen)",
+     "explanation": "Aynı sipariş ya da tahsilat için ikinci fatura oluşmaz; ödeme geri çağrısı tekrar gelse de sonuç aynıdır.",
+     "scenario": "Her durumda.",
+     "example": "Ödeme geri çağrısı iki kez gelir, tek fatura oluşur.",
+     "ruleDetail": "Fatura düzenleme sipariş / tahsilat kimliğinden türeyen idempotency anahtarıyla yapılacak; veritabanında sipariş başına tekil kısıt bulunacaktır."
+    },
+    {
+     "value": "queue",
+     "label": "Kuyruk, yeniden deneme ve hata kutusu",
+     "explanation": "Fatura işi arka plan kuyruğunda çalışır; entegratör hatasında artan aralıklarla yeniden denenir, kalıcı hatalar hata kutusuna düşer.",
+     "scenario": "Her durumda.",
+     "example": "Entegratör 10 dakika erişilemez; siparişler alınmaya devam eder, faturalar sonra kesilir.",
+     "ruleDetail": "Fatura düzenleme kuyruktan çalışacak; geçici hatada üstel aralıkla yeniden denenecek, kalıcı hatada iş hata kutusuna alınıp finans ekibine bildirilecektir."
+    },
+    {
+     "value": "status",
+     "label": "Durum takibi",
+     "explanation": "Faturanın durumu (oluşturuldu, GİB'e iletildi, alıcıya ulaştı, reddedildi, iptal) entegratörden izlenir.",
+     "scenario": "Her durumda.",
+     "example": "Panelde fatura durum zaman çizelgesi.",
+     "ruleDetail": "Fatura durumları entegratör bildirimiyle ya da düzenli sorguyla güncellenecek ve siparişte gösterilecektir."
+    },
+    {
+     "value": "reconcile",
+     "label": "Günlük mutabakat",
+     "explanation": "Her gün ödemeler, faturalar ve GİB'e iletilen e-Arşiv raporu karşılaştırılır. Portal dışı yöntemde e-Arşiv raporu günlük, en geç izleyen günün sonuna kadar GİB'e iletilir.",
+     "scenario": "Her durumda.",
+     "example": "Sabah raporu: \"Dün 3 ödemenin faturası yok\" uyarısı.",
+     "ruleDetail": "Ödeme, fatura ve e-Arşiv raporu her gün mutabık tutulacak; eşleşmeyen kayıtlar finans ekibine görev olarak açılacaktır."
+    },
+    {
+     "value": "deadline",
+     "label": "7 gün süresi alarmı",
+     "explanation": "Teslim ya da hizmet tarihinden itibaren 7 gün dolmadan kesilmemiş siparişler uyarı üretir.",
+     "scenario": "Elle onay ya da kargo sonrası faturalamada.",
+     "example": "\"2 siparişin faturalama süresi yarın doluyor\" bildirimi.",
+     "ruleDetail": "Kesilmemiş siparişler için 7 günlük düzenleme süresi dolmadan finans ekibine uyarı gönderilecektir."
+    },
+    {
+     "value": "retention",
+     "label": "Saklama ve erişim",
+     "explanation": "e-Belgeler Türkiye'de, elektronik ortamda, mali mühür / imzasıyla saklanır; VUK'a göre 5, TTK'ya göre 10 yıl. Site, belgelerin numarasını ve bağlantısını süre boyunca tutar.",
+     "scenario": "Her durumda.",
+     "example": "10 yıl önceki bir siparişin faturası panelden bulunabilir.",
+     "ruleDetail": "Fatura kayıtları ve belgelere erişim en az 10 yıl korunacak; belgeler Türkiye'de saklanacak, silme yalnız süre dolunca ve imha prosedürüyle yapılacaktır."
+    },
+    {
+     "value": "roles",
+     "label": "Yetki ve denetim kaydı",
+     "explanation": "Fatura kesme, iptal ve iade yalnız finans rolündedir; her işlem kim, ne zaman, neden bilgisiyle kaydedilir.",
+     "scenario": "Her durumda.",
+     "example": "Denetim kaydında \"İptal · A. Yılmaz · 13.11.2026 10:12 · Gerekçe: yanlış unvan\".",
+     "ruleDetail": "Fatura işlemleri rol bazlı yetkiyle yapılacak ve değiştirilemez denetim kaydına yazılacak; İş Akışları ve Onay Mekanizmaları modülü etkinse iptal ve iade onaya tabi olacaktır."
+    },
+    {
+     "value": "secrets",
+     "label": "Gizli değerler ve kişisel veri",
+     "explanation": "Entegratör erişim bilgisi ve mali mühür bilgisi gizli değer kasasında tutulur; T.C. kimlik numarası, adres gibi veriler log'a ve hata mesajına yazılmaz.",
+     "scenario": "Her durumda.",
+     "example": "Hata kaydında yalnız sipariş kimliği ve hata kodu görünür.",
+     "ruleDetail": "Entegratör anahtarları gizli değer kasasında tutulacak; fatura verisindeki kişisel veriler log, hata izleme ve analitik araçlarına gönderilmeyecektir."
+    },
+    {
+     "value": "updates",
+     "label": "Mevzuat ve teknik kılavuz takibi",
+     "explanation": "GİB duyuruları (kod listeleri, kullanıcı listesi, raporlama değişiklikleri) düzenli izlenir; örneğin GİB yeni e-Arşiv raporlama uygulamasını 2026 sonunda teste almıştır.",
+     "scenario": "Her durumda.",
+     "example": "Üç ayda bir \"e-Belge değişiklik kontrolü\" görevi.",
+     "ruleDetail": "GİB e-Belge duyuruları ve entegratör sürüm notları en az üç ayda bir gözden geçirilecek, gereken değişiklikler test ortamında doğrulandıktan sonra canlıya alınacaktır."
+    }
+   ]
+  },
+  {
+   "id": "ei_accounting",
+   "section": "biz_einvoice",
+   "type": "select",
+   "label": "Muhasebe Aktarımı",
+   "en": "Accounting Export",
+   "showIf": [
+    {
+     "field": "modules_extra",
+     "in": [
+      "einvoice"
+     ]
+    }
+   ],
+   "explanation": "Kesilen faturaların şirketin muhasebe kayıtlarına nasıl aktarılacağı.",
+   "scenario": "Muhasebe şirket içinde ya da bir mali müşavir tarafından tutuluyorsa.",
+   "example": "Ay sonunda mali müşavir faturaları entegratörden ya da muhasebe yazılımından doğrudan alır.",
+   "rule": "Muhasebe aktarımı: {label}.",
+   "agents": [
+    "poz:muhasebe:general_accounting_closing/genel-muhasebe-yoneticisi/genel-muhasebe-uzmani",
+    "poz:bilgi-teknolojileri:15.05/entegrasyon-ve-api-yonetimi/kidemli-entegrasyon-muhendisi"
+   ],
+   "options": [
+    {
+     "value": "integrator",
+     "label": "Entegratörden muhasebe yazılımına (önerilen)",
+     "explanation": "Muhasebe yazılımı faturaları entegratörden kendisi alır; site ek aktarım yapmaz.",
+     "scenario": "Entegratör ile muhasebe yazılımı bağlıysa.",
+     "example": "Mali müşavir faturaları yazılımında hazır bulur.",
+     "ruleDetail": "Faturalar muhasebeye entegratör üzerinden aktarılacak; site yalnız sipariş ve ödeme referanslarını faturaya yazacaktır."
+    },
+    {
+     "value": "erp",
+     "label": "Sitenin ERP / muhasebe API'sine aktarması",
+     "explanation": "Site sipariş, fatura ve ödeme kayıtlarını muhasebe ya da ERP yazılımının API'sine gönderir.",
+     "scenario": "Şirketin ERP'si varsa.",
+     "example": "Her fatura ERP'de cari hesaba işlenir.",
+     "ruleDetail": "Fatura ve ödeme kayıtları ERP API'sine idempotent olarak aktarılacak, aktarım hataları yeniden denenecektir."
+    },
+    {
+     "value": "export",
+     "label": "Dönemsel dışa aktarma",
+     "explanation": "Finans kullanıcısı dönem sonunda fatura listesini dışa aktarıp mali müşavire iletir.",
+     "scenario": "Küçük işletmelerde.",
+     "example": "Panelde \"Ekim 2026 faturalarını indir (Excel)\".",
+     "ruleDetail": "Panelde tarih aralığına göre fatura ve ödeme listesi dışa aktarılabilecek; dosya yalnız finans rolüne açık olacaktır."
+    }
+   ]
   }
  ],
  "fields_into": [
@@ -7281,6 +8257,16 @@
     "scenario": "Hoş geldin, sepet terki, teklif takibi, yeniden kazanım gibi tekrarlayan iletişimlerin elle değil otomatik yapılması isteniyorsa.",
     "example": "Panelde akış düzenleyici: Form gönderildi → 1 gün bekle → izin varsa e-posta → satış temsilcisine görev."
    }
+  },
+  {
+   "field": "modules_extra",
+   "option": {
+    "value": "einvoice",
+    "label": "E-Fatura / E-Arşiv entegrasyonu",
+    "explanation": "Sitede yapılan satış, abonelik tahsilatı ya da danışmanlık ödemesinden sonra faturanın GİB izinli bir özel entegratör (ya da muhasebe yazılımı) üzerinden otomatik düzenlendiği, alıcıya göre e-Fatura ya da e-Arşiv Fatura seçildiği, alıcıya elektronik iletildiği, iptal / iade ve mutabakatın izlendiği modül. Seçilince İş Modülleri › E-Fatura ve E-Arşiv Entegrasyonu bölümündeki kararlar açılır.",
+    "scenario": "Sitede ödeme alınan her proje: e-ticaret, abonelik, online danışmanlık, eğitim ya da rezervasyon satışı. 1 Ocak 2026'dan beri e-Fatura'ya kayıtlı olmayan mükellefler de tutarına bakılmaksızın bütün faturalarını e-Arşiv olarak düzenliyor (basit usul ve işletme hesabı mükellefleri için 1 Ocak 2027); faturayı elle kesmek sipariş hacmi arttıkça gecikme ve hata üretir.",
+    "example": "Ödeme onaylanınca müşteriye \"Siparişiniz alındı\" e-postasıyla birlikte e-Arşiv faturasının PDF'i ve bağlantısı gider; kurumsal müşterinin VKN'si e-Fatura listesinde kayıtlıysa fatura GİB üzerinden e-Fatura olarak gönderilir, müşteri panelinde \"Faturalarım\" listesinde görünür."
+   }
   }
  ],
  "guide_add": {
@@ -7439,7 +8425,8 @@
     "SaaS": [
      "subscription",
      "ticket",
-     "notify"
+     "notify",
+     "einvoice"
     ],
     "Web App": [
      "notify"
@@ -7453,14 +8440,17 @@
     ],
     "E-commerce": [
      "notify",
-     "mailing"
+     "mailing",
+     "einvoice"
     ],
     "Marketplace": [
      "ticket",
-     "notify"
+     "notify",
+     "einvoice"
     ],
     "B2B Platform": [
-     "ticket"
+     "ticket",
+     "einvoice"
     ],
     "Booking": [
      "notify"
@@ -7479,6 +8469,7 @@
   "parca_cms_mobil.py",
   "parca_guvenlik.py",
   "parca_is_1.py",
-  "parca_is_2.py"
+  "parca_is_2.py",
+  "parca_is_3.py"
  ]
 }

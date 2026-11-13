@@ -19,7 +19,8 @@ ORDER = [
     ('biz_survey', 'biz_ticket'),             # B3
     ('biz_subscription', 'biz_survey'),       # B4
     ('biz_consulting', 'biz_subscription'),   # B5
-    ('biz_certificates', 'biz_consulting'),   # B11
+    ('biz_einvoice', 'biz_consulting'),       # E-Fatura / E-Arşiv (2026-11-13, kullanıcı isteği)
+    ('biz_certificates', 'biz_einvoice'),     # B11
     ('biz_notify', 'biz_certificates'),       # B6
     ('biz_mailing', 'biz_notify'),            # B7
     ('biz_social', 'biz_mailing'),            # B8
@@ -28,13 +29,13 @@ ORDER = [
 
 # Proje Türü → yeni Ek Modüller önerisi (var olan öneri haritasına eklenir)
 REC_ADD = {
-    'SaaS': ['subscription', 'ticket', 'notify'],
+    'SaaS': ['subscription', 'ticket', 'notify', 'einvoice'],
     'Web App': ['notify'],
     'Portal': ['ticket', 'notify'],
     'Community': ['notify'],
-    'E-commerce': ['notify', 'mailing'],
-    'Marketplace': ['ticket', 'notify'],
-    'B2B Platform': ['ticket'],
+    'E-commerce': ['notify', 'mailing', 'einvoice'],
+    'Marketplace': ['ticket', 'notify', 'einvoice'],
+    'B2B Platform': ['ticket', 'einvoice'],
     'Booking': ['notify'],
     'LMS': ['certificates', 'notify'],
     'Knowledge Base': ['ticket'],
