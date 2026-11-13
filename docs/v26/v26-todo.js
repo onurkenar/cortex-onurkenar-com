@@ -30,7 +30,7 @@ const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pa
   mk_ads_pacing:{weekly:"1w",biweekly:"2w",monthly:"1m"},
   mk_report_rhythm:{weekly_monthly:"1w",monthly:"1m",campaign:"camp"},
   mk_backup:{shared:"1w"},
-  mk_post_times:{data:"1m"}},
+  mk_post_times:{data:"1m"},mk_st_audit_freq:{weekly:"1w",monthly:"1m",release:"rel"}},
  /* metninde sıklık yazan seçenekler ("dönemsel" → 3 ay, kullanıcı kararı) */
  RO={"privacy_retention|periodic_auto":"6m","privacy_retention|archive":"6m","yz_bots_train|allow":"1y","yz_cg_claim|wait":"1m",
   "yz_meta_ai|use":"1w","yz_meta_ai|waitlist":"1m","pentest_executor|hybrid":"1y","pentest_schedule|annual":"1y","pentest_schedule|ci_dast":"rel",
@@ -45,7 +45,7 @@ const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pa
   "yz_google|merchant":"1w","yz_microsoft|bwt":"1m","yz_as_rules|quality":"1w","yz_monitor_set|hub_insights":"1m","yz_monitor_set|bing_ai":"1m",
   "yz_monitor_set|prompt_tests":"1m","yz_monitor_set|quarterly":"3m","yz_cg_ops|insights":"1m","sv_triggers|periodic":"3m","ml_deliverability|spf_dkim":"3m",
   "mk_measure_scope|social":"3m","mk_post_check|d7":"camp","mk_post_check|month":"1m","mk_gads_structure|location_service":"3m",
-  "mk_report_outputs|exec":"1m","mk_platforms|google":"1w"},
+  "mk_report_outputs|exec":"1m","mk_platforms|google":"1w","mk_st_access|review":"3m","mk_st_access|billing":"1y","mk_st_links|monitor":"1m","mk_st_kw_source|gsc":"3m","mk_st_comp|visibility":"3m","mk_st_comp|market":"3m"},
  TD={q:"",f:"all",a:"all"},
  pad=n=>String(n).padStart(2,"0"),
  fmt=x=>x.getFullYear()+"-"+pad(x.getMonth()+1)+"-"+pad(x.getDate()),

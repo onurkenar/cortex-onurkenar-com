@@ -1,0 +1,2004 @@
+{
+ "version": 1,
+ "group": "SEO Araçları",
+ "sections": [
+  {
+   "id": "mk_st_scope",
+   "after": "mk_measure",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "⌕",
+   "name": "Araç Seçimi & Hesap Yönetimi",
+   "en": "SEO Tools: Selection & Accounts",
+   "desc": "Ahrefs, Semrush ve benzeri SEO araçlarından hangilerinin kullanılacağı, hesapların kime ait olacağı ve erişim kuralları.",
+   "refs": [
+    "mk_brand_name",
+    "domain_name"
+   ],
+   "guide": {
+    "purpose": "SEO araçları (Ahrefs, Semrush, SE Ranking, Similarweb, Moz, Sistrix, Majestic, Screaming Frog) anahtar kelime, rakip, backlink, sıralama ve teknik tarama verisi sağlar. Bu bölüm hangi aracın ne için kullanılacağını, hesabın şirkete ait olmasını ve erişimin kontrollü verilmesini kararlaştırır. Araçların trafik, hacim ve backlink sayıları kendi veri tabanlarına dayanan tahminlerdir; sitenin gerçek verisi Google Search Console ve GA4'tedir (5. Google menüsü).",
+    "criteria": [
+     "Her aracın kullanım amacı yazılıdır (teknik tarama, sıralama takibi, rakip, backlink); aynı iş için iki ücretli araç alınmaz.",
+     "Hesaplar şirket adına, kurumsal e-posta ile açılır; plan sahibi ve yenileme tarihi kayıtlıdır.",
+     "Her kullanıcı kendi koltuğuyla girer; ortak şifre yoktur, iki adımlı doğrulama açıktır.",
+     "Ayrılan çalışanın ve biten ajans sözleşmesinin erişimi aynı gün kaldırılır.",
+     "API / MCP birim kotası izlenir; aylık kullanım sınırı belirlenmiştir.",
+     "Raporlarda aracın verisi \"tahmin\" etiketiyle, Search Console verisinden ayrı verilir."
+    ],
+    "pitfalls": [
+     "Ajansın ya da serbest çalışanın kişisel hesabında kurulan proje, iş bitince geçmiş verisiyle birlikte kaybolur.",
+     "Aracın \"organik trafik\" tahmini sitenin gerçek trafiği sanılıp hedef ve bütçe buna göre konur.",
+     "Ücretsiz Ahrefs Webmaster Tools ve Search Console yeterliyken ücretli plan alınır.",
+     "Koltuk sayısı ortak şifreyle aşılır; sağlayıcının kullanım koşulları çiğnenir ve hesap kilitlenebilir.",
+     "API / MCP anahtarı koda, dokümana ya da sohbet geçmişine yazılır.",
+     "Plan yenileme tarihi takip edilmez; sıralama geçmişi ve proje ayarları plan düşünce kaybolur."
+    ],
+    "resources": [
+     {
+      "title": "Ahrefs Webmaster Tools",
+      "url": "https://ahrefs.com/webmaster-tools",
+      "note": "Ücretsiz sürümün kapsamı ve sınırları (Site Audit, Site Explorer, Web Analytics)."
+     },
+     {
+      "title": "Ahrefs — Kullanıcı ekleme ve roller",
+      "url": "https://help.ahrefs.com/en/articles/411099-how-do-i-add-and-manage-users-to-my-account-s-workspace",
+      "note": "Çalışma alanına kullanıcı ekleme ve Owner / Admin / Member rolleri."
+     },
+     {
+      "title": "Ahrefs — İki adımlı doğrulama",
+      "url": "https://help.ahrefs.com/en/articles/8755828-two-factor-authentication-2fa",
+      "note": "Kimlik doğrulayıcı uygulama ya da güvenlik anahtarıyla 2FA ve zorunlu kılma."
+     },
+     {
+      "title": "Semrush — Abonelikler ve ücretsiz hesap",
+      "url": "https://www.semrush.com/kb/1011-subscriptions",
+      "note": "Planlar ve ücretsiz hesabın sınırları."
+     },
+     {
+      "title": "Semrush — Kullanıcı yönetimi",
+      "url": "https://www.semrush.com/kb/1409-user-management",
+      "note": "Owner / Admin / User / Guest rolleri, koltuk ve paylaşım."
+     },
+     {
+      "title": "Semrush — SAML SSO",
+      "url": "https://www.semrush.com/kb/1609-saml-sso",
+      "note": "Kurumsal tekil oturum açma kurulumu."
+     },
+     {
+      "title": "Similarweb — Planlar",
+      "url": "https://www.similarweb.com/corp/pricing/",
+      "note": "Ücretsiz örnek veri ile ücretli planların kapsamı."
+     },
+     {
+      "title": "SE Ranking — Planlar",
+      "url": "https://seranking.com/pricing.html",
+      "note": "Deneme süresi ve Search Console / GA4 entegrasyonunun yer aldığı planlar."
+     },
+     {
+      "title": "Moz Pro — Planlar",
+      "url": "https://moz.com/products/pro/pricing",
+      "note": "Moz Pro planları ve ücretsiz topluluk hesabı."
+     },
+     {
+      "title": "Moz Local — Kapsanan ülkeler",
+      "url": "https://moz.com/products/local/pricing",
+      "note": "Moz Local'in yalnız ABD, Birleşik Krallık ve Kanada'da çalıştığı."
+     },
+     {
+      "title": "Screaming Frog SEO Spider",
+      "url": "https://www.screamingfrog.co.uk/seo-spider/",
+      "note": "Masaüstü tarayıcı; ücretsiz sürümün 500 adres sınırı."
+     },
+     {
+      "title": "Mangools MCP ve ücretsiz hesap",
+      "url": "https://mangools.com/mcp",
+      "note": "Mangools araçları, ücretsiz hesap sınırları ve MCP sunucusu."
+     }
+    ]
+   }
+  },
+  {
+   "id": "mk_st_setup",
+   "after": "mk_st_scope",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "⊕",
+   "name": "Proje Kurulumu & Doğrulama",
+   "en": "SEO Tools: Project Setup & Verification",
+   "desc": "SEO aracında projenin hangi alan adı kapsamıyla açılacağı, site sahipliğinin nasıl doğrulanacağı ve hangi Google hizmetlerine bağlanacağı.",
+   "refs": [
+    "domain_name",
+    "staging_url",
+    "mk_ids"
+   ],
+   "guide": {
+    "purpose": "SEO aracında proje, sitenin aracın içindeki karşılığıdır: tarama, sıralama takibi ve raporlar projeye bağlıdır. Kapsam (alan adı, alt alan adları, klasör) yanlış seçilirse tarama eksik ya da fazla yapılır, sıralama yanlış adresle eşleşir. Ahrefs'te site sahipliğinin doğrulanması ücretsiz ek kredi ve robots.txt'yi aşma gibi seçenekler açar; Semrush'ta proje için doğrulama gerekmez, yalnız engellenen sayfaları taramak için doğrulama dosyası kullanılır.",
+    "criteria": [
+     "Proje alan adı Ortak Bilgiler › Canlı Site Adresi'yle (www dahil) aynıdır.",
+     "Kapsam bilinçli seçilmiştir: blog ya da mağaza alt alan adındaysa kapsamdadır, hazırlık sitesi ayrıdır.",
+     "Ahrefs projesi Search Console bağlantısıyla doğrulanmıştır.",
+     "Search Console bağlantısı yalnız gereken mülke ve okuma amacıyla verilmiştir.",
+     "Dil ya da ülke klasörleri ayrı izlenecekse ayrı proje veya etiketle ayrılmıştır.",
+     "Bağlantılar ve doğrulama yöntemi devir belgesinde yazılıdır."
+    ],
+    "pitfalls": [
+     "Semrush'ta araç kurulduktan sonra proje alan adı değiştirilemez; www / www'suz yanlış yazım projenin baştan açılmasını gerektirir.",
+     "Ahrefs'te proje kapsamı Search Console mülküyle uyuşmazsa Search Console verisi gelmez.",
+     "Hazırlık (staging) sitesi canlı projeye karışır, raporlar ikiye bölünür.",
+     "Doğrulama için eklenen HTML dosyası ya da meta etiket bir sonraki yayında silinir, doğrulama düşer.",
+     "Search Console'a \"sahip\" yetkisi gereğinden fazla kişiye verilir.",
+     "Proje ajansın hesabında doğrulanır; sözleşme bitince doğrulama ve geçmiş kaybolur."
+    ],
+    "resources": [
+     {
+      "title": "Ahrefs — Proje ekleme",
+      "url": "https://help.ahrefs.com/en/articles/1433362-how-to-add-a-project-in-your-dashboard",
+      "note": "Search Console'dan içe aktarma ya da elle proje açma adımları."
+     },
+     {
+      "title": "Ahrefs — Site sahipliği doğrulama",
+      "url": "https://help.ahrefs.com/en/articles/1431155-how-do-i-verify-ownership-of-my-website",
+      "note": "Search Console, DNS TXT, HTML dosyası ve meta etiket yöntemleri."
+     },
+     {
+      "title": "Ahrefs — Proje kapsamı modları",
+      "url": "https://help.ahrefs.com/en/articles/2834076-how-to-define-the-scope-of-project-using-different-modes",
+      "note": "Tam adres, klasör, alan adı ve alt alan adları kapsamları."
+     },
+     {
+      "title": "Ahrefs — Doğrulanmış proje",
+      "url": "https://help.ahrefs.com/en/articles/4321336-what-is-a-verified-project",
+      "note": "Doğrulanmış projenin ücretsiz ek kredileri ve Search Console bağlantısı."
+     },
+     {
+      "title": "Semrush — Proje yönetimi",
+      "url": "https://www.semrush.com/kb/243-managing-a-project",
+      "note": "Proje oluşturma, paylaşım ve alan adının sonradan değiştirilememesi."
+     },
+     {
+      "title": "Semrush — Entegrasyonlar",
+      "url": "https://www.semrush.com/kb/931-integrations",
+      "note": "Google Analytics, Search Console, Ads, İşletme Profili ve Looker Studio bağlantıları."
+     },
+     {
+      "title": "Semrush — Organic Traffic Insights Google bağlantısı",
+      "url": "https://www.semrush.com/kb/939-organic-traffic-insights-google-connection",
+      "note": "Search Console ve Analytics verisini Semrush'a bağlama."
+     },
+     {
+      "title": "Ahrefs — Looker Studio bağlayıcıları",
+      "url": "https://help.ahrefs.com/en/articles/9229306-how-can-i-use-ahrefs-with-looker-studio",
+      "note": "Site Audit, Site Explorer ve Rank Tracker bağlayıcıları ve plan şartı."
+     },
+     {
+      "title": "Google — Site sahipliğini doğrulama",
+      "url": "https://support.google.com/webmasters/answer/9008080",
+      "note": "Search Console doğrulama yöntemleri (HTML dosyası, meta etiket, DNS, Analytics etiketi)."
+     }
+    ]
+   }
+  },
+  {
+   "id": "mk_st_audit",
+   "after": "mk_st_setup",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "⟲",
+   "name": "Site Denetimi (Tarama) Ayarları",
+   "en": "SEO Tools: Site Audit Crawl Settings",
+   "desc": "SEO aracının siteyi düzenli tarayıp teknik sorunları bulması için tarayıcı izinleri, tarama ayarları, sıklık ve bulguların iş akışı.",
+   "refs": [
+    "domain_name",
+    "staging_url"
+   ],
+   "guide": {
+    "purpose": "SEO araçlarının Site Audit özelliği siteyi kendi tarayıcısıyla gezip kırık bağlantı, yönlendirme zinciri, eksik başlık, canonical ve hız sorunlarını listeler. Tarayıcı güvenlik duvarına (WAF) ya da CDN'e takılırsa rapor boş veya yanlış çıkar; çok hızlı tarama sunucuyu yorar. Bu bölüm tarayıcıya hangi izinlerin verileceğini, taramanın nasıl ve ne sıklıkla yapılacağını ve bulguların kimin işine dönüşeceğini belirler. Yayına alınmış sitenin kapsamlı denetimi 4. SEO Denetimi menüsündeki süreçtir; burada aracın otomatik düzenli taraması kurulur.",
+    "criteria": [
+     "Aracın tarayıcısı WAF / CDN'de kullanıcı aracısı ve resmî IP listesiyle izinlidir; bütün botlar için genel izin açılmamıştır.",
+     "Tarama hızı sunucuyu yormayacak düzeydedir; yoğun saatler dışında zamanlanmıştır.",
+     "JavaScript ile çizilen içerik varsa JavaScript işleme açıktır.",
+     "Parametreli, filtreli ve sonsuz sayfalama adresleri hariç tutulmuştur.",
+     "Kritik ve yüksek bulgular iş kaydına dönüşür, düzeltme sonrası yeniden taramayla doğrulanır.",
+     "Tarama raporunun sağlık puanı eğilimi aylık izlenir."
+    ],
+    "pitfalls": [
+     "Cloudflare ya da başka bir WAF tarayıcıyı engeller; rapor \"403\" ve boş sayfalarla dolar.",
+     "Tarayıcıyı geçirmek için bütün botlara izin açılır; kötü niyetli botlar da geçer.",
+     "Cloudflare ücretsiz planda Bot Fight Mode açıkken atlama kuralı tarayıcıyı geçirmez; rapor yine boş çıkar.",
+     "Tarayıcı yalnız kullanıcı aracısı adıyla izin alır; bu ad taklit edilebildiği için IP ya da doğrulanmış bot listesiyle eşleştirilmez.",
+     "Hazırlık sitesi taranırken kimlik bilgileri paylaşımlı belgeye yazılır.",
+     "Aracın her uyarısı hata sanılır; önemsiz uyarılarla ekip yorulur.",
+     "Yalnız araç taraması yapılır, Search Console'daki dizine ekleme raporu kontrol edilmez."
+    ],
+    "resources": [
+     {
+      "title": "Ahrefs Site Audit tarayıcısı",
+      "url": "https://ahrefs.com/robot/site-audit",
+      "note": "AhrefsSiteAudit kullanıcı aracısı, robots.txt davranışı ve IP listeleri."
+     },
+     {
+      "title": "Ahrefs — IP aralıkları ve izin listesi",
+      "url": "https://help.ahrefs.com/en/articles/78658-what-is-the-list-of-your-ip-ranges",
+      "note": "Cloudflare ve diğer WAF'larda Ahrefs tarayıcısına izin verme."
+     },
+     {
+      "title": "Ahrefs — Site Audit ayarları",
+      "url": "https://help.ahrefs.com/en/articles/9082329-how-should-i-configure-my-site-audit-settings",
+      "note": "Zamanlama, hız, JavaScript, robots.txt, parametre ve kimlik doğrulama ayarları."
+     },
+     {
+      "title": "Semrush botları",
+      "url": "https://www.semrush.com/bot/",
+      "note": "SiteAuditBot ve diğer Semrush tarayıcılarının adları ve davranışı."
+     },
+     {
+      "title": "Semrush — Site Audit yapılandırma",
+      "url": "https://www.semrush.com/kb/539-configuring-site-audit",
+      "note": "Kullanıcı aracısı, hız, JavaScript, hariç tutma, kimlik doğrulama ve zamanlama."
+     },
+     {
+      "title": "Semrush — Site Audit sorun giderme",
+      "url": "https://www.semrush.com/kb/681-site-audit-troubleshooting",
+      "note": "Site Audit IP ağı ve CDN / güvenlik duvarında izin verme."
+     },
+     {
+      "title": "Moz — rogerbot",
+      "url": "https://moz.com/help/moz-procedures/crawlers/rogerbot",
+      "note": "Moz Pro site taraması tarayıcısı."
+     },
+     {
+      "title": "Sistrix — Tarama hataları ve tarayıcı",
+      "url": "https://www.sistrix.com/tutorials/crawling-errors-in-the-onpage-projects/",
+      "note": "SISTRIX Crawler kullanıcı aracısı ve tarama sorunları."
+     },
+     {
+      "title": "Screaming Frog — Yapılandırma",
+      "url": "https://www.screamingfrog.co.uk/seo-spider/user-guide/configuration/",
+      "note": "Kullanıcı aracısı, hız, JavaScript ve hariç tutma ayarları."
+     },
+     {
+      "title": "Cloudflare — Doğrulanmış botlar",
+      "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/",
+      "note": "Doğrulanmış iyi botların tanınması."
+     },
+     {
+      "title": "Cloudflare — WAF atlama (Skip) kuralı",
+      "url": "https://developers.cloudflare.com/waf/custom-rules/skip/",
+      "note": "Belirli trafiğin yönetilen kuralları atlaması; Bot Fight Mode istisnası."
+     },
+     {
+      "title": "Google — robots.txt'ye giriş",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "note": "robots.txt'nin ne işe yaradığı ve sınırları."
+     }
+    ]
+   }
+  },
+  {
+   "id": "mk_st_rank",
+   "after": "mk_st_audit",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "↗",
+   "name": "Sıralama Takibi",
+   "en": "SEO Tools: Rank Tracking",
+   "desc": "Hedef sorguların arama sonuçlarındaki sırasının hangi konum, cihaz ve rakiplerle izleneceği; yapay zekâ aramasında görünürlük takibi.",
+   "refs": [
+    "oc_keywords",
+    "oc_competitors",
+    "oc_services",
+    "operating_region",
+    "mk_geo_detail",
+    "mk_languages",
+    "mk_device"
+   ],
+   "guide": {
+    "purpose": "Sıralama takibi (Ahrefs Rank Tracker, Semrush Position Tracking ve benzerleri) seçilen sorguların seçilen konum ve cihazda kaçıncı sırada çıktığını düzenli ölçer. Anahtar kelime listesi Ortak Bilgiler › Hedef Sorgular'dan, rakipler Ortak Bilgiler › Rakipler'den gelir; böylece içerik planı, reklam ve rapor aynı listeyi kullanır. Yapay zekâ aramasında (AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini) markanın görünürlüğü de ayrı araçlarla izlenebilir.",
+    "criteria": [
+     "İzlenen sorgular Ortak Bilgiler › Hedef Sorgular ile aynıdır; her sorgunun hedef sayfası tanımlıdır.",
+     "Konum, dil ve cihaz hedef pazarla uyumludur (yerel işletmede il / ilçe düzeyi).",
+     "Rakipler Ortak Bilgiler › Rakipler'den gelir.",
+     "Sorgular marka / marka dışı, hizmet ve sayfa türü etiketleriyle gruplanmıştır.",
+     "SERP özellikleri (öne çıkan snippet, yerel paket, AI Overviews) ayrıca izlenir.",
+     "Sıralama raporu Search Console'daki ortalama konumla karşılaştırılarak yorumlanır."
+    ],
+    "pitfalls": [
+     "Semrush'ta kampanyanın konum ve cihazı sonradan değiştirilemez; yanlış konumla açılan kampanya baştan kurulur.",
+     "Yalnız masaüstü izlenir; kullanıcıların çoğu mobildedir.",
+     "Ülke düzeyinde izlenen yerel işletme, il düzeyindeki gerçek sıralamasını görmez.",
+     "Marka adıyla yapılan sorgular ortalamayı şişirir; marka dışı sorgular ayrıca raporlanmaz.",
+     "Ahrefs Rank Tracker varsayılan olarak haftalık güncellenir; günlük dalgalanma beklentisi yanlış yorumlanır.",
+     "Bir sorgunun sırası, hedef sayfa yerine başka bir sayfayla (kanibalizasyon) elde edilir ve fark edilmez."
+    ],
+    "resources": [
+     {
+      "title": "Ahrefs Rank Tracker",
+      "url": "https://ahrefs.com/rank-tracker",
+      "note": "Konum, cihaz, rakip, SERP özellikleri ve AI Overviews takibi."
+     },
+     {
+      "title": "Ahrefs — Sıralama güncelleme sıklığı",
+      "url": "https://help.ahrefs.com/en/articles/604245-how-frequently-do-my-tracked-keywords-get-updated",
+      "note": "İzlenen sorguların güncellenme sıklığı."
+     },
+     {
+      "title": "Semrush — Position Tracking yapılandırma",
+      "url": "https://www.semrush.com/kb/548-configuring-position-tracking",
+      "note": "Arama motoru, cihaz, konum ayarları ve sonradan değiştirilemeyenler."
+     },
+     {
+      "title": "Semrush — Position Tracking",
+      "url": "https://www.semrush.com/kb/32-position-tracking",
+      "note": "Güncelleme sıklığı, rakipler, etiketler ve SERP özellikleri."
+     },
+     {
+      "title": "Ahrefs Brand Radar",
+      "url": "https://help.ahrefs.com/en/articles/11064852-what-is-brand-radar-and-how-to-use-it",
+      "note": "Yapay zekâ aramasında marka görünürlüğü takibi ve kapsadığı platformlar."
+     },
+     {
+      "title": "Semrush — AI Visibility özellikleri",
+      "url": "https://www.semrush.com/kb/1626-ai-visibility-features",
+      "note": "AI Visibility Toolkit'in izlediği platformlar ve plan farkları."
+     },
+     {
+      "title": "Semrush — AI Visibility Toolkit başlangıç",
+      "url": "https://www.semrush.com/kb/1496-getting-started-with-ai-visibility-toolkit",
+      "note": "Görünürlük puanı, rakip ve soru araştırması raporları."
+     },
+     {
+      "title": "Sistrix — Görünürlük endeksi hesaplaması",
+      "url": "https://www.sistrix.com/visibility-index/calculation",
+      "note": "Ülke endeksleri (Türkiye dahil) ve ölçüm yöntemi."
+     }
+    ]
+   }
+  },
+  {
+   "id": "mk_st_research",
+   "after": "mk_st_rank",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "⧉",
+   "name": "Anahtar Kelime, Rakip & Backlink Analizi",
+   "en": "SEO Tools: Keyword, Competitor & Backlink Analysis",
+   "desc": "SEO araçlarıyla yapılacak anahtar kelime araştırması, rakip karşılaştırması ve backlink izleme / temizleme kuralları.",
+   "refs": [
+    "oc_keywords",
+    "oc_competitors",
+    "oc_services"
+   ],
+   "guide": {
+    "purpose": "SEO araçlarının asıl gücü kendi siteniz dışındaki veridir: hangi sorguların arandığı, rakiplerin hangi sorgu ve sayfalarla trafik aldığı, hangi sitelerin kime bağlantı verdiği. Bu bölüm araştırmanın nasıl yapılacağını, sonuçların Ortak Bilgiler › Hedef Sorgular ve içerik planına nasıl işleneceğini ve backlink profilinin nasıl izlenip Google'ın kurallarına uygun yönetileceğini belirler. Google, bağlantı reddetme (disavow) aracının yalnız çok sayıda spam / yapay bağlantı manuel işleme yol açmış ya da açması muhtemelse kullanılmasını, yanlış kullanımın siteye zarar verebileceğini söyler.",
+    "criteria": [
+     "Anahtar kelime araştırması arama niyetine göre gruplanır ve Ortak Bilgiler › Hedef Sorgular'a hedef sayfasıyla işlenir.",
+     "Rakip analizi Ortak Bilgiler › Rakipler listesiyle yapılır; sonuç Pazarlama › Rakip Analizi tablosuna aktarılır.",
+     "Trafik ve hacim sayıları \"tahmin\" olarak raporlanır.",
+     "Yeni ve kayıp backlinkler düzenli izlenir; önemli kayıp bağlantı için yeniden kazanım denenir.",
+     "Bağlantı reddetme yalnız Google'ın tarif ettiği durumda, gerekçesi yazılarak kullanılır.",
+     "Bağlantı satın alma, bağlantı ağı ve otomatik bağlantı programı kullanılmaz (Google spam politikaları)."
+    ],
+    "pitfalls": [
+     "Aracın \"toksik\" puanı tek başına kanıt sayılıp düzinelerce bağlantı reddedilir; iyi bağlantılar da gider.",
+     "Arama hacmi yüksek ama niyeti uymayan sorgular için sayfa yazılır.",
+     "Rakip trafik tahmini kesin sayı gibi sunulur.",
+     "Rakibin bağlantı verdiği her site, kalite ve konu uyumu bakılmadan hedeflenir.",
+     "Anahtar kelime listesi araçta kalır; içerik ve reklam ekibi başka listeyle çalışır.",
+     "Türkçe sorgularda araç hacmi düşük ya da eksik görünür; Search Console ve Google Ads Anahtar Kelime Planlayıcı ile karşılaştırılmaz."
+    ],
+    "resources": [
+     {
+      "title": "Google — Bağlantıları reddetme (disavow)",
+      "url": "https://support.google.com/webmasters/answer/2648487",
+      "note": "Disavow aracının ne zaman kullanılacağı ve yanlış kullanım riski."
+     },
+     {
+      "title": "Semrush — Backlink Audit",
+      "url": "https://www.semrush.com/kb/295-backlink-audit-tool",
+      "note": "Bağlantı denetimi, toksik sinyaller, kaldırma talebi ve reddetme listesi."
+     },
+     {
+      "title": "Semrush — Bağlantı reddetme dosyası",
+      "url": "https://www.semrush.com/kb/764-disavowing-your-backlinks",
+      "note": "Google biçiminde disavow dosyası dışa aktarma ve dikkat edilecekler."
+     },
+     {
+      "title": "Ahrefs — Backlink bildirimleri",
+      "url": "https://ahrefs.com/academy/how-to-use-ahrefs/alerts/backlinks",
+      "note": "Yeni ve kayıp backlink e-posta bildirimleri."
+     },
+     {
+      "title": "Majestic — MJ12bot",
+      "url": "https://mj12bot.com/",
+      "note": "Majestic bağlantı tarayıcısı ve robots.txt ile engelleme."
+     },
+     {
+      "title": "Moz — dotbot",
+      "url": "https://moz.com/help/moz-procedures/crawlers/dotbot",
+      "note": "Moz bağlantı endeksi tarayıcısı."
+     }
+    ]
+   }
+  },
+  {
+   "id": "mk_st_report",
+   "after": "mk_st_research",
+   "area": "marketing",
+   "group": "SEO Araçları",
+   "icon": "▤",
+   "name": "Raporlama & Claude Bağlantısı (MCP / API)",
+   "en": "SEO Tools: Reporting, MCP & API",
+   "desc": "SEO aracı verisinin nasıl raporlanacağı ve Claude'un araç verisine MCP ya da API ile nasıl, hangi sınırlarla erişeceği.",
+   "refs": [
+    "mk_ids"
+   ],
+   "guide": {
+    "purpose": "SEO araçlarının verisi, Search Console ve GA4'ün gerçek verisiyle birlikte ve kaynakları ayrılarak raporlanmalıdır. Ahrefs ve Semrush resmî MCP sunucuları sunar; Claude bu sunucularla araç verisini doğrudan sorgulayabilir (Ajanlar › MCP Bağlantıları). MCP ve API sorguları planınızın API birimlerinden düşer; anahtarlar gizli değerdir. Bu bölüm rapor içeriğini ve Claude bağlantısının sınırlarını belirler. Rapor ritmi Pazarlama › Ölçüm & Raporlama'daki karardır.",
+    "criteria": [
+     "Raporlarda her sayının kaynağı (Search Console, GA4, araç adı) yazılıdır; tahminler etiketlidir.",
+     "Rapor sıralama, görünürlük, teknik sağlık, backlink ve yapılan işleri birlikte verir.",
+     "Önemli değişikliklerin (yayın, taşıma, Google güncellemesi) tarihi raporda not edilir.",
+     "Claude'un MCP / API erişimi yalnız okuma amaçlıdır; anahtar gizli değer olarak saklanır.",
+     "MCP / API anahtarına aylık birim sınırı konmuştur.",
+     "Araçtan dışa aktarılan veri kişisel veri içermez; içeriyorsa paylaşılmaz."
+    ],
+    "pitfalls": [
+     "API anahtarı koda, .mcp.json dosyasına açık metin olarak ya da sohbet geçmişine yazılır.",
+     "Claude büyük bir backlink sorgusunu çalıştırır, aylık birimin tamamı bir günde biter.",
+     "Araç tahmini ile Search Console verisi aynı grafikte toplanır.",
+     "Rapor sayı listesine döner; ne yapıldığı ve sıradaki adım yazılmaz.",
+     "Looker Studio bağlayıcısı planda olmadığı halde rapor ona göre tasarlanır.",
+     "Ahrefs MCP adresinde özel betik / köprü kullanılır; sağlayıcı buna izin vermez."
+    ],
+    "resources": [
+     {
+      "title": "Ahrefs MCP — Giriş",
+      "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+      "note": "Ahrefs MCP adresi, kimlik doğrulama, birim kullanımı ve kısıtlar."
+     },
+     {
+      "title": "Ahrefs MCP — Başlangıç",
+      "url": "https://help.ahrefs.com/en/articles/13913559-getting-started-with-ahrefs-mcp",
+      "note": "Ahrefs MCP'yi Claude'a bağlama adımları."
+     },
+     {
+      "title": "Ahrefs API",
+      "url": "https://ahrefs.com/seo-api",
+      "note": "API erişiminin planlara göre durumu ve birim maliyeti."
+     },
+     {
+      "title": "Semrush MCP",
+      "url": "https://developer.semrush.com/api/introduction/semrush-mcp",
+      "note": "Semrush MCP adresi, OAuth / API anahtarı ve API birimleri."
+     },
+     {
+      "title": "Semrush — Looker Studio bağlayıcısı",
+      "url": "https://www.semrush.com/features/google-looker-studio-connector/",
+      "note": "Domain Analytics, Position Tracking ve Site Audit bağlayıcıları."
+     },
+     {
+      "title": "Similarweb — Claude MCP entegrasyonu",
+      "url": "https://developers.similarweb.com/docs/claude-mcp-integration.md",
+      "note": "Similarweb MCP sunucusunu Claude'a bağlama."
+     },
+     {
+      "title": "SE Ranking — MCP",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "note": "SE Ranking MCP adresi ve kimlik doğrulama."
+     },
+     {
+      "title": "Moz — MCP sunucuları",
+      "url": "https://moz.com/api/docs/guides/mcp-servers",
+      "note": "Moz MCP sunucuları (beta)."
+     },
+     {
+      "title": "Sistrix — MCP",
+      "url": "https://www.sistrix.com/ask-sistrix/ai-basics/mcp/",
+      "note": "Sistrix MCP, kimlik doğrulama ve kullanım kotası."
+     },
+     {
+      "title": "Screaming Frog — MCP sunucusu",
+      "url": "https://www.screamingfrog.co.uk/guides/mcp-server/",
+      "note": "Uygulamaya gömülü yerel MCP sunucusu (lisanslı sürüm)."
+     },
+     {
+      "title": "Ubersuggest — Claude bağlayıcısı",
+      "url": "https://claude.com/marketplace/connectors/ubersuggest-by-neil-patel",
+      "note": "Anthropic dizinindeki Ubersuggest bağlayıcısı."
+     },
+     {
+      "title": "Serpstat — MCP sunucusu",
+      "url": "https://github.com/SerpstatGlobal/serpstat-mcp-server-js",
+      "note": "Serpstat'ın resmî yerel MCP sunucusu."
+     }
+    ]
+   }
+  }
+ ],
+ "fields": [
+  {
+   "id": "mk_st_tools",
+   "section": "mk_st_scope",
+   "label": "Kullanılacak SEO Araçları",
+   "en": "SEO Tools",
+   "type": "multiselect",
+   "explanation": "Projede kullanılacak SEO araçları. Seçtiğiniz araçlara göre bu gruptaki proje kurulumu, tarama, sıralama takibi, analiz ve raporlama kararları açılır.",
+   "scenario": "Rakip, anahtar kelime ve backlink verisi ya da düzenli teknik tarama gerekiyorsa en az bir araç seçin; yalnız kendi sitenizin verisi yetiyorsa Search Console ile ücretsiz Ahrefs Webmaster Tools çoğu zaman yeterlidir.",
+   "example": "Bir hizmet firması rakip ve anahtar kelime için Semrush, kendi sitesinin teknik taraması için ücretsiz Ahrefs Webmaster Tools seçer; panelde iki aracın görev ayrımı yazılıdır.",
+   "rule": "Kullanılacak SEO araçları: {labels}. Her aracın kullanım amacı (teknik tarama, sıralama, rakip, backlink, pazar) yazılıdır; aynı iş için iki ücretli araç kullanılmaz. Araçların trafik, arama hacmi, zorluk ve backlink sayıları sağlayıcının tahminidir; Google Search Console ve GA4 verisinin yerine geçmez ve raporlarda kaynağıyla birlikte verilir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru",
+    "poz:pazarlama:marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/tedarikci-yonetimi-uzmani"
+   ],
+   "recommend": [
+    {
+     "field": "mk_comp_method",
+     "map": {
+      "tool": [
+       "semrush",
+       "similarweb"
+      ]
+     }
+    },
+    {
+     "field": "au_access",
+     "map": {
+      "links": [
+       "ahrefs",
+       "semrush"
+      ],
+      "crawl": [
+       "screamingfrog"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "ahrefs",
+     "label": "Ahrefs",
+     "explanation": "Backlink veri tabanı güçlü, Site Explorer, Keywords Explorer, Site Audit, Rank Tracker ve Brand Radar (yapay zekâ görünürlüğü) içeren ücretli SEO paketi.",
+     "scenario": "Backlink ve rakip içerik analizi öncelikliyse, içerik ve bağlantı fırsatı düzenli aranacaksa.",
+     "example": "SEO ekibi rakiplerin en çok bağlantı alan sayfalarını Ahrefs'te çıkarır, içerik planına üç yeni konu ekler.",
+     "ruleDetail": "Ahrefs projesi şirket hesabında açılır; site Search Console bağlantısıyla doğrulanır (doğrulanmış proje ücretsiz ek tarama ve Site Explorer kredisi alır). Ahrefs'in tahmini trafik ve hacim verisi \"Ahrefs tahmini\" etiketiyle raporlanır."
+    },
+    {
+     "value": "awt",
+     "label": "Ahrefs Webmaster Tools (ücretsiz)",
+     "explanation": "Ahrefs'in doğrulanmış site sahiplerine ücretsiz sunduğu sürüm: Site Audit (aylık proje başına 5.000 tarama kredisi), kendi siteniz için Site Explorer ve Web Analytics.",
+     "scenario": "Bütçe sınırlıysa ya da yalnız kendi sitenizin teknik taraması ve backlink görünümü gerekiyorsa; rakip verisi gerekmiyorsa.",
+     "example": "Küçük bir klinik sitesi Search Console bağlantısıyla Ahrefs Webmaster Tools'u açar; her pazartesi otomatik tarama raporu e-postayla gelir.",
+     "ruleDetail": "Ahrefs Webmaster Tools yalnız doğrulanmış site için kullanılır (Search Console bağlantısı, DNS TXT, HTML dosyası ya da meta etiket); rakip analizi bu sürümde yapılmaz, gerekirse ücretli araç ayrıca kararlaştırılır."
+    },
+    {
+     "value": "semrush",
+     "label": "Semrush",
+     "explanation": "Anahtar kelime ve rakip araştırması, Site Audit, Position Tracking, Backlink Audit, yerel SEO ve AI Visibility Toolkit içeren ücretli pazarlama paketi; Google Ads ve İşletme Profili bağlantıları var.",
+     "scenario": "Anahtar kelime, reklam ve rakip araştırması birlikte yapılacaksa; günlük sıralama takibi ve yerel SEO gerekiyorsa.",
+     "example": "Pazarlama ekibi Semrush Keyword Gap ile üç rakibin sıralanıp kendisinin sıralanmadığı 120 sorguyu bulur, içerik takvimine işler.",
+     "ruleDetail": "Semrush projesi şirket hesabında açılır; proje alan adı araç kurulduktan sonra değiştirilemediği için alan adı (www dahil) Ortak Bilgiler › Canlı Site Adresi'yle aynı yazılır. Semrush'ın trafik ve hacim verisi \"Semrush tahmini\" etiketiyle raporlanır."
+    },
+    {
+     "value": "seranking",
+     "label": "SE Ranking",
+     "explanation": "Sıralama takibi, site denetimi, anahtar kelime ve rakip araştırması sunan, daha düşük bütçeli SEO paketi.",
+     "scenario": "Ahrefs ya da Semrush bütçesi yoksa, ajans olarak çok sayıda müşteri projesi yönetilecekse.",
+     "example": "Bir ajans 15 müşterinin anahtar kelimelerini SE Ranking'de izler, her müşteriye aylık beyaz etiketli rapor gönderir.",
+     "ruleDetail": "SE Ranking projesi şirket ya da ajans hesabında, müşteriye erişim verilecek şekilde açılır; tahmini veriler kaynağıyla raporlanır."
+    },
+    {
+     "value": "similarweb",
+     "label": "Similarweb",
+     "explanation": "Sitelerin trafik kaynakları, ziyaretçi davranışı ve pazar payı tahminlerini veren pazar istihbaratı aracı; teknik SEO aracı değildir.",
+     "scenario": "Rakiplerin trafik kanallarını (organik, ücretli, sosyal, yönlendirme) ve pazar payını karşılaştırmak gerekiyorsa.",
+     "example": "Pazarlama müdürü üç rakibin trafiğinin yüzde kaçının sosyal medyadan geldiğini Similarweb'de görür, kanal bütçesini gözden geçirir.",
+     "ruleDetail": "Similarweb verisi panel ve modellerden türetilmiş tahmindir; yalnız rakip ve pazar karşılaştırmasında kullanılır, sitenin kendi trafiği için GA4 esas alınır."
+    },
+    {
+     "value": "moz",
+     "label": "Moz Pro",
+     "explanation": "Anahtar kelime araştırması, site taraması (rogerbot), sıralama takibi ve Domain Authority metriği sunan SEO paketi. Moz Local yalnız ABD, Birleşik Krallık ve Kanada'da çalışır; Türkiye'deki işletme listelemesi için kullanılamaz.",
+     "scenario": "Ekip Moz metriklerine (Domain Authority) ve bağlantı veri tabanına alışkınsa.",
+     "example": "SEO uzmanı bağlantı fırsatlarını Moz'un Domain Authority değerine göre sıralar.",
+     "ruleDetail": "Moz projesi şirket hesabında açılır; Domain Authority Moz'a özgü bir tahmindir, Google sıralama faktörü olarak sunulmaz."
+    },
+    {
+     "value": "sistrix",
+     "label": "Sistrix",
+     "explanation": "Ülke bazlı görünürlük endeksi (Türkiye dahil 40 ülke; google.com.tr için mobil ve masaüstü günlük), sıralama takibi ve site denetimi (Optimizer) sunan SEO aracı.",
+     "scenario": "Görünürlüğün haftalık endeksle izlenmesi ve Google güncellemelerinin etkisinin görülmesi isteniyorsa.",
+     "example": "SEO yöneticisi bir Google çekirdek güncellemesinden sonra Sistrix görünürlük endeksindeki düşüşü raporlar.",
+     "ruleDetail": "Sistrix görünürlük endeksi aracın kendi anahtar kelime kümesine dayanan bir göstergedir; trafikle karıştırılmaz."
+    },
+    {
+     "value": "majestic",
+     "label": "Majestic",
+     "explanation": "Yalnız backlink verisine odaklanan araç; Trust Flow ve Citation Flow metrikleri.",
+     "scenario": "Backlink profili ve bağlantı kalitesi derinlemesine incelenecekse, ana pakete ek veri gerekiyorsa.",
+     "example": "Bir e-ticaret sitesi bağlantı kampanyası öncesi aday sitelerin Trust Flow değerini Majestic'te kontrol eder.",
+     "ruleDetail": "Majestic metrikleri Majestic'e özgüdür; bağlantı kararında tek başına kullanılmaz, sayfanın konusu ve trafiğiyle birlikte değerlendirilir."
+    },
+    {
+     "value": "screamingfrog",
+     "label": "Screaming Frog SEO Spider",
+     "explanation": "Bilgisayara kurulan masaüstü tarayıcı; siteyi tarayıp başlık, meta, yönlendirme, kırık bağlantı, canonical ve yapısal veri sorunlarını listeler. Ücretsiz sürüm taramada en çok 500 adresle ve sınırlı ayarla çalışır; Search Console, GA4 ve PageSpeed bağlantıları lisanslı sürümdedir.",
+     "scenario": "Yayın öncesi ya da büyük değişiklik sonrası ayrıntılı teknik tarama gerekiyorsa; hazırlık (staging) sitesi taranacaksa.",
+     "example": "Teknik SEO uzmanı yayından önce hazırlık sitesini Screaming Frog ile tarar, 34 kırık iç bağlantıyı yazılım ekibine iletir.",
+     "ruleDetail": "Screaming Frog taraması sunucuyu yormayacak hızda yapılır; hazırlık sitesi taranırken kimlik bilgileri araca girilir, dışa aktarılan tarama dosyaları kişisel veri içeriyorsa paylaşılmaz."
+    },
+    {
+     "value": "ubersuggest",
+     "label": "Ubersuggest",
+     "explanation": "Anahtar kelime araştırması, site denetimi, sıralama takibi ve yapay zekâ görünürlüğü sunan, sınırlı ücretsiz kullanımı olan düşük bütçeli araç.",
+     "scenario": "Küçük işletme ya da başlangıç bütçesinde temel anahtar kelime ve sıralama verisi gerekiyorsa.",
+     "example": "Bir kuaför salonu Ubersuggest'te hizmet sorgularının hacmine bakıp blog konularını seçer.",
+     "ruleDetail": "Ubersuggest verisi tahmindir; Türkçe sorgularda hacim Search Console ve Google Ads Anahtar Kelime Planlayıcı ile karşılaştırılır."
+    },
+    {
+     "value": "mangools",
+     "label": "Mangools (KWFinder, SERPWatcher)",
+     "explanation": "Anahtar kelime (KWFinder), SERP analizi, sıralama takibi (SERPWatcher), backlink (LinkMiner) ve yapay zekâ arama takibi araçlarından oluşan paket; sınırlı ücretsiz hesap var.",
+     "scenario": "Kullanımı kolay, anahtar kelime odaklı bir araç isteniyorsa.",
+     "example": "İçerik uzmanı KWFinder'da düşük zorluklu uzun kuyruk sorguları bulur.",
+     "ruleDetail": "Mangools verisi tahmindir; sıralama takibi SERPWatcher'da hedef konum ve cihazla kurulur."
+    },
+    {
+     "value": "serpstat",
+     "label": "Serpstat",
+     "explanation": "Anahtar kelime, site analizi, sıralama takibi, site denetimi ve backlink araçları sunan SEO paketi.",
+     "scenario": "Ahrefs / Semrush'a göre daha düşük bütçeyle geniş araç seti isteniyorsa.",
+     "example": "Bir ajans Serpstat'ta müşterinin rakip sorgularını çıkarır ve denetim raporu hazırlar.",
+     "ruleDetail": "Serpstat verisi tahmindir; projeler şirket ya da ajans hesabında, devredilebilir şekilde açılır."
+    },
+    {
+     "value": "none",
+     "label": "Harici SEO aracı kullanılmayacak",
+     "explanation": "Yalnız Google Search Console, GA4 ve Bing Webmaster Tools kullanılır.",
+     "scenario": "Küçük ve yeni bir sitede ya da bütçe yokken; ölçüm Google ve Bing araçlarıyla yapılır.",
+     "example": "Yeni açılan bir kafe sitesi yalnız Search Console ve İşletme Profili istatistiklerini izler.",
+     "ruleDetail": "Harici SEO aracı kullanılmaz; anahtar kelime ve sıralama verisi Search Console'dan, teknik denetim 4. SEO Denetimi menüsündeki süreçle yapılır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_st_primary",
+   "section": "mk_st_scope",
+   "label": "Raporlamada Esas Alınacak Araç",
+   "en": "Primary SEO Tool",
+   "type": "select",
+   "explanation": "Sıralama, görünürlük ve rakip karşılaştırmasında tek doğru kaynak sayılacak araç. Farklı araçlar aynı sorgu için farklı sıra ve hacim gösterir; raporlar tek araca dayanır.",
+   "scenario": "Birden çok araç seçildiyse mutlaka belirleyin; aksi hâlde aylık raporlarda sayılar kaynağa göre değişir.",
+   "example": "Semrush esas alınır; Ahrefs Webmaster Tools yalnız teknik tarama için kullanılır. Aylık raporda sıralama grafiği Semrush'tan gelir.",
+   "rule": "Raporlamada esas alınacak SEO aracı: {label}. Sıralama, görünürlük ve rakip karşılaştırması bu araçtan alınır; başka araçlardan gelen sayı raporda aracın adıyla ayrıca belirtilir, iki aracın sayısı aynı grafikte karıştırılmaz.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+    "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "ahrefs",
+     "label": "Ahrefs",
+     "explanation": "Sıralama ve görünürlük Ahrefs Rank Tracker ve Site Explorer'dan alınır.",
+     "scenario": "Ahrefs ana araçsa.",
+     "example": "Aylık raporun sıralama ve backlink grafikleri Ahrefs'ten dışa aktarılır."
+    },
+    {
+     "value": "semrush",
+     "label": "Semrush",
+     "explanation": "Sıralama ve görünürlük Semrush Position Tracking ve Domain Overview'dan alınır.",
+     "scenario": "Semrush ana araçsa.",
+     "example": "Aylık raporun görünürlük yüzdesi Semrush Position Tracking'den gelir."
+    },
+    {
+     "value": "seranking",
+     "label": "SE Ranking",
+     "explanation": "Sıralama SE Ranking'den alınır.",
+     "scenario": "SE Ranking ana araçsa.",
+     "example": "Müşteri raporu SE Ranking'in rapor oluşturucusundan çıkar."
+    },
+    {
+     "value": "moz",
+     "label": "Moz Pro",
+     "explanation": "Sıralama Moz Pro'dan alınır.",
+     "scenario": "Moz ana araçsa.",
+     "example": "Rapordaki sıralama tablosu Moz Pro kampanyasından gelir."
+    },
+    {
+     "value": "sistrix",
+     "label": "Sistrix",
+     "explanation": "Görünürlük Sistrix endeksinden alınır.",
+     "scenario": "Sistrix ana araçsa.",
+     "example": "Rapordaki görünürlük eğrisi Sistrix'ten gelir."
+    },
+    {
+     "value": "other",
+     "label": "Seçilen diğer araç (Ubersuggest, Mangools, Serpstat)",
+     "explanation": "Sıralama seçilen diğer araçtan alınır; araç adı raporda yazılır.",
+     "scenario": "Ana araç Ubersuggest, Mangools ya da Serpstat ise.",
+     "example": "Rapordaki sıralama tablosu Serpstat'tan gelir ve başlıkta araç adı yazılır."
+    },
+    {
+     "value": "gsc",
+     "label": "Search Console (araçlar yardımcı)",
+     "explanation": "Ortalama konum ve tıklama Search Console'dan; araçlar yalnız rakip ve fırsat için.",
+     "scenario": "Gerçek veriye dayanmak isteniyorsa ya da yalnız ücretsiz Ahrefs Webmaster Tools varsa.",
+     "example": "Raporun ana grafiği Search Console tıklamasıdır; araç verisi ekte \"tahmin\" olarak durur."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_owner",
+   "section": "mk_st_scope",
+   "label": "Hesap Sahipliği",
+   "en": "Account Ownership",
+   "type": "select",
+   "explanation": "SEO aracı hesabının ve projelerin kime ait olacağı. Sıralama geçmişi, tarama geçmişi ve proje ayarları hesabın sahibinde kalır.",
+   "scenario": "Ajans ya da serbest çalışanla çalışılıyorsa özellikle önemlidir; iş bitince geçmiş verinin şirkette kalması gerekir.",
+   "example": "Hesap şirketin pazarlama@ adresine açılır, ajansın uzmanları kullanıcı olarak eklenir; sözleşme bitince yalnız kullanıcıları kaldırılır.",
+   "rule": "SEO aracı hesap sahipliği: {label}.",
+   "agents": [
+    "poz:pazarlama:marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/tedarikci-yonetimi-uzmani",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "majestic",
+      "screamingfrog",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "company",
+     "label": "Şirket hesabı, kurumsal e-posta (önerilen)",
+     "explanation": "Hesap şirket adına ve kişiye bağlı olmayan kurumsal e-postayla açılır; faturayı şirket öder.",
+     "scenario": "Her durumda önerilir.",
+     "example": "Hesabın sahibi pazarlama@ortak adresi; çalışanlar ve ajans kullanıcı olarak girer.",
+     "ruleDetail": "Hesap şirket adına, kişiye bağlı olmayan kurumsal e-postayla açılır; fatura şirkettedir, sahip (Owner) yetkisi en az iki yöneticide tanımlıdır."
+    },
+    {
+     "value": "agency",
+     "label": "Ajans hesabı, şirkete erişim verilir",
+     "explanation": "Ajans kendi hesabında proje açar, şirkete görüntüleme ya da düzenleme erişimi verir.",
+     "scenario": "Ajans aracı zaten kullanıyorsa ve şirket ayrı lisans almayacaksa.",
+     "example": "Ajans Semrush projesini şirketin kullanıcısıyla paylaşır; aylık raporlar ortak projeden çıkar.",
+     "ruleDetail": "Ajans hesabındaki projeye şirkete paylaşım verilir; sözleşmede sözleşme bitiminde proje verisinin (sıralama geçmişi, anahtar kelime listesi, tarama raporları) dışa aktarılıp şirkete teslim edileceği yazılır."
+    },
+    {
+     "value": "personal",
+     "label": "Kişisel hesap (önerilmez)",
+     "explanation": "Bir çalışanın ya da serbest çalışanın kişisel hesabı kullanılır.",
+     "scenario": "Yalnız kısa süreli denemede.",
+     "example": "Uzman kendi hesabında deneme projesi açar; iki hafta sonra şirket hesabına taşınır.",
+     "ruleDetail": "Kişisel hesap yalnız deneme için kullanılır; kalıcı proje şirket hesabına taşınır, kişisel hesapta şirket verisi bırakılmaz."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_access",
+   "section": "mk_st_scope",
+   "label": "Erişim, Koltuk ve Kota Kuralları",
+   "en": "Access, Seats & Quotas",
+   "type": "multiselect",
+   "explanation": "SEO araçlarına kimin, hangi rolle eriştiği ve API / MCP birim kotasının nasıl kontrol edildiği.",
+   "scenario": "Aracı birden çok kişi ya da ajans kullanıyorsa; API veya Claude bağlantısı (MCP) kullanılacaksa.",
+   "example": "Herkes kendi koltuğuyla girer, iki adımlı doğrulama zorunludur; her üç ayda bir kullanıcı listesi gözden geçirilir.",
+   "rule": "SEO aracı erişim kuralları: {labels}.",
+   "agents": [
+    "poz:pazarlama:marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-teknolojileri-uzmani",
+    "poz:pazarlama:marketing_operations_crm_martech/butce-ve-tedarikci-yonetimi-muduru/tedarikci-yonetimi-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "majestic",
+      "screamingfrog",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "seats",
+     "label": "Herkes kendi koltuğuyla girer, ortak şifre yok",
+     "explanation": "Her kullanıcıya ayrı koltuk açılır.",
+     "scenario": "Her ekipte.",
+     "example": "Ajansın iki uzmanı için iki ayrı kullanıcı eklenir.",
+     "ruleDetail": "Her kullanıcı kendi koltuğuyla girer; ortak şifre kullanılmaz (sağlayıcıların kullanım koşulları da hesap paylaşımını sınırlar)."
+    },
+    {
+     "value": "roles",
+     "label": "En az yetkili rol",
+     "explanation": "Rapor okuyanlar görüntüleme, proje kuranlar düzenleme rolü alır; sahip / yönetici rolü sınırlı tutulur.",
+     "scenario": "Birden çok kullanıcı varsa.",
+     "example": "Yönetim kurulu üyesi yalnız görüntüleme paylaşımıyla raporu görür.",
+     "ruleDetail": "Kullanıcılar en az yetkili rolle eklenir (Ahrefs: Owner / Admin / Member, Semrush: Owner / Admin / User / Guest ve görüntüleme paylaşımı); sahip rolü en az iki yöneticidedir."
+    },
+    {
+     "value": "mfa",
+     "label": "İki adımlı doğrulama zorunlu",
+     "explanation": "Hesaplarda iki adımlı doğrulama (2FA) açılır; destekleniyorsa kurumsal tekil oturum (SSO).",
+     "scenario": "Her ekipte.",
+     "example": "Ahrefs çalışma alanında yönetici 2FA'yı herkes için zorunlu yapar.",
+     "ruleDetail": "Bütün kullanıcılarda iki adımlı doğrulama açılır; plan destekliyorsa SAML SSO ile kurumsal kimlikten girilir."
+    },
+    {
+     "value": "offboard",
+     "label": "Ayrılanın erişimi aynı gün kaldırılır",
+     "explanation": "Çalışan ayrıldığında ya da ajans sözleşmesi bittiğinde kullanıcısı silinir.",
+     "scenario": "Her ekipte.",
+     "example": "Sözleşmesi biten ajansın kullanıcıları son gün kaldırılır, API anahtarları yenilenir.",
+     "ruleDetail": "Ayrılan çalışanın ve sözleşmesi biten ajansın erişimi aynı gün kaldırılır; onların oluşturduğu API / MCP anahtarları iptal edilip yenilenir."
+    },
+    {
+     "value": "review",
+     "label": "Üç ayda bir erişim gözden geçirmesi",
+     "explanation": "Kullanıcı listesi, roller ve API anahtarları üç ayda bir kontrol edilir.",
+     "scenario": "Birden çok kullanıcı ya da ajans varsa.",
+     "example": "Her çeyrek başında kullanıcı listesi dışa aktarılıp onaylanır.",
+     "ruleDetail": "Kullanıcılar, roller ve API / MCP anahtarları üç ayda bir gözden geçirilir; kullanılmayan koltuk ve anahtar kapatılır."
+    },
+    {
+     "value": "billing",
+     "label": "Plan, yenileme tarihi ve sahibi kayıtlı",
+     "explanation": "Planın adı, yenileme tarihi ve faturadan sorumlu kişi kayıtlıdır.",
+     "scenario": "Ücretli araç varsa.",
+     "example": "Satın alma takviminde Semrush yenilemesinden 30 gün önce hatırlatma vardır.",
+     "ruleDetail": "Araç planı, yenileme tarihi ve sorumlusu kayıtlıdır; yenilemeden önce kullanım gözden geçirilir. Plan düşürülürse kaybolacak proje ve sıralama geçmişi önceden dışa aktarılır."
+    },
+    {
+     "value": "quota",
+     "label": "API / MCP birim kotası izlenir",
+     "explanation": "API ve MCP sorguları plan birimlerinden düşer; aylık üst sınır konur.",
+     "scenario": "API ya da Claude bağlantısı (MCP) kullanılacaksa.",
+     "example": "Ahrefs MCP anahtarına aylık birim sınırı konur; sınırın %80'inde uyarı gelir.",
+     "ruleDetail": "API ve MCP kullanımı plan birimlerinden düşer; anahtar başına aylık birim sınırı belirlenir, büyük raporlardan önce tahmini birim kontrol edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_domain",
+   "section": "mk_st_setup",
+   "label": "Proje Kapsamı",
+   "en": "Project Scope",
+   "type": "select",
+   "explanation": "SEO aracındaki projenin hangi adresleri kapsayacağı. Ahrefs'te kapsam \"tam adres / klasör / alan adı / alan adı ve alt alan adları\"; Semrush'ta Site Audit varsayılan olarak bütün alt alan adlarını tarar, Position Tracking alan adı, alt alan adı, klasör ya da tek adres izler.",
+   "scenario": "Blog, mağaza, destek merkezi ya da dil sürümleri ayrı alt alan adında veya klasördeyse doğru seçim raporların doğruluğunu belirler.",
+   "example": "Blog blog.ornek.com'da olduğu için proje \"alan adı ve alt alan adları\" kapsamıyla açılır; hazırlık sitesi tarama dışı bırakılır.",
+   "rule": "SEO aracı proje kapsamı: {label}. Proje alan adı Ortak Bilgiler › Canlı Site Adresi'yle (www ve https dahil) aynı yazılır; hazırlık (staging) sitesi canlı projeye dahil edilmez.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "subdomains",
+     "label": "Alan adı ve bütün alt alan adları (önerilen)",
+     "explanation": "Ana alan adı ve blog., magaza., destek. gibi bütün alt alan adları.",
+     "scenario": "Sitenin parçaları farklı alt alan adlarındaysa.",
+     "example": "ornek.com, www.ornek.com ve blog.ornek.com aynı projede.",
+     "ruleDetail": "Proje alan adı ve bütün alt alan adlarını kapsar; hazırlık ve iç sistem alt alan adları (staging., panel., api.) tarama hariç listesine eklenir."
+    },
+    {
+     "value": "domain",
+     "label": "Yalnız ana alan adı",
+     "explanation": "Yalnız www'lu ya da www'suz tek ana adres.",
+     "scenario": "Site tek alan adında ve alt alan adı yoksa.",
+     "example": "Proje yalnız www.ornek.com'u kapsar.",
+     "ruleDetail": "Proje yalnız ana alan adını kapsar; alt alan adı açılırsa kapsam yeniden değerlendirilir."
+    },
+    {
+     "value": "folders",
+     "label": "Dil / ülke klasörleri ayrı proje veya etiket",
+     "explanation": "ornek.com/en/, ornek.com/de/ gibi klasörler ayrı izlenir.",
+     "scenario": "Çok dilli ya da çok ülkeli sitede her pazarın performansı ayrı ölçülecekse.",
+     "example": "/en/ klasörü ayrı Ahrefs projesi, Semrush'ta ayrı Position Tracking kampanyası olur.",
+     "ruleDetail": "Her dil / ülke klasörü ayrı proje ya da ayrı sıralama takibi kampanyasıyla, kendi ülke ve dil ayarlarıyla izlenir; ana proje bütün siteyi taramaya devam eder."
+    },
+    {
+     "value": "folder",
+     "label": "Tek bölüm (klasör)",
+     "explanation": "Projenin yalnız bir bölümü, ör. /blog/.",
+     "scenario": "Yalnız belirli bir bölümden sorumluysanız (ör. içerik ajansı).",
+     "example": "İçerik ajansının projesi yalnız ornek.com/blog/ adreslerini izler.",
+     "ruleDetail": "Proje yalnız belirtilen klasörü kapsar; site geneli teknik denetim ayrıca sitenin sahibinde yapılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_verify",
+   "section": "mk_st_setup",
+   "label": "Site Sahipliği Doğrulama",
+   "en": "Ownership Verification",
+   "type": "select",
+   "explanation": "Ahrefs (ve Ahrefs Webmaster Tools) siteyi doğrulamanızı ister; doğrulanmış projede ücretsiz ek tarama ve Site Explorer kredisi, robots.txt'yi yok sayma ve daha hızlı tarama açılır. Yöntemler: Search Console bağlantısı, DNS TXT kaydı, kök dizine HTML dosyası, ana sayfaya meta etiket. Semrush projesi doğrulama istemez.",
+   "scenario": "Ahrefs ya da Ahrefs Webmaster Tools seçildiyse; Semrush'ta yalnız güvenlik duvarının arkasındaki sayfalar taranacaksa doğrulama dosyası gerekir.",
+   "example": "Search Console'da sahip yetkisi olan pazarlama yöneticisi Ahrefs'te \"GSC'den içe aktar\" der; site ve 16 aylık Search Console verisi tek adımda gelir.",
+   "rule": "SEO aracında site sahipliği doğrulama yöntemi: {label}.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "gsc",
+     "label": "Search Console bağlantısı (önerilen)",
+     "explanation": "Search Console mülkü araca bağlanır; site doğrulanır ve Search Console verisi içe aktarılır.",
+     "scenario": "Search Console mülkü varsa (5. Google menüsü).",
+     "example": "Ahrefs'te \"Import from GSC\" ile proje açılır.",
+     "ruleDetail": "Doğrulama Search Console bağlantısıyla yapılır; bağlantıyı Search Console'da sahip yetkisi olan şirket hesabı kurar, proje kapsamı Search Console mülküyle aynıdır."
+    },
+    {
+     "value": "dns",
+     "label": "DNS TXT kaydı",
+     "explanation": "Aracın verdiği TXT kaydı alan adının DNS'ine eklenir.",
+     "scenario": "Search Console bağlantısı kurulamıyorsa ve DNS yönetimi elinizdeyse.",
+     "example": "DNS panelinde \"ahrefs-site-verification=…\" TXT kaydı durur.",
+     "ruleDetail": "Doğrulama DNS TXT kaydıyla yapılır; kayıt DNS değişiklik listesine \"SEO aracı doğrulaması, silmeyin\" notuyla yazılır."
+    },
+    {
+     "value": "file",
+     "label": "HTML dosyası / meta etiket",
+     "explanation": "Kök dizine doğrulama dosyası ya da ana sayfaya meta etiket eklenir.",
+     "scenario": "DNS erişimi yoksa.",
+     "example": "Sitenin kökünde aracın verdiği .html dosyası durur.",
+     "ruleDetail": "Doğrulama dosyası ya da meta etiket kaynak koda (ya da CMS ayarına) kalıcı olarak eklenir ve yayın sürecinde silinmez; şablon değişikliğinde kontrol edilir."
+    },
+    {
+     "value": "none",
+     "label": "Doğrulama yapılmayacak",
+     "explanation": "Proje doğrulanmadan kullanılır.",
+     "scenario": "Yalnız Semrush kullanılıyorsa (doğrulama gerekmez) ya da kısa denemede.",
+     "example": "Semrush projesi doğrulamasız açılır.",
+     "ruleDetail": "Site doğrulanmaz; Ahrefs'te doğrulanmamış site dakikada en çok 30 adresle taranır ve robots.txt aşılamaz — bu sınırlar kabul edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_integrations",
+   "section": "mk_st_setup",
+   "label": "Bağlanacak Hizmetler",
+   "en": "Integrations",
+   "type": "multiselect",
+   "explanation": "SEO aracına bağlanacak Google hizmetleri ve bildirim kanalları. Semrush resmî olarak Google Analytics, Search Console, Google Ads, İşletme Profili ve Looker Studio ile bağlanır; Ahrefs Search Console ve Looker Studio ile.",
+   "scenario": "Araçtaki tahminleri gerçek veriyle karşılaştırmak ve raporları tek panelde toplamak istiyorsanız.",
+   "example": "Semrush'ın Organic Traffic Insights raporu Search Console ve GA4'ü bağlayarak gerçek tıklamayı aracın sıralamasıyla yan yana gösterir.",
+   "rule": "SEO aracına bağlanacak hizmetler: {labels}. Bağlantılar şirket hesabıyla, yalnız gereken mülke ve okuma amacıyla kurulur; bağlantıyı kuran kişi ve tarih devir belgesine yazılır.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+    "poz:pazarlama:marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-teknolojileri-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "gsc",
+     "label": "Google Search Console",
+     "explanation": "Gerçek tıklama, gösterim ve sorgu verisi araca gelir.",
+     "scenario": "Search Console mülkü varsa — çoğu sitede önerilir.",
+     "example": "Ahrefs projesinde Search Console sekmesi 16 aylık veriyi gösterir.",
+     "ruleDetail": "Search Console araca okuma amacıyla bağlanır; araç raporlarında Search Console verisi \"gerçek veri\" olarak tahminlerden ayrı gösterilir."
+    },
+    {
+     "value": "ga4",
+     "label": "Google Analytics 4",
+     "explanation": "Organik trafiğin oturum, etkileşim ve dönüşüm verisi araca gelir (Semrush Organic Traffic Insights).",
+     "scenario": "Semrush kullanılıyorsa ve organik trafiğin dönüşümü sayfa bazında görülecekse.",
+     "example": "Semrush'ta hangi açılış sayfasının dönüşüm getirdiği sorguyla birlikte görünür.",
+     "ruleDetail": "GA4 araca yalnız okuma yetkili bir kullanıcıyla bağlanır; bağlantı GA4'te kullanıcı listesinde görünür ve erişim gözden geçirmesine dahildir."
+    },
+    {
+     "value": "gbp",
+     "label": "Google İşletme Profili",
+     "explanation": "Yerel SEO için İşletme Profili araca bağlanır (Semrush yerel araçları).",
+     "scenario": "Fiziksel işletme ve yerel arama önemliyse.",
+     "example": "Semrush'ta İşletme Profili yorumları ve yerel sıralama haritası izlenir.",
+     "ruleDetail": "İşletme Profili yerel SEO aracına bağlanır; profil bilgisi Ortak Bilgiler'deki ad, adres, telefon ve çalışma saatleriyle aynı tutulur."
+    },
+    {
+     "value": "looker",
+     "label": "Looker Studio (Data Studio) bağlayıcısı",
+     "explanation": "Aracın verisi Looker Studio raporuna resmî bağlayıcıyla çekilir (planınızda olup olmadığını kontrol edin).",
+     "scenario": "Raporlar Looker Studio'da toplanıyorsa (5. Google › Data Studio).",
+     "example": "Aylık SEO raporunda Search Console ve Semrush Position Tracking grafikleri aynı sayfada.",
+     "ruleDetail": "Araç verisi Looker Studio'ya sağlayıcının resmî bağlayıcısıyla çekilir; rapor sayfasında her grafiğin kaynağı yazılır."
+    },
+    {
+     "value": "alerts",
+     "label": "E-posta / ekip sohbeti bildirimleri",
+     "explanation": "Sıralama düşüşü, yeni / kayıp backlink ve tarama hatası bildirimleri.",
+     "scenario": "Sorunları rapor dönemini beklemeden görmek istiyorsanız.",
+     "example": "Ahrefs kayıp backlink bildirimini haftalık e-postayla gönderir.",
+     "ruleDetail": "Önemli değişiklikler (ilk 10'dan düşen hedef sorgu, kayıp önemli backlink, tarama sağlık puanında düşüş) için bildirim kurulur; bildirim kişisel değil ekip adresine gider."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_crawl",
+   "section": "mk_st_audit",
+   "label": "Tarama Ayarları",
+   "en": "Crawl Settings",
+   "type": "multiselect",
+   "explanation": "SEO aracının tarayıcısına verilecek izinler ve tarama ayarları. Tarayıcılar: Ahrefs Site Audit için AhrefsSiteAudit, Semrush Site Audit için SiteAuditBot; ikisi de robots.txt'ye uyar.",
+   "scenario": "Aracın düzenli taraması kurulacaksa; sitede WAF / CDN, JavaScript ile çizilen içerik ya da parola korumalı hazırlık sitesi varsa.",
+   "example": "Cloudflare'de \"AhrefsSiteAudit\" ve Ahrefs IP listesi için kural açılır; tarama gece 02:00'de, sunucuyu yormayan hızda yapılır.",
+   "rule": "SEO aracı tarama ayarları: {labels}.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+    "poz:bilgi-teknolojileri:15.05/devops-sre-ve-yayin-yonetimi/kidemli-devops-muhendisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "serpstat",
+      "screamingfrog"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "allowlist",
+     "label": "Tarayıcı WAF / CDN'de izinli (IP ve kullanıcı aracısıyla)",
+     "explanation": "Aracın tarayıcısı güvenlik duvarında yalnız resmî IP listesi ya da doğrulanmış bot listesiyle eşleşerek geçer.",
+     "scenario": "Sitede Cloudflare, Sucuri gibi WAF / CDN varsa — çoğu sitede.",
+     "example": "Cloudflare'de Ahrefs doğrulanmış iyi bot olarak geçer; Semrush Site Audit için 85.208.98.128/25 ağı 80 ve 443 portlarında izinlidir.",
+     "ruleDetail": "Aracın tarayıcısı WAF / CDN'de yalnız sağlayıcının resmî IP listesi ya da doğrulanmış bot listesiyle eşleşince izinlidir (kullanıcı aracısı adı tek başına yeterli sayılmaz, taklit edilebilir); bütün botlara genel izin açılmaz. Tarayıcı adları: Ahrefs AhrefsSiteAudit, Semrush SiteAuditBot, Moz rogerbot, Sistrix \"SISTRIX Crawler\"; Ahrefs IP listesi api.ahrefs.com'daki JSON'dan, Semrush Site Audit ağı Semrush yardım sayfasından güncel alınır. Cloudflare'de atlama (Skip) kuralı ücretsiz plandaki Bot Fight Mode'u atlamaz; bu durumda Bot Fight Mode ayarı ayrıca değerlendirilir."
+    },
+    {
+     "value": "speed",
+     "label": "Sunucuyu yormayan tarama hızı, gece saatinde",
+     "explanation": "Tarama hızı düşük tutulur, trafiğin az olduğu saatte çalışır.",
+     "scenario": "Paylaşımlı barındırma ya da yoğun trafikli sitede.",
+     "example": "Semrush'ta \"2 saniyede 1 adres\", Ahrefs'te düşük hız ve 02:00 zamanlaması.",
+     "ruleDetail": "Tarama hızı sunucu kapasitesine göre sınırlanır ve trafiğin en az olduğu saatte zamanlanır; tarama sırasında sunucu yanıt süresi izlenir, yükselirse hız düşürülür."
+    },
+    {
+     "value": "js",
+     "label": "JavaScript işleme açık",
+     "explanation": "Sayfalar tarayıcıda olduğu gibi JavaScript çalıştırılarak taranır.",
+     "scenario": "İçerik ya da bağlantılar JavaScript ile çiziliyorsa (SPA, istemci tarafı render).",
+     "example": "Ahrefs'te \"Execute JavaScript\" açılır; menü bağlantıları raporda görünür.",
+     "ruleDetail": "JavaScript ile çizilen içerik için taramada JavaScript işleme açılır; JavaScript'li ve JavaScript'siz sonuç farkı (yalnız JavaScript ile görünen bağlantı ve içerik) ayrıca raporlanır."
+    },
+    {
+     "value": "exclude",
+     "label": "Parametreli ve sonsuz adresler hariç",
+     "explanation": "Filtre, sıralama, oturum ve izleme parametreli adresler ile sonsuz sayfalama taramadan çıkarılır.",
+     "scenario": "E-ticaret, filtreli liste ya da takvim sayfası varsa.",
+     "example": "?sort=, ?utm_ ve /etiket/ adresleri hariç tutma kuralıyla taranmaz.",
+     "ruleDetail": "Filtre, sıralama, oturum ve izleme (utm_) parametreli adresler ile sonsuz sayfalama taramadan hariç tutulur; tarama kredisi ana sayfalara harcanır."
+    },
+    {
+     "value": "sitemap",
+     "label": "Site haritası başlangıç kaynağı",
+     "explanation": "Tarama site haritasından da başlar; haritada olup bağlantı almayan sayfalar bulunur.",
+     "scenario": "Site haritası varsa.",
+     "example": "Rapor \"haritada var, iç bağlantı yok\" sayfalarını listeler.",
+     "ruleDetail": "Tarama hem ana sayfadan hem site haritasından başlar; haritada olup iç bağlantı almayan ve bağlantı alıp haritada olmayan sayfalar raporlanır."
+    },
+    {
+     "value": "mobile",
+     "label": "Mobil kullanıcı aracısı",
+     "explanation": "Tarama mobil tarayıcı kimliğiyle yapılır (Google mobil öncelikli dizine ekleme yapar).",
+     "scenario": "Her sitede önerilir.",
+     "example": "Semrush'ta SiteAuditBot Mobile varsayılandır.",
+     "ruleDetail": "Tarama mobil kullanıcı aracısıyla yapılır; masaüstü ile içerik farkı varsa ayrıca masaüstü taraması karşılaştırılır."
+    },
+    {
+     "value": "staging",
+     "label": "Hazırlık sitesi kimlik bilgisiyle ayrı taranır",
+     "explanation": "Parola korumalı hazırlık sitesi yayından önce ayrı projede taranır.",
+     "scenario": "Yayın öncesi kontrol yapılacaksa.",
+     "example": "Hazırlık sitesi HTTP kimlik doğrulamasıyla taranır, canlı projeye karışmaz.",
+     "ruleDetail": "Hazırlık sitesi ayrı projede, HTTP kimlik doğrulaması ya da aracın doğrulama dosyasıyla taranır; kimlik bilgileri yalnız aracın ayarında ve parola yöneticisinde durur, belgeye yazılmaz. Hazırlık sitesi arama motorlarına kapalı kalır (noindex / kimlik doğrulama)."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_audit_freq",
+   "section": "mk_st_audit",
+   "label": "Otomatik Tarama Sıklığı",
+   "en": "Audit Frequency",
+   "type": "select",
+   "explanation": "Aracın siteyi ne sıklıkla otomatik tarayacağı. Semrush haftalık (gün seçilir), günlük ya da tek seferlik zamanlama sunar; Ahrefs gün, saat ve saat dilimiyle zamanlanır.",
+   "scenario": "Sık içerik yayımlanan ya da sık kod yayını yapılan sitede daha sık tarama gerekir.",
+   "example": "Tarama her pazartesi 02:00'de çalışır; SEO uzmanı salı sabahı sağlık puanını kontrol eder.",
+   "rule": "SEO aracının otomatik tarama sıklığı: {label}. Her taramadan sonra sağlık puanı ve yeni çıkan kritik / yüksek bulgular kontrol edilir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "serpstat",
+      "screamingfrog"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "weekly",
+     "label": "Haftalık (önerilen)",
+     "explanation": "Her hafta belirli gün ve saatte.",
+     "scenario": "Çoğu kurumsal ve içerik sitesinde.",
+     "example": "Her pazartesi 02:00.",
+     "ruleDetail": "Tarama haftada bir, trafiğin az olduğu saatte çalışır."
+    },
+    {
+     "value": "daily",
+     "label": "Günlük",
+     "explanation": "Her gün.",
+     "scenario": "Çok sık yayın yapılan büyük e-ticaret ya da haber sitesinde (tarama kredisini kontrol edin).",
+     "example": "Her gece 03:00.",
+     "ruleDetail": "Tarama her gün çalışır; tarama kredisi tüketimi aylık izlenir."
+    },
+    {
+     "value": "monthly",
+     "label": "Aylık",
+     "explanation": "Ayda bir.",
+     "scenario": "Az değişen küçük sitede.",
+     "example": "Her ayın ilk pazartesi.",
+     "ruleDetail": "Tarama ayda bir çalışır; büyük değişiklikten sonra ayrıca elle başlatılır."
+    },
+    {
+     "value": "release",
+     "label": "Her yayından sonra",
+     "explanation": "Kod ya da şablon yayınından sonra elle ya da otomasyonla başlatılır.",
+     "scenario": "Sık kod yayını yapılıyorsa, haftalık taramaya ek olarak.",
+     "example": "Yayın hattı bittikten sonra Site Audit yeniden başlatılır.",
+     "ruleDetail": "Her kod / şablon yayınından sonra tarama başlatılır ve önceki taramayla karşılaştırılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_audit_flow",
+   "section": "mk_st_audit",
+   "label": "Tarama Bulgularının İş Akışı",
+   "en": "Audit Issue Workflow",
+   "type": "multiselect",
+   "explanation": "Tarama raporundaki bulguların nasıl önceliklendirileceği, kime iş olarak verileceği ve nasıl kapatılacağı.",
+   "scenario": "Tarama raporu düzenli çıkıyorsa; bulguların raporda kalıp düzeltilmemesini önlemek için.",
+   "example": "Kritik bulgu iş takip sistemine \"SEO-teknik\" etiketiyle açılır, düzeltmeden sonra yeniden taramayla kapanır.",
+   "rule": "SEO aracı tarama bulguları: {labels}.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "serpstat",
+      "screamingfrog"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "prioritize",
+     "label": "Etkiye göre önceliklendirme",
+     "explanation": "Bulgular etkilenen sayfa sayısı ve sayfanın önemine göre sıralanır.",
+     "scenario": "Her durumda.",
+     "example": "Ana hizmet sayfasındaki canonical hatası, 3 eski blog yazısındaki eksik alt metinden önce gelir.",
+     "ruleDetail": "Bulgular etkilenen sayfa sayısı, sayfanın trafik / dönüşüm önemi ve dizine ekleme etkisine göre kritik / yüksek / orta / düşük olarak sınıflanır."
+    },
+    {
+     "value": "ticket",
+     "label": "Kritik ve yüksek bulgular iş kaydına",
+     "explanation": "Kritik ve yüksek bulgu sorumlu ekibe iş kaydı olarak açılır.",
+     "scenario": "Yazılım ekibi ayrıysa.",
+     "example": "İş kaydında bulgu, örnek adresler ve aracın rapor bağlantısı var.",
+     "ruleDetail": "Kritik ve yüksek bulgular sorumlusu ve hedef tarihiyle iş kaydı olarak açılır; kayıtta örnek adresler ve beklenen düzeltme yazılır."
+    },
+    {
+     "value": "verify",
+     "label": "Düzeltme yeniden taramayla doğrulanır",
+     "explanation": "İş, aracın yeniden taramasında bulgu kaybolunca kapanır.",
+     "scenario": "Her durumda.",
+     "example": "Yönlendirme zinciri düzeltildikten sonra yeniden tarama yapılır, bulgu kapanır.",
+     "ruleDetail": "Bir bulgu ancak yeniden taramada (ya da ilgili adres yeniden kontrol edilerek) kaybolduğu görülünce kapatılır."
+    },
+    {
+     "value": "ignore",
+     "label": "Bilinçli kabul edilen uyarılar not ile gizlenir",
+     "explanation": "Bilerek bırakılan uyarılar (ör. kasıtlı noindex) gerekçesiyle gizlenir.",
+     "scenario": "Aynı uyarılar her raporda ekibi yoruyorsa.",
+     "example": "Arama sonuçları sayfasının noindex uyarısı \"kasıtlı\" notuyla gizlenir.",
+     "ruleDetail": "Bilerek kabul edilen uyarılar gerekçesiyle not edilip gizlenir; gerekçe yılda bir gözden geçirilir."
+    },
+    {
+     "value": "gsc",
+     "label": "Search Console dizine ekleme raporuyla karşılaştırma",
+     "explanation": "Aracın bulguları Search Console'un dizine ekleme ve Core Web Vitals raporlarıyla karşılaştırılır.",
+     "scenario": "Search Console bağlıysa.",
+     "example": "Araç \"noindex\" diyor, Search Console da \"noindex ile hariç tutuldu\" diyor; bulgu doğrulanır.",
+     "ruleDetail": "Aracın bulguları Search Console'un sayfa dizine ekleme ve Core Web Vitals raporlarıyla karşılaştırılır; Google'ın raporu esas alınır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_kw_source",
+   "section": "mk_st_rank",
+   "label": "İzlenecek Sorguların Kaynağı",
+   "en": "Tracked Keywords Source",
+   "type": "select",
+   "explanation": "Sıralama takibine girecek anahtar kelime listesinin nereden geleceği.",
+   "scenario": "Sıralama takibi kurulacaksa; içerik, reklam ve raporun aynı sorgu listesini kullanması için.",
+   "example": "Ortak Bilgiler › Hedef Sorgular'daki 40 sorgu hedef sayfalarıyla birlikte Semrush Position Tracking'e aktarılır.",
+   "rule": "Sıralama takibinde izlenecek sorguların kaynağı: {label}.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "common",
+     "label": "Ortak Bilgiler › Hedef Sorgular (önerilen)",
+     "explanation": "Hedef sorgular ve hedef sayfaları Ortak Bilgiler'den alınır; araçta yeni sorgu bulunursa önce oraya eklenir.",
+     "scenario": "Her durumda önerilir.",
+     "example": "Yeni bir hizmet sorgusu önce Ortak Bilgiler'e eklenir, sonra takip listesine girer.",
+     "ruleDetail": "İzlenen sorgular Ortak Bilgiler › Hedef Sorgular'daki liste ve hedef sayfalarıdır; araçta bulunan yeni sorgu önce o listeye eklenir, sonra takibe alınır."
+    },
+    {
+     "value": "tool",
+     "label": "Aracın önerileri + onay",
+     "explanation": "Aracın önerdiği sorgulardan SEO yöneticisinin onayladıkları eklenir.",
+     "scenario": "Hedef sorgu listesi henüz yoksa.",
+     "example": "Araç 200 sorgu önerir, yönetici 60'ını onaylar.",
+     "ruleDetail": "Aracın önerdiği sorgulardan yalnız SEO yöneticisinin onayladıkları takibe alınır ve Ortak Bilgiler › Hedef Sorgular'a da yazılır."
+    },
+    {
+     "value": "gsc",
+     "label": "Search Console sorguları",
+     "explanation": "Search Console'da gösterim alan sorgulardan seçilir.",
+     "scenario": "Site bir süredir yayındaysa ve gerçek sorgu verisi varsa.",
+     "example": "Son 3 ayda en çok gösterim alan 50 marka dışı sorgu takibe alınır.",
+     "ruleDetail": "Takip listesi Search Console'da gösterim alan marka dışı sorgulardan seçilir ve üç ayda bir yenilenir; liste Ortak Bilgiler › Hedef Sorgular'a da yazılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_rank_set",
+   "section": "mk_st_rank",
+   "label": "Sıralama Takibi Ayarları",
+   "en": "Rank Tracking Settings",
+   "type": "multiselect",
+   "explanation": "Sıralamanın hangi konum, cihaz ve rakiplerle, hangi gruplamayla izleneceği.",
+   "scenario": "Sıralama takibi kurulurken; konum ve cihaz ayarı bazı araçlarda sonradan değiştirilemez.",
+   "example": "İzmir il düzeyinde, mobil ve masaüstü ayrı; Ortak Bilgiler'deki 5 rakip eklenir, sorgular hizmet etiketleriyle gruplanır.",
+   "rule": "Sıralama takibi ayarları: {labels}.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "location",
+     "label": "Konum hedef pazara göre (il / ilçe düzeyi)",
+     "explanation": "Konum Ortak Bilgiler › Hizmet Coğrafyası ve Hizmet Bölgesi Ayrıntısı'na göre seçilir; yerel işletmede il ya da ilçe.",
+     "scenario": "Her durumda; yerel işletmede özellikle.",
+     "example": "Bornova'daki klinik \"İzmir\" yerine ilçe ya da posta kodu düzeyinde izlenir.",
+     "ruleDetail": "Konum Ortak Bilgiler › Hizmet Coğrafyası ve Hizmet Bölgesi Ayrıntısı'na göre seçilir (ülke / il / ilçe / posta kodu); dil Ortak Bilgiler › Diller'e göredir. Kampanya açılmadan önce konum doğrulanır (Semrush'ta sonradan değiştirilemez)."
+    },
+    {
+     "value": "devices",
+     "label": "Mobil ve masaüstü ayrı",
+     "explanation": "Sıralama mobil ve masaüstünde ayrı izlenir.",
+     "scenario": "Her sitede önerilir.",
+     "example": "Raporda mobil ve masaüstü sırası ayrı sütunlarda.",
+     "ruleDetail": "Sıralama mobil ve masaüstü için ayrı izlenir; Ortak Bilgiler › Kitlenin Cihaz Kullanımı'nda ağırlıklı olan cihaz raporda önce verilir."
+    },
+    {
+     "value": "competitors",
+     "label": "Rakipler Ortak Bilgiler'den",
+     "explanation": "Ortak Bilgiler › Rakipler'deki rakip siteler takibe eklenir.",
+     "scenario": "Rakip listesi varsa.",
+     "example": "Raporda her sorguda 5 rakibin sırası yan yana.",
+     "ruleDetail": "Ortak Bilgiler › Rakipler'deki rakip alan adları sıralama takibine eklenir (Ahrefs en çok 10, Semrush en çok 20 rakip)."
+    },
+    {
+     "value": "tags",
+     "label": "Etiketlerle gruplama",
+     "explanation": "Sorgular marka / marka dışı, hizmet ve sayfa türüne göre etiketlenir.",
+     "scenario": "Raporun hizmet ya da sayfa grubu bazında okunması isteniyorsa.",
+     "example": "\"Hizmet: implant\", \"marka dışı\" etiketli sorguların ortalama sırası ayrı izlenir.",
+     "ruleDetail": "Sorgular marka / marka dışı, hizmet (Ortak Bilgiler › Ürün / Hizmetler) ve sayfa türü etiketleriyle gruplanır; raporda marka dışı ortalama ayrı verilir."
+    },
+    {
+     "value": "target",
+     "label": "Her sorgunun hedef sayfası",
+     "explanation": "Her sorguya hedeflenen sayfa atanır; başka sayfa sıralanırsa uyarı verilir.",
+     "scenario": "Birbirine yakın sayfalar (kanibalizasyon riski) varsa.",
+     "example": "\"implant fiyatları\" sorgusunda blog yazısı yerine hizmet sayfası hedeflenir.",
+     "ruleDetail": "Her sorgunun hedef sayfası tanımlanır; sıralanan sayfa hedeften farklıysa (kanibalizasyon) bulgu olarak raporlanır."
+    },
+    {
+     "value": "serp",
+     "label": "SERP özellikleri ve AI Overviews",
+     "explanation": "Öne çıkan snippet, yerel paket, video, \"Diğer sorular\" ve AI Overviews'da görünüp görünmediği izlenir.",
+     "scenario": "Arama sonuçlarında zengin özellikler yoğunsa.",
+     "example": "Raporda \"AI Overviews'da kaynak olarak gösterildi\" sütunu.",
+     "ruleDetail": "SERP özellikleri (öne çıkan snippet, yerel paket, video, AI Overviews) izlenir; sitenin bu alanlarda görünüp görünmediği sorgu bazında raporlanır."
+    },
+    {
+     "value": "local",
+     "label": "Yerel paket (harita) takibi",
+     "explanation": "Google haritalı yerel sonuçlarında işletmenin sırası işletme adıyla izlenir.",
+     "scenario": "Fiziksel işletme ve İşletme Profili varsa.",
+     "example": "Semrush'ta yerel paket sırası işletme adıyla izlenir.",
+     "ruleDetail": "Yerel paket (haritalı sonuç) sırası işletme adıyla izlenir; ad Google İşletme Profili'ndeki adla aynı yazılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_rank_freq",
+   "section": "mk_st_rank",
+   "label": "Sıralama Güncelleme Sıklığı",
+   "en": "Rank Update Frequency",
+   "type": "select",
+   "explanation": "Sıralamanın ne sıklıkla ölçüleceği. Ahrefs Rank Tracker varsayılan olarak haftalık güncellenir; Semrush Position Tracking günlük günceller (uzun süre hareketsiz kampanyada haftalığa düşebilir). Güncelleme sıklığı plana bağlıdır.",
+   "scenario": "Kampanya, site taşıma ya da Google güncellemesi dönemlerinde günlük ölçüm; normal dönemde haftalık çoğu zaman yeterlidir.",
+   "example": "Site taşıma sonrası 4 hafta günlük, sonra haftalık izlenir.",
+   "rule": "Sıralama güncelleme sıklığı: {label}. Raporlarda tek günlük dalgalanma değil, en az iki haftalık eğilim yorumlanır.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "semrush",
+      "seranking",
+      "moz",
+      "sistrix",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "weekly",
+     "label": "Haftalık (önerilen)",
+     "explanation": "Sıralama haftada bir ölçülür.",
+     "scenario": "Normal dönemde çoğu sitede.",
+     "example": "Her pazartesi güncel sıralama.",
+     "ruleDetail": "Sıralama haftalık ölçülür."
+    },
+    {
+     "value": "daily",
+     "label": "Günlük",
+     "explanation": "Sıralama her gün ölçülür (planınızda olup olmadığını kontrol edin).",
+     "scenario": "Yoğun rekabetli sorgu, kampanya ya da site taşıma döneminde.",
+     "example": "Taşıma sonrası her sabah sıralama değişimi kontrol edilir.",
+     "ruleDetail": "Sıralama günlük ölçülür; günlük ölçüm planın birim / kredi tüketimine göre gerekli sorgularla sınırlanır."
+    },
+    {
+     "value": "mixed",
+     "label": "Kritik dönemde günlük, sonra haftalık",
+     "explanation": "Taşıma, yeniden tasarım ya da Google güncellemesinde günlük; sonrasında haftalık.",
+     "scenario": "Site taşıma ya da büyük değişiklik planlanıyorsa.",
+     "example": "Yeni tasarım yayınından sonra 4 hafta günlük ölçüm.",
+     "ruleDetail": "Site taşıma, yeniden tasarım ya da Google çekirdek güncellemesinden sonraki 4 hafta günlük, sonra haftalık ölçülür."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_ai_vis",
+   "section": "mk_st_rank",
+   "label": "Yapay Zekâ Aramasında Görünürlük Takibi",
+   "en": "AI Search Visibility Tracking",
+   "type": "multiselect",
+   "explanation": "Markanın yapay zekâ aramalarında (Google AI Overviews ve AI Mode, ChatGPT, Perplexity, Gemini, Copilot) ne sıklıkla anıldığının ve kaynak gösterildiğinin izlenmesi. Ahrefs Brand Radar (ek paket) ve Semrush AI Visibility Toolkit bu iş içindir. Sitenin yapay zekâ ayarları 7. Yapay Zekâ menüsündedir.",
+   "scenario": "Yapay zekâ aramasından gelen görünürlük işiniz için önemliyse ve 7. Yapay Zekâ menüsünde izleme kararı verdiyseniz.",
+   "example": "Semrush AI Visibility Toolkit'te 30 müşteri sorusu (prompt) günlük izlenir; markanın anılma oranı ve rakiplerle karşılaştırması aylık raporda.",
+   "rule": "Yapay zekâ aramasında görünürlük takibi: {labels}. Bu ölçümler aracın seçtiği soru örneklemine dayanan tahmindir; sitenin yapay zekâ ayarları 7. Yapay Zekâ menüsündeki kararlara göre yapılır.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/ai-arama-gorunurlugu-uzmani",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "semrush"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "brandradar",
+     "label": "Ahrefs Brand Radar",
+     "explanation": "AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini ve Copilot'ta markanın anılmasını izler; yapay zekâ endeksleri ücretli ek paket gerektirir.",
+     "scenario": "Ahrefs kullanılıyorsa ve yapay zekâ görünürlüğü önemliyse.",
+     "example": "Brand Radar'da markanın ChatGPT'de anılma payı rakiplerle karşılaştırılır.",
+     "ruleDetail": "Ahrefs Brand Radar ile markanın ve rakiplerin yapay zekâ yanıtlarındaki anılma payı izlenir; özel soru (prompt) listesi Ortak Bilgiler › Hedef Sorgular'dan türetilir."
+    },
+    {
+     "value": "semrushai",
+     "label": "Semrush AI Visibility Toolkit",
+     "explanation": "ChatGPT, Gemini, AI Mode, AI Overviews ve Perplexity'de görünürlük puanı, rakip ve soru araştırması; izlenen sorular günlük güncellenir.",
+     "scenario": "Semrush kullanılıyorsa ve yapay zekâ görünürlüğü önemliyse.",
+     "example": "Görünürlük puanı (0–100) ve markayı anmayan sorular listesi aylık raporda.",
+     "ruleDetail": "Semrush AI Visibility Toolkit ile markanın görünürlük puanı, anıldığı / anılmadığı sorular ve kaynak gösterilen sayfalar izlenir."
+    },
+    {
+     "value": "aio",
+     "label": "Yalnız AI Overviews (SERP özelliği olarak)",
+     "explanation": "Sıralama takibinde AI Overviews'da kaynak olarak görünme izlenir; ek paket alınmaz.",
+     "scenario": "Bütçe sınırlıysa.",
+     "example": "Position Tracking'de AI Overviews sütunu.",
+     "ruleDetail": "Yapay zekâ görünürlüğü yalnız sıralama takibindeki AI Overviews SERP özelliğiyle izlenir."
+    },
+    {
+     "value": "none",
+     "label": "Yapay zekâ görünürlüğü izlenmeyecek",
+     "explanation": "Ayrı yapay zekâ görünürlük takibi yapılmaz.",
+     "scenario": "Henüz öncelik değilse.",
+     "example": "Rapor yalnız klasik sıralamayı içerir.",
+     "ruleDetail": "Yapay zekâ görünürlüğü SEO araçlarıyla izlenmez.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_st_kw",
+   "section": "mk_st_research",
+   "label": "Anahtar Kelime Araştırması",
+   "en": "Keyword Research",
+   "type": "multiselect",
+   "explanation": "SEO araçlarıyla yapılacak anahtar kelime araştırmasının kapsamı ve sonuçların nereye işleneceği.",
+   "scenario": "Yeni içerik planlanırken, yeni hizmet eklenirken ya da üç ayda bir fırsat taramasında.",
+   "example": "Keyword Gap ile rakiplerin sıralandığı, sitenin sıralanmadığı 80 sorgu bulunur; niyete göre gruplanıp içerik takvimine ve Hedef Sorgular'a eklenir.",
+   "rule": "SEO araçlarıyla anahtar kelime araştırması: {labels}. Sonuçlar Ortak Bilgiler › Hedef Sorgular'a hedef sayfasıyla işlenir; araçtaki hacim ve zorluk değerleri tahmindir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "majestic",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "intent",
+     "label": "Arama niyetine göre gruplama",
+     "explanation": "Sorgular bilgi, karşılaştırma, satın alma ve marka niyetine göre gruplanır.",
+     "scenario": "Her araştırmada.",
+     "example": "\"implant nedir\" bilgi, \"implant fiyatları\" satın alma niyetine ayrılır.",
+     "ruleDetail": "Sorgular arama niyetine (bilgi / karşılaştırma / işlem / marka) göre gruplanır; her grup uygun sayfa türüyle eşleştirilir."
+    },
+    {
+     "value": "gap",
+     "label": "Rakip boşluğu (Keyword / Content Gap)",
+     "explanation": "Rakiplerin sıralandığı, sitenin sıralanmadığı sorgular çıkarılır.",
+     "scenario": "Rakip listesi varsa.",
+     "example": "Üç rakibin ortak sıralandığı 120 sorgu fırsat listesine girer.",
+     "ruleDetail": "Rakip boşluğu analizi Ortak Bilgiler › Rakipler'deki rakiplerle yapılır; fırsat listesi önceliklendirilip içerik planına aktarılır."
+    },
+    {
+     "value": "clusters",
+     "label": "Konu kümeleri",
+     "explanation": "Sorgular ana konu ve alt başlıklara kümelenir; bir ana sayfa + destek içerikler planlanır.",
+     "scenario": "İçerik stratejisi kuruluyorsa.",
+     "example": "\"Diş beyazlatma\" ana sayfası ve 6 destek yazısı aynı kümede.",
+     "ruleDetail": "Sorgular konu kümelerine ayrılır; her küme için bir ana sayfa ve iç bağlantılı destek içerikler planlanır (Pazarlama › İçerik Stratejisi)."
+    },
+    {
+     "value": "questions",
+     "label": "Soru sorguları ve \"Diğer sorular\"",
+     "explanation": "Kitlenin sorduğu sorular SSS ve blog için toplanır.",
+     "scenario": "SSS, blog ya da yapay zekâ görünürlüğü önemliyse.",
+     "example": "Hizmet sayfasına en çok aranan 8 soru SSS olarak eklenir.",
+     "ruleDetail": "Soru biçimindeki sorgular toplanır; SSS bölümleri ve blog yazıları bu sorulara doğrudan yanıt verecek şekilde planlanır."
+    },
+    {
+     "value": "local",
+     "label": "Yerel varyantlar",
+     "explanation": "\"İl / ilçe + hizmet\" sorguları ayrıca araştırılır.",
+     "scenario": "Yerel işletmede.",
+     "example": "\"Bornova diş kliniği\" ve \"İzmir implant\" ayrı sorgular olarak listelenir.",
+     "ruleDetail": "Hizmet bölgesindeki il / ilçe + hizmet sorguları (Ortak Bilgiler › Hizmet Bölgesi Ayrıntısı) ayrıca araştırılır."
+    },
+    {
+     "value": "crosscheck",
+     "label": "Search Console ve Anahtar Kelime Planlayıcı ile karşılaştırma",
+     "explanation": "Aracın hacmi Google Ads Anahtar Kelime Planlayıcı ve Search Console gösterimiyle karşılaştırılır.",
+     "scenario": "Türkçe ve düşük hacimli sorgularda özellikle.",
+     "example": "Aracın 0 gösterdiği sorgu Search Console'da ayda 300 gösterim alıyor.",
+     "ruleDetail": "Türkçe ve düşük hacimli sorgularda aracın hacmi Search Console gösterimi ve Google Ads Anahtar Kelime Planlayıcı ile karşılaştırılır; karar tek araç verisine dayanmaz."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_comp",
+   "section": "mk_st_research",
+   "label": "Rakip Analizi (Araçla)",
+   "en": "Competitor Analysis with Tools",
+   "type": "multiselect",
+   "explanation": "SEO araçlarıyla rakiplerin hangi açıdan inceleneceği. Sonuçlar Pazarlama › Rakip Analizi tablosuna işlenir.",
+   "scenario": "Pazarlama › Rakip Analizi'nde ücretli araç yöntemi seçildiyse ya da çeyreklik rakip incelemesinde.",
+   "example": "Her çeyrek rakiplerin en çok trafik alan 20 sayfası, yeni kazandıkları bağlantılar ve organik görünürlük eğilimi tabloya işlenir.",
+   "rule": "Araçla rakip analizi: {labels}. Rakipler Ortak Bilgiler › Rakipler listesinden alınır; sonuçlar Pazarlama › Rakip Analizi tablosuna kaynağı ve tarihiyle işlenir, trafik sayıları tahmin olarak belirtilir.",
+   "agents": [
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "majestic",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "visibility",
+     "label": "Organik görünürlük ve trafik eğilimi",
+     "explanation": "Rakiplerin tahmini organik trafiği ve görünürlük eğilimi.",
+     "scenario": "Her rakip incelemesinde.",
+     "example": "Bir rakibin görünürlüğü son çeyrekte %30 arttı; sebebi araştırılır.",
+     "ruleDetail": "Rakiplerin organik görünürlük ve tahmini trafik eğilimi çeyreklik karşılaştırılır; büyük değişimin sebebi (yeni bölüm, güncelleme, bağlantı) araştırılır."
+    },
+    {
+     "value": "pages",
+     "label": "En iyi sayfalar ve içerikler",
+     "explanation": "Rakiplerin en çok trafik / bağlantı alan sayfaları.",
+     "scenario": "İçerik planlanırken.",
+     "example": "Rakibin en çok bağlantı alan \"fiyat hesaplayıcı\" sayfası içerik fikri olur.",
+     "ruleDetail": "Rakiplerin en çok trafik ve bağlantı alan sayfaları çıkarılır; içerik planına kopya değil daha iyi ve özgün karşılıklar olarak aktarılır."
+    },
+    {
+     "value": "links",
+     "label": "Bağlantı boşluğu (Link Intersect / Backlink Gap)",
+     "explanation": "Rakiplere bağlantı verip size vermeyen siteler.",
+     "scenario": "Bağlantı kazanımı yapılacaksa.",
+     "example": "Üç rakibe bağlantı veren sektör derneği sitesi fırsat listesine girer.",
+     "ruleDetail": "Rakiplere bağlantı verip siteye vermeyen siteler listelenir; konu uyumu ve kalitesi kontrol edilerek bağlantı fırsatı olarak değerlendirilir."
+    },
+    {
+     "value": "paid",
+     "label": "Ücretli arama sorguları ve reklam metinleri",
+     "explanation": "Rakiplerin Google Ads'te teklif verdiği sorgular ve reklam metinleri.",
+     "scenario": "Google Ads kullanılıyorsa (Pazarlama › Google Ads).",
+     "example": "Rakibin marka adınıza reklam verdiği görülür.",
+     "ruleDetail": "Rakiplerin ücretli arama sorguları ve reklam metinleri incelenir; bulgular Pazarlama › Google Ads kararlarına girdi olur."
+    },
+    {
+     "value": "market",
+     "label": "Trafik kanalları ve pazar payı",
+     "explanation": "Rakiplerin trafik kanalları (organik, ücretli, sosyal, yönlendirme) ve pazar payı (Similarweb, Semrush Traffic Analytics).",
+     "scenario": "Kanal bütçesi planlanırken.",
+     "example": "Rakiplerin trafiğinin %40'ı sosyalden geliyor.",
+     "ruleDetail": "Rakiplerin trafik kanalı dağılımı ve pazar payı tahmini çeyreklik izlenir; kanal bütçe kararlarında tek veri olarak kullanılmaz."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_links",
+   "section": "mk_st_research",
+   "label": "Backlink İzleme ve Temizleme",
+   "en": "Backlink Monitoring & Cleanup",
+   "type": "multiselect",
+   "explanation": "Siteye gelen bağlantıların (backlink) nasıl izleneceği ve sorunlu bağlantılarla nasıl başa çıkılacağı. Google bağlantı reddetme (disavow) aracının yalnız çok sayıda spam / yapay bağlantı manuel işleme yol açmışsa ya da açması muhtemelse kullanılmasını söyler.",
+   "scenario": "Bağlantı kazanımı yapılıyorsa, olumsuz SEO şüphesi varsa ya da Search Console'da manuel işlem bildirimi geldiyse.",
+   "example": "Kayıp önemli bağlantı bildirimi gelir; sayfa taşındığı için bağlantı kopmuştur, eski adres yönlendirilir ve bağlantı geri kazanılır.",
+   "rule": "Backlink izleme ve temizleme: {labels}. Bağlantı satın alınmaz, bağlantı ağı ve otomatik bağlantı programı kullanılmaz (Google spam politikaları).",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/seo-yoneticisi",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "moz",
+      "majestic",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "monitor",
+     "label": "Yeni ve kayıp bağlantı bildirimleri",
+     "explanation": "Yeni ve kayıp bağlantılar için e-posta bildirimi; aylık gözden geçirme.",
+     "scenario": "Her sitede önerilir.",
+     "example": "Ahrefs \"yeni / kayıp backlink\" bildirimi haftalık gelir.",
+     "ruleDetail": "Yeni ve kayıp bağlantılar için bildirim kurulur ve ayda bir gözden geçirilir."
+    },
+    {
+     "value": "reclaim",
+     "label": "Kayıp ve kırık bağlantının geri kazanımı",
+     "explanation": "Taşınan / silinen sayfaya gelen bağlantılar yönlendirmeyle ya da site sahibine yazılarak kurtarılır.",
+     "scenario": "Site taşıma ya da adres değişikliği yapıldıysa.",
+     "example": "Eski kampanya sayfasına gelen 25 bağlantı 301 ile yeni sayfaya yönlendirilir.",
+     "ruleDetail": "Bağlantı alan ama 404 veren sayfalar 301 ile en uygun sayfaya yönlendirilir; önemli kayıp bağlantılar için site sahibiyle iletişime geçilir."
+    },
+    {
+     "value": "mentions",
+     "label": "Bağlantısız marka anmaları",
+     "explanation": "Markayı anıp bağlantı vermeyen sayfalar bulunur.",
+     "scenario": "Basın ve medya ilişkisi varsa (Pazarlama › Basın Bülteni).",
+     "example": "Haberde marka adı geçiyor ama bağlantı yok; editöre yazılır.",
+     "ruleDetail": "Markayı anıp bağlantı vermeyen sayfalar düzenli bulunur; uygun olanlarda kibarca bağlantı istenir."
+    },
+    {
+     "value": "review",
+     "label": "Şüpheli bağlantı incelemesi (kanıtla)",
+     "explanation": "Spam görünen bağlantılar elle incelenir; aracın \"toksik\" puanı tek başına kanıt sayılmaz.",
+     "scenario": "Ani şüpheli bağlantı artışı ya da olumsuz SEO şüphesi varsa.",
+     "example": "Bir gecede gelen 2.000 bahis sitesi bağlantısı elle incelenir.",
+     "ruleDetail": "Şüpheli bağlantılar elle incelenir; aracın toksik puanı tek başına karar gerekçesi değildir. Önce bağlantının kaldırılması site sahibinden istenir."
+    },
+    {
+     "value": "disavow",
+     "label": "Bağlantı reddetme yalnız Google'ın tarif ettiği durumda",
+     "explanation": "Disavow dosyası yalnız çok sayıda spam / yapay bağlantı manuel işleme yol açmışsa ya da açması muhtemelse, gerekçesiyle gönderilir.",
+     "scenario": "Search Console'da bağlantı kaynaklı manuel işlem varsa ya da geçmişte bağlantı satın alındıysa.",
+     "example": "Eski ajansın aldığı ücretli bağlantılar kaldırılamayınca alan adı düzeyinde reddedilir.",
+     "ruleDetail": "Bağlantı reddetme (disavow) yalnız Google'ın tarif ettiği durumda — çok sayıda spam, yapay ya da düşük kaliteli bağlantı manuel işleme yol açmış ya da açması muhtemelse — ve kaldırma denendikten sonra kullanılır; dosya alan adı düzeyinde, gerekçesi ve tarihiyle saklanır. Disavow aracı Search Console'da URL ön ekli mülkle çalışır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_report_set",
+   "section": "mk_st_report",
+   "label": "SEO Raporu İçeriği",
+   "en": "SEO Report Content",
+   "type": "multiselect",
+   "explanation": "SEO aracı verisiyle hazırlanan raporda nelerin yer alacağı. Rapor ritmi Pazarlama › Ölçüm & Raporlama'daki karara göredir.",
+   "scenario": "Yönetime ya da müşteriye düzenli SEO raporu verilecekse.",
+   "example": "Aylık rapor: Search Console tıklaması, marka dışı sorguların ortalama sırası, tarama sağlık puanı, yeni / kayıp bağlantılar, yapılan işler ve gelecek ayın planı.",
+   "rule": "SEO raporu içeriği: {labels}. Raporun ritmi Pazarlama › Ölçüm & Raporlama kararına göredir; her sayının kaynağı yazılır, araç verisi \"tahmin\" etiketiyle gerçek veriden ayrı gösterilir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani",
+    "poz:pazarlama:marketing_operations_crm_martech/pazarlama-verisi-ve-raporlama-muduru/bi-ve-dashboard-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "awt",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "majestic",
+      "screamingfrog",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "real",
+     "label": "Gerçek veri önce: Search Console ve GA4",
+     "explanation": "Raporun ana göstergeleri Search Console tıklama / gösterim ve GA4 organik dönüşümüdür.",
+     "scenario": "Her raporda önerilir.",
+     "example": "Raporun ilk sayfası Search Console tıklama eğrisi.",
+     "ruleDetail": "Raporun ana göstergeleri Search Console tıklama, gösterim, ortalama konum ve GA4 organik oturum / dönüşümdür; araç verisi bunları tamamlar."
+    },
+    {
+     "value": "rank",
+     "label": "Sıralama ve görünürlük",
+     "explanation": "Hedef sorguların sırası, marka dışı ortalama, ilk 3 / ilk 10'daki sorgu sayısı.",
+     "scenario": "Sıralama takibi kuruluysa.",
+     "example": "İlk 10'daki marka dışı sorgu sayısı 18'den 26'ya çıktı.",
+     "ruleDetail": "Hedef sorguların sırası, marka dışı ortalama ve ilk 3 / ilk 10'daki sorgu sayısı önceki dönemle karşılaştırılır."
+    },
+    {
+     "value": "health",
+     "label": "Teknik sağlık",
+     "explanation": "Tarama sağlık puanı, kritik bulgular ve kapananlar.",
+     "scenario": "Site taraması kuruluysa.",
+     "example": "Sağlık puanı 82 → 91; 14 kritik bulgudan 12'si kapandı.",
+     "ruleDetail": "Tarama sağlık puanı, açık kritik / yüksek bulgu sayısı ve dönemde kapatılan bulgular raporlanır."
+    },
+    {
+     "value": "links",
+     "label": "Backlink özeti",
+     "explanation": "Yeni, kayıp ve önemli bağlantılar.",
+     "scenario": "Backlink izleniyorsa.",
+     "example": "Bu ay 12 yeni bağlantı, 3 kayıp; 1 sektör dergisi bağlantısı kazanıldı.",
+     "ruleDetail": "Yeni, kayıp ve dikkate değer bağlantılar ve yeniden kazanım çalışmaları raporlanır."
+    },
+    {
+     "value": "annotations",
+     "label": "Değişiklik notları",
+     "explanation": "Yayın, taşıma, içerik güncellemesi ve Google güncellemesi tarihleri grafik üstünde not edilir.",
+     "scenario": "Her raporda önerilir.",
+     "example": "Sıralama düşüşünün yanında \"çekirdek güncelleme\" notu.",
+     "ruleDetail": "Kod yayını, site taşıma, büyük içerik güncellemesi ve Google güncellemesi tarihleri raporda not edilir; değişimler bu tarihlerle birlikte yorumlanır."
+    },
+    {
+     "value": "actions",
+     "label": "Yapılanlar ve sıradaki adımlar",
+     "explanation": "Dönemde yapılan işler ve gelecek dönemin öncelikleri.",
+     "scenario": "Her raporda önerilir.",
+     "example": "Rapor \"bu ay yapılanlar\" ve \"gelecek ay 5 öncelik\" ile biter.",
+     "ruleDetail": "Rapor dönemde yapılan işleri ve gelecek dönemin önceliklendirilmiş adımlarını içerir."
+    },
+    {
+     "value": "looker",
+     "label": "Looker Studio panosu",
+     "explanation": "Rapor Looker Studio'da canlı pano olarak tutulur (bağlayıcı planınızda olmalı).",
+     "scenario": "Rapor çok kişiye düzenli gidiyorsa.",
+     "example": "Yönetim panosunda SEO sekmesi her sabah güncellenir.",
+     "ruleDetail": "SEO raporu Looker Studio panosu olarak tutulur; pano görüntüleme paylaşımıyla, kişisel veri içermeden paylaşılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_st_mcp",
+   "section": "mk_st_report",
+   "label": "Claude'un Araç Verisine Erişimi (MCP / API)",
+   "en": "Claude Access via MCP / API",
+   "type": "multiselect",
+   "explanation": "Claude'un SEO aracı verisini doğrudan sorgulayıp sorgulamayacağı ve kuralları. Ahrefs MCP (https://api.ahrefs.com/mcp/mcp) ve Semrush MCP (https://mcp.semrush.com/v2/mcp) resmî sunuculardır, OAuth ile bağlanır; sorgular planın API birimlerinden düşer ve planınızda API erişimi olmalıdır. Bağlantıyı eklemek için Ajanlar › MCP Bağlantıları'nda Ahrefs / Semrush kartını projeye ekleyin.",
+   "scenario": "Claude'un anahtar kelime, rakip ya da backlink analizi yapmasını, rapor taslağı hazırlamasını istiyorsanız.",
+   "example": "Claude Semrush MCP ile hedef sorguların hacmini çeker, niyete göre gruplayıp içerik planı taslağı hazırlar; birim sınırı aşılmadan durur.",
+   "rule": "Claude'un SEO aracı verisine erişimi: {labels}.",
+   "agents": [
+    "poz:pazarlama:marketing_operations_crm_martech/martech-ve-entegrasyon-muduru/pazarlama-teknolojileri-uzmani",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_st_tools",
+     "in": [
+      "ahrefs",
+      "semrush",
+      "seranking",
+      "similarweb",
+      "moz",
+      "sistrix",
+      "screamingfrog",
+      "ubersuggest",
+      "mangools",
+      "serpstat"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "ahrefs_mcp",
+     "label": "Ahrefs MCP",
+     "explanation": "Claude Ahrefs verisini resmî MCP sunucusuyla sorgular (OAuth; planınızda API erişimi olmalı).",
+     "scenario": "Ahrefs kullanılıyorsa.",
+     "example": "Claude \"rakiplerin son 30 günde kazandığı bağlantılar\" sorgusunu Ahrefs MCP'den çeker.",
+     "ruleDetail": "Ahrefs verisine Claude resmî MCP sunucusuyla (https://api.ahrefs.com/mcp/mcp, OAuth) erişir; sunucu Ajanlar › MCP Bağlantıları'ndan projeye eklenir. MCP adresi yalnız Claude bağlantısı için kullanılır, özel betik ya da köprü kurulmaz."
+    },
+    {
+     "value": "semrush_mcp",
+     "label": "Semrush MCP",
+     "explanation": "Claude Semrush verisini resmî MCP sunucusuyla sorgular (OAuth; planınızda API birimi olmalı).",
+     "scenario": "Semrush kullanılıyorsa.",
+     "example": "Claude Semrush MCP ile 50 sorgunun hacmini ve zorluğunu çeker.",
+     "ruleDetail": "Semrush verisine Claude resmî MCP sunucusuyla (https://mcp.semrush.com/v2/mcp, OAuth) erişir; sunucu Ajanlar › MCP Bağlantıları'ndan projeye eklenir."
+    },
+    {
+     "value": "similarweb_mcp",
+     "label": "Similarweb MCP",
+     "explanation": "Claude Similarweb trafik ve pazar verisini resmî MCP sunucusuyla sorgular (planınızda API erişimi olmalı).",
+     "scenario": "Similarweb kullanılıyorsa.",
+     "example": "Claude üç rakibin trafik kanal dağılımını Similarweb MCP'den çeker.",
+     "ruleDetail": "Similarweb verisine Claude resmî MCP sunucusuyla (https://mcp.similarweb.com/) erişir; sunucu Ajanlar › MCP Bağlantıları'ndan projeye eklenir, plan API erişimi içermelidir."
+    },
+    {
+     "value": "other_mcp",
+     "label": "Diğer araçların resmî MCP sunucusu",
+     "explanation": "SE Ranking, Moz (beta), Sistrix, Screaming Frog (lisanslı, bilgisayarda yerel), Ubersuggest, Mangools (beta) ve Serpstat resmî MCP sunucusu sunar.",
+     "scenario": "Bu araçlardan biri kullanılıyorsa.",
+     "example": "Claude SE Ranking MCP ile sıralama verisini okur.",
+     "ruleDetail": "Seçilen diğer aracın yalnız sağlayıcının kendi yayımladığı resmî MCP sunucusu kullanılır (topluluk yapımı sunucular kullanılmaz); adres ve kimlik doğrulama sağlayıcının güncel belgesinden alınır, beta sunucular üretim raporunda tek kaynak yapılmaz."
+    },
+    {
+     "value": "readonly",
+     "label": "Yalnız okuma ve analiz",
+     "explanation": "Claude araç verisini okur, analiz eder ve öneri hazırlar; araçta ayar değiştirmez.",
+     "scenario": "MCP / API kullanılıyorsa her durumda.",
+     "example": "Claude sıralama verisini yorumlar, kampanya ayarına dokunmaz.",
+     "ruleDetail": "Claude araç verisini yalnız okur ve analiz eder; proje, kampanya ya da tarama ayarlarını değiştirmez, değişiklik önerisini kullanıcıya sunar."
+    },
+    {
+     "value": "budget",
+     "label": "Birim bütçesi ve büyük sorguda onay",
+     "explanation": "Aylık birim sınırı vardır; büyük sorgudan önce tahmini birim kullanıcıya bildirilir.",
+     "scenario": "MCP / API kullanılıyorsa her durumda.",
+     "example": "Claude 10.000 satırlık backlink dışa aktarımından önce tahmini birimi sorar.",
+     "ruleDetail": "MCP / API anahtarına aylık birim sınırı konur; büyük sorgulardan (çok satırlı dışa aktarım, toplu analiz) önce tahmini birim kullanıcıya bildirilip onay alınır."
+    },
+    {
+     "value": "secrets",
+     "label": "Anahtar gizli değer olarak saklanır",
+     "explanation": "API / MCP anahtarı yalnız ortam değişkeni ya da gizli değer deposundadır.",
+     "scenario": "API anahtarıyla bağlanılıyorsa.",
+     "example": ".mcp.json'da anahtar yerine ${SEMRUSH_API_KEY} yazılı.",
+     "ruleDetail": "API / MCP anahtarı koda, .mcp.json'a açık metin olarak, belgeye ya da sohbete yazılmaz; yalnız ortam değişkeni ya da gizli değer deposunda tutulur (.mcp.json'da ${DEGISKEN})."
+    },
+    {
+     "value": "none",
+     "label": "Claude araç verisine bağlanmayacak",
+     "explanation": "Araç verisi elle dışa aktarılır, Claude'a dosya olarak verilir.",
+     "scenario": "API erişimi yoksa ya da bütçe sınırlıysa.",
+     "example": "Aylık CSV dışa aktarımı Claude'a yüklenir.",
+     "ruleDetail": "Claude SEO aracına doğrudan bağlanmaz; gerekli veri elle dışa aktarılır, kişisel veri içermediği kontrol edilerek verilir.",
+     "exclusive": true
+    }
+   ]
+  }
+ ],
+ "fields_into": [],
+ "option_add": [],
+ "guide_add": {},
+ "recommend_add": []
+}
