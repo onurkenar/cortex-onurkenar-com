@@ -1,0 +1,18 @@
+/* Ek açıklama (2026-11-13). Kaynak docs/v26/v26-notes.css → docs/v26/ek_aciklama_ekle.py */
+.fnBox{max-width:820px;margin:14px 0 4px;border:1px dashed #cfd5dd;border-radius:11px;background:#fafbfc}
+.fnBox>summary{cursor:pointer;padding:9px 12px;font-size:13.5px;font-weight:700;color:#3f454d;border-radius:11px}
+.fnBox>summary:focus-visible{outline:2px solid #2b4fd8;outline-offset:2px}
+.fnBox .fnSt{margin-left:6px;font-size:11.5px;font-weight:700;color:#6b727c}
+.fnBox.has{border-style:solid;border-color:#b9c7f0;background:#f5f7ff}
+.fnBox.has .fnSt{color:#2b4fd8}
+.fnBox[open]>summary{border-bottom:1px solid #eef0f3;border-radius:11px 11px 0 0}
+.fnIn{padding:10px 12px 10px}
+.fnIn textarea.fnText{display:block;width:100%;max-width:none;min-height:76px;resize:vertical;background:#fff}
+.fnHint{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:#6b727c}
+[data-theme="dark"] .fnBox{background:var(--hover);border-color:var(--border)}
+[data-theme="dark"] .fnBox>summary{color:var(--text)}
+[data-theme="dark"] .fnBox .fnSt,[data-theme="dark"] .fnHint{color:var(--muted)}
+[data-theme="dark"] .fnBox.has{background:#1a2440;border-color:#4a63b8}
+[data-theme="dark"] .fnBox.has .fnSt{color:#9db8ff}
+[data-theme="dark"] .fnBox[open]>summary{border-color:var(--border)}
+[data-theme="dark"] .fnIn textarea.fnText{background:var(--surface)}
