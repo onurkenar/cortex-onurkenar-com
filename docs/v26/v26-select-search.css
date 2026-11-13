@@ -1,0 +1,28 @@
+/* Açılır listelerde arama (2026-11-13). Kaynak docs/v26/v26-select-search.css → docs/v26/acilir_arama_ekle.py */
+.slxPop{position:fixed;z-index:10050;display:flex;flex-direction:column;min-height:0;background:#fff;color:#1d2330;border:1px solid #d4d8de;border-radius:12px;box-shadow:0 14px 40px rgba(16,24,40,.18),0 2px 6px rgba(16,24,40,.08);overflow:hidden;font:inherit}
+.slxPop,.slxPop *{box-sizing:border-box}
+.slxPop .slxHead{display:flex;flex-wrap:nowrap;align-items:center;gap:10px;padding:8px;border-bottom:1px solid #eef0f3;flex:0 0 auto}
+.slxPop .slxQ{flex:1 1 auto;width:auto;min-width:0;max-width:none;height:38px;margin:0;padding:0 12px;border:1px solid #d4d8de;border-radius:9px;background:#f7f8fa;color:inherit;font:inherit;font-size:14px;box-shadow:none}
+.slxPop .slxQ:focus{outline:none;border-color:#2b4fd8;box-shadow:0 0 0 2px rgba(43,79,216,.18);background:#fff}
+.slxN{flex:0 0 auto;font-size:12px;font-weight:700;color:#6b727c;white-space:nowrap}
+.slxList{list-style:none;margin:0;padding:4px 0;overflow:auto;flex:1 1 auto;min-height:0;overscroll-behavior:contain}
+.slxGrp{position:sticky;top:-4px;z-index:1;padding:8px 12px 5px;font-size:11.5px;font-weight:800;letter-spacing:.04em;color:#6b727c;background:#fff;border-top:1px solid #f0f2f5}
+.slxGrp:first-child{border-top:0}
+.slxOpt{position:relative;padding:8px 12px 8px 30px;font-size:14px;line-height:1.35;cursor:pointer;overflow-wrap:anywhere}
+.slxOpt.act{background:#eef2ff}
+.slxOpt.on{font-weight:700;color:#2b4fd8}
+.slxOpt.on::before{content:"✓";position:absolute;left:11px;top:8px}
+.slxOpt.dis{color:#9aa1ab;cursor:default}
+.slxNone{padding:14px 12px;font-size:13.5px;color:#6b727c}
+select[aria-expanded="true"]{outline:2px solid #2b4fd8;outline-offset:1px}
+@media (pointer:coarse){.slxOpt{padding-top:11px;padding-bottom:11px}.slxOpt.on::before{top:11px}.slxPop .slxQ{font-size:16px;height:42px}}
+[data-theme="dark"] .slxPop{background:var(--surface);color:var(--text);border-color:var(--border);box-shadow:0 14px 40px rgba(0,0,0,.55)}
+[data-theme="dark"] .slxHead{border-color:var(--border)}
+[data-theme="dark"] .slxPop .slxQ{background:var(--hover);border-color:var(--border)}
+[data-theme="dark"] .slxPop .slxQ:focus{background:var(--surface);border-color:#7d9bff;box-shadow:0 0 0 2px rgba(125,155,255,.25)}
+[data-theme="dark"] .slxN,[data-theme="dark"] .slxNone{color:var(--muted)}
+[data-theme="dark"] .slxGrp{background:var(--surface);color:var(--muted);border-color:var(--border)}
+[data-theme="dark"] .slxOpt.act{background:#1a2440}
+[data-theme="dark"] .slxOpt.on{color:#9db8ff}
+[data-theme="dark"] .slxOpt.dis{color:#6b7280}
+[data-theme="dark"] select[aria-expanded="true"]{outline-color:#7d9bff}
