@@ -19,6 +19,7 @@ const PK=[
  {k:"claude",t:"Claude Code proje paketi",d:"Siteyi geliştirecek Claude oturumu için: talimat dosyası, promptlar, proje kararları, ajan ve skill dosyaları ve projede seçildiyse MCP, tasarım ve panel yapılandırmaları.",dir:"1-claude-code",items:[
   {k:"md",t:"CLAUDE-TALIMATLARI.md",ty:"MD",d:"Fazlara bölünmüş ana talimat dosyası; Claude Code'da proje köküne konur.",name:()=>"CLAUDE-TALIMATLARI.md",gen:()=>prMd(),ok:()=>has("prMd"),copy:false},
   {k:"todo",t:"YAPILACAKLAR.md",ty:"MD",d:"Verilen kararlardan oluşan, işaretlenebilir görev listesi (Yapılacaklar sayfasındaki işaretlerle).",name:()=>"YAPILACAKLAR.md",gen:()=>todoMd(),ok:()=>has("todoMd"),copy:false},
+  {k:"ics",t:"YAPILACAKLAR.ics",ty:"ICS",d:"Yinelenen görevlerin bakım takvimi; Google Takvim, Outlook ya da Apple Takvim'e aktarılır.",name:()=>"YAPILACAKLAR.ics",gen:()=>todoIcs(),ok:()=>has("todoIcs")&&typeof todoRecurring==="function"&&todoRecurring()>0,copy:false},
   {k:"start",t:"Başlatma promptu",ty:"PROMPT",d:"Talimat dosyasını fazlar hâlinde uygulatan kısa prompt.",name:()=>"BASLATMA-PROMPTU.md",gen:()=>prStart(),ok:()=>has("prStart"),copy:true},
   {k:"master",t:"Claude promptu (tam)",ty:"PROMPT",d:"Bütün kuralların tek parça hâli (talimat dosyasının yerine kullanılabilir).",name:()=>"CLAUDE-PROMPTU.md",gen:()=>{renderRules();return master.value},ok:()=>true,copy:true},
   {k:"project",t:"Proje Kararları",ty:"JSON",d:"Proje ve Ortak Bilgiler kararları, kurallar, ajanlar, skill'ler ve Claude promptu.",name:()=>exName("project"),gen:()=>J(exData("project")),ok:()=>has("exData"),st:()=>dec("project")},
@@ -54,7 +55,7 @@ function save(blob,name){let a=document.createElement("a"),u=URL.createObjectURL
 function zip(list,name){if(!list.length)return;save(zipStore(list),name)}
 function toast(msg,err){let b=document.getElementById("dlToast");if(!b)return;b.textContent=msg;b.className="dlToast show"+(err?" err":"");clearTimeout(toast.t);toast.t=setTimeout(()=>b.className="dlToast",err?5000:2400)}
 function guard(fn){try{fn()}catch(e){console.error("indirme",e);toast("Dosya üretilemedi: "+(e&&e.message||e),1)}}
-window.dlItem=(p,i)=>guard(()=>{let x=it(p,i);if(x.files)zip(x.files(),nm(x));else{let t=text(x),ty=x.ty==="JSON"?"application/json":x.ty==="CSS"?"text/css":"text/markdown";save(new Blob([t],{type:ty}),nm(x))}toast(nm(x)+" indirildi.")});
+window.dlItem=(p,i)=>guard(()=>{let x=it(p,i);if(x.files)zip(x.files(),nm(x));else{let t=text(x),ty=x.ty==="JSON"?"application/json":x.ty==="CSS"?"text/css":x.ty==="ICS"?"text/calendar":"text/markdown";save(new Blob([t],{type:ty}),nm(x))}toast(nm(x)+" indirildi.")});
 window.dlCopy=async(p,i,btn)=>{let t;try{t=text(it(p,i))}catch(e){toast("Prompt üretilemedi.",1);return}let okk=true;try{await navigator.clipboard.writeText(t)}catch(e){try{let ta=document.createElement("textarea");ta.value=t;ta.style.cssText="position:fixed;opacity:0;left:0;top:0";document.body.appendChild(ta);ta.select();okk=document.execCommand("copy");ta.remove()}catch(e2){okk=false}}
  if(btn){let o=btn.textContent;btn.textContent=okk?"Kopyalandı ✓":"Kopyalanamadı";setTimeout(()=>btn.textContent=o,1400)}};
 function pkFiles(p,prefix){let o=[];p.items.filter(ok).forEach(x=>files(x).forEach(f=>o.push({name:(prefix||"")+f.name,data:f.data})));return o}

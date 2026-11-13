@@ -74,3 +74,36 @@
 [data-theme="dark"] .tdBadge{background:#3a2a10;color:#f3c27a}
 [data-theme="dark"] .tdWarn{color:#f3c27a}
 [data-theme="dark"] .tdIt.changed{background:linear-gradient(90deg,#2a2010,transparent 60%)}
+/* Yinelenen görevler (2026-11-13) */
+.tdMaint{margin:-4px 0 12px;font-size:14px;color:#3f454d}
+.tdLate{color:#b42318;font-weight:700}
+.tdArea em{font-style:normal;font-size:11.5px;font-weight:700;color:#a35200}
+.tdEv{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;margin-top:12px;padding-top:12px;border-top:1px solid #eef0f3;font-size:13px;color:#4a5059}
+.tdEv .btn{height:34px;padding:0 12px;font-size:13px}
+.tdEvLast{font-size:12px;color:#6b727c}
+.tdRecTag{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:#eef2ff;color:#3446a8;font-size:11.5px;font-weight:700;vertical-align:1px}
+.tdRec{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:6px 0 0 29px;font-size:12.5px;color:#4a5059}
+.tdSub .tdRec{margin-left:28px;margin-top:4px}
+.tdRecI{color:#3446a8;font-weight:800}
+.tdFq{height:30px;padding:0 8px;border:1px solid #d4d8de;border-radius:8px;background:#fff;color:inherit;font:inherit;font-size:12.5px;max-width:100%}
+.tdLog summary{cursor:pointer;font-weight:700;color:#59616c}
+.tdLog ol{margin:6px 0 0;padding-left:20px;max-height:180px;overflow:auto;font-variant-numeric:tabular-nums}
+.tdFqRows{margin-top:8px;display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:#4a5059}
+.tdFqRows p{margin:0;font-weight:700}
+.tdFqRows label{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.tdBadge.due{background:#fff1e0;color:#8a4b00}
+.tdBadge.late{background:#fde7e7;color:#a11b1b}
+.tdIt.due{background:linear-gradient(90deg,#fff8ee,transparent 60%)}
+.tdIt.late{background:linear-gradient(90deg,#fff1f1,transparent 60%)}
+@container (max-width:640px){.tdRec{margin-left:0}.tdSub .tdRec{margin-left:28px}}
+[data-theme="dark"] .tdMaint,[data-theme="dark"] .tdEv,[data-theme="dark"] .tdRec,[data-theme="dark"] .tdFqRows{color:var(--muted)}
+[data-theme="dark"] .tdEv{border-color:var(--border)}
+[data-theme="dark"] .tdEvLast,[data-theme="dark"] .tdLog summary{color:var(--muted)}
+[data-theme="dark"] .tdRecTag{background:#1a2440;color:#9db8ff}[data-theme="dark"] .tdRecI{color:#9db8ff}
+[data-theme="dark"] .tdFq{background:var(--surface);border-color:var(--border);color:var(--text)}
+[data-theme="dark"] .tdLate{color:#ff9b9b}[data-theme="dark"] .tdArea em{color:#f3c27a}
+[data-theme="dark"] .tdBadge.due{background:#3a2a10;color:#f3c27a}
+[data-theme="dark"] .tdBadge.late{background:#3a1515;color:#ff9b9b}
+[data-theme="dark"] .tdIt.due{background:linear-gradient(90deg,#2a2010,transparent 60%)}
+[data-theme="dark"] .tdIt.late{background:linear-gradient(90deg,#2c1414,transparent 60%)}
+.tdLogBtn{font-size:12.5px;font-weight:700}
