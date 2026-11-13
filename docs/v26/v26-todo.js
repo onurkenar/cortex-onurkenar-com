@@ -34,7 +34,7 @@ const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pa
  /* metninde sıklık yazan seçenekler ("dönemsel" → 3 ay, kullanıcı kararı) */
  RO={"privacy_retention|periodic_auto":"6m","privacy_retention|archive":"6m","yz_bots_train|allow":"1y","yz_cg_claim|wait":"1m",
   "yz_meta_ai|use":"1w","yz_meta_ai|waitlist":"1m","pentest_executor|hybrid":"1y","pentest_schedule|annual":"1y","pentest_schedule|ci_dast":"rel",
-  "mt_cat_source|manual":"1m","slo_practices|error_budget":"1m","slo_practices|capacity_review":"3m","admin_user_mgmt|periodic_review":"3m",
+  "mt_cat_source|manual":"1m","slo_practices|error_budget":"1m","gg_gc_billing|monthly":"1m","gg_gc_iam|review":"3m","gg_gc_apis|rotate":"1y","slo_practices|capacity_review":"3m","admin_user_mgmt|periodic_review":"3m",
   "approval_roles|periodic_review":"3m","cookie_behavior|inventory":"1m","privacy_breach|response_plan":"1y","privacy_breach|drill":"1y",
   "privacy_rights|register":"3m","dr_measures|drill":"1y","mobile_release|privacy_labels":"rel","gg_access|review":"3m","mt_access|review":"3m",
   "mt_access|system_user":"3m","gg_gtm_settings|naming":"3m","gg_gsc_settings|monitor":"1m","gg_ads_settings|auto_apply_off":"1w",

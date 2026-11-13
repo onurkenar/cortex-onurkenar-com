@@ -11,7 +11,10 @@
   "T": "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/teknik-seo-uzmani",
   "K": "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
   "I": "poz:siber-guvenlik:16.05/kimlik-ve-erisim-yonetisimi/kidemli-kimlik-ve-erisim-uzmani",
-  "V": "poz:veri-analitik:17.04/self-servis-analitik-ve-veri-gorsellestirme/self-servis-analitik-uzmani"
+  "V": "poz:veri-analitik:17.04/self-servis-analitik-ve-veri-gorsellestirme/self-servis-analitik-uzmani",
+  "C": "poz:bilgi-teknolojileri:15.02/bulut-platformlari-ve-finops/kidemli-bulut-muhendisi",
+  "F": "poz:bilgi-teknolojileri:15.02/bulut-platformlari-ve-finops/finops-analisti",
+  "S": "poz:siber-guvenlik:16.03/ag-bulut-ve-uc-nokta-guvenligi/bulut-guvenligi-uzmani"
  },
  "idsWhen": {
   "gtm": [
@@ -159,6 +162,38 @@
          "merchant"
         ]
        }
+      },
+      {
+       "field": "deploy_platform",
+       "map": {
+        "Google Cloud": [
+         "cloud"
+        ]
+       }
+      },
+      {
+       "field": "member_login_methods",
+       "map": {
+        "Social": [
+         "cloud"
+        ]
+       }
+      },
+      {
+       "field": "turnstile_security",
+       "map": {
+        "reCAPTCHA": [
+         "cloud"
+        ]
+       }
+      },
+      {
+       "field": "gg_gtm_method",
+       "map": {
+        "server": [
+         "cloud"
+        ]
+       }
       }
      ],
      "options": [
@@ -210,6 +245,13 @@
        "explanation": "Analytics, Ads, Search Console ve diğer kaynaklardaki verileri tek raporda birleştiren ücretsiz raporlama ve gösterge paneli aracıdır. Google Nisan 2026'da Looker Studio'nun adını yeniden Data Studio yaptı; mevcut raporlar kendiliğinden taşındı.",
        "scenario": "Yöneticiye ya da müşteriye düzenli, tek sayfalık performans raporu verilecekse.",
        "example": "Her pazartesi yöneticinin e-postasına trafik, dönüşüm, reklam harcaması ve arama tıklamalarını gösteren rapor gider."
+      },
+      {
+       "value": "cloud",
+       "label": "Google Cloud (proje, faturalandırma ve API'ler)",
+       "explanation": "Google Haritalar, Google ile Giriş, reCAPTCHA, BigQuery aktarımı, sunucu taraflı Tag Manager ve sunucudan çağrılan Google API'lerinin bağlı olduğu Google Cloud projesi; faturalandırma hesabı, aylık harcama limiti, erişim ve API anahtarları burada kurulur.",
+       "scenario": "Sitede harita, Google ile giriş ya da reCAPTCHA varsa, GA4 / Search Console verisi BigQuery'ye aktarılacaksa veya sunucu taraflı etiketleme yapılacaksa.",
+       "example": "Klinik sitesi iletişim sayfasındaki harita ve Google ile giriş için bir Google Cloud projesi açar, aylık 1.500 TL harcama limiti koyar."
       }
      ]
     },
@@ -314,6 +356,795 @@
        "scenario": "Kurumsal ekipler.",
        "example": "İK ayrılış listesinde \"Google Ads / Analytics / Tag Manager erişimini kaldır\" maddesi vardır.",
        "ruleDetail": "Çalışan ayrıldığında Google servislerindeki erişimi aynı gün kaldırılır; sahipse önce sahiplik devredilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gg_cloud",
+   "name": "Google Cloud Projesi, Faturalandırma & API'ler",
+   "en": "Google Cloud Project, Billing & APIs",
+   "icon": "☁",
+   "agents": [
+    "C",
+    "F",
+    "S"
+   ],
+   "refs": [
+    "domain_name",
+    "mk_brand_name"
+   ],
+   "desc": "Google API'lerinin (Haritalar, Google ile Giriş, reCAPTCHA, BigQuery aktarımı, sunucu taraflı etiketleme …) bağlı olduğu Google Cloud projesini, faturalandırma hesabını, aylık harcama limitini, erişimi ve API anahtarlarının güvenliğini belirler",
+   "guide": {
+    "purpose": "Sitede Google Haritalar, \"Google ile Giriş\", reCAPTCHA, GA4 ya da Search Console'un BigQuery aktarımı, sunucu taraflı Tag Manager veya sunucudan çağrılan Google API'leri (Merchant API, İşletme Profili API'si, Analytics Data API …) kullanılacaksa bunların hepsi bir Google Cloud projesine bağlıdır. Kurulum sırası: (1) kurumun alan adıyla Google Cloud'a giriş — mümkünse Cloud Identity ya da Google Workspace ile kuruluş (organization) kaynağı, (2) kurum adına faturalandırma hesabı ve fatura bilgileri, (3) proje(ler)in oluşturulup faturalandırma hesabına bağlanması, (4) aylık bütçe ve uyarı eşikleri, (5) IAM rolleri ve hizmet hesapları, (6) yalnız gereken API'lerin etkinleştirilmesi, (7) API anahtarları ve OAuth istemcilerinin kısıtlanarak oluşturulması, (8) kota sınırları ve izleme. Önemli: Google Cloud'da bütçe tek başına harcamayı durdurmaz, yalnız uyarı gönderir; harcamayı gerçekten sınırlamak için API kotaları ya da faturalandırmayı otomatik kapatan bir bildirim akışı kurulur.",
+    "criteria": [
+     "Proje ve faturalandırma hesabı kurumundur; en az iki kurum çalışanı sahip / faturalandırma yöneticisidir.",
+     "Aylık harcama limiti yazılıdır, bütçe ve uyarı eşikleri bu tutarla tanımlıdır ve limitin nasıl uygulanacağı (uyarı, kota, otomatik kapatma) seçilmiştir.",
+     "Yalnız kullanılan API'ler etkindir; her API anahtarı uygulama ve API kısıtlamalıdır, anahtarlar kodda ve depoda bulunmaz.",
+     "Roller gruplara ve en düşük yetkiyle verilir; hizmet hesabı anahtarı yerine bağlı hizmet hesabı ya da Workload Identity Federation kullanılır.",
+     "Proje kimliği, faturalandırma hesabı ve anahtarların hangi uygulamada kullanıldığı envanterde yazılıdır."
+    ],
+    "pitfalls": [
+     "Bütçe oluşturup harcamanın orada duracağını sanmak: bütçe yalnız uyarıdır; sızan bir Haritalar anahtarı bir gecede yüksek fatura çıkarabilir.",
+     "Kısıtlamasız API anahtarını sitenin koduna ya da herkese açık depoya koymak.",
+     "Projeyi ve faturalandırma hesabını ajansın ya da bir çalışanın kişisel hesabında açmak: ayrılıkta proje, anahtarlar ve fatura geçmişi kurumdan kopar.",
+     "Herkese temel rolleri (Admin / Writer, eski adlarıyla Owner / Editor) vermek.",
+     "\"Google ile Giriş\" uygulamasını Test yayın durumunda bırakmak: yalnız eklenen test kullanıcıları giriş yapabilir.",
+     "Faturalandırmayı otomatik kapatma akışını denemeden canlıya almak: yanlış tetiklenirse site haritası, giriş ya da form koruması durur."
+    ],
+    "resources": [
+     {
+      "title": "Bütçeler ve bütçe uyarıları",
+      "url": "https://docs.cloud.google.com/billing/docs/how-to/budgets",
+      "note": "Uyarı eşikleri (varsayılan %50 / %90 / %100), gerçekleşen ve tahmini harcama, Pub/Sub bildirimleri; normal bütçe harcamayı durdurmaz."
+     },
+     {
+      "title": "Harcama sınırı bütçeleri",
+      "url": "https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps",
+      "note": "Cloud Run, Cloud Run functions, Gemini API ve Vertex AI'da limit aşılınca yeni kullanımı duraklatan bütçe."
+     },
+     {
+      "title": "Faturalandırmayı bildirimlerle devre dışı bırakma",
+      "url": "https://docs.cloud.google.com/billing/docs/how-to/disable-billing-with-notifications",
+      "note": "Bütçe → Pub/Sub → Cloud Run işlevi akışı ve kaynak silinmesi uyarısı."
+     },
+     {
+      "title": "Haritalar Platformu maliyet yönetimi",
+      "url": "https://developers.google.com/maps/billing-and-pricing/manage-costs",
+      "note": "Kota sınırıyla harcama tavanı, bütçe uyarıları, kullanım raporları."
+     },
+     {
+      "title": "Haritalar Platformu Mart 2025 fiyat değişikliği",
+      "url": "https://developers.google.com/maps/billing-and-pricing/march-2025",
+      "note": "200 ABD doları kredi yerine SKU başına aylık ücretsiz kullanım."
+     },
+     {
+      "title": "Haritalar API güvenliği en iyi uygulamaları",
+      "url": "https://developers.google.com/maps/api-security-best-practices",
+      "note": "Uygulama ve API kısıtlamaları, ayrı anahtarlar, kullanılmayan anahtarın silinmesi."
+     },
+     {
+      "title": "Kotaları görüntüleme ve yönetme",
+      "url": "https://docs.cloud.google.com/docs/quotas/view-manage",
+      "note": "Kotalar ve Sistem Sınırları ekranı, kota düşürme."
+     },
+     {
+      "title": "IAM'i güvenli kullanma",
+      "url": "https://docs.cloud.google.com/iam/docs/using-iam-securely",
+      "note": "Temel rollerden kaçınma, rolleri gruplara verme, en düşük yetki."
+     },
+     {
+      "title": "Hizmet hesabı anahtarları için en iyi uygulamalar",
+      "url": "https://docs.cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys",
+      "note": "Anahtar yerine bağlı hizmet hesabı ve Workload Identity Federation."
+     },
+     {
+      "title": "Güvenlik temel kısıtlamaları",
+      "url": "https://docs.cloud.google.com/resource-manager/docs/manage-baseline-constraints",
+      "note": "3 Mayıs 2024'ten sonra açılan kuruluşlarda varsayılan açık kuruluş politikaları."
+     },
+     {
+      "title": "Temel iletişim kişileri (Essential Contacts)",
+      "url": "https://docs.cloud.google.com/resource-manager/docs/managing-notification-contacts",
+      "note": "Faturalandırma, güvenlik, teknik ve yasal bildirim alıcıları."
+     },
+     {
+      "title": "Cloud Audit Logs",
+      "url": "https://docs.cloud.google.com/logging/docs/audit",
+      "note": "Yönetici etkinliği ve veri erişimi günlükleri."
+     },
+     {
+      "title": "Faturalandırma verisini BigQuery'ye aktarma",
+      "url": "https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery",
+      "note": "Standart, ayrıntılı ve FOCUS dışa aktarımı; ilk aktarımın kapsamı."
+     },
+     {
+      "title": "Ücretsiz deneme ve ücretsiz katman",
+      "url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "note": "90 gün / 300 ABD doları deneme ve deneme sonunda kaynakların durması."
+     },
+     {
+      "title": "Kuruluş kaynağı oluşturma ve yönetme",
+      "url": "https://docs.cloud.google.com/resource-manager/docs/creating-managing-organization",
+      "note": "Alan adlı kuruluş (Workspace / Cloud Identity) ve bağımsız kuruluş."
+     },
+     {
+      "title": "Google Auth Platform — kitle ve test kullanıcıları",
+      "url": "https://support.google.com/cloud/answer/15549945",
+      "note": "Test / Üretim yayın durumu, en çok 100 test kullanıcısı, 7 günlük yetki süresi."
+     },
+     {
+      "title": "Marka doğrulaması",
+      "url": "https://support.google.com/cloud/answer/15549049",
+      "note": "Uygulama adı ve logosunun izin ekranında gösterilmesi."
+     },
+     {
+      "title": "reCAPTCHA'nın Google Cloud'a taşınması",
+      "url": "https://docs.cloud.google.com/recaptcha/docs/migration-overview",
+      "note": "Klasik anahtarların Google Cloud projelerine taşınma takvimi."
+     },
+     {
+      "title": "reCAPTCHA katmanları",
+      "url": "https://docs.cloud.google.com/recaptcha/docs/compare-tiers",
+      "note": "Kuruluş başına aylık 10.000 ücretsiz değerlendirme ve ücretli katmanlar."
+     },
+     {
+      "title": "Sunucu taraflı Tag Manager — Cloud Run kurulumu",
+      "url": "https://developers.google.com/tag-platform/tag-manager/server-side/cloud-run-setup-guide",
+      "note": "Önerilen en az 2 örnek ve tahmini maliyet."
+     },
+     {
+      "title": "BigQuery korumalı alanı (sandbox)",
+      "url": "https://docs.cloud.google.com/bigquery/docs/sandbox",
+      "note": "Faturalandırmasız kullanım sınırları ve 60 günlük tablo süresi."
+     },
+     {
+      "title": "Secret Manager",
+      "url": "https://docs.cloud.google.com/secret-manager/docs/overview",
+      "note": "API anahtarı ve gizli değerlerin saklanması."
+     }
+    ]
+   },
+   "fields": [
+    {
+     "id": "gg_gc_uses",
+     "label": "Google Cloud'un Kullanım Amaçları",
+     "en": "Google Cloud Use Cases",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Google Cloud projesinin bu sitede neler için kullanılacağını seçer. Seçime göre etkinleştirilecek API'ler, anahtarlar ve ilgili ayar kararları (Google ile Giriş, Haritalar) açılır.",
+     "scenario": "Sitede harita, Google ile giriş, reCAPTCHA ya da BigQuery aktarımı varsa ilgili madde seçilir; site Google Cloud'da barındırılmıyorsa \"barındırma\" seçilmez.",
+     "example": "Bir klinik sitesi iletişim sayfasında Haritalar'ı, üye girişinde Google ile Giriş'i kullanır; GA4 verisini BigQuery'ye aktarır.",
+     "rule": "Google Cloud projesi şu amaçlarla kullanılır: {labels}.",
+     "recommend": [
+      {
+       "field": "member_login_methods",
+       "map": {
+        "Social": [
+         "oauth"
+        ]
+       }
+      },
+      {
+       "field": "turnstile_security",
+       "map": {
+        "reCAPTCHA": [
+         "recaptcha"
+        ]
+       }
+      },
+      {
+       "field": "gg_gtm_method",
+       "map": {
+        "server": [
+         "sgtm"
+        ]
+       }
+      },
+      {
+       "field": "gg_ga4_links",
+       "map": {
+        "bigquery": [
+         "bigquery"
+        ]
+       }
+      },
+      {
+       "field": "gg_gsc_settings",
+       "map": {
+        "bigquery": [
+         "bigquery"
+        ]
+       }
+      },
+      {
+       "field": "deploy_platform",
+       "map": {
+        "Google Cloud": [
+         "hosting"
+        ]
+       }
+      }
+     ],
+     "options": [
+      {
+       "value": "maps",
+       "label": "Google Haritalar Platformu",
+       "explanation": "Sitede gömülü harita, adres arama / otomatik tamamlama ya da yol tarifi için Maps JavaScript API, Places API, Geocoding API gibi API'ler kullanılır.",
+       "scenario": "İletişim sayfasında harita, şube bulucu ya da adres formu olan siteler.",
+       "example": "İletişim sayfasındaki harita kurumun adresini işaretli gösterir.",
+       "ruleDetail": "Haritalar için yalnız kullanılan Maps Platform API'leri etkinleştirilir; ayarlar Haritalar Platformu kararındadır."
+      },
+      {
+       "value": "oauth",
+       "label": "Google ile Giriş (OAuth istemcisi)",
+       "explanation": "Ziyaretçinin Google hesabıyla üye olması ya da giriş yapması için OAuth izin ekranı (Google Auth Platform) ve OAuth istemci kimliği oluşturulur.",
+       "scenario": "Üyelik ya da panel girişinde sosyal giriş olan siteler.",
+       "example": "Giriş sayfasında \"Google ile devam et\" düğmesi bulunur.",
+       "ruleDetail": "Google ile Giriş için OAuth izin ekranı ve ortam başına OAuth istemcisi oluşturulur; ayarlar Google ile Giriş kararındadır."
+      },
+      {
+       "value": "recaptcha",
+       "label": "reCAPTCHA",
+       "explanation": "Form ve giriş sayfalarını botlara karşı korumak için reCAPTCHA anahtarı Google Cloud projesinde oluşturulur ve doğrulama sunucuda yapılır. Klasik reCAPTCHA anahtarları 2025–2026'da Google Cloud projelerine taşındı; kuruluş başına ayda 10.000 değerlendirme ücretsizdir, ancak faturalandırma hesabı (ödeme yöntemi) gerekir. Google ürünü artık Google Cloud Fraud Defense adıyla da anar.",
+       "scenario": "Proje › Bot koruması reCAPTCHA olan siteler.",
+       "example": "İletişim formu gönderilirken reCAPTCHA puanı sunucuda doğrulanır.",
+       "ruleDetail": "reCAPTCHA anahtarı Google Cloud projesinde oluşturulur, alan adıyla kısıtlanır; doğrulama yalnız sunucuda yapılır ve gizli anahtar sunucudadır."
+      },
+      {
+       "value": "bigquery",
+       "label": "BigQuery (GA4 / Search Console aktarımı)",
+       "explanation": "GA4 ham olay verisi ya da Search Console arama verisi günlük olarak BigQuery'ye aktarılır; sorgu ve depolama ücretlidir. Faturalandırmasız BigQuery korumalı alanı (sandbox) ayda 1 TiB sorgu ve toplam 10 GiB depolama verir, ama tablolar 60 günde silinir; sınırı aşan GA4 aktarımı ücretlendirilir.",
+       "scenario": "Ham veriyle analiz, uzun süreli saklama ya da CRM birleştirme gerekiyorsa.",
+       "example": "GA4 olayları her gün analytics_123456789 veri kümesine yazılır.",
+       "ruleDetail": "GA4 / Search Console BigQuery aktarımı bu projede yapılır; veri kümesi konumu baştan seçilir (sonradan değişmez), tablo son kullanma süresi ve sorgu maliyet sınırı (maksimum faturalandırılan bayt) ayarlanır."
+      },
+      {
+       "value": "sgtm",
+       "label": "Sunucu taraflı Tag Manager barındırma",
+       "explanation": "Sunucu taraflı Tag Manager kapsayıcısı Cloud Run'da çalıştırılır ve kendi alt alan adınıza (ör. olcum.ornek.com.tr) bağlanır. Google canlı kullanım için en az 2 sunucu örneği önerir; örnek başına aylık maliyet yaklaşık 45 ABD dolarıdır (Google'ın kurulum kılavuzundaki tahmin).",
+       "scenario": "Tag Manager › Etiket Yönetimi Yapısı'nda sunucu taraflı etiketleme seçildiyse.",
+       "example": "olcum.ornek.com.tr Cloud Run'daki etiketleme sunucusuna yönlenir.",
+       "ruleDetail": "Sunucu taraflı Tag Manager Cloud Run'da en az 2, en çok 10 örnekle (Google'ın kurulum kılavuzundaki öneri) ve ziyaretçilere yakın bölgede barındırılır; alt alan adı bağlanır, maliyeti (örnek başına aylık yaklaşık 45 ABD doları) aylık harcama limitine dahil edilir."
+      },
+      {
+       "value": "apis",
+       "label": "Sunucudan Google API'leri (otomasyon)",
+       "explanation": "Merchant API, İşletme Profili API'si, Analytics Data API, Search Console API ya da Google Ads API gibi API'ler sunucudaki bir işle çağrılır.",
+       "scenario": "Ürün beslemesi, rapor otomasyonu ya da profil güncellemesi kodla yapılacaksa.",
+       "example": "Gece çalışan iş ürün stoklarını Merchant API ile günceller.",
+       "ruleDetail": "Sunucudan çağrılan Google API'leri ayrı bir hizmet hesabıyla, yalnız gereken rol ve kapsamla kullanılır; hizmet hesabı anahtarı indirilmez, bağlı hizmet hesabı ya da Workload Identity Federation kullanılır."
+      },
+      {
+       "value": "hosting",
+       "label": "Site ya da API'nin barındırılması",
+       "explanation": "Sitenin kendisi ya da arka uç Google Cloud'da (Cloud Run, App Engine, Compute Engine …) çalışır. Barındırma kararları Proje › Barındırma & Yayın'dadır; bu madde yalnız proje, faturalandırma ve erişim düzenini buraya bağlar.",
+       "scenario": "Proje › Yayın Platformu Google Cloud ise.",
+       "example": "Site Cloud Run'da çalışır; maliyeti aynı aylık bütçede izlenir.",
+       "ruleDetail": "Sitenin barındırıldığı Google Cloud kaynakları aynı kuruluş ve faturalandırma düzenine bağlanır; canlı ve test ortamı ayrı projelerdedir."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_structure",
+     "label": "Kuruluş ve Proje Yapısı",
+     "en": "Organization & Project Structure",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Google Cloud kaynaklarının hangi hiyerarşide duracağını belirler. Kuruluş (organization) kaynağı projelerin sahipliğini kişilerden alıp kuruma bağlar. Kurumun alan adıyla kurulan kuruluş Google Workspace ya da ücretsiz Cloud Identity gerektirir; alan adı olmadan kayıt olunca Google Cloud kendiliğinden bağımsız (standalone) bir kuruluş da açabilir.",
+     "scenario": "Kurumun alan adlı e-postası varsa kuruluş + ortam başına proje önerilir; yalnız tek bir harita anahtarı gereken küçük sitelerde tek proje yeterli olabilir.",
+     "example": "ornek.com.tr kuruluşu altında ornek-site-canli ve ornek-site-test projeleri; ikisi aynı faturalandırma hesabına bağlı, bütçeler ayrı.",
+     "rule": "Google Cloud yapısı: {label}.",
+     "options": [
+      {
+       "value": "org",
+       "label": "Kuruluş + ortam başına ayrı proje (önerilen)",
+       "explanation": "Kurumun alan adıyla (Google Workspace ya da ücretsiz Cloud Identity) kuruluş kaynağı kurulur; canlı ve test ortamları ayrı projelerdedir. Projeler kişiye değil kuruluşa aittir, kuruluş politikaları bütün projelere uygulanır.",
+       "scenario": "Kurumsal alan adlı e-posta kullanan her işletme.",
+       "example": "Ayrılan bir çalışanın hesabı silinince projeler kuruluşta kalır.",
+       "ruleDetail": "Kurumun alan adıyla kuruluş kaynağı kurulur (Google Workspace ya da ücretsiz Cloud Identity); canlı ve test ortamları ayrı projelerdedir ve kuruluş politikaları bütün projelere uygulanır."
+      },
+      {
+       "value": "env",
+       "label": "Kuruluşsuz, ortam başına ayrı proje",
+       "explanation": "Kuruluş kaynağı olmadan canlı ve test için iki proje açılır; her projede en az iki kurum çalışanı Sahip'tir.",
+       "scenario": "Alan adlı e-postası olmayan küçük işletmeler.",
+       "example": "Test anahtarı canlı projede değildir; test kotası canlıyı etkilemez.",
+       "ruleDetail": "Kuruluş kaynağı olmadan canlı ve test için ayrı projeler açılır; her projede en az iki kurum çalışanı Sahip'tir."
+      },
+      {
+       "value": "single",
+       "label": "Tek proje",
+       "explanation": "Bütün API'ler ve anahtarlar tek projededir; ortamlar ayrı anahtarlarla ayrılır.",
+       "scenario": "Yalnız bir harita ya da reCAPTCHA anahtarı kullanılan çok küçük siteler.",
+       "example": "Tek projede canlı ve test için iki ayrı, ayrı kısıtlı harita anahtarı bulunur.",
+       "ruleDetail": "Tek bir Google Cloud projesi kullanılır; canlı ve test ortamları ayrı, ayrı kısıtlanmış anahtarlarla ayrılır."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_budget",
+     "label": "Aylık Harcama Limiti",
+     "en": "Monthly Spending Limit",
+     "type": "text",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "placeholder": "Örn. 1500",
+     "explanation": "Google Cloud için ayda en fazla harcanmasına izin verilen tutardır. Bu tutarla faturalandırma hesabında aylık bütçe tanımlanır; limitin nasıl uygulanacağı bir sonraki kararda seçilir.",
+     "scenario": "Beklenen aylık maliyetin biraz üzerinde bir tutar yazılır; ücretsiz kullanım sınırları içinde kalması beklenen projelerde bile düşük bir limit (ör. 500 TL) konur.",
+     "example": "1.500,00 TL yazılırsa 750 TL'de, 1.350 TL'de ve 1.500 TL'de uyarı gider; tahmini harcama 1.500 TL'yi aşacak görünürse ay sonunu beklemeden uyarı gelir.",
+     "rule": "Google Cloud aylık harcama limiti {value}. Faturalandırma hesabında bu tutarla aylık bütçe tanımlanır (proje ve servis kapsamı açıkça seçilir, kredi ve indirimler dahil); uyarı eşikleri gerçekleşen harcamanın %50, %90 ve %100'ü ile tahmini harcamanın %100'üdür. Normal bütçe harcamayı kendiliğinden durdurmaz ve maliyet verisi gecikmeli işlendiği için uyarı geldiğinde limit aşılmış olabilir; limitin uygulanması Limit Aşılınca kararıyla yapılır."
+    },
+    {
+     "id": "gg_gc_cap",
+     "label": "Limit Aşılınca",
+     "en": "When the Limit Is Reached",
+     "type": "select",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Aylık harcama limitine ulaşılınca ne olacağını belirler. Normal Google Cloud bütçeleri yalnız uyarı gönderir; harcamayı gerçekten durdurmak için API kota sınırı, desteklenen servislerde harcama sınırı bütçesi ya da faturalandırmayı otomatik kapatan bir akış kurulmalıdır.",
+     "scenario": "Çoğu sitede uyarı + API kota sınırı yeterlidir; sızıntı riski yüksek tarayıcı anahtarları kullanılan ve kesintiye dayanabilen projelerde otomatik kapatma eklenir.",
+     "example": "Haritalar için günlük istek kotası 1.000'e indirilir; bütçe %100'e ulaşınca e-posta ve sohbet kanalına uyarı gider.",
+     "rule": "Aylık harcama limiti aşılınca: {label}.",
+     "options": [
+      {
+       "value": "alert",
+       "label": "Yalnız uyarı",
+       "explanation": "Bütçe eşiklerinde faturalandırma yöneticilerine ve belirlenen kişilere e-posta gider; harcama devam eder, müdahale elle yapılır.",
+       "scenario": "Kesintinin kabul edilemediği ve maliyetin düzenli izlendiği projeler.",
+       "example": "%90 uyarısı gelince sorumlu kullanım raporunu inceleyip gereksiz servisi kapatır.",
+       "ruleDetail": "Limit aşıldığında yalnız uyarı gider; harcama durmaz. Uyarı alıcıları en az iki kişidir ve uyarı geldiğinde maliyet raporu aynı gün incelenir."
+      },
+      {
+       "value": "quota",
+       "label": "Uyarı + API kotalarıyla sınırlama (önerilen)",
+       "explanation": "Bütçe uyarılarına ek olarak ücretli API'lerin günlük / dakikalık kotaları beklenen kullanımın biraz üzerine indirilir; kota dolunca yalnız o API durur, fatura limitin üzerine çıkamaz.",
+       "scenario": "Haritalar, Places ya da Geocoding gibi istek başına ücretlendirilen API'ler kullanılan siteler.",
+       "example": "Places Autocomplete günlük kotası 500 istekle sınırlıdır; kötüye kullanımda form çalışmaya devam eder, yalnız otomatik tamamlama durur.",
+       "ruleDetail": "Bütçe uyarılarına ek olarak her ücretli API'nin günlük kotası, aylık harcama limitini aşmayacak biçimde (beklenen kullanım + pay) IAM ve Yönetici › Kotalar ve Sistem Sınırları ekranından (ya da API'ler ve Hizmetler › ilgili API › Kotalar ve Sistem Sınırları sekmesinden) düşürülür; kotalar ve hesaplama envantere yazılır."
+      },
+      {
+       "value": "spend_cap",
+       "label": "Harcama sınırı bütçesi (yalnız desteklenen servislerde)",
+       "explanation": "Google'ın yeni harcama sınırı bütçesi %50, %80 ve %100'de uyarır; tahmini brüt maliyet limiti aşınca servisin yeni kullanımını dönem sonuna kadar duraklatır. Yalnız Cloud Run, Cloud Run functions, Gemini API ve Vertex AI (Gemini Enterprise Agent Platform) için kullanılabilir; Haritalar gibi diğer API'leri ve depolama gibi kalıcı kaynakları durdurmaz.",
+       "scenario": "Sunucu taraflı Tag Manager ya da site Cloud Run'da çalışıyorsa veya Gemini API kullanılıyorsa; diğer API'ler için kota sınırıyla birlikte.",
+       "example": "Etiketleme sunucusunun Cloud Run maliyeti 1.500 TL'ye ulaşınca yeni istekler ay sonuna kadar duraklar; Haritalar kotası ayrıca sınırlıdır.",
+       "ruleDetail": "Desteklenen servisler (Cloud Run, Cloud Run functions, Gemini API, Vertex AI) için aylık harcama limitiyle harcama sınırı bütçesi (spend cap) tanımlanır; limit aşılınca bu servislerin yeni kullanımı dönem sonuna kadar duraklar. Bu bütçe Haritalar gibi diğer API'leri durdurmadığı için onlarda kota sınırı ayrıca uygulanır; duraklamanın sitede neyi durduracağı runbook'a yazılır."
+      },
+      {
+       "value": "disable",
+       "label": "Uyarı + %100'de faturalandırmayı otomatik kapat",
+       "explanation": "Bütçe bildirimleri Pub/Sub konusuna gönderilir; bir Cloud Run işlevi harcama limite ulaşınca projenin faturalandırmasını kapatır. Ücretsiz katman dahil bütün servisler durur, kaynaklar geri getirilemeyecek biçimde silinebilir; Google hizmetin geri geleceğini garanti etmez.",
+       "scenario": "Harcamanın kesinlikle aşılmaması gereken, kesintiye dayanabilen deneme ya da düşük bütçeli projeler.",
+       "example": "Ay ortasında anahtar sızar; harcama 1.500 TL'ye ulaşınca faturalandırma kapanır, harita gösterimi durur ve sorumlulara bildirim gider.",
+       "ruleDetail": "Bütçe programatik bildirimleri bir Pub/Sub konusuna gönderilir; Google'ın \"faturalandırmayı bildirimlerle devre dışı bırakma\" kılavuzundaki Cloud Run işlevi gerçekleşen harcama limite ulaşınca projenin faturalandırmasını kapatır. Akış önce test projesinde denenir; kapatmanın hangi servisleri durduracağı ve yeniden açma adımları runbook'a yazılır."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_billing",
+     "label": "Faturalandırma ve Maliyet Kontrolü",
+     "en": "Billing & Cost Control",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Faturalandırma hesabının sahipliğini, uyarıların kime gideceğini ve maliyetin nasıl izleneceğini belirler.",
+     "scenario": "İlk dört madde her projede asgari kabul edilir; birden çok proje ya da servis varsa etiketler ve BigQuery dışa aktarımı eklenir.",
+     "example": "Faturalandırma hesabı kurum adına, vergi bilgileriyle açılmıştır; uyarılar muhasebe ve BT sorumlusuna gider; her ayın ilk iş günü maliyet raporu incelenir.",
+     "rule": "Google Cloud faturalandırma ve maliyet kontrolü: {labels}.",
+     "options": [
+      {
+       "value": "owner",
+       "label": "Faturalandırma hesabı kurumun",
+       "explanation": "Faturalandırma hesabı kurum adına, ticari unvan ve vergi bilgileriyle açılır; ödeme yöntemi kurumundur. Ajans ya da çalışan kartı kullanılmaz.",
+       "scenario": "Her proje.",
+       "example": "Faturalar şirket unvanıyla düzenlenir ve muhasebeye gider.",
+       "ruleDetail": "Faturalandırma hesabı kurum adına, Ortak Bilgiler › Firma Bilgileri'ndeki ticari unvan ve vergi bilgileriyle açılır; ödeme yöntemi kurumundur."
+      },
+      {
+       "value": "roles",
+       "label": "Faturalandırma rolleri sınırlı",
+       "explanation": "Faturalandırma hesabı yöneticisi en az iki kurum çalışanıdır; diğerleri yalnız Faturalandırma görüntüleyicisi ya da Maliyet yöneticisi rolündedir.",
+       "scenario": "Her proje.",
+       "example": "Ajans maliyetleri görebilir ama ödeme yöntemini değiştiremez.",
+       "ruleDetail": "Faturalandırma hesabı yöneticisi en az iki kurum çalışanıdır; diğer kullanıcılar yalnız görüntüleyici ya da maliyet rolleriyle eklenir."
+      },
+      {
+       "value": "recipients",
+       "label": "Uyarılar en az iki kişiye",
+       "explanation": "Bütçe uyarıları faturalandırma yöneticilerinin yanında muhasebe ve teknik sorumluya da gider; isteğe bağlı olarak Cloud Monitoring bildirim kanalıyla e-posta grubuna ya da sohbet kanalına iletilir.",
+       "scenario": "Her proje.",
+       "example": "Uyarı hem muhasebe@ hem de bt@ adresine düşer.",
+       "ruleDetail": "Bütçe uyarıları en az iki kişiye (muhasebe ve teknik sorumlu) ve gerekiyorsa Cloud Monitoring bildirim kanalı üzerinden ekip kanalına gider."
+      },
+      {
+       "value": "monthly",
+       "label": "Aylık maliyet gözden geçirme",
+       "explanation": "Her ay Faturalandırma › Raporlar ekranında servis ve SKU bazında harcama, ücretsiz kullanım ve kredi durumu incelenir.",
+       "scenario": "Her proje.",
+       "example": "Geocoding isteklerindeki artış fark edilip önbellek eklenir.",
+       "ruleDetail": "Google Cloud maliyeti her ay servis ve SKU bazında gözden geçirilir; beklenmedik artışın nedeni bulunur ve değişiklik kaydına yazılır."
+      },
+      {
+       "value": "labels",
+       "label": "Etiketlerle maliyet dağılımı",
+       "explanation": "Projelere ve kaynaklara ortam, uygulama ve maliyet merkezi etiketleri verilir; raporlar etikete göre süzülür.",
+       "scenario": "Birden çok servis, ortam ya da marka varsa.",
+       "example": "env=canli, app=site etiketleriyle maliyet ayrılır.",
+       "ruleDetail": "Projeler ve kaynaklar ortam, uygulama ve maliyet merkezi etiketleriyle işaretlenir; maliyet raporları etikete göre izlenir."
+      },
+      {
+       "value": "export",
+       "label": "Faturalandırma verisinin BigQuery'ye aktarımı",
+       "explanation": "Ayrıntılı maliyet verisi her gün BigQuery'ye aktarılır; ilk aktarım yalnız içinde bulunulan ve önceki ayı getirir, daha eskisi gelmez — Google faturalandırma hesabı açılır açılmaz etkinleştirilmesini önerir.",
+       "scenario": "Birden çok projesi ya da maliyet raporlaması ihtiyacı olan kurumlar.",
+       "example": "Aylık maliyet panosu Data Studio'da faturalandırma tablosundan çizilir.",
+       "ruleDetail": "Cloud Billing verisinin BigQuery'ye dışa aktarımı faturalandırma hesabı açılınca hemen etkinleştirilir; ilk aktarım yalnız içinde bulunulan ve önceki ayı getirir."
+      },
+      {
+       "value": "free_tier",
+       "label": "Ücretsiz deneme ve kullanım sınırları izlenir",
+       "explanation": "Yeni hesaplarda 90 gün geçerli 300 ABD doları deneme kredisi vardır ve deneme süresince ücret alınmaz; ücretli hesaba geçilmeden deneme biterse faturalandırma hesabı kapanır ve projelerdeki kaynaklar durur. Deneme bitiş tarihi ve servislerin ücretsiz kullanım sınırları envantere yazılır.",
+       "scenario": "Yeni açılan hesaplar.",
+       "example": "Deneme kredisinin bitiş tarihi takvime yazılır.",
+       "ruleDetail": "Ücretsiz deneme kredisinin süresi ve kullanılan servislerin ücretsiz kullanım sınırları envantere yazılır; deneme bitmeden ücretli hesaba geçiş bilinçli yapılır (geçilmezse kaynaklar durur)."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_iam",
+     "label": "Erişim, Kimlik ve Güvenlik",
+     "en": "Access, Identity & Security",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Google Cloud projesine kimin hangi rolle erişeceğini, uygulamaların hangi kimlikle çalışacağını ve güvenlik bildirimlerini belirler.",
+     "scenario": "İlk beş madde her projede asgari kabul edilir; sunucudan Google API'si çağrılıyorsa hizmet hesabı maddeleri zorunludur.",
+     "example": "gcp-yoneticiler@ornek.com.tr grubu Sahip, gcp-gelistiriciler@ grubu yalnız gereken önceden tanımlı rollerle eklidir; hizmet hesabı anahtarı indirilmemiştir.",
+     "rule": "Google Cloud erişim, kimlik ve güvenlik: {labels}.",
+     "options": [
+      {
+       "value": "two_owners",
+       "label": "En az iki sahip / kuruluş yöneticisi",
+       "explanation": "Projede (ya da kuruluşta) en az iki kurum çalışanı en yüksek yetkiye sahiptir.",
+       "scenario": "Her proje.",
+       "example": "Bir yöneticinin hesabı kilitlenince diğeri erişimi kurtarır.",
+       "ruleDetail": "Projede ya da kuruluşta en az iki kurum çalışanı Sahip / Kuruluş Yöneticisi rolündedir."
+      },
+      {
+       "value": "groups",
+       "label": "Roller gruplara verilir",
+       "explanation": "Roller kişilere tek tek değil Google gruplarına verilir; kişi gruptan çıkınca erişimi biter.",
+       "scenario": "Birden çok kişinin eriştiği projeler.",
+       "example": "Yeni geliştirici gcp-gelistiriciler grubuna eklenince gereken rolleri alır.",
+       "ruleDetail": "IAM rolleri kişilere değil Google gruplarına verilir; erişim grup üyeliğiyle yönetilir."
+      },
+      {
+       "value": "predefined",
+       "label": "Temel roller yerine önceden tanımlı roller",
+       "explanation": "Temel roller (yeni adlarıyla Admin / Writer / Reader, eski adlarıyla Owner / Editor / Viewer) çok geniştir; Google canlı ortamda başka seçenek yoksa kullanılmamasını önerir; işe uygun önceden tanımlı roller (ör. API Anahtarı Yöneticisi, Cloud Run Geliştiricisi) kullanılır.",
+       "scenario": "Her proje.",
+       "example": "Ajans yalnız API anahtarlarını yönetebilir, faturalandırmayı göremez.",
+       "ruleDetail": "Canlı projede temel roller (Admin / Writer / Reader, eski Owner / Editor / Viewer) yalnız iki yöneticide kalır; diğer herkese işine uygun önceden tanımlı roller verilir."
+      },
+      {
+       "value": "2sv",
+       "label": "İki adımlı doğrulama zorunlu",
+       "explanation": "Projeye erişen bütün hesaplarda iki adımlı doğrulama (tercihen geçiş anahtarı ya da güvenlik anahtarı) açıktır.",
+       "scenario": "Her proje.",
+       "example": "Çalınan bir parola tek başına konsola girmeye yetmez.",
+       "ruleDetail": "Google Cloud'a erişen bütün hesaplarda iki adımlı doğrulama zorunludur."
+      },
+      {
+       "value": "contacts",
+       "label": "Temel iletişim kişileri",
+       "explanation": "Faturalandırma, güvenlik, teknik ve yasal bildirimlerin gideceği kurum adresleri Essential Contacts'ta tanımlanır.",
+       "scenario": "Her proje.",
+       "example": "Güvenlik bildirimi kişisel adrese değil guvenlik@ adresine gider.",
+       "ruleDetail": "Essential Contacts'ta faturalandırma, güvenlik, teknik ve yasal bildirimler için kurum adresleri tanımlanır."
+      },
+      {
+       "value": "no_keys",
+       "label": "Hizmet hesabı anahtarı indirilmez",
+       "explanation": "Sunucuda çalışan kod Google Cloud içindeyse bağlı hizmet hesabıyla, dışındaysa Workload Identity Federation ile kimlik alır; JSON anahtar dosyası oluşturulmaz.",
+       "scenario": "Sunucudan Google API'si çağrılan projeler.",
+       "example": "Cloud Run hizmeti kendi hizmet hesabıyla Merchant API'yi çağırır; depoda anahtar dosyası yoktur.",
+       "ruleDetail": "Hizmet hesabı anahtarı oluşturulmaz: Google Cloud içindeki kod bağlı hizmet hesabıyla, dışındaki kod Workload Identity Federation ile kimlik alır; anahtar oluşturmayı engelleyen kuruluş politikası (3 Mayıs 2024'ten sonra açılan kuruluşlarda varsayılan olarak açık) kapatılmaz."
+      },
+      {
+       "value": "sa_per_app",
+       "label": "Her uygulamaya ayrı hizmet hesabı",
+       "explanation": "Her uygulama ya da iş kendi hizmet hesabıyla ve yalnız gereken rollerle çalışır; varsayılan Compute hizmet hesabı geniş yetkiyle kullanılmaz.",
+       "scenario": "Birden çok iş ya da servis varsa.",
+       "example": "Besleme işi yalnız Merchant API rolüne, rapor işi yalnız BigQuery okuma rolüne sahiptir.",
+       "ruleDetail": "Her uygulama ve iş için ayrı hizmet hesabı açılır ve yalnız gereken roller verilir; varsayılan hizmet hesaplarına geniş rol verilmez."
+      },
+      {
+       "value": "audit",
+       "label": "Denetim günlükleri",
+       "explanation": "Yönetici etkinliği günlükleri her zaman yazılır ve kapatılamaz; veri erişimi günlükleri BigQuery dışında varsayılan olarak kapalıdır, hassas veri barındıran servislerde açılır ve saklama süresi belirlenir.",
+       "scenario": "Kişisel veri işleyen ya da birden çok kişinin yönettiği projeler.",
+       "example": "Kim hangi API anahtarını ne zaman değiştirdi, Günlük Gezgini'nden görülür.",
+       "ruleDetail": "Cloud Audit Logs gözden geçirilir; kişisel veri barındıran servislerde veri erişimi günlükleri açılır ve günlük saklama süresi belirlenir."
+      },
+      {
+       "value": "review",
+       "label": "Üç ayda bir erişim gözden geçirme",
+       "explanation": "IAM üyeleri, hizmet hesapları, kullanılmayan anahtarlar ve IAM önerileri (Recommender) düzenli kontrol edilir.",
+       "scenario": "Her proje.",
+       "example": "90 gündür kullanılmayan bir hizmet hesabı devre dışı bırakılır.",
+       "ruleDetail": "IAM üyeleri, hizmet hesapları ve API anahtarları üç ayda bir gözden geçirilir; kullanılmayan erişim ve anahtarlar kaldırılır."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_apis",
+     "label": "API ve Anahtar Güvenliği",
+     "en": "API & Key Security",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      }
+     ],
+     "explanation": "Etkinleştirilecek API'leri ve API anahtarlarının nasıl oluşturulup korunacağını belirler. Tarayıcıda kullanılan anahtar herkes tarafından görülebilir; güvenlik kısıtlamalardan gelir.",
+     "scenario": "İlk dört madde her projede asgari kabul edilir; tarayıcıda anahtar kullanılıyorsa kota sınırı da eklenir.",
+     "example": "Harita anahtarı yalnız https://www.ornek.com.tr/* adresinden ve yalnız Maps JavaScript API için çalışır; sunucu anahtarı Secret Manager'dadır.",
+     "rule": "Google Cloud API ve anahtar güvenliği: {labels}.",
+     "options": [
+      {
+       "value": "only_needed",
+       "label": "Yalnız gereken API'ler etkin",
+       "explanation": "Projede yalnız kullanılan API'ler etkinleştirilir; kullanılmayanlar kapatılır.",
+       "scenario": "Her proje.",
+       "example": "Projede yalnız Maps JavaScript API ve Places API (New) etkindir.",
+       "ruleDetail": "Projede yalnız kullanılan API'ler etkindir; etkin API listesi envantere yazılır ve kullanılmayan API'ler kapatılır."
+      },
+      {
+       "value": "restrict",
+       "label": "Her anahtar uygulama ve API kısıtlamalı",
+       "explanation": "Tarayıcı anahtarı HTTP yönlendiren (site adresi), sunucu anahtarı IP adresiyle; ikisi de yalnız gereken API'lerle kısıtlanır.",
+       "scenario": "Her anahtar.",
+       "example": "Harita anahtarı yalnız canlı alan adından ve yalnız haritalar API'si için kabul edilir.",
+       "ruleDetail": "Her API anahtarında uygulama kısıtlaması (tarayıcıda HTTP yönlendiren = sitenin alan adı, sunucuda IP adresi) ve API kısıtlaması bulunur; kısıtlamasız anahtar oluşturulmaz."
+      },
+      {
+       "value": "per_env",
+       "label": "Uygulama ve ortam başına ayrı anahtar",
+       "explanation": "Canlı, test ve her uygulama ayrı anahtar kullanır; bir anahtar sızarsa yalnız o iptal edilir.",
+       "scenario": "Her proje.",
+       "example": "Test anahtarı yalnız test alan adında çalışır.",
+       "ruleDetail": "Her uygulama ve ortam (canlı, test, yerel) ayrı anahtar kullanır; anahtar adı nerede kullanıldığını söyler."
+      },
+      {
+       "value": "secrets",
+       "label": "Gizli değerler kodda ve depoda yok",
+       "explanation": "Sunucu anahtarları ve OAuth istemci gizli anahtarı Secret Manager'da ya da ortam değişkeninde durur; depoya, istemci koduna ve günlüğe yazılmaz.",
+       "scenario": "Her proje.",
+       "example": "Depo taramasında anahtar bulunmaz; değer çalışma anında Secret Manager'dan okunur.",
+       "ruleDetail": "Sunucu anahtarları ve istemci gizli anahtarları Secret Manager'da ya da ortam değişkeninde tutulur; koda, depoya ve günlüklere yazılmaz, depoda gizli anahtar taraması açıktır."
+      },
+      {
+       "value": "quotas",
+       "label": "Ücretli API'lerde kota sınırı",
+       "explanation": "Ücretli API'lerin günlük ve dakikalık kotaları beklenen kullanımın biraz üzerine indirilir; kötüye kullanımda fatura büyümez.",
+       "scenario": "Tarayıcıda anahtar kullanılan ya da istek başına ücretli API'ler.",
+       "example": "Geocoding günlük kotası 300 istektir.",
+       "ruleDetail": "Ücretli API'lerin kotaları beklenen kullanıma göre düşürülür ve kota değerleri envantere yazılır."
+      },
+      {
+       "value": "rotate",
+       "label": "Sızıntıda iptal ve dönemsel yenileme",
+       "explanation": "Sızdığından şüphelenilen anahtar hemen yenisiyle değiştirilip silinir; sunucu anahtarları dönemsel yenilenir.",
+       "scenario": "Her proje.",
+       "example": "Depoya yanlışlıkla giden anahtar aynı gün iptal edilir.",
+       "ruleDetail": "Sızan ya da şüpheli anahtar hemen yenilenip eskisi silinir; sunucu anahtarları ve istemci gizli anahtarları dönemsel olarak yenilenir."
+      },
+      {
+       "value": "monitor",
+       "label": "API kullanımı ve hata izleme",
+       "explanation": "API'ler ve Hizmetler panosunda istek sayısı, hata oranı ve gecikme izlenir; olağan dışı artışa uyarı kurulur.",
+       "scenario": "Trafik alan siteler.",
+       "example": "Harita isteklerinin bir günde üç katına çıkması uyarı üretir.",
+       "ruleDetail": "API kullanımı ve hata oranı izlenir; olağan dışı artış için Cloud Monitoring uyarısı kurulur."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_oauth",
+     "label": "Google ile Giriş (OAuth) Ayarları",
+     "en": "Sign in with Google (OAuth) Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      },
+      {
+       "field": "gg_gc_uses",
+       "in": [
+        "oauth"
+       ]
+      }
+     ],
+     "explanation": "Google ile Giriş için Google Auth Platform'daki (eski adıyla OAuth izin ekranı) marka, kitle, veri erişimi ve istemci ayarlarını belirler.",
+     "scenario": "Google ile giriş kullanılan her sitede ilk beş madde asgari kabul edilir.",
+     "example": "İzin ekranında \"Örnek Klinik\" adı, logo, destek e-postası, gizlilik politikası ve kullanım koşulları bağlantıları görünür; uygulama yalnız ad, e-posta ve profil fotoğrafını ister.",
+     "rule": "Google ile Giriş (OAuth) ayarları: {labels}.",
+     "options": [
+      {
+       "value": "branding",
+       "label": "Marka bilgileri tam",
+       "explanation": "Uygulama adı (marka adıyla aynı), logo, destek e-postası, ana sayfa, gizlilik politikası ve kullanım koşulları bağlantıları ve yetkili alan adları girilir.",
+       "scenario": "Her kurulum.",
+       "example": "İzin ekranında kurumun adı ve logosu görünür.",
+       "ruleDetail": "Google Auth Platform › Marka bilgilerinde uygulama adı (Ortak Bilgiler'deki marka adı), logo, kurumsal destek e-postası, ana sayfa, gizlilik politikası ve kullanım koşulları bağlantıları ile yetkili alan adları girilir."
+      },
+      {
+       "value": "scopes",
+       "label": "Yalnız temel kapsamlar",
+       "explanation": "Yalnız openid, e-posta ve profil kapsamları istenir; Drive, Takvim gibi hassas kapsamlar istenmez.",
+       "scenario": "Her kurulum.",
+       "example": "İzin ekranı yalnız ad, e-posta ve profil fotoğrafı paylaşımını sorar.",
+       "ruleDetail": "Giriş için yalnız openid, email ve profile kapsamları istenir; hassas ya da kısıtlı kapsam istenmez."
+      },
+      {
+       "value": "production",
+       "label": "Yayın durumu Üretim",
+       "explanation": "Harici kitleli uygulama Test durumunda yalnız eklenen test kullanıcılarıyla (en çok 100) çalışır; canlıya çıkmadan Üretim'e alınır.",
+       "scenario": "Herkese açık giriş.",
+       "example": "Canlıda her Google hesabı giriş yapabilir.",
+       "ruleDetail": "Harici kullanıcı türündeki uygulama canlıya çıkmadan önce Test durumundan Üretim (In production) durumuna alınır."
+      },
+      {
+       "value": "redirects",
+       "label": "Ortam başına istemci, birebir yönlendirme adresleri",
+       "explanation": "Canlı ve test için ayrı OAuth istemcisi açılır; yetkili JavaScript kaynakları ve yönlendirme URI'leri https ile ve birebir yazılır, joker kullanılmaz.",
+       "scenario": "Her kurulum.",
+       "example": "Canlı istemcide yalnız https://www.ornek.com.tr/auth/google/callback kayıtlıdır.",
+       "ruleDetail": "Canlı ve test için ayrı OAuth istemcisi oluşturulur; yönlendirme URI'leri ve JavaScript kaynakları https ile birebir yazılır, localhost yalnız test istemcisindedir."
+      },
+      {
+       "value": "server_verify",
+       "label": "Kimlik sunucuda doğrulanır",
+       "explanation": "Google'dan dönen kimlik jetonu sunucuda imza, hedef kitle (istemci kimliği) ve süre yönünden doğrulanır; istemci gizli anahtarı yalnız sunucudadır.",
+       "scenario": "Her kurulum.",
+       "example": "Sahte jetonla giriş denemesi sunucuda reddedilir.",
+       "ruleDetail": "Google kimlik jetonu sunucuda imza, aud (istemci kimliği), iss ve süre yönünden doğrulanır; istemci gizli anahtarı yalnız sunucuda ve gizli anahtar deposundadır."
+      },
+      {
+       "value": "brand_verify",
+       "label": "Marka doğrulaması",
+       "explanation": "Yalnız temel kapsamlar istendiğinde uygulama doğrulaması zorunlu değildir; uygulama adı ve logosunun izin ekranında gösterilmesi için daha hafif olan marka doğrulaması tamamlanır ve onaylanan marka 7 gün içinde yayımlanır.",
+       "scenario": "Logo ve marka adının izin ekranında görünmesi istenen uygulamalar.",
+       "example": "Doğrulama sonrası izin ekranında logo görünür.",
+       "ruleDetail": "Marka adı ve logosunun izin ekranında görünmesi için Google Auth Platform'da marka doğrulaması başlatılır; ana sayfa ve yetkili alan adları kurumun doğrulanmış alan adlarıdır, onaylanan marka 7 gün içinde yayımlanır."
+      },
+      {
+       "value": "contacts",
+       "label": "Geliştirici iletişim bilgisi kurumsal",
+       "explanation": "Google'ın uygulamayla ilgili bildirim göndereceği geliştirici iletişim adresi kişisel değil kurumsal bir adrestir.",
+       "scenario": "Her kurulum.",
+       "example": "Politika bildirimleri bt@ adresine gelir.",
+       "ruleDetail": "Geliştirici iletişim bilgisi kurumsal ortak bir e-posta adresidir."
+      }
+     ]
+    },
+    {
+     "id": "gg_gc_maps",
+     "label": "Haritalar Platformu Ayarları",
+     "en": "Maps Platform Settings",
+     "type": "multiselect",
+     "showIf": [
+      {
+       "field": "gg_services",
+       "in": [
+        "cloud"
+       ]
+      },
+      {
+       "field": "gg_gc_uses",
+       "in": [
+        "maps"
+       ]
+      }
+     ],
+     "explanation": "Google Haritalar Platformu API'lerinin maliyet, güvenlik ve gizlilik ayarlarını belirler. Haritalar kullanım başına ücretlendirilir; 1 Mart 2025'ten beri aylık 200 ABD doları kredi yerine her SKU için aylık ücretsiz kullanım vardır (Essentials 10.000, Pro 5.000, Enterprise 1.000 faturalanabilir olay).",
+     "scenario": "Gömülü harita ya da adres arama kullanılan her sitede ilk dört madde asgari kabul edilir.",
+     "example": "Harita, ziyaretçi \"Haritayı göster\" düğmesine basınca yüklenir; anahtar alan adı ve API ile kısıtlı, günlük kota sınırlıdır.",
+     "rule": "Google Haritalar Platformu ayarları: {labels}.",
+     "options": [
+      {
+       "value": "apis",
+       "label": "Yalnız gereken Haritalar API'leri",
+       "explanation": "Yalnız kullanılan API'ler (ör. Maps JavaScript API, Places API (New), Geocoding API) etkinleştirilir; basit konum gösterimi için ücretsiz Maps Embed API ya da statik harita değerlendirilir.",
+       "scenario": "Her kurulum.",
+       "example": "Yalnız adres göstermek için ücretsiz Embed API kullanılır.",
+       "ruleDetail": "Yalnız kullanılan Haritalar API'leri etkinleştirilir; yalnız konum gösterilecekse Maps Embed API ya da statik harita tercih edilir."
+      },
+      {
+       "value": "key",
+       "label": "Anahtar alan adı ve API kısıtlamalı",
+       "explanation": "Haritalar anahtarı yalnız sitenin alan adlarında (HTTP yönlendiren) ve yalnız kullanılan Haritalar API'lerinde çalışır.",
+       "scenario": "Her kurulum.",
+       "example": "Anahtar başka bir sitede kullanılırsa istek reddedilir.",
+       "ruleDetail": "Haritalar anahtarı HTTP yönlendiren olarak yalnız sitenin alan adlarıyla ve yalnız kullanılan Haritalar API'leriyle kısıtlanır."
+      },
+      {
+       "value": "quota",
+       "label": "Günlük kota ve ücretsiz sınır takibi",
+       "explanation": "Her Haritalar API'sinin günlük kotası beklenen kullanıma göre ayarlanır; SKU bazında aylık ücretsiz kullanım sınırları ve gerçekleşen kullanım izlenir.",
+       "scenario": "Her kurulum.",
+       "example": "Places otomatik tamamlama günlük 300 istekle sınırlıdır.",
+       "ruleDetail": "Her Haritalar API'sinin günlük kotası aylık harcama limitine göre ayarlanır; SKU bazında ücretsiz kullanım sınırları ve gerçekleşen kullanım aylık izlenir."
+      },
+      {
+       "value": "consent",
+       "label": "Harita tıklamayla yüklenir (gizlilik)",
+       "explanation": "Harita yüklenince ziyaretçinin IP adresi ve tarayıcı bilgisi Google'a gider; harita bir önizleme görseliyle gelir, ziyaretçi \"Haritayı göster\"e basınca yüklenir ve bu aktarım aydınlatma metninde yazılır.",
+       "scenario": "KVKK kapsamındaki her site.",
+       "example": "İletişim sayfasında harita yerine adres görseli ve \"Haritayı göster\" düğmesi bulunur.",
+       "ruleDetail": "Harita sayfa açılışında değil ziyaretçinin açık eylemiyle (\"Haritayı göster\") yüklenir; Google'a aktarılan veri gizlilik / aydınlatma metninde ve çerez politikasında belirtilir."
+      },
+      {
+       "value": "session",
+       "label": "Otomatik tamamlamada oturum jetonu",
+       "explanation": "Adres otomatik tamamlama istekleri oturum jetonuyla gruplanır, alanlar (fields) yalnız gerekenlerle sınırlanır; maliyet düşer.",
+       "scenario": "Adres formu olan siteler.",
+       "example": "Adres seçimi tek oturum olarak ücretlendirilir; yalnız adres bileşenleri istenir.",
+       "ruleDetail": "Places otomatik tamamlamada oturum jetonu kullanılır ve yanıt alanları yalnız gereken bilgilerle sınırlanır."
+      },
+      {
+       "value": "terms",
+       "label": "Kullanım koşulları ve atıf",
+       "explanation": "Google logosu ve atıf gizlenmez; Google verisi koşullara aykırı biçimde saklanmaz ya da başka haritada gösterilmez.",
+       "scenario": "Her kurulum.",
+       "example": "Harita köşesindeki Google logosu ve koşul bağlantısı görünür kalır.",
+       "ruleDetail": "Haritalar Platformu hizmet koşullarına uyulur: Google atfı ve logosu gizlenmez, koşulların izin vermediği önbellekleme ve başka haritada gösterim yapılmaz."
       }
      ]
     }
@@ -2604,6 +3435,14 @@
        "scenario": "Her kurulum.",
        "example": "Safari'de çerez reddi sonrası etiketlerin çalışmadığı görülür.",
        "ruleDetail": "Kurulum masaüstü ve mobilde, en az iki tarayıcıda denenir."
+      },
+      {
+       "value": "cloud_check",
+       "label": "Google Cloud bütçe, kota ve anahtar kontrolü",
+       "explanation": "Bütçe ve eşikleri, uyarı alıcıları, ücretli API kotaları, API anahtarı kısıtlamaları ve IAM üyeleri kontrol edilir.",
+       "scenario": "Google Cloud kurulan her proje.",
+       "example": "Harita anahtarı başka bir alan adından denenince reddedilir; bütçede 1.500 TL ve üç eşik görünür.",
+       "ruleDetail": "Google Cloud'da bütçe tutarı ve eşikleri, uyarı alıcıları, ücretli API kotaları, her API anahtarının kısıtlamaları (başka alan adından deneme reddedilir) ve IAM üyeleri kontrol edilir; Limit Aşılınca kararındaki akış test projesinde denenir."
       }
      ]
     },

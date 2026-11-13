@@ -1,11 +1,11 @@
 /* Para birimi biçimi (2026-11-14, kullanıcı isteği: "para birimi (örneğin bütçe) girdiğim alanlarda currency kuralı uygulansın,
    örneğin 30000 yerine 30.000,00 (TL/USD/EURO) şeklinde").
-   Tutar alanları: CUR_F (metin kararları) ve CUR_ROWS (accounts satırları). Tutar kutusu + para birimi seçimi (TL / USD / EUR);
+   Tutar alanları (2026-11-14'te Google Cloud › Aylık Harcama Limiti eklendi): CUR_F (metin kararları) ve CUR_ROWS (accounts satırları). Tutar kutusu + para birimi seçimi (TL / USD / EUR);
    kutudan çıkınca tutar 30.000,00 biçimine döner, kayıt "30.000,00 TL" metnidir. Eski kayıtlar ("15000") silinmez; kuralda,
    promptta ve dışa aktarımda curShow ile biçimlenir (para birimi yazılmamışsa TL). Alan etiketindeki "(TL)" ve kural şablonundaki
    "{value} TL" açılışta kaldırılır — para birimi artık değerin içindedir. mkNum USD / EUR'yu da okur; içerik planı dosyası tutarları
    TL kabul ettiği için TL dışı tutar mkIssues'ta uyarı verir. Kaynak docs/v26/v26-currency.js → docs/v26/para_birimi_ekle.py */
-const CUR_F=["mk_gads_budget","mk_meta_budget","mk_li_budget","mk_tt_budget","mk_labor_rate"],CUR_ROWS=[["oc_tax_ids","sermaye","250000"]],
+const CUR_F=["mk_gads_budget","mk_meta_budget","mk_li_budget","mk_tt_budget","mk_labor_rate","gg_gc_budget"],CUR_ROWS=[["oc_tax_ids","sermaye","250000"]],
  CUR_LIST=[["TL","TL (₺)"],["USD","USD ($)"],["EUR","EUR (€)"]],CUR_PLAN=["mk_gads_budget","mk_meta_budget","mk_labor_rate"];
 function curParse(s){let t=String(s??"").trim();if(!t)return null;let cur="";
  t=t.replace(/₺|TRY|TL|\$|USD|€|EURO|EUR/gi,m=>{m=m.toUpperCase();cur=m==="₺"||m==="TRY"||m==="TL"?"TL":m==="$"||m==="USD"?"USD":"EUR";return""}).replace(/\s/g,"");
