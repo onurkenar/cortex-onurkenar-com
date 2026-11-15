@@ -1,0 +1,9 @@
+/* İçerik Planlama (2026-11-15) — yer tutucu sayfa #cpPage, sınıf öneki cp. Kaynak docs/v26/v26-content-plan.css → docs/v26/icerik_planlama_ekle.py */
+#cpPage{display:none}
+#cpPage.active{display:block}
+.cpHead{margin:6px 0 16px;padding:22px;border:1px dashed #c9ced6;border-radius:15px;background:#fff}
+.cpHead h1{margin:2px 0 8px;font-size:30px;letter-spacing:-.02em}
+.cpEye{margin:0;font-size:12px;font-weight:800;letter-spacing:.08em;color:#6b727c}
+.cpLead{margin:0;max-width:860px;font-size:14.5px;line-height:1.55;color:#4a5059}
+[data-theme="dark"] .cpHead{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .cpEye,[data-theme="dark"] .cpLead{color:var(--muted)}

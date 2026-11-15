@@ -30,7 +30,8 @@ const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pa
   mk_ads_pacing:{weekly:"1w",biweekly:"2w",monthly:"1m"},
   mk_report_rhythm:{weekly_monthly:"1w",monthly:"1m",campaign:"camp"},
   mk_backup:{shared:"1w"},
-  mk_post_times:{data:"1m"},mk_st_audit_freq:{weekly:"1w",monthly:"1m",release:"rel"}},
+  mk_post_times:{data:"1m"},mk_st_audit_freq:{weekly:"1w",monthly:"1m",release:"rel"},
+  mk_gads_rival_freq:{weekly:"1w",biweekly:"2w",monthly:"1m",campaign:"camp"},mk_meta_rival_freq:{weekly:"1w",biweekly:"2w",monthly:"1m",campaign:"camp"}},
  /* metninde sıklık yazan seçenekler ("dönemsel" → 3 ay, kullanıcı kararı) */
  RO={"privacy_retention|periodic_auto":"6m","privacy_retention|archive":"6m","yz_bots_train|allow":"1y","yz_cg_claim|wait":"1m",
   "yz_meta_ai|use":"1w","yz_meta_ai|waitlist":"1m","pentest_executor|hybrid":"1y","pentest_schedule|annual":"1y","pentest_schedule|ci_dast":"rel",

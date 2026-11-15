@@ -1,0 +1,125 @@
+{
+ "version": "2026-11-15",
+ "note": "Tutarlılık katmanı (2026-11-15, kullanıcı isteği: çakışan / benzer maddeler analizi → A, B, C maddeleri). Bu dosya DATA'ya yalnız tutarlilik_ekle.py ile yazılır; betik bütün diğer veri betiklerinden SONRA çalıştırılır. Seçenek bağlantıları (LN) ve çelişki uyarıları (CF) v26-consistency.js'tedir.",
+ "fieldSet": {
+  "consent_mode": {
+   "derive": {
+    "from": "gg_cm_mode",
+    "map": {
+     "basic": "Google Consent Mode v2",
+     "advanced": "Google Consent Mode v2"
+    }
+   }
+  },
+  "mk_sms_link": {
+   "derive": {
+    "from": "mk_shortlink",
+    "map": {
+     "brand": "brand_domain",
+     "service": "shortener",
+     "none": "full"
+    }
+   }
+  },
+  "rbac": {
+   "derive": {
+    "from": "panel_authz",
+    "map": {
+     "rbac_global": true,
+     "rbac_org": true,
+     "rbac_abac": true
+    }
+   }
+  },
+  "mk_b2b_size": {
+   "label": "Hedef Firma Büyüklüğü",
+   "en": "Target Company Size"
+  },
+  "approval_channels": {
+   "label": "Onay Bildirim Kanalları",
+   "en": "Approval Notification Channels"
+  },
+  "mk_post_check": {
+   "label": "İçerik Yayın Sonrası Kontrolü",
+   "en": "Post-Publish Content Check"
+  },
+  "au_format": {
+   "label": "Denetim Raporu Çıktıları",
+   "en": "Audit Report Outputs"
+  }
+ },
+ "textAppend": {
+  "consent_mode": {
+   "explanation": " Google Servisleri › Onay Modu (Consent Mode v2) bölümünde temel ya da gelişmiş mod seçildiyse bu karar oradan türetilir ve burada ayrıca sorulmaz."
+  },
+  "gg_cm_checks": {
+   "explanation": " “Eşit düğmeler”, “Rızayı geri alma” ve “Onay kaydı” Gizlilik / KVKK › Çerez İzin Davranışı kararı verildiyse oradan gelir; onay penceresinin davranışı tek yerden yönetilir."
+  },
+  "mk_sms_link": {
+   "explanation": " Pazarlama › Yayım & Dağıtım › Kısa Bağlantı kararı verildiyse bu karar oradan türetilir; kısa bağlantının alan adı Ortak Bilgiler › Kimlik & Kurum › Kısa Bağlantı Alan Adı'ndadır."
+  },
+  "mk_shortlink_domain": {
+   "explanation": " Yayım & Dağıtım › Kısa Bağlantı'da kurumsal kısa alan adı seçilince sorulur; SMS, sosyal medya, mailing ve basılı işlerdeki (QR) bütün kısa bağlantılar bu alan adıyla üretilir."
+  },
+  "rbac": {
+   "explanation": " Panel & Portal Mimarisi › Panel Yetkilendirme Modeli seçildiyse bu karar oradan türetilir (seçeneklerin hepsi rol bazlıdır)."
+  },
+  "ml_subscription": {
+   "explanation": " Pazarlama › Mailing › İzin, Uyum ve Teslim Edilebilirlik kararı verildiyse “Çift onay” ve “İYS çift yönlü senkron” oradan gelir."
+  },
+  "ml_deliverability": {
+   "explanation": " Pazarlama › Mailing › İzin, Uyum ve Teslim Edilebilirlik kararı verildiyse “Kademeli ısıtma” oradan gelir."
+  },
+  "sp_publishing": {
+   "explanation": " Pazarlama › İş Akışı & Onay › Onay Akışı kararı verildiyse “Onaysız yayın yok” oradan gelir: onaylı bir akış seçiliyse açık, “Onaysız (doğrudan yayın)” seçiliyse kapalıdır."
+  },
+  "mk_meta_prereq": {
+   "explanation": " Meta Servisleri'nde kurulum kararları verildiyse Meta Pixel, Conversions API, doğrulanmış alan adı ve işletme portföyü seçenekleri oradan gelir (Kurulacak Meta Varlıkları, Pikselin Kurulum Yöntemi, Asgari Ölçüm Ayarları)."
+  },
+  "definition_done": {
+   "explanation": " Test & Kalite Kontrol › Kod Kalite Kapısı'nda seçilen Build, Type Check, Lint, Tests ve Security Scan burada da zorunludur (kapıda olmayan kontroller serbestçe eklenebilir)."
+  }
+ },
+ "textReplace": [
+  {
+   "field": "mk_shortlink",
+   "old": "Kısa Bağlantı Alan Adı'nda",
+   "new": "Ortak Bilgiler › Kimlik & Kurum › Kısa Bağlantı Alan Adı'nda"
+  }
+ ],
+ "recommendAdd": {
+  "color_theme": [
+   {
+    "field": "design_theme_interaction",
+    "map": {
+     "Dark-First": [
+      "Dark",
+      "Light Dark"
+     ]
+    }
+   }
+  ]
+ },
+ "move": [
+  {
+   "id": "mk_shortlink_domain",
+   "section": "oc_identity",
+   "after": "staging_url"
+  }
+ ],
+ "refsAdd": {
+  "mk_dist": [
+   "mk_shortlink_domain"
+  ],
+  "mk_sms": [
+   "mk_shortlink_domain"
+  ]
+ },
+ "guideReplace": [
+  {
+   "section": "mk_comp",
+   "old": "Doğrulanmış reklamverenlerin Google Arama, YouTube ve görüntülü ağdaki reklamlarını reklamveren ve bölgeye göre aramaya yarayan resmî araç.",
+   "new": "Google Arama, YouTube ve görüntülü ağdaki reklamları reklamveren adı ya da web sitesiyle, konuma ve tarihe göre aramaya yarayan resmî araç; doğrulanmış reklamveren “Doğrulandı” rozetiyle, doğrulanmamış olan “Doğrulanmadı” etiketi ve ödeme profili adıyla görünür."
+  }
+ ]
+}

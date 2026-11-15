@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """kilavuz-alanlari.json'daki fields[] içinden uygulamada henüz olmayan alanları DATA'ya yazar (2026-11-12).
-Kullanım: python3 -I docs/pazarlama/alan_ekle.py web-proje-gelistirme.html docs/pazarlama/kilavuz-alanlari.json
+Kullanım: python3 -I docs/pazarlama/alan_ekle.py web-proje-gelistirme.html docs/pazarlama/kilavuz-alanlari.json [--sync id1,id2]
 kilavuz_ekle.py'nin alan adımının aynısıdır: alan `after`'dan sonra (yoksa bölümün sonuna) eklenir ve kimliği
 DATA.guideKit.added.fields'e yazılır — böylece kilavuz_ekle.py yeniden çalışınca alanı geri alıp yeniden ekler.
 Neden ayrı: kilavuz_ekle.py 2026-11-09'dan beri önceden var olan bir denetimde duruyor
 (design_hero recommend → page_design_style "Accessible-First"; hesap_satiri_ekle.py ile aynı durum).
+2026-11-15'ten beri refsAdd'deki eksik Ortak Bilgiler bağlantılarını da ekler (kilavuz_ekle.py 8. adım).
 Var olan alana dokunmaz; tekrar çalıştırılabilir. Denetimler: zorunlu metinler, rule yer tutucusu, boolean'da
 yes / no, showIf alan ve değerleri, ajan kimliklerinin pozisyon ajanı biçimi."""
 import copy, hashlib, json, sys
@@ -12,6 +13,8 @@ import copy, hashlib, json, sys
 PH = {"select": "{label}", "multiselect": "{labels}", "boolean": "{booltext}", "text": "{value}",
       "textarea": "{value}", "url": "{value}", "color": "{value}", "accounts": "{value}"}
 hp, sp = sys.argv[1:3]
+# --sync id1,id2 (2026-11-15): DATA'da zaten olan bu alanları kaynaktaki tanımla değiştirir (yeri korunur).
+SYNC = set(sys.argv[sys.argv.index('--sync') + 1].split(',')) if '--sync' in sys.argv else set()
 h = open(hp, encoding='utf-8').read()
 MARK = 'const DATA='
 if h.count(MARK) != 1:
@@ -28,6 +31,17 @@ for spec in src.get('fields', []):
     if fid in FI:
         if fid not in added:
             added.append(fid)
+        if fid in SYNC:
+            g = copy.deepcopy(spec)
+            g.pop('after', None)
+            if g != FI[fid]:
+                L = D['fields']
+                k = next(k for k, x in enumerate(L) if x['id'] == fid)
+                if g['section'] != L[k]['section']:
+                    sys.exit('HATA: --sync bölüm değiştiremez ' + fid)
+                L[k] = g
+                FI[fid] = g
+                n += 1
         continue
     f = copy.deepcopy(spec)
     after = f.pop('after', None)
@@ -65,10 +79,25 @@ for spec in src.get('fields', []):
     FI[fid] = f
     added.append(fid)
     n += 1
+# refsAdd (2026-11-15): kilavuz_ekle.py'nin 8. adımının aynısı — yalnız eksik bağlantıyı ekler, guideKit.added.refs'e yazar.
+SD = {s['id']: s for s in D['sections']}
+ar = D['guideKit']['added'].setdefault('refs', {})
+r_n = 0
+for sid, L in (src.get('refsAdd') or {}).items():
+    if sid not in SD or SD[sid].get('area') == 'common':
+        sys.exit('HATA: refsAdd bölüm yok ya da ortak bölüm ' + sid)
+    for fid in L:
+        if fid not in FI or SD[FI[fid]['section']].get('area') != 'common':
+            sys.exit('HATA: refsAdd %s → %s ortak alan değil' % (sid, fid))
+        r = SD[sid].setdefault('refs', [])
+        if fid not in r:
+            r.append(fid)
+            ar.setdefault(sid, []).append(fid)
+            r_n += 1
 out = json.dumps(D, ensure_ascii=False)
 for bad in ('</script', '<!--'):
     if bad in out:
         sys.exit('HATA: DATA içinde yasak dizi ' + bad)
 h = h[:i] + out + h[end:]
 open(hp, 'w', encoding='utf-8').write(h)
-print('tamam: %d alan eklendi · md5 %s · boyut %d' % (n, hashlib.md5(h.encode('utf-8')).hexdigest(), len(h.encode('utf-8'))))
+print('tamam: %d alan, %d bağlantı eklendi · md5 %s · boyut %d' % (n, r_n, hashlib.md5(h.encode('utf-8')).hexdigest(), len(h.encode('utf-8'))))

@@ -6950,6 +6950,336 @@
     "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani",
     "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
    ]
+  },
+  {
+   "id": "mk_comp_ads_log",
+   "section": "mk_comp",
+   "after": "mk_comp_data",
+   "label": "Rakip Reklam Kaydı",
+   "en": "Competitor Ad Log",
+   "type": "multiselect",
+   "explanation": "Rakip tablosunda her rakip reklamı için hangi bilgilerin tutulacağını belirler. Google Ads ve Meta Ads bölümlerindeki rakip reklam takibinin sonuçları burada tek biçimde birleşir; böylece dönemler ve rakipler birbiriyle karşılaştırılabilir.",
+   "rule": "Rakip reklam kaydında her reklam için tutulacak bilgiler: {labels}. Her satır rakip adı, platform ve kontrol tarihiyle başlar; kaynak bağlantısı olmayan reklam tabloya girmez. Rakibin reklam metni ve görseli kendi reklamlarımızda kopyalanmaz; tablo yalnız mesaj, teklif ve biçim eğilimlerini çıkarmak için kullanılır.",
+   "options": [
+    {
+     "value": "format",
+     "label": "Platform ve biçim",
+     "explanation": "Reklamın nerede (Google Arama, YouTube, Facebook, Instagram …) ve hangi biçimde (metin, görsel, video, carousel) yayınlandığı yazılır.",
+     "scenario": "Rakiplerin hangi kanallara ve biçimlere yöneldiğini görmek için her kayıtta.",
+     "example": "“Rakip A · Instagram · Reels videosu · 2026-11-03”.",
+     "ruleDetail": "Platform ve biçim her satırda ayrı sütunlarda yazılır."
+    },
+    {
+     "value": "message",
+     "label": "Mesaj ve teklif",
+     "explanation": "Reklamın ana vaadi, fiyat ya da indirim bilgisi ve kampanya süresi kısaca özetlenir; metin birebir kopyalanmaz.",
+     "scenario": "Rakiplerin fiyat ve kampanya hamlelerinin izlenmesi gereken her sektörde.",
+     "example": "“Ana vaat: aynı gün kurulum · Teklif: ilk ay %50 indirim · Süre: ay sonuna kadar”.",
+     "ruleDetail": "Ana vaat, teklif (fiyat, indirim, hediye) ve varsa kampanya bitiş tarihi kısaca özetlenir."
+    },
+    {
+     "value": "cta",
+     "label": "CTA ve açılış sayfası",
+     "explanation": "Reklamdaki eylem çağrısı (Hemen ara, Teklif al, WhatsApp'tan yaz …) ve tıklayınca açılan sayfanın adresi yazılır.",
+     "scenario": "Rakiplerin hangi dönüşüm yoluna yönlendirdiğini görmek için.",
+     "example": "“CTA: Teklif al · Açılış: rakip-a.com/kampanya/kis”.",
+     "ruleDetail": "CTA metni ve açılış sayfası adresi yazılır; açılış sayfası rakip reklamına tıklanarak değil, reklamda görünen adresten açılarak incelenir."
+    },
+    {
+     "value": "dates",
+     "label": "İlk ve son görülme tarihi",
+     "explanation": "Reklamın ilk görüldüğü ve en son görüldüğü kontrol tarihi tutulur; durum “yeni”, “devam ediyor” ya da “durdu” olarak işaretlenir. Uzun süre yayında kalan reklamlar böylece ayırt edilir.",
+     "scenario": "Rakip reklamlarının ne kadar süre yayında kaldığını görmek ve uzun süreli reklamları işaretlemek için.",
+     "example": "“İlk görülme 2026-10-01 · son görülme 2026-11-12 · devam ediyor (42 gün)”.",
+     "ruleDetail": "İlk ve son görülme tarihi ile durum (yeni / devam ediyor / durdu) yazılır; Meta Reklam Kütüphanesi'ndeki yayına başlama tarihi varsa o da eklenir."
+    },
+    {
+     "value": "evidence",
+     "label": "Ekran görüntüsü ve kaynak bağlantısı (önerilen)",
+     "explanation": "Her reklamın ekran görüntüsü alınır ve Reklam Şeffaflık Merkezi ya da Reklam Kütüphanesi bağlantısı eklenir. Meta'da Türkiye'deki ticari reklamlar yayından kalkınca kütüphaneden de kalktığı için ekran görüntüsü tek kalıcı kanıttır.",
+     "scenario": "Her rakip reklam takibinde; özellikle Meta reklamlarında ve hukuk birimine iletilebilecek marka kullanımı durumlarında.",
+     "example": "Ekran görüntüsü “rakip-a_instagram_2026-11-03.png” adıyla saklanır, tabloya kütüphane bağlantısı eklenir.",
+     "ruleDetail": "Her reklamın ekran görüntüsü “rakip-adi_platform_YYYY-AA-GG” biçiminde adlandırılıp proje klasöründe saklanır ve kaynak bağlantısı tabloya yazılır."
+    },
+    {
+     "value": "auction",
+     "label": "Açık artırma metrikleri (Google)",
+     "explanation": "Google Ads Açık Artırma Bilgileri raporundaki gösterim payı, çakışma oranı, geçme payı ve üst konum oranı rakip bazında dönem dönem yazılır. Bu veriler yalnız kendi kampanyalarınızın girdiği açık artırmalardan gelir.",
+     "scenario": "Google Ads'te Arama, Alışveriş ya da Maksimum Performans kampanyası yayında olan hesaplarda.",
+     "example": "“Rakip B · Kasım 1. hafta · çakışma %38 · üst konum oranı %52 · geçme payımız %41”.",
+     "ruleDetail": "Açık Artırma Bilgileri'ndeki gösterim payı, çakışma oranı, geçme payı ve üst konum oranı rakip ve dönem bazında yazılır."
+    }
+   ],
+   "showIf": [
+    {
+     "field": "mk_comp_on",
+     "in": [
+      true
+     ]
+    },
+    {
+     "field": "mk_comp_data",
+     "in": [
+      "ads"
+     ]
+    }
+   ],
+   "scenario": "Toplanacak Bilgiler'de reklamlar seçiliyse önem kazanır; kayıt biçimi belirlenmezse her kontrol farklı bilgi toplar ve dönemler karşılaştırılamaz.",
+   "example": "Rakip tablosunun Reklamlar sekmesinde her satır “Rakip · platform · biçim · mesaj ve teklif · CTA · ilk / son görülme · ekran görüntüsü” sütunlarından oluşur.",
+   "agents": [
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ]
+  },
+  {
+   "id": "mk_gads_rival",
+   "section": "mk_gads",
+   "after": "mk_gads_brand",
+   "label": "Rakip Reklam Takibi",
+   "en": "Competitor Ad Monitoring",
+   "type": "multiselect",
+   "explanation": "Rakiplerin Google'daki reklamlarının hangi araçlarla izleneceğini belirler. Reklam Şeffaflık Merkezi rakibin reklam metinlerini, görsellerini ve videolarını gösterir; Açık Artırma Bilgileri ise kendi kampanyalarınızın girdiği açık artırmalarda hangi rakiplerle karşılaştığınızı ve onların ne sıklıkla önünde ya da arkasında kaldığınızı ölçer. Rakibin harcaması ve tıklama sayısı resmî kaynaklarda yer almaz. Semrush, Ahrefs gibi araçlarla rakibin ücretli arama sorgularının ve reklam metinlerinin incelenmesi ayrı bir karardır: Pazarlama › SEO Araçları › Rakip Analizi (Araçla) › “Ücretli arama sorguları ve reklam metinleri”.",
+   "rule": "Google'da rakip reklam takibi: {labels}. İzlenecek rakipler Ortak Bilgiler › Rakipler listesinden alınır. Her kontrolde görülen reklam kaynak bağlantısı ve tarihle kaydedilir (Rakip Analizi açıksa rakip tablosuna, değilse reklam ekibinin rakip reklam arşivine); önceki kontrole göre yeni başlayan ve duran reklamlar ayrıca işaretlenir. Rakip reklamlarına tıklanmaz (reklam maliyetini artırmaya yönelik elle yapılan tıklamalar Google'ın tanımında geçersiz tıklamadır); reklamlar google.com'da tekrar tekrar aranmaz, Reklam Önizleme ve Teşhis aracı kullanılır. Rakibin reklam metni ve görseli kopyalanmaz; yalnız mesaj, teklif ve biçim eğilimleri çıkarılır.",
+   "options": [
+    {
+     "value": "transparency",
+     "label": "Google Reklam Şeffaflık Merkezi",
+     "explanation": "Reklamveren adıyla ya da web sitesi adıyla aranır; sonuçlar konuma (Türkiye) ve tarihe göre süzülür. Doğrulanmış reklamveren “Doğrulandı” rozetiyle, doğrulanmamış olan “Doğrulanmadı” etiketi ve ödeme profili adıyla görünür. Gösterim ve harcama bilgisi verilmez.",
+     "scenario": "Rakiplerin Google Arama, YouTube ya da görüntülü ağda reklam verdiği her sektörde temel kaynak.",
+     "example": "Bir diş kliniği rakip kliniğin alan adını arar; “İmplant tedavisinde 12 taksit” reklamının yeni başladığını görür ve ekran görüntüsüyle tabloya ekler.",
+     "ruleDetail": "Ortak Bilgiler › Rakipler listesindeki her rakip Reklam Şeffaflık Merkezi'nde (adstransparency.google.com, bölge Türkiye) alan adı ve reklamveren adıyla aranır; reklamın biçimi, mesajı, teklifi ve açılış sayfası kaydedilir. Doğrulanmamış reklamverenin görünen adı ödeme profili adı olduğundan rakiple eşleştirme alan adından yapılır."
+    },
+    {
+     "value": "auction",
+     "label": "Açık Artırma Bilgileri (Auction Insights)",
+     "explanation": "Kendi Arama Ağı, Alışveriş ve Maksimum Performans kampanyalarınızın girdiği açık artırmalarda karşılaştığınız reklamverenleri gösterir: gösterim payı, çakışma oranı, geçme payı, üst konum oranı, sayfanın üst ve en üst kısmı oranı (Alışveriş'te ilk üçü). Rapor zamana ve cihaza göre segmentlere ayrılabilir; dönemde yeterli etkinlik yoksa ya da gösterim payınız %10'un altındaysa analiz gösterilmez.",
+     "scenario": "Google Ads'te Arama, Alışveriş ya da Maksimum Performans kampanyası yayında olan hesaplar için.",
+     "example": "Bir sigorta acentesi raporu zaman segmentiyle haftalık inceler; bir rakibin üst konum oranının iki haftada %20'den %55'e çıktığını görür ve teklif stratejisini yeniden değerlendirir.",
+     "ruleDetail": "Açık Artırma Bilgileri raporu kampanya düzeyinde ve zaman segmentiyle incelenir; gösterim payı, çakışma oranı, geçme payı ve üst konum oranı belirgin değişen rakip not edilir. Listede Ortak Bilgiler'de olmayan bir reklamveren sürekli görünüyorsa rakip listesine eklenmesi önerilir."
+    },
+    {
+     "value": "brand",
+     "label": "Marka adında rakip reklamı izleme",
+     "explanation": "Marka adınızla yapılan aramalarda reklam veren rakipler izlenir. Google rakibin markanızı anahtar kelime olarak kullanmasını kısıtlamaz; markanızın rakibin reklam metninde kullanılması durumunda ise marka sahibi Google'a şikâyette bulunabilir, Google şikâyeti inceleyip kullanımı kısıtlayabilir.",
+     "scenario": "Marka adıyla aranan ve rakiplerin marka aramalarına reklam vermesinden şüphelenilen işletmeler için.",
+     "example": "Marka kampanyasının Açık Artırma Bilgileri'nde bir rakip %40 çakışma oranıyla görünür; Reklam Önizleme ve Teşhis aracında rakibin reklam metninde markanın adını kullandığı görülür ve durum hukuk birimine iletilir.",
+     "ruleDetail": "Marka kampanyasının Açık Artırma Bilgileri ve Reklam Önizleme ve Teşhis aracıyla marka aramalarında reklam veren rakipler belirlenir. Rakibin markayı anahtar kelime olarak kullanması Google'da kısıtlanmadığı için yalnız kayda geçer; markanın rakibin reklam metninde kullanıldığı görülürse ekran görüntüsü ve tarihle hukuk birimine iletilir, şikâyet marka sahibince Google'ın marka şikâyet formundan yapılır."
+    },
+    {
+     "value": "preview",
+     "label": "Reklam Önizleme ve Teşhis aracıyla arama sonucu kontrolü",
+     "explanation": "Seçilen sorgu, konum, dil ve cihaz için arama sonuçlarını gösterim verilerinizi etkilemeden gösterir; kendi reklamınızın yanında hangi rakiplerin çıktığını görmenin güvenli yoludur. Google bu aracın kendi aramanızı yapmaktan daha iyi sonuç verdiğini belirtir.",
+     "scenario": "Hedef sorgularda ve farklı şehirlerde hangi rakiplerin reklam verdiğini görmek isteyen hesaplar için.",
+     "example": "Ankara'daki bir hukuk bürosu “boşanma avukatı ankara” sorgusunu araçta mobil cihazla önizler ve üstte üç rakibin reklamı olduğunu görür.",
+     "ruleDetail": "Ortak Bilgiler › Hedef Sorgular'daki ana sorgular Reklam Önizleme ve Teşhis aracında hizmet bölgesi, dil ve cihaz seçilerek kontrol edilir; görünen rakip reklamları kaydedilir."
+    }
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "google"
+     ]
+    }
+   ],
+   "scenario": "Google Ads'te reklam veriliyorsa ve rakipler de Google'da reklam veriyorsa önem kazanır; özellikle tıklama maliyetinin yüksek olduğu ve rakiplerin kampanyalarını sık değiştirdiği sektörlerde.",
+   "example": "Bir özel okul her hafta Açık Artırma Bilgileri'ne, her ay Reklam Şeffaflık Merkezi'ne bakar; kayıt döneminde rakiplerin “erken kayıt indirimi” reklamlarını başlattığı tarihleri tabloya işler.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ]
+  },
+  {
+   "id": "mk_gads_rival_freq",
+   "section": "mk_gads",
+   "after": "mk_gads_rival",
+   "label": "Rakip Reklam Kontrol Sıklığı",
+   "en": "Competitor Ad Check Frequency",
+   "type": "select",
+   "explanation": "Google'da rakip reklamlarının ne sıklıkla kontrol edileceğini belirler. Açık Artırma Bilgileri dönem dönem karşılaştırıldığı için kontrol aralığının sabit tutulması önemlidir. Seçilen sıklık Yapılacaklar listesinde yinelenen görev olur.",
+   "rule": "Google'da rakip reklam kontrolü sıklığı: {label}. Her kontrolde tarih yazılır ve önceki kontrole göre yeni başlayan ve duran reklamlar ayrıca belirtilir. Açık Artırma Bilgileri her kontrolde aynı uzunlukta dönemle karşılaştırılır.",
+   "options": [
+    {
+     "value": "weekly",
+     "label": "Haftalık",
+     "explanation": "Rakip reklamları her hafta kontrol edilir. Yeni kampanyalar hızla yakalanır; düzenli bir haftalık iş yükü getirir.",
+     "scenario": "Tıklama maliyetinin yüksek olduğu, rakiplerin kampanyalarını sık değiştirdiği ya da reklam bütçesinin büyük olduğu hesaplar için.",
+     "example": "Bir sigorta acentesinde reklam uzmanı her pazartesi rakiplerin yeni reklamlarına bakar ve tabloyu günceller."
+    },
+    {
+     "value": "biweekly",
+     "label": "2 haftada bir",
+     "explanation": "Rakip reklamları iki haftada bir kontrol edilir. Haftalık kontrolün yarısı kadar emekle çoğu kampanya değişikliğini yakalar.",
+     "scenario": "Reklamı sürekli yayında olan ama rakiplerin kampanyalarını çok sık değiştirmediği hizmet işletmeleri için.",
+     "example": "Bir veteriner kliniği ayın 1'inde ve 15'inde rakip kliniklerin reklamlarını kontrol eder."
+    },
+    {
+     "value": "monthly",
+     "label": "Aylık",
+     "explanation": "Rakip reklamları her ay kontrol edilir. İş yükü düşüktür; kısa süreli rakip kampanyaları hiç görülmeden bitebilir.",
+     "scenario": "Reklam bütçesi küçük olan ya da rakiplerin reklam faaliyetinin az olduğu sektörler için.",
+     "example": "Bir mimarlık ofisi her ayın ilk iş günü rakiplerin reklamlarına bakar ve aylık rapora ekler."
+    },
+    {
+     "value": "campaign",
+     "label": "Kampanya öncesi ve sonrası",
+     "explanation": "Kontrol sabit takvimle değil, her kampanya başlamadan önce ve bittikten sonra yapılır. Emeği karar anına yoğunlaştırır; kampanyalar arasında rakipler izlenmez.",
+     "scenario": "Yılda birkaç dönemsel kampanya yapan, arada reklam vermeyen işletmeler için.",
+     "example": "Bir özel okul kayıt kampanyasından iki hafta önce ve kampanya bitince rakip okulların reklamlarını inceler."
+    }
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "google"
+     ]
+    },
+    {
+     "field": "mk_gads_rival",
+     "in": [
+      "transparency",
+      "auction",
+      "brand",
+      "preview"
+     ]
+    }
+   ],
+   "scenario": "Rakiplerin reklamlarını ne sıklıkla değiştirdiğine ve ekibin bu bilgiyle ne sıklıkla karar verdiğine göre seçilir.",
+   "example": "Haftalık kontrolde her pazartesi rakiplerin reklamları taranır; yeni başlayan reklamlar tabloya “yeni”, artık görünmeyenler “durdu” olarak işlenir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ]
+  },
+  {
+   "id": "mk_meta_rival",
+   "section": "mk_meta",
+   "after": "mk_meta_creative",
+   "label": "Rakip Reklam Takibi",
+   "en": "Competitor Ad Monitoring",
+   "type": "multiselect",
+   "explanation": "Rakiplerin Facebook, Instagram, Messenger ve Meta'nın diğer ürünlerindeki reklamlarının nasıl izleneceğini belirler. Meta Reklam Kütüphanesi yayındaki bütün reklamları gösterir; ancak Türkiye gibi AB dışındaki ülkelerde ticari reklam yayından kalkınca kütüphaneden de kalkar ve harcama, gösterim, hedefleme bilgisi verilmez. Bu yüzden görülen reklamın aynı gün kaydedilmesi gerekir.",
+   "rule": "Meta'da rakip reklam takibi: {labels}. İzlenecek rakipler Ortak Bilgiler › Rakipler listesinden alınır; her rakibin reklam veren Facebook sayfası ve Instagram hesabı eşleştirilip not edilir. Ticari reklamlar yayından kalkınca Reklam Kütüphanesi'nden de kalktığı için her kontrolde görülen reklam aynı gün ekran görüntüsü, kütüphane bağlantısı ve tarihle kaydedilir (Rakip Analizi açıksa rakip tablosuna, değilse reklam ekibinin rakip reklam arşivine); yeni başlayan ve duran reklamlar ayrıca işaretlenir. Reklam Kütüphanesi'nden betikle ya da kazıyıcıyla veri toplanmaz (Meta'nın Otomatik Veri Toplama Koşulları önceden yazılı izin ister). Rakibin reklam metni ve görseli kopyalanmaz; yalnız mesaj, teklif, biçim ve kanca eğilimleri çıkarılır.",
+   "options": [
+    {
+     "value": "library",
+     "label": "Meta Reklam Kütüphanesi (Türkiye, Tüm reklamlar)",
+     "explanation": "Rakibin sayfa adıyla ya da anahtar kelimeyle aranır; ülke Türkiye ve kategori “Tüm reklamlar” seçilir. Rakibin yayındaki reklamlarının metni, görseli ya da videosu ve yayına başlama tarihi görülür. Siyasi ya da sosyal konulu olmayan reklamlarda harcama ve gösterim bilgisi yoktur.",
+     "scenario": "Rakiplerin Facebook ya da Instagram'da reklam verdiği her sektörde temel kaynak.",
+     "example": "Bir pilates stüdyosu rakip stüdyonun sayfasını kütüphanede arar; “İlk ders ücretsiz” reklamının üç haftadır yayında olduğunu görür ve ekran görüntüsüyle tabloya ekler.",
+     "ruleDetail": "Ortak Bilgiler › Rakipler listesindeki her rakip Meta Reklam Kütüphanesi'nde (facebook.com/ads/library, ülke Türkiye, Tüm reklamlar) sayfa adıyla aranır; her etkin reklamın platformu, biçimi, mesajı, teklifi, CTA'sı, açılış sayfası ve yayına başlama tarihi ekran görüntüsüyle kaydedilir."
+    },
+    {
+     "value": "longrun",
+     "label": "Uzun süredir yayında olan reklamları işaretleme",
+     "explanation": "Yayına başlama tarihi eski olan rakip reklamları ayrıca işaretlenir. Bir reklamın haftalarca yayında kalması rakibin o reklamdan sonuç aldığına dair güçlü bir işarettir; ancak harcama görünmediği için kesin bilgi değildir.",
+     "scenario": "Kendi kreatif testlerine fikir arayan ve rakiplerin hangi mesajlarda ısrar ettiğini görmek isteyen ekipler için.",
+     "example": "Bir online eğitim şirketi 60 günü aşan üç rakip reklamının hepsinin öğrenci yorumu videosu olduğunu görür ve kendi testine bu biçimi ekler.",
+     "ruleDetail": "Yayına başlama tarihinden bu yana 30 günden uzun süre geçmiş rakip reklamları “uzun süreli” olarak işaretlenir; ortak mesaj, biçim ve kanca kalıpları kopyalanmadan kreatif test listesine öneri olarak aktarılır. Bu işaret raporda “rakip bu reklamdan sonuç alıyor olabilir” diye yazılır, kesin bilgi gibi sunulmaz."
+    },
+    {
+     "value": "transparency",
+     "label": "Sayfa şeffaflığı ve Instagram “Bu hesap hakkında”",
+     "explanation": "Facebook sayfasının şeffaflık bölümü sayfanın oluşturulma tarihini, ad değişikliklerini ve yayındaki reklamlarını; Instagram'daki “Bu hesap hakkında” ekranı hesabın katılma tarihini, ülkesini ve etkin reklamlarını gösterir. Rakibin doğru sayfasını eşleştirmeye ve yeni açılmış taklit sayfaları ayırt etmeye yarar.",
+     "scenario": "Rakibin birden fazla sayfası olan, adı değişmiş ya da bayi sayfalarıyla karışabilen sektörler için.",
+     "example": "Bir franchise markası bölgedeki rakibin iki ayrı sayfası olduğunu sayfa şeffaflığından anlar ve reklamları hangi sayfadan verildiğine göre ayrı satırlara yazar.",
+     "ruleDetail": "Her rakibin reklam veren Facebook sayfası ve Instagram hesabı sayfa şeffaflığı ve “Bu hesap hakkında” ekranlarından doğrulanır; oluşturulma tarihi, ad değişiklikleri ve ülke not edilir."
+    },
+    {
+     "value": "eu",
+     "label": "AB'de yayınlanan reklamların ayrıntısı (hedefleme ve erişim)",
+     "explanation": "Rakibin reklamları AB ülkelerine de ulaşıyorsa kütüphane bu reklamları son gösterimden sonra bir yıl saklar ve yaş, cinsiyet, konum gibi hedefleme parametrelerini de gösterir. Reklam Kütüphanesi API'si de yalnız bu reklamları ve siyasi ya da sosyal konulu reklamları döndürür; yalnız Türkiye'de yayınlanan ticari reklamlar için bu bilgiler yoktur.",
+     "scenario": "AB pazarına da satış yapan ya da yurt dışı müşteri hedefleyen rakipleri olan işletmeler için.",
+     "example": "Bir tekstil üreticisi Almanya'yı da hedefleyen rakibinin reklamlarında ülke olarak Almanya'yı seçer ve reklamın 25–44 yaş arası kadınlara yönelik olduğunu görür.",
+     "ruleDetail": "AB'ye de reklam veren rakipler için kütüphanede ilgili AB ülkesi seçilerek hedefleme (yaş, cinsiyet, konum) ve erişim bilgisi kaydedilir. Toplu toplama gerekirse yalnız resmî Reklam Kütüphanesi API'si kullanılır (kimlik ve konum onayı ile geliştirici hesabı gerekir); API Türkiye'de yayınlanan ticari reklamları döndürmez."
+    }
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    }
+   ],
+   "scenario": "Meta Ads'te reklam veriliyorsa ve rakipler de Facebook ya da Instagram'da reklam veriyorsa önem kazanır; özellikle kreatifin sık yenilendiği perakende, eğitim, sağlık turizmi ve hizmet sektörlerinde.",
+   "example": "Bir kuaför zinciri her pazartesi Reklam Kütüphanesi'nde üç rakibin reklamlarına bakar; yeni başlayan “öğrenciye %20” reklamını ekran görüntüsüyle tabloya işler, bir ay sonra hâlâ yayında olduğu için “uzun süreli” olarak işaretler.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ]
+  },
+  {
+   "id": "mk_meta_rival_freq",
+   "section": "mk_meta",
+   "after": "mk_meta_rival",
+   "label": "Rakip Reklam Kontrol Sıklığı",
+   "en": "Competitor Ad Check Frequency",
+   "type": "select",
+   "explanation": "Meta'da rakip reklamlarının ne sıklıkla kontrol edileceğini belirler. Türkiye'de ticari reklam yayından kalkınca Reklam Kütüphanesi'nden de kalktığı için aralık uzadıkça daha çok rakip reklamı hiç görülmeden kaybolur. Seçilen sıklık Yapılacaklar listesinde yinelenen görev olur. Google Ads'te de rakip reklam takibi yapılıyorsa sıklık bir kez, Google Ads › Rakip Reklam Kontrol Sıklığı'nda seçilir ve buraya aynen gelir.",
+   "rule": "Meta'da rakip reklam kontrolü sıklığı: {label}. Her kontrolde tarih yazılır ve önceki kontrole göre yeni başlayan ve duran reklamlar ayrıca belirtilir. Kısa süreli rakip reklamlarının kaçırılabileceği raporda belirtilir.",
+   "options": [
+    {
+     "value": "weekly",
+     "label": "Haftalık",
+     "explanation": "Rakip reklamları her hafta kontrol edilir. Yeni kampanyalar hızla yakalanır; düzenli bir haftalık iş yükü getirir.",
+     "scenario": "Tıklama maliyetinin yüksek olduğu, rakiplerin kampanyalarını sık değiştirdiği ya da reklam bütçesinin büyük olduğu hesaplar için.",
+     "example": "Bir sigorta acentesinde reklam uzmanı her pazartesi rakiplerin yeni reklamlarına bakar ve tabloyu günceller."
+    },
+    {
+     "value": "biweekly",
+     "label": "2 haftada bir",
+     "explanation": "Rakip reklamları iki haftada bir kontrol edilir. Haftalık kontrolün yarısı kadar emekle çoğu kampanya değişikliğini yakalar.",
+     "scenario": "Reklamı sürekli yayında olan ama rakiplerin kampanyalarını çok sık değiştirmediği hizmet işletmeleri için.",
+     "example": "Bir veteriner kliniği ayın 1'inde ve 15'inde rakip kliniklerin reklamlarını kontrol eder."
+    },
+    {
+     "value": "monthly",
+     "label": "Aylık",
+     "explanation": "Rakip reklamları her ay kontrol edilir. İş yükü düşüktür; kısa süreli rakip kampanyaları hiç görülmeden bitebilir.",
+     "scenario": "Reklam bütçesi küçük olan ya da rakiplerin reklam faaliyetinin az olduğu sektörler için.",
+     "example": "Bir mimarlık ofisi her ayın ilk iş günü rakiplerin reklamlarına bakar ve aylık rapora ekler."
+    },
+    {
+     "value": "campaign",
+     "label": "Kampanya öncesi ve sonrası",
+     "explanation": "Kontrol sabit takvimle değil, her kampanya başlamadan önce ve bittikten sonra yapılır. Emeği karar anına yoğunlaştırır; kampanyalar arasında rakipler izlenmez.",
+     "scenario": "Yılda birkaç dönemsel kampanya yapan, arada reklam vermeyen işletmeler için.",
+     "example": "Bir özel okul kayıt kampanyasından iki hafta önce ve kampanya bitince rakip okulların reklamlarını inceler."
+    }
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    },
+    {
+     "field": "mk_meta_rival",
+     "in": [
+      "library",
+      "longrun",
+      "transparency",
+      "eu"
+     ]
+    }
+   ],
+   "scenario": "Rakiplerin reklamlarını ne sıklıkla değiştirdiğine ve ekibin bu bilgiyle ne sıklıkla karar verdiğine göre seçilir.",
+   "example": "Haftalık kontrolde her pazartesi rakiplerin reklamları taranır; yeni başlayan reklamlar tabloya “yeni”, artık görünmeyenler “durdu” olarak işlenir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/ucretli-sosyal-medya-uzmani",
+    "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru/rekabet-analisti"
+   ],
+   "derive": {
+    "from": "mk_gads_rival_freq",
+    "map": {
+     "weekly": "weekly",
+     "biweekly": "biweekly",
+     "monthly": "monthly",
+     "campaign": "campaign"
+    }
+   }
   }
  ],
  "optionAdd": [
@@ -9137,12 +9467,14 @@
   ],
   "mk_gads": [
    "oc_phone",
-   "oc_cta_url"
+   "oc_cta_url",
+   "oc_competitors"
   ],
   "mk_meta": [
    "oc_whatsapp",
    "oc_cta_url",
-   "oc_cta_verbs"
+   "oc_cta_verbs",
+   "oc_competitors"
   ],
   "mk_li": [
    "oc_cta_url",

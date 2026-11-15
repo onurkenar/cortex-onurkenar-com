@@ -1,0 +1,18 @@
+/* Tutarlılık katmanı (2026-11-15) — çelişki uyarısı (.cfWarn) ve bağlı seçenek (.lnLock / .lnNote).
+   Kaynak docs/v26/v26-consistency.css → docs/v26/tutarlilik_ekle.py */
+.cfWarn{margin:10px 0 12px;padding:10px 12px;border:1px solid #f0b46b;border-left-width:4px;border-radius:10px;background:#fff7ec;color:#6b3a00;font-size:13.5px;line-height:1.5}
+.cfWarn b{margin-right:4px}
+.cfWarn .cfOther{display:block;margin-top:4px;color:#7a4a12}
+.cfWarn .linkBtn{margin-top:4px}
+.option.lnLock{cursor:not-allowed;opacity:.88}
+.option.lnLock:hover{transform:none}
+.lnNote{display:block;margin-top:8px;padding-top:7px;border-top:1px dashed #d5d9df;font-size:12.5px;line-height:1.45;color:#4a5059;cursor:default}
+.lnNote .linkBtn{font-size:12.5px}
+.lnNote.lnFlash{animation:lnFlash 1.2s ease}
+@keyframes lnFlash{0%,60%{background:#fff3c4}100%{background:transparent}}
+@media (prefers-reduced-motion:reduce){.lnNote.lnFlash{animation:none;outline:2px solid #c77800}}
+[data-theme="dark"] .cfWarn{background:#2a1f10;border-color:#9a6a2a;color:#f3d3a4}
+[data-theme="dark"] .cfWarn .cfOther{color:#e7c08a}
+[data-theme="dark"] .lnNote{border-color:var(--border);color:var(--muted)}
+@keyframes lnFlashD{0%,60%{background:#3a3012}100%{background:transparent}}
+[data-theme="dark"] .lnNote.lnFlash{animation-name:lnFlashD}
