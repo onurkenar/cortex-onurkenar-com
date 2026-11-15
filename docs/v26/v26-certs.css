@@ -1,0 +1,23 @@
+/* Sertifikalar ve Belgeler satır düzenleyicisi (2026-11-15). Yerleşim alanın genişliğine göre (container query): ≥ 860 px tek satır,
+   480–859 px iki sütun + kutu etiketleri, daha dar tek sütun. Kaynak docs/v26/v26-certs.css → docs/v26/sertifika_satir_ekle.py */
+.certBox{container-type:inline-size;display:grid;gap:8px;max-width:1100px}
+.certHead,.certRow{display:grid;grid-template-columns:minmax(170px,1.15fr) minmax(130px,1.1fr) minmax(160px,1.35fr) minmax(120px,.75fr) 40px;grid-template-areas:"ty nm og dt del";gap:8px;align-items:start}
+.certHead span{font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.certCell{display:grid;gap:4px;min-width:0}
+.certTy{grid-area:ty;gap:6px}.certCN{grid-area:nm}.certCO{grid-area:og}.certCD{grid-area:dt}.certDel{grid-area:del}
+.certL{display:none;font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.certRow .control{max-width:none;min-width:0;width:100%;box-sizing:border-box}
+.certRow .certOther[hidden]{display:none}
+.certDel{height:44px;border:1px solid #dde0e4;border-radius:11px;background:#fff;color:#6b727c;font-size:20px;line-height:1;cursor:pointer}
+.certDel:hover,.certDel:focus-visible{border-color:#d93025;color:#d93025}
+.certAdd{justify-self:start;padding:8px 14px;border:1px dashed #9aa3ad;border-radius:10px;background:transparent;color:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.certAdd:hover,.certAdd:focus-visible{border-color:#1f6feb;color:#1f6feb}
+.field:has(.noneBox.on) .certBox select.control,.field:has(.noneBox.on) .certDel,.field:has(.noneBox.on) .certAdd{opacity:.55}
+@container (max-width:859px){.certHead{display:none}.certL{display:block}.certRow{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 40px;grid-template-areas:"ty nm del" "og dt del";padding:10px;border:1px solid #e3e6ea;border-radius:12px}.certDel{margin-top:20px}}
+@container (max-width:479px){.certRow{grid-template-columns:minmax(0,1fr) 40px;grid-template-areas:"ty del" "nm del" "og del" "dt del"}}
+[data-theme="dark"] .certHead span,[data-theme="dark"] .certL{color:var(--muted)}
+[data-theme="dark"] .certDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
+[data-theme="dark"] .certDel:hover,[data-theme="dark"] .certDel:focus-visible{border-color:#f28b82;color:#f28b82}
+[data-theme="dark"] .certAdd{border-color:var(--border)}
+[data-theme="dark"] .certAdd:hover,[data-theme="dark"] .certAdd:focus-visible{border-color:#8ab4f8;color:#8ab4f8}
+@container (max-width:859px){[data-theme="dark"] .certRow{border-color:var(--border)}}

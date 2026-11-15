@@ -1,0 +1,27 @@
+/* Referanslar satır düzenleyicisi (2026-11-15). Yerleşim alanın genişliğine göre (container query): ≥ 860 px tek satır + sütun
+   başlıkları, 480–859 px iki sütun + kutu etiketleri, daha dar tek sütun. Sertifikalar düzenleyicisiyle (v26-certs) aynı görünüm.
+   Kaynak docs/v26/v26-refs.css → docs/v26/referans_satir_ekle.py */
+.refBox{container-type:inline-size;display:grid;gap:8px;max-width:1100px}
+.refHead,.refRow{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(170px,1.25fr) minmax(170px,1fr) minmax(140px,1fr) 40px;grid-template-areas:"nm ur lg nt del" "wr wr wr wr wr";gap:8px;align-items:start}
+.refHead{grid-template-areas:"nm ur lg nt del"}
+.refHead span{font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.refCell{display:grid;gap:4px;min-width:0}
+.refCN{grid-area:nm}.refCU{grid-area:ur}.refCG{grid-area:lg}.refCT{grid-area:nt}.refDel{grid-area:del}.refWarn{grid-area:wr}
+.refL{display:none;font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.refRow .control{max-width:none;min-width:0;width:100%;box-sizing:border-box}
+.refRow .refUrl[aria-invalid="true"]{border-color:#c77800}
+.refWarn{font-size:12.5px;color:#a35200}
+.refWarn[hidden]{display:none}
+.refDel{height:44px;border:1px solid #dde0e4;border-radius:11px;background:#fff;color:#6b727c;font-size:20px;line-height:1;cursor:pointer}
+.refDel:hover,.refDel:focus-visible{border-color:#d93025;color:#d93025}
+.refAdd{justify-self:start;padding:8px 14px;border:1px dashed #9aa3ad;border-radius:10px;background:transparent;color:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.refAdd:hover,.refAdd:focus-visible{border-color:#1f6feb;color:#1f6feb}
+@container (max-width:859px){.refHead{display:none}.refL{display:block}.refRow{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 40px;grid-template-areas:"nm ur del" "lg nt del" "wr wr wr";padding:10px;border:1px solid #e3e6ea;border-radius:12px}.refDel{margin-top:20px}}
+@container (max-width:479px){.refRow{grid-template-columns:minmax(0,1fr) 40px;grid-template-areas:"nm del" "ur del" "lg del" "nt del" "wr wr"}}
+[data-theme="dark"] .refHead span,[data-theme="dark"] .refL{color:var(--muted)}
+[data-theme="dark"] .refDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
+[data-theme="dark"] .refDel:hover,[data-theme="dark"] .refDel:focus-visible{border-color:#f28b82;color:#f28b82}
+[data-theme="dark"] .refAdd{border-color:var(--border)}
+[data-theme="dark"] .refAdd:hover,[data-theme="dark"] .refAdd:focus-visible{border-color:#8ab4f8;color:#8ab4f8}
+[data-theme="dark"] .refWarn{color:#f3c27a}
+@container (max-width:859px){[data-theme="dark"] .refRow{border-color:var(--border)}}

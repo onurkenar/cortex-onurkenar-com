@@ -1,10 +1,11 @@
 /* "Yok" seçeneği olan serbest metin kararları (2026-11-15, kullanıcı isteği: "1.2.11 Ek İletişim Notları > 'Ek İletişim Notu Yok'
-   seçeneği ekle"). NONE_F'deki metin kararında kutunun altında işaret kutusu; işaretlenince karar verilmiş sayılır (isset), kural
+   seçeneği ekle"; 2026-11-15 "1.3.8 Sertifikalar ve Belgeler'de Sertifikalar ve Belge yok seçeneği ekle"). NONE_F'deki metin kararında kutunun altında işaret kutusu; işaretlenince karar verilmiş sayılır (isset), kural
    NONE_F[id].rule olur, yazılmış metin silinmez ama kurala girmez. Kayıt state.fieldNone = {alan id: true} (boşalınca silinir;
    JSON İndir'de Proje Kararları parçasındadır — yalnız proje / Ortak Bilgiler alanlarında kullanın). Kutuya yeniden metin
    yazılınca işaret kendiliğinden kalkar. Kaynak docs/v26/v26-none.js → docs/v26/yok_secenegi_ekle.py */
 const NONE_F={
- mk_contact:{label:"Ek iletişim notu yok",rule:"Ek iletişim notu yoktur: faks, KEP adresi, ikinci e-posta gibi ek iletişim bilgisi kullanılmaz; iletişim bilgileri yalnız İletişim & Adres bölümündeki alanlardan alınır."}};
+ mk_contact:{label:"Ek iletişim notu yok",rule:"Ek iletişim notu yoktur: faks, KEP adresi, ikinci e-posta gibi ek iletişim bilgisi kullanılmaz; iletişim bilgileri yalnız İletişim & Adres bölümündeki alanlardan alınır."},
+ oc_certs:{label:"Sertifika ve belge yok",rule:"Kurumun gösterilebilecek sertifikası ya da belgesi yoktur: sitede, sunumlarda, tekliflerde ve föylerde sertifika, akreditasyon, lisans, üyelik ya da ödül gösterilmez; “sertifikalı”, “belgeli”, “akrediteli”, “ödüllü” gibi ifadeler ve belge logoları kullanılmaz; belge alınırsa bu karar güncellenir."}};
 function noneOn(f){let n=state.fieldNone;return !!f&&!!NONE_F[f.id]&&!!n&&typeof n==="object"&&n[f.id]===true}
 function noneRule(f){return NONE_F[f.id].rule}
 function noneBox(f){let d=NONE_F[f.id];if(!d||(f.type!=="text"&&f.type!=="textarea"))return "";let on=noneOn(f),has=String(state[f.id]??"").trim()!=="",id="none-"+f.id;
