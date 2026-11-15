@@ -74,7 +74,7 @@ function leaf(L,f,val){let D=rec()[L.k],def=defPer(f,val),o=fq()[L.k],per=o===un
   else{let e=evs(P[2]),le=e[e.length-1]||"",ll=L.log[L.log.length-1]||L.last;L.st=le&&le>ll?"due":"done"}}
  return L}
 /* karar özeti: kısa, okunur değer */
-function sum(f){let v=state[f.id];try{
+function sum(f){if(typeof noneOn==="function"&&noneOn(f))return NONE_F[f.id].label;let v=state[f.id];try{
  if(f.type==="multiselect")return v.map(x=>clean(lab(f,x))).join(", ");
  if(f.type==="boolean")return v?"Evet":"Hayır";
  if(f.type==="select")return clean(lab(f,v));

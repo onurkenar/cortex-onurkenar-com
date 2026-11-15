@@ -1,0 +1,10 @@
+/* "Yok" seçeneği (2026-11-15) — serbest metin kararının altındaki işaret kutusu. Kaynak docs/v26/v26-none.css → docs/v26/yok_secenegi_ekle.py */
+.noneBox{margin-top:10px}
+.noneBox label{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #d4d8de;border-radius:10px;background:#fff;font-size:14px;font-weight:600;cursor:pointer}
+.noneBox input{width:18px;height:18px;margin:0;accent-color:#1f9d55;cursor:pointer}
+.noneBox.on label{border-color:#1f9d55;background:#eefaf3;color:#17803d}
+.noneHint{display:block;margin-top:6px;font-size:12.5px;color:#6b727c}
+.field:has(.noneBox.on) textarea.control,.field:has(.noneBox.on) input.control{opacity:.55}
+[data-theme="dark"] .noneBox label{background:var(--surface);border-color:var(--border);color:var(--text)}
+[data-theme="dark"] .noneBox.on label{background:#12291c;border-color:#3fb070;color:#6fdc9a}
+[data-theme="dark"] .noneHint{color:var(--muted)}

@@ -8928,7 +8928,9 @@
    "oc_cta_primary",
    "oc_cta_url",
    "oc_cta_format",
-   "oc_proof"
+   "oc_proof",
+   "oc_certs",
+   "oc_metrics"
   ],
   "privacy": [
    "oc_address",
@@ -9025,6 +9027,8 @@
    "oc_cta_primary",
    "oc_cta_phone",
    "oc_proof",
+   "oc_certs",
+   "oc_metrics",
    "oc_mission",
    "oc_boilerplate"
   ],
@@ -9044,6 +9048,8 @@
    "oc_cta_primary",
    "oc_cta_phone",
    "oc_proof",
+   "oc_certs",
+   "oc_metrics",
    "oc_mission",
    "domain_name",
    "oc_phone",
@@ -9061,6 +9067,8 @@
    "oc_cta_verbs",
    "oc_cta_phone",
    "oc_proof",
+   "oc_certs",
+   "oc_metrics",
    "oc_services"
   ],
   "mk_mail": [
@@ -9116,7 +9124,9 @@
    "oc_cta_primary",
    "oc_cta_verbs",
    "oc_cta_url",
-   "oc_proof"
+   "oc_proof",
+   "oc_certs",
+   "oc_metrics"
   ],
   "mk_ads": [
    "oc_cta_format",

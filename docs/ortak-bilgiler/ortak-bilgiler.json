@@ -915,16 +915,51 @@
     {
      "id": "oc_proof",
      "new": {
-      "label": "Referanslar, Sertifikalar ve Başarı Metrikleri",
-      "en": "Proof Points",
+      "label": "Referanslar",
+      "en": "References",
       "type": "textarea",
-      "placeholder": "Örn. ISO 27001 | sertifika | belge no …\nÖrnek AŞ | referans | yazılı kullanım izni var\n%98 müşteri memnuniyeti | metrik | 2026 anketi",
-      "explanation": "Kurumun içeriklerde gösterebileceği, doğrulanmış ve kullanım izni alınmış kanıtları “Ad | tür | kaynak ya da izin” biçiminde yazın.",
-      "rule": "Kullanılabilir kanıtlar: {value}. “Neden biz”, “Kanıt” ve “Referans” bölümlerinde yalnız bu listedeki kanıtlar kullanılır; listede yoksa kanıt uydurulmaz, bölüm yer tutucuyla bırakılır; izinsiz müşteri adı ya da logosu kullanılmaz.",
-      "scenario": "Hizmet sayfası, föy, sunum ve tekliflerde referans, sertifika ya da metrik gösterilecekse doldurulur.",
-      "example": "Bir yazılım firmasının föyünde yalnız listedeki iki sertifika ve yazılı izinli üç müşteri logosu yer alır.",
+      "placeholder": "Örn. Örnek AŞ | logo ve ad kullanılabilir | yazılı izin, 2026-03\nÖrnek Hastanesi | yalnız anonim (\"özel bir hastane grubu\") | izin yok",
+      "explanation": "İçeriklerde, sunumlarda ve tekliflerde gösterilebilecek müşteri, proje ve iş ortağı referanslarıdır. Her satıra “Müşteri ya da proje | kullanım izni (ad, logo, yorum, vaka çalışması) | izin kaynağı ve tarihi” yazın. Sertifikalar ve başarı metrikleri bu bölümdeki ayrı kararlardadır.",
+      "rule": "Kullanılabilir referanslar: {value}. Müşteri adı, logosu, yorumu ya da vaka çalışması yalnız bu listede izni yazılı olan kapsamda kullanılır; izni olmayan referans sektör adıyla anonim anılır ya da hiç kullanılmaz; listede olmayan referans uydurulmaz, “Referanslar” bölümü yer tutucuyla bırakılır.",
+      "scenario": "Ana sayfa, hizmet sayfası, föy, sunum ya da teklifte müşteri logosu, referans listesi veya vaka çalışması gösterilecekse doldurulur.",
+      "example": "Ana sayfadaki “Bize güvenenler” şeridinde yalnız yazılı logo izni olan dört müşteri görünür; izinsiz bir hastane “özel bir hastane grubu” olarak anılır.",
       "agents": [
+       "poz:pazarlama:product_solution_marketing/musteri-pazarlamasi-yoneticisi/musteri-referans-programlari-uzmani",
        "poz:satis:08.06/satis-icerigi-ve-araclari/teklif-ve-vaka-kutuphanesi-uzmani",
+       "poz:pazarlama:content_marketing/icerik-uretimi-muduru/vaka-calismasi-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_certs",
+     "new": {
+      "label": "Sertifikalar ve Belgeler",
+      "en": "Certificates & Accreditations",
+      "type": "textarea",
+      "placeholder": "Örn. ISO 9001:2015 | Örnek Belgelendirme (TÜRKAK akrediteli), belge no 12345 | 2027-05-14\nTSE Hizmet Yeterlilik Belgesi | TSE, belge no … | 2026-12-01",
+      "explanation": "Kurumun sahip olduğu yönetim sistemi sertifikaları, akreditasyonlar, lisanslar, mesleki üyelikler ve ödüllerdir. Her satıra “Belge adı | veren kuruluş ve belge numarası | geçerlilik bitiş tarihi” yazın.",
+      "rule": "Gösterilebilecek sertifika ve belgeler: {value}. Yalnız geçerlilik tarihi geçmemiş belgeler kapsamıyla birlikte gösterilir; tarihi geçen belge siteden ve dokümanlardan kaldırılır, liste yılda bir kontrol edilir. Belge logoları belgelendirme kuruluşunun kullanım kurallarına göre kullanılır (ISO'nun kendi logosu sertifika göstermek için kullanılmaz); mümkünse belge numarası ya da doğrulama bağlantısı verilir; listede olmayan belge yazılmaz.",
+      "scenario": "Kalite, bilgi güvenliği, çevre, sektör lisansı ya da akreditasyon belgesi olan ve bunu sitede, teklifte veya föyde gösterecek kurumlar.",
+      "example": "Hakkımızda sayfasında ISO 9001 ve ISO 27001 belgeleri belge numarası, belgelendirme kuruluşu ve bitiş tarihiyle listelenir; süresi dolan belge yıllık kontrolde kaldırılır.",
+      "agents": [
+       "poz:kalite:14.07/dis-denetim-ve-sertifikasyon-koordinasyonu/sertifika-yonetimi-uzmani",
+       "poz:kalite:14.02/standartlar-ve-sertifikasyon/sertifikasyon-uzmani"
+      ]
+     }
+    },
+    {
+     "id": "oc_metrics",
+     "new": {
+      "label": "Başarı Metrikleri",
+      "en": "Success Metrics",
+      "type": "textarea",
+      "placeholder": "Örn. %98 müşteri memnuniyeti | 2026 yıllık müşteri anketi, 412 yanıt | 2026-01\n1.200+ tamamlanan proje | proje kayıtları | 2026-10",
+      "explanation": "İçeriklerde kullanılabilecek sayısal başarı göstergeleridir (müşteri sayısı, memnuniyet oranı, tamamlanan proje, deneyim yılı …). Her satıra “Metrik ve değeri | kaynağı (anket, kayıt, rapor) | ölçüm tarihi ya da dönemi” yazın.",
+      "rule": "Kullanılabilir başarı metrikleri: {value}. Metrikler yalnız bu listedeki değer, kaynak ve dönemle kullanılır; yuvarlanacaksa aşağı yuvarlanır; kaynağı ya da dönemi bilinmeyen metrik ve “en iyi”, “lider”, “1 numara” gibi kanıtlanamayan üstünlük iddiası yazılmaz (ticari reklam mevzuatı reklamdaki iddiaların kanıtlanabilir olmasını ister); bir yıldan eski metrik güncellenene kadar dönemiyle birlikte gösterilir.",
+      "scenario": "Ana sayfa, hizmet sayfası, sunum ya da teklifte rakamla güven oluşturulacaksa doldurulur.",
+      "example": "Ana sayfadaki sayaç “1.200+ tamamlanan proje (Ekim 2026)” gösterir; kaynağı olmayan “sektör lideri” ifadesi kullanılmaz.",
+      "agents": [
+       "poz:veri-analitik:17.05/musteri-pazarlama-ve-gelir-analitigi/pazarlama-analitigi-uzmani",
        "poz:pazarlama:content_marketing/icerik-uretimi-muduru/vaka-calismasi-uzmani"
       ]
      }
