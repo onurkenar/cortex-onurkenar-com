@@ -12,9 +12,10 @@
    Kayıt: state.todo = {done:{anahtar:{d:son tarih, h:parmak izi, log?:["YYYY-AA-GG SS:DD:ss", …]}}, freq?:{anahtar:sıklık},
    ev?:{rel:[…], camp:[…]}} — yalnız işaret / değişiklik varken; anahtar alan kimliği ya da "alan|değer". Karar değişirse parmak izi
    tutmaz, görev "Karar değişti" olur. YAPILACAKLAR.md (todoMd) ve YAPILACAKLAR.ics (todoIcs) Dashboard › İndirmeler'de de var.
+   Sekmeler (2026-11-15): "Adım Adım Kılavuz" (varsayılan, window.GUIDE — docs/v26/v26-guide.js) ve "Karar Görevleri" (bu liste).
    Kaynak docs/v26/v26-todo.{js,css} → docs/v26/yapilacaklar_ekle.py */
 (()=>{
-const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pazarlama"],["audit","SEO Denetimi"],["google","Google Servisleri"],["meta","Meta Servisleri"],["ai","Yapay Zekâ"]],
+const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pazarlama"],["audit","SEO Denetimi"],["google","Google Servisleri"],["meta","Meta Servisleri"],["ai","Yapay Zekâ"],["plan","İçerik Planlama"]],
  PH=[["Proje temeli ve mimari",["Başlangıç","Teknik Mimari","Sunucu & Altyapı"]],["Tasarım ve arayüz",["Tasarım & Arayüz"]],["İçerik ve yönetim",["İçerik & Yönetim"]],["İş modülleri",["İş Modülleri"]],["SEO ve görünürlük",["SEO & Görünürlük"]],["Güvenlik ve gizlilik",["Güvenlik & Gizlilik"]],["Performans, test ve geliştirme süreci",["Performans & Test","Geliştirme Süreci"]],["Yayın ve operasyon",["Yayın & Operasyon"]]],
  ICON="M10 6h10M10 12h10M10 18h10M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5 2.5-2.5M3.5 18l1.5 1.5 2.5-2.5",
  /* sıklıklar: ad, takvim aralığı (d gün / m ay) ya da olay */
@@ -47,7 +48,7 @@ const AREAS=[["common","Ortak Bilgiler"],["project","Kararlar"],["marketing","Pa
   "yz_monitor_set|prompt_tests":"1m","yz_monitor_set|quarterly":"3m","yz_cg_ops|insights":"1m","sv_triggers|periodic":"3m","ml_deliverability|spf_dkim":"3m",
   "mk_measure_scope|social":"3m","mk_post_check|d7":"camp","mk_post_check|month":"1m","mk_gads_structure|location_service":"3m",
   "mk_report_outputs|exec":"1m","mk_platforms|google":"1w","mk_st_access|review":"3m","mk_st_access|billing":"1y","mk_st_links|monitor":"1m","mk_st_kw_source|gsc":"3m","mk_st_comp|visibility":"3m","mk_st_comp|market":"3m"},
- TD={q:"",f:"all",a:"all"},
+ TD={q:"",f:"all",a:"all",tab:"guide"},
  pad=n=>String(n).padStart(2,"0"),
  fmt=x=>x.getFullYear()+"-"+pad(x.getMonth()+1)+"-"+pad(x.getDate()),
  today=()=>window.TODO_TODAY||fmt(new Date()),
@@ -75,7 +76,7 @@ function leaf(L,f,val){let D=rec()[L.k],def=defPer(f,val),o=fq()[L.k],per=o===un
   else{let e=evs(P[2]),le=e[e.length-1]||"",ll=L.log[L.log.length-1]||L.last;L.st=le&&le>ll?"due":"done"}}
  return L}
 /* karar özeti: kısa, okunur değer */
-function sum(f){if(typeof noneOn==="function"&&noneOn(f))return NONE_F[f.id].label;let v=state[f.id];try{
+function sum(f){if(typeof noneOn==="function"&&noneOn(f))return NONE_F[f.id].label;if(f.type==="records"&&typeof recSum==="function")return recSum(f);let v=state[f.id];try{
  if(f.type==="multiselect")return v.map(x=>clean(lab(f,x))).join(", ");
  if(f.type==="boolean")return v?"Evet":"Hayır";
  if(f.type==="select")return clean(lab(f,v));
@@ -125,7 +126,7 @@ const TD_NQ=/^\d+(\.\d+)*\.?$/;function tdNHit(n,t){n=String(n||"").replace(/\.$
 const PG=document.createElement("section");PG.id="todoPage";PG.setAttribute("aria-label","Yapılacaklar");
 configPage.parentNode.insertBefore(PG,configPage);
 const isOn=()=>PG.classList.contains("active");
-function nav(){let rail=document.getElementById("modRail");if(rail&&!rail.querySelector('[data-mod="todo"]')){let b=document.createElement("button");b.type="button";b.className="mrBtn";b.dataset.mod="todo";b.title="Yapılacaklar — kararlardan oluşan görev listesi";b.setAttribute("aria-label","Yapılacaklar");b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${ICON}"/></svg><span>Yapılacaklar</span>`;b.onclick=()=>window.todoGo();rail.insertBefore(b,rail.querySelector('[data-mod="library"]')||rail.querySelector('[data-mod="docs"]'))}
+function nav(){let rail=document.getElementById("modRail");if(rail&&!rail.querySelector('[data-mod="todo"]')){let b=document.createElement("button");b.type="button";b.className="mrBtn";b.dataset.mod="todo";b.title="Yapılacaklar — adım adım uygulama kılavuzu ve karar görevleri";b.setAttribute("aria-label","Yapılacaklar");b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${ICON}"/></svg><span>Yapılacaklar</span>`;b.onclick=()=>window.todoGo();rail.insertBefore(b,rail.querySelector('[data-mod="library"]')||rail.querySelector('[data-mod="docs"]'))}
  let ref=document.getElementById("sideLibBtn")||document.getElementById("sideDocsBtn");if(ref&&!document.getElementById("sideTodoBtn")){let s=document.createElement("button");s.type="button";s.id="sideTodoBtn";s.innerHTML="☑ &nbsp; Yapılacaklar";s.onclick=()=>window.todoGo();ref.parentNode.insertBefore(s,ref)}}
 function sync(){let on=isOn(),rail=document.getElementById("modRail");if(rail)rail.querySelectorAll(".mrBtn").forEach(b=>{if(on){let a=b.dataset.mod==="todo";b.classList.toggle("active",a);b.toggleAttribute("aria-current",a)}else if(b.dataset.mod==="todo"){b.classList.remove("active");b.removeAttribute("aria-current")}});
  if(on)document.documentElement.classList.add("v26NoSide");let s=document.getElementById("sideTodoBtn");if(s){s.classList.toggle("active",on);s.toggleAttribute("aria-current",on)}}
@@ -138,11 +139,14 @@ function chip(k,t,n,cur,attr){return `<button type="button" class="tdChip${cur?"
 function evBar(T){let L=allItems(T),has={};L.forEach(it=>leaves(it).forEach(x=>{if(x.per&&PER[x.per][2]&&x.st!=="open"&&x.st!=="changed")has[PER[x.per][2]]=(has[PER[x.per][2]]||0)+1}));
  let B=Object.keys(EVN).filter(k=>has[k]).map(k=>{let e=evs(k),le=e[e.length-1];return `<button type="button" class="btn" data-td-ev="${k}" title="${has[k]} görev yeniden açılır">${E(EVN[k][0])}</button>${le?`<span class="tdEvLast">Son ${E(EVN[k][1])}: ${E(le)}</span>`:""}`});
  return B.length?`<div class="tdEv"><span>Olaya bağlı görevler:</span>${B.join("")}</div>`:""}
-function render(){if(!isOn())return;let T=build(),L=allItems(T),S=stats(L);
- if(!L.length){PG.innerHTML=`<div class="tdHead"><div><p class="tdEye">GÖREV LİSTESİ</p><h1>Yapılacaklar</h1><p class="tdLead">Henüz karar verilmedi. Kararlar, Ortak Bilgiler ve Pazarlama menülerinde yaptığınız her seçim burada uygulanacak bir görev olur.</p></div></div><div class="tdEmpty"><button type="button" class="btn primary" onclick="goArea('project')">Kararlara git</button></div>`;return}
+function tabs(n){let g=TD.tab==="guide"&&window.GUIDE,gs=window.GUIDE?window.GUIDE.stats():null;return `<div class="tdTabs" role="tablist" aria-label="Yapılacaklar görünümü">${window.GUIDE?`<button type="button" role="tab" class="tdTab" data-td-tab="guide" aria-selected="${!!g}">Adım Adım Kılavuz${gs?` <span>${gs.d}/${gs.a}</span>`:""}</button>`:""}<button type="button" role="tab" class="tdTab" data-td-tab="tasks" aria-selected="${!g}">Karar Görevleri${n!=null?` <span>${n}</span>`:""}</button></div>`}
+function render(){if(!isOn())return;
+ if(TD.tab==="guide"&&window.GUIDE){let n=null;try{n=stats(allItems(build())).a}catch(e){}PG.innerHTML=`<div class="tdHead"><div><p class="tdEye">UYGULAMA KILAVUZU</p><h1>Yapılacaklar</h1><p class="tdLead">Projeyi baştan sona doğru sırayla hayata geçirmek için izlenecek adımlar: araçların kurulumu, kararların verilmesi, sitenin Claude Code ile kurulması, denetim, pazarlama ve bakım. Her adımı yaptıktan sonra işaretleyin; sıradaki adım açılır. Kopyalanacak promptlar adımların içindedir.</p></div></div>${tabs(n)}${window.GUIDE.html()}`;return}
+ let T=build(),L=allItems(T),S=stats(L);
+ if(!L.length){PG.innerHTML=`<div class="tdHead"><div><p class="tdEye">GÖREV LİSTESİ</p><h1>Yapılacaklar</h1><p class="tdLead">Henüz karar verilmedi. Kararlar, Ortak Bilgiler ve Pazarlama menülerinde yaptığınız her seçim burada uygulanacak bir görev olur.</p></div></div>${tabs(0)}<div class="tdEmpty"><button type="button" class="btn primary" onclick="goArea('project')">Kararlara git</button></div>`;return}
  PG.innerHTML=`<div class="tdHead"><div><p class="tdEye">GÖREV LİSTESİ</p><h1>Yapılacaklar</h1><p class="tdLead">Verdiğiniz ${L.length} karardan oluşan uygulama listesi. Uygulanan görevi işaretleyin; karar sonradan değişirse görev “Karar değişti” olarak yeniden açılır. ↻ işaretli görevler yinelenir: her yapılışta işaretleyin, tarih geçmişe yazılır ve sonraki tarih hesaplanır. Sıklığı her görevde değiştirebilirsiniz.</p></div>
  <div class="tdTools"><button type="button" class="btn" data-td-act="copy">Kopyala</button>${S.r?`<button type="button" class="btn" data-td-act="ics" title="Yinelenen görevlerin takvim dosyası">Takvim (.ics)</button>`:""}<button type="button" class="btn primary" data-td-act="md">YAPILACAKLAR.md indir</button></div></div>
- <div class="tdSum" role="group" aria-label="İlerleme"><div class="tdBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${S.p}" aria-label="Kurulum ilerlemesi"><i style="width:${S.p}%"></i></div><p><b>Kurulum: ${S.d}/${S.a} - %${S.p}</b> · ${S.o} açık${S.c?` · <span class="tdWarn">${S.c} karar değişti</span>`:""}</p>
+ ${tabs(S.a)}<div class="tdSum" role="group" aria-label="İlerleme"><div class="tdBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${S.p}" aria-label="Kurulum ilerlemesi"><i style="width:${S.p}%"></i></div><p><b>Kurulum: ${S.d}/${S.a} - %${S.p}</b> · ${S.o} açık${S.c?` · <span class="tdWarn">${S.c} karar değişti</span>`:""}</p>
  ${S.r?`<p class="tdMaint"><b>↻ Bakım:</b> ${S.r} yinelenen görev · ${S.ok} güncel${S.due?` · <span class="tdWarn">${S.due} zamanı geldi</span>`:""}${S.late?` · <span class="tdLate">${S.late} gecikti</span>`:""}${S.r-S.ok-S.due-S.late?` · ${S.r-S.ok-S.due-S.late} henüz yapılmadı`:""}</p>`:""}
  <div class="tdAreas">${T.map(A=>{let s=stats(areaItems(A));return `<button type="button" class="tdArea${TD.a===A.a?" on":""}${s.a&&s.d===s.a&&!s.due&&!s.late?" done":""}" data-td-area="${A.a}" aria-pressed="${TD.a===A.a}"><b>${A.n?A.n+". ":""}${E(A.t)}</b><span>${s.d}/${s.a} - %${s.p}</span>${s.due+s.late?`<em>${s.due+s.late} bakım zamanı</em>`:""}</button>`}).join("")}</div>${evBar(T)}</div>
  <div class="tdBarTools"><label class="tdSearch"><span class="sr">Görevlerde ara</span><input type="search" id="tdQ" placeholder="Görevlerde ara (numara, karar, seçim, kural, sıklık, ajan)" value="${E(TD.q)}"></label>
@@ -193,7 +197,8 @@ PG.addEventListener("change",e=>{let c=e.target;if(c.matches("input[data-td-k]")
 PG.addEventListener("input",e=>{if(e.target.id==="tdQ"){TD.q=e.target.value;let l=document.getElementById("tdList");if(l)l.innerHTML=list(build())}});
 PG.addEventListener("keydown",e=>{if(e.target.id==="tdQ"&&e.key==="Escape"&&TD.q){TD.q="";e.target.value="";let l=document.getElementById("tdList");if(l)l.innerHTML=list(build())}});
 PG.addEventListener("click",e=>{let b=e.target.closest("button");if(!b||!PG.contains(b))return;let d=b.dataset;
- if(d.tdF){TD.f=d.tdF;redraw()}
+ if(d.tdTab){if(TD.tab!==d.tdTab){TD.tab=d.tdTab;redraw(`[data-td-tab="${d.tdTab}"]`)}}
+ else if(d.tdF){TD.f=d.tdF;redraw()}
  else if(d.tdArea){TD.a=TD.a===d.tdArea?"all":d.tdArea;redraw()}
  else if(d.tdSec)goToSection(d.tdSec)
  else if(d.tdGo){let [s,f]=d.tdGo.split("|");goToField(s,f)}
@@ -237,6 +242,7 @@ function todoIcs(){let L=allItems(build()),t=today(),now=new Date().toISOString(
   title=`${pn}: ${it.t}${x.sub?" › "+x.t:""}`,desc=[`${P[0]} yinelenen görev (${(it.num?it.num+" ":"")+it.t}).`,x.sub&&x.r?x.r:it.r,x.last?`Son yapılış: ${x.last}.`:"Henüz yapılmadı.","Yapınca Cortex Configurator › Yapılacaklar'da işaretleyin."].filter(Boolean).join("\n");
   ev.push(["BEGIN:VEVENT",`UID:${fp(pn)}-${x.k.replace(/[^A-Za-z0-9_-]/g,"_")}@cortex.onurkenar.com`,`DTSTAMP:${now}`,`DTSTART;VALUE=DATE:${d}`,`DTEND;VALUE=DATE:${end}`,`RRULE:${rr}`,`SUMMARY:${icsEsc(title)}`,`DESCRIPTION:${icsEsc(desc)}`,"TRANSP:TRANSPARENT","BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${icsEsc(title)}`,"TRIGGER:PT9H","END:VALARM","END:VEVENT"])}));
  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Cortex Configurator//Yapilacaklar//TR","CALSCALE:GREGORIAN","METHOD:PUBLISH",`X-WR-CALNAME:${icsEsc(pn+" — Bakım takvimi")}`,...ev.flat(),"END:VCALENDAR"].map(fold).join("\r\n")+"\r\n"}
+window.todoRedraw=redraw;window.todoTab=t=>{TD.tab=t==="tasks"?"tasks":"guide";if(isOn()){redraw(`[data-td-tab="${TD.tab}"]`);window.scrollTo(0,0)}else showPage("todo")};
 window.todoMd=todoMd;window.todoIcs=todoIcs;window.todoStats=()=>stats(allItems(build()));
 window.todoRecurring=()=>{let n=0;allItems(build()).forEach(it=>leaves(it).forEach(x=>{if(x.per&&PER[x.per][1])n++}));return n};
 

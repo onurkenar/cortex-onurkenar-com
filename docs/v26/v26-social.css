@@ -1,0 +1,4 @@
+/* 8.4 Sosyal Paylaşımlar (2026-11-15) — 8.2 / 8.3'ün pr* ve bl* sınıflarını kullanır; burada yalnız ekler.
+   Kaynak docs/v26/v26-social.css → docs/v26/sosyal_ekle.py */
+.spBox .prRec>summary .prPath:first-of-type{font-weight:700}
+.spFH:empty{display:none}

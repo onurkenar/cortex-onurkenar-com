@@ -1,0 +1,26 @@
+/* Ürün / Hizmet Listesi satır düzenleyicisi (2026-11-15). Yerleşim alanın genişliğine göre (container query): ≥ 560 px tek satır +
+   sütun başlıkları, daha dar tek sütun + kutu etiketleri. Referanslar düzenleyicisiyle (v26-refs) aynı görünüm.
+   Kaynak docs/v26/v26-svc.css → docs/v26/urun_satir_ekle.py */
+.svcBox{container-type:inline-size;display:grid;gap:8px;max-width:900px}
+.svcHead,.svcRow{display:grid;grid-template-columns:minmax(160px,1fr) minmax(180px,1.2fr) 40px;grid-template-areas:"nm ur del" "wr wr wr";gap:8px;align-items:start}
+.svcHead{grid-template-areas:"nm ur del"}
+.svcHead span{font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.svcCell{display:grid;gap:4px;min-width:0}
+.svcCN{grid-area:nm}.svcCU{grid-area:ur}.svcDel{grid-area:del}.svcWarn{grid-area:wr}
+.svcL{display:none;font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.svcRow .control{max-width:none;min-width:0;width:100%;box-sizing:border-box}
+.svcRow .svcUrl[aria-invalid="true"]{border-color:#c77800}
+.svcWarn{font-size:12.5px;color:#a35200}
+.svcWarn[hidden]{display:none}
+.svcDel{height:44px;border:1px solid #dde0e4;border-radius:11px;background:#fff;color:#6b727c;font-size:20px;line-height:1;cursor:pointer}
+.svcDel:hover,.svcDel:focus-visible{border-color:#d93025;color:#d93025}
+.svcAdd{justify-self:start;padding:8px 14px;border:1px dashed #9aa3ad;border-radius:10px;background:transparent;color:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.svcAdd:hover,.svcAdd:focus-visible{border-color:#1f6feb;color:#1f6feb}
+@container (max-width:559px){.svcHead{display:none}.svcL{display:block}.svcRow{grid-template-columns:minmax(0,1fr) 40px;grid-template-areas:"nm del" "ur del" "wr wr";padding:10px;border:1px solid #e3e6ea;border-radius:12px}.svcDel{margin-top:20px}}
+[data-theme="dark"] .svcHead span,[data-theme="dark"] .svcL{color:var(--muted)}
+[data-theme="dark"] .svcDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
+[data-theme="dark"] .svcDel:hover,[data-theme="dark"] .svcDel:focus-visible{border-color:#f28b82;color:#f28b82}
+[data-theme="dark"] .svcAdd{border-color:var(--border)}
+[data-theme="dark"] .svcAdd:hover,[data-theme="dark"] .svcAdd:focus-visible{border-color:#8ab4f8;color:#8ab4f8}
+[data-theme="dark"] .svcWarn{color:#f3c27a}
+@container (max-width:559px){[data-theme="dark"] .svcRow{border-color:var(--border)}}

@@ -1,0 +1,9 @@
+/* 8.11 Rakipler & Adaylar (2026-11-15) — 8.2–8.10'un pr* ve bl* sınıflarını kullanır; önek "rv". Kaynak docs/v26/v26-rivals.css → docs/v26/rakip_ekle.py */
+.rvBox .prRec>summary .prPath:first-of-type{font-weight:700}
+.rvGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 12px}
+.rvGrid .prF:has(textarea){grid-column:1/-1}
+.rvMiss:empty{display:none}
+.rvOrph{margin-top:12px;display:grid;gap:6px}.rvOR{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) auto;gap:8px;align-items:center}
+.rvFlt{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:8px;margin:6px 0 10px}
+.rvFlt .control,.rvOR .control{height:36px;padding:4px 10px;font-size:13.5px;min-width:0}
+@media (max-width:640px){.rvFlt{grid-template-columns:1fr 1fr}.rvFlt [data-lq]{grid-column:1/-1}.rvOR{grid-template-columns:1fr auto}.rvOR code{grid-column:1/-1}}

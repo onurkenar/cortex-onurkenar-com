@@ -1,0 +1,12 @@
+/* 8.9 Google Ads (2026-11-15) — 8.2–8.8'in pr* ve bl* sınıflarını kullanır; iç içe grup kayıtları ve arama sonucu önizlemesi. Kaynak docs/v26/v26-gads.css → docs/v26/google_ads_ekle.py */
+.gaBox .prRec>summary .prPath:first-of-type{font-weight:700}
+.gaBox .gaG{margin-left:0;border-style:dashed}.gaBox .gaG>summary .prPath{font-weight:600}
+.gaSug{font-size:12px;word-break:break-all}
+.gaNeg{margin:6px 0 10px}.gaNeg>summary{cursor:pointer;font-size:13.5px;font-weight:600}
+.gaSerp{max-width:600px;padding:12px 14px;border:1px solid var(--line,#d9dde5);border-radius:10px;background:#fff;font-family:Arial,Helvetica,sans-serif;margin-top:6px}
+.gaSerp small{display:block;font-size:12px;font-weight:700;color:#202124}
+.gaUrl{font-size:12.5px;color:#202124;margin:2px 0 4px;overflow-wrap:anywhere}
+.gaT{font-size:18px;line-height:1.3;color:#1a0dab;overflow-wrap:anywhere}
+.gaD{font-size:13.5px;line-height:1.45;color:#4d5156;margin-top:4px;overflow-wrap:anywhere}
+[data-theme="dark"] .gaSerp{background:#202124;border-color:#3c4043}[data-theme="dark"] .gaSerp small,[data-theme="dark"] .gaUrl{color:#e8eaed}
+[data-theme="dark"] .gaT{color:#8ab4f8}[data-theme="dark"] .gaD{color:#bdc1c6}

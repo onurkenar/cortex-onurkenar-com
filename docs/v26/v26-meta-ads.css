@@ -1,0 +1,18 @@
+/* 8.10 Meta Ads (2026-11-15) — 8.2–8.9'un pr* ve bl* sınıflarını kullanır; ön koşul satırları, bütçe tablosu, akış önizlemesi. Önek "ma" (Pazarlama › Meta Servisleri "mt" önekini kullanır). Kaynak docs/v26/v26-meta-ads.css → docs/v26/meta_ads_ekle.py */
+.maBox .prRec>summary .prPath:first-of-type{font-weight:700}.maBox .maS{border-style:dashed}
+.maOk{display:grid;gap:6px}.maOkR{display:grid;grid-template-columns:minmax(0,1.3fr) 130px minmax(0,1fr);gap:8px;align-items:center;font-size:13.5px}
+.maOkR .control{height:34px;padding:4px 8px;font-size:13px;min-width:0}
+.maTw{overflow-x:auto}.maTw table{width:100%;border-collapse:collapse;font-size:13px}.maTw th,.maTw td{padding:6px 8px;border-bottom:1px solid var(--line,#e3e6eb);text-align:left;white-space:nowrap}.maTw td:first-child{white-space:normal;min-width:160px}
+.maBad{color:#c62828}.maSug{font-size:12px;word-break:break-all}
+.maPrev{max-width:420px;border:1px solid #dadde1;border-radius:10px;background:#fff;color:#050505;font-family:Helvetica,Arial,sans-serif;overflow:hidden;margin-top:6px}
+.maPH{display:flex;gap:8px;align-items:center;padding:10px 12px}.maPH b{display:block;font-size:14px}.maPH small{display:block;font-size:12px;color:#65676b}
+.maAv{width:36px;height:36px;border-radius:50%;background:#1877f2;color:#fff;display:grid;place-items:center;font-weight:700}
+.maTx{padding:0 12px 10px;font-size:14px;line-height:1.4;overflow-wrap:anywhere}.maMore{color:#65676b;font-weight:600}
+.maImg{background:repeating-linear-gradient(45deg,#eef0f3,#eef0f3 10px,#e4e7eb 10px,#e4e7eb 20px);display:grid;place-content:center;text-align:center;gap:4px;padding:12px;color:#4b4f56}
+.maImg span{font-weight:700;font-size:14px}.maImg small{font-size:12px;max-width:300px}
+.maImg.r45{aspect-ratio:4/5}.maImg.r11{aspect-ratio:1/1}.maImg.r916{aspect-ratio:9/16;max-height:520px}
+.maFt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;background:#f0f2f5}.maFt>span:first-child{min-width:0}.maFt small{display:block;font-size:11.5px;color:#65676b;overflow-wrap:anywhere}.maFt b{display:block;font-size:14.5px;overflow-wrap:anywhere}
+.maBtn{flex:none;padding:7px 12px;border-radius:6px;background:#e4e6eb;font-weight:600;font-size:13.5px}
+[data-theme="dark"] .maPrev{background:#242526;color:#e4e6eb;border-color:#3e4042}[data-theme="dark"] .maFt{background:#3a3b3c}[data-theme="dark"] .maBtn{background:#4e4f50}[data-theme="dark"] .maPH small,[data-theme="dark"] .maFt small,[data-theme="dark"] .maMore{color:#b0b3b8}
+[data-theme="dark"] .maImg{background:repeating-linear-gradient(45deg,#2f3031,#2f3031 10px,#36373a 10px,#36373a 20px);color:#c8ccd1}[data-theme="dark"] .maBad{color:#ff8a80}
+@media (max-width:640px){.maOkR{grid-template-columns:1fr 120px}.maOkR input{grid-column:1/-1}}

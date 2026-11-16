@@ -1,0 +1,654 @@
+{
+ "note": "İçerik ve Reklam Planı Şablonu'nun (icerik_planlama, ET_STD) standart etkinlik pazarlama planı: 29 aktivite, [gün farkı, saat, faz, kanal, tür, başlık, sorumlu, ek{link, maddeler, alanlar[[etiket, metin, sınır?]], not}]. 2026-11-15'te şablondan alındı; markaya özgü ifadeler yer tutucuya çevrildi: {marka} (marka adı), {etiket} (marka etiketi), {onek} (seri no öneki) — v26-events.js dışa aktarımda doldurur. {link} {ad} {kisaAd} {tarih} {gun} {saat} {format} {ucret} şablonun kendi yer tutucularıdır, şablon gösterirken doldurur.",
+ "kisa": [
+  0,
+  1,
+  3,
+  4,
+  7,
+  12,
+  15,
+  18,
+  21,
+  24,
+  25,
+  28
+ ],
+ "plan": [
+  [
+   -25,
+   "09:30",
+   "hazirlik",
+   "ic",
+   "Hazırlık",
+   "Kayıt bağlantısı, UTM ve dönüşüm ölçümü",
+   "Pazarlama",
+   {
+    "link": true,
+    "maddeler": [
+     "Kayıt sayfasını mobil ve masaüstünde deneyin; formdaki soru alanını kontrol edin.",
+     "Her kanal için UTM’li bağlantıyı ilgili aktiviteden kopyalayın (utm_content = aktivite kodu).",
+     "Kayıt formu gönderimi GA4’te form_submit olayını tetiklesin; Meta ve Google Ads’te kayıt dönüşümü olarak tanımlayın.",
+     "Formda aydınlatma metni bağlantısı olsun; ticari ileti izni ayrı ve işaretsiz bir kutu olsun."
+    ]
+   }
+  ],
+  [
+   -24,
+   "10:00",
+   "hazirlik",
+   "ic",
+   "Tasarım",
+   "Görsel seti: afiş, story, e-posta başlığı",
+   "Tasarım ekibi",
+   {
+    "maddeler": [
+     "Afiş 1080×1350 (4:5), story 1080×1920 (9:16), e-posta başlık görseli, LinkedIn etkinlik kapağı.",
+     "Metin: etkinlik adı, tarih, saat, format, ücret, konuşmacı adları.",
+     "Gerçek müşteri verisi veya kişisel veri görünmesin; konuşmacı fotoğrafı için onay alın."
+    ]
+   }
+  ],
+  [
+   -22,
+   "14:00",
+   "hazirlik",
+   "linkedin",
+   "Etkinlik sayfası",
+   "LinkedIn etkinliği oluştur (Event)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Etkinlik adı",
+      "{ad}",
+      75
+     ],
+     [
+      "Etkinlik açıklaması",
+      "{tarih} · {format} · {ucret}\n\nKayıt: {link}"
+     ]
+    ]
+   }
+  ],
+  [
+   -21,
+   "10:00",
+   "duyuru",
+   "eposta",
+   "Davet 1",
+   "E-posta: davet (tüm liste)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu satırı",
+      "{kisaAd}: {gun}",
+      60
+     ],
+     [
+      "Ön izleme metni",
+      "{saat} · {format} · {ucret}",
+      110
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\n{ad}\n\n{tarih} arasında düzenlediğimiz etkinliğe sizi de bekliyoruz. {format}, {ucret}.\n\nKayıt için: {link}\n\nSaygılarımızla,\n{marka} Ekibi"
+     ],
+     [
+      "Düğme",
+      "Kaydolun"
+     ]
+    ]
+   }
+  ],
+  [
+   -21,
+   "11:30",
+   "duyuru",
+   "linkedin",
+   "Duyuru gönderisi",
+   "LinkedIn: etkinlik duyurusu",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi metni",
+      "{ad}\n\n{tarih}\n{format} · {ucret}\n\nKayıt: {link}\n\n{etiket}",
+      1300
+     ]
+    ]
+   }
+  ],
+  [
+   -21,
+   "13:00",
+   "duyuru",
+   "facebook",
+   "Duyuru gönderisi",
+   "Facebook: etkinlik duyurusu",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi metni",
+      "{ad}\n\n{tarih} · {format} · {ucret}\n\nKayıt: {link}",
+      700
+     ]
+    ]
+   }
+  ],
+  [
+   -21,
+   "14:00",
+   "duyuru",
+   "whatsapp",
+   "Kanal mesajı",
+   "WhatsApp Kanalı: etkinlik duyurusu",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Kanal mesajı",
+      "{ad}\n{tarih} · {format}\nKayıt: {link}",
+      600
+     ]
+    ]
+   }
+  ],
+  [
+   -20,
+   "12:00",
+   "duyuru",
+   "instagram",
+   "Carousel",
+   "Instagram: carousel (5–6 slayt)",
+   "Sosyal medya",
+   {
+    "alanlar": [
+     [
+      "Slayt planı",
+      "1) Kapak: etkinlik adı\n2) Tarih, saat, format, ücret\n3–4) Program / konu maddeleri\n5) Konuşmacılar\n6) “Kayıt: profildeki bağlantı”"
+     ],
+     [
+      "Caption",
+      "{ad}\n\n{tarih}\n{format} · {ucret}\n\nKayıt bağlantısı profilde.\n\n{etiket}",
+      2200
+     ],
+     [
+      "Profil bağlantısı (UTM’li)",
+      "{link}"
+     ]
+    ]
+   }
+  ],
+  [
+   -20,
+   "17:00",
+   "duyuru",
+   "x",
+   "Gönderi",
+   "X: etkinlik duyurusu",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi (≤280, bağlantı 23 sayılır)",
+      "{kisaAd}: {gun}, {saat}\n\n{link}\n{etiket}",
+      280
+     ]
+    ]
+   }
+  ],
+  [
+   -18,
+   "09:00",
+   "duyuru",
+   "meta",
+   "Reklam",
+   "Meta Ads: kayıt kampanyası başlangıcı",
+   "Reklam",
+   {
+    "link": true,
+    "maddeler": [
+     "Amaç: Potansiyel müşteriler (Web sitesi) · Dönüşüm: kayıt (form_submit).",
+     "Hedef kitle: Advantage+ geniş kitle; yeniden pazarlama için blog ve hizmet sayfası ziyaretçileri.",
+     "Bitiş: etkinlikten bir gün önce; ilk 3 gün bütçe ve metin değiştirmeyin."
+    ],
+    "alanlar": [
+     [
+      "Birincil metin (ilk 125 karakter görünür)",
+      "{ad} {tarih}. {format}, {ucret}. Kayıt için tıklayın."
+     ],
+     [
+      "Başlık (≤40)",
+      "{kisaAd}",
+      40
+     ],
+     [
+      "Açıklama (≤30)",
+      "{gun}",
+      30
+     ],
+     [
+      "Buton",
+      "Kaydol"
+     ]
+    ]
+   }
+  ],
+  [
+   -18,
+   "09:30",
+   "duyuru",
+   "google",
+   "Reklam",
+   "Google Ads: Arama kampanyası başlangıcı",
+   "Reklam",
+   {
+    "link": true,
+    "maddeler": [
+     "Kampanya: {onek} | Arama | Etkinlik | (etkinlik kodu) · Teklif: Dönüşümleri maksimize et · Dönüşüm: kayıt (form_submit).",
+     "Ağlar: yalnız Google Arama; hesap düzeyi negatif listesini bağlayın.",
+     "Anahtar kelime, başlık (≤30) ve açıklamaları (≤90) etkinlik konusuna göre ekleyin."
+    ]
+   }
+  ],
+  [
+   -14,
+   "10:00",
+   "duyuru",
+   "eposta",
+   "Davet 2",
+   "E-posta: ikinci davet (kayıtsızlara)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Hatırlatma: {kisaAd}",
+      60
+     ],
+     [
+      "Ön izleme metni",
+      "{gun} · {saat} · {ucret}",
+      110
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\n{ad}\n\n{tarih} · {format} · {ucret}\n\nKayıt: {link}\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ],
+    "not": "Segment: Davet 1’i açan ama kayıt olmayanlar öncelikli."
+   }
+  ],
+  [
+   -7,
+   "10:00",
+   "duyuru",
+   "eposta",
+   "Hatırlatma",
+   "E-posta: “Bir hafta kaldı” (kayıtsızlara)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Bir hafta kaldı: {kisaAd}",
+      60
+     ],
+     [
+      "Ön izleme metni",
+      "{gun} · {saat} · {format}",
+      110
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\nEtkinliğimize bir hafta kaldı.\n\n{ad}\n{tarih} · {format} · {ucret}\n\nKayıt: {link}\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ]
+   }
+  ],
+  [
+   -4,
+   "12:00",
+   "hatirlatma",
+   "linkedin",
+   "Program",
+   "LinkedIn: program ve gündem",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi metni",
+      "{ad}\n\n{tarih}\n{format} · {ucret}\n\nKayıt: {link}\n\n{etiket}",
+      1300
+     ]
+    ]
+   }
+  ],
+  [
+   -2,
+   "10:00",
+   "hatirlatma",
+   "eposta",
+   "Hatırlatma",
+   "E-posta: “Son 2 gün” (kayıtsızlara)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Son 2 gün: {kisaAd}",
+      60
+     ],
+     [
+      "Ön izleme metni",
+      "{gun} · {saat} · {ucret}",
+      110
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\nEtkinliğe iki gün kaldı.\n\n{tarih} · {format}\n\nKayıt: {link}\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ]
+   }
+  ],
+  [
+   -1,
+   "10:00",
+   "hatirlatma",
+   "eposta",
+   "Katılım bilgisi",
+   "E-posta: yarın / katılım bilgisi (kayıtlılara)",
+   "Pazarlama",
+   {
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Yarın: {kisaAd} katılım bilgileriniz",
+      60
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\nYarın, {tarih} arasında yapacağımız etkinliğe kaydolduğunuz için teşekkür ederiz.\n\nKatılım bilgisi: [KATILIM BAĞLANTISI]\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ],
+    "not": "[KATILIM BAĞLANTISI] yer tutucusunu e-posta aracında doldurun."
+   }
+  ],
+  [
+   -1,
+   "12:00",
+   "hatirlatma",
+   "whatsapp",
+   "Kanal mesajı",
+   "WhatsApp Kanalı: yarın hatırlatma",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Kanal mesajı",
+      "Yarın {saat}: {ad}\nKayıt: {link}",
+      600
+     ]
+    ]
+   }
+  ],
+  [
+   -1,
+   "18:30",
+   "hatirlatma",
+   "instagram",
+   "Story",
+   "Instagram/Facebook Story: yarın",
+   "Sosyal medya",
+   {
+    "alanlar": [
+     [
+      "Kare metinleri",
+      "Kare 1: “Yarın {saat}” + geri sayım çıkartması\nKare 2: “{kisaAd}” · {format} · {ucret}\nKare 3: bağlantı çıkartması"
+     ],
+     [
+      "Bağlantı çıkartması",
+      "{link}"
+     ]
+    ]
+   }
+  ],
+  [
+   0,
+   "09:30",
+   "gun",
+   "eposta",
+   "Son çağrı",
+   "E-posta: “Bugün” (kayıtlılara bağlantı, kayıtsızlara son çağrı)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu: kayıtlılara",
+      "Bugün {saat}: katılım bilgileriniz",
+      60
+     ],
+     [
+      "Gövde: kayıtlılara",
+      "Merhaba,\n\nBugün {saat} arasındaki etkinlikte sizi bekliyoruz.\nKatılım bilgisi: [KATILIM BAĞLANTISI]\n\nSaygılarımızla,\n{marka} Ekibi"
+     ],
+     [
+      "Konu: kayıtsızlara",
+      "Kayıt bugün kapanıyor: {kisaAd}",
+      60
+     ],
+     [
+      "Gövde: kayıtsızlara",
+      "Merhaba,\n\nKayıt için son gün bugün. {tarih} · {format} · {ucret}\n\nKayıt: {link}\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ]
+   }
+  ],
+  [
+   0,
+   "10:30",
+   "gun",
+   "linkedin",
+   "Son çağrı",
+   "LinkedIn / WhatsApp / Story: “30 dakika sonra”",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "LinkedIn / Facebook metni",
+      "30 dakika sonra başlıyoruz: {ad}\n{format} · {ucret}\n\n{link}",
+      700
+     ],
+     [
+      "WhatsApp Kanalı metni",
+      "30 dakika sonra: {ad}. Kayıt: {link}",
+      600
+     ]
+    ]
+   }
+  ],
+  [
+   0,
+   "10:45",
+   "gun",
+   "ic",
+   "Operasyon",
+   "Canlı yayın hazırlık ve kontrol",
+   "Etkinlik ekibi",
+   {
+    "maddeler": [
+     "Platformu (Teams, Zoom vb.) açın; ses, ekran paylaşımı ve soru alanını deneyin.",
+     "Moderatör belirleyin; soru toplama ve sohbet takibi yapsın.",
+     "Kaydı başlatın; katılımcı listesini oturum sonunda indirin.",
+     "Sunumlarda gerçek müşteri verisi veya kişisel veri görünmediğini kontrol edin."
+    ]
+   }
+  ],
+  [
+   0,
+   "11:00",
+   "gun",
+   "ic",
+   "Canlı yayın",
+   "ETKİNLİK: canlı yayın",
+   "Konuşmacılar",
+   {
+    "maddeler": [
+     "Etkinlik saati: {saat}. Programa göre ilerleyin.",
+     "Gelen soruları not edin; yanıtlanamayanları e-posta ile yanıtlayın."
+    ]
+   }
+  ],
+  [
+   0,
+   "13:00",
+   "gun",
+   "linkedin",
+   "Teşekkür",
+   "LinkedIn: teşekkür gönderisi",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi metni",
+      "{ad} etkinliğine katılan herkese teşekkür ederiz.\n\nKaçıranlar için etkinlik sayfası: {link}\n\n{etiket}",
+      1300
+     ]
+    ]
+   }
+  ],
+  [
+   0,
+   "15:00",
+   "gun",
+   "ic",
+   "Veri",
+   "Katılımcı raporu ve CRM aktarımı",
+   "Pazarlama",
+   {
+    "maddeler": [
+     "Platformun katılımcı raporunu indirin; kayıtlı ve katılan kişileri eşleştirin.",
+     "Kayıt, katılım ve soru sayısını not edin.",
+     "Katılan, katılmayan ve soru soranlar için ayrı etiketle CRM’e aktarın.",
+     "Kişisel veriyi yalnız kayıt formundaki amaç ve aydınlatma metni kapsamında kullanın."
+    ]
+   }
+  ],
+  [
+   3,
+   "10:00",
+   "sonrasi",
+   "eposta",
+   "Teşekkür",
+   "E-posta: teşekkür ve materyaller (katılanlara)",
+   "Pazarlama",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Teşekkürler: {kisaAd}",
+      60
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\n{ad} etkinliğine katıldığınız için teşekkür ederiz.\n\nOturum kaydı: [KAYIT BAĞLANTISI]\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ],
+    "not": "[KAYIT BAĞLANTISI] yer tutucusunu e-posta aracında doldurun."
+   }
+  ],
+  [
+   3,
+   "10:30",
+   "sonrasi",
+   "eposta",
+   "Katılmayanlara",
+   "E-posta: katılamayanlara kayıt",
+   "Pazarlama",
+   {
+    "alanlar": [
+     [
+      "Konu satırı",
+      "Katılamadınız mı? {kisaAd} kaydı",
+      60
+     ],
+     [
+      "Gövde",
+      "Merhaba,\n\n{ad} etkinliğine katılamadığınızı fark ettik. Oturum kaydı: [KAYIT BAĞLANTISI]\n\nSaygılarımızla,\n{marka} Ekibi"
+     ]
+    ],
+    "not": "Segment: kayıtlı ama katılmayanlar."
+   }
+  ],
+  [
+   4,
+   "12:00",
+   "sonrasi",
+   "linkedin",
+   "İçerik",
+   "LinkedIn: etkinlikten çıkarımlar ve kayıt",
+   "Sosyal medya",
+   {
+    "link": true,
+    "alanlar": [
+     [
+      "Gönderi metni",
+      "{ad} etkinliğinden öne çıkan başlıklar: [3 ÇIKARIM]\n\nOturum kaydı ve etkinlik sayfası: {link}\n\n{etiket}",
+      1300
+     ]
+    ],
+    "not": "[3 ÇIKARIM] kısmını etkinlik sonrası konuşmacılarla netleştirerek doldurun."
+   }
+  ],
+  [
+   5,
+   "10:00",
+   "sonrasi",
+   "ic",
+   "Satış",
+   "Satış takibi: katılan ve soru soran kişilere ön görüşme daveti",
+   "Satış",
+   {
+    "maddeler": [
+     "Önce soru soran ve oturumun tamamını izleyenlere ulaşın.",
+     "Görüşme sonucunu CRM’e kaydedin."
+    ]
+   }
+  ],
+  [
+   7,
+   "11:00",
+   "sonrasi",
+   "ic",
+   "Raporlama",
+   "Etkinlik pazarlama raporu",
+   "Pazarlama",
+   {
+    "maddeler": [
+     "Kayıt sayısını kanal (utm_source ve utm_content) bazında çıkarın.",
+     "Katılım oranını, soru sayısını ve oturum kaydı izlenmesini ekleyin.",
+     "Meta ve Google Ads maliyetini kayıt başına hesaplayın.",
+     "E-posta açılma ve tıklama oranlarını ekleyin; lead ve ön görüşme sayılarını CRM’den alın."
+    ]
+   }
+  ]
+ ]
+}

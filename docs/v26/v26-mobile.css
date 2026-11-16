@@ -28,8 +28,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* Telefon: önceki / sonraki şeridi daha alçak (88 → ~66 px), içerik alanı büyür */
 @media (max-width:600px){
   #configPage .stepNav{gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
-  #configPage .stepBtn{padding:8px 12px;gap:2px;border-radius:12px}
-  #configPage .stepBtn small{font-size:9.5px}
+  #configPage .stepBtn{min-height:42px;padding:8px 14px;font-size:15px}
 }
 
 /* Yatay telefon: ekran kısa — şerit yapışık değil */

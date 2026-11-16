@@ -1,0 +1,40 @@
+/* 8.5 Takvim (2026-11-15) — liste ve ay görünümü. Kaynak docs/v26/v26-calendar.css → docs/v26/takvim_ekle.py */
+.cvBox{display:grid;gap:12px;container-type:inline-size}
+.cvBar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.cvSeg{display:inline-flex;gap:6px}
+.cvSeg .btn,.cvBar .btn,.cvNav .btn{height:36px;padding:0 12px;font-size:13.5px}
+.cvNav{display:flex;align-items:center;gap:12px}
+.cvNav b{min-width:140px;text-align:center}
+.cvW h4{margin:6px 0 8px;font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#59606b;text-transform:uppercase}
+.cvW>ul,.cvDay>ul,.cvC ul{list-style:none;margin:0;padding:0}
+.cvDay{display:grid;grid-template-columns:112px minmax(0,1fr);gap:8px;padding:6px 0;border-top:1px solid #edf0f3}
+.cvDay>b{font-size:13px;color:#3f454d}
+.cvI{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:6px 8px;border-radius:8px;border-left:4px solid #9aa3ad;background:#f7f8fa;font-size:13px}
+.cvI[role=button]{cursor:pointer}
+.cvI[role=button]:hover,.cvI[role=button]:focus-visible{background:#edf2ff;outline:2px solid transparent}
+.cvI[role=button]:focus-visible{box-shadow:0 0 0 2px #1f6feb}
+.cv-blog{border-left-color:#1f6feb}.cv-post{border-left-color:#8250df}.cv-story{border-left-color:#bf3989}.cv-day{border-left-color:#c77800;background:#fff7ec}
+.cvT{font-variant-numeric:tabular-nums;font-weight:700;min-width:38px}
+.cvK{font-size:11.5px;font-weight:800;color:#59606b;text-transform:uppercase;letter-spacing:.03em}
+.cvTi{font-weight:600}
+.cvM{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cvH{font-size:12px;font-weight:800;color:#59606b;text-align:center;padding:4px 0}
+.cvC{min-height:84px;padding:6px;border:1px solid #e9ecef;border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr);align-content:start;gap:4px;min-width:0;overflow:hidden}
+.cvC>ul{min-width:0;display:grid;gap:3px}
+.cvC>b{font-size:12px;color:#59606b}
+.cvC .cvI{padding:3px 5px;font-size:11.5px;gap:3px;flex-wrap:nowrap;overflow:hidden;min-width:0}
+.cvT:empty{display:none}
+.cvC .cvI .prChip,.cvC .cvI .prPath,.cvC .cvI .cvK{display:none}
+.cvC .cvTi{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1 1 60px}
+.cvX{border:0}.cvWe{background:#fafbfc}
+@container (max-width:620px){.cvM{grid-template-columns:repeat(7,minmax(0,1fr));gap:2px}.cvC{min-height:56px;padding:3px}.cvC .cvTi{display:none}.cvC .cvT{min-width:0;font-size:10.5px}.cvDay{grid-template-columns:minmax(0,1fr)}}
+[data-theme="dark"] .cvW h4,[data-theme="dark"] .cvH,[data-theme="dark"] .cvK,[data-theme="dark"] .cvC>b,[data-theme="dark"] .cvDay>b{color:var(--muted)}
+[data-theme="dark"] .cvDay{border-color:var(--border)}
+[data-theme="dark"] .cvI{background:var(--surface)}
+[data-theme="dark"] .cvI[role=button]:hover,[data-theme="dark"] .cvI[role=button]:focus-visible{background:#1a2440}
+[data-theme="dark"] .cv-day{background:#2a1f10}
+.cv-evt{border-left-color:#1a7f37;background:#eefbf1}.cv-act{border-left-color:#57ab5a}
+[data-theme="dark"] .cv-evt{background:#10261a}
+.cv-rep{border-left-color:#6e7781;background:#f3f4f6}[data-theme="dark"] .cv-rep{background:#22262b}
+[data-theme="dark"] .cvC{border-color:var(--border)}
+[data-theme="dark"] .cvWe{background:rgba(255,255,255,.02)}

@@ -1,0 +1,13 @@
+/* 8.8 Etkinlikler (2026-11-15) — 8.2–8.7'nin pr* ve bl* sınıflarını kullanır; aktivite satırı iki satırlı ızgara (üstte gün farkı, kanal, başlık; altta tarih, saat, sorumlu, düğmeler). Kaynak docs/v26/v26-events.css → docs/v26/etkinlik_ekle.py */
+.etBox .prRec>summary .prPath:first-of-type{font-weight:700}.etBox .etN{opacity:.8}
+.etAL{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.etA{display:grid;grid-template-columns:52px 112px 70px minmax(0,1fr) auto;gap:6px 8px;align-items:center;padding:8px 10px;border:1px solid var(--line,#d9dde5);border-radius:8px}
+.etA>code{grid-row:1/3;align-self:start;margin-top:2px}.etTi{grid-column:2/5;grid-row:1;min-width:0;font-size:13.5px;line-height:1.35}
+.etTi .prChip{margin-right:4px;vertical-align:1px}.etTi small{display:block;opacity:.7;font-size:11.5px;margin-top:2px}
+.etA .control{min-width:0;height:34px;padding:4px 8px;font-size:13px}.etA input[data-a]{grid-row:2}.etA input[data-a="s"]{grid-column:4/-1}
+.etBt{grid-column:5;grid-row:1;align-self:start;display:flex;gap:10px;justify-content:flex-end;white-space:nowrap;font-size:12.5px}
+.etEd{border-left:3px solid var(--brand,#2f6fed)}
+.etX{grid-template-columns:52px minmax(0,1fr) auto;opacity:.75}.etX>code{grid-row:auto}.etX .etTi{grid-column:auto}.etX .etBt{grid-column:auto}
+.etOff{margin-top:10px}.etOff>summary{cursor:pointer;font-size:13px}
+@media (max-width:640px){.etA{grid-template-columns:44px minmax(0,1fr) 76px}.etA>code{grid-row:1/4}.etTi{grid-column:2/-1}.etA input[data-a="d"]{grid-column:2}.etA input[data-a="t"]{grid-column:3}.etA input[data-a="s"]{grid-row:3;grid-column:2/-1}.etBt{grid-row:4;grid-column:2/-1}
+ .etX{grid-template-columns:44px minmax(0,1fr) auto}.etX>code{grid-row:auto}.etX .etTi{grid-column:auto}.etX .etBt{grid-row:auto;grid-column:auto}}

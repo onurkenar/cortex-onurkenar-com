@@ -1,0 +1,27 @@
+/* 8.6 Özel Günler (2026-11-15). Kaynak docs/v26/v26-days.css → docs/v26/ozel_gun_ekle.py */
+.ogM h4{margin:8px 0 6px;font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#59606b;text-transform:uppercase}
+.ogL{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ogR{display:grid;grid-template-columns:150px minmax(0,1fr) 110px 76px;gap:8px;align-items:center;padding:8px 10px;border:1px solid #e9ecef;border-left:4px solid #9aa3ad;border-radius:10px;background:#fff}
+.ogR.og-yuksek{border-left-color:#c62828}.ogR.og-orta{border-left-color:#c77800}.ogR.og-dusuk{border-left-color:#9aa3ad}
+.ogR.ogHid{opacity:.6}
+.ogD{font-size:13px;font-weight:700;color:#3f454d}
+.ogN{display:grid;gap:4px;min-width:0}
+.ogN b{font-size:14px}
+.ogMeta{font-size:12px;color:#5c636c}
+.ogNote{max-width:none;width:100%;box-sizing:border-box;height:34px;font-size:13px}
+.ogOn{height:36px;font-size:13px}
+.ogHide{padding:6px 8px;font-size:12.5px}
+.ogMiss,.ogHidBox{padding:12px;border:1px solid #f0b46b;border-radius:12px;background:#fff7ec}
+.ogHidBox{border-color:#e1e4e8;background:#f7f8fa}
+.ogHidBox>summary{cursor:pointer;font-weight:700;font-size:13.5px}
+.ogHidBox .ogL{margin-top:8px}
+.ogMiss>summary{cursor:pointer;font-weight:700;font-size:13.5px}
+.ogMiss[open]>summary{margin-bottom:4px}
+.ogMR{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:center;margin-top:6px}
+.ogMR b{font-size:13px}
+@container (max-width:700px){.ogR{grid-template-columns:minmax(0,1fr) 110px;}.ogD{grid-column:1/-1}.ogR .prDel,.ogR .ogHide{grid-column:2}.ogMR{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.ogMR b{grid-column:1/-1}}
+[data-theme="dark"] .ogR{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .ogR.og-yuksek{border-left-color:#f28b82}[data-theme="dark"] .ogR.og-orta{border-left-color:#f3c27a}
+[data-theme="dark"] .ogD,[data-theme="dark"] .ogMeta,[data-theme="dark"] .ogM h4{color:var(--muted)}
+[data-theme="dark"] .ogMiss{background:#2a1f10;border-color:#9a6a2a}
+[data-theme="dark"] .ogHidBox{background:var(--surface);border-color:var(--border)}

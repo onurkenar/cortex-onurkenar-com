@@ -7,7 +7,8 @@ Kullanım: python3 -I docs/v26/prompt_kutuphanesi_ekle.py <girdi.html> <çıktı
   docs/v26/v26-prompt-library-data.js (body sonunda, son betik)
 - Hazır modül metinleri docs/v26/prompt-kutuphanesi/: veride /*PL_FILE:ad*/"" yerine dosyanın JSON metni,
   /*PL_IMGS:klasör*/[] yerine klasördeki gorseller.json sırasıyla WebP görseller (alt metin ve açıklama dokümandan)
-- Sayfa 25 MiB'ı (Cloudflare statik dosya sınırı) aşarsa durur
+- Kaynak sayfa 25 MiB'ı aşarsa uyarı verir (2026-11-15'e kadar dururdu); Cloudflare 25 MiB sınırı yalnız sıkıştırılmış yayın
+  kopyasına uygulanır ve yayin/yayinla.sh tarafından denetlenir
 - Dokümantasyon sayfasına "Hazır Prompt Kütüphanesi" maddesi (Pazarlama maddesinden önce)
 Bloklar zaten varsa içerikleri yenilenir (tekrar çalıştırılabilir). DATA satırına dokunmaz.
 """
@@ -105,6 +106,7 @@ else:
 for k in ('<style id="v26-prompt-library">', '<script id="v26-prompt-library">', 'id="docPromptLib"'):
     assert html.count(k) == 1, k
 size = len(html.encode("utf-8"))
-assert size < 25 * 1024 * 1024, "sayfa 25 MiB sınırını aşıyor: %d" % size
+if size >= 25 * 1024 * 1024:  # 2026-11-15: sınır yalnız yayın kopyasına uygulanır (yayin/yayinla.sh, yayin/sikistir.py)
+    print("uyarı: kaynak sayfa %d bayt (25 MiB üstü); yayın kopyası sıkıştırılır, sınırı yayin/yayinla.sh denetler" % size)
 open(dst, "w", encoding="utf-8").write(html)
 print("ok", len(html))

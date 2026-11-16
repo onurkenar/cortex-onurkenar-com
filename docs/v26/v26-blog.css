@@ -1,0 +1,12 @@
+/* 8.3 Blog Yazıları (2026-11-15) — ürün düzenleyicisinin pr* sınıflarını kullanır; burada yalnız ekler.
+   Kaynak docs/v26/v26-blog.css → docs/v26/blog_ekle.py */
+.blGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@container (max-width:420px){.blGrid{grid-template-columns:minmax(0,1fr)}}
+.blAct{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.blChk{display:flex;gap:8px;align-items:center;font-size:13.5px;font-weight:600}
+.blImp{display:grid;gap:8px;padding:12px;border:1px solid #c9d6f5;border-radius:12px;background:#f5f8ff}
+.blDelRec{color:#b3261e;border-color:#e5b4b0}
+.blDelRec:hover,.blDelRec:focus-visible{color:#d93025;border-color:#d93025}
+.blBox .prRec>summary .prPath:first-of-type{font-weight:700}
+[data-theme="dark"] .blImp{background:#151c2c;border-color:#2c3a5c}
+[data-theme="dark"] .blDelRec{color:#f28b82;border-color:#6b3a37}

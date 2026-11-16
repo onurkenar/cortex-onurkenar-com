@@ -145,7 +145,7 @@ function plIntro(){return `<div class="intro"><div class="eyebrow">HAZIR PROMPT 
    önizleme açılınca ya da düğmeye basılınca üretilir (liste çizimi yavaşlamasın). */
 const PJ_CAT={id:"proje-promptlari",name:"Proje Promptları",desc:"Menülerin ürettiği promptların (SEO denetimi, pazarlama, Google, Meta, Yapay Zekâ) kütüphaneye kaydedilmiş kopyaları."};
 const PJ=[
- {k:"marketing",t:"Pazarlama promptu",a:"marketing",s:"mk_planfile",d:"İçerik üretecek Claude oturumu için marka, kitle, kanal ve içerik kuralları.",g:()=>mkMarketingPrompt(),i:()=>typeof mkIssues==="function"?mkIssues():[],f:"pazarlama-promptu"},
+ {k:"marketing",t:"Pazarlama promptu",a:"plan",s:"mk_planfile",d:"İçerik üretecek Claude oturumu için marka, kitle, kanal ve içerik kuralları.",g:()=>mkMarketingPrompt(),i:()=>typeof mkIssues==="function"?mkIssues():[],f:"pazarlama-promptu"},
  {k:"seo",t:"SEO denetim promptu",a:"audit",s:"au_report",d:"Yayındaki siteyi denetleyecek Claude oturumu için tek prompt: kapsam, kontroller, çalışma kuralları ve rapor biçimi.",g:()=>auPrompt(),i:()=>typeof auIssues==="function"?auIssues():[],f:"seo-denetimi"},
  {k:"google",t:"Google kurulum talimatı",a:"google",s:"gg_report",d:"Tag Manager, Analytics 4, Consent Mode, Search Console, Ads ve diğer Google servislerinin kurulum ve asgari ayar talimatı.",g:()=>ggSetupMd(),i:()=>typeof ggIssues==="function"?ggIssues():[],f:"google-kurulum"},
  {k:"meta",t:"Meta kurulum talimatı",a:"meta",s:"mt_report",d:"İşletme portföyü, Facebook Sayfası, Instagram, WhatsApp, Meta Pikseli / Conversions API ve reklam hesabı kurulum talimatı.",g:()=>mtSetupMd(),i:()=>typeof mtIssues==="function"?mtIssues():[],f:"meta-kurulum"},

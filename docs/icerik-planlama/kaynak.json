@@ -1,0 +1,955 @@
+{
+ "version": "2026-11-15",
+ "note": "8. İçerik Planlama menü alanı (area:\"marketing\", sub:\"plan\" → AREA \"plan\"). Bu dosya DATA'ya yalnız docs/icerik-planlama/plan_alani_ekle.py ile yazılır; betik diğer veri betiklerinden sonra, docs/v26/tutarlilik_ekle.py'den önce çalıştırılır.",
+ "group": "İçerik Planlama",
+ "after": "yz_report",
+ "sections": [
+  {
+   "id": "ip_plan",
+   "name": "Plan & Dönem",
+   "en": "Plan & Period",
+   "icon": "◷",
+   "desc": "İçerik planının seri no önekini, dönem bilgilerini, dönem süzgecini, takvim notunu ve plan sayfasında görünecek ek siteleri belirler; marka, site ve iletişim bilgileri Ortak Bilgiler'den, plan dönemi uzunluğu Pazarlama › Plan Dönemi'nden gelir",
+   "refs": [
+    "mk_brand_name",
+    "mk_slogan",
+    "oc_tagline",
+    "domain_name",
+    "mk_contact",
+    "oc_phone",
+    "oc_email",
+    "oc_address",
+    "brand_color_dark",
+    "brand_color_light"
+   ]
+  },
+  {
+   "id": "ip_products",
+   "name": "Ürün ve Hizmetler",
+   "en": "Products & Services",
+   "icon": "◫",
+   "desc": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her kalemin tanıtım sayfası, sayfa alanları, anahtar kelimeleri, brief'i, sosyal medya metinleri ve tanıtım maili burada kayıt olarak doldurulur; form Pazarlama › Ürün & Hizmet Tanıtımı kararlarına göre şekillenir",
+   "refs": [
+    "oc_services",
+    "oc_cta_primary",
+    "oc_cta_url",
+    "oc_keywords"
+   ]
+  },
+  {
+   "id": "ip_blog",
+   "name": "Blog Yazıları",
+   "en": "Blog Posts",
+   "icon": "✎",
+   "desc": "Dönemin blog yazıları kayıt olarak planlanır: yayın tarihi, kategori, huni, başlık, odak anahtar kelime, H2 planı ve SEO alanları; kategoriler, huni ve ölçüler Pazarlama kararlarından gelir, Claude'un ürettiği plan içe aktarılabilir",
+   "refs": [
+    "oc_keywords",
+    "oc_cta_url"
+   ]
+  },
+  {
+   "id": "ip_social",
+   "name": "Sosyal Paylaşımlar",
+   "en": "Social Posts",
+   "icon": "◉",
+   "desc": "Dönemin sosyal medya paylaşımları kayıt olarak planlanır: tarih, format, kategori, huni, başlık, kanca, bağlı blog, sahne / slayt planı, gönderi metni ve etiketler; taslaklar blog yazılarından türetilebilir, Claude'un ürettiği plan içe aktarılabilir",
+   "refs": [
+    "mk_accounts",
+    "oc_cta_url",
+    "oc_proof"
+   ]
+  },
+  {
+   "id": "ip_calendar",
+   "name": "Takvim",
+   "en": "Calendar",
+   "icon": "▦",
+   "desc": "Blog yazıları, sosyal paylaşımlar, türetilen story'ler ve özel günler tarih sırasıyla liste ya da ay görünümünde gösterilir; kayda tıklayınca ilgili alt menüde açılır, görünen kayıtlar .ics olarak takvime aktarılır",
+   "refs": []
+  },
+  {
+   "id": "ip_days",
+   "name": "Özel Günler",
+   "en": "Special Days",
+   "icon": "✶",
+   "desc": "Plan dönemine düşen özel günlerin markaya göre önemi işaretlenir, ilgisiz günler gizlenir, marka günleri eklenir ve gün başına içerik önerisi yazılır; hareketli günlerin tarihleri plan yılları için girilir",
+   "refs": []
+  },
+  {
+   "id": "ip_mail",
+   "name": "Mailing",
+   "en": "Mailing",
+   "icon": "✉",
+   "desc": "Dönemin e-posta gönderimleri kayıt olarak planlanır: tarih, tür, sıra, segment, bağlı blog; konu satırı, ön izleme, giriş, bölümler ve CTA; taslaklar blog yazılarının başlık grubundan türetilebilir",
+   "refs": [
+    "oc_cta_url",
+    "oc_email"
+   ]
+  },
+  {
+   "id": "ip_events",
+   "name": "Etkinlikler",
+   "en": "Events",
+   "icon": "◷",
+   "desc": "Dönemin etkinlikleri kayıt olarak planlanır: ad, tür, tarih ve saat, format, ücret, son kayıt, konuşmacılar, program, konular, hedef kitle, sunulanlar; aktivite planı Pazarlama kararlarına göre kurulur, ölçüm hedefleri ve bağlı ürün / blog eklenir",
+   "refs": [
+    "oc_cta_url",
+    "mk_brand_name"
+   ]
+  },
+  {
+   "id": "ip_gads",
+   "name": "Google Ads",
+   "en": "Google Ads",
+   "icon": "◎",
+   "desc": "Dönemin Google Ads kampanyaları kayıt olarak planlanır: tür, ad, açılış sayfası, bütçe payı, site bağlantıları, açıklama metinleri, negatifler; her grubun URL'si, görünen yolu, başlıkları, açıklamaları ve anahtar kelimeleri / arama temaları sayaçlı; taslaklar ürün ve hizmetlerden türetilir",
+   "refs": [
+    "oc_services",
+    "oc_competitors",
+    "oc_cta_primary"
+   ]
+  },
+  {
+   "id": "ip_meta",
+   "name": "Meta Ads",
+   "en": "Meta Ads",
+   "icon": "◐",
+   "desc": "Dönemin Meta (Facebook / Instagram) reklamları kayıt olarak planlanır: personalar, lead yeri ve yayın öncesi ön koşulların durumu; kampanyalar, reklam setleri, bütçe payları ve hedef lead maliyetiyle öğrenme eşiği; kreatifler (birincil metin, başlık, açıklama, buton, görsel brifi) önizlemeyle; rakip reklam kaydı",
+   "refs": [
+    "oc_services",
+    "oc_cta_primary",
+    "oc_competitors"
+   ]
+  },
+  {
+   "id": "ip_rivals",
+   "name": "Rakipler & Adaylar",
+   "en": "Competitors & Prospects",
+   "icon": "⚑",
+   "desc": "Ortak Bilgiler › Rakip Listesi'ndeki her rakip için profil, konumlandırma, ölçek, şube, fiyat ve reklam bilgileri kaynaklarıyla; rakiplere karşı aksiyonlar; rakip rehber / pazaryeri sitelerinde listelenen potansiyel müşteri adayları",
+   "refs": [
+    "oc_competitors"
+   ]
+  },
+  {
+   "id": "ip_measure",
+   "name": "Ölçüm",
+   "en": "Measurement",
+   "icon": "◔",
+   "desc": "Dönemin ölçüm hedefleri (KPI başlangıcı ve hedefi), mecra başına başlangıç takipçi sayısı ve hedefi, dönüşüm olayı tablosu (GA4 / Google Ads / Meta), UTM bağlantı oluşturucu ve rapor takvimi",
+   "refs": [
+    "domain_name"
+   ]
+  },
+  {
+   "id": "ip_legal",
+   "name": "Hukuk & İş Gücü",
+   "en": "Legal & Workforce",
+   "icon": "⚖",
+   "desc": "Dönemin hukuk genel değerlendirmeleri, 8. menü kayıtlarından çıkan hukuk inceleme listesi (riskli ifade taramasıyla) ve içerik türü başına tahmini süreyle iş gücü kapasite planı",
+   "refs": [
+    "oc_competitors"
+   ]
+  },
+  {
+   "id": "mk_planfile",
+   "name": "Dışa Aktarım",
+   "en": "Export",
+   "icon": "⇩",
+   "desc": "Kararları İçerik ve Reklam Planı Şablonu'nun veri dosyasına dönüştürür; veri dosyası indirilir, şablona yerleştirilir ve içerik üretimi için pazarlama promptu kopyalanır",
+   "refs": []
+  }
+ ],
+ "moveFields": {
+  "mk_prefix": "ip_plan",
+  "mk_period_label": "ip_plan",
+  "mk_period_start": "ip_plan"
+ },
+ "fields": [
+  {
+   "id": "ip_products",
+   "section": "ip_products",
+   "after": "",
+   "label": "Ürün ve Hizmet Kayıtları",
+   "en": "Product & Service Records",
+   "type": "records",
+   "explanation": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her kalem burada bir kayıttır. Kalemin adı ve sayfa adresi orada girilir; burada tanıtım sayfasının metinleri (Pazarlama › Tanıtım Sayfası Alanları'nda seçilenler), sayfa başlığı ve meta alanları, CTA, anahtar kelimeler, brief, sosyal medya metinleri ve tanıtım maili doldurulur. Kayıtlar proje dosyasında saklanır ve plan dosyasının Ürün ve Hizmetler bölümüne aktarılır.",
+   "rule": "Ürün ve hizmet kayıtları: {value}.",
+   "scenario": "Site ürün ya da hizmet sayfalarıyla satış yapıyorsa ve bu sayfaların metinleri, anahtar kelimeleri ve tanıtım içerikleri tek yerden yönetilecekse önem kazanır.",
+   "example": "“İmplant tedavisi | /implant-tedavisi/” kaleminin kaydında slogan, değer önerisi, dört fayda, beş SSS, sayfa başlığı ve meta alanları, “implant tedavisi” odak kelimesi ve Instagram metni doldurulur; plan dosyasında hizmet kaydı olarak çıkar.",
+   "showIf": [
+    {
+     "field": "mk_prod_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter",
+    "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru/icerik-seo-uzmani"
+   ]
+  },
+  {
+   "id": "ip_blogs",
+   "section": "ip_blog",
+   "after": "",
+   "label": "Blog Yazısı Kayıtları",
+   "en": "Blog Post Records",
+   "type": "records",
+   "explanation": "Dönemde yayımlanacak her blog yazısı bir kayıttır: yayın tarihi ve saati, kategori, başlık grubu, huni, başlık, odak anahtar kelime, H2 planı, hedef sayfa ve SEO alanları (adres, meta title, meta description, özet, CTA). Kategoriler Pazarlama › İçerik Kategorileri'nden, huni Huni Modeli'nden, ölçüler Meta Alan ve Başlık Ölçüleri'nden gelir. Kayıtlar tek tek eklenebilir ya da Claude'un ürettiği plan JSON olarak içe aktarılabilir; plan dosyasının Konular › Blog yazıları bölümüne aktarılır.",
+   "rule": "Blog yazısı kayıtları: {value}.",
+   "scenario": "Sitede düzenli blog yayımlanacaksa ve yazıların takvimi, anahtar kelimeleri ve SEO alanları yayından önce planlanıp ekipçe izlenecekse önem kazanır.",
+   "example": "Kasım için 8 yazı planlanır: her başlık grubunda F → D → K sırasıyla üç yazı, her birinin odak kelimesi, dört maddelik H2 planı ve meta alanları; plan sayfasında haftalara dağılmış kartlar olarak görünür.",
+   "agents": [
+    "poz:pazarlama:content_marketing/editoryal-yonetim-muduru/kidemli-editor",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/seo-ve-geo-icerik-uzmani"
+   ]
+  },
+  {
+   "id": "ip_posts",
+   "section": "ip_social",
+   "after": "",
+   "label": "Sosyal Paylaşım Kayıtları",
+   "en": "Social Post Records",
+   "type": "records",
+   "explanation": "Dönemde yayımlanacak her sosyal medya paylaşımı bir kayıttır: yayın tarihi ve saati, format (Pazarlama › İçerik Formatları'ndan), kategori, huni, başlık, kanca, bağlı blog yazısı, CTA ve bağlantı; içerik planında sahne / slayt planı, gönderi metni ({link} yer tutucusuyla) ve etiketler. Taslaklar 8. menü › Blog Yazıları'nda bir yazıdan türetilebilir, kayıtlar elle eklenebilir ya da Claude'un ürettiği plan JSON olarak içe aktarılabilir; plan dosyasının Konular › Sosyal paylaşımlar bölümüne aktarılır.",
+   "rule": "Sosyal paylaşım kayıtları: {value}.",
+   "scenario": "Sosyal medyada düzenli paylaşım yapılacaksa ve paylaşımların takvimi, formatı ve metinleri yayından önce planlanıp ekipçe izlenecekse önem kazanır.",
+   "example": "Bir blog yazısından Reels, Carousel ve tek görsel taslakları türetilir; her birinin kancası ve sahne / slayt planı yazılır, gönderi metnine {link} konur; plan sayfasında haftalara dağılmış kartlar olarak görünür.",
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_daylist",
+   "section": "ip_days",
+   "after": "",
+   "label": "Özel Gün Listesi",
+   "en": "Special Day List",
+   "type": "records",
+   "explanation": "Plan dönemine düşen resmî, ulusal, anma, dinî, ticari, meslek ve farkındalık günleri Pazarlama › Gün Türleri kararına göre listelenir. Her günün markanız için önemi (Yüksek, Orta, Düşük) işaretlenir, markayla ilgisiz günler gizlenir, kuruluş yıl dönümü ya da sektör fuarı gibi marka günleri eklenir ve gün başına içerik önerisi yazılır. Hicrî takvime bağlı günlerin tarihi her yıl değiştiği için plan yıllarına elle girilir; tarih uydurulmaz. Liste plan dosyasının Özel Günler bölümüne aktarılır; blog, paylaşım ve takvimdeki özel gün seçenekleri bu listeden gelir.",
+   "rule": "Özel günler: {value}.",
+   "scenario": "Markanın iletişim takviminde özel günlerde paylaşım yapılacaksa ya da sektörün meslek ve farkındalık günleri içerik fırsatıysa önem kazanır.",
+   "example": "Bir diş kliniği Ağız ve Diş Sağlığı Haftası'nı Yüksek, Öğretmenler Günü'nü Orta işaretler, Dünya Sinema Günü'nü gizler, kliniğin kuruluş yıl dönümünü marka günü olarak ekler ve 2027 Ramazan Bayramı tarihini Diyanet takviminden girer.",
+   "showIf": [
+    {
+     "field": "mk_days_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi",
+    "poz:pazarlama:content_marketing/editoryal-yonetim-muduru/kidemli-editor"
+   ]
+  },
+  {
+   "id": "ip_mails",
+   "section": "ip_mail",
+   "after": "",
+   "label": "Mailing Kayıtları",
+   "en": "Mailing Records",
+   "type": "records",
+   "explanation": "Dönemde gönderilecek her e-posta bir kayıttır: gönderim tarihi ve saati, mail türü (Pazarlama › Mail Türleri'nden), sıra (1 tanıtım, 2 karar), kategori, segment, bağlı blog ve ürün; metinde konu satırı (en çok 60), ön izleme (en çok 110, konuyu tekrar etmez), selamlama, giriş, alt başlıklı bölümler ve CTA; isteğe bağlı ikinci CTA, A/B için B konu satırı / ön izleme ve ilgili bağlantılar. Taslaklar 8. menü › Blog Yazıları'nda bir yazının başlık grubundan iki mail olarak türetilebilir; kayıtlar plan dosyasının Mailing bölümüne aktarılır.",
+   "rule": "Mailing kayıtları: {value}.",
+   "scenario": "E-posta pazarlaması yapılacaksa ve gönderimlerin takvimi, konu satırları ve metinleri yayından önce planlanıp hukuk ve onay sürecinden geçecekse önem kazanır.",
+   "example": "“Süreç Otomasyonu” grubundan iki mail türetilir: 20 Ekim'de yazıya yönlendiren tanıtım maili, 7 gün sonra ücretsiz analiz teklifli karar maili; konu satırları sayaçla 60 karakterin altında tutulur.",
+   "showIf": [
+    {
+     "field": "mk_mail_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter",
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi"
+   ]
+  },
+  {
+   "id": "ip_period_desc",
+   "section": "ip_plan",
+   "after": "mk_period_start",
+   "label": "Dönem Açıklaması",
+   "en": "Period Description",
+   "type": "textarea",
+   "placeholder": "Örn. Dönemin odağı yeni bordro hizmetinin tanıtımı; kasımda iki webinar ve yıl sonu kampanyası var.",
+   "explanation": "Plan sayfasının üst bölümünde dönem adının ve içerik sayılarının ardından görünen kısa açıklamadır. Dönemin ana odağını, öne çıkan kampanyalarını ya da ekibin bilmesi gereken bir notu bir iki cümleyle anlatır.",
+   "rule": "Plan sayfasının üst açıklamasında dönem için şu metin yer alır: “{value}”. Metin bir iki cümleyi geçmez; dönem içinde odak ya da kampanya değişirse güncellenir.",
+   "scenario": "Plan birden fazla kişiyle paylaşılıyorsa ya da dönemin özel bir odağı (lansman, kampanya, sezon) varsa önem kazanır.",
+   "example": "“Dönemin odağı yeni bordro hizmetinin tanıtımı; kasımda iki webinar ve yıl sonu kampanyası var.” yazılırsa plan sayfasının üstünde dönem bilgisinin hemen altında görünür.",
+   "agents": [
+    "poz:pazarlama:content_marketing/editoryal-yonetim-muduru/kidemli-editor"
+   ]
+  },
+  {
+   "id": "ip_quarters",
+   "section": "ip_plan",
+   "after": "ip_period_desc",
+   "label": "Dönem Süzgeci",
+   "en": "Period Filter",
+   "type": "select",
+   "explanation": "Plan sayfasının üst satırında içerikleri döneme göre süzen düğmelerin (örn. 2026 Q4, 2027 Q1) nasıl oluşturulacağını belirler. Düğmeler Dönem Başlangıcı ve Pazarlama › Plan Dönemi'nden hesaplanır; seçilen düğme blog, paylaşım, mailing ve etkinlik listelerini o dönemle sınırlar. Reklam, takipçi ve istatistik sekmeleri süzülmez.",
+   "rule": "Plan sayfasında dönem süzgeci: {label}. Düğmeler plan döneminin başlangıç ve bitiş tarihlerinden hesaplanır; seçili dönemin dışındaki içerikler gizlenir ama silinmez.",
+   "options": [
+    {
+     "value": "quarter",
+     "label": "Çeyrekler (önerilen)",
+     "explanation": "Plan dönemi üçer aylık çeyreklere bölünür (2026 Q4, 2027 Q1 …). Uzun planlarda listeyi okunur tutar.",
+     "scenario": "Altı ay ya da daha uzun süren planlar için.",
+     "example": "Kasım 2026'da başlayan 6 aylık plan 2026 Q4, 2027 Q1 ve 2027 Q2 düğmelerini alır."
+    },
+    {
+     "value": "month",
+     "label": "Aylar",
+     "explanation": "Her ay ayrı bir düğme olur (Kasım 2026, Aralık 2026 …). Aylık planlayıp ayı kapatarak raporlayan ekiplere uyar.",
+     "scenario": "Aylık içerik takvimi hazırlayan ve her ay rapor veren ekipler için.",
+     "example": "Kasımda başlayan üç aylık plan Kasım 2026, Aralık 2026 ve Ocak 2027 düğmelerini alır."
+    },
+    {
+     "value": "none",
+     "label": "Süzgeç yok",
+     "explanation": "Bütün içerik tek listede görünür. Kısa planlarda yeterlidir; uzun planda liste uzar.",
+     "scenario": "Bir aylık ya da tek çeyreklik planlar için.",
+     "example": "Dört haftalık kampanya planı süzgeçsiz, tek liste olarak açılır."
+    }
+   ],
+   "scenario": "Plan birden fazla ayı ya da çeyreği kapsıyorsa önem kazanır; süzgeç olmadan uzun bir planda geçmiş ve gelecek içerikler aynı listede karışır.",
+   "example": "Çeyrekler seçilirse plan sayfası ilk açılışta en çok içeriği olan çeyrekle açılır; ekip diğer çeyreğe tek tıkla geçer.",
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi"
+   ]
+  },
+  {
+   "id": "ip_cal_note",
+   "section": "ip_plan",
+   "after": "ip_quarters",
+   "label": "Takvim Notu",
+   "en": "Calendar Note",
+   "type": "textarea",
+   "placeholder": "Örn. Cuma günleri Müşteri Hikâyesi yayımlanır; 31 Aralık – 2 Ocak arasında paylaşım yapılmaz.",
+   "explanation": "Plan sayfasının Takvim sekmesinin üstünde görünen kısa nottur. Ekibin takvime her bakışta görmesi gereken yayın düzeni bilgisini (sabit yayın günleri, yayın yapılmayacak tarihler, story saati gibi) yazmak için kullanılır.",
+   "rule": "Takvim sekmesinin üstünde şu not gösterilir: “{value}”. Not yayın düzenini özetler; düzen değişirse not da güncellenir.",
+   "scenario": "Sabit bir yayın ritmi (örn. cuma günleri seri içerik) ya da dönem içinde yayın yapılmayacak günler varsa önem kazanır.",
+   "example": "“Cuma günleri Müşteri Hikâyesi yayımlanır; 31 Aralık – 2 Ocak arasında paylaşım yapılmaz.” yazılırsa Takvim sekmesini açan herkes bu kuralı ilk satırda görür.",
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi"
+   ]
+  },
+  {
+   "id": "ip_sites",
+   "section": "ip_plan",
+   "after": "ip_cal_note",
+   "label": "Ek Web Siteleri",
+   "en": "Additional Websites",
+   "type": "textarea",
+   "placeholder": "Her satıra bir site: Ad | https://…\nÖrn. Blog | https://www.ornek.com/blog",
+   "explanation": "Plan sayfasının üst bölümünde sosyal hesapların yanında gösterilecek ek site bağlantılarıdır (blog, müşteri portalı, kampanya sitesi gibi). Ana site adresi Ortak Bilgiler › Canlı Site Adresi'nden gelir ve listenin başına kendiliğinden eklenir; burada yalnız ek siteler yazılır, her satıra bir site “Ad | https://…” biçiminde.",
+   "rule": "Plan sayfasının üst bölümünde ana sitenin yanında şu siteler gösterilir: {value}. Yalnız herkese açık adresler yazılır; yönetim paneli ve test ortamı adresleri bu listeye girmez.",
+   "scenario": "Markanın blogu ayrı bir adreste duruyorsa ya da müşteri portalı, kampanya sitesi gibi ekibin sık açtığı başka siteler varsa önem kazanır.",
+   "example": "“Blog | https://www.ornek.com/blog” ve “Müşteri Portalı | https://portal.ornek.com” yazılırsa üst bölümde üç site çipi görünür: ornek.com, Blog ve Müşteri Portalı.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/yazilim-kalitesi-test-ve-dokumantasyon/teknik-dokumantasyon-uzmani"
+   ]
+  },
+  {
+   "id": "ip_events_rec",
+   "section": "ip_events",
+   "after": "",
+   "label": "Etkinlik Kayıtları",
+   "en": "Event Records",
+   "type": "records",
+   "explanation": "Dönemde düzenlenecek her etkinlik bir kayıttır: ad ve kısa ad, tür (Pazarlama › Etkinlik Türleri'nden), sayfa yolu, tarih, başlangıç ve bitiş saati, format, ücret, son kayıt günü; konuşmacılar, program, konular, hedef kitle, sunulanlar ve notlar. Aktivite planı Pazarlama › Etkinlikler › Aktivite Planı ve Duyuru Kanalları'na göre etkinlik gününden geriye ve ileriye kurulur (hafta sonu ve resmî tatiller en yakın iş gününe kayar); her aktivitenin tarihi, saati ve sorumlusu değiştirilebilir, gereksiz olan plandan çıkarılır. Ölçüm hedefleri, bağlı ürün / hizmet ve blog yazısı eklenir; etkinlik ve aktiviteleri 8. menü › Takvim'de görünür ve plan dosyasının Etkinlikler bölümüne aktarılır.",
+   "rule": "Etkinlik kayıtları: {value}.",
+   "scenario": "Webinar, seminer, fuar ya da lansman düzenlenecekse ve duyurudan etkinlik sonrası takibe kadar işlerin tarih, kanal ve sorumluyla önceden planlanması gerekiyorsa önem kazanır.",
+   "example": "12 Kasım'daki bir webinar için standart plan kurulur: 25 gün önce kayıt bağlantısı ve UTM hazırlığı, 21 gün önce e-posta daveti ve LinkedIn duyurusu, bir gün önce katılım bilgisi, etkinlikten 3 gün sonra teşekkür maili ve 7 gün sonra etkinlik raporu; hedef 150 kayıt ve %40 katılım olarak yazılır.",
+   "showIf": [
+    {
+     "field": "mk_evt_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:content_marketing/icerik-dagitim-yoneticisi"
+   ]
+  },
+  {
+   "id": "ip_gads_rec",
+   "section": "ip_gads",
+   "after": "",
+   "label": "Google Ads Kampanyaları",
+   "en": "Google Ads Campaigns",
+   "type": "records",
+   "explanation": "Her kampanya bir kayıttır: tür (Arama Ağı, Maksimum Performans, Yeniden Pazarlama — Pazarlama › Kampanya Türleri'nden), konu ve Önek_Tür_Konu_YYYYAA kalıbında önerilen ad, açılış sayfası, bütçe payı (Aylık Bütçe'den aylık ve günlük tutarla), site bağlantıları, açıklama metinleri, yapılandırılmış snippet, kampanya negatifleri ve Maksimum Performans'ta marka hariç tutma. Kampanyanın grupları nihai URL, görünen yol, başlıklar (≤ 30), uzun başlıklar (≤ 90), açıklamalar (≤ 90) ve Arama Ağı'nda anahtar kelimeler + arama sonucu önizlemesi, Maksimum Performans'ta arama temalarıyla girilir. “Ürün / hizmetlerden taslak oluştur” kampanya ve grupları Kampanya Yapısı kararına göre ürün / hizmet kayıtlarından kurar; marka ve rakip adları çakışmayı önlemek için negatif ve hariç tutma listelerine eklenir. Kayıtlar plan dosyasının Google Ads bölümüne aktarılır; Arama Ağı kampanyaları şablonda Google Ads Editor CSV'si olarak indirilir.",
+   "rule": "Google Ads kayıtları: {value}.",
+   "scenario": "Google Ads yayına alınacaksa ve kampanya yapısı, reklam metinleri ve anahtar kelimeler hesap kurulmadan önce planlanıp onaydan geçecekse önem kazanır.",
+   "example": "Üç hizmet için hizmet bazında üç Arama Ağı kampanyası kurulur: her grupta 8 başlık, 4 açıklama ve [tam] / \"sıralı\" eşlemeli anahtar kelimeler; marka adı bu kampanyalarda negatif, ayrı Marka kampanyası bütçenin %10'unu alır; kalan %90 üç kampanyaya eşit dağıtılır ve ilk iki haftanın verisiyle güncellenir.",
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "google"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_meta_base",
+   "section": "ip_meta",
+   "after": "",
+   "label": "Hedef Kitle, Lead Yeri ve Ön Koşullar",
+   "en": "Audience, Lead Destination & Prerequisites",
+   "type": "records",
+   "explanation": "Meta reklamlarının kime ve hangi mesajla gideceği (personalar: ad, tanım, mesaj), kitle ayarları, lead'in nerede toplanacağı (site formu, anlık form, WhatsApp: rol ve not) ve yayın öncesi ön koşulların durumu (Pazarlama › Meta Ads › Ön Koşullar'daki her madde için Yapılacak / Kontrol / Hazır / Gerekmez ve not). Lead yeri Kampanya Amaçları'ndan önerilebilir. Açık ön koşul kapanmadan kampanya yayına alınmaz.",
+   "rule": "{value}",
+   "scenario": "Meta reklamı açılacaksa ve piksel, Conversions API, alan adı doğrulama gibi hazırlıkların kimde ve hangi durumda olduğu ile lead'in hangi kanalda toplanacağı yayından önce netleşmeliyse önem kazanır.",
+   "example": "İki persona yazılır (KOBİ sahibi, finans müdürü); lead önce site formunda, test olarak anlık formda toplanır; Meta Pixel “Hazır”, Conversions API “Kontrol” durumundadır.",
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_meta_camps",
+   "section": "ip_meta",
+   "after": "ip_meta_base",
+   "label": "Meta Kampanyaları ve Bütçe",
+   "en": "Meta Campaigns & Budget",
+   "type": "records",
+   "explanation": "Her kampanya bir kayıttır: amaç (Kampanya Amaçları'ndan), konu ve Önek_Amaç_Konu_YYYYAA_v01 kalıbında önerilen ad, sürüm, açılış (sayfa ya da anlık form), bütçe payı ve gerekçe; kampanyanın reklam setleri ad, kitle (Kitle kararından) ve kampanya içi payla girilir. “Kararlardan kampanya kur” amaç başına kampanya ve kitle başına set kurar. Bütçe tablosu Aylık Bütçe'den set başına aylık / günlük tutarı, hedef lead maliyetiyle (CPL) aylık lead tahminini ve haftalık 50 lead öğrenme eşiğini gösterir.",
+   "rule": "{value}",
+   "scenario": "Meta bütçesi birden çok kampanya ve kitleye bölünecekse ve her reklam setinin öğrenme aşamasından çıkacak kadar bütçe alıp almadığı yayından önce görülmeliyse önem kazanır.",
+   "example": "Aylık 30.000 TL, %60 web formu ve %40 anlık form kampanyasına bölünür; hedef lead maliyeti 400 TL iken set başına haftalık lead 50'nin altında kaldığı için iki set birleştirilir.",
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_meta_kr",
+   "section": "ip_meta",
+   "after": "ip_meta_camps",
+   "label": "Meta Kreatifleri",
+   "en": "Meta Creatives",
+   "type": "records",
+   "explanation": "Her kreatif bir kayıttır: ad, kampanya, ürün / hizmet, ölçü (Kreatif Ölçüleri'nden), birincil metin (ilk 125 karakter “Daha fazla”dan önce görünür), başlık (≤ 40), açıklama (≤ 30), buton ve görsel / video brifi; formda Facebook / Instagram akış önizlemesi vardır. Taslaklar ürün / hizmet kayıtlarından Kreatif Varyasyon Sayısı kadar açıyla (fayda, sorun → çözüm, sosyal kanıt) ya da sosyal paylaşımlardan oluşturulur.",
+   "rule": "{value}",
+   "scenario": "Reklam metinleri ve görsel brifleri yayından önce hazırlanıp onaydan geçecekse ve aynı ürün için farklı açılar test edilecekse önem kazanır.",
+   "example": "Süreç otomasyonu için üç kreatif: fayda (zaman kazancı), sorun → çözüm (“Aylık rapor 3 gün mü sürüyor?”), sosyal kanıt (onaylı müşteri alıntısı); her birinin ana mesajı ilk 125 karakterde, başlıklar 40 karakterin altında.",
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_meta_rival",
+   "section": "ip_meta",
+   "after": "ip_meta_kr",
+   "label": "Rakip Meta Reklam Kaydı",
+   "en": "Competitor Meta Ad Log",
+   "type": "records",
+   "explanation": "Meta Reklam Kütüphanesi'nde görülen rakip reklamları kayıt olarak tutulur: rakip (Ortak Bilgiler › Rakip Listesi'nden), biçim ve platform, mesaj ve teklif, CTA ve açılış sayfası, ilk / son görülme tarihi, kaynak bağlantısı ve not (Rakip Analizi › Rakip Reklam Kaydı'nda seçilen bilgiler). Kayıtlar plan dosyasının Meta sekmesinde tablo olarak görünür.",
+   "rule": "{value}",
+   "scenario": "Rakiplerin Meta'da hangi mesaj ve tekliflerle reklam verdiği düzenli izlenecekse ve karşı aksiyonlar bu kayıtlara dayanacaksa önem kazanır.",
+   "example": "Rakip A'nın 1 Ekim'den beri yayında olan “ilk ay ücretsiz” videolu reklamı kaynak bağlantısıyla kaydedilir; mesaj farkı karşı aksiyon listesine aktarılır.",
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "meta"
+     ]
+    },
+    {
+     "field": "mk_meta_rival",
+     "in": [
+      "library",
+      "longrun",
+      "transparency",
+      "eu"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru",
+    "poz:pazarlama:content_marketing/icerik-uretimi-muduru/copywriter"
+   ]
+  },
+  {
+   "id": "ip_rv_list",
+   "section": "ip_rivals",
+   "after": "",
+   "label": "Rakip Kayıtları",
+   "en": "Competitor Records",
+   "type": "records",
+   "explanation": "Ortak Bilgiler › Rakip Listesi'ndeki her satır bir kayıttır; liste orada düzenlenir, burada ayrıntı girilir. Alan grupları Pazarlama › Rakip Analizi › Toplanacak Bilgiler'e göre açılır: profil (tür, öncelik, segment, coğrafya, güçlü / zayıf yön), ürün ve hizmetler, mesaj ve konumlandırma (değer önerisi, mesaj, kanıt), kanallar ve sosyal hesaplar, ölçek (organik trafik, anahtar kelime, ücretli kelime; kendi markanızla karşılaştırma), şube / lokasyon ve Google İşletme Profilleri, fiyatlar ve fiyat durumu, reklamlar (Google Reklam Şeffaflık özeti; Meta Reklam Kütüphanesi kayıtları 8. menü › Meta Ads'ten bağlanır). Kanıt Kuralı “her bilgi kaynak bağlantısı ve tarihle” ise kaynağı eksik grup işaretlenir. Her rakip için Claude araştırma talimatı kopyalanır, dönen JSON içe aktarılır.",
+   "rule": "{value}",
+   "scenario": "Rakiplerin ürün, fiyat, kanal ve reklam stratejisi düzenli izlenecekse ve plan dosyasındaki Rakipler sekmesi kaynaklı verilerle dolacaksa önem kazanır.",
+   "example": "Üç doğrudan rakip için profil ve konumlandırma girilir; birinin 12 şubesi ve paket fiyatları kaynak bağlantılarıyla, Google'da son 30 günde 20–30 metin reklamı ve Meta'da 4 aktif video reklamı kaydedilir.",
+   "showIf": [
+    {
+     "field": "mk_comp_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_rv_actions",
+   "section": "ip_rivals",
+   "after": "ip_rv_list",
+   "label": "Karşı Aksiyonlar",
+   "en": "Counter Actions",
+   "type": "records",
+   "explanation": "Rakibin bir hamlesine karşı yapılacak işler kayıt olarak tutulur: hamle ve karşı strateji (zorunlu), bizim avantajımız, aktivite, KPI, sorumlu, termin, durum (Açık / Devam / Tamam / İptal) ve ilgili rakip. Termini geçen ve tamamlanmayan aksiyon işaretlenir.",
+   "rule": "{value}",
+   "scenario": "Rakip analizinden çıkan bulgular somut işlere dönüştürülecek ve sorumlu ile terminle izlenecekse önem kazanır.",
+   "example": "Rakip A “ilk ay ücretsiz” kampanyası başlattı → karşı strateji: ücretsiz süreç analizi teklifi; aktivite: açılış sayfası + Meta kampanyası; KPI: aylık 40 lead; sorumlu: pazarlama; termin 30 Kasım.",
+   "showIf": [
+    {
+     "field": "mk_comp_on",
+     "in": [
+      true
+     ]
+    },
+    {
+     "field": "mk_comp_actions",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_leads",
+   "section": "ip_rivals",
+   "after": "ip_rv_actions",
+   "label": "Potansiyel Müşteri Adayları",
+   "en": "Prospects",
+   "type": "records",
+   "explanation": "Rakip rehber / pazaryeri sitelerinde listelenen işletmeler satış adayı olarak tutulur: ad, kişi türü, kategori, il / ilçe / adres, iletişim (telefon, WhatsApp, e-posta, web, Instagram), listelendiği rakip ve rakipteki görünümü (sayfa, puan, yorum, sunulan özellikler), öncelik (A / B / C), durum (Yeni → Arandı → Görüşüldü → Teklif → Kazanıldı / Kaybedildi / İlgilenmiyor), not ve son temas. Elle eklenir ya da CSV / JSON ile içe aktarılır; plan dosyasında Potansiyel Müşteri Adayları sekmesi açılır. Gerçek kişi adaylarının iletişim bilgileri kişisel veridir.",
+   "rule": "{value}",
+   "scenario": "Rakip rehber ve pazaryerlerinde görünen işletmelere satış teması planlanacaksa ve adayların durumu ekip içinde izlenecekse önem kazanır.",
+   "example": "Bir rehber sitesindeki 240 işletme CSV ile içe aktarılır; hedef ilçelerdeki ve iletişimi doğrulanmış 35 işletme A önceliği alır, ilk hafta aranan 20'si “Arandı” durumuna geçer.",
+   "showIf": [
+    {
+     "field": "mk_comp_on",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_ms_goals",
+   "section": "ip_measure",
+   "after": "",
+   "label": "Hedefler ve Başlangıç",
+   "en": "Targets & Baselines",
+   "type": "records",
+   "explanation": "Dönemin ölçüm göstergeleri satır satır yazılır: gösterge, kanal, dönem başındaki değer, dönem hedefi, birim ve ölçüm yeri (GA4, Google Ads, Meta Ads Yöneticisi, Search Console, mecra istatistikleri, e-posta aracı, CRM). “Kararlardan öner” Dönüşüm Olayları, Reklam KPI Seti ve Ölçülecek Veriler'den gösterge satırları açar; hedef sayıları siz yazarsınız. Ayrıca her mecranın dönem başı takipçi sayısı ve dönem sonu hedefi girilir; başlangıç plan dosyasının Takipçiler sekmesine ilk ölçüm olarak gider.",
+   "rule": "{value}",
+   "scenario": "Dönemin sonunda neyin başarı sayılacağı baştan sayıyla belirlenecekse ve sonuçlar başlangıç değerleriyle karşılaştırılacaksa önem kazanır.",
+   "example": "Form gönderimi: dönem başı ayda 18 → hedef 40 (GA4); Google Ads lead başı maliyet 950 TL → 700 TL; Instagram takipçi 1.240 → 1.600.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_ms_events",
+   "section": "ip_measure",
+   "after": "ip_ms_goals",
+   "label": "Dönüşüm Olayları",
+   "en": "Conversion Events",
+   "type": "records",
+   "explanation": "Pazarlama › Dönüşüm Olayları'nda seçilen her olay için ölçüm planı: GA4 olay adı, tetikleyici, parametreler, birincil dönüşüm olup olmadığı, Google Ads dönüşüm işlemi ve Meta standart olayı (reklam kanalı seçiliyse). Varsayılanlar GA4 önerilen olay adlarıyla gelir, değiştirilebilir. Tablo plan dosyasında Google Ads ve Meta sekmelerine “Ölçüm planı” paneli olarak gider; siteyi kuran geliştiriciye verilir.",
+   "rule": "{value}",
+   "scenario": "Form, telefon, WhatsApp ya da satın alma dönüşümleri GA4 ve reklam platformlarında tutarlı adlarla ölçülecekse önem kazanır.",
+   "example": "Form gönderimi → GA4 generate_lead (form_id, form_name), Google Ads “Form gönderimi (lead)” birincil, Meta Lead; telefon tıklaması → phone_click, ikincil.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_conversions",
+     "in": [
+      "form",
+      "phone",
+      "whatsapp",
+      "email",
+      "download",
+      "purchase",
+      "event_register"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ip_ms_utm",
+   "section": "ip_measure",
+   "after": "ip_ms_events",
+   "label": "UTM Bağlantıları",
+   "en": "UTM Links",
+   "type": "records",
+   "explanation": "UTM Standardı kararına göre adres, kaynak, ortam, kampanya, içerik (ve ayrıntılı şemada terim) alanlarından etiketli bağlantı üretilir; değerler küçük harfe, Türkçe karaktersiz ve boşluksuz biçime çevrilir. Kampanya boşsa UTM Kampanya Adı kullanılır. Bağlantılar adıyla listeye kaydedilir ve plan dosyasının Kılavuz sekmesine yazılır.",
+   "rule": "{value}",
+   "scenario": "Bülten, sosyal medya ve iş ortağı bağlantılarının hangisinin trafik ve dönüşüm getirdiği ölçülecekse önem kazanır.",
+   "example": "/blog/surec-otomasyonu → ?utm_source=newsletter&utm_medium=email&utm_campaign=2026-q4&utm_content=ekim-bulteni.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_utm",
+     "in": [
+      "standard",
+      "campaign_only",
+      "detailed"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ip_ms_reports",
+   "section": "ip_measure",
+   "after": "ip_ms_utm",
+   "label": "Rapor Takvimi",
+   "en": "Reporting Calendar",
+   "type": "records",
+   "explanation": "Rapor Ritmi kararına göre dönemin rapor günleri hesaplanır: haftalık raporlar seçilen gün, aylık raporlar her ayın ilk iş günü (önceki ayın sonuçları); hafta sonu ve resmî tatile düşen rapor sonraki iş gününe kayar. Sorumlu ve ek raporlar (kampanya sonu raporları) yazılır; rapor günleri 8. menü › Takvim'de görünür ve plan dosyasının Kılavuz sekmesine yazılır.",
+   "rule": "{value}",
+   "scenario": "Raporların hangi gün, kim tarafından ve hangi çıktıyla hazırlanacağı dönem başında takvime bağlanacaksa önem kazanır.",
+   "example": "Ekim–Aralık döneminde her pazartesi haftalık rapor (13 rapor) ve her ayın ilk iş günü aylık rapor (3 rapor); sorumlu pazarlama uzmanı, çıktılar PDF ve yönetici özeti.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_report_rhythm",
+     "in": [
+      "weekly_monthly",
+      "monthly",
+      "campaign"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ip_lg_general",
+   "section": "ip_legal",
+   "after": "",
+   "label": "Hukuk Genel Değerlendirmeleri",
+   "en": "Legal General Assessments",
+   "type": "records",
+   "explanation": "Dönem için hukuk biriminin genel değerlendirmeleri kayıt olarak tutulur: tarih, durum (Beklemede, İncelemede, Uygun, Şartlı uygun, Düzeltme gerekli, Uygun değil), değerlendiren, kapsam, görüş, dayanak ve düzeltme / aksiyon maddeleri. Alt menü Pazarlama › Hukuk Değerlendirmesi “Evet” ya da Onay Akışı “Taslak → Hukuk → Onay → Yayın” iken görünür. Kayıtlar plan dosyasının Hukuk Değerlendirmesi sekmesine gider.",
+   "rule": "{value}",
+   "scenario": "Dönemin içerikleri yayından önce hukuk biriminden geçecekse ve genel görüşler tek yerde izlenecekse önem kazanır.",
+   "example": "14 Ekim, İncelemede, Hukuk Müşaviri: “İlk tur inceleme başladı; öncelik müşteri hikâyeleri, ticari elektronik ileti ve anlık form metinleri.”",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_lg_review",
+   "section": "ip_legal",
+   "after": "ip_lg_general",
+   "label": "Hukuk İnceleme Listesi",
+   "en": "Legal Review List",
+   "type": "records",
+   "explanation": "8. menüdeki blog, paylaşım, mailing, ürün, etkinlik, Google Ads ve Meta Ads kayıtlarından hukuk incelemesi gereken içerikler her açılışta yeniden hesaplanır: Hukuk Kapsamı'ndaki içerik türleri ile metninde üstünlük / kesinlik iddiası, fiyat / indirim / ücretsiz, sağlık / finans ifadesi, kişisel veri / müşteri adı ya da rakip adı geçenler. Her içerik için işaretlenen ifadeler gösterilir; inceleyecek kişi ve not yazılır, gerekmeyen içerik listeden çıkarılır. Claude ön inceleme talimatı kopyalanabilir. Liste plan dosyasının Hukuk sekmesine “Beklemede” görüş olarak gider.",
+   "rule": "{value}",
+   "scenario": "Yayın öncesi hangi içeriklerin hukuk görüşü gerektirdiği elle aranmadan, kayıtlardan çıkarılacaksa önem kazanır.",
+   "example": "“%100 garantili sonuç” ifadesi geçen Google Ads grubu ve onaylı müşteri alıntısı içeren ürün sayfası listeye düşer; hukuk müşaviri atanır.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ]
+  },
+  {
+   "id": "ip_lb_plan",
+   "section": "ip_legal",
+   "after": "ip_lg_review",
+   "label": "İş Gücü Kapasite Planı",
+   "en": "Workforce Capacity Plan",
+   "type": "records",
+   "explanation": "8. menüdeki kayıt sayıları (blog, paylaşım, mailing, etkinlik, ürün sayfası, Google Ads grubu, Meta kreatifi) içerik türü başına tahmini süreyle çarpılarak dönemin iş yükü saat olarak hesaplanır; her tür bir role (Pazarlama › İş Gücü › Roller) atanır, saat ücreti seçiliyse maliyet çıkar. Rol başına dönem kapasitesi yazılınca doluluk ve kapasite aşımı gösterilir. Özet plan dosyasının İş Gücü sekmesine gider; gerçekleşen süreler orada girilir.",
+   "rule": "{value}",
+   "scenario": "Planlanan içerik miktarının ekibin kapasitesine sığıp sığmadığı dönem başında görülecekse önem kazanır.",
+   "example": "12 blog × 240 dk + 36 paylaşım × 60 dk + 6 mailing × 90 dk = 93 saat; sosyal medya uzmanının kapasitesi 30 saat iken 36 saat iş düştüğü için aşım uyarısı çıkar.",
+   "agents": [
+    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
+   ],
+   "showIf": [
+    {
+     "field": "mk_labor_on",
+     "in": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "guides": {
+  "ip_plan": {
+   "purpose": "Bu bölüm içerik planının genel ayarlarını belirler: seri no öneki, dönem etiketi ve başlangıcı, dönem açıklaması, dönem süzgeci, takvim notu ve plan sayfasında görünecek ek web siteleri. Marka adı, site adresi, iletişim bilgileri ve renkler Ortak Bilgiler'den, plan döneminin uzunluğu Pazarlama › Plan Dönemi'nden gelir. Plan sayfası, brief'ler ve dışa aktarılan dosyalar bu ayarlarla oluşur.",
+   "criteria": [
+    "Önek kısa, benzersiz ve kalıcı mı? Markayı çağrıştıran 2–5 büyük Latin harfi seçin (örn. GLM); aynı tarayıcıda birden fazla plan kullanılacaksa her markaya farklı önek verin.",
+    "Dönem nasıl adlandırılacak? Çeyrek (2026 Q4), ay (Ekim 2026) veya kampanya adı kullanabilirsiniz; sonraki planlarda aynı biçimi sürdürün.",
+    "Dönem hangi gün başlıyor? Tarihi YYYY-AA-GG biçiminde yazın; hafta görünümü pazartesi başlangıçlı olduğundan dönemi bir pazartesiye denk getirmek haftaları düzenli tutar.",
+    "Dönem süzgeci planın uzunluğuna uygun mu? Bir aylık planda süzgece gerek yoktur; altı ay ve üzerindeki planlarda çeyrekler listeyi okunur tutar.",
+    "Takvim notu ve dönem açıklaması kısa mı? İkisi de plan sayfasında her açılışta görünür; bir iki cümleyle sınırlayın."
+   ],
+   "pitfalls": [
+    "Plan kullanılmaya başladıktan sonra öneki değiştirmek; tarayıcıdaki onay, istatistik, süre ve hukuk kayıtları eski öneke bağlı kaldığı için görünmez olur.",
+    "Önekte Türkçe karakter (Ç, Ğ, İ, Ö, Ş, Ü) veya boşluk kullanmak; dosya adları ve kayıt anahtarları bazı sistemlerde bozulabilir.",
+    "Tarihi 05.10.2026 gibi gün.ay.yıl biçiminde yazmak; veri dosyası YYYY-AA-GG bekler, farklı biçimdeki tarih okunamaz veya yanlış yorumlanabilir.",
+    "Ek web siteleri listesine yönetim paneli ya da test ortamı adresi yazmak; plan sayfası paylaşıldığında bu adresler de görünür."
+   ]
+  },
+  "mk_planfile": {
+   "purpose": "Bu bölüm İçerik Planlama ayarlarını, Pazarlama ve Ortak Bilgiler kararlarını İçerik ve Reklam Planı Şablonu'nun veri biçimine dönüştürür. Veri dosyası indirilir ya da doğrudan şablon sayfasına yerleştirilir; pazarlama promptu içerik üretecek Claude oturumu için kopyalanır. Bölümde karar yoktur; kart seçimlerinizden her açılışta yeniden üretilir.",
+   "criteria": [
+    "Şablon sürümü uyuşuyor mu? Kart gömülü şablon sürümünü gösterir; içerik planı klasöründeki şablon farklı sürümdeyse önce şablonu güncelleyin.",
+    "Eksik bilgi listesi boş mu? Listedeki her madde ilgili karara bağlantı verir; eksikler plan sayfasında yer tutucu olarak kalır.",
+    "Hangi sekmeler açılacak? “(boş gelir)” işaretli sekmeler şablonda görünür ama seçimlerinize göre veri almaz.",
+    "Dosyayı doğruladınız mı? İndirilen veri dosyasını şablon klasöründe node kaynak/dogrula.mjs ile denetleyin."
+   ],
+   "pitfalls": [
+    "Üretilen plan sayfasını elle düzenleyip sonra yeniden dışa aktarmak; dışa aktarım kararlardan yeniden üretir, elle yapılan değişiklikler kaybolur.",
+    "Yeni plan sayfasını eskisinin yerine koyarken öneki değiştirmek; onaylar, istatistikler ve süreler tarayıcıda önekle saklandığı için görünmez olur.",
+    "Veri dosyasını elle düzenlerken JSON kurallarını bozmak; sondaki fazla virgül, tek tırnak veya yorum satırı plan sayfasının açılmamasına yol açar."
+   ],
+   "keepResources": true
+  },
+  "ip_products": {
+   "purpose": "Bu bölüm markanın ürün, hizmet ve paketlerini tanıtım içerikleriyle birlikte kayıt olarak tutar. Kalemlerin adı ve sayfa adresi Ortak Bilgiler › Ürün / Hizmet Listesi'nden gelir; her kalemin tanıtım metinleri, sayfa alanları, anahtar kelimeleri, brief'i, sosyal medya metinleri ve tanıtım maili burada doldurulur. Hangi tanıtım alanlarının sorulacağı Pazarlama › Ürün & Hizmet Tanıtımı kararlarından gelir. Kayıtlar plan dosyasının Ürün ve Hizmetler sekmesine aktarılır.",
+   "criteria": [
+    "Değer önerisi tek cümle mi? Ürünün kime, hangi sonucu sağladığını tek cümlede söyleyin; özellik sayımı değer önerisi değildir.",
+    "Fayda ile özellik ayrı mı? Fayda müşterinin kazancıdır (zaman, para, risk); özellik ürünün ne yaptığıdır. İkisini ayrı satırlarda yazın.",
+    "Kanıt onaylı mı? Müşteri adı, logo, rakam ve yorum yalnız yazılı onayla kullanılır; onayı olmayan kanıtı yazmayın.",
+    "Fiyat ifadesi güvenli mi? Fiyat Pazarlama › Fiyat Gösterimi kararına uyar; güncel teklif sayfasıyla çelişen rakam yazmayın.",
+    "Sayfa alanları ölçüde mi? Sayfa başlığı (H1) 35–65, meta title 45–60, meta description 140–160 karakter; sayaçlar ölçü dışını gösterir."
+   ],
+   "pitfalls": [
+    "Kalemi Ortak Bilgiler'de yeniden adlandırmak; ayrıntılar ada bağlı tutulduğu için kayıt eşleşmez hâle gelir. Eşleşmeyen kayıtlar bölümün sonunda listelenir ve yeni ada bağlanabilir.",
+    "Hacim, anahtar kelime zorluğu (KD) ve TBM değerlerini tahminle yazmak; bu sayılar yalnız araçtan (Google Anahtar Kelime Planlayıcı, Semrush, Ahrefs) alınır, kaynağı Güven sütununda belirtilir.",
+    "Tanıtım mailini ticari ileti izni olmayan alıcılara göndermek; mail yalnız İYS'de onayı olan alıcılara gider.",
+    "Sosyal medya metinlerine mecranın karakter sınırını aşan metin yazmak; sayaç kırmızıya döner, metin kısaltılmalıdır."
+   ]
+  },
+  "ip_blog": {
+   "purpose": "Bu bölüm dönemin blog yazılarını kayıt olarak planlar. Her yazının yayın tarihi, kategorisi, hunisi, başlığı, odak anahtar kelimesi, H2 planı ve SEO alanları burada tutulur; yazının gövdesi bu kayda uyularak Claude'la ya da ekipçe üretilir. Kategoriler, huni ve ölçüler Pazarlama kararlarından gelir; kayıtlar plan dosyasının Konular › Blog yazıları bölümüne aktarılır.",
+   "criteria": [
+    "Takvim yayın sıklığıyla uyumlu mu? Pazarlama › Blog Yayın Sıklığı'nda seçilen ritmi (örn. haftada 1) dönem boyunca koruyun; yoğun ve boş haftalar arama görünürlüğünü dalgalandırır.",
+    "Huni sırası doğru mu? Aynı başlık grubunun yazıları F → D → K sırasıyla yayımlanır; karar (K) yazısı farkındalık yazısından önce çıkmaz.",
+    "Odak kelime tek mi? Her yazının tek bir odak anahtar kelimesi olur; iki yazı aynı kelimeyi hedeflerse birbirinin sıralamasını düşürür.",
+    "H2 planı soruya cevap veriyor mu? Ara başlıklar okurun sorularını sırayla cevaplar; son madde Sık Sorulan Sorular ve CTA'dır.",
+    "Meta alanları ölçüde mi? Sayaçlar ölçü dışı alanı gösterir; ölçü bilgi amaçlıdır, kaydı engellemez."
+   ],
+   "pitfalls": [
+    "İçe aktarılan planı kontrol etmeden kullanmak; Claude'un önerdiği tarih, kategori ve kelimeler markanın gerçeğine göre gözden geçirilir.",
+    "Henüz yayımlanmamış yazıya iç bağlantı planlamak; bağlantı yalnız yayımlanmış yazılara verilir, yoksa ziyaretçi 404 sayfasıyla karşılaşır.",
+    "Yazı kimliğini (B-001 …) elle değiştirmek; plan sayfasındaki onay, istatistik ve hukuk kayıtları kimliğe bağlıdır.",
+    "Rakam, fiyat ya da müşteri adını kaynaksız yazmak; iddia içeren her cümle kaynağıyla yazılır."
+   ]
+  },
+  "ip_social": {
+   "purpose": "Bu bölüm dönemin sosyal medya paylaşımlarını kayıt olarak planlar. Her paylaşımın tarihi, formatı, kategorisi, hunisi, kancası, sahne / slayt planı ve gönderi metni burada tutulur; mecraya özel metinler bu gönderi metninden mecranın sınırına göre uyarlanır. Formatlar, kategoriler ve huni Pazarlama kararlarından gelir; kayıtlar plan dosyasının Konular › Sosyal paylaşımlar bölümüne aktarılır.",
+   "criteria": [
+    "Format dağılımı hedefe uygun mu? Erişim için Reels, kaydetme ve adım adım bilgi için Carousel, tek mesaj için tek görsel; dağılım kural kartında görünür.",
+    "Kanca ilk 3 saniyede mi? Reels'te ilk sahne, diğer formatlarda ilk satır izleyiciyi durdurmalıdır; soru, şaşırtıcı bilgi ya da somut fayda kullanın.",
+    "Bağlantı mecraya uygun mu? Instagram ve TikTok gönderi metninde tıklanabilir bağlantı göstermez; bağlantı profilde ya da hikâye bağlantı etiketinde verilir.",
+    "Blogdan türeyen paylaşım blogdan sonra mı? Paylaşım bağlı olduğu yazının yayınından sonra çıkar; taslaklar bu yüzden yazıdan sonraki günlere tarihlenir.",
+    "Müşteri hikâyesinde yazılı onay var mı? Referans firma yalnız Ortak Bilgiler › Referanslar'daki izinli markalardan seçilir; logo izni “Var” olmayan markanın logosu kullanılmaz."
+   ],
+   "pitfalls": [
+    "Aynı metni bütün mecralarda kullanmak; her mecranın karakter sınırı, bağlantı davranışı ve okur beklentisi farklıdır.",
+    "Formatı seçmeden paylaşım planlamak; formatsız kayıt plan dosyasına aktarılmaz.",
+    "Kişisel veri ya da yüz içeren görseli rızasız planlamak; yüz için yazılı rıza alınır ya da bulanıklaştırılır.",
+    "Story'leri iki kez planlamak; Story Kullanımı “her paylaşımın Story sürümü” iken story'ler şablonda kendiliğinden türetilir, ayrıca kayıt girilmez."
+   ]
+  },
+  "ip_calendar": {
+   "purpose": "Bu bölüm 8. menüdeki kayıtları tek takvimde gösterir: blog yazıları, sosyal paylaşımlar, Story Kullanımı “her paylaşımın Story sürümü” iken türetilen story'ler ve plan dönemine düşen özel günler. Takvim yeni kayıt tutmaz; bir kayda tıklayınca ilgili alt menüde açılır, tarih kayıt formunda değiştirilir. Görünen kayıtlar Google Takvim ve Outlook için .ics dosyası olarak indirilir.",
+   "criteria": [
+    "Haftalar dengeli mi? Liste görünümü haftaları kayıt sayısıyla gösterir; yayın sıklığı kararından sapan yoğun ya da boş haftaları düzeltin.",
+    "Blog ve paylaşım sırası doğru mu? Bir yazıdan türeyen paylaşım yazıdan sonra çıkar; takvimde aynı gün ya da önceki günde görünüyorsa tarihini değiştirin.",
+    "Özel günle çakışma var mı? Anma ve dinî günlerde satış mesajı içeren paylaşım planlamayın; özel gün satırı ilgili günün üstünde görünür.",
+    "Takvim notu güncel mi? 8.1 Plan & Dönem › Takvim Notu takvimin altında görünür."
+   ],
+   "pitfalls": [
+    "İndirilen .ics dosyasını takvime ikinci kez almak; aynı kayıt kimliği güncellenir ama bazı takvim uygulamaları kopya oluşturabilir, önce eski içe aktarımı silin.",
+    "Takvimde görünmeyen kaydı unutmak; tarihi olmayan ya da YYYY-AA-GG biçiminde olmayan kayıt takvime düşmez, Dışa Aktarım'daki eksik bilgi listesinde görünür.",
+    "Story'leri iki kez planlamak; türetilen story'ler takvimde “Story (türetilen)” olarak görünür, ayrıca kayıt girilmez."
+   ]
+  },
+  "ip_days": {
+   "purpose": "Bu bölüm plan dönemindeki özel günleri markaya göre düzenler. Gün listesi Pazarlama › Özel Günler kararlarından (gün türleri, mesaj politikası) gelir; burada her günün önemi işaretlenir, ilgisiz günler gizlenir, marka günleri eklenir ve içerik önerisi yazılır. Liste plan dosyasının Özel Günler sekmesine aktarılır; blog ve paylaşımlarda özel gün seçenekleri ve takvimdeki özel günler buradan gelir.",
+   "criteria": [
+    "Gün markayla ilgili mi? Ürün, hizmet ya da kitleyle bağı olmayan günleri gizleyin; her güne paylaşım yapmak etkileşimi düşürür.",
+    "Önem doğru mu? Yüksek önemli gün için içerik planlanır ve brief erken verilir; Orta güne kısa bir paylaşım yeter; Düşük gün izlenir.",
+    "Ton uygun mu? Kutlama, anma ve saygı tonlu günlerde satış mesajı kullanılmaz; ton her satırda yazılıdır.",
+    "Hareketli günlerin tarihi girildi mi? Bayram ve kandillerin tarihi Diyanet takviminden girilir; girilmeyen gün planlanmaz."
+   ],
+   "pitfalls": [
+    "Hicrî tarihli günleri tahminle girmek; tarih resmî takvimden alınır, yanlış güne yapılan paylaşım marka güvenini zedeler.",
+    "Anma ve dinî günlerde kampanya duyurmak; bu günlerde paylaşım yapılacaksa sade ve satışsız olur.",
+    "Marka gününü her yıl tekrarlanan olarak işaretlemeyi unutmak; tek seferlik işaretlenen gün yalnız o yılın planına girer."
+   ]
+  },
+  "ip_mail": {
+   "purpose": "Bu bölüm dönemin e-posta gönderimlerini kayıt olarak planlar. Her mailin tarihi, türü, sırası, segmenti, konu satırı, ön izlemesi, metni ve CTA'sı burada tutulur; şablonda önizlenir, HTML ve düz metin olarak kopyalanır. Mail türleri, düzen ve A/B testi Pazarlama › Mailing kararlarından gelir.",
+   "criteria": [
+    "Konu satırı ölçüde mi? En çok 60 karakter; mobilde kesilmemesi için ilk 35 karakter mesajı taşımalı.",
+    "Ön izleme konuyu tekrar ediyor mu? Ön izleme konu satırını tamamlar, aynı cümleyi yinelemez; en çok 110 karakter.",
+    "Tek net CTA var mı? Ana CTA tek bir eylem ister; ikinci CTA daha yumuşak bir seçenektir.",
+    "İki mail arası en az 7 gün mü? Tanıtım ve karar maili aynı konuyu işler; arayı kısaltmak abonelikten çıkışları artırır.",
+    "Segment doğru mu? Karar maili, tanıtım mailini açan ama dönüşmeyenlere gönderilebilir."
+   ],
+   "pitfalls": [
+    "İzinsiz alıcıya göndermek; ticari elektronik ileti yalnız İYS'de onayı olan alıcılara gönderilir.",
+    "Abonelikten çıkma bağlantısını unutmak; her mailde tek adımda çıkış bağlantısı zorunludur.",
+    "Test gönderimi yapmadan göndermek; kendinize ve bir iç alıcıya test gönderip bağlantıları ve görselleri kontrol edin.",
+    "A/B testinde iki sürümü farklı büyüklükte segmentlere göndermek; karşılaştırma için eşit ve rastgele bölünmüş segment gerekir."
+   ]
+  },
+  "ip_events": {
+   "purpose": "Bu bölüm dönemin etkinliklerini ve her etkinliğin pazarlama aktivitelerini planlar. Etkinlik bilgisi (tarih, saat, format, program, konuşmacılar) burada girilir; aktivite planı Pazarlama › Etkinlikler kararlarından kurulur ve şablonun Etkinlikler sekmesinde UTM'li bağlantılar, kopyalanabilir metinler ve zaman çizelgesiyle açılır.",
+   "criteria": [
+    "Son kayıt günü etkinlikten önce mi? Son kayıt günü etkinlik gününden sonra olamaz; çoğu webinar için etkinlik günü ya da bir gün öncesidir.",
+    "Aktiviteler iş gününe mi düşüyor? Hafta sonu ve resmî tatile düşen aktivite en yakın iş gününe kayar; elle değiştirdiğiniz tarih korunur.",
+    "Her kanalın bağlantısı ayrı UTM taşıyor mu? Kaydın hangi kanaldan geldiği utm_source ve utm_content (aktivite kodu) ile ölçülür.",
+    "Ölçüm hedefi yazıldı mı? Kayıt sayısı, katılım oranı ve e-posta performansı için hedef ve ölçüm yolu etkinlikten önce belirlenir.",
+    "Kayıt formunda aydınlatma metni ve ayrı, işaretsiz pazarlama izni kutusu var mı?"
+   ],
+   "pitfalls": [
+    "Etkinlik tarihini değiştirip elle düzenlenen aktiviteleri unutmak; elle değiştirilen aktivite yeniden hesaplanmaz, gözden geçirin.",
+    "Katılımcı listesini izin almadan pazarlama listesine eklemek; pazarlama izni ayrı ve isteğe bağlı alınır.",
+    "Kayıt / sunum paylaşımını gecikmeli yapmak; teşekkür maili etkinlikten en geç 3 gün sonra gitmelidir.",
+    "Konuşmacı adı, katılımcı sayısı ya da müşteri adı uydurmak; yalnız kesinleşmiş bilgi yazılır."
+   ]
+  },
+  "ip_gads": {
+   "purpose": "Bu bölüm dönemin Google Ads kampanyalarını, gruplarını ve reklam metinlerini planlar. Kampanya türü, yapı, teklif stratejisi, öğeler ve aylık bütçe Pazarlama › Google Ads kararlarından gelir; burada her kampanyanın adı, açılış sayfası, bütçe payı ve her grubun metinleri sayaçlarla girilir. Şablonun Google Ads sekmesi bu kayıtları kopyalanabilir metinler, bütçe tablosu ve Google Ads Editor CSV'siyle açar.",
+   "criteria": [
+    "Her grupta yeterli metin var mı? Arama Ağı'nda en az 3, en çok 15 başlık (≤ 30) ve 2–4 açıklama (≤ 90); Maksimum Performans'ta ayrıca 1–5 uzun başlık (≤ 90).",
+    "Başlıklar tek başına anlamlı mı? Google başlıkları farklı birleşimlerle gösterir; sıralamaya bağlı cümle kurmayın.",
+    "Anahtar kelime eşlemesi bilinçli mi? Odak kelimeler [tam], diğerleri \"sıralı\"; geniş eşleme yalnız akıllı teklifle ve negatif listeyle.",
+    "Kampanyalar birbirinin aramalarını almıyor mu? Marka adı marka kampanyası dışındaki arama kampanyalarında negatif, Maksimum Performans'ta marka hariç tutmada olmalı.",
+    "Bütçe payları %100'e tamamlanıyor mu? Günlük bütçe aylık tutarın 30,4'e bölümüdür."
+   ],
+   "pitfalls": [
+    "Rakip markasını reklam metninde kullanmak; marka hakkı ihlali ve reklam reddi riski taşır.",
+    "Doğrulanmamış iddia yazmak (\"en ucuz\", \"1 numara\"); yalnız sitede kanıtı olan olgu yazılır.",
+    "Bütün grupları aynı açılış sayfasına göndermek; grup konusu ile sayfa konusu aynı olmalıdır.",
+    "Negatif liste olmadan geniş eşleme açmak; iş ilanı, kurs, ücretsiz gibi aramalar bütçeyi tüketir."
+   ]
+  },
+  "ip_meta": {
+   "purpose": "Bu bölüm dönemin Meta (Facebook / Instagram) reklamlarını planlar: kime ve nerede lead toplanacağı, yayın öncesi ön koşullar, kampanya ve reklam setleri, bütçe dağılımı ve öğrenme eşiği, kreatif metinleri ve görsel brifleri. Amaç, kitle, kreatif ölçüleri, form ayarları ve aylık bütçe Pazarlama › Meta Ads kararlarından gelir; şablonun Meta sekmesi bu kayıtları tablolar, bütçe hesaplayıcı ve kopyalanabilir kreatiflerle açar.",
+   "criteria": [
+    "Ön koşullar kapandı mı? Meta Pixel ve Lead olayı doğrulanmadan, gizlilik sayfası yayında değilken kampanya açılmaz.",
+    "Her reklam seti öğrenmeden çıkabilecek mi? Haftada yaklaşık 50 lead gerekir; bütçe yetmiyorsa set sayısı azaltılır.",
+    "Ana mesaj ilk 125 karakterde mi? Birincil metnin devamı “Daha fazla” arkasında kalır.",
+    "Her ürün için farklı açılar var mı? Fayda, sorun → çözüm ve sosyal kanıt ayrı kreatiflerle test edilir.",
+    "Kampanya adları kalıba uyuyor mu? Önek_Amaç_Konu_YYYYAA_v01; kreatif yenilendikçe sürüm artar."
+   ],
+   "pitfalls": [
+    "Kişisel özelliğe hitap etmek (“Borçlarınız mı var?”); Meta politikası kişinin özelliğini ima eden metni reddeder.",
+    "Onaysız müşteri alıntısı ya da kaynaksız rakam kullanmak; sosyal kanıt yalnız yazılı onaylı olur.",
+    "Anlık formda aydınlatma metni ve ayrı rıza kutusunu atlamak.",
+    "Rakip reklamını birebir kopyalamak; kayıt yalnız mesaj ve teklif farkını görmek içindir."
+   ]
+  },
+  "ip_rivals": {
+   "purpose": "Bu bölüm rakip analizinin verisini tutar: Ortak Bilgiler'deki her rakibin profil, konumlandırma, ölçek, şube, fiyat ve reklam bilgileri kaynaklarıyla, rakiplere karşı aksiyonlar ve rakip sitelerde görünen potansiyel müşteri adayları. Hangi bilgilerin toplanacağı, kanıt kuralı, önceliklendirme ve güncelleme sıklığı Pazarlama › Rakip Analizi kararlarından gelir; şablonun Rakipler ve Potansiyel Müşteri Adayları sekmeleri bu kayıtlarla açılır.",
+   "criteria": [
+    "Her bilginin kaynağı ve tarihi var mı? Kanıt kuralı açıksa kaynaksız bilgi plana yazılmaz.",
+    "Rakip türü ve önceliği belli mi? Doğrudan rakipler P0–P1, dolaylı ve ikame rakipler daha düşük öncelikle izlenir.",
+    "Fiyatlar karşılaştırılabilir mi? Birim (ay / gün / saat), KDV durumu ve paket kapsamı yazılır; yazılı fiyatı olmayan ürün “Teklif üzerine” işaretlenir.",
+    "Reklam özetleri güncel mi? Google Reklam Şeffaflık Merkezi ve Meta Reklam Kütüphanesi Kontrol Sıklığı kararına göre yeniden taranır.",
+    "Karşı aksiyonların sorumlusu ve termini var mı?"
+   ],
+   "pitfalls": [
+    "Tahmin ya da araç tahminini kesin veri gibi yazmak; araç verisi “araç tahmini” olarak kaynağıyla yazılır.",
+    "Rakip içeriğini ya da reklamını birebir kopyalamak.",
+    "Şube eşleşmesi kesin değilken “Kesin” işaretlemek; profilde rakibin sitesi yoksa “Olası”.",
+    "Gerçek kişi adaylara izinsiz toplu ileti göndermek; ilk temasta aydınlatma yapılır, ticari ileti izni alınır."
+   ]
+  },
+  "ip_measure": {
+   "purpose": "Bu bölüm dönemin ölçüm planını tutar: hangi göstergenin hangi başlangıçtan hangi hedefe gideceği, mecraların dönem başı takipçi sayıları, dönüşüm olaylarının GA4 ve reklam platformlarındaki adları, UTM bağlantıları ve rapor günleri. Ölçülecek veriler, KPI seti, dönüşüm olayları, UTM şeması ve rapor ritmi Pazarlama › Ölçüm & Raporlama kararlarından gelir; dönemsel istatistikler şablonun Takipçiler ve Sosyal İstatistik sekmelerinde girilir.",
+   "criteria": [
+    "Her göstergenin tek bir ölçüm yeri var mı? Aynı gösterge iki araçta farklı sayı verir; hedef ve sonuç aynı yerden okunur.",
+    "Başlangıç değeri dönem başında ölçüldü mü? Başlangıç olmadan hedefin ne kadar iddialı olduğu bilinmez.",
+    "Birincil dönüşüm az mı? Teklif stratejisini besleyen birincil dönüşüm 1–2 olayla sınırlı tutulur; tıklamalar ikincildir.",
+    "UTM değerleri tek yazımda mı? Küçük harf, Türkçe karaktersiz ve boşluksuz; aynı kaynak hep aynı adla.",
+    "Rapor günleri takvimde mi ve sorumlusu belli mi?"
+   ],
+   "pitfalls": [
+    "Onay almadan olay tetiklemek; Consent Mode olmadan ölçüm KVKK riskidir.",
+    "Teşekkür sayfası yerine buton tıklamasını form dönüşümü saymak; başarısız gönderimler de sayılır.",
+    "Site içi bağlantılara UTM eklemek; oturumu böler ve kaynak bilgisini bozar.",
+    "Hedefi yalnız yüzdeyle yazmak; başlangıç ve hedef sayıyla yazılır."
+   ]
+  },
+  "ip_legal": {
+   "purpose": "Bu bölüm dönemin hukuk incelemesini ve iş gücü planını tutar. Hukuk kapsamı, dayanaklar, birim ve onay akışı Pazarlama › Hukuk Değerlendirmesi ve Onay Akışı kararlarından; roller ve saat ücreti Pazarlama › İş Gücü kararlarından gelir. İnceleme listesi 8. menüdeki kayıtlardan kendiliğinden çıkar; kapasite planı kayıt sayılarını süreyle çarpar.",
+   "criteria": [
+    "Kapsamdaki her içerik görüşten geçti mi? Hukuk zorunluysa görüşü olmayan içerik Onaylı işaretlenemez.",
+    "Tarama işaretleri değerlendirildi mi? Otomatik tarama yalnız ifadeyi bulur; kararı hukukçu verir.",
+    "Kişisel veri ve müşteri adları yazılı onaylı mı?",
+    "Rol kapasitesi gerçekçi mi? Toplantı, revizyon ve onay beklemesi süreye eklenir.",
+    "Kapasite aşan rol için iş dağılımı ya da takvim değiştirildi mi?"
+   ],
+   "pitfalls": [
+    "Tarama sonucunu hukuki görüş saymak.",
+    "“Ücretsiz” ve indirim ifadelerini koşulları yazmadan kullanmak.",
+    "Rakip markasını karşılaştırmalı reklamda kanıtsız kullanmak.",
+    "Süreleri yalnız yazım için hesaplamak; tasarım, onay ve yayın da iş yüküdür."
+   ]
+  }
+ }
+}

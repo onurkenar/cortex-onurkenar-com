@@ -904,9 +904,9 @@
       "type": "textarea",
       "placeholder": "Örn. İmplant tedavisi | /implant-tedavisi/\nOrtodonti (şeffaf plak) | /ortodonti/\nÇocuk diş hekimliği | /cocuk-dis-hekimligi/",
       "rule": "Ürün ve hizmet listesi (ad | sayfa adresi): {value}. Ürün / hizmet sayfaları, hizmet yapısal verisi (Service / Product), Google Ads kampanya ve reklam grubu yapısı, içerik planı kategorileri ve SEO denetimi bu adları aynı yazımla kullanır; listede olmayan bir ürün ya da hizmetin reklamı verilmez.",
-      "explanation": "Satılan ürün ve hizmetler; her satıra bir kalem “Ad | sayfa adresi” biçiminde (adres isteğe bağlı). Ana kalemleri yazın; varyantları ayrıca listelemeyin.",
+      "explanation": "Satılan ürün ve hizmetler; her kalemi ayrı satıra girin: ürün / hizmet adı ve sayfa adresi (isteğe bağlı; “/implant-tedavisi/” gibi yol ya da tam adres); yeni kalem için “Kalem ekle”. Ana kalemleri yazın; varyantları ayrıca listelemeyin.",
       "scenario": "Hizmet sayfaları, ürün tanıtım sayfaları, hizmet bazında reklam kampanyaları ya da içerik kategorileri kurulacaksa doldurun; böylece aynı hizmet her yerde aynı adla geçer.",
-      "example": "“İmplant tedavisi | /implant-tedavisi/” satırı hizmet sayfasının, Service yapısal verisinin ve “İmplant” Google Ads kampanyasının adı olur.",
+      "example": "Adı “İmplant tedavisi”, sayfa adresi “/implant-tedavisi/” olan kalem hizmet sayfasının, Service yapısal verisinin ve “İmplant” Google Ads kampanyasının adı olur.",
       "agents": [
        "poz:pazarlama:digital_demand_generation/seo-ve-geo-muduru"
       ]

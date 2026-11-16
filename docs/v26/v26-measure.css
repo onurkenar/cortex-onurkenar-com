@@ -1,0 +1,9 @@
+/* 8.12 Ölçüm (2026-11-15) — 8.2–8.11'in pr* ve bl* sınıflarını kullanır; önek "ms". Kaynak docs/v26/v26-measure.css → docs/v26/olcum_ekle.py */
+.msGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 12px}
+.msTak{display:grid;gap:8px}.msTak>.prF{max-width:260px}
+.msTT{display:grid;gap:6px}.msTT [role=row]{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr) 72px;gap:8px;align-items:center;font-size:13.5px}
+.msTH{font-size:12px;font-weight:700;opacity:.75}.msTT .control{height:34px;padding:4px 8px;min-width:0}.msInc{font-variant-numeric:tabular-nums;text-align:right}
+.msOut{margin:8px 0;padding:10px 12px;border:1px dashed var(--line,#cfd5dd);border-radius:8px;overflow-wrap:anywhere;font-size:13px}
+.msUL{display:grid;grid-template-columns:auto minmax(0,.8fr) minmax(0,2fr) auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line,#edf0f3);font-size:13px}.msUL code{overflow-wrap:anywhere}
+.msRL{list-style:none;margin:0;padding:0;columns:2;column-gap:24px;font-size:13.5px}.msRL li{padding:3px 0;break-inside:avoid}
+@media (max-width:640px){.msTT [role=row]{grid-template-columns:1fr 1fr 1fr;}.msTT [role=row]>span:first-child{grid-column:1/-1;font-weight:600}.msTT .msTH>span:first-child{display:none}.msInc{text-align:left}.msUL{grid-template-columns:1fr auto}.msUL code{grid-column:1/-1}.msRL{columns:1}}

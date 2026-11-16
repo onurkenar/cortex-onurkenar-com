@@ -1,0 +1,49 @@
+/* 8.2 Ürün ve Hizmetler kayıt düzenleyicisi (2026-11-15). Kaynak docs/v26/v26-products.css → docs/v26/urun_hizmet_ekle.py */
+.prBox{display:grid;gap:12px;max-width:1100px;container-type:inline-size}
+.prHead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid #e1e4e8;border-radius:12px;background:#f7f8fa}
+.prHead p{margin:0;font-size:13.5px;color:#4a5059}
+.prEmpty{margin:0;padding:14px;border:1px dashed #c9ced6;border-radius:12px;color:#4a5059}
+.prList{display:grid;gap:8px}
+.prRec{border:1px solid #e1e4e8;border-radius:12px;background:#fff}
+.prRec>summary{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;list-style:none}
+.prRec>summary::-webkit-details-marker{display:none}
+.prRec>summary:before{content:"›";display:inline-block;transition:transform .15s;color:#6b727c;font-weight:800}
+.prRec[open]>summary:before{transform:rotate(90deg)}
+.prName{font-weight:800;font-size:15px}
+.prChip{padding:2px 8px;border-radius:999px;background:#edf2ff;color:#1d45b8;font-size:12px;font-weight:700}
+.prPath{font-size:12.5px;color:#4a5059}
+.prWarn{font-size:12.5px;color:#a35200}
+.prPct{margin-left:auto;font-size:12.5px;font-weight:800;color:#6b727c}
+.prPct.ok{color:#1f9d55}
+.prBody{padding:0 14px 14px;display:grid;gap:12px}
+.prSec{margin:0;padding:12px;border:1px solid #e9ecef;border-radius:10px;display:grid;gap:10px}
+.prSec>legend{padding:0 6px;font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#59606b}
+.prF{display:grid;gap:4px}
+.prF>span{font-size:13px;font-weight:700;color:#3f454d}
+.prF .control{max-width:none;width:100%;box-sizing:border-box}
+.prMeter{font-size:12px;color:#5c636c}
+.prMeter.bad{color:#a35200;font-weight:700}
+.prHint{margin:0;font-size:12.5px;color:#5c636c}
+.prKw{display:grid;gap:6px;overflow-x:auto}
+.prKwH,.prKwR{display:grid;grid-template-columns:minmax(150px,2fr) repeat(4,minmax(96px,1fr)) repeat(3,minmax(64px,.7fr)) minmax(84px,.9fr) 36px;gap:6px;align-items:center;min-width:980px}
+.prKwH span{font-size:12px;font-weight:700;color:#6b727c}
+.prKwR .control{min-width:0;width:100%;box-sizing:border-box;padding-left:8px;padding-right:8px}
+.prDel{height:36px;border:1px solid #dde0e4;border-radius:9px;background:#fff;color:#6b727c;font-size:18px;line-height:1;cursor:pointer}
+.prDel:hover,.prDel:focus-visible{border-color:#d93025;color:#d93025}
+.prAdd{justify-self:start;padding:7px 12px;border:1px dashed #9aa3ad;border-radius:10px;background:transparent;color:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.prAdd:hover,.prAdd:focus-visible{border-color:#1f6feb;color:#1f6feb}
+.prOrph{padding:12px;border:1px solid #f0b46b;border-radius:12px;background:#fff7ec}
+.prOrph h3{margin:0 0 4px;font-size:14px}
+.prOrph p{margin:0 0 8px;font-size:13px;color:#6b3a00}
+.prOrphR{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) 36px;gap:8px;align-items:center;margin-top:6px}
+@container (max-width:560px){.prOrphR{grid-template-columns:minmax(0,1fr) 36px}.prOrphR .control{grid-column:1/-1}}
+[data-theme="dark"] .prHead{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .prHead p,[data-theme="dark"] .prEmpty,[data-theme="dark"] .prPath,[data-theme="dark"] .prHint,[data-theme="dark"] .prMeter{color:var(--muted)}
+[data-theme="dark"] .prRec{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .prSec{border-color:var(--border)}
+[data-theme="dark"] .prSec>legend,[data-theme="dark"] .prKwH span,[data-theme="dark"] .prF>span{color:var(--muted)}
+[data-theme="dark"] .prChip{background:#1a2440;color:#9db8ff}
+[data-theme="dark"] .prMeter.bad,[data-theme="dark"] .prWarn{color:#f3c27a}
+[data-theme="dark"] .prDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
+[data-theme="dark"] .prOrph{background:#2a1f10;border-color:#9a6a2a}
+[data-theme="dark"] .prOrph p{color:#f3d3a4}

@@ -3,7 +3,8 @@
 
 Kullanım: python3 -I docs/v26/yapilacaklar_ekle.py web-proje-gelistirme.html
 <style id="v26-todo"> ← docs/v26/v26-todo.css (v26-mobile stilinden önce), <script id="v26-todo"> ← docs/v26/v26-todo.js
-(v26-mobile betiğinden önce; bütün üretici fonksiyonlardan ve sayfa sarmalayıcılarından sonra). Bloklar varsa yerinde
+(v26-mobile betiğinden önce; bütün üretici fonksiyonlardan ve sayfa sarmalayıcılarından sonra). Adım Adım Kılavuz
+(docs/v26/v26-guide.{css,js}) aynı blokların sonuna eklenir. Bloklar varsa yerinde
 yenilenir (sıra korunur, tekrar çalıştırmada dosya aynı kalır). DATA'ya dokunmaz.
 """
 import os
@@ -13,6 +14,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 CSS = open(os.path.join(HERE, "v26-todo.css"), encoding="utf-8").read().strip()
 JS = open(os.path.join(HERE, "v26-todo.js"), encoding="utf-8").read().strip()
+# Adım Adım Kılavuz (2026-11-15): aynı bloklara, Yapılacaklar betiğinden sonra eklenir (#todoPage'i o oluşturur).
+CSS += "\n" + open(os.path.join(HERE, "v26-guide.css"), encoding="utf-8").read().strip()
+JS += "\n" + open(os.path.join(HERE, "v26-guide.js"), encoding="utf-8").read().strip()
 
 
 def main():
