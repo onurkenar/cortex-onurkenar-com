@@ -7,3 +7,51 @@
 .rvFlt{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:8px;margin:6px 0 10px}
 .rvFlt .control,.rvOR .control{height:36px;padding:4px 10px;font-size:13.5px;min-width:0}
 @media (max-width:640px){.rvFlt{grid-template-columns:1fr 1fr}.rvFlt [data-lq]{grid-column:1/-1}.rvOR{grid-template-columns:1fr auto}.rvOR code{grid-column:1/-1}}
+/* Ortak Bilgiler › Rakip Listesi satır düzenleyicisi (2026-11-16, v26-rivlist.js): marka adı, web sitesi, tür, sil; Rakip Analizi
+   açıkken satırın altında "Ayrıntılar". Yerleşim alan genişliğine göre (container query): ≥ 560 px tek satır + sütun başlıkları. */
+.rivBox{container-type:inline-size;display:grid;gap:8px}
+.rivList{display:grid;gap:8px}
+.rivHead,.rivRow{display:grid;grid-template-columns:minmax(130px,1fr) minmax(150px,1.2fr) 130px 40px;grid-template-areas:"nm ur tr del" "dt dt dt dt";gap:8px;align-items:start}
+.rivHead{grid-template-areas:"nm ur tr del"}
+.rivHead span{font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.rivCell{display:grid;gap:4px;min-width:0}
+.rivCN{grid-area:nm}.rivCU{grid-area:ur}.rivCT{grid-area:tr}.rivDel{grid-area:del}.rivDet{grid-area:dt;margin:0 0 6px}
+.rivL{display:none;font-size:12px;font-weight:700;color:#6b727c;padding-left:2px}
+.rivRow .control{max-width:none;min-width:0;width:100%;box-sizing:border-box}
+.rivDel{height:44px;border:1px solid #dde0e4;border-radius:11px;background:#fff;color:#6b727c;font-size:20px;line-height:1;cursor:pointer}
+.rivDel:hover,.rivDel:focus-visible{border-color:#d93025;color:#d93025}
+.rivAdd{justify-self:start;padding:8px 14px;border:1px dashed #9aa3ad;border-radius:10px;background:transparent;color:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.rivAdd:hover,.rivAdd:focus-visible{border-color:#1f6feb;color:#1f6feb}
+.rivTop{margin-bottom:4px}
+.rivNote{margin:4px 0 0}
+@container (max-width:559px){.rivHead{display:none}.rivL{display:block}.rivRow{grid-template-columns:minmax(0,1fr) 40px;grid-template-areas:"nm del" "ur del" "tr del" "dt dt";padding:10px;border:1px solid #e3e6ea;border-radius:12px}.rivDel{margin-top:20px}}
+[data-theme="dark"] .rivHead span,[data-theme="dark"] .rivL{color:var(--muted)}
+[data-theme="dark"] .rivDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
+[data-theme="dark"] .rivDel:hover,[data-theme="dark"] .rivDel:focus-visible{border-color:#f28b82;color:#f28b82}
+[data-theme="dark"] .rivAdd{border-color:var(--border)}
+[data-theme="dark"] .rivAdd:hover,[data-theme="dark"] .rivAdd:focus-visible{border-color:#8ab4f8;color:#8ab4f8}
+@container (max-width:559px){[data-theme="dark"] .rivRow{border-color:var(--border)}}
+/* Rakip kartı (2026-11-16, kullanıcı isteği: "farklı bir alanmış gibi duruyor, tasarımı iyileştirelim"): Rakip Analizi açıkken
+   (kutuda .rivDet varsa) her rakip tek kart — üstte ad / site / tür / sil, altta kartın bölmesi olarak "Ayrıntılar" (kendi
+   çerçevesi yok, üstte ince ayırıcı). Sütun başlıkları kartın iç boşluğuna hizalanır; "kaynak eksik" sağda uyarı çipi. */
+.rivBox:has(.rivDet) .rivList{gap:12px}
+.rivBox:has(.rivDet) .rivHead{padding:0 13px}
+.rivBox:has(.rivDet) .rivRow{padding:12px 12px 0;gap:10px 8px;border:1px solid #e1e4e8;border-radius:14px;background:#f7f8fa;overflow:hidden;transition:border-color .15s,box-shadow .15s}
+.rivBox:has(.rivDet) .rivRow:not(:has(>.rivDet)){padding-bottom:12px}
+.rivBox:has(.rivDet) .rivRow:focus-within,.rivBox:has(.rivDet) .rivRow:has(>.rivDet[open]){border-color:#9db3d9;box-shadow:0 1px 6px rgba(31,111,235,.08)}
+.rivRow>.rivDet{margin:0 -12px;border:0;border-top:1px solid #e1e4e8;border-radius:0;background:transparent}
+.rivRow>.rivDet>summary{padding:9px 14px;border-radius:0}
+.rivRow>.rivDet>summary:hover{background:rgba(31,111,235,.05)}
+.rivRow>.rivDet>summary .prName{font-size:14px}
+.rivRow>.rivDet[open]{background:#fff}
+.rivRow>.rivDet[open]>summary{border-bottom:1px solid #edf0f3}
+.rivRow>.rivDet>.prBody{padding-top:12px}
+.rivDet .prPct+.prPct{margin-left:0}
+.rivDet .prPct:has(+.prPct){padding:2px 8px;border-radius:999px;background:#fff4e5;color:#a35a00;font-weight:700}
+[data-theme="dark"] .rivBox:has(.rivDet) .rivRow{background:rgba(255,255,255,.025);border-color:var(--border)}
+[data-theme="dark"] .rivBox:has(.rivDet) .rivRow:focus-within,[data-theme="dark"] .rivBox:has(.rivDet) .rivRow:has(>.rivDet[open]){border-color:#4b6a9e;box-shadow:none}
+[data-theme="dark"] .rivRow>.rivDet{border-top-color:var(--border);background:transparent}
+[data-theme="dark"] .rivRow>.rivDet>summary:hover{background:rgba(138,180,248,.06)}
+[data-theme="dark"] .rivRow>.rivDet[open]{background:rgba(0,0,0,.18)}
+[data-theme="dark"] .rivRow>.rivDet[open]>summary{border-bottom-color:var(--border)}
+[data-theme="dark"] .rivDet .prPct:has(+.prPct){background:#3a2a12;color:#f5b971}

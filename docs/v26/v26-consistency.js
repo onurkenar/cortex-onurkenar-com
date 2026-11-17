@@ -39,6 +39,8 @@ const CF=[
  {a:"design_surface",av:["Skeuomorphism","Neumorphism","Claymorphism"],b:"design_surface_treatment",bv:["Flat"],m:"Gölge ve hacme dayanan yüzey efekti “Flat — Düz” yüzey işlemesiyle çelişir. Yüzey İşleme “Elevated”, “Layered” ya da “Textured” olmalı ya da yüzey efekti değiştirilmeli."},
  {a:"design_surface",av:["None Surface"],b:"design_surface_treatment",bv:["Glass"],m:"“Yüzey efekti yok — düz yüzeyler” seçiliyken Yüzey İşleme “Glass — Cam” olamaz; ikisinden biri değiştirilmeli."},
  // A4 — tema yaklaşımı × renk teması
+ {a:"brand_shadow",av:["Flat"],b:"brand_border_width",bv:["0"],m:"“Gölgesiz (kenarlıkla ayrışma)” seçiliyken kart kenarlığı 0 px olursa kartlar zeminden ne gölgeyle ne çizgiyle ayrılır. Kart Kenarlık Kalınlığı en az 1 px olmalı ya da Gölge ve Derinlik “Yumuşak gölgeler” / “Katmanlı” seçilmeli."},
+ {a:"design_surface_treatment",av:["Flat"],b:"brand_border_width",bv:["0"],m:"“Flat — Düz” yüzeyler ince kenarlıkla ayrılır; kart kenarlığı 0 px seçilince kartların sınırı kaybolur. Kart Kenarlık Kalınlığı en az 1 px olmalı ya da Yüzey İşleme “Elevated” gibi gölgeli bir seçenek olmalı."},
  {a:"design_theme_interaction",av:["Dark-First"],b:"color_theme",bv:["Light"],m:"“Dark-First — Önce Koyu Tasarım” yalnız açık temalı bir siteyle çelişir. Renk teması “Dark Mode”, “Light + Dark Mode” ya da “System Preference” olmalı ya da Dark-First kaldırılmalı."},
  // A1 / A2 — onay modu bir onay penceresi ister
  {a:"gg_cm_mode",av:["basic","advanced"],b:"cookie_manager",bv:["None"],m:"Onay modu, ziyaretçiden onay alan bir çerez / onay penceresiyle çalışır; Çerez / Onay Platformu “Yok” iken onay modu uygulanamaz."}];

@@ -1848,9 +1848,9 @@
       "type": "textarea",
       "placeholder": "Örn. Örnek Diş Kliniği | https://www.ornekdis.com | Doğrudan\nGülüş Merkezi | https://www.gulusmerkezi.com | Dolaylı",
       "rule": "Rakip listesi (ad | site adresi | tür): {value}. Rakip analizi, içerik planının rakip sekmesi ve SEO denetimindeki rakip karşılaştırması yalnız bu listeyi kullanır; listede olmayan bir firma rakip olarak raporlanmadan önce listeye eklenir. Rakiplerin adı, markası ve logosu reklam ve içeriklerde kullanılmaz.",
-      "explanation": "Her satıra bir rakip yazın: “Ad | site adresi | tür”. Tür isteğe bağlıdır: Doğrudan (aynı müşteriye aynı ihtiyaç için satış yapan), Dolaylı (aynı ihtiyacı başka yolla karşılayan) ya da İkame. Adres yoksa yalnız adı yazabilirsiniz.",
+      "explanation": "Her rakibi ayrı satıra girin: marka adı, web sitesi ve tür; yeni rakip için “Rakip ekle”. Tür isteğe bağlıdır: Doğrudan (aynı müşteriye aynı ihtiyaç için satış yapan), Dolaylı (aynı ihtiyacı başka yolla karşılayan) ya da İkame. Web sitesi yoksa yalnız adı yazabilirsiniz. Pazarlama › Rakip Analizi açıkken her rakibin altındaki “Ayrıntılar”da profil, ürün, mesaj, kanallar, ölçek, şube, fiyat ve reklam bilgileri girilir.",
       "scenario": "Rakip analizi yapılacak, içerik planına rakip sekmesi eklenecek ya da SEO denetiminde rakiplerle karşılaştırma istenecekse doldurun; üç çalışma da aynı listeyi kullanır.",
-      "example": "“Örnek Diş Kliniği | https://www.ornekdis.com | Doğrudan” satırı içerik planında RK-01 kimlikli rakip olarak görünür, SEO denetiminde de bu sitenin hizmet sayfaları sizinkilerle karşılaştırılır.",
+      "example": "Marka adı “Örnek Diş Kliniği”, web sitesi https://www.ornekdis.com, türü Doğrudan olan satır içerik planında RK-01 kimlikli rakip olur; Ayrıntılar'a girilen fiyat ve şube bilgileri planın Rakipler sekmesine aktarılır, SEO denetiminde de bu sitenin hizmet sayfaları sizinkilerle karşılaştırılır.",
       "agents": [
        "poz:pazarlama:market_research_analytics/rekabet-ve-sektor-istihbarati-muduru"
       ]

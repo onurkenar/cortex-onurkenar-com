@@ -7280,6 +7280,507 @@
      "campaign": "campaign"
     }
    }
+  },
+  {
+   "id": "brand_icon_stroke",
+   "section": "brand",
+   "after": "brand_icons",
+   "label": "İkon Çizgi Kalınlığı",
+   "en": "Icon Stroke Width",
+   "type": "select",
+   "explanation": "Çizgi (outline) ve iki tonlu ikonlarda çizginin kalınlığını belirler. Değer 24 × 24 px ikon ızgarasına göredir: ikon 16 px'e küçülünce çizgi oranla incelir, 32 px'e büyüyünce kalınlaşır. Dolgulu (solid) ikonlarda çizgi kullanılmaz; bu karar yalnız çizgili ikonlara uygulanır.",
+   "rule": "İkon çizgi kalınlığı: {label}. Değer 24 × 24 px ikon ızgarasına göredir ve --icon-stroke token'ıyla bütün çizgili ikonlarda aynı uygulanır (SVG stroke-width); farklı kalınlıktaki ikon setleri karıştırılmaz, ikonun çizgisi yanındaki metnin ağırlığıyla uyumlu tutulur. Dolgulu ikonlarda bu değer kullanılmaz.",
+   "scenario": "Sitede çizgi (outline) ya da iki tonlu ikon kullanılacaksa; özellikle menü, özellik kartları ve form alanlarındaki ikonların aynı kalınlıkta görünmesi isteniyorsa.",
+   "example": "2 px seçilen bir sigorta sitesinde araç, konut ve sağlık ikonlarının çizgileri aynı kalınlıktadır; 1 px seçilen lüks bir saat markasında ikonlar ince ve zarif görünür.",
+   "options": [
+    {
+     "value": "1",
+     "label": "1 px — Çok ince",
+     "explanation": "En ince çizgi; zarif ve sakin görünür. Eksisi: 16 px ve altında, açık zeminde ya da düşük kontrastlı ekranda zor seçilir.",
+     "scenario": "Lüks marka, mücevher, butik otel; ikonların büyük (32 px ve üstü) kullanıldığı sayfalar.",
+     "example": "Bir saat markasının hizmet kartlarındaki ikonlar ince bir kalemle çizilmiş gibi durur."
+    },
+    {
+     "value": "1.25",
+     "label": "1,25 px — İnce",
+     "explanation": "İnce ama 20–24 px boyutta okunabilir çizgi. Sakin ve ferah tasarımlara uyar.",
+     "scenario": "Minimal, İskandinav ve editoryal tasarımlar; mimarlık ve iç mimarlık siteleri.",
+     "example": "Bir iç mimarlık stüdyosunun menüsündeki ikonlar hafif ve havadar görünür."
+    },
+    {
+     "value": "1.5",
+     "label": "1,5 px — Dengeli",
+     "explanation": "İnce ile standart arasında; modern ürün arayüzlerinde sık kullanılır (Heroicons çizgi seti bu kalınlıktadır).",
+     "scenario": "Kurumsal, SaaS ve fintech siteleri; metin ağırlığı normal olan arayüzler.",
+     "example": "Bir muhasebe yazılımının panelindeki menü ikonları metinle aynı ağırlıkta, dengeli görünür."
+    },
+    {
+     "value": "1.75",
+     "label": "1,75 px — Orta",
+     "explanation": "Standarda yakın, biraz daha yumuşak çizgi. Küçük boyutta 1,5 px'ten daha net seçilir.",
+     "scenario": "İkonların 16–20 px küçük boyutta çok kullanıldığı kurumsal siteler ve paneller.",
+     "example": "Bir kargo firmasının sipariş takip ekranındaki küçük durum ikonları net seçilir."
+    },
+    {
+     "value": "2",
+     "label": "2 px — Standart (önerilen)",
+     "explanation": "Web'deki en yaygın değer; Lucide, Feather ve Tabler ikon setlerinin varsayılanı. Her boyutta okunur, çoğu tasarıma uyar.",
+     "scenario": "Belirgin bir stil gereksinimi yoksa varsayılan seçim; e-ticaret, hizmet ve kurumsal siteler.",
+     "example": "Bir e-ticaret sitesinde sepet, arama ve hesap ikonları her ekranda net ve tutarlı görünür."
+    },
+    {
+     "value": "2.5",
+     "label": "2,5 px — Kalın",
+     "explanation": "Belirgin, sıcak ve samimi çizgi. Eksisi: küçük boyutta ikonun iç boşlukları kapanabilir.",
+     "scenario": "Eğlenceli, çocuk, eğitim ve topluluk siteleri; yuvarlak köşeli, oyuncu tasarımlar.",
+     "example": "Bir çocuk eğitim platformunda kurs ikonları kalın ve yuvarlak çizgilerle çizilir."
+    },
+    {
+     "value": "3",
+     "label": "3 px — Çok kalın",
+     "explanation": "En kalın çizgi; güçlü ve grafik bir etki verir. Eksisi: yalnız 24 px ve üstünde temiz görünür, detaylı ikonlarda şekil bozulur.",
+     "scenario": "Neobrütalist, Memphis ve poster etkili tasarımlar; büyük ikonlu kampanya sayfaları.",
+     "example": "Bir festival sitesinde bilet, takvim ve konum ikonları kalın siyah çizgilerle çizilir."
+    }
+   ],
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "recommend": {
+    "field": "page_design_style",
+    "map": {
+     "Luxury": [
+      "1"
+     ],
+     "Art Deco": [
+      "1"
+     ],
+     "Japandi": [
+      "1.25"
+     ],
+     "Minimalism": [
+      "1.25"
+     ],
+     "Scandinavian": [
+      "1.25"
+     ],
+     "Editorial Magazine": [
+      "1.25"
+     ],
+     "Typography-Led": [
+      "1.25"
+     ],
+     "Swiss Style": [
+      "1.25"
+     ],
+     "Monochromatic": [
+      "1.25"
+     ],
+     "Corporate Modern": [
+      "1.5"
+     ],
+     "SaaS Product-Led": [
+      "1.5"
+     ],
+     "Fintech Trust": [
+      "1.5"
+     ],
+     "AI-Native": [
+      "1.5"
+     ],
+     "Dark-First": [
+      "1.5"
+     ],
+     "Glassmorphism": [
+      "1.5"
+     ],
+     "Liquid Glass": [
+      "1.5"
+     ],
+     "Web3 Digital Native": [
+      "1.5"
+     ],
+     "Futuristic": [
+      "1.5"
+     ],
+     "Data Viz-Led": [
+      "1.5"
+     ],
+     "Cinematic": [
+      "1.5"
+     ],
+     "Photography-Led": [
+      "1.5"
+     ],
+     "Immersive": [
+      "1.5"
+     ],
+     "Playful": [
+      "2.5"
+     ],
+     "Claymorphism": [
+      "2.5"
+     ],
+     "Memphis": [
+      "2.5"
+     ],
+     "Illustration-Led": [
+      "2.5"
+     ],
+     "Hand-Drawn": [
+      "2.5"
+     ],
+     "Y2K": [
+      "2.5"
+     ],
+     "Brutalism": [
+      "3"
+     ],
+     "Neobrutalism": [
+      "3"
+     ],
+     "Neo-Memphis": [
+      "3"
+     ],
+     "Flat Design": [
+      "2"
+     ],
+     "Flat 2.0": [
+      "2"
+     ],
+     "Material Design": [
+      "2"
+     ],
+     "Art Direction-Led": [
+      "2"
+     ],
+     "Eco Sustainable": [
+      "2"
+     ],
+     "Constructivism": [
+      "2"
+     ],
+     "Bauhaus": [
+      "2"
+     ],
+     "Geometric": [
+      "2"
+     ],
+     "Maximalism": [
+      "2"
+     ],
+     "Anti-Design": [
+      "2"
+     ],
+     "Vintage": [
+      "2"
+     ],
+     "Synthwave": [
+      "2"
+     ],
+     "Vaporwave": [
+      "2"
+     ],
+     "Retro-Futurism": [
+      "2"
+     ],
+     "Pixel Art": [
+      "2"
+     ],
+     "Grunge": [
+      "2"
+     ],
+     "Psychedelic": [
+      "2"
+     ],
+     "Collage": [
+      "2"
+     ],
+     "Organic": [
+      "2"
+     ],
+     "Paper-Cut": [
+      "2"
+     ],
+     "Skeuomorphism": [
+      "2"
+     ],
+     "Neumorphism": [
+      "2"
+     ],
+     "Liquid Fluid": [
+      "2"
+     ],
+     "3D-Led": [
+      "2"
+     ],
+     "Isometric": [
+      "2"
+     ],
+     "Cyberpunk": [
+      "2"
+     ],
+     "Industrial": [
+      "2"
+     ],
+     "Gradient": [
+      "2"
+     ],
+     "Duotone": [
+      "2"
+     ],
+     "Kinetic Type": [
+      "2"
+     ]
+    }
+   }
+  },
+  {
+   "id": "brand_border_width",
+   "section": "brand",
+   "after": "brand_shadow",
+   "label": "Kart Kenarlık Kalınlığı",
+   "en": "Card Border Width",
+   "type": "select",
+   "explanation": "Kart, panel ve kutuların etrafındaki çizginin kalınlığını belirler. Değer --border-width token'ı olur ve bütün kartlarda aynı kullanılır. Form alanlarının kenarlığı ve klavye odak halkası bundan ayrı tutulur (odak halkası en az 2 px).",
+   "rule": "Kart ve panel kenarlık kalınlığı: {label}. Değer --border-width token'ı olarak tanımlanır ve bütün kart, panel, açılır menü ve kutularda aynı kullanılır; rastgele kenarlık kalınlığı yazılmaz. Kenarlık kartın sınırını göstermenin tek yoluysa zeminle en az 3:1 kontrastlı olur (WCAG 1.4.11); klavye odak halkası bu değerden bağımsız olarak en az 2 px'tir.",
+   "scenario": "Kartlar, paneller ve kutular kullanılacak her sitede; özellikle gölgesiz (kenarlıkla ayrışan) tasarımlarda ve neobrütalist gibi kalın çerçeveli stillerde.",
+   "example": "1 px seçilen bir kurumsal sitede hizmet kartları ince gri çizgiyle ayrılır; 3 px seçilen neobrütalist bir sitede kartlar kalın siyah çerçeveyle durur.",
+   "options": [
+    {
+     "value": "0",
+     "label": "Kenarlıksız (0 px)",
+     "explanation": "Kartlarda çizgi yoktur; kart zeminden gölge ya da zemin rengiyle ayrılır. Gölgesiz bir tasarımda kart sınırı kaybolabilir.",
+     "scenario": "Yumuşak gölgeli, katmanlı ya da tam genişlik görselli tasarımlar; Neumorphism, Claymorphism.",
+     "example": "Bir otel sitesinde oda kartları yalnız hafif gölgeyle zeminden ayrılır, çizgi görünmez."
+    },
+    {
+     "value": "1",
+     "label": "1 px — İnce (önerilen)",
+     "explanation": "Web'deki en yaygın kenarlık; kartı belirgin ama sessizce ayırır.",
+     "scenario": "Belirgin bir stil gereksinimi yoksa varsayılan; kurumsal, SaaS, e-ticaret ve içerik siteleri.",
+     "example": "Bir danışmanlık sitesinde hizmet kartları açık gri, ince bir çizgiyle çevrelenir."
+    },
+    {
+     "value": "1.5",
+     "label": "1,5 px — Hafif belirgin",
+     "explanation": "İnceden biraz daha görünür; yüksek çözünürlüklü ekranlarda net, standart ekranda 1 ile 2 px arasında görünür.",
+     "scenario": "Açık zeminde kartların daha net ayrışması istenen sade tasarımlar.",
+     "example": "Bir fintech sitesinde fiyat kartları biraz daha belirgin bir çizgiyle ayrılır."
+    },
+    {
+     "value": "2",
+     "label": "2 px — Belirgin",
+     "explanation": "Kartın çerçevesi tasarımın parçası olur; grafik ve canlı bir görünüm verir.",
+     "scenario": "Düz (flat), Memphis, oyuncu ve illüstrasyonlu tasarımlar; çizgi ikonlarla uyumlu kartlar.",
+     "example": "Bir çocuk etkinlik sitesinde etkinlik kartları renkli, 2 px çerçeveyle çizilir."
+    },
+    {
+     "value": "3",
+     "label": "3 px — Kalın",
+     "explanation": "Güçlü, poster etkili çerçeve. Eksisi: çok kartlı sayfada kalabalık görünebilir.",
+     "scenario": "Neobrütalist ve brütalist tasarımlar; kampanya ve lansman sayfaları.",
+     "example": "Bir tasarım ajansının proje kartları kalın siyah çerçeve ve kaydırılmış sert gölgeyle durur."
+    },
+    {
+     "value": "4",
+     "label": "4 px — Çok kalın",
+     "explanation": "En kalın çerçeve; dikkat çekici, grafik etki. Yalnız az sayıda, büyük kartta kullanılmalıdır.",
+     "scenario": "Neobrütalist kampanya sayfaları, öne çıkarılan tek fiyat ya da duyuru kartı.",
+     "example": "Bir festival sitesinde bilet kartı 4 px siyah çerçeveyle sayfanın geri kalanından ayrışır."
+    }
+   ],
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "recommend": {
+    "field": "page_design_style",
+    "map": {
+     "Neumorphism": [
+      "0"
+     ],
+     "Claymorphism": [
+      "0"
+     ],
+     "Skeuomorphism": [
+      "0"
+     ],
+     "Liquid Fluid": [
+      "0"
+     ],
+     "3D-Led": [
+      "0"
+     ],
+     "Immersive": [
+      "0"
+     ],
+     "Cinematic": [
+      "0"
+     ],
+     "Photography-Led": [
+      "0"
+     ],
+     "Gradient": [
+      "0"
+     ],
+     "Memphis": [
+      "2"
+     ],
+     "Playful": [
+      "2"
+     ],
+     "Pixel Art": [
+      "2"
+     ],
+     "Bauhaus": [
+      "2"
+     ],
+     "Constructivism": [
+      "2"
+     ],
+     "Flat Design": [
+      "2"
+     ],
+     "Hand-Drawn": [
+      "2"
+     ],
+     "Anti-Design": [
+      "2"
+     ],
+     "Neobrutalism": [
+      "3"
+     ],
+     "Brutalism": [
+      "3"
+     ],
+     "Neo-Memphis": [
+      "3"
+     ],
+     "Minimalism": [
+      "1"
+     ],
+     "Scandinavian": [
+      "1"
+     ],
+     "Japandi": [
+      "1"
+     ],
+     "Swiss Style": [
+      "1"
+     ],
+     "Flat 2.0": [
+      "1"
+     ],
+     "Material Design": [
+      "1"
+     ],
+     "Typography-Led": [
+      "1"
+     ],
+     "Art Direction-Led": [
+      "1"
+     ],
+     "Editorial Magazine": [
+      "1"
+     ],
+     "Monochromatic": [
+      "1"
+     ],
+     "Dark-First": [
+      "1"
+     ],
+     "Corporate Modern": [
+      "1"
+     ],
+     "SaaS Product-Led": [
+      "1"
+     ],
+     "Fintech Trust": [
+      "1"
+     ],
+     "Web3 Digital Native": [
+      "1"
+     ],
+     "AI-Native": [
+      "1"
+     ],
+     "Eco Sustainable": [
+      "1"
+     ],
+     "Luxury": [
+      "1"
+     ],
+     "Geometric": [
+      "1"
+     ],
+     "Maximalism": [
+      "1"
+     ],
+     "Art Deco": [
+      "1"
+     ],
+     "Vintage": [
+      "1"
+     ],
+     "Y2K": [
+      "1"
+     ],
+     "Synthwave": [
+      "1"
+     ],
+     "Vaporwave": [
+      "1"
+     ],
+     "Retro-Futurism": [
+      "1"
+     ],
+     "Grunge": [
+      "1"
+     ],
+     "Psychedelic": [
+      "1"
+     ],
+     "Illustration-Led": [
+      "1"
+     ],
+     "Collage": [
+      "1"
+     ],
+     "Organic": [
+      "1"
+     ],
+     "Paper-Cut": [
+      "1"
+     ],
+     "Glassmorphism": [
+      "1"
+     ],
+     "Liquid Glass": [
+      "1"
+     ],
+     "Isometric": [
+      "1"
+     ],
+     "Futuristic": [
+      "1"
+     ],
+     "Cyberpunk": [
+      "1"
+     ],
+     "Industrial": [
+      "1"
+     ],
+     "Duotone": [
+      "1"
+     ],
+     "Data Viz-Led": [
+      "1"
+     ],
+     "Kinetic Type": [
+      "1"
+     ]
+    }
+   }
   }
  ],
  "optionAdd": [

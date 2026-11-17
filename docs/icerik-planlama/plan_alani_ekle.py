@@ -80,6 +80,13 @@ L[first:first] = mv
 #    eklendiğinde tekrar çalıştırma ilk çalıştırmayla aynı sırayı versin), sonra sırayla yeniden yerleştirilir.
 SRC_IDS = {x["id"] for x in src["fields"]}
 L[:] = [x for x in L if x["id"] not in SRC_IDS]
+# kaynaktan çıkarılan (önceden bu betiğin eklediği) alanlar DATA'dan da kalkar (2026-11-16: ip_rv_list → Ortak Bilgiler › Rakip Listesi)
+STALE = [x for x in kit.get("added", []) if x not in SRC_IDS]
+if STALE:
+    L[:] = [x for x in L if x["id"] not in STALE]
+    for x in STALE:
+        FI.pop(x, None)
+        kit["added"].remove(x)
 for spec in src["fields"]:
     f = copy.deepcopy(spec)
     after = f.pop("after")

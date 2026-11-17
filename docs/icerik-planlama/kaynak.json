@@ -123,10 +123,10 @@
   },
   {
    "id": "ip_rivals",
-   "name": "Rakipler & Adaylar",
-   "en": "Competitors & Prospects",
+   "name": "Rakip Aksiyonları & Adaylar",
+   "en": "Competitor Actions & Prospects",
    "icon": "⚑",
-   "desc": "Ortak Bilgiler › Rakip Listesi'ndeki her rakip için profil, konumlandırma, ölçek, şube, fiyat ve reklam bilgileri kaynaklarıyla; rakiplere karşı aksiyonlar; rakip rehber / pazaryeri sitelerinde listelenen potansiyel müşteri adayları",
+   "desc": "Rakiplere karşı aksiyonlar ve rakip rehber / pazaryeri sitelerinde listelenen potansiyel müşteri adayları; rakip listesi ve her rakibin ayrıntıları (profil, ölçek, şube, fiyat, reklam) Ortak Bilgiler › Rakipler › Rakip Listesi’nde",
    "refs": [
     "oc_competitors"
    ]
@@ -509,32 +509,9 @@
    ]
   },
   {
-   "id": "ip_rv_list",
-   "section": "ip_rivals",
-   "after": "",
-   "label": "Rakip Kayıtları",
-   "en": "Competitor Records",
-   "type": "records",
-   "explanation": "Ortak Bilgiler › Rakip Listesi'ndeki her satır bir kayıttır; liste orada düzenlenir, burada ayrıntı girilir. Alan grupları Pazarlama › Rakip Analizi › Toplanacak Bilgiler'e göre açılır: profil (tür, öncelik, segment, coğrafya, güçlü / zayıf yön), ürün ve hizmetler, mesaj ve konumlandırma (değer önerisi, mesaj, kanıt), kanallar ve sosyal hesaplar, ölçek (organik trafik, anahtar kelime, ücretli kelime; kendi markanızla karşılaştırma), şube / lokasyon ve Google İşletme Profilleri, fiyatlar ve fiyat durumu, reklamlar (Google Reklam Şeffaflık özeti; Meta Reklam Kütüphanesi kayıtları 8. menü › Meta Ads'ten bağlanır). Kanıt Kuralı “her bilgi kaynak bağlantısı ve tarihle” ise kaynağı eksik grup işaretlenir. Her rakip için Claude araştırma talimatı kopyalanır, dönen JSON içe aktarılır.",
-   "rule": "{value}",
-   "scenario": "Rakiplerin ürün, fiyat, kanal ve reklam stratejisi düzenli izlenecekse ve plan dosyasındaki Rakipler sekmesi kaynaklı verilerle dolacaksa önem kazanır.",
-   "example": "Üç doğrudan rakip için profil ve konumlandırma girilir; birinin 12 şubesi ve paket fiyatları kaynak bağlantılarıyla, Google'da son 30 günde 20–30 metin reklamı ve Meta'da 4 aktif video reklamı kaydedilir.",
-   "showIf": [
-    {
-     "field": "mk_comp_on",
-     "in": [
-      true
-     ]
-    }
-   ],
-   "agents": [
-    "poz:pazarlama:growth_conversion/cro-ve-deney-yonetimi-muduru"
-   ]
-  },
-  {
    "id": "ip_rv_actions",
    "section": "ip_rivals",
-   "after": "ip_rv_list",
+   "after": "",
    "label": "Karşı Aksiyonlar",
    "en": "Counter Actions",
    "type": "records",
@@ -904,7 +881,7 @@
    ]
   },
   "ip_rivals": {
-   "purpose": "Bu bölüm rakip analizinin verisini tutar: Ortak Bilgiler'deki her rakibin profil, konumlandırma, ölçek, şube, fiyat ve reklam bilgileri kaynaklarıyla, rakiplere karşı aksiyonlar ve rakip sitelerde görünen potansiyel müşteri adayları. Hangi bilgilerin toplanacağı, kanıt kuralı, önceliklendirme ve güncelleme sıklığı Pazarlama › Rakip Analizi kararlarından gelir; şablonun Rakipler ve Potansiyel Müşteri Adayları sekmeleri bu kayıtlarla açılır.",
+   "purpose": "Bu bölüm rakip analizinden çıkan işleri tutar: rakiplere karşı aksiyonlar ve rakip sitelerde görünen potansiyel müşteri adayları. Rakip listesi ve her rakibin profil, konumlandırma, ölçek, şube, fiyat ve reklam bilgileri tek yerde, Ortak Bilgiler › Rakipler › Rakip Listesi’nde girilir (her rakip satırının “Ayrıntılar”ı); hangi bilgilerin toplanacağı, kanıt kuralı, önceliklendirme ve güncelleme sıklığı Pazarlama › Rakip Analizi kararlarından gelir. Şablonun Rakipler ve Potansiyel Müşteri Adayları sekmeleri bu kayıtlarla açılır.",
    "criteria": [
     "Her bilginin kaynağı ve tarihi var mı? Kanıt kuralı açıksa kaynaksız bilgi plana yazılmaz.",
     "Rakip türü ve önceliği belli mi? Doğrudan rakipler P0–P1, dolaylı ve ikame rakipler daha düşük öncelikle izlenir.",

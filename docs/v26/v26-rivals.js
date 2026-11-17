@@ -1,17 +1,20 @@
-/* 8.11 Rakipler & Adaylar (2026-11-15). Kullanıcı kararları: rakip kaydı tam ayrıntı (profil + konumlandırma + ölçek + şube +
+/* 8.11 Rakip Aksiyonları & Adaylar (2026-11-15; 2026-11-16 rakip kayıtları Ortak Bilgiler › Rakipler › Rakip Listesi'ne taşındı —
+   kullanıcı isteği "1.7.1 Rakip Listesi ile 8.10.1 Rakip Kayıtları aynı içerik, 1.7.1'de birleştirelim": her rakip satırının altında
+   açılır "Ayrıntılar" (yalnız Pazarlama › Rakip Analizi açıkken); satır düzenleyicisi ana betikte (v26-rivlist.js, rivInput) ve
+   ayrıntıları buradaki window.RVD'den alır; ip_rv_list alanı veriden kalktı, değer anahtarı state.ip_rv_list aynen). Kullanıcı kararları: rakip kaydı tam ayrıntı (profil + konumlandırma + ölçek + şube +
    fiyat + reklam özeti), ekler karşı aksiyon listesi / reklam kayıtlarını bağlama (8.10 Meta rakip reklam kaydı → metaReklamlar,
    Google Reklam Şeffaflık özeti) / Claude araştırma talimatı + JSON içe aktarma / kanıt-kaynak zorunluluğu; potansiyel müşteri
    adayları elle + CSV / JSON içe aktarma; rakip listesi Ortak Bilgiler › Rakip Listesi'nde kalır (ocRivals), 8. menüde her satır
    bir kayıttır. Bölüm ip_rivals, üç alan (type "records"):
-   ip_rv_list    showIf mk_comp_on — state.ip_rv_list = {slug: {alan: metin}} (alanlar FLD tablosunda), state.ip_rv_biz = {kw, trafik, ucretliKw}
+   (ip_rv_list   alan değil, Ortak Bilgiler › Rakip Listesi'nin ayrıntıları) — state.ip_rv_list = {slug: {alan: metin}} (alanlar FLD tablosunda), state.ip_rv_biz = {kw, trafik, ucretliKw}
    ip_rv_actions showIf mk_comp_on + mk_comp_actions — state.ip_rv_actions = {A-01: {hamle, avantaj, strateji, aktivite, kpi, sorumlu, termin, durum, rakip}}
    ip_leads      showIf mk_comp_on — state.ip_leads = {AD-0001: {ad, kisiTuru, kategori, il, ilce, …, oncelik, durum, not, sonTemas}}
    Alan grupları Pazarlama › Rakip Analizi › Toplanacak Bilgiler'e göre (boşsa hepsi). Aktarım rakipler.liste[] (temel dışa
    aktarımın RK-NN sırasına ayrıntı eklenir), rakipler.biz / kaynak / kaynakTarih / aksiyonlar[], adaylar{} (KILAVUZ 18 · Rakipler,
    18.20). Kaynak docs/v26/v26-rivals.{js,css} → docs/v26/rakip_ekle.py */
 (function(){
-const FL="ip_rv_list",FA="ip_rv_actions",FD="ip_leads";
-if(!FI[FL]||!FI[FD]||!window.REC||typeof ocRivals!=="function")return;
+const FL="ip_rv_list",FC="oc_competitors",FA="ip_rv_actions",FD="ip_leads";
+if(!FI[FC]||!FI[FD]||!window.REC||typeof ocRivals!=="function")return;
 const OPEN=new Set(),LV={q:"",durum:"",oncelik:"",n:100,imp:false};let RIMP=false;
 const sv=id=>{let f=FI[id];return f&&shown(f)?state[id]:undefined};
 const clean=s=>String(s||"").replace(/\s*\(önerilen\)/g,"").trim();
@@ -22,6 +25,7 @@ const st=k=>{let v=state[k];return v&&typeof v==="object"&&!Array.isArray(v)?v:{
 const slug=x=>norm(String(x||"")).replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")||"rakip";
 const numv=v=>{let s=String(v??"").trim().replace(/\s/g,"");if(!s)return null;s=/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)?s.replace(/\./g,"").replace(",","."):s.replace(",",".");let n=parseFloat(s);return isFinite(n)?n:null};
 const today=()=>new Date().toISOString().slice(0,10);
+const compOn=()=>sv("mk_comp_on")===true&&shown(FI[FC]);
 /* rakip listesi (Ortak Bilgiler) → kayıt anahtarı */
 function rivals(){let seen={};return ocRivals().map((x,i)=>{let k=slug(x.ad||x.url),n=2;while(seen[k])k=slug(x.ad||x.url)+"-"+n++;seen[k]=1;return Object.assign({k,rk:"RK-"+String(i+1).padStart(2,"0")},x)})}
 const rkOf=k=>(rivals().find(x=>x.k===k)||{}).rk;
@@ -53,23 +57,38 @@ function ctl(f,k,p,label,kind,val,opts,ph){let a=`data-f="${f}" data-m="${E(p)}"
  return `<label class="prF"><span>${E(label)}</span>${kind==="text"?`<input class="control" type="text" ${a} value="${E(val||"")}" placeholder="${E(ph||"")}" autocomplete="off">`:`<textarea class="control" rows="${kind==="area"?3:4}" ${a} placeholder="${E(ph||"")}">${E(val||"")}</textarea>`}</label>`}
 const sec=(t,x)=>`<fieldset class="prSec"><legend>${E(t)}</legend>${x}</fieldset>`;
 function shell(f,cls,head,inner){return `<div class="field" data-field-id="${f.id}"><h2>${E(f.label)}</h2><div class="explain">${E(f.explanation)}</div><div class="prBox rvBox ${cls}">${head}${inner}</div>${rule(f)?`<div class="rule"><b>BU SEÇİMDEN OLUŞAN KURAL</b>${E(rule(f))}</div>`:""}</div>`}
-function commit(fid,key,redraw){let S=st(key);if(Object.keys(S).length)state[key]=S;else delete state[key];faAuto(fid);save();renderRules();renderProgress();if(redraw)refreshField(fid)}
+function commit(fid,key,redraw){if(fid===FL)fid=FC;let S=st(key);if(Object.keys(S).length)state[key]=S;else delete state[key];faAuto(fid);save();renderRules();renderProgress();if(redraw)refreshField(fid)}
 /* ---------- 1) Rakip kayıtları ---------- */
 function metaOf(x){let M=FI.ip_meta_rival&&shown(FI.ip_meta_rival)?st("ip_meta_rival"):{},n=norm(x.ad);return Object.values(M).filter(r=>norm(r.rakip||"")===n)}
-function rForm(x,r){let k=x.k,F=fields(),by={};F.forEach(f=>(by[f[3]]=by[f[3]]||[]).push(f));
+function rForm(x,r){let k=x.k,F=fields().filter(f=>f[0]!=="tur"),by={};F.forEach(f=>(by[f[3]]=by[f[3]]||[]).push(f));
  let body=Object.keys(by).map(g=>{let inner=by[g].map(f=>ctl(FL,k,f[0],f[1],f[2],r[f[0]]||(f[0]==="tur"?x.tur:""),f[4],typeof f[4]==="string"?f[4]:"")).join("");
   if(g==="ads"){let M=metaOf(x);inner+=`<p class="prHint">Meta Reklam Kütüphanesi kaydı: ${M.length?`<b>${M.length}</b> reklam (${M.filter(m=>!m.son).length} aktif) — plan dosyasında rakibin Meta reklamları özetine dönüşür.`:"yok (8. menü › Meta Ads › Rakip Meta Reklam Kaydı)."}</p>`}
   return sec(G[g],`<div class="rvGrid">${inner}</div>`)}).join("");
  let ms=missing(r);return `${ms.length?`<p class="prMeter bad rvMiss">Kanıt kuralı: eksik ${E(ms.join(", "))}.</p>`:`<p class="prMeter rvMiss"></p>`}${body}<div class="blAct"><button type="button" class="prAdd" data-rprompt ${q(k)}>Claude araştırma talimatını kopyala</button></div>`}
 function fill(r){let F=fields().filter(f=>!/Kaynak|Tarih/.test(f[0])&&f[0]!=="tur");return Math.round(F.filter(f=>String(r[f[0]]||"").trim()).length/Math.max(1,F.length)*100)}
-function rHead(x,r){let p=fill(r),ms=missing(r);return `<span class="prPath">${E(x.rk)}</span><span class="prName">${E(x.ad)}</span><span class="prChip">${E(r.tur||x.tur||"Sınıflandırılmadı")}</span>${r.oncelik?`<span class="prChip">${E(r.oncelik)}</span>`:""}${ms.length?`<span class="prPct" title="${E("Eksik kaynak: "+ms.join(", "))}">kaynak eksik</span>`:""}<span class="prPct${p===100?" ok":""}">%${p}</span>`}
-function listBox(f){let S=st(FL),L=rivals(),keys=new Set(L.map(x=>x.k)),orph=Object.keys(S).filter(k=>!keys.has(k)),B=st("ip_rv_biz");
+function rHead(x,r){let p=fill(r),ms=missing(r),t=x.tur||r.tur||"Sınıflandırılmadı";return `<span class="prPath">${E(x.rk)}</span><span class="prName">Ayrıntılar</span><span class="prChip">${E(t)}</span>${r.oncelik?`<span class="prChip">${E(r.oncelik)}</span>`:""}${ms.length?`<span class="prPct" title="${E("Eksik kaynak: "+ms.join(", "))}">kaynak eksik</span>`:""}<span class="prPct${p===100?" ok":""}">%${p}</span>`}
+/* Ortak Bilgiler › Rakip Listesi satır düzenleyicisinin (v26-rivlist.js) ayrıntı parçaları */
+function dRow(j){let x=rivals()[j];if(!x)return "";let r=st(FL)[x.k]||{},o=OPEN.has(x.k);return `<details class="prRec rivDet" data-rvk="${E(x.k)}"${o?" open":""}><summary>${rHead(x,r)}</summary><div class="prBody">${o?rForm(x,r):""}</div></details>`}
+function dTop(){let L=rivals(),S=st(FL),B=st("ip_rv_biz"),n=L.filter(x=>S[x.k]&&Object.keys(S[x.k]).length).length;
  let biz=groups().includes("seo")?sec("Biz (karşılaştırma için)",`<div class="rvGrid">${[["trafik","Aylık organik trafik"],["kw","Organik anahtar kelime"],["ucretliKw","Ücretli anahtar kelime"]].map(([p,l])=>ctl("biz","biz",p,l,"text",B[p])).join("")}</div>`):"";
- let rows=L.map(x=>`<details class="prRec" data-rvk="${E(x.k)}"${OPEN.has(x.k)?" open":""}><summary>${rHead(x,S[x.k]||{})}</summary><div class="prBody">${OPEN.has(x.k)?rForm(x,S[x.k]||{}):""}</div></details>`).join("");
- let or=orph.length?`<div class="rvOrph"><p class="prHint">Listede adı bulunmayan kayıtlar (rakip adı Ortak Bilgiler'de değişmiş olabilir):</p>${orph.map(o=>`<div class="rvOR"><code>${E(o)}</code><select class="control" data-native data-relink="${E(o)}" aria-label="${E(o)} kaydını bağla"><option value="">Şu rakibe bağla…</option>${L.filter(x=>!S[x.k]).map(x=>`<option value="${E(x.k)}">${E(x.ad)}</option>`).join("")}</select><button type="button" class="prAdd blDelRec" data-odel="${E(o)}">Sil</button></div>`).join("")}</div>`:"";
  let imp=RIMP?`<div class="blImp"><label class="prF"><span>Claude'un döndürdüğü JSON ({"rakipler": [ … ]} ya da tek rakip nesnesi)</span><textarea class="control" rows="8" id="rvImpTx" aria-label="İçe aktarılacak JSON"></textarea></label><div class="blAct"><button type="button" class="btn dark" data-rimpgo>İçe aktar</button><button type="button" class="btn" data-rimpx>Vazgeç</button></div><p class="prHint" id="rvImpMsg" aria-live="polite"></p></div>`:"";
- let head=`<div class="prHead"><p><b>${L.length}</b> rakip · liste Ortak Bilgiler › Rakip Listesi'nden · bilgiler: ${E(groups().map(g=>G[g]).join(", "))}${strict()?" · her bilgi kaynak ve tarihle":""}.</p><div class="blAct"><button type="button" class="prAdd" data-rimp>İçe aktar (JSON)</button><button type="button" class="btn" onclick="goToField('oc_rivals','oc_competitors')">Listeyi düzenle →</button></div></div>${imp}`;
- return shell(f,"rvList",head,biz+(L.length?`<div class="prList">${rows}</div>`:`<p class="prEmpty">Ortak Bilgiler › Rakip Listesi boş. Her satıra “Ad | site | tür” yazın.</p>`)+or)}
+ return `<div class="prHead rivTop"><p>Rakip analizi açık: her rakibin altındaki <b>Ayrıntılar</b>'da ${E(groups().map(g=>G[g]).join(", "))} bilgileri girilir${strict()?" — her bilgi kaynak ve tarihle":""}. <b>${n}</b> / ${L.length} rakibin ayrıntısı var.</p><div class="blAct"><button type="button" class="prAdd" data-rimp>İçe aktar (JSON)</button></div></div>${imp}${biz}`}
+function dBottom(){let S=st(FL),L=rivals(),keys=new Set(L.map(x=>x.k)),orph=Object.keys(S).filter(k=>!keys.has(k));
+ return orph.length?`<div class="rvOrph"><p class="prHint">Listede adı bulunmayan kayıtlar (satır silinmiş ya da ad değişmiş olabilir):</p>${orph.map(o=>`<div class="rvOR"><code>${E(o)}</code><select class="control" data-native data-relink="${E(o)}" aria-label="${E(o)} kaydını bağla"><option value="">Şu rakibe bağla…</option>${L.filter(x=>!S[x.k]).map(x=>`<option value="${E(x.k)}">${E(x.ad)}</option>`).join("")}</select><button type="button" class="prAdd blDelRec" data-odel="${E(o)}">Sil</button></div>`).join("")}</div>`:""}
+function dNote(){let n=Object.keys(st(FL)).length;return n?`<p class="prHint rivNote">${n} rakibin ayrıntıları (profil, fiyat, şube, reklam …) kayıtlı; Pazarlama › Rakip Analizi kapalı olduğu için gösterilmiyor ve dışa aktarılmıyor. <button type="button" class="linkBtn" onclick="goToField('mk_comp','mk_comp_on')">Kararı aç →</button></p>`:""}
+/* ad değişince (satır sayısı aynı): ayrıntılar, açık durum ve karşı aksiyon / aday bağlantıları yeni anahtara */
+function dRemap(before,after){let S=st(FL),N={},mv={};Object.keys(S).forEach(k=>{if(!before.includes(k))N[k]=S[k]});before.forEach((k,i)=>{if(k!==after[i])mv[k]=after[i];if(S[k])N[after[i]]=S[k]});
+ if(Object.keys(N).length)state[FL]=N;else delete state[FL];
+ [...OPEN].forEach(k=>{if(mv[k]){OPEN.delete(k);OPEN.add(mv[k])}});
+ [FA,FD].forEach(id=>{let T=st(id),ch=0;Object.values(T).forEach(r=>{if(r&&mv[r.rakip]){r.rakip=mv[r.rakip];ch=1}});if(ch)state[id]=T})}
+/* DOM: dolu satırın ayrıntısı yoksa ekle, boşalan satırınkini kaldır, anahtarı ve özeti güncelle (odak satırda kalır) */
+function dSync(b){if(!b||!compOn())return;let ks=rivals(),S=st(FL),j=0;
+ b.querySelectorAll(".rivRow").forEach(r=>{let d=r.querySelector(":scope>.rivDet"),filled=rivLine({name:r.querySelector(".rivName").value,url:r.querySelector(".rivUrl").value})!=="";
+  if(!filled){if(d)d.remove();return}let x=ks[j++];if(!x)return;if(!d){r.insertAdjacentHTML("beforeend",dRow(j-1));return}
+  if(d.dataset.rvk!==x.k){d.dataset.rvk=x.k;d.querySelectorAll("[data-r]").forEach(e=>{if(e.dataset.r!=='"biz"')e.dataset.r=JSON.stringify(x.k)})}
+  d.querySelector(":scope>summary").innerHTML=rHead(x,S[x.k]||{})})}
+window.RVD={on:compOn,top:dTop,row:dRow,bottom:dBottom,note:dNote,keys:()=>rivals().map(x=>x.k),has:k=>!!st(FL)[k],remap:dRemap,sync:dSync,
+ drop:k=>{let S=st(FL);delete S[k];OPEN.delete(k);state[FL]=S;commit(FL,FL,false)}};
 function rPrompt(x){let F=fields().filter(f=>f[0]!=="tur"),D=sv("mk_comp_data");
  return `${x.ad}${x.url?` (${x.url})`:""} için rakip araştırması yap ve sonucu yalnız JSON olarak ver: {"rakipler": [{"ad": "${x.ad}", … }]}.
 Alanlar (metin; satırlı alanlarda her öğe ayrı satır, sütunlar " | " ile):
@@ -86,19 +105,17 @@ function rImport(txt){let d;try{d=JSON.parse(txt)}catch(e){return "JSON okunamad
   if(o.reklamlar&&typeof o.reklamlar==="object"){let g=o.reklamlar;s("gDonem",g.donem);s("gUrl",g.aramaUrl||g.kaynak);s("gTarih",g.tarih);s("gIlk",g.ilk);s("gSon",g.son);s("gAnaliz",g.analiz);if(Array.isArray(g.toplam)){s("gMin",g.toplam[0]);s("gMax",g.toplam[1])}if(g.bicim)r.gBicim=[g.bicim.Metin||0,g.bicim.Görsel||0,g.bicim.Video||0].join(" | ");if(Array.isArray(g.mesajlar))r.gMesaj=g.mesajlar.join("\n")}
   ["gMesaj","bolge","fiyatDurum"].forEach(k=>{if(Array.isArray(o[k]))r[k]=o[k].join("\n")});Object.keys(r).forEach(k=>{if(r[k]==="")delete r[k]});ok++});
  state[FL]=S;commit(FL,FL,true);return `${ok} rakip güncellendi${no.length?`; listede bulunamayan: ${no.join(", ")} (önce Ortak Bilgiler › Rakip Listesi'ne ekleyin)`:""}.`}
+/* Rakip Listesi kuralına eklenir (ayrıntı girilmişse) */
 function listRule(){let S=st(FL),L=rivals(),n=L.filter(x=>S[x.k]&&Object.keys(S[x.k]).length).length,ms=L.filter(x=>S[x.k]&&missing(S[x.k]).length).length,by=t=>L.filter(x=>((S[x.k]||{}).tur||x.tur||"Sınıflandırılmadı")===t).length;
- return `Rakip kayıtları: ${L.length} rakip (${TUR.filter(t=>by(t)).map(t=>t+" "+by(t)).join(", ")||"sınıflandırılmadı"}), ${n} rakibin ayrıntısı girildi; toplanan bilgiler: ${groups().map(g=>G[g]).join(", ")}.${strict()?` Her bilgi kaynak bağlantısı ve tarihle yazılır${ms?` (${ms} rakipte kaynak eksik)`:""}.`:""} Doğrulanamayan bilgi boş bırakılır, tahmin yazılmaz; rakip reklamı ve içeriği birebir kopyalanmaz. Kayıtlar plan dosyasının Rakipler sekmesine aktarılır.`}
-window.REC[FL]={isset:()=>Object.keys(st(FL)).length>0,rule:listRule,sum:()=>{let n=Object.keys(st(FL)).length;return n?n+" rakip kaydı":""},box:listBox,
- closed:`<section class="gCard"><h3>Bu alt menü şu an kapalı</h3><p>Rakipler & Adaylar, Pazarlama › Rakip Analizi “Evet” iken kullanılır.</p><p><button type="button" class="btn dark" onclick="goToField('mk_comp','mk_comp_on')">Kararı aç →</button></p></section>`};
+ return `Rakip ayrıntıları: ${L.length} rakip (${TUR.filter(t=>by(t)).map(t=>t+" "+by(t)).join(", ")||"sınıflandırılmadı"}), ${n} rakibin ayrıntısı girildi; toplanan bilgiler: ${groups().map(g=>G[g]).join(", ")}.${strict()?` Her bilgi kaynak bağlantısı ve tarihle yazılır${ms?` (${ms} rakipte kaynak eksik)`:""}.`:""} Doğrulanamayan bilgi boş bırakılır, tahmin yazılmaz; rakip reklamı ve içeriği birebir kopyalanmaz. Ayrıntılar plan dosyasının Rakipler sekmesine aktarılır.`}
 /* ---------- 2) Karşı aksiyonlar ---------- */
 const ADUR=["Açık","Devam","Tamam","İptal"];
 function aForm(id,r){let k=id,R=rivals().map(x=>[x.k,x.ad]);return `<div class="rvGrid">${ctl(FA,k,"hamle","Rakibin hamlesi *","area",r.hamle)}${ctl(FA,k,"strateji","Karşı strateji *","area",r.strateji)}${ctl(FA,k,"avantaj","Bizim avantajımız","text",r.avantaj)}${ctl(FA,k,"aktivite","Aktivite","text",r.aktivite)}${ctl(FA,k,"kpi","KPI","text",r.kpi)}${ctl(FA,k,"sorumlu","Sorumlu","text",r.sorumlu)}${ctl(FA,k,"termin","Termin","text",r.termin,null,"YYYY-AA-GG")}${ctl(FA,k,"durum","Durum","sel",r.durum||"Açık",ADUR)}${R.length?ctl(FA,k,"rakip","Rakip","sel",r.rakip,R):""}</div><div class="blAct"><button type="button" class="prAdd blDelRec" data-del ${q(id)}>Aksiyonu sil</button></div>`}
 const late=r=>DRE.test(r.termin||"")&&r.termin<today()&&!["Tamam","İptal"].includes(r.durum||"Açık");
 function aHead(id,r){let x=rivals().find(y=>y.k===r.rakip);return `<span class="prPath">${E(id)}</span><span class="prName">${E(r.hamle||"Hamle yazılmadı")}</span>${x?`<span class="prChip">${E(x.ad)}</span>`:""}<span class="prChip">${E(r.durum||"Açık")}</span>${late(r)?`<span class="prPct">Termin geçti</span>`:""}`}
 const sortK=S=>Object.keys(S).sort((a,b)=>(+((a.match(/\d+/)||[0])[0]))-(+((b.match(/\d+/)||[0])[0])));
-function actBox(f){let S=st(FA),ids=sortK(S);return shell(f,"rvAct",`<div class="prHead"><p><b>${ids.length}</b> aksiyon · ${ids.filter(i=>!["Tamam","İptal"].includes(S[i].durum||"Açık")).length} açık.</p><div class="blAct"><button type="button" class="prAdd" data-add>+ Aksiyon ekle</button></div></div>`,ids.length?`<div class="prList">${ids.map(id=>`<details class="prRec" data-aid="${E(id)}"${OPEN.has(id)?" open":""}><summary>${aHead(id,S[id])}</summary><div class="prBody">${OPEN.has(id)?aForm(id,S[id]):""}</div></details>`).join("")}</div>`:`<p class="prEmpty">Henüz aksiyon yok. Rakip kayıtlarındaki hamlelere karşı stratejiyi burada planlayın.</p>`)}
+function actBox(f){let S=st(FA),ids=sortK(S);return shell(f,"rvAct",`<div class="prHead"><p><b>${ids.length}</b> aksiyon · ${ids.filter(i=>!["Tamam","İptal"].includes(S[i].durum||"Açık")).length} açık.</p><div class="blAct"><button type="button" class="prAdd" data-add>+ Aksiyon ekle</button></div></div>`,ids.length?`<div class="prList">${ids.map(id=>`<details class="prRec" data-aid="${E(id)}"${OPEN.has(id)?" open":""}><summary>${aHead(id,S[id])}</summary><div class="prBody">${OPEN.has(id)?aForm(id,S[id]):""}</div></details>`).join("")}</div>`:`<p class="prEmpty">Henüz aksiyon yok. Rakiplerin hamlelerine (Ortak Bilgiler › Rakip Listesi › Ayrıntılar) karşı stratejiyi burada planlayın.</p>`)}
 function actRule(){let S=st(FA),ids=sortK(S),op=ids.filter(i=>!["Tamam","İptal"].includes(S[i].durum||"Açık")),lt=ids.filter(i=>late(S[i]));return `Rekabet karşı aksiyonları: ${ids.length} aksiyon, ${op.length} açık${lt.length?`, ${lt.length} aksiyonun termini geçti`:""}. Her aksiyonda rakibin hamlesi ve karşı strateji zorunludur; sorumlu, termin ve KPI ile izlenir.`}
-if(FI[FA])window.REC[FA]={isset:()=>Object.keys(st(FA)).length>0,rule:actRule,sum:()=>{let n=Object.keys(st(FA)).length;return n?n+" aksiyon":""},box:actBox};
 /* ---------- 3) Potansiyel müşteri adayları ---------- */
 const KT=["İşletme","Gerçek kişi","Kamu"],AON=["A","B","C"],ADS=["Yeni","Arandı","Görüşüldü","Teklif","Kazanıldı","Kaybedildi","İlgilenmiyor"];
 const LF=[["ad","Ad *","text"],["kisiTuru","Kişi türü","sel",KT],["kategori","Kategori (virgülle)","text"],["il","İl","text"],["ilce","İlçe","text"],["mahalle","Mahalle","text"],["acikAdres","Açık adres","text"],["telefon","Telefon","text"],["whatsapp","WhatsApp","text"],["eposta","E-posta","text"],["web","Web (https://…)","text"],["instagram","Instagram (https://…)","text"],["calismaSaatleri","Çalışma saatleri","text"],
@@ -127,7 +144,9 @@ function lImport(t){t=String(t||"").trim();if(!t)return "Metin boş.";let A;if(/
  state[FD]=S;commit(FD,FD,true);return `${add} aday eklendi, ${up} aday güncellendi${skip?`, ${skip} satır atlandı (ad yok)`:""}.`}
 function leadRule(){let S=st(FD),ids=Object.keys(S),c=k=>ids.filter(i=>(S[i].durum||"Yeni")===k).length,gk=ids.filter(i=>S[i].kisiTuru==="Gerçek kişi").length;
  return `Potansiyel müşteri adayları: ${ids.length} aday${ids.length?` (Yeni ${c("Yeni")}, Teklif ${c("Teklif")}, Kazanıldı ${c("Kazanıldı")}; öncelik A ${ids.filter(i=>S[i].oncelik==="A").length})`:""}. Adaylar rakip rehber / pazaryeri sitelerinde listelenen işletmelerden yalnız kamuya açık bilgilerle derlenir; öncelik A / B / C, durum Yeni → Arandı → Görüşüldü → Teklif → Kazanıldı / Kaybedildi / İlgilenmiyor ile izlenir.${gk?` ${gk} gerçek kişi aday kişisel veridir: ilk temasta aydınlatma yapılır, izinsiz ticari ileti gönderilmez.`:""}`}
-window.REC[FD]={isset:()=>Object.keys(st(FD)).length>0,rule:leadRule,sum:()=>{let n=Object.keys(st(FD)).length;return n?n+" aday":""},box:leadBox};
+window.REC[FD]={isset:()=>Object.keys(st(FD)).length>0,rule:leadRule,sum:()=>{let n=Object.keys(st(FD)).length;return n?n+" aday":""},box:leadBox,
+ closed:`<section class="gCard"><h3>Bu alt menü şu an kapalı</h3><p>Rakip Aksiyonları & Adaylar, Pazarlama › Rakip Analizi “Evet” iken kullanılır. Rakip listesi ve her rakibin ayrıntıları Ortak Bilgiler › Rakipler › Rakip Listesi'ndedir.</p><p><button type="button" class="btn dark" onclick="goToField('mk_comp','mk_comp_on')">Kararı aç →</button></p></section>`};
+if(FI[FA])window.REC[FA]={isset:()=>Object.keys(st(FA)).length>0,rule:actRule,sum:()=>{let n=Object.keys(st(FA)).length;return n?n+" aksiyon":""},box:actBox};
 /* ---------- olaylar ---------- */
 const BOX={rvList:FL,rvAct:FA,rvLead:FD};
 function put(fid,k,p,v){if(fid==="biz"){let B=st("ip_rv_biz");if(v==="")delete B[p];else B[p]=v;if(Object.keys(B).length)state.ip_rv_biz=B;else delete state.ip_rv_biz;save();renderRules();return}
@@ -139,18 +158,18 @@ document.addEventListener("toggle",e=>{let d=e.target;if(!(d instanceof HTMLDeta
  if(!d.open){OPEN.delete(id);return}OPEN.add(id);if(b&&!b.children.length)b.innerHTML=x.rvk?rForm(rivals().find(y=>y.k===id)||{k:id,ad:id},st(FL)[id]||{}):x.aid?aForm(id,st(FA)[id]||{}):lForm(id,st(FD)[id]||{})},true);
 document.addEventListener("input",e=>{let t=e.target;if(!t.closest||!t.closest(".rvBox"))return;
  if(t.hasAttribute("data-lq")){LV.q=t.value;LV.n=100;clearTimeout(window.__lvT);window.__lvT=setTimeout(()=>{refreshField(FD);let n=document.querySelector(".rvLead [data-lq]");if(n){n.focus();n.setSelectionRange(n.value.length,n.value.length)}},250);return}
- if(!t.dataset.f)return;if(!requireProject()){refreshField(t.dataset.f==="biz"?FL:t.dataset.f);return}put(t.dataset.f,JSON.parse(t.dataset.r),t.dataset.m,t.value)},true);
+ if(!t.dataset.f)return;if(!requireProject()){refreshField(t.dataset.f==="biz"||t.dataset.f===FL?FC:t.dataset.f);return}put(t.dataset.f,JSON.parse(t.dataset.r),t.dataset.m,t.value)},true);
 document.addEventListener("change",e=>{let t=e.target;if(!t.closest||!t.closest(".rvBox"))return;
  if(t.hasAttribute("data-ld")){LV.durum=t.value;LV.n=100;refreshField(FD);return}if(t.hasAttribute("data-lo")){LV.oncelik=t.value;LV.n=100;refreshField(FD);return}
  if(t.dataset.relink!==undefined){if(!requireProject()||!t.value)return;let S=st(FL);S[t.value]=S[t.dataset.relink];delete S[t.dataset.relink];state[FL]=S;commit(FL,FL,true);return}
  if(t.matches("select[data-f]"))t.dispatchEvent(new Event("input",{bubbles:true}))},true);
-document.addEventListener("click",e=>{let b=e.target.closest&&e.target.closest(".rvBox button");if(!b)return;let box=b.closest(".rvBox"),fid=BOX[[...box.classList].find(c=>BOX[c])];
+document.addEventListener("click",e=>{let b=e.target.closest&&e.target.closest(".rvBox button");if(!b||b.matches(".rivDel,.rivAdd"))return;let box=b.closest(".rvBox"),fid=BOX[[...box.classList].find(c=>BOX[c])];
  if(b.hasAttribute("data-lmore")){LV.n+=100;refreshField(FD);return}
- if(b.hasAttribute("data-rprompt")){let k=JSON.parse(b.dataset.r),x=rivals().find(y=>y.k===k);if(!x)return;let tx=rPrompt(x);(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>{b.textContent="Talimat kopyalandı"},()=>{RIMP=true;refreshField(FL);let a=document.getElementById("rvImpTx");if(a){a.value=tx;a.select()}});window.__rvPrompt=tx;return}
- if(b.hasAttribute("data-rimp")){RIMP=true;refreshField(FL);return}if(b.hasAttribute("data-rimpx")){RIMP=false;refreshField(FL);return}
+ if(b.hasAttribute("data-rprompt")){let k=JSON.parse(b.dataset.r),x=rivals().find(y=>y.k===k);if(!x)return;let tx=rPrompt(x);(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>{b.textContent="Talimat kopyalandı"},()=>{RIMP=true;refreshField(FC);let a=document.getElementById("rvImpTx");if(a){a.value=tx;a.select()}});window.__rvPrompt=tx;return}
+ if(b.hasAttribute("data-rimp")){RIMP=true;refreshField(FC);return}if(b.hasAttribute("data-rimpx")){RIMP=false;refreshField(FC);return}
  if(b.hasAttribute("data-limp")){LV.imp=true;refreshField(FD);return}if(b.hasAttribute("data-limpx")){LV.imp=false;refreshField(FD);return}
  if(!requireProject())return;
- if(b.hasAttribute("data-rimpgo")){let m=rImport((document.getElementById("rvImpTx")||{}).value||"");RIMP=!/güncellendi/.test(m)||/bulunamayan/.test(m);refreshField(FL);let p=document.getElementById("rvImpMsg")||document.querySelector(".rvList .prHead p");if(p)p.insertAdjacentText("beforeend",p.id?m:" — "+m);return}
+ if(b.hasAttribute("data-rimpgo")){let m=rImport((document.getElementById("rvImpTx")||{}).value||"");RIMP=!/güncellendi/.test(m)||/bulunamayan/.test(m);refreshField(FC);let p=document.getElementById("rvImpMsg")||document.querySelector(".rvList .prHead p");if(p)p.insertAdjacentText("beforeend",p.id?m:" — "+m);return}
  if(b.hasAttribute("data-limpgo")){let m=lImport((document.getElementById("ldImpTx")||{}).value||"");LV.imp=!/eklendi/.test(m);refreshField(FD);let p=document.getElementById("ldImpMsg")||document.querySelector(".rvLead .prHead p");if(p)p.insertAdjacentText("beforeend",p.id?m:" — "+m);return}
  if(b.dataset.odel){if(!confirm("Bu kayıt silinsin mi?"))return;let S=st(FL);delete S[b.dataset.odel];state[FL]=S;commit(FL,FL,true);return}
  let S=st(fid);if(b.hasAttribute("data-add")){let id;if(fid===FA){let n=Object.keys(S).map(k=>+((k.match(/^A-(\d+)$/)||[])[1]||0)).reduce((a,c)=>Math.max(a,c),0)+1;id="A-"+String(n).padStart(2,"0");S[id]={durum:"Açık"}}else{let n=Object.keys(S).map(k=>+((k.match(/^AD-(\d+)$/)||[])[1]||0)).reduce((a,c)=>Math.max(a,c),0)+1;id="AD-"+String(n).padStart(4,"0");S[id]={ad:"",oncelik:"C",durum:"Yeni"};LV.q="";LV.durum="";LV.oncelik=""}
@@ -163,7 +182,7 @@ function metaSum(x){let M=metaOf(x);if(!M.length)return null;let il=M.map(m=>m.i
 function exportRivals(R){let S=st(FL),L=rivals(),gs=groups(),B=st("ip_rv_biz"),bt=nm(B.trafik),tar=[],notes=[];
  if(gs.includes("seo")&&R.biz){if(bt!=null)R.biz.trafik=bt;if(nm(B.kw)!=null)R.biz.kw=nm(B.kw);if(nm(B.ucretliKw)!=null)R.biz.ucretliKw=nm(B.ucretliKw)}
  (R.liste||[]).forEach((o,i)=>{let x=L[i];if(!x)return;let r=S[x.k]||{};let set=(k,v)=>{if(v!=null&&v!==""&&!(Array.isArray(v)&&!v.length))o[k]=v};
-  ["tur","oncelik","segment","cografya","anaUrun","urun","deger","mesaj","kanit","guclu","zayif","linkedin","meta","icerikSikligi","lead","kanalNot","fiyatModeli","fiyatSeviyesi"].forEach(k=>{if(fields().some(f=>f[0]===k))set(k,r[k])});
+  set("tur",x.tur||r.tur);["oncelik","segment","cografya","anaUrun","urun","deger","mesaj","kanit","guclu","zayif","linkedin","meta","icerikSikligi","lead","kanalNot","fiyatModeli","fiyatSeviyesi"].forEach(k=>{if(fields().some(f=>f[0]===k))set(k,r[k])});
   if(gs.includes("seo")){["trafik","kw","ucretliKw"].forEach(k=>o[k]=nm(r[k])??0);let t=nm(r.trafik),k2=nm(r.kw);if(t!=null||k2!=null)o.olcek=[t!=null?t.toLocaleString("tr-TR")+(bt?` (~${Math.round(t/bt*10)/10}× ${R.biz&&R.biz.ad||"biz"})`:""):"",k2!=null?k2.toLocaleString("tr-TR")+" KW":""].filter(Boolean).join(" · ");if(r.oTarih)tar.push(r.oTarih)}
   if(gs.includes("channels")&&lst(r.hesaplar).length){let h={};lst(r.hesaplar).forEach(l=>{let c=cells(l),p=norm(c[0]).replace(/\s+/g,"");p=p==="whatsapp"||p==="whatsappkanal"?"whatsappKanal":p;if(c[1])h[p]=c[2]&&/olası/i.test(c[2])?{url:c[1],guven:"Olası"}:c[1]});if(Object.keys(h).length)o.hesaplar=h}
   if(gs.includes("branches")){let bl=lst(r.bolge).map(l=>{let c=cells(l),n=nm(c[1]);return {ad:c[0],sayi:n!=null&&/^\d+$/.test(c[1])?n:c[1]||"",vurgu:/^(evet|e|x|true)$/i.test(c[2]||"")}}).filter(b=>b.ad&&b.sayi!=="");if(r.lokToplam||bl.length)o.lokasyon={toplam:nm(r.lokToplam),bolge:bl,...(r.lokNot?{not:r.lokNot}:{})};
@@ -178,10 +197,14 @@ function exportRivals(R){let S=st(FL),L=rivals(),gs=groups(),B=st("ip_rv_biz"),b
 function exportLeads(B){let S=st(FD),ids=lSorted(S).filter(i=>String(S[i].ad||"").trim());if(!ids.length)return;let RV=rivals(),pre=String(mkT("mk_prefix")||"").toUpperCase();
  B.adaylar={sekmeAd:"Potansiyel Müşteri Adayları",baslik:"Potansiyel müşteri adayları",donem:(B.donem&&B.donem.ad)||"",kaynak:"Rakip rehber / pazaryeri sitelerinde listelenen işletmeler; yalnız kamuya açık bilgiler.",kaynakTarih:ids.map(i=>S[i].toplama).filter(d=>DRE.test(d||"")).sort().pop()||"",notlar:["Gerçek kişi adaylarının iletişim bilgileri kişisel veridir; ilk temasta aydınlatma yapılır, ticari ileti izni olmadan toplu ileti gönderilmez."],oncelikKurali:"A: hedef segmentte, iletişim bilgisi doğrulanmış ve rakipte aktif; B: hedef segmentte, bilgi eksik; C: diğerleri.",
   liste:ids.map(i=>{let r=S[i],o={id:i,ad:r.ad};LKEYS.forEach(k=>{if(k==="ad"||!r[k])return;o[k]=r[k]});if(r.kategori)o.kategori=String(r.kategori).split(/[,|]/).map(y=>y.trim()).filter(Boolean);if(r.rakip){let x=RV.find(y=>y.k===r.rakip);if(x){o.rakip=x.rk;o.rakipAd=x.ad}else delete o.rakip}if(!AON.includes(o.oncelik))delete o.oncelik;if(!ADS.includes(o.durum))delete o.durum;["enlem","boylam"].forEach(k=>{if(o[k]!=null){let n=numv(String(o[k]).replace(".",","));if(n==null)delete o[k];else o[k]=Number(String(o[k]).replace(",","."))}});return o})}}
-if(typeof mkPlanData==="function"){const _pd=mkPlanData;mkPlanData=function(){let B=_pd.apply(this,arguments);try{if(B.rakipler&&shown(FI[FL]))exportRivals(B.rakipler);if(shown(FI[FD]))exportLeads(B)}catch(e){console.error("Rakip / aday aktarımı",e)}return B}}
-if(typeof mkIssues==="function"){const _mi=mkIssues;mkIssues=function(){let L=_mi.apply(this,arguments);if(!shown(FI[FL]))return L;let c=(fid,t)=>`<button type="button" class="linkBtn" onclick="goToField('ip_rivals','${fid}')">İçerik Planlama › Rakipler & Adaylar › ${t}</button>`,S=st(FL),RV=rivals();
- let ms=RV.filter(x=>S[x.k]&&missing(S[x.k]).length);if(ms.length)L.push(`${ms.length} rakip kaydında kanıt kuralına göre kaynak / tarih eksik (${ms.slice(0,5).map(x=>x.ad).join(", ")}) — ${c(FL,"Rakip Kayıtları")}.`);
+if(typeof mkPlanData==="function"){const _pd=mkPlanData;mkPlanData=function(){let B=_pd.apply(this,arguments);try{if(B.rakipler&&compOn())exportRivals(B.rakipler);if(shown(FI[FD]))exportLeads(B)}catch(e){console.error("Rakip / aday aktarımı",e)}return B}}
+if(typeof mkIssues==="function"){const _mi=mkIssues;mkIssues=function(){let L=_mi.apply(this,arguments);if(!compOn())return L;let c=(fid,t)=>`<button type="button" class="linkBtn" onclick="goToField('ip_rivals','${fid}')">İçerik Planlama › Rakip Aksiyonları & Adaylar › ${t}</button>`,S=st(FL),RV=rivals();
+ let ms=RV.filter(x=>S[x.k]&&missing(S[x.k]).length);if(ms.length)L.push(`${ms.length} rakibin ayrıntısında kanıt kuralına göre kaynak / tarih eksik (${ms.slice(0,5).map(x=>x.ad).join(", ")}) — <button type="button" class="linkBtn" onclick="goToField('oc_rivals','oc_competitors')">Ortak Bilgiler › Rakipler › Rakip Listesi</button>.`);
  if(FI[FA]&&shown(FI[FA])){let A=st(FA),inc=Object.keys(A).filter(i=>!A[i].hamle||!A[i].strateji),lt=Object.keys(A).filter(i=>late(A[i]));if(inc.length)L.push(`${inc.length} karşı aksiyonda hamle ya da strateji yok; dosyaya yazılmaz — ${c(FA,"Karşı Aksiyonlar")}.`);if(lt.length)L.push(`${lt.length} karşı aksiyonun termini geçti — ${c(FA,"Karşı Aksiyonlar")}.`)}
  let D=st(FD),bad=Object.keys(D).filter(i=>["web","instagram","rakipUrl"].some(k=>D[i][k]&&!URE.test(D[i][k])));if(bad.length)L.push(`${bad.length} adayda web / Instagram / rakip sayfası http(s) adresi değil — ${c(FD,"Adaylar")}.`);return L}}
-window.RV={rivals,rImport,lImport,rPrompt,missing,exportRivals};
+/* kural: Rakip Listesi kuralının sonuna ayrıntı özeti (ayrıntı girilmiş ve Rakip Analizi açıksa) */
+if(typeof ruleBase==="function"){const _rb=ruleBase;ruleBase=function(f){let r=_rb.apply(this,arguments);try{if(f&&f.id===FC&&r&&compOn()&&Object.keys(st(FL)).length)r+=" "+listRule()}catch(e){}return r}}
+window.RV={rivals,rImport,lImport,rPrompt,missing,exportRivals,listRule};
+/* betik yüklenmeden çizilmiş Rakip Listesi varsa ayrıntılarla yeniden çiz */
+if(compOn()&&document.querySelector('.field[data-field-id="oc_competitors"] .rivBox'))refreshField(FC);
 })();
