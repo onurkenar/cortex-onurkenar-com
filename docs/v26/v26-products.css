@@ -47,3 +47,19 @@
 [data-theme="dark"] .prDel{background:var(--surface);border-color:var(--border);color:var(--muted)}
 [data-theme="dark"] .prOrph{background:#2a1f10;border-color:#9a6a2a}
 [data-theme="dark"] .prOrph p{color:#f3d3a4}
+
+/* 2026-11-20 kelime tablosu: toplu ekleme */
+.prKwBulk{margin-top:10px}
+.prKwBulk>summary{cursor:pointer;font-size:13px;font-weight:700;color:#4b5563;width:max-content}
+.prKwBulk[open]>summary{margin-bottom:8px}
+.prKwBulk textarea{width:100%;box-sizing:border-box}
+.prKwBulk .prAdd{margin-top:8px}
+[data-theme="dark"] .prKwBulk>summary{color:var(--muted)}
+/* hücre etiketleri ve dar alan düzeni (2026-11-20): geniş alanda tek satır + başlık, 980 px altında her kelime üç satırlık kart */
+.prKw{container-type:inline-size}
+.prKwC{display:block;min-width:0}
+.prKwL{display:none}
+@container (max-width:979px){.prKwH{display:none}.prKwR{min-width:0;grid-template-columns:repeat(4,minmax(0,1fr)) 36px;padding:10px;border:1px solid #e5e7eb;border-radius:10px;row-gap:8px}.prKwR>.prKwC:first-child{grid-column:1/5;grid-row:1}.prKwR>.prDel{grid-column:5;grid-row:1;align-self:end}.prKwR>.prKwC:nth-child(n+2):nth-child(-n+5){grid-row:2}.prKwR>.prKwC:nth-child(n+6):nth-child(-n+9){grid-row:3}.prKwR>.prKwC:nth-child(2),.prKwR>.prKwC:nth-child(6){grid-column:1}.prKwR>.prKwC:nth-child(3),.prKwR>.prKwC:nth-child(7){grid-column:2}.prKwR>.prKwC:nth-child(4),.prKwR>.prKwC:nth-child(8){grid-column:3}.prKwR>.prKwC:nth-child(5),.prKwR>.prKwC:nth-child(9){grid-column:4}.prKwL{display:block;font-size:11.5px;font-weight:700;color:#6b727c;margin:0 0 3px}}
+@container (max-width:420px){.prKwR{grid-template-columns:repeat(2,minmax(0,1fr)) 36px}.prKwR>.prKwC:first-child{grid-column:1/3}.prKwR>.prDel{grid-column:3}.prKwR>.prKwC:nth-child(n+2){grid-row:auto!important}.prKwR>.prKwC:nth-child(2n){grid-column:1!important}.prKwR>.prKwC:nth-child(2n+1):not(:first-child){grid-column:2!important}}
+[data-theme="dark"] .prKwR{border-color:var(--border)}
+[data-theme="dark"] .prKwL{color:var(--muted)}
