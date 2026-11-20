@@ -41,12 +41,12 @@ def R(t, u, n):
     return {'title': t, 'url': u, 'note': n}
 
 
-TOOLS = ['ahrefs', 'awt', 'semrush', 'seranking', 'similarweb', 'moz', 'sistrix', 'majestic', 'screamingfrog', 'ubersuggest', 'mangools', 'serpstat']
-SUITE = ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'mangools', 'serpstat']   # proje kurulan paketler
+TOOLS = ['ahrefs', 'awt', 'semrush', 'seranking', 'similarweb', 'moz', 'sistrix', 'majestic', 'screamingfrog', 'ubersuggest', 'mangools', 'serpstat', 'semalt']
+SUITE = ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'mangools', 'serpstat', 'semalt']   # proje kurulan paketler
 GATE = [{'field': 'mk_st_tools', 'in': TOOLS}]
 GATE_SUITE = [{'field': 'mk_st_tools', 'in': SUITE}]
 GATE_CRAWL = [{'field': 'mk_st_tools', 'in': ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'serpstat', 'screamingfrog']}]
-GATE_RANK = [{'field': 'mk_st_tools', 'in': ['ahrefs', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'mangools', 'serpstat']}]
+GATE_RANK = [{'field': 'mk_st_tools', 'in': ['ahrefs', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'mangools', 'serpstat', 'semalt']}]
 GATE_RES = [{'field': 'mk_st_tools', 'in': [t for t in TOOLS if t != 'screamingfrog']}]
 
 sections, fields = [], []
@@ -138,6 +138,10 @@ fields.append({
           'Ahrefs / Semrush\'a göre daha düşük bütçeyle geniş araç seti isteniyorsa.',
           'Bir ajans Serpstat\'ta müşterinin rakip sorgularını çıkarır ve denetim raporu hazırlar.',
           'Serpstat verisi tahmindir; projeler şirket ya da ajans hesabında, devredilebilir şekilde açılır.'),
+        o('semalt', 'Semalt (Google SERP Tracker, Search Console Analytics)', 'Kiev merkezli bir SEO ajansının ücretsiz hesapla kullanılan araçları: Google sıralama takibi ve rakip alan adı karşılaştırması (site doğrulaması istemez), Search Console verisi paneli ve yapay zekâ görünürlüğü takibi; Public API ve MCP sunucusu var. Site denetimi ve backlink analizi araç olarak sunulmaz, yalnız ücretli ajans hizmetidir. Dikkat: Semalt 2014\'ten beri sitelere sahte yönlendirme trafiği (referans spam\'i) göndermekle suçlanır; şirket bunu reddeder.',
+          'Ücretsiz sıralama takibi ve rakip karşılaştırması isteniyorsa; ana veri kaynağı olarak değil, yardımcı araç olarak.',
+          'Pazarlama uzmanı 20 hizmet sorgusunun Google sırasını Semalt SERP Tracker\'da izler; aylık raporda bu veri “Semalt tahmini” etiketiyle verilir.',
+          'Semalt yalnız sıralama takibi ve rakip karşılaştırması için, şirket hesabıyla kullanılır; verisi “Semalt tahmini” etiketiyle raporlanır. Search Console bağlantısı yalnız şirketin kendi Google hesabıyla verilir. Semalt\'ın ücretli ajans hizmetleri (AutoSEO, FullSEO, bağlantı kurma) bu seçimle satın alınmış sayılmaz, ayrıca değerlendirilir. Semalt hakkındaki sahte yönlendirme (referans spam\'i) iddiaları nedeniyle GA4 raporlarında semalt.com ve bağlantılı alan adlarından gelen yönlendirmeler izlenir. MCP bağlantısında API anahtarı adrese parametre olarak yazılıyorsa o adres paylaşılmaz, anahtar gizli değer olarak saklanır.'),
         o('none', 'Harici SEO aracı kullanılmayacak', 'Yalnız Google Search Console, GA4 ve Bing Webmaster Tools kullanılır.',
           'Küçük ve yeni bir sitede ya da bütçe yokken; ölçüm Google ve Bing araçlarıyla yapılır.',
           'Yeni açılan bir kafe sitesi yalnız Search Console ve İşletme Profili istatistiklerini izler.',
@@ -158,7 +162,7 @@ fields.append({
         o('seranking', 'SE Ranking', 'Sıralama SE Ranking\'den alınır.', 'SE Ranking ana araçsa.', 'Müşteri raporu SE Ranking\'in rapor oluşturucusundan çıkar.'),
         o('moz', 'Moz Pro', 'Sıralama Moz Pro\'dan alınır.', 'Moz ana araçsa.', 'Rapordaki sıralama tablosu Moz Pro kampanyasından gelir.'),
         o('sistrix', 'Sistrix', 'Görünürlük Sistrix endeksinden alınır.', 'Sistrix ana araçsa.', 'Rapordaki görünürlük eğrisi Sistrix\'ten gelir.'),
-        o('other', 'Seçilen diğer araç (Ubersuggest, Mangools, Serpstat)', 'Sıralama seçilen diğer araçtan alınır; araç adı raporda yazılır.', 'Ana araç Ubersuggest, Mangools ya da Serpstat ise.', 'Rapordaki sıralama tablosu Serpstat\'tan gelir ve başlıkta araç adı yazılır.'),
+        o('other', 'Seçilen diğer araç (Ubersuggest, Mangools, Serpstat, Semalt)', 'Sıralama seçilen diğer araçtan alınır; araç adı raporda yazılır.', 'Ana araç Ubersuggest, Mangools, Serpstat ya da Semalt ise.', 'Rapordaki sıralama tablosu Serpstat\'tan gelir ve başlıkta araç adı yazılır.'),
         o('gsc', 'Search Console (araçlar yardımcı)', 'Ortalama konum ve tıklama Search Console\'dan; araçlar yalnız rakip ve fırsat için.', 'Gerçek veriye dayanmak isteniyorsa ya da yalnız ücretsiz Ahrefs Webmaster Tools varsa.', 'Raporun ana grafiği Search Console tıklamasıdır; araç verisi ekte "tahmin" olarak durur.'),
     ]})
 
@@ -639,7 +643,7 @@ fields.append({
           'Semrush verisine Claude resmî MCP sunucusuyla (https://mcp.semrush.com/v2/mcp, OAuth) erişir; sunucu Ajanlar › MCP Bağlantıları\'ndan projeye eklenir.'),
         o('similarweb_mcp', 'Similarweb MCP', 'Claude Similarweb trafik ve pazar verisini resmî MCP sunucusuyla sorgular (planınızda API erişimi olmalı).', 'Similarweb kullanılıyorsa.', 'Claude üç rakibin trafik kanal dağılımını Similarweb MCP\'den çeker.',
           'Similarweb verisine Claude resmî MCP sunucusuyla (https://mcp.similarweb.com/) erişir; sunucu Ajanlar › MCP Bağlantıları\'ndan projeye eklenir, plan API erişimi içermelidir.'),
-        o('other_mcp', 'Diğer araçların resmî MCP sunucusu', 'SE Ranking, Moz (beta), Sistrix, Screaming Frog (lisanslı, bilgisayarda yerel), Ubersuggest, Mangools (beta) ve Serpstat resmî MCP sunucusu sunar.', 'Bu araçlardan biri kullanılıyorsa.', 'Claude SE Ranking MCP ile sıralama verisini okur.',
+        o('other_mcp', 'Diğer araçların resmî MCP sunucusu', 'SE Ranking, Moz (beta), Sistrix, Screaming Frog (lisanslı, bilgisayarda yerel), Ubersuggest, Mangools (beta), Serpstat ve Semalt resmî MCP sunucusu sunar.', 'Bu araçlardan biri kullanılıyorsa.', 'Claude SE Ranking MCP ile sıralama verisini okur.',
           'Seçilen diğer aracın yalnız sağlayıcının kendi yayımladığı resmî MCP sunucusu kullanılır (topluluk yapımı sunucular kullanılmaz); adres ve kimlik doğrulama sağlayıcının güncel belgesinden alınır, beta sunucular üretim raporunda tek kaynak yapılmaz.'),
         o('readonly', 'Yalnız okuma ve analiz', 'Claude araç verisini okur, analiz eder ve öneri hazırlar; araçta ayar değiştirmez.', 'MCP / API kullanılıyorsa her durumda.', 'Claude sıralama verisini yorumlar, kampanya ayarına dokunmaz.',
           'Claude araç verisini yalnız okur ve analiz eder; proje, kampanya ya da tarama ayarlarını değiştirmez, değişiklik önerisini kullanıcıya sunar.'),
@@ -710,6 +714,8 @@ EXTRA_RES = {   # benzer araçlar ve genel kaynaklar (2026-11-13 doğrulandı)
         R('Moz Local — Kapsanan ülkeler', 'https://moz.com/products/local/pricing', 'Moz Local\'in yalnız ABD, Birleşik Krallık ve Kanada\'da çalıştığı.'),
         R('Screaming Frog SEO Spider', 'https://www.screamingfrog.co.uk/seo-spider/', 'Masaüstü tarayıcı; ücretsiz sürümün 500 adres sınırı.'),
         R('Mangools MCP ve ücretsiz hesap', 'https://mangools.com/mcp', 'Mangools araçları, ücretsiz hesap sınırları ve MCP sunucusu.'),
+        R('Semalt — Google SERP Tracker', 'https://semalt.com/google-serp-analytics', 'Ücretsiz sıralama takibi ve rakip karşılaştırması; site doğrulaması istemez (şirketin kendi sayfası).'),
+        R('IONOS — Referans spam\'i: nedenleri ve önlemler', 'https://www.ionos.com/digitalguide/online-marketing/web-analytics/referral-spam-causes-and-countermeasures/', 'Sahte yönlendirme trafiğinin analitik raporlarına etkisi; Semalt örneği.'),
     ],
     'mk_st_setup': [
         R('Google — Site sahipliğini doğrulama', 'https://support.google.com/webmasters/answer/9008080', 'Search Console doğrulama yöntemleri (HTML dosyası, meta etiket, DNS, Analytics etiketi).'),
@@ -737,6 +743,7 @@ EXTRA_RES = {   # benzer araçlar ve genel kaynaklar (2026-11-13 doğrulandı)
         R('Screaming Frog — MCP sunucusu', 'https://www.screamingfrog.co.uk/guides/mcp-server/', 'Uygulamaya gömülü yerel MCP sunucusu (lisanslı sürüm).'),
         R('Ubersuggest — Claude bağlayıcısı', 'https://claude.com/marketplace/connectors/ubersuggest-by-neil-patel', 'Anthropic dizinindeki Ubersuggest bağlayıcısı.'),
         R('Serpstat — MCP sunucusu', 'https://github.com/SerpstatGlobal/serpstat-mcp-server-js', 'Serpstat\'ın resmî yerel MCP sunucusu.'),
+        R('Semalt — MCP ve Public API', 'https://semalt.com/mcp-docs', 'Semalt MCP sunucusu (Streamable HTTP), araç listesi ve API anahtarı uyarısı.'),
     ],
 }
 

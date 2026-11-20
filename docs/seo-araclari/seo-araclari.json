@@ -93,6 +93,16 @@
       "title": "Mangools MCP ve ücretsiz hesap",
       "url": "https://mangools.com/mcp",
       "note": "Mangools araçları, ücretsiz hesap sınırları ve MCP sunucusu."
+     },
+     {
+      "title": "Semalt — Google SERP Tracker",
+      "url": "https://semalt.com/google-serp-analytics",
+      "note": "Ücretsiz sıralama takibi ve rakip karşılaştırması; site doğrulaması istemez (şirketin kendi sayfası)."
+     },
+     {
+      "title": "IONOS — Referans spam'i: nedenleri ve önlemler",
+      "url": "https://www.ionos.com/digitalguide/online-marketing/web-analytics/referral-spam-causes-and-countermeasures/",
+      "note": "Sahte yönlendirme trafiğinin analitik raporlarına etkisi; Semalt örneği."
      }
     ]
    }
@@ -510,6 +520,11 @@
       "title": "Serpstat — MCP sunucusu",
       "url": "https://github.com/SerpstatGlobal/serpstat-mcp-server-js",
       "note": "Serpstat'ın resmî yerel MCP sunucusu."
+     },
+     {
+      "title": "Semalt — MCP ve Public API",
+      "url": "https://semalt.com/mcp-docs",
+      "note": "Semalt MCP sunucusu (Streamable HTTP), araç listesi ve API anahtarı uyarısı."
      }
     ]
    }
@@ -651,6 +666,14 @@
      "ruleDetail": "Serpstat verisi tahmindir; projeler şirket ya da ajans hesabında, devredilebilir şekilde açılır."
     },
     {
+     "value": "semalt",
+     "label": "Semalt (Google SERP Tracker, Search Console Analytics)",
+     "explanation": "Kiev merkezli bir SEO ajansının ücretsiz hesapla kullanılan araçları: Google sıralama takibi ve rakip alan adı karşılaştırması (site doğrulaması istemez), Search Console verisi paneli ve yapay zekâ görünürlüğü takibi; Public API ve MCP sunucusu var. Site denetimi ve backlink analizi araç olarak sunulmaz, yalnız ücretli ajans hizmetidir. Dikkat: Semalt 2014'ten beri sitelere sahte yönlendirme trafiği (referans spam'i) göndermekle suçlanır; şirket bunu reddeder.",
+     "scenario": "Ücretsiz sıralama takibi ve rakip karşılaştırması isteniyorsa; ana veri kaynağı olarak değil, yardımcı araç olarak.",
+     "example": "Pazarlama uzmanı 20 hizmet sorgusunun Google sırasını Semalt SERP Tracker'da izler; aylık raporda bu veri “Semalt tahmini” etiketiyle verilir.",
+     "ruleDetail": "Semalt yalnız sıralama takibi ve rakip karşılaştırması için, şirket hesabıyla kullanılır; verisi “Semalt tahmini” etiketiyle raporlanır. Search Console bağlantısı yalnız şirketin kendi Google hesabıyla verilir. Semalt'ın ücretli ajans hizmetleri (AutoSEO, FullSEO, bağlantı kurma) bu seçimle satın alınmış sayılmaz, ayrıca değerlendirilir. Semalt hakkındaki sahte yönlendirme (referans spam'i) iddiaları nedeniyle GA4 raporlarında semalt.com ve bağlantılı alan adlarından gelen yönlendirmeler izlenir. MCP bağlantısında API anahtarı adrese parametre olarak yazılıyorsa o adres paylaşılmaz, anahtar gizli değer olarak saklanır."
+    },
+    {
      "value": "none",
      "label": "Harici SEO aracı kullanılmayacak",
      "explanation": "Yalnız Google Search Console, GA4 ve Bing Webmaster Tools kullanılır.",
@@ -687,7 +710,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -729,9 +753,9 @@
     },
     {
      "value": "other",
-     "label": "Seçilen diğer araç (Ubersuggest, Mangools, Serpstat)",
+     "label": "Seçilen diğer araç (Ubersuggest, Mangools, Serpstat, Semalt)",
      "explanation": "Sıralama seçilen diğer araçtan alınır; araç adı raporda yazılır.",
-     "scenario": "Ana araç Ubersuggest, Mangools ya da Serpstat ise.",
+     "scenario": "Ana araç Ubersuggest, Mangools, Serpstat ya da Semalt ise.",
      "example": "Rapordaki sıralama tablosu Serpstat'tan gelir ve başlıkta araç adı yazılır."
     },
     {
@@ -772,7 +796,8 @@
       "screamingfrog",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -832,7 +857,8 @@
       "screamingfrog",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -920,7 +946,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1044,7 +1071,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1342,7 +1370,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1398,7 +1427,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1485,7 +1515,8 @@
       "sistrix",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1603,7 +1634,8 @@
       "majestic",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1686,7 +1718,8 @@
       "majestic",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1834,7 +1867,8 @@
       "screamingfrog",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1924,7 +1958,8 @@
       "screamingfrog",
       "ubersuggest",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "semalt"
      ]
     }
    ],
@@ -1956,7 +1991,7 @@
     {
      "value": "other_mcp",
      "label": "Diğer araçların resmî MCP sunucusu",
-     "explanation": "SE Ranking, Moz (beta), Sistrix, Screaming Frog (lisanslı, bilgisayarda yerel), Ubersuggest, Mangools (beta) ve Serpstat resmî MCP sunucusu sunar.",
+     "explanation": "SE Ranking, Moz (beta), Sistrix, Screaming Frog (lisanslı, bilgisayarda yerel), Ubersuggest, Mangools (beta), Serpstat ve Semalt resmî MCP sunucusu sunar.",
      "scenario": "Bu araçlardan biri kullanılıyorsa.",
      "example": "Claude SE Ranking MCP ile sıralama verisini okur.",
      "ruleDetail": "Seçilen diğer aracın yalnız sağlayıcının kendi yayımladığı resmî MCP sunucusu kullanılır (topluluk yapımı sunucular kullanılmaz); adres ve kimlik doğrulama sağlayıcının güncel belgesinden alınır, beta sunucular üretim raporunda tek kaynak yapılmaz."
