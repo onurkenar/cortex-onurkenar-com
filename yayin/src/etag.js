@@ -1,1 +1,1 @@
-export const ETAG = "a84512649cff14ef8526bb130d70d8ca";
+export const ETAG = "b8e22c19b754c24c7cf9605c53d230cf";
