@@ -41,7 +41,7 @@ def R(t, u, n):
     return {'title': t, 'url': u, 'note': n}
 
 
-TOOLS = ['ahrefs', 'awt', 'semrush', 'seranking', 'similarweb', 'moz', 'sistrix', 'majestic', 'screamingfrog', 'ubersuggest', 'mangools', 'serpstat', 'semalt']
+TOOLS = ['ahrefs', 'awt', 'semrush', 'seranking', 'similarweb', 'moz', 'sistrix', 'majestic', 'screamingfrog', 'ubersuggest', 'mangools', 'serpstat', 'semalt', 'seoinsider']
 SUITE = ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'sistrix', 'ubersuggest', 'mangools', 'serpstat', 'semalt']   # proje kurulan paketler
 GATE = [{'field': 'mk_st_tools', 'in': TOOLS}]
 GATE_SUITE = [{'field': 'mk_st_tools', 'in': SUITE}]
@@ -142,6 +142,10 @@ fields.append({
           'Ücretsiz sıralama takibi ve rakip karşılaştırması isteniyorsa; ana veri kaynağı olarak değil, yardımcı araç olarak.',
           'Pazarlama uzmanı 20 hizmet sorgusunun Google sırasını Semalt SERP Tracker\'da izler; aylık raporda bu veri “Semalt tahmini” etiketiyle verilir.',
           'Semalt yalnız sıralama takibi ve rakip karşılaştırması için, şirket hesabıyla kullanılır; verisi “Semalt tahmini” etiketiyle raporlanır. Search Console bağlantısı yalnız şirketin kendi Google hesabıyla verilir. Semalt\'ın ücretli ajans hizmetleri (AutoSEO, FullSEO, bağlantı kurma) bu seçimle satın alınmış sayılmaz, ayrıca değerlendirilir. Semalt hakkındaki sahte yönlendirme (referans spam\'i) iddiaları nedeniyle GA4 raporlarında semalt.com ve bağlantılı alan adlarından gelen yönlendirmeler izlenir. MCP bağlantısında API anahtarı adrese parametre olarak yazılıyorsa o adres paylaşılmaz, anahtar gizli değer olarak saklanır.'),
+        o('seoinsider', 'SEOInsider', 'Anahtar kelime araştırması (zorluk, niyet, TBM), rakip trafik analizi, backlink takibi (yönlendiren alan adları, çapa metinleri, bağlantı açığı, kırık backlinkler), paylaşılabilir rapor bağlantıları ve veri API\'si sunan ücretsiz web aracı; günlük rapor ve arama sınırı vardır. Verisi DataForSEO\'dan gelir. Site denetimi, sıralama takibi, Search Console bağlantısı ve MCP sunucusu yoktur. Dikkat: sitede işletmeci şirketin adı ve adresi açıkça yazmıyor.',
+          'Bütçe yokken anahtar kelime, rakip ve backlink verisine ücretsiz bakılacaksa; ana veri kaynağı olarak değil, yardımcı araç olarak.',
+          'İçerik uzmanı SEOInsider\'da iki rakibin en çok trafik alan sayfalarını ve bağlantı açığını çıkarır, rapor bağlantısını ekiple paylaşır.',
+          'SEOInsider yalnız anahtar kelime, rakip ve backlink araştırması için, şirket hesabıyla kullanılır; verisi DataForSEO\'ya dayanan bir tahmindir ve “SEOInsider tahmini” etiketiyle raporlanır. Paylaşılan rapor bağlantıları yalnız ekip içinde kullanılır. İşletmeci şirketi sitede açıkça belirtilmediği için hesaba şirketin kişisel ya da gizli verisi yüklenmez, ödeme ve API anahtarı verilmeden önce sağlayıcının kimliği ve sözleşme koşulları kontrol edilir.'),
         o('none', 'Harici SEO aracı kullanılmayacak', 'Yalnız Google Search Console, GA4 ve Bing Webmaster Tools kullanılır.',
           'Küçük ve yeni bir sitede ya da bütçe yokken; ölçüm Google ve Bing araçlarıyla yapılır.',
           'Yeni açılan bir kafe sitesi yalnız Search Console ve İşletme Profili istatistiklerini izler.',
@@ -562,7 +566,7 @@ fields.append({
     'example': 'Kayıp önemli bağlantı bildirimi gelir; sayfa taşındığı için bağlantı kopmuştur, eski adres yönlendirilir ve bağlantı geri kazanılır.',
     'rule': 'Backlink izleme ve temizleme: {labels}. Bağlantı satın alınmaz, bağlantı ağı ve otomatik bağlantı programı kullanılmaz (Google spam politikaları).',
     'agents': [SEOY, TSEO],
-    'showIf': [{'field': 'mk_st_tools', 'in': ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'majestic', 'mangools', 'serpstat']}],
+    'showIf': [{'field': 'mk_st_tools', 'in': ['ahrefs', 'awt', 'semrush', 'seranking', 'moz', 'majestic', 'mangools', 'serpstat', 'seoinsider']}],
     'options': [
         o('monitor', 'Yeni ve kayıp bağlantı bildirimleri', 'Yeni ve kayıp bağlantılar için e-posta bildirimi; aylık gözden geçirme.', 'Her sitede önerilir.', 'Ahrefs "yeni / kayıp backlink" bildirimi haftalık gelir.',
           'Yeni ve kayıp bağlantılar için bildirim kurulur ve ayda bir gözden geçirilir.'),
@@ -715,6 +719,7 @@ EXTRA_RES = {   # benzer araçlar ve genel kaynaklar (2026-11-13 doğrulandı)
         R('Screaming Frog SEO Spider', 'https://www.screamingfrog.co.uk/seo-spider/', 'Masaüstü tarayıcı; ücretsiz sürümün 500 adres sınırı.'),
         R('Mangools MCP ve ücretsiz hesap', 'https://mangools.com/mcp', 'Mangools araçları, ücretsiz hesap sınırları ve MCP sunucusu.'),
         R('Semalt — Google SERP Tracker', 'https://semalt.com/google-serp-analytics', 'Ücretsiz sıralama takibi ve rakip karşılaştırması; site doğrulaması istemez (şirketin kendi sayfası).'),
+        R('SEOInsider', 'https://seoinsider.com/', 'Ücretsiz anahtar kelime, rakip trafik ve backlink aracı; günlük sınırlar ve veri kaynağı (DataForSEO).'),
         R('IONOS — Referans spam\'i: nedenleri ve önlemler', 'https://www.ionos.com/digitalguide/online-marketing/web-analytics/referral-spam-causes-and-countermeasures/', 'Sahte yönlendirme trafiğinin analitik raporlarına etkisi; Semalt örneği.'),
     ],
     'mk_st_setup': [
@@ -744,6 +749,7 @@ EXTRA_RES = {   # benzer araçlar ve genel kaynaklar (2026-11-13 doğrulandı)
         R('Ubersuggest — Claude bağlayıcısı', 'https://claude.com/marketplace/connectors/ubersuggest-by-neil-patel', 'Anthropic dizinindeki Ubersuggest bağlayıcısı.'),
         R('Serpstat — MCP sunucusu', 'https://github.com/SerpstatGlobal/serpstat-mcp-server-js', 'Serpstat\'ın resmî yerel MCP sunucusu.'),
         R('Semalt — MCP ve Public API', 'https://semalt.com/mcp-docs', 'Semalt MCP sunucusu (Streamable HTTP), araç listesi ve API anahtarı uyarısı.'),
+        R('SEOInsider — API', 'https://seoinsider.com/api/', 'SEOInsider veri API\'si (DataForSEO altyapısı).'),
     ],
 }
 

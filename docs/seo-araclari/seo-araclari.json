@@ -100,6 +100,11 @@
       "note": "Ücretsiz sıralama takibi ve rakip karşılaştırması; site doğrulaması istemez (şirketin kendi sayfası)."
      },
      {
+      "title": "SEOInsider",
+      "url": "https://seoinsider.com/",
+      "note": "Ücretsiz anahtar kelime, rakip trafik ve backlink aracı; günlük sınırlar ve veri kaynağı (DataForSEO)."
+     },
+     {
       "title": "IONOS — Referans spam'i: nedenleri ve önlemler",
       "url": "https://www.ionos.com/digitalguide/online-marketing/web-analytics/referral-spam-causes-and-countermeasures/",
       "note": "Sahte yönlendirme trafiğinin analitik raporlarına etkisi; Semalt örneği."
@@ -525,6 +530,11 @@
       "title": "Semalt — MCP ve Public API",
       "url": "https://semalt.com/mcp-docs",
       "note": "Semalt MCP sunucusu (Streamable HTTP), araç listesi ve API anahtarı uyarısı."
+     },
+     {
+      "title": "SEOInsider — API",
+      "url": "https://seoinsider.com/api/",
+      "note": "SEOInsider veri API'si (DataForSEO altyapısı)."
      }
     ]
    }
@@ -674,6 +684,14 @@
      "ruleDetail": "Semalt yalnız sıralama takibi ve rakip karşılaştırması için, şirket hesabıyla kullanılır; verisi “Semalt tahmini” etiketiyle raporlanır. Search Console bağlantısı yalnız şirketin kendi Google hesabıyla verilir. Semalt'ın ücretli ajans hizmetleri (AutoSEO, FullSEO, bağlantı kurma) bu seçimle satın alınmış sayılmaz, ayrıca değerlendirilir. Semalt hakkındaki sahte yönlendirme (referans spam'i) iddiaları nedeniyle GA4 raporlarında semalt.com ve bağlantılı alan adlarından gelen yönlendirmeler izlenir. MCP bağlantısında API anahtarı adrese parametre olarak yazılıyorsa o adres paylaşılmaz, anahtar gizli değer olarak saklanır."
     },
     {
+     "value": "seoinsider",
+     "label": "SEOInsider",
+     "explanation": "Anahtar kelime araştırması (zorluk, niyet, TBM), rakip trafik analizi, backlink takibi (yönlendiren alan adları, çapa metinleri, bağlantı açığı, kırık backlinkler), paylaşılabilir rapor bağlantıları ve veri API'si sunan ücretsiz web aracı; günlük rapor ve arama sınırı vardır. Verisi DataForSEO'dan gelir. Site denetimi, sıralama takibi, Search Console bağlantısı ve MCP sunucusu yoktur. Dikkat: sitede işletmeci şirketin adı ve adresi açıkça yazmıyor.",
+     "scenario": "Bütçe yokken anahtar kelime, rakip ve backlink verisine ücretsiz bakılacaksa; ana veri kaynağı olarak değil, yardımcı araç olarak.",
+     "example": "İçerik uzmanı SEOInsider'da iki rakibin en çok trafik alan sayfalarını ve bağlantı açığını çıkarır, rapor bağlantısını ekiple paylaşır.",
+     "ruleDetail": "SEOInsider yalnız anahtar kelime, rakip ve backlink araştırması için, şirket hesabıyla kullanılır; verisi DataForSEO'ya dayanan bir tahmindir ve “SEOInsider tahmini” etiketiyle raporlanır. Paylaşılan rapor bağlantıları yalnız ekip içinde kullanılır. İşletmeci şirketi sitede açıkça belirtilmediği için hesaba şirketin kişisel ya da gizli verisi yüklenmez, ödeme ve API anahtarı verilmeden önce sağlayıcının kimliği ve sözleşme koşulları kontrol edilir."
+    },
+    {
      "value": "none",
      "label": "Harici SEO aracı kullanılmayacak",
      "explanation": "Yalnız Google Search Console, GA4 ve Bing Webmaster Tools kullanılır.",
@@ -797,7 +815,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
@@ -858,7 +877,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
@@ -1635,7 +1655,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
@@ -1719,7 +1740,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
@@ -1791,7 +1813,8 @@
       "moz",
       "majestic",
       "mangools",
-      "serpstat"
+      "serpstat",
+      "seoinsider"
      ]
     }
    ],
@@ -1868,7 +1891,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
@@ -1959,7 +1983,8 @@
       "ubersuggest",
       "mangools",
       "serpstat",
-      "semalt"
+      "semalt",
+      "seoinsider"
      ]
     }
    ],
