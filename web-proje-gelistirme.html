@@ -4220,6 +4220,22 @@ select[aria-expanded="true"]{outline:2px solid #2b4fd8;outline-offset:1px}
 [data-theme="dark"] .rivRow>.rivDet[open]{background:rgba(0,0,0,.18)}
 [data-theme="dark"] .rivRow>.rivDet[open]>summary{border-bottom-color:var(--border)}
 [data-theme="dark"] .rivDet .prPct:has(+.prPct){background:#3a2a12;color:#f5b971}
+/* hücreli satırlar — Sosyal hesaplar (2026-11-20) */
+.rvGrid .rwF{grid-column:1/-1}
+.rwBox{container-type:inline-size}
+.rwH,.rwR{display:grid;grid-template-columns:minmax(120px,1fr) minmax(200px,2.2fr) 120px 36px;gap:6px;align-items:end}
+.rwH{margin-bottom:4px}.rwH span{font-size:12px;font-weight:700;color:#6b727c}
+.rwList{display:grid;gap:6px}
+.rwC{display:block;min-width:0}.rwC .control{width:100%;box-sizing:border-box;min-width:0}.rwL{display:none}
+.rwC .control[aria-invalid="true"]{border-color:#d97706}
+.rwDel{width:36px;height:38px;border:1px solid #d6dae0;border-radius:8px;background:transparent;color:inherit;font-size:18px;line-height:1;cursor:pointer}
+.rwDel:hover{border-color:#b91c1c;color:#b91c1c}
+.rwAdd{margin-top:8px}
+.rwMsg{margin:6px 0 10px}.rwMsg:empty{display:none}
+@container (max-width:520px){.rwH{display:none}.rwR{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 36px;padding:8px;border:1px solid #e5e7eb;border-radius:10px;row-gap:6px}.rwR>.rwC:nth-child(2){grid-column:1/-1;grid-row:2}.rwR>.rwC:nth-child(1){grid-column:1;grid-row:1}.rwR>.rwC:nth-child(3){grid-column:2;grid-row:1}.rwR>.rwDel{grid-column:3;grid-row:1}.rwL{display:block;font-size:11.5px;font-weight:700;color:#6b727c;margin:0 0 3px}}
+[data-theme="dark"] .rwH span,[data-theme="dark"] .rwL{color:var(--muted)}
+[data-theme="dark"] .rwDel{border-color:var(--border)}
+[data-theme="dark"] .rwR{border-color:var(--border)}
 </style>
 <style id="v26-measure">
 /* 8.12 Ölçüm (2026-11-15) — 8.2–8.11'in pr* ve bl* sınıflarını kullanır; önek "ms". Kaynak docs/v26/v26-measure.css → docs/v26/olcum_ekle.py */
@@ -9627,7 +9643,7 @@ const TUR=["Doğrudan","Dolaylı","İkame","Sınıflandırılmadı"],ONC=["P0","
 const FLD=[["tur","Tür","sel","P",TUR],["oncelik","Öncelik","sel","P",ONC],["segment","Segment","text","P"],["cografya","Coğrafya","text","P"],["guclu","Güçlü yönler","area","P"],["zayif","Zayıf yönler","area","P"],["pKaynak","Kaynak (bağlantı)","text","P"],["pTarih","Kaynak tarihi","text","P","YYYY-AA-GG"],
  ["anaUrun","Ana ürün / hizmet","text","products"],["urun","Ürün ve hizmetler","area","products"],
  ["deger","Değer önerisi","area","messaging"],["mesaj","Ana mesaj / slogan","text","messaging"],["kanit","Kanıt (referans, sertifika, rakam)","area","messaging"],
- ["hesaplar","Sosyal hesaplar (her satıra: platform | adres | Kesin / Olası)","lines","channels","instagram | https://instagram.com/… | Kesin"],["linkedin","LinkedIn (takipçi, sıklık)","text","channels"],["meta","Facebook / Instagram (takipçi, sıklık)","text","channels"],["icerikSikligi","İçerik sıklığı","text","channels"],["lead","Lead toplama yöntemi","text","channels"],["kanalNot","Kanal notu","text","channels"],
+ ["hesaplar","Sosyal hesaplar (her satıra: platform | adres | Kesin / Olası)","rows","channels","instagram | https://instagram.com/… | Kesin"],["linkedin","LinkedIn (takipçi, sıklık)","text","channels"],["meta","Facebook / Instagram (takipçi, sıklık)","text","channels"],["icerikSikligi","İçerik sıklığı","text","channels"],["lead","Lead toplama yöntemi","text","channels"],["kanalNot","Kanal notu","text","channels"],
  ["trafik","Aylık organik trafik","text","seo"],["kw","Organik anahtar kelime","text","seo"],["ucretliKw","Ücretli anahtar kelime","text","seo"],["oKaynak","Ölçek kaynağı (araç / bağlantı)","text","seo"],["oTarih","Ölçek tarihi","text","seo","YYYY-AA-GG"],
  ["lokToplam","Sitedeki lokasyon / şube sayısı","text","branches"],["bolge","Bölgeler (her satıra: bölge | sayı | hedef pazar ise “evet”)","lines","branches"],["lokNot","Lokasyon notu","text","branches"],["subeler","Şubeler / Google İşletme Profili (her satıra: ad | adres | kategori, kategori | puan | yorum | haritalar adresi | Kesin / Olası | durum)","lines","branches"],
  ["fiyatModeli","Fiyat modeli","text","pricing"],["fiyatSeviyesi","Fiyat seviyesi","sel","pricing",["Düşük","Orta","Yüksek","Premium","Belirsiz"]],["fiyatlar","Fiyatlar (her satıra: ürün | şube | paket | fiyat | birim | KDV hariç / dahil | kaynak adresi | not)","lines","pricing"],["fiyatDurum","Fiyat durumu (her satıra: ürün | Fiyatlı / Teklif üzerine / Sunulmuyor / Sitede bulunamadı)","lines","pricing"],
@@ -9644,7 +9660,32 @@ function missing(r){if(!strict())return [];let m=[],has=g=>FLD.some(f=>f[3]===g&
  if(gs.includes("ads")&&["gMin","gMax","gBicim","gMesaj","gAnaliz"].some(k=>String(r[k]||"").trim())&&!(URE.test(r.gUrl||"")&&DRE.test(r.gTarih||"")))m.push("Google reklam kaynağı / tarihi");return m}
 /* biçim */
 const q=k=>`data-r='${E(JSON.stringify(k))}'`;
-function ctl(f,k,p,label,kind,val,opts,ph){let a=`data-f="${f}" data-m="${E(p)}" ${q(k)} aria-label="${E(label)}"`;
+/* satırlı alan → hücreli satırlar (2026-11-20, kullanıcı isteği: "1.7.1 Rakip Listesi'nde platform | adres | Kesin / Olası alanları ayrı
+   hücrelere yazılsın"). Değer yine metindir (her satır "platform | adres | Kesin"), bu yüzden içe aktarma, Claude talimatı, eksik kaynak
+   denetimi ve plan dosyası değişmez. Boş satır kayda girmez, oturum boyunca RW_DRAFT'ta durur; girilen "|" → "/". */
+const RW={hesaplar:{name:"hesap",add:"+ Hesap ekle",cols:[{h:"Platform",ph:"Instagram",dl:1},{h:"Adres",ph:"https://instagram.com/…",url:1},{h:"Güven",sel:["Kesin","Olası"]}]}},RW_DRAFT={},
+ RW_PLAT=["Instagram","Facebook","LinkedIn","X","YouTube","TikTok","Threads","Pinterest","WhatsApp Kanal","Telegram"];
+const rwClean=x=>String(x??"").replace(/[\r\n]+/g," ").replace(/\|/g,"/").trim();
+function rwParse(p,v){let C=RW[p].cols;return lines(v).map(l=>{let c=cells(l),u=C.findIndex(d=>d.url);if(c.length>C.length&&u>=0)c=c.slice(0,u).concat([c.slice(u,u+1+c.length-C.length).join(" / ")],c.slice(u+1+c.length-C.length));
+ return C.map((d,i)=>{let x=c[i]||"";if(d.sel){let m=d.sel.find(o=>norm(x).startsWith(norm(o)));return m||x}return x})})}
+function rwSer(p,L){let C=RW[p].cols;return L.map(r=>{let a=r.map(rwClean);if(C.every((d,i)=>d.sel||!a[i]))return "";while(a.length&&!a[a.length-1])a.pop();return a.join(" | ")}).filter(Boolean).join("\n")}
+function rwRows(k,p,v){let L=rwParse(p,v),d=RW_DRAFT[k+"|"+p];if(d&&rwSer(p,d)===rwSer(p,L))L=d;return L.length?L:[RW[p].cols.map(()=>"")]}
+const rwBad=(d,v)=>d.url&&String(v||"").trim()&&!/^https?:\/\/\S+\.\S+/i.test(String(v).trim());
+function rwRow(k,p,row,i){let D=RW[p],dl="rvdl-"+String(k).replace(/[^a-z0-9-]/gi,"");
+ return `<div class="rwR" role="group" aria-label="${E(D.cols[0].h)} ${i+1}">${D.cols.map((d,j)=>{let v=row[j]||"",lb=`${D.name} ${i+1}: ${d.h}`,c=d.sel?`<select class="control" data-native data-rw="${j}" aria-label="${E(lb)}"><option value="">—</option>${d.sel.map(o=>`<option${o===v?" selected":""}>${E(o)}</option>`).join("")}${v&&!d.sel.includes(v)?`<option selected>${E(v)}</option>`:""}</select>`:`<input class="control" type="text" data-rw="${j}" value="${E(v)}" placeholder="${E(d.ph||"")}" aria-label="${E(lb)}" autocomplete="off"${d.dl?` list="${dl}"`:""}${d.url?' inputmode="url"':""}${rwBad(d,v)?' aria-invalid="true"':""}>`;
+  return `<label class="rwC"><span class="rwL" aria-hidden="true">${E(d.h)}</span>${c}</label>`}).join("")}<button type="button" class="rwDel" aria-label="${E(D.name)} ${i+1} satırını sil" title="Satırı sil">×</button></div>`}
+function rwCtl(k,p,label,val){let D=RW[p],dl="rvdl-"+String(k).replace(/[^a-z0-9-]/gi,""),rows=rwRows(k,p,val);
+ return `<div class="prF rwF"><span>${E(String(label).replace(/\s*\(.*\)\s*$/,""))}</span><div class="rwBox" data-rwp="${p}" ${q(k)}><div class="rwH" aria-hidden="true">${D.cols.map(d=>`<span>${E(d.h)}</span>`).join("")}<span></span></div><div class="rwList">${rows.map((r,i)=>rwRow(k,p,r,i)).join("")}</div><button type="button" class="prAdd rwAdd">${E(D.add)}</button>${D.cols.some(d=>d.dl)?`<datalist id="${dl}">${RW_PLAT.map(x=>`<option value="${E(x)}">`).join("")}</datalist>`:""}<p class="prHint rwMsg" aria-live="polite">${rows.some(r=>D.cols.some((d,j)=>rwBad(d,r[j])))?"Adres https:// ile başlamalı.":""}</p></div></div>`}
+function rwSave(box){let k=JSON.parse(box.dataset.r),p=box.dataset.rwp,D=RW[p],L=[...box.querySelectorAll(".rwR")].map(r=>[...r.querySelectorAll("[data-rw]")].map(x=>x.value));RW_DRAFT[k+"|"+p]=L;
+ box.querySelectorAll(".rwR").forEach(r=>r.querySelectorAll("[data-rw]").forEach(x=>{let d=D.cols[+x.dataset.rw];if(d.url){if(rwBad(d,x.value))x.setAttribute("aria-invalid","true");else x.removeAttribute("aria-invalid")}}));
+ let m=box.querySelector(".rwMsg");if(m)m.textContent=L.some(r=>D.cols.some((d,j)=>rwBad(d,r[j])))?"Adres https:// ile başlamalı.":"";
+ if(!requireProject()){refreshField(FC);return}put(FL,k,p,rwSer(p,L))}
+document.addEventListener("input",e=>{let t=e.target;if(!t.closest||!t.matches("[data-rw]"))return;let b=t.closest(".rwBox");if(b)rwSave(b)},true);
+document.addEventListener("change",e=>{let t=e.target;if(!t.closest||!t.matches("select[data-rw]"))return;let b=t.closest(".rwBox");if(b)rwSave(b)},true);
+document.addEventListener("click",e=>{let b=e.target.closest&&e.target.closest(".rwBox .rwAdd,.rwBox .rwDel");if(!b)return;if(!requireProject())return;let box=b.closest(".rwBox"),k=JSON.parse(box.dataset.r),p=box.dataset.rwp,l=box.querySelector(".rwList");
+ if(b.classList.contains("rwAdd")){let n=l.children.length,t=document.createElement("template");t.innerHTML=rwRow(k,p,RW[p].cols.map(()=>""),n);l.appendChild(t.content.firstElementChild);RW_DRAFT[k+"|"+p]=[...l.querySelectorAll(".rwR")].map(r=>[...r.querySelectorAll("[data-rw]")].map(x=>x.value));l.lastElementChild.querySelector("[data-rw]").focus();return}
+ let r=b.closest(".rwR"),rows=[...l.children],i=rows.indexOf(r);if(rows.length>1)r.remove();else r.querySelectorAll("[data-rw]").forEach(x=>x.value="");rwSave(box);let L=l.querySelectorAll(".rwR"),f=L[Math.min(i,L.length-1)];(f?f.querySelector("[data-rw]"):box.querySelector(".rwAdd")).focus()},true);
+function ctl(f,k,p,label,kind,val,opts,ph){if(kind==="rows"&&RW[p])return rwCtl(k,p,label,val);let a=`data-f="${f}" data-m="${E(p)}" ${q(k)} aria-label="${E(label)}"`;
  if(kind==="sel")return `<label class="prF"><span>${E(label)}</span><select class="control" data-native ${a}><option value="">Seçin</option>${(opts||[]).map(o=>{let [v,t]=Array.isArray(o)?o:[o,o];return `<option value="${E(v)}"${v===val?" selected":""}>${E(t)}</option>`}).join("")}</select></label>`;
  return `<label class="prF"><span>${E(label)}</span>${kind==="text"?`<input class="control" type="text" ${a} value="${E(val||"")}" placeholder="${E(ph||"")}" autocomplete="off">`:`<textarea class="control" rows="${kind==="area"?3:4}" ${a} placeholder="${E(ph||"")}">${E(val||"")}</textarea>`}</label>`}
 const sec=(t,x)=>`<fieldset class="prSec"><legend>${E(t)}</legend>${x}</fieldset>`;
@@ -9755,7 +9796,7 @@ document.addEventListener("change",e=>{let t=e.target;if(!t.closest||!t.closest(
  if(t.hasAttribute("data-ld")){LV.durum=t.value;LV.n=100;refreshField(FD);return}if(t.hasAttribute("data-lo")){LV.oncelik=t.value;LV.n=100;refreshField(FD);return}
  if(t.dataset.relink!==undefined){if(!requireProject()||!t.value)return;let S=st(FL);S[t.value]=S[t.dataset.relink];delete S[t.dataset.relink];state[FL]=S;commit(FL,FL,true);return}
  if(t.matches("select[data-f]"))t.dispatchEvent(new Event("input",{bubbles:true}))},true);
-document.addEventListener("click",e=>{let b=e.target.closest&&e.target.closest(".rvBox button");if(!b||b.matches(".rivDel,.rivAdd"))return;let box=b.closest(".rvBox"),fid=BOX[[...box.classList].find(c=>BOX[c])];
+document.addEventListener("click",e=>{let b=e.target.closest&&e.target.closest(".rvBox button");if(!b||b.matches(".rivDel,.rivAdd,.rwAdd,.rwDel"))return;let box=b.closest(".rvBox"),fid=BOX[[...box.classList].find(c=>BOX[c])];
  if(b.hasAttribute("data-lmore")){LV.n+=100;refreshField(FD);return}
  if(b.hasAttribute("data-rprompt")){let k=JSON.parse(b.dataset.r),x=rivals().find(y=>y.k===k);if(!x)return;let tx=rPrompt(x);(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>{b.textContent="Talimat kopyalandı"},()=>{RIMP=true;refreshField(FC);let a=document.getElementById("rvImpTx");if(a){a.value=tx;a.select()}});window.__rvPrompt=tx;return}
  if(b.hasAttribute("data-rimp")){RIMP=true;refreshField(FC);return}if(b.hasAttribute("data-rimpx")){RIMP=false;refreshField(FC);return}
