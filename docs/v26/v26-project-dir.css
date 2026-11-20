@@ -1,0 +1,17 @@
+/* Proje dosyasının klasörü (2026-11-20) — Dashboard › Proje kartı, Proje Adı ile Proje Dosyası kutusu arası */
+.ovProject .pdLoc{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:12px;padding:9px 14px;border:1px dashed var(--border,#d6dae0);border-radius:10px;font-size:13px;line-height:1.45;color:var(--text,#1b1f2a)}
+.ovProject .pdLoc .pdK{font-size:9px;letter-spacing:.1em;font-weight:850;text-transform:uppercase;color:var(--subtle,#7a8088)}
+.ovProject .pdLoc .pdV{flex:1 1 280px;min-width:0;overflow-wrap:anywhere}
+.ovProject .pdLoc .pdV b{font-weight:750}
+.ovProject .pdLoc .pdDir{font-weight:600}
+.ovProject .pdLoc .pdSep{margin:0 6px;color:var(--subtle,#7a8088)}
+.ovProject .pdLoc .pdNone{color:var(--muted,#5b6270)}
+.ovProject .pdLoc .pdBtn{font:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--border,#d6dae0);background:var(--surface,#fff);color:var(--text,#1b1f2a);cursor:pointer}
+.ovProject .pdLoc .pdBtn:hover{border-color:var(--text,#1b1f2a)}
+.ovProject .pdLoc .pdBtn:focus-visible{outline:2px solid var(--accent,#2563eb);outline-offset:2px}
+.ovProject .pdLoc .pdBtn.pdMain{background:var(--text,#1b1f2a);color:var(--surface,#fff);border-color:var(--text,#1b1f2a)}
+.ovProject .pdLoc .pdNote{flex-basis:100%;font-size:11.5px;color:var(--subtle,#7a8088)}
+.ovProject .pdLoc.pdWarn{border-style:solid;border-color:#e3a008;background:#fffaeb}
+.ovProject .pdLoc.pdWarn .pdV{color:#92400e}
+[data-theme="dark"] .ovProject .pdLoc.pdWarn{background:rgba(227,160,8,.08);border-color:#b7791f}
+[data-theme="dark"] .ovProject .pdLoc.pdWarn .pdV{color:#fbd38d}
