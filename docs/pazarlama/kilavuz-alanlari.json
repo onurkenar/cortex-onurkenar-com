@@ -7652,6 +7652,279 @@
    ]
   },
   {
+   "id": "brand_icon_color",
+   "section": "brand",
+   "after": "brand_icon_size_custom",
+   "label": "İkon Rengi",
+   "en": "Icon Color",
+   "type": "select",
+   "explanation": "Arayüzdeki ikonların varsayılan rengini belirler. Renk --icon-color token'ı olur; SVG ikonlar fill / stroke değerini currentColor ile bu token'dan alır, böylece bir ikonun rengi tek yerden değişir. Seçenekler Ortak Bilgiler › Marka Görünümü'ndeki renkleri kullanır; “Özel renk” ile ayrı bir HEX kodu girilebilir. Anlam taşıyan ikonlar zeminle en az 3:1 kontrast vermelidir (WCAG 1.4.11).",
+   "rule": "İkon rengi: {label}. Renk --icon-color token'ıyla uygulanır ve ikonlar SVG fill / stroke değerini currentColor ile bu token'dan alır; renk koda sabit yazılmaz. Anlam taşıyan ikonlar (tek başına duran düğme ikonu, durum ikonu) zeminle en az 3:1 kontrast verir (WCAG 1.4.11); süs ikonları aria-hidden olur.",
+   "scenario": "Sitede ikon kullanılacaksa; ikonların sayfadan sayfaya farklı renkte görünmesini önlemek ve marka rengini ikonlara tutarlı uygulamak için.",
+   "example": "“Ana marka rengi” seçilen bir sigorta sitesinde ürün kartlarındaki ikonlar mavi, metin içindeki küçük bilgi ikonu yanındaki metinle aynı renk görünür.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "recommend": {
+    "field": "page_design_style",
+    "map": {
+     "Minimalism": [
+      "text"
+     ],
+     "Swiss Style": [
+      "text"
+     ],
+     "Monochromatic": [
+      "text"
+     ],
+     "Typography-Led": [
+      "text"
+     ],
+     "Editorial Magazine": [
+      "text"
+     ],
+     "Japandi": [
+      "text"
+     ],
+     "Scandinavian": [
+      "text"
+     ],
+     "Brutalism": [
+      "text"
+     ],
+     "Neobrutalism": [
+      "text"
+     ],
+     "Luxury": [
+      "text"
+     ],
+     "Art Deco": [
+      "text"
+     ],
+     "Corporate Modern": [
+      "primary"
+     ],
+     "SaaS Product-Led": [
+      "primary"
+     ],
+     "Fintech Trust": [
+      "primary"
+     ],
+     "Material Design": [
+      "primary"
+     ],
+     "Flat Design": [
+      "primary"
+     ],
+     "Flat 2.0": [
+      "primary"
+     ],
+     "Data Viz-Led": [
+      "primary"
+     ],
+     "AI-Native": [
+      "primary"
+     ],
+     "Eco Sustainable": [
+      "primary"
+     ],
+     "Playful": [
+      "duotone"
+     ],
+     "Illustration-Led": [
+      "duotone"
+     ],
+     "Claymorphism": [
+      "duotone"
+     ],
+     "Memphis": [
+      "duotone"
+     ],
+     "Neo-Memphis": [
+      "duotone"
+     ],
+     "Hand-Drawn": [
+      "duotone"
+     ],
+     "Isometric": [
+      "duotone"
+     ],
+     "Duotone": [
+      "duotone"
+     ],
+     "Dark-First": [
+      "accent"
+     ],
+     "Cyberpunk": [
+      "accent"
+     ],
+     "Synthwave": [
+      "accent"
+     ],
+     "Futuristic": [
+      "accent"
+     ],
+     "Web3 Digital Native": [
+      "accent"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "text",
+     "label": "Metin rengini izler — currentColor (önerilen)",
+     "explanation": "İkon, içinde bulunduğu metnin ya da düğmenin rengini alır; bağlantıdaki ikon bağlantı renginde, düğmedeki ikon düğme yazısı renginde olur. En tutarlı ve en kolay bakımı yapılan yöntemdir, kontrast metinle birlikte sağlanır.",
+     "scenario": "Belirgin bir renk tercihi yoksa varsayılan seçim; sade, tipografi ağırlıklı ve kurumsal siteler.",
+     "example": "Bir hukuk bürosunun menüsündeki ikonlar menü yazısıyla aynı koyu gri; “Bize ulaşın” düğmesindeki ikon düğme yazısıyla aynı beyaz görünür."
+    },
+    {
+     "value": "primary",
+     "label": "Ana marka rengi",
+     "explanation": "Tek başına duran ikonlar (özellik kartı, hizmet listesi) ana marka renginde (--color-primary) gösterilir; metin içindeki küçük ikonlar metin rengini izler. Marka rengini sayfaya yayar.",
+     "scenario": "Marka renginin belirgin olduğu kurumsal, SaaS ve hizmet siteleri.",
+     "example": "Bir kargo firmasının “Hizmetlerimiz” kartlarındaki kamyon, depo ve paket ikonları firmanın turuncu renginde görünür."
+    },
+    {
+     "value": "accent",
+     "label": "Vurgu rengi",
+     "explanation": "İkonlar vurgu renginde (--color-accent) gösterilir; dikkat çeker. Eksisi: her ikon vurgulu olunca vurgunun etkisi azalır, birincil düğmeyle yarışabilir.",
+     "scenario": "Koyu temalı, enerjik ya da teknoloji ağırlıklı siteler; ikonların öne çıkması istenen açılış sayfaları.",
+     "example": "Koyu zeminli bir oyun platformunda özellik ikonları neon yeşil vurgu renginde parlar."
+    },
+    {
+     "value": "neutral",
+     "label": "Nötr gri",
+     "explanation": "İkonlar nötr gri tonda (--color-neutral) gösterilir; arka planda kalır, içeriğin önüne geçmez. Gri açık kalırsa 3:1 kontrast sağlanamayabilir — ton koyulaştırılmalıdır.",
+     "scenario": "Yoğun panel ve tablo arayüzleri, sakin ve içerik odaklı siteler.",
+     "example": "Bir muhasebe panelinin tablo satırlarındaki düzenle / sil ikonları gri durur, üzerine gelince belirginleşir."
+    },
+    {
+     "value": "duotone",
+     "label": "İki tonlu — ana renk + açık ton",
+     "explanation": "İkonun ana çizgisi ana marka renginde, dolgu alanı aynı rengin açık tonunda (%25) gösterilir (--icon-color-secondary). Sıcak ve canlı görünür; ikon setinin iki tonlu (duotone) çizilmiş olmasını gerektirir.",
+     "scenario": "Eğlenceli, illüstrasyon ağırlıklı, eğitim ve çocuk odaklı siteler; iki tonlu ikon seti kullanılacaksa.",
+     "example": "Bir dil okulunun ders kartlarındaki kitap ve kulaklık ikonları koyu mor çizgi, açık mor dolguyla görünür."
+    },
+    {
+     "value": "custom",
+     "label": "Özel renk — rengi ben belirleyeceğim",
+     "explanation": "İkon rengi aşağıda açılan “Özel İkon Rengi” kararında HEX kodu olarak girilir. Marka kılavuzunda ikonlar için ayrı bir renk tanımlıysa kullanılır.",
+     "scenario": "Marka kılavuzunda ikon rengi palet renklerinden farklı tanımlandıysa ya da ikonların belirli bir tonda olması isteniyorsa.",
+     "example": "Kılavuzunda ikonlar için #0F766E tanımlı bir sağlık kuruluşu bu kodu girer; bütün ikonlar bu tonda görünür."
+    }
+   ]
+  },
+  {
+   "id": "brand_icon_color_custom",
+   "section": "brand",
+   "after": "brand_icon_color",
+   "label": "Özel İkon Rengi",
+   "en": "Custom Icon Color",
+   "type": "color",
+   "placeholder": "#0F766E",
+   "explanation": "Özel renk seçildiğinde ikonların rengi HEX kodu olarak girilir ya da renk kutusundan seçilir. Renk zeminle (Ortak Bilgiler › Açık Renk, yoksa beyaz) en az 3:1 kontrast vermelidir; vermezse kartta uyarı çıkar.",
+   "rule": "Özel ikon rengi {value} olacaktır; --icon-color token'ına yazılır ve bütün ikonlarda bu token üzerinden kullanılır.",
+   "scenario": "İkon Rengi'nde “Özel renk” seçildiyse; marka kılavuzundaki ikon rengini birebir uygulamak için.",
+   "example": "#0F766E girilir; tasarım token'larına --icon-color: #0F766E yazılır ve menü, kart ve form ikonları bu tonda görünür.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "brand_icon_color",
+     "in": [
+      "custom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brand_icon_color_rules",
+   "section": "brand",
+   "after": "brand_icon_color_custom",
+   "label": "İkon Renk Kuralları",
+   "en": "Icon Color Rules",
+   "type": "multiselect",
+   "explanation": "İkonun rengi bulunduğu yere ve duruma göre değişebilir: durum ikonları durum renginde, etkileşimde renk değişimi, soluk süs ikonları, renkli zeminde ters renk gibi. Seçilen kurallar ikon renginin yanına eklenir; seçilmeyen durumda ikon varsayılan İkon Rengi'nde kalır.",
+   "rule": "İkon renk kuralları: {labels}.",
+   "scenario": "İkonlar durum bildirimi, menü, düğme ve renkli zeminlerde farklı amaçlarla kullanılacaksa; renklerin rastgele değil kurala göre değişmesi isteniyorsa.",
+   "example": "“Durum ikonları durum renginde” ve “Etkileşimde renk değişir” seçilen bir e-ticaret sitesinde başarılı sipariş ikonu yeşil, menü ikonu üzerine gelince ana renge döner.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "brand_icon_color",
+     "in": [
+      "text",
+      "primary",
+      "accent",
+      "neutral",
+      "duotone",
+      "custom"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "status",
+     "label": "Durum ikonları durum renginde",
+     "explanation": "Başarı, uyarı, hata ve bilgi ikonları Ortak Bilgiler'deki durum renkleriyle gösterilir; renk tek başına anlam taşımaz, ikonun yanında metin de bulunur.",
+     "scenario": "Form doğrulama, bildirim, sipariş ve ödeme durumu gösterilen her site.",
+     "example": "Form gönderilince yeşil onay ikonu ve “Mesajınız alındı” metni, hatalı alanda kırmızı uyarı ikonu ve hata metni görünür.",
+     "ruleDetail": "Durum ikonları --color-success / --color-warning / --color-error / --color-info ile renklenir; her durum ikonunun yanında durumu anlatan metin bulunur (renk tek başına anlam taşımaz, WCAG 1.4.1)."
+    },
+    {
+     "value": "interactive",
+     "label": "Etkileşimde renk değişir",
+     "explanation": "Bağlantı, menü ve ikon düğmelerinde ikon; üzerine gelince, klavyeyle odaklanınca ve etkin (seçili) durumda ana marka rengine geçer.",
+     "scenario": "Menü, sekme ve ikon düğmesi kullanan siteler ve paneller.",
+     "example": "Panel menüsündeki “Raporlar” ikonu üzerine gelince ve o sayfadayken ana renge döner.",
+     "ruleDetail": "Hover, focus-visible ve etkin (aria-current / aria-selected) durumda ikon rengi --icon-color-hover (ana marka rengi) olur; renk değişimi tek başına durum göstergesi değildir, odak halkası ve metin vurgusu da kullanılır."
+    },
+    {
+     "value": "decorative",
+     "label": "Süs ikonları soluk",
+     "explanation": "Anlam taşımayan, yalnız görsel amaçlı ikonlar nötr ve soluk tonda gösterilir; içeriğin önüne geçmez. Süs ikonları için kontrast şartı yoktur ama ekran okuyucudan gizlenmelidir.",
+     "scenario": "Liste madde işaretleri, bölüm başlığı süsleri gibi dekoratif ikonların çok kullanıldığı siteler.",
+     "example": "Bir blog yazısındaki madde işareti ikonları açık gri, yazının önüne geçmez.",
+     "ruleDetail": "Süs ikonları --icon-color-muted (nötr renk) ile gösterilir ve aria-hidden=\"true\" olur."
+    },
+    {
+     "value": "disabled",
+     "label": "Pasif ikonlar soluk",
+     "explanation": "Devre dışı düğme ve menü öğelerindeki ikon soluk nötr tonda gösterilir; WCAG pasif öğelerde kontrast şartı aramaz ama öğenin neden pasif olduğu metinle anlaşılmalıdır.",
+     "scenario": "Formlar, adım adım ilerleyen akışlar ve yetkiye göre kapanan panel menüleri.",
+     "example": "Zorunlu alanlar dolmadan “Gönder” düğmesi ve ikonu soluk görünür.",
+     "ruleDetail": "Devre dışı öğedeki ikon --icon-color-muted ile soluklaşır; pasif durum yalnız renkle değil disabled / aria-disabled ile de belirtilir."
+    },
+    {
+     "value": "on_color",
+     "label": "Renkli ve koyu zeminde ters renk",
+     "explanation": "Dolu düğme, koyu bant ya da renkli kart üzerindeki ikon, zeminle yeterli kontrast verecek şekilde beyaz ya da koyu tona döner.",
+     "scenario": "Renkli açılış bantları, dolu düğmeler ve koyu alt bilgi alanı olan siteler.",
+     "example": "Mavi “Teklif al” düğmesindeki ok ikonu beyaz, koyu alt bilgideki sosyal medya ikonları açık gri görünür.",
+     "ruleDetail": "Renkli ya da koyu zemindeki ikon zeminle en az 3:1 kontrast verecek şekilde beyaz ya da koyu tona döner (ikon currentColor ile düğmenin yazı rengini izler)."
+    },
+    {
+     "value": "dark_mode",
+     "label": "Koyu temada ayrı ton",
+     "explanation": "Koyu temada ikon rengi koyu zeminde okunacak açık bir tonla değiştirilir; 3:1 kontrast koyu zeminde de sağlanır.",
+     "scenario": "Koyu tema ya da sistem tercihine göre tema değiştiren siteler.",
+     "example": "Açık temada lacivert olan ikonlar koyu temada açık maviye döner.",
+     "ruleDetail": "Koyu temada --icon-color açık bir tonla yeniden tanımlanır ve koyu zeminde de en az 3:1 kontrast sağlanır."
+    },
+    {
+     "value": "social",
+     "label": "Sosyal medya ve ödeme logoları tek renk",
+     "explanation": "Sosyal medya, ödeme ve uygulama mağazası logoları site ikon renginde tek renk gösterilir; platformun özgün renkli logosu yalnız kendi kılavuzunun izin verdiği biçimde kullanılır.",
+     "scenario": "Alt bilgide sosyal medya bağlantıları ve ödeme yöntemi logoları olan siteler.",
+     "example": "Alt bilgideki Instagram, LinkedIn ve YouTube logoları beyaz tek renk, aynı boyutta görünür.",
+     "ruleDetail": "Sosyal medya, ödeme ve mağaza logoları tek renk (currentColor) gösterilir; logo biçimi platformun marka kılavuzuna aykırı değiştirilmez."
+    }
+   ]
+  },
+  {
    "id": "brand_border_width",
    "section": "brand",
    "after": "brand_shadow",

@@ -66,7 +66,7 @@ function deco(){document.querySelectorAll(".field[data-field-id]").forEach(el=>{
   let s=FI[l.s];o.insertAdjacentHTML("beforeend",`<small class="lnNote" data-v="${E(String(l.v))}">🔗 ${E(path(s))} kararından gelir — ${l.imply?"orada seçili olduğu için burada da zorunlu":has(l.s,l.on)?"açık":"kapalı"}. Burada değiştirilemez. <button type="button" class="linkBtn" onclick="event.stopPropagation();goToField('${s.section}','${s.id}')">Kaynağı düzenle →</button></small>`)})}
  let C=CF.filter(c=>(c.a===id||c.b===id)&&cfOn(c));if(!C.length)return;
  let html=C.map(c=>{let o=FI[c.a===id?c.b:c.a];return `<div class="cfWarn" role="note"><b>⚠ Çelişki</b> ${E(c.m)} <span class="cfOther">Diğer karar: ${E(path(o))} — “${E(vlab(o))}”.</span> <button type="button" class="linkBtn" onclick="goToField('${o.section}','${o.id}')">Diğer karara git →</button></div>`}).join("");
- let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)});icoWarn()}
+ let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)});icoWarn();iccWarn()}
 /* 3) Özel İkon Boyutları küçükten büyüğe artmalı (2026-11-21) — yalnız uyarı, değer değişmez */
 const ICO="brand_icon_size_custom",ICO_STD=[16,20,24,32];
 function icoVals(){let v=state[ICO]||{};return ["sm","md","lg","xl"].map((k,i)=>{let m=String(v[k]||"").replace(",",".").match(/^\s*(\d+(?:\.\d+)?)/);return m?+m[1]:ICO_STD[i]})}
@@ -74,8 +74,17 @@ function icoBad(){let f=FI[ICO];if(!f||!shown(f)||!isset(f))return false;let n=i
 function icoWarn(){let el=document.querySelector('.field[data-field-id="'+ICO+'"]');if(!el)return;el.querySelectorAll(":scope>.icoWarn").forEach(x=>x.remove());if(!icoBad())return;
  let html=`<div class="cfWarn icoWarn" role="note"><b>⚠ Sıra</b> İkon boyutları küçükten büyüğe artmalı (sm &lt; md &lt; lg &lt; xl). Şu an: ${E(icoVals().join(" / "))} px — boş kutular standart ölçeğin değerini (16 / 20 / 24 / 32 px) alır. Aynı ya da ters sıradaki kademeler farklı kullanımları birbirinden ayırmaz.</div>`;
  let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)}
+/* 4) İkon rengi zeminle en az 3:1 kontrast (WCAG 1.4.11) (2026-11-21) — yalnız uyarı */
+const ICC="brand_icon_color",ICC_C="brand_icon_color_custom",ICC_SRC={text:"brand_color_dark",primary:"brand_color_primary",duotone:"brand_color_primary",accent:"brand_color_accent",neutral:"brand_color_neutral",custom:ICC_C};
+const hx=v=>/^#[0-9a-f]{6}$/i.test(String(v||""))?String(v).toUpperCase():"";
+function iccInfo(){let f=FI[ICC];if(!f||!shown(f)||!isset(f)||typeof palRatio!=="function")return null;let m=state[ICC],src=ICC_SRC[m];if(!src||(src===ICC_C&&!shown(FI[ICC_C])))return null;let c=hx(state[src]);if(!c)return null;let bg=hx(state.brand_color_light)||"#FFFFFF",r=palRatio(c,bg);return r<3?{c,bg,r,src}:null}
+function iccWarn(){[ICC,ICC_C].forEach(id=>{let el=document.querySelector('.field[data-field-id="'+id+'"]');if(!el)return;el.querySelectorAll(":scope>.iccWarn").forEach(x=>x.remove());let w=iccInfo();if(!w||(id===ICC_C&&state[ICC]!=="custom"))return;
+ let sf=FI[w.src],srcTxt=w.src===ICC_C?"":` (${E(path(sf))})`,fmt=typeof palFmt==="function"?palFmt(w.r):w.r.toFixed(2)+":1";
+ let html=`<div class="cfWarn iccWarn" role="note"><b>⚠ Kontrast</b> İkon rengi ${E(w.c)}${srcTxt} zeminle (${E(w.bg)}${state.brand_color_light?"":", açık renk girilmediği için beyaz kabul edildi"}) ${E(fmt)} kontrast veriyor; anlam taşıyan ikonlar için en az 3:1 gerekir (WCAG 1.4.11). Daha koyu bir ton seçin ya da “Metin rengini izler” seçeneğini kullanın.${w.src!==ICC_C&&sf?` <button type="button" class="linkBtn" onclick="goToField('${sf.section}','${sf.id}')">Rengi düzenle →</button>`:""}</div>`;
+ let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)})}
+if(typeof setColor==="function"){const _sc=setColor;setColor=function(id){let r=_sc.apply(this,arguments);if(id===ICC_C)iccWarn();return r}}
 if(typeof setAcc==="function"){const _sa=setAcc;setAcc=function(id){let r=_sa.apply(this,arguments);if(id===ICO)icoWarn();return r}}
-window.cfList=()=>CF.filter(cfOn).map(c=>[c.a,c.b,c.m]).concat(icoBad()?[[ICO,ICO,"İkon boyutları küçükten büyüğe artmalı"]]:[]);window.lnLock=lnLock;
+window.cfList=()=>CF.filter(cfOn).map(c=>[c.a,c.b,c.m]).concat(icoBad()?[[ICO,ICO,"İkon boyutları küçükten büyüğe artmalı"]]:[]).concat(iccInfo()?[[ICC,ICC,"İkon rengi zeminle 3:1 kontrast vermiyor"]]:[]);window.lnLock=lnLock;
 const _rf=renderFields;renderFields=function(){let r=_rf.apply(this,arguments);deco();return r};
 const _rr=renderRules;renderRules=function(){let r=_rr.apply(this,arguments);deco();return r};
 if(typeof refreshField==="function"){const _rfi=refreshField;refreshField=function(){let r=_rfi.apply(this,arguments);deco();return r}}
