@@ -15,3 +15,10 @@
 .ovProject .pdLoc.pdWarn .pdV{color:#92400e}
 [data-theme="dark"] .ovProject .pdLoc.pdWarn{background:rgba(227,160,8,.08);border-color:#b7791f}
 [data-theme="dark"] .ovProject .pdLoc.pdWarn .pdV{color:#fbd38d}
+/* 2026-11-21 klasörden açma: dosya seçim listesi */
+.ovProject .pdLoc.pdPick .pdV{flex:1 1 280px}
+.ovProject .pdList{flex-basis:100%;list-style:none;margin:2px 0 0;padding:0;display:grid;gap:6px}
+.ovProject .pdFile{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;width:100%;text-align:left;font:inherit;font-size:13px;padding:9px 12px;border:1px solid var(--border,#d6dae0);border-radius:10px;background:var(--surface,#fff);color:var(--text,#1b1f2a);cursor:pointer}
+.ovProject .pdFile:hover{border-color:var(--text,#1b1f2a)}
+.ovProject .pdFile:focus-visible{outline:2px solid var(--accent,#2563eb);outline-offset:2px}
+.ovProject .pdFile span{font-size:12px;color:var(--subtle,#7a8088)}
