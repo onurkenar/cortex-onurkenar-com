@@ -66,8 +66,16 @@ function deco(){document.querySelectorAll(".field[data-field-id]").forEach(el=>{
   let s=FI[l.s];o.insertAdjacentHTML("beforeend",`<small class="lnNote" data-v="${E(String(l.v))}">🔗 ${E(path(s))} kararından gelir — ${l.imply?"orada seçili olduğu için burada da zorunlu":has(l.s,l.on)?"açık":"kapalı"}. Burada değiştirilemez. <button type="button" class="linkBtn" onclick="event.stopPropagation();goToField('${s.section}','${s.id}')">Kaynağı düzenle →</button></small>`)})}
  let C=CF.filter(c=>(c.a===id||c.b===id)&&cfOn(c));if(!C.length)return;
  let html=C.map(c=>{let o=FI[c.a===id?c.b:c.a];return `<div class="cfWarn" role="note"><b>⚠ Çelişki</b> ${E(c.m)} <span class="cfOther">Diğer karar: ${E(path(o))} — “${E(vlab(o))}”.</span> <button type="button" class="linkBtn" onclick="goToField('${o.section}','${o.id}')">Diğer karara git →</button></div>`}).join("");
- let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)})}
-window.cfList=()=>CF.filter(cfOn).map(c=>[c.a,c.b,c.m]);window.lnLock=lnLock;
+ let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)});icoWarn()}
+/* 3) Özel İkon Boyutları küçükten büyüğe artmalı (2026-11-21) — yalnız uyarı, değer değişmez */
+const ICO="brand_icon_size_custom",ICO_STD=[16,20,24,32];
+function icoVals(){let v=state[ICO]||{};return ["sm","md","lg","xl"].map((k,i)=>{let m=String(v[k]||"").replace(",",".").match(/^\s*(\d+(?:\.\d+)?)/);return m?+m[1]:ICO_STD[i]})}
+function icoBad(){let f=FI[ICO];if(!f||!shown(f)||!isset(f))return false;let n=icoVals();return n.some((x,i)=>i&&x<=n[i-1])}
+function icoWarn(){let el=document.querySelector('.field[data-field-id="'+ICO+'"]');if(!el)return;el.querySelectorAll(":scope>.icoWarn").forEach(x=>x.remove());if(!icoBad())return;
+ let html=`<div class="cfWarn icoWarn" role="note"><b>⚠ Sıra</b> İkon boyutları küçükten büyüğe artmalı (sm &lt; md &lt; lg &lt; xl). Şu an: ${E(icoVals().join(" / "))} px — boş kutular standart ölçeğin değerini (16 / 20 / 24 / 32 px) alır. Aynı ya da ters sıradaki kademeler farklı kullanımları birbirinden ayırmaz.</div>`;
+ let ex=el.querySelector(":scope>.explain");if(ex)ex.insertAdjacentHTML("afterend",html);else el.insertAdjacentHTML("afterbegin",html)}
+if(typeof setAcc==="function"){const _sa=setAcc;setAcc=function(id){let r=_sa.apply(this,arguments);if(id===ICO)icoWarn();return r}}
+window.cfList=()=>CF.filter(cfOn).map(c=>[c.a,c.b,c.m]).concat(icoBad()?[[ICO,ICO,"İkon boyutları küçükten büyüğe artmalı"]]:[]);window.lnLock=lnLock;
 const _rf=renderFields;renderFields=function(){let r=_rf.apply(this,arguments);deco();return r};
 const _rr=renderRules;renderRules=function(){let r=_rr.apply(this,arguments);deco();return r};
 if(typeof refreshField==="function"){const _rfi=refreshField;refreshField=function(){let r=_rfi.apply(this,arguments);deco();return r}}

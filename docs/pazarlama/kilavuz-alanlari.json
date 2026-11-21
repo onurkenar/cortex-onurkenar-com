@@ -7536,6 +7536,122 @@
    }
   },
   {
+   "id": "brand_icon_size",
+   "section": "brand",
+   "after": "brand_icon_stroke",
+   "label": "İkon Boyut Ölçeği",
+   "en": "Icon Size Scale",
+   "type": "select",
+   "explanation": "Arayüzdeki ikonların hangi boyutlarda kullanılacağını belirler. Ölçek dört kademedir: küçük (sm) metin içi ve küçük düğmeler, orta (md) menü, form ve düğmeler, büyük (lg) tek başına duran ikonlar, çok büyük (xl) özellik kartları ve boş durum ekranları içindir. Kademeler --icon-size-sm / -md / -lg / -xl token'ları olur; ikonlar yalnız bu boyutlarda kullanılır, ara boyut uydurulmaz. Hazır ölçeklerden biri seçilebilir ya da “Özel ölçek” ile dört boyut elle girilir.",
+   "rule": "İkon boyut ölçeği: {label}. İkonlar yalnız bu dört kademede kullanılır ve --icon-size-sm / -md / -lg / -xl token'larıyla uygulanır: metin içi ve küçük düğmede sm, menü, form ve düğmede md, tek başına duran ikonda lg, özellik kartı ve boş durum ekranında xl. İkon yanındaki metinle dikey ortalanır; tek başına tıklanabilir ikonun dokunma alanı ikon küçük olsa da en az 44 × 44 px tutulur; ara boyut kullanılmaz.",
+   "scenario": "Sitede menü, düğme, form ve özellik kartlarında ikon kullanılacaksa; ikonların sayfadan sayfaya farklı boyutta görünmesi önlenmek isteniyorsa.",
+   "example": "Standart ölçek seçilen bir sigorta sitesinde arama kutusundaki ikon 20 px, ürün kartlarındaki ikonlar 32 px, metin içindeki bilgi ikonu 16 px olur ve her sayfada aynı kalır.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "recommend": {
+    "field": "design_density",
+    "map": {
+     "Ultra Spacious": [
+      "large"
+     ],
+     "Spacious": [
+      "large"
+     ],
+     "Balanced": [
+      "standard"
+     ],
+     "Compact": [
+      "compact"
+     ],
+     "Dense": [
+      "compact"
+     ]
+    }
+   },
+   "options": [
+    {
+     "value": "compact",
+     "label": "Sıkı — 14 / 16 / 20 / 24 px",
+     "explanation": "Küçük kademeli ölçek; ekrana daha çok bilgi sığar. Eksisi: 14 px ikon ayrıntılı çizimlerde zor seçilir, dokunmatik ekranda dokunma alanı ayrıca büyütülmelidir.",
+     "scenario": "Yoğun yönetim panelleri, tablolar, veri ağırlıklı SaaS ve finans uygulamaları.",
+     "example": "Bir muhasebe panelinin tablo satırlarındaki durum ikonları 14 px, araç çubuğu ikonları 16 px görünür; ekrana daha çok satır sığar."
+    },
+    {
+     "value": "standard",
+     "label": "Standart — 16 / 20 / 24 / 32 px (önerilen)",
+     "explanation": "Web'de en yaygın ölçek; Material Symbols, Lucide ve Heroicons ikonları 20 ve 24 px ızgaralar için çizilmiştir. Çoğu tasarıma uyar, her boyutta net görünür.",
+     "scenario": "Belirgin bir yoğunluk tercihi yoksa varsayılan seçim; kurumsal, hizmet ve e-ticaret siteleri.",
+     "example": "Bir e-ticaret sitesinde sepet ve hesap ikonları 24 px, filtre menüsündeki ikonlar 20 px, kategori kartlarındaki ikonlar 32 px olur."
+    },
+    {
+     "value": "large",
+     "label": "Geniş — 20 / 24 / 32 / 40 px",
+     "explanation": "Büyük kademeli ölçek; ferah ve dokunmatik ağırlıklı arayüzlere uyar, ikonlar uzaktan da seçilir. Eksisi: yoğun ekranlarda yer kaplar.",
+     "scenario": "Ferah tasarımlar, yaşlı ya da az görenlere yönelik siteler, mobil ve dokunmatik kiosk arayüzleri.",
+     "example": "Bir sağlık kuruluşunun randevu ekranında menü ikonları 24 px, hizmet kartlarındaki ikonlar 40 px olur; dokunmatik ekranda kolay seçilir."
+    },
+    {
+     "value": "custom",
+     "label": "Özel ölçek — boyutları ben belirleyeceğim",
+     "explanation": "Dört kademenin boyutu aşağıda açılan “Özel İkon Boyutları” kararında elle girilir. Kurumun kendi ikon seti ya da marka kılavuzunda belirlenmiş boyutlar varsa kullanılır; boş bırakılan kademe standart ölçekteki değeri alır.",
+     "scenario": "Marka kılavuzunda ikon boyutları tanımlıysa ya da ikon seti 24 px dışında bir ızgaraya (ör. 18 ya da 28 px) göre çizildiyse.",
+     "example": "Kendi ikon setini 18 px ızgarada çizdiren bir banka küçük 12, orta 18, büyük 24, çok büyük 36 px girer; bütün sayfalar bu boyutları kullanır."
+    }
+   ]
+  },
+  {
+   "id": "brand_icon_size_custom",
+   "section": "brand",
+   "after": "brand_icon_size",
+   "label": "Özel İkon Boyutları",
+   "en": "Custom Icon Sizes",
+   "type": "accounts",
+   "placeholder": "Örn. 16",
+   "explanation": "Özel ölçekte dört kademenin boyutu piksel olarak ayrı kutulara girilir (8–128 px; tam sayı ya da ,5). Değerler küçükten büyüğe sıralanmalıdır. Boş bırakılan kademe standart ölçekteki değeri (16 / 20 / 24 / 32 px) alır.",
+   "rule": "Özel ikon boyutları (px): {value}. Değerler sırasıyla --icon-size-sm / -md / -lg / -xl token'larına yazılır, ikonlar yalnız bu boyutlarda kullanılır; boş bırakılan kademede standart ölçeğin değeri (16 / 20 / 24 / 32 px) geçerlidir.",
+   "scenario": "İkon Boyut Ölçeği'nde “Özel ölçek” seçildiyse; marka kılavuzundaki ikon boyutlarını ya da kurumun ikon setinin ızgarasını birebir uygulamak için.",
+   "example": "Küçük 12, orta 18, büyük 24, çok büyük 36 girilir; tasarım token'larına --icon-size-sm: 12px … --icon-size-xl: 36px yazılır.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.05/kurumsal-yazilim-gelistirme/uygulama-gelistirme-uzmani"
+   ],
+   "noOther": true,
+   "showIf": [
+    {
+     "field": "brand_icon_size",
+     "in": [
+      "custom"
+     ]
+    }
+   ],
+   "accounts": [
+    {
+     "k": "sm",
+     "label": "Küçük — sm (metin içi, küçük düğme)",
+     "ph": "Örn. 16",
+     "re": "^(?:[89]|[1-9][0-9]|1[01][0-9]|12[0-8])(?:[.,]5)?\\s?(?:px)?$"
+    },
+    {
+     "k": "md",
+     "label": "Orta — md (menü, form, düğme)",
+     "ph": "Örn. 20",
+     "re": "^(?:[89]|[1-9][0-9]|1[01][0-9]|12[0-8])(?:[.,]5)?\\s?(?:px)?$"
+    },
+    {
+     "k": "lg",
+     "label": "Büyük — lg (tek başına duran ikon)",
+     "ph": "Örn. 24",
+     "re": "^(?:[89]|[1-9][0-9]|1[01][0-9]|12[0-8])(?:[.,]5)?\\s?(?:px)?$"
+    },
+    {
+     "k": "xl",
+     "label": "Çok büyük — xl (özellik kartı, boş durum)",
+     "ph": "Örn. 32",
+     "re": "^(?:[89]|[1-9][0-9]|1[01][0-9]|12[0-8])(?:[.,]5)?\\s?(?:px)?$"
+    }
+   ]
+  },
+  {
    "id": "brand_border_width",
    "section": "brand",
    "after": "brand_shadow",
