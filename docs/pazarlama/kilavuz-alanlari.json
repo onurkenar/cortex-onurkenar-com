@@ -8170,6 +8170,202 @@
      ]
     }
    }
+  },
+  {
+   "id": "mk_tt_events",
+   "section": "mk_tt",
+   "after": "mk_tt_pixel",
+   "label": "Gönderilecek TikTok Olayları",
+   "en": "TikTok Events to Send",
+   "type": "multiselect",
+   "explanation": "Sitedeki hangi işlemlerin hangi TikTok standart olayıyla gönderileceğini belirler. Olaylar TikTok Pixel ile tarayıcıdan, Events API ile sunucudan ya da ikisiyle birlikte gönderilebilir. PageView, Pixel yüklenince kendiliğinden gönderilir.",
+   "rule": "TikTok'a gönderilecek standart olaylar: {labels}. Olaylar işlem gerçekten tamamlanınca (form sunucuda kaydedilince, ödeme onaylanınca) ve yalnız çerez onayı verildiyse gönderilir. Aynı olay hem Pixel hem Events API ile gönderiliyorsa ikisinde aynı olay adı ve aynı event_id kullanılır; TikTok bu kopyaları 48 saat içinde tekilleştirir. Yeni kurulumda TikTok'un kullanımdan kaldırdığı ClickButton ve PlaceAnOrder olayları kullanılmaz (2027'de kapanacak). Olaylar yayından önce Events Manager'daki test olaylarıyla doğrulanır.",
+   "scenario": "TikTok reklamları siteye trafik gönderiyor ve kampanyalar sitedeki form, kayıt ya da satışa göre optimize edilecekse.",
+   "example": "Bir dil kursu sitesinde kayıt formu gönderilince SubmitForm, WhatsApp düğmesine basılınca Contact, ödeme onaylanınca Purchase gider; TikTok kampanyası SubmitForm sayısına göre optimize edilir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "tiktok"
+     ]
+    },
+    {
+     "field": "mk_tt_pixel",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "recommend": [
+    {
+     "field": "mk_conversions",
+     "map": {
+      "form": [
+       "submit_form"
+      ],
+      "phone": [
+       "contact"
+      ],
+      "whatsapp": [
+       "contact"
+      ],
+      "email": [
+       "contact"
+      ],
+      "download": [
+       "download"
+      ],
+      "purchase": [
+       "view_content",
+       "add_to_cart",
+       "initiate_checkout",
+       "purchase"
+      ],
+      "event_register": [
+       "complete_registration"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "ecommerce": [
+       "view_content",
+       "add_to_cart",
+       "initiate_checkout",
+       "purchase",
+       "search"
+      ],
+      "booking": [
+       "schedule"
+      ],
+      "lms": [
+       "complete_registration",
+       "purchase"
+      ],
+      "subscription": [
+       "subscribe"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "submit_form",
+     "label": "SubmitForm — form gönderimi",
+     "explanation": "Teklif, iletişim ya da başvuru formu başarıyla gönderilince. TikTok 2025'te bu olayın raporlardaki adını Lead yaptı; kodda SubmitForm ya da Lead yazılabilir, ikisi de aynı olay sayılır.",
+     "scenario": "Form toplayan her site.",
+     "example": "Teklif formu sunucuda kaydedilince SubmitForm gider; TikTok raporunda Lead olarak görünür.",
+     "ruleDetail": "SubmitForm (raporlarda Lead) olayı form sunucuda başarıyla kaydedilince gönderilir; form türü description parametresiyle belirtilir."
+    },
+    {
+     "value": "contact",
+     "label": "Contact — telefon, WhatsApp, e-posta tıklaması",
+     "explanation": "Telefon, WhatsApp ya da e-posta bağlantısına tıklanınca.",
+     "scenario": "Arama ve mesajla iletişim alan işletmeler.",
+     "example": "WhatsApp düğmesine basılınca Contact gider.",
+     "ruleDetail": "Contact olayı telefon, WhatsApp ve e-posta bağlantılarına tıklanınca gönderilir; kanal description parametresiyle ayrılır."
+    },
+    {
+     "value": "schedule",
+     "label": "Schedule — randevu",
+     "explanation": "Randevu oluşturulunca.",
+     "scenario": "Klinik, salon, danışmanlık gibi randevulu işletmeler.",
+     "example": "Randevu onaylanınca Schedule gider.",
+     "ruleDetail": "Schedule olayı randevu kaydı oluşunca gönderilir."
+    },
+    {
+     "value": "complete_registration",
+     "label": "CompleteRegistration — kayıt",
+     "explanation": "Üyelik, etkinlik ya da eğitim kaydı tamamlanınca.",
+     "scenario": "Üyelik, etkinlik ya da webinar kaydı olan siteler.",
+     "example": "Webinar kayıt formu tamamlanınca CompleteRegistration gider.",
+     "ruleDetail": "CompleteRegistration olayı kayıt tamamlanınca (hesap açıldı, etkinlik kaydı onaylandı) gönderilir."
+    },
+    {
+     "value": "submit_application",
+     "label": "SubmitApplication — başvuru",
+     "explanation": "İş, eğitim programı, kredi ya da bayilik başvurusu gönderilince.",
+     "scenario": "Başvuru toplayan işletmeler (insan kaynakları, eğitim, finans, bayilik).",
+     "example": "Bayilik başvuru formu gönderilince SubmitApplication gider.",
+     "ruleDetail": "SubmitApplication olayı başvuru formu başarıyla kaydedilince gönderilir; başvurunun onayı gerekiyorsa sonradan ApplicationApproval olayı ayrıca gönderilebilir."
+    },
+    {
+     "value": "download",
+     "label": "Download — dosya indirme",
+     "explanation": "Katalog, broşür, rehber gibi bir dosya indirilince.",
+     "scenario": "İndirilebilir içerik (lead magnet) sunan siteler.",
+     "example": "Ücretsiz rehber PDF'i indirilince Download gider.",
+     "ruleDetail": "Download olayı dosya indirme bağlantısına tıklanınca gönderilir; dosya adı description parametresiyle belirtilir."
+    },
+    {
+     "value": "view_content",
+     "label": "ViewContent — ürün / hizmet sayfası",
+     "explanation": "Önemli bir ürün, hizmet ya da kampanya sayfası görüntülenince.",
+     "scenario": "Ürün ya da hizmet sayfalarına gelen ilgiyi ölçmek ve yeniden hedeflemek isteyen siteler.",
+     "example": "Hizmet detay sayfası açılınca ViewContent gider.",
+     "ruleDetail": "ViewContent olayı ürün / hizmet sayfası açılınca content_id, content_type ve varsa value / currency ile gönderilir."
+    },
+    {
+     "value": "search",
+     "label": "Search — site içi arama",
+     "explanation": "Site içinde arama yapılınca.",
+     "scenario": "Arama kutusu olan e-ticaret ve içerik siteleri.",
+     "example": "Ziyaretçi “kışlık bot” arayınca Search gider.",
+     "ruleDetail": "Search olayı site içi arama yapılınca search_string parametresiyle gönderilir."
+    },
+    {
+     "value": "add_to_cart",
+     "label": "AddToCart — sepete ekleme",
+     "explanation": "Ürün sepete eklenince.",
+     "scenario": "E-ticaret siteleri.",
+     "example": "Ürün sepete eklenince AddToCart gider.",
+     "ruleDetail": "AddToCart olayı ürün sepete eklenince content_id, quantity, value ve currency ile gönderilir."
+    },
+    {
+     "value": "initiate_checkout",
+     "label": "InitiateCheckout — ödeme başlangıcı",
+     "explanation": "Ödeme adımına geçilince.",
+     "scenario": "E-ticaret ve online satış yapan siteler.",
+     "example": "Sepetten “Ödemeye geç” tıklanınca InitiateCheckout gider.",
+     "ruleDetail": "InitiateCheckout olayı ödeme adımı açılınca value ve currency ile gönderilir."
+    },
+    {
+     "value": "add_payment_info",
+     "label": "AddPaymentInfo — ödeme bilgisi girildi",
+     "explanation": "Ödeme adımında ödeme bilgisi girilince.",
+     "scenario": "Ödeme adımında terk edilen sepetleri ölçmek isteyen e-ticaret siteleri.",
+     "example": "Kart bilgisi girilip bir sonraki adıma geçilince AddPaymentInfo gider.",
+     "ruleDetail": "AddPaymentInfo olayı ödeme bilgisi adımı tamamlanınca gönderilir; kart bilgisi ve kişisel veri olaya yazılmaz."
+    },
+    {
+     "value": "purchase",
+     "label": "Purchase — satın alma",
+     "explanation": "Ödeme onaylanıp sipariş tamamlanınca. Eski adı CompletePayment'tır; eski ad çalışmaya devam eder ama yeni kurulumda Purchase kullanılır.",
+     "scenario": "Online satış yapan siteler.",
+     "example": "Ödeme onaylanınca 1.250 TL değerle Purchase gider.",
+     "ruleDetail": "Purchase olayı ödeme sunucuda onaylanınca value, currency ve content_id ile gönderilir; eski CompletePayment ve PlaceAnOrder adları kullanılmaz."
+    },
+    {
+     "value": "subscribe",
+     "label": "Subscribe — abonelik",
+     "explanation": "Bülten, ücretli abonelik ya da üyelik paketine abone olununca.",
+     "scenario": "Abonelik ya da bülten kaydı olan siteler.",
+     "example": "Aylık pakete abone olununca Subscribe gider.",
+     "ruleDetail": "Subscribe olayı abonelik başarıyla başlayınca gönderilir; ücretliyse value ve currency eklenir."
+    },
+    {
+     "value": "start_trial",
+     "label": "StartTrial — ücretsiz deneme",
+     "explanation": "Ücretsiz deneme başlatılınca.",
+     "scenario": "Deneme sürümü sunan yazılım ve abonelik hizmetleri.",
+     "example": "14 günlük deneme başlatılınca StartTrial gider.",
+     "ruleDetail": "StartTrial olayı ücretsiz deneme hesabı açılınca gönderilir."
+    }
+   ]
   }
  ],
  "optionAdd": [
