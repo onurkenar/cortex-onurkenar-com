@@ -9860,6 +9860,32 @@
      ]
     }
    ]
+  },
+  {
+   "field": "mk_ids",
+   "after": "gads_conversion",
+   "rows": [
+    {
+     "k": "gads_conv_labels",
+     "label": "Google Ads — dönüşüm etiketleri",
+     "ph": "Form gönderimi: AbC-D_efG-h12; Telefon tıklaması: XyZ9_8w7v6",
+     "re": "^\\s*(?:[^:;]+:\\s*)?(?!AW-\\d+\\s*(?:;|$))(?:AW-\\d{6,15}/)?[A-Za-z0-9_-]{6,40}\\s*(?:;\\s*(?:[^:;]+:\\s*)?(?!AW-\\d+\\s*(?:;|$))(?:AW-\\d{6,15}/)?[A-Za-z0-9_-]{6,40}\\s*)*;?\\s*$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "google"
+       ]
+      },
+      {
+       "field": "gg_services",
+       "in": [
+        "ads"
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "templateFormats": {

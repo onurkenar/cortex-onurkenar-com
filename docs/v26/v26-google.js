@@ -15,18 +15,20 @@ var GG_RULES=[
  "Her değişiklik önce test ortamında ya da Tag Manager Önizleme modunda doğrulanır; canlıya alınan her Tag Manager sürümü ad ve açıklamayla yayımlanır.",
  "Kimlikleri (ölçüm kimliği, kapsayıcı kimliği, dönüşüm kimliği ve etiketi, Merchant Center kimliği) koda gömmek yerine yapılandırma dosyasından ya da ortam değişkeninden oku; test ortamı canlı mülke veri göndermez.",
  "Her adımın sonunda durumu yaz: yapıldı (kanıt) / kullanıcıya bırakıldı (kontrol listesi) / engel (neden). Doğrulanmamış adımı yapıldı sayma."];
-var GG_SVC={ga4:["ga4","ga4_property"],gtm:["gtm"],gsc:["search_console"],ads:["gads_customer","gads_conversion"],merchant:["merchant"]};
+var GG_SVC={ga4:["ga4","ga4_property"],gtm:["gtm"],gsc:["search_console"],ads:["gads_customer","gads_conversion","gads_conv_labels"],merchant:["merchant"]};
 function ggOn(k){let f=FI[k];return !!f&&shown(f)&&isset(f)}
 function ggHas(k,v){let x=state[k];return ggOn(k)&&(Array.isArray(x)?x.includes(v):x===v)}
 function ggLabs(k){let f=FI[k];if(!ggOn(k))return[];let v=state[k];return (Array.isArray(v)?v:[v]).map(x=>String(lab(f,x)).replace(/\s*\(önerilen\)/g,""))}
 function ggRuleGroups(){return areaS("google").map(s=>({s,rs:F.filter(f=>f.section===s.id&&isset(f)&&shown(f)).map(ruleAg).filter(Boolean)})).filter(g=>g.rs.length)}
 function ggPrompt(gg){return gg.length?"\n\nGOOGLE SERVİSLERİ KURULUMU\n"+GG_HEAD+"\n"+mkRuleText(gg):""}
-function ggIds(){let f=FI.mk_ids;if(!f)return[];let v=accVal(f),sv=state.gg_services||[];return f.accounts.filter(a=>Object.entries(GG_SVC).some(([s,ks])=>ks.includes(a.k)&&(sv.includes(s)||String(v[a.k]||"").trim()))).map(a=>[a.label,String(v[a.k]||"").trim()])}
+/* Dönüşüm etiketleri yalnız Google Ads dönüşüm etiketiyle ölçümde gerekir (2026-11-23) */
+function ggSkip(k,v){return k==="gads_conv_labels"&&ggOn("gg_ads_conv")&&["ga4","offline"].includes(state.gg_ads_conv)&&!String((v||{})[k]||"").trim()}
+function ggIds(){let f=FI.mk_ids;if(!f)return[];let v=accVal(f),sv=state.gg_services||[];return f.accounts.filter(a=>!ggSkip(a.k,v)&&Object.entries(GG_SVC).some(([s,ks])=>ks.includes(a.k)&&(sv.includes(s)||String(v[a.k]||"").trim()))).map(a=>[a.label,String(v[a.k]||"").trim()])}
 function ggSite(){return String(state.domain_name||"").trim()}
 function ggIssues(){let I=[],sv=ggOn("gg_services")?state.gg_services:[],ids=FI.mk_ids?accVal(FI.mk_ids):{};
  if(!sv.length){I.push(`Kurulacak servis seçilmedi — ${auLink("gg_services")}.`);return I}
  if(!ggSite())I.push(`Canlı site adresi yok — ${auLink("domain_name","Ortak Bilgiler › Canlı Site Adresi")}. Mülk, veri akışı ve doğrulama bu adresle kurulur.`);
- let need=Object.entries(GG_SVC).filter(([s])=>sv.includes(s)).flatMap(([,ks])=>ks).filter(k=>!String(ids[k]||"").trim()).map(k=>(FI.mk_ids.accounts.find(a=>a.k===k)||{}).label).filter(Boolean);
+ let need=Object.entries(GG_SVC).filter(([s])=>sv.includes(s)).flatMap(([,ks])=>ks).filter(k=>!String(ids[k]||"").trim()&&!ggSkip(k,ids)).map(k=>(FI.mk_ids.accounts.find(a=>a.k===k)||{}).label).filter(Boolean);
  if(need.length)I.push(`Henüz girilmemiş kimlikler: ${E(need.join(", "))}. Hesaplar kurulunca ${auLink("mk_ids","Ortak Bilgiler › Hesap ve Etiket Kimlikleri")} alanına yazın; talimatta “kurulumdan sonra girilecek” olarak geçer.`);
  if(sv.some(s=>["ga4","gtm","ads"].includes(s))&&(!ggOn("cookie_manager")||state.cookie_manager==="None"))I.push(`Analitik ya da reklam etiketi seçildi ama ${auLink("cookie_manager","Proje › Çerez / Onay Platformu")} ${ggOn("cookie_manager")?"“yok”":"seçilmedi"}; Consent Mode onay sinyalini bir çerez onay aracından alır.`);
  if(sv.includes("gbp")&&FI.oc_address&&!isset(FI.oc_address))I.push(`İşletme Profili seçildi ama ${auLink("oc_address","Ortak Bilgiler › Adres")} boş; profildeki ad, adres ve telefon sitedekiyle birebir aynı olmalı.`);
