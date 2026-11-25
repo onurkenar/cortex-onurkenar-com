@@ -695,14 +695,14 @@
   },
   {
    "id": "mk_mpads",
-   "name": "Trendyol, Hepsiburada ve N11 Reklamları",
-   "en": "Trendyol, Hepsiburada & N11 Ads",
-   "desc": "Trendyol Reklam Yönetimi, Hepsiburada HepsiAd ve N11 Reklam Platformu'nda kullanılacak reklam türlerini, bütçe tipini, teklif yöntemini ve reklam bakiyesinin nasıl yükleneceğini belirler",
+   "name": "Pazar Yeri Reklamları",
+   "en": "Marketplace Ads",
+   "desc": "Trendyol Reklam Yönetimi, Hepsiburada HepsiAd, N11 Reklam Platformu ve Çiçeksepeti reklamlarında kullanılacak reklam türlerini, bütçe tipini, teklif yöntemini ve reklam bakiyesinin nasıl yükleneceğini belirler",
    "group": "Reklam",
    "icon": "⌘",
    "after": "mk_etsy",
    "guide": {
-    "purpose": "Bu bölüm, Türkiye'deki büyük pazar yerlerinde, Trendyol, Hepsiburada ve N11'de, satıcı reklamlarının nasıl kullanılacağını belirler. Bu reklamlar ziyaretçiyi kendi siteye değil pazar yerindeki ürün ya da mağaza sayfasına götürür; satışlar pazar yerinin panelinde ölçülür. Trendyol bilgileri ads.trendyol.com'dan doğrulandı; Hepsiburada'nın HepsiAd ve N11'in Reklam Platformu sayfaları oturumsuz okunamadığı için bu iki platformun ayrıntıları satıcı panelinden kontrol edilmelidir.",
+    "purpose": "Bu bölüm, Türkiye'deki büyük pazar yerlerinde, Trendyol, Hepsiburada, N11 ve Çiçeksepeti'nde, satıcı reklamlarının nasıl kullanılacağını belirler. Bu reklamlar ziyaretçiyi kendi siteye değil pazar yerindeki ürün ya da mağaza sayfasına götürür; satışlar pazar yerinin panelinde ölçülür. Trendyol bilgileri ads.trendyol.com'dan doğrulandı; Hepsiburada'nın HepsiAd, N11'in Reklam Platformu ve Çiçeksepeti'nin reklam sayfaları oturumsuz okunamadığı için bu üç platformun ayrıntıları satıcı panelinden kontrol edilmelidir.",
     "criteria": [
      "Hangi reklam türü hangi hedefe hizmet ediyor? Trendyol'da Ürün Reklamları satış, Mağaza Reklamları mağaza trafiği ve görünürlük, Tanıtım reklamları marka bilinirliği içindir.",
      "Bütçe günlük harcama limiti mi, toplam bütçe mi olacak? Kampanya dönemlerinde toplam bütçe, sürekli reklamda günlük limit harcamayı kontrol etmeyi kolaylaştırır.",
@@ -713,7 +713,7 @@
      "Pazar yeri reklamını sitenin reklam raporlarıyla birleştirmek: satışlar pazar yerinde gerçekleştiği için ayrı raporlanmalıdır.",
      "Komisyonlu influencer reklamlarında komisyonu fiyat hesabına katmamak: ödeme net satış üzerinden belirlenen komisyon oranıyla yapılır.",
      "Stoku az ürünü reklama koymak: stok bittiğinde reklam bütçesi boşa harcanır ve ürün reklamdan düşer.",
-     "Doğrulanmamış reklam bilgisiyle bütçe planlamak: HepsiAd ve N11 reklam türleri, maliyet modeli ve asgari bütçe satıcı panelinden doğrulanmalıdır."
+     "Doğrulanmamış reklam bilgisiyle bütçe planlamak: HepsiAd, N11 ve Çiçeksepeti reklam türleri, maliyet modeli ve asgari bütçe satıcı panelinden doğrulanmalıdır."
     ],
     "resources": [
      {
@@ -730,6 +730,11 @@
       "title": "HepsiAd yeni reklam ürünleri (basın haberi)",
       "url": "https://www.cnbce.com/sirket-haberleri/hepsiburadanin-reklam-platformunda-yapay-zeka-donemi-h39611",
       "note": "Sponsorlu Ürün modeli ve Dönüşüm Skoru; resmî sayfa değil, satıcı panelinden doğrulanmalı."
+     },
+     {
+      "title": "Çiçeksepeti Satıcı Akademisi",
+      "url": "https://akademi.ciceksepeti.com/",
+      "note": "Satıcıların panelden ürün yükleyip reklam vererek öne çıkarabileceği; hak ediş ödemesi ve Pazaryeri Destek Hattı."
      }
     ]
    }
@@ -3301,6 +3306,7 @@
       "trendyol",
       "hepsiburada",
       "n11",
+      "ciceksepeti",
       "programmatic"
      ]
     }
@@ -10004,6 +10010,48 @@
      "ruleDetail": "N11'de önce dört haftalık, sınırlı ürünlü ve küçük bütçeli deneme kampanyası açılır; harcama, tıklama ve satış haftalık izlenir, deneme sonunda ölçekleme ya da durdurma kararı verilir."
     }
    ]
+  },
+  {
+   "id": "mk_cs_ads",
+   "section": "mk_mpads",
+   "after": "mk_n11_ads",
+   "label": "Çiçeksepeti Reklam Planı",
+   "en": "Çiçeksepeti Ad Plan",
+   "type": "select",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "ciceksepeti"
+     ]
+    }
+   ],
+   "explanation": "Çiçeksepeti reklamlarının nasıl kullanılmaya başlanacağını belirler. Çiçeksepeti'nin reklam sayfaları oturumsuz okunamadığı için reklam türleri, maliyet modeli ve bütçe kuralları doğrulanamadı (2026-11-25); karar önce satıcı panelinde inceleme, sonra küçük bir denemeyle ilerler. Özel günler (Anneler Günü, Sevgililer Günü) öncesi plan erken yapılmalıdır.",
+   "rule": "Çiçeksepeti reklam planı: {label}.",
+   "scenario": "Reklam Kanalları'nda Çiçeksepeti Reklamları seçildiyse seçilir.",
+   "example": "Pazarlama ekibi panelde reklam seçeneklerini inceler; Sevgililer Günü'nden dört hafta önce en çok satan ürünlerle deneme kampanyası açar.",
+   "options": [
+    {
+     "value": "review",
+     "label": "Önce satıcı panelinde incelenecek (önerilen)",
+     "explanation": "Satıcı panelindeki reklam seçenekleri, maliyet modeli, asgari bütçe ve raporlama incelenir; bütçe ayrılmadan önce bu karar ayrıntılandırılır.",
+     "scenario": "Çiçeksepeti reklamını ilk kez kullanacak satıcılar.",
+     "example": "Reklam türleri ve ücret modeli bir sayfalık notta toplanır.",
+     "ruleDetail": "Çiçeksepeti satıcı panelindeki reklam bölümü incelenir (gerekirse Pazaryeri Destek Hattı'ndan bilgi alınır); reklam türleri, maliyet modeli, asgari bütçe ve rapor metrikleri kayda geçirilir ve bu karar güncellenir. İnceleme bitmeden Çiçeksepeti reklam bütçesi harcanmaz."
+    },
+    {
+     "value": "pilot",
+     "label": "İncelemeden sonra küçük bütçeli deneme",
+     "explanation": "İnceleme tamamlandıktan sonra sınırlı ürün ve küçük bütçeyle dört haftalık deneme kampanyası açılır; özel gün dönemleri için deneme önceden yapılır.",
+     "scenario": "Reklam seçeneklerini incelemiş ve sonucu ölçmek isteyen satıcılar.",
+     "example": "Anneler Günü'nden dört hafta önce beş ürünle deneme yapılır.",
+     "ruleDetail": "Çiçeksepeti'nde önce dört haftalık, sınırlı ürünlü ve küçük bütçeli deneme kampanyası açılır; özel gün dönemlerinden önce tamamlanacak şekilde planlanır, harcama, tıklama ve satış haftalık izlenir, deneme sonunda ölçekleme ya da durdurma kararı verilir."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -10643,6 +10691,14 @@
      "scenario": "Ürünlerini N11'de satan ve N11 içindeki görünürlüğü artırmak isteyen satıcılar.",
      "example": "Bir elektronik aksesuar satıcısı N11 satıcı panelindeki Reklam Platformu'nu inceler ve küçük bir deneme bütçesiyle başlar.",
      "ruleDetail": "N11 reklamları yalnız N11'de satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama N11 satıcı panelindeki Reklam Platformu'ndan doğrulanır, doğrulanmamış bilgiyle bütçe planı yapılmaz."
+    },
+    {
+     "value": "ciceksepeti",
+     "label": "Çiçeksepeti Reklamları",
+     "explanation": "Çiçeksepeti satıcı panelinden verilen reklamlardır; satıcılar ürünlerini reklam vererek öne çıkarabilir (Çiçeksepeti Satıcı Akademisi). Reklam türleri, maliyet modeli ve bütçe kuralları Çiçeksepeti'nin sayfaları oturumsuz okunamadığı için doğrulanamadı (2026-11-25); satıcı panelinden kontrol edilmelidir.",
+     "scenario": "Ürünlerini Çiçeksepeti'nde satan ve Çiçeksepeti içindeki görünürlüğü artırmak isteyen satıcılar (özellikle hediye, çiçek, özel gün ürünleri).",
+     "example": "Bir hediyelik eşya satıcısı Anneler Günü öncesi Çiçeksepeti panelindeki reklam seçeneklerini inceler ve küçük bir deneme bütçesiyle başlar.",
+     "ruleDetail": "Çiçeksepeti reklamları yalnız Çiçeksepeti'nde satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama Çiçeksepeti satıcı panelinden ya da Pazaryeri Destek Hattı'ndan doğrulanır, doğrulanmamış bilgiyle bütçe planı yapılmaz."
     },
     {
      "value": "programmatic",
@@ -11477,6 +11533,7 @@
        "trendyol",
        "hepsiburada",
        "n11",
+       "ciceksepeti",
        "programmatic"
       ]
      }
@@ -11543,6 +11600,7 @@
        "trendyol",
        "hepsiburada",
        "n11",
+       "ciceksepeti",
        "programmatic"
       ]
      }
@@ -11568,6 +11626,7 @@
        "trendyol",
        "hepsiburada",
        "n11",
+       "ciceksepeti",
        "programmatic"
       ]
      }
