@@ -621,6 +621,77 @@
      }
     ]
    }
+  },
+  {
+   "id": "mk_etsy",
+   "name": "Etsy: Satış ve Reklam",
+   "en": "Etsy Selling & Ads",
+   "desc": "Etsy'de satış yapılıp yapılmayacağını, Etsy'nin izin verdiği ürün türlerini, dükkân ve ödeme hazırlığını, Offsite Ads kararını ve Etsy Ads stratejisini belirler",
+   "group": "Reklam",
+   "icon": "✿",
+   "after": "mk_amazon",
+   "guide": {
+    "purpose": "Bu bölüm, markanın Etsy'yi satış ve reklam kanalı olarak nasıl kullanacağını belirler. Etsy yalnız satıcının yaptığı, tasarladığı, seçtiği (vintage) ya da tedarik ettiği (el sanatı malzemesi) ürünlere izin verir; seri üretim ürünün yeniden satışı yasaktır. Türkiye Etsy Payments'ta desteklenen ülkeler arasındadır; ücretler dolar ve yüzde olarak alınır, fiyatlar bu yüzden komisyon ve döviz farkı hesaba katılarak belirlenmelidir.",
+    "criteria": [
+     "Ürünler Etsy'nin kurallarına uyuyor mu? Ürün satıcı tarafından yapılmış, tasarlanmış, seçilmiş (en az 20 yıllık vintage, doğadan ürün) ya da el sanatı / parti malzemesi olarak tedarik edilmiş olmalıdır.",
+     "Üretim ortağı kullanılıyor mu? Kullanılıyorsa ilgili ilanlarda beyan edilmesi zorunludur.",
+     "Fiyatlar Etsy ücretlerini karşılıyor mu? Listeleme ücreti, %6,5 işlem ücreti, ödeme işleme ücreti, Türkiye için düzenleyici işletim ücreti ve gerekirse döviz çevirme ücreti fiyata katılmalıdır.",
+     "Offsite Ads'te kalınacak mı? Son 365 günde 10.000 $ altında satış yapan dükkân çıkabilir; bu tutarı geçen dükkân için zorunludur."
+    ],
+    "pitfalls": [
+     "Seri üretim ürünü Etsy'de satmak: yeniden satış yasaktır, ilan ve dükkân kapatılabilir.",
+     "Offsite Ads ücretini hesaba katmamak: reklamdan gelen satışta sipariş tutarının %15'i (10.000 $ ve üstünde %12) ödenir, sipariş başına en çok 100 $.",
+     "Kargo, iade ve hazırlama süresi politikalarını boş bırakmak: alıcı güvenini ve Star Seller ölçütlerini doğrudan etkiler.",
+     "PayPal ile ödeme almayı planlamak: PayPal Türkiye'de çalışmadığı için Türkiye'deki satıcılara açık değildir."
+    ],
+    "resources": [
+     {
+      "title": "Etsy'de ne satabilirim?",
+      "url": "https://help.etsy.com/hc/en-us/articles/360024112614-What-Can-I-Sell-on-Etsy",
+      "note": "Yapılmış, tasarlanmış, seçilmiş ve tedarik edilmiş ürün türleri; yeniden satış ve hizmet yasağı."
+     },
+     {
+      "title": "Etsy ücretleri ve vergileri",
+      "url": "https://help.etsy.com/hc/en-us/articles/115014483627",
+      "note": "Listeleme, işlem, döviz çevirme ücretleri ve dükkân açılış ücreti."
+     },
+     {
+      "title": "Ödeme işleme ücretleri",
+      "url": "https://help.etsy.com/hc/en-us/articles/115015628847",
+      "note": "Ülkeye göre ödeme işleme ücreti; Türkiye %6,5 + 14 TRY."
+     },
+     {
+      "title": "Etsy Payments uygun ülkeler",
+      "url": "https://help.etsy.com/hc/en-us/articles/115015710408",
+      "note": "Türkiye listede; PayPal Türkiye'deki satıcılara açık değil."
+     },
+     {
+      "title": "Düzenleyici işletim ücreti",
+      "url": "https://help.etsy.com/hc/en-us/articles/1500011073202",
+      "note": "Türkiye %1,67; ürün fiyatı, kargo ve hediye paketi üzerinden."
+     },
+     {
+      "title": "Offsite Ads nasıl çalışır",
+      "url": "https://help.etsy.com/hc/en-us/articles/360000338367",
+      "note": "%15 / %12 ücret, 10.000 $ eşiği, 100 $ üst sınır, çıkma koşulu."
+     },
+     {
+      "title": "Etsy Ads kampanyası",
+      "url": "https://help.etsy.com/hc/en-us/articles/360033701174",
+      "note": "Tıklama başına ödeme, günlük bütçe, stratejiler, 15 günlük bekleme."
+     },
+     {
+      "title": "Üretim ortakları",
+      "url": "https://help.etsy.com/hc/en-us/articles/360000336547-Working-with-Production-Partners-on-Etsy",
+      "note": "Üretim ortağının tanımı ve ilanlarda beyan zorunluluğu."
+     },
+     {
+      "title": "Star Seller rozeti",
+      "url": "https://help.etsy.com/hc/en-us/articles/4403058372503-What-is-the-Star-Seller-Badge",
+      "note": "Mesaj yanıtı, zamanında kargo ve takip, ortalama puan ölçütleri."
+     }
+    ]
+   }
   }
  ],
  "fields": [
@@ -3185,6 +3256,7 @@
       "x",
       "pinterest",
       "amazon",
+      "etsy",
       "programmatic"
      ]
     }
@@ -9397,6 +9469,274 @@
      "ruleDetail": "Amazon DSP'nin Türkiye'de kullanılabilirliği, asgari bütçe ve uygunluk şartları Amazon Ads ile doğrulanır."
     }
    ]
+  },
+  {
+   "id": "mk_etsy_sell",
+   "section": "mk_etsy",
+   "label": "Etsy'de Satış",
+   "en": "Selling on Etsy",
+   "type": "select",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "explanation": "Markanın ürünlerini Etsy'de satıp satmayacağını belirler. Etsy yalnız el yapımı, satıcının tasarladığı, vintage ve el sanatı malzemesi gibi ürünlere izin verir; seri üretim ürünün yeniden satışı ve genel olarak hizmetler yasaktır.",
+   "rule": "Etsy'de satış kararı: {label}.",
+   "scenario": "El yapımı, tasarım, vintage ya da el sanatı malzemesi satan ve yurt dışı alıcıya ulaşmak isteyen markalar.",
+   "example": "El yapımı takı üreten bir atölye Etsy'de dükkân açar; ürün sayfalarındaki “Etsy'de satın al” bağlantısı Pazar Yeri Mağazaları'ndaki adrese gider.",
+   "options": [
+    {
+     "value": "no",
+     "label": "Etsy'de satış yapılmayacak",
+     "explanation": "Ürünler Etsy'de satılmaz.",
+     "scenario": "Ürünleri Etsy kurallarına uymayan (seri üretim, hizmet) ya da Etsy'yi hedeflemeyen işletmeler.",
+     "example": "Satış yalnız sitede ve diğer pazar yerlerinde yapılır.",
+     "ruleDetail": "Etsy'de dükkân açılmaz; Etsy reklamı verilmez."
+    },
+    {
+     "value": "yes",
+     "label": "Etsy'de satış yapılacak",
+     "explanation": "Etsy dükkânı açılır; ürün türleri, dükkân hazırlığı, Offsite Ads ve reklam stratejisi aşağıdaki kararlarla belirlenir.",
+     "scenario": "Etsy kurallarına uyan ürünleri olan markalar.",
+     "example": "Atölye Etsy dükkânı açar ve ürünlerini listeler.",
+     "ruleDetail": "Etsy dükkânı marka adına açılır; hesap erişimleri kurum adına tutulur, kişisel hesap kullanılmaz."
+    },
+    {
+     "value": "later",
+     "label": "İleride değerlendirilecek",
+     "explanation": "Bugün satış yapılmaz; ürün ve operasyon hazır olunca yeniden değerlendirilir.",
+     "scenario": "Ürün yelpazesi henüz netleşmemiş markalar.",
+     "example": "Pazarlama ekibi altı ayda bir Etsy kanalını yeniden değerlendirir.",
+     "ruleDetail": "Etsy'de satış şimdilik yapılmaz; ürün, kargo ve operasyon hazır olunca yeniden değerlendirilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_etsy_type",
+   "section": "mk_etsy",
+   "after": "mk_etsy_sell",
+   "label": "Etsy'de Satılacak Ürün Türleri",
+   "en": "Product Types to Sell on Etsy",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_etsy_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Etsy'de satılacak ürünlerin Etsy'nin izin verdiği hangi türe girdiğini belirler. Her ilan bu türlerden birine uymalıdır.",
+   "rule": "Etsy'de satılacak ürün türleri: {labels}. Seri üretim ürünün yeniden satışı yapılmaz; hizmet ve kiralama ilanı açılmaz; yasaklı ürün listesi ilan öncesinde kontrol edilir.",
+   "scenario": "Etsy'de satış kararı verildiyse ürün yelpazesine göre seçilir.",
+   "example": "Bir seramik atölyesi “Satıcının yaptığı ürünler” ve “Satıcının tasarladığı ürünler”i seçer; baskı işini üretim ortağına yaptırdığı tasarımlar için ortağı ilanda belirtir.",
+   "options": [
+    {
+     "value": "made",
+     "label": "Satıcının yaptığı ürünler",
+     "explanation": "Satıcının elle ya da 3D yazıcı, CNC, Cricut gibi bilgisayarlı araçlarla fiziksel olarak ürettiği ürünler.",
+     "scenario": "El yapımı ürün üreten atölyeler.",
+     "example": "Atölyede elle yapılan seramik kupalar.",
+     "ruleDetail": "El yapımı ürünlerin fotoğrafları satıcının kendi çektiği fotoğraflardır."
+    },
+    {
+     "value": "designed",
+     "label": "Satıcının tasarladığı ürünler",
+     "explanation": "Satıcının özgün tasarımları: dijital indirme ya da bir üretim ortağına ürettirilen ürünler.",
+     "scenario": "Özgün tasarım yapan ve üretimi dışarıda yaptıran markalar.",
+     "example": "Özgün desenli tişörtler baskı ortağında üretilir.",
+     "ruleDetail": "Üretim ortağıyla yapılan ürünlerde ortak ilgili ilanlarda beyan edilir; yapay zekâyla oluşturulan tasarımlarda yapay zekâ kullanımı belirtilir."
+    },
+    {
+     "value": "handpicked",
+     "label": "Satıcının seçtiği ürünler (vintage)",
+     "explanation": "En az 20 yıllık vintage ürünler, doğadan ürünler ve satıcının seçtiği belirli koleksiyonlar.",
+     "scenario": "Vintage ürün satan dükkânlar.",
+     "example": "1970'lerden kalma seramik vazolar.",
+     "ruleDetail": "Vintage ürünlerin en az 20 yıllık olduğu ilanda belirtilir; üretim ortağı eklenmez."
+    },
+    {
+     "value": "sourced",
+     "label": "Satıcının tedarik ettiği ürünler (malzeme, parti, kişiselleştirme)",
+     "explanation": "El sanatı malzemeleri, parti süsleri ve alıcının metni ya da görseliyle kişiselleştirilen ürünler.",
+     "scenario": "El sanatı malzemesi ya da kişiselleştirilmiş ürün satan dükkânlar.",
+     "example": "Takı yapımı için boncuk ve tel setleri.",
+     "ruleDetail": "El sanatı malzemesi ilanlarında ürünün asıl amacının bir ürün yapmak ya da özel gün düzenlemek olduğu açıkça anlatılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_etsy_setup",
+   "section": "mk_etsy",
+   "after": "mk_etsy_type",
+   "label": "Etsy Dükkân ve Ödeme Hazırlığı",
+   "en": "Etsy Shop & Payments Setup",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_etsy_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Etsy dükkânını açmadan önce yapılacak hazırlıkları belirler. Ücretler Etsy yardım merkezindeki tablolara göredir (2026-11-25); dükkân açılış ücreti ülkeye göre değişir.",
+   "rule": "Etsy dükkân hazırlığında yapılacaklar: {labels}.",
+   "scenario": "Etsy'de satış yapılacaksa dükkân açmadan önce seçilir.",
+   "example": "Etsy Payments için şirket banka hesabı tanımlanır, ücretlere göre fiyat hesaplanır, kargo ve iade politikaları yazılır.",
+   "options": [
+    {
+     "value": "payments",
+     "label": "Etsy Payments ve banka hesabı",
+     "explanation": "Türkiye Etsy Payments'ta destekleniyor; dükkân ülkesindeki banka hesabı, geçerli bir kredi / banka kartı ve kimlik doğrulaması gerekir. PayPal Türkiye'de çalışmadığı için Türkiye'deki satıcılara açık değildir.",
+     "scenario": "Her Etsy dükkânı.",
+     "example": "Şirket adına Türkiye'deki banka hesabı tanımlanır, hesap test yatırımlarıyla doğrulanır.",
+     "ruleDetail": "Etsy Payments şirket adına ve dükkân ülkesindeki banka hesabıyla kurulur; vergi numarası olan tüzel kişilikte hesap türü “İşletme” seçilir."
+    },
+    {
+     "value": "fees",
+     "label": "Ücret ve fiyat hesabı",
+     "explanation": "İlan başına 0,20 $ listeleme (4 ay), sipariş tutarının %6,5'i işlem ücreti, Türkiye'deki banka hesabı için %6,5 + 14 TRY ödeme işleme ücreti (KDV'ye tabi), Türkiye için %1,67 düzenleyici işletim ücreti ve gerekirse %2,5 döviz çevirme ücreti.",
+     "scenario": "Her ürün.",
+     "example": "Her ürünün Etsy fiyatı ücretler ve kargo sonrası marjla hesaplanır.",
+     "ruleDetail": "Etsy satış fiyatı listeleme, işlem, ödeme işleme, düzenleyici işletim ve döviz çevirme ücretleri ile kargo maliyeti hesaba katılarak belirlenir; ücret tabloları yılda bir Etsy yardım merkezinden yeniden kontrol edilir."
+    },
+    {
+     "value": "policies",
+     "label": "Kargo, iade ve değişim politikaları",
+     "explanation": "Kargo, iade, değişim, ödeme ve kişiye özel ürün politikaları yazılır; ürün hazırlama süresi doğru girilir.",
+     "scenario": "Her Etsy dükkânı.",
+     "example": "İade süresi ve kişiye özel ürünlerin iade edilemeyeceği dükkân politikasında yazılır.",
+     "ruleDetail": "Dükkân politikaları (kargo, iade, değişim, ödeme, kişiye özel ürün) yazılır ve sitedeki mesafeli satış ve iade koşullarıyla çelişmez; ürün hazırlama süreleri gerçeğe uygun girilir."
+    },
+    {
+     "value": "production",
+     "label": "Üretim ortağı beyanı",
+     "explanation": "Tasarımı satıcıya ait ürünü fiziksel olarak üreten başka bir firma ya da kişi varsa ilgili ilanlarda beyan edilir.",
+     "scenario": "Üretimi dışarıda yaptıran tasarım markaları.",
+     "example": "Baskılı ürünlerde baskı atölyesi üretim ortağı olarak eklenir.",
+     "ruleDetail": "Üretim ortakları ilgili ilanlarda beyan edilir; malzeme tedarikçisi ve toptancı üretim ortağı sayılmaz."
+    },
+    {
+     "value": "service",
+     "label": "Mesaj, kargo ve puan hedefleri (Star Seller)",
+     "explanation": "İlk mesajların %95'ine 24 saat içinde yanıt, siparişlerin %95'inin zamanında ve takip numarasıyla gönderilmesi, ortalama 4,8+ puan hedeflenir.",
+     "scenario": "Star Seller rozetini hedefleyen dükkânlar.",
+     "example": "Mesajlara aynı gün yanıt verilir, her siparişe takip numarası girilir.",
+     "ruleDetail": "Etsy mesajlarına 24 saat içinde yanıt verilir, siparişler söz verilen sürede takip numarasıyla gönderilir; Star Seller ölçütleri her ay izlenir."
+    },
+    {
+     "value": "consistency",
+     "label": "Ürün içeriği ve fiyat tutarlılığı",
+     "explanation": "Ürün adı, açıklama, fotoğraf ve fiyat kendi siteyle ve diğer pazar yerleriyle tutarlı tutulur.",
+     "scenario": "Birden çok kanalda satış yapan markalar.",
+     "example": "Aynı ürün sitede ve Etsy'de aynı özelliklerle anlatılır.",
+     "ruleDetail": "Etsy ilanlarındaki ürün bilgisi ve kampanyalar kendi sitedeki ve diğer pazar yerlerindekiyle tutarlı tutulur; Etsy'ye özel fiyat farkı varsa gerekçesi kayda geçirilir."
+    },
+    {
+     "value": "tax",
+     "label": "Vergi, ihracat ve muhasebe",
+     "explanation": "Yurt dışına satışların faturalandırması, ihracat ve gümrük süreçleri muhasebe birimiyle planlanır.",
+     "scenario": "Yurt dışına satış yapan her dükkân.",
+     "example": "Etsy siparişleri haftalık muhasebeye aktarılır.",
+     "ruleDetail": "Etsy satışlarının faturalandırması, yurt dışı gönderimlerin gümrük ve ihracat işlemleri ile Etsy ücretlerinin KDV kaydı muhasebe birimiyle planlanır."
+    }
+   ]
+  },
+  {
+   "id": "mk_etsy_offsite",
+   "section": "mk_etsy",
+   "after": "mk_etsy_setup",
+   "label": "Etsy Offsite Ads",
+   "en": "Etsy Offsite Ads",
+   "type": "select",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_etsy_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Offsite Ads'te Etsy, dükkânın ilanlarını Etsy dışındaki sitelerde (arama motorları, sosyal medya) kendi bütçesiyle tanıtır; ücret yalnız reklamdan gelen satışta alınır (30 gün içinde). Son 365 günde 10.000 $ altında satış yapan dükkân %15 öder ve çıkabilir; 10.000 $ ve üstünde ücret %12'dir ve katılım dükkânın ömrü boyunca zorunludur. Sipariş başına ücret en çok 100 $'dır.",
+   "rule": "Etsy Offsite Ads kararı: {label}.",
+   "scenario": "Etsy'de satış yapılacaksa, marj ve ek erişim hedefine göre seçilir.",
+   "example": "Marjı düşük bir dükkân Offsite Ads'ten çıkar; marjı yüksek bir tasarım markası kalır ve fiyatlarına %15'i katar.",
+   "options": [
+    {
+     "value": "in",
+     "label": "Offsite Ads'te kalınacak",
+     "explanation": "Etsy ilanları Etsy dışında tanıtmaya devam eder; reklamdan gelen satışta ücret ödenir.",
+     "scenario": "Marjı Offsite Ads ücretini karşılayan dükkânlar.",
+     "example": "Reklamdan gelen 400 $'lık siparişte 60 $ Offsite Ads ücreti ödenir.",
+     "ruleDetail": "Offsite Ads'te kalınır; reklamdan gelen satışlarda %15 (10.000 $ ve üstünde %12, sipariş başına en çok 100 $) ücret fiyat hesabına katılır ve aylık raporda ayrı izlenir."
+    },
+    {
+     "value": "out",
+     "label": "Offsite Ads'ten çıkılacak (10.000 $ altındayken)",
+     "explanation": "Son 365 günde 10.000 $ altında satış yapan dükkân Shop Manager › Ayarlar › Offsite Ads'ten çıkabilir; tutar aşılınca katılım zorunlu olur.",
+     "scenario": "Marjı düşük ya da satışları 10.000 $ altında kalan dükkânlar.",
+     "example": "Dükkân Offsite Ads'ten çıkar; satışları eşiği geçince %12 ile zorunlu olarak katılır.",
+     "ruleDetail": "Offsite Ads'ten çıkılır; son 365 günlük satış her ay izlenir, 10.000 $ aşılınca katılım zorunlu olduğu için %12 ücret fiyatlara katılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_etsy_ads",
+   "section": "mk_etsy",
+   "after": "mk_etsy_offsite",
+   "label": "Etsy Ads Stratejisi",
+   "en": "Etsy Ads Strategy",
+   "type": "select",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "etsy"
+     ]
+    }
+   ],
+   "explanation": "Etsy Ads'te tıklama başına ödenir, günlük bütçe aşılmaz (en az 1 $; yeni dükkânlarda en çok 25 $, haftalık yeniden hesaplanır) ve reklam dükkân açıldıktan 15 gün sonra başlatılabilir. Strateji seçimi günlük bütçe 25 $ ve üstündeyken yapılabilir; daha düşük bütçede bütün ilanlar “Verimli harcama” ile yayınlanır.",
+   "rule": "Etsy Ads stratejisi: {label}. Günlük bütçe Reklam Ortak Kuralları'ndaki bütçe dağılımına göre belirlenir; Etsy reklamlarının satışları Etsy istatistiklerinde ölçülür, kendi sitedeki dönüşüm etiketleri bu satışları görmez.",
+   "scenario": "Reklam Kanalları'nda Etsy Ads seçildiyse seçilir.",
+   "example": "Yeni bir dükkân günlük 5 $ bütçeyle “Verimli harcama” ile başlar; satışlar oturunca bütçeyi 25 $'a çıkarıp “Daha fazla görünürlük”e geçer.",
+   "options": [
+    {
+     "value": "efficient",
+     "label": "Verimli harcama (önerilen)",
+     "explanation": "Bütçeyi satış getirme olasılığı yüksek tıklamalara yönlendirir; 25 $ altındaki bütçede varsayılandır.",
+     "scenario": "Yeni ve küçük bütçeli dükkânlar.",
+     "example": "Günlük 5 $ bütçe satış olasılığı yüksek aramalarda harcanır.",
+     "ruleDetail": "Etsy Ads “Verimli harcama” stratejisiyle yayınlanır; tıklama başına maliyet ve reklam satış getirisi haftalık izlenir."
+    },
+    {
+     "value": "visibility",
+     "label": "Daha fazla görünürlük",
+     "explanation": "Daha çok gösterim ve tıklama hedefler; günlük bütçe en az 25 $ olmalıdır.",
+     "scenario": "Yeni koleksiyon ya da sezon öncesi bilinirlik isteyen dükkânlar.",
+     "example": "Yılbaşı koleksiyonu için bütçe 30 $'a çıkarılır.",
+     "ruleDetail": "Etsy Ads “Daha fazla görünürlük” stratejisiyle ve en az 25 $ günlük bütçeyle yayınlanır; tıklama maliyeti artışı haftalık izlenir."
+    },
+    {
+     "value": "low_cpc",
+     "label": "Daha düşük tıklama maliyeti",
+     "explanation": "Tıklama başına maliyeti düşük tutmayı hedefler; günlük bütçe en az 25 $ olmalıdır.",
+     "scenario": "Marjı düşük, çok ilanlı dükkânlar.",
+     "example": "Çok sayıda ilan düşük tıklama maliyetiyle tanıtılır.",
+     "ruleDetail": "Etsy Ads “Daha düşük tıklama maliyeti” stratejisiyle ve en az 25 $ günlük bütçeyle yayınlanır; dönüşüm oranı haftalık izlenir."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -10004,6 +10344,14 @@
      "scenario": "Ürünleri Amazon'da (satıcı ya da tedarikçi olarak) satan ve Amazon içindeki aramalarda görünürlüğü artırmak isteyen markalar.",
      "example": "Bir mutfak gereçleri markası amazon.com.tr'deki ürünleri için Sponsorlu Ürünler kampanyası açar; “döküm tencere” aramasında ürünü üstte görünür.",
      "ruleDetail": "Amazon Ads yalnız Amazon'da satılan ürünler için kullanılır; Sponsorlu Ürünler'i profesyonel satıcılar, tedarikçiler, kitap tedarikçileri, KDP yazarları ve ajanslar kullanabilir, tıklama başına ödenir. Reklam verilen ürün öne çıkan teklife (Buy Box) uygun olmalıdır; Amazon reklam kuralları ve hangi reklam türünün hangi mağazada açık olduğu Reklam Konsolu'nda kontrol edilir."
+    },
+    {
+     "value": "etsy",
+     "label": "Etsy Ads",
+     "explanation": "Etsy içindeki arama sonuçlarında ve sayfalarda ilanların öne çıkarıldığı reklamlardır; tıklama başına ödenir ve günlük bütçeyle yönetilir. Etsy'nin ilanları Etsy dışındaki sitelerde tanıttığı Offsite Ads ayrıdır ve satış başına ücretlidir (Amazon ve Etsy bölümündeki karar).",
+     "scenario": "Ürünlerini Etsy'de satan ve Etsy içindeki aramalarda görünürlüğü artırmak isteyen dükkânlar.",
+     "example": "El yapımı seramik satan bir dükkân günlük 5 $ bütçeyle Etsy Ads açar; ilanları “handmade mug” aramasında öne çıkar.",
+     "ruleDetail": "Etsy Ads yalnız Etsy'de satılan ilanlar için kullanılır; tıklama başına ödenir, günlük bütçe aşılmaz (en az 1 $), reklamlar yalnız kargo gönderilen ülkelerde gösterilir ve dükkân açıldıktan 15 gün sonra başlatılabilir."
     },
     {
      "value": "programmatic",
@@ -10834,6 +11182,7 @@
        "x",
        "pinterest",
        "amazon",
+       "etsy",
        "programmatic"
       ]
      }
@@ -10896,6 +11245,7 @@
        "x",
        "pinterest",
        "amazon",
+       "etsy",
        "programmatic"
       ]
      }
@@ -10917,6 +11267,7 @@
        "x",
        "pinterest",
        "amazon",
+       "etsy",
        "programmatic"
       ]
      }
