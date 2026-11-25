@@ -8653,6 +8653,352 @@
      ]
     }
    ]
+  },
+  {
+   "id": "mk_tt_shop",
+   "section": "mk_tt",
+   "after": "mk_tt_budget",
+   "label": "TikTok Shop",
+   "en": "TikTok Shop",
+   "type": "select",
+   "explanation": "TikTok Shop, ürünlerin TikTok uygulamasının içinde — alışverişli videolar, canlı yayın ve içerik üreticilerle — satıldığı mağaza altyapısıdır. Her pazarda yerel çalışır; satıcı yalnız desteklenen bir pazarda başvurabilir. TikTok Shop satıcı sayfasındaki pazar listesinde (seller.tiktok.com, 2026-11-25'te kontrol edildi) Türkiye yok.",
+   "rule": "TikTok Shop kararı: {label}.",
+   "scenario": "Ürün satan ve TikTok'u satış kanalı olarak da kullanmak isteyen markalar için; Türkiye'de satış yapan marka için bugün yalnız izleme seçeneği anlamlıdır.",
+   "example": "Almanya'da da satış yapan bir kozmetik markası Almanya pazarında TikTok Shop açar; Türkiye'deki müşterileri için siteye yönlendiren TikTok reklamlarını kullanmaya devam eder.",
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "tiktok"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "none",
+     "label": "Kullanılmayacak",
+     "explanation": "TikTok Shop açılmaz; TikTok reklamları ve paylaşımlar ziyaretçiyi kendi siteye ya da diğer pazar yerlerine yönlendirir.",
+     "scenario": "Yalnız Türkiye'de satış yapan ya da TikTok'ta satış hedeflemeyen markalar.",
+     "example": "TikTok reklamı ürün sayfasına gider; satış sitede tamamlanır.",
+     "ruleDetail": "TikTok Shop açılmaz; TikTok'tan gelen satış trafiği kendi siteye ya da Pazar Yeri Mağazaları'ndaki adreslere yönlendirilir."
+    },
+    {
+     "value": "watch",
+     "label": "Türkiye'de açılırsa değerlendirilecek (önerilen)",
+     "explanation": "Bugün kullanılmaz; TikTok Shop Türkiye'yi satıcı pazarları arasına eklerse yeniden değerlendirilir. TikTok Shop satıcı sayfasındaki pazar listesinde (seller.tiktok.com, 2026-11-25'te kontrol edildi) Türkiye yok.",
+     "scenario": "Türkiye'de satış yapan ve TikTok'ta güçlü içerik üreten markalar.",
+     "example": "Pazarlama ekibi üç ayda bir TikTok Shop satıcı sayfasındaki pazar listesini kontrol eder.",
+     "ruleDetail": "TikTok Shop şimdilik kullanılmaz; satıcı sayfasındaki pazar listesi üç ayda bir kontrol edilir, Türkiye eklenirse kurulum için yeni karar alınır. Bu süre içinde TikTok'tan gelen satış trafiği kendi siteye yönlendirilir."
+    },
+    {
+     "value": "abroad",
+     "label": "Desteklenen bir yurt dışı pazarında kullanılacak",
+     "explanation": "TikTok Shop, şirketin satış ve teslimat yapabildiği desteklenen bir pazarda (ör. Almanya, İngiltere, ABD) açılır. Her pazarın kayıt şartları, vergi, iade ve kargo kuralları ayrıdır.",
+     "scenario": "O pazarda yerel ya da sınır ötesi satış, depo ve iade altyapısı olan markalar.",
+     "example": "İngiltere'de deposu olan bir ev tekstili markası İngiltere pazarında TikTok Shop açar.",
+     "ruleDetail": "TikTok Shop yalnız aşağıda seçilen desteklenen pazarlarda açılır; her pazarın kayıt, vergi, tüketici hakları, iade ve kargo kuralları o pazarın satıcı sayfasından ve hukuk birimiyle doğrulanır."
+    }
+   ]
+  },
+  {
+   "id": "mk_tt_shop_markets",
+   "section": "mk_tt",
+   "after": "mk_tt_shop",
+   "label": "TikTok Shop Pazarları",
+   "en": "TikTok Shop Markets",
+   "type": "multiselect",
+   "explanation": "TikTok Shop'un açılacağı pazarlardır. Liste, TikTok Shop satıcı sayfasındaki pazar seçiminden alındı (2026-11-25); TikTok pazar ekleyip çıkarabilir, başvurudan önce yeniden kontrol edin.",
+   "rule": "TikTok Shop şu pazarlarda açılır: {labels}. Her pazar ayrı mağaza olarak yönetilir; ürün, fiyat, para birimi, vergi ve iade koşulları pazara göre ayarlanır.",
+   "scenario": "TikTok Shop yurt dışı pazarında kullanılacaksa, şirketin satış ve teslimat yapabildiği pazarlar seçilir.",
+   "example": "Almanya ve Avusturya seçilir; iki pazarda da Almanca ürün metinleri ve avro fiyatları kullanılır.",
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "tiktok"
+     ]
+    },
+    {
+     "field": "mk_tt_shop",
+     "in": [
+      "abroad"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "us",
+     "label": "ABD",
+     "explanation": "ABD pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin ABD pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler ABD pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "mx",
+     "label": "Meksika",
+     "explanation": "Meksika pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Meksika pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Meksika pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "br",
+     "label": "Brezilya",
+     "explanation": "Brezilya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Brezilya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Brezilya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "uk",
+     "label": "Birleşik Krallık",
+     "explanation": "Birleşik Krallık pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Birleşik Krallık pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Birleşik Krallık pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "de",
+     "label": "Almanya",
+     "explanation": "Almanya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Almanya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Almanya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "fr",
+     "label": "Fransa",
+     "explanation": "Fransa pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Fransa pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Fransa pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "es",
+     "label": "İspanya",
+     "explanation": "İspanya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin İspanya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler İspanya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "ie",
+     "label": "İrlanda",
+     "explanation": "İrlanda pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin İrlanda pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler İrlanda pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "it",
+     "label": "İtalya",
+     "explanation": "İtalya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin İtalya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler İtalya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "pl",
+     "label": "Polonya",
+     "explanation": "Polonya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Polonya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Polonya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "nl",
+     "label": "Hollanda",
+     "explanation": "Hollanda pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Hollanda pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Hollanda pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "be",
+     "label": "Belçika",
+     "explanation": "Belçika pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Belçika pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Belçika pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "at",
+     "label": "Avusturya",
+     "explanation": "Avusturya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Avusturya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Avusturya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "pt",
+     "label": "Portekiz",
+     "explanation": "Portekiz pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Portekiz pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Portekiz pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "gr",
+     "label": "Yunanistan",
+     "explanation": "Yunanistan pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Yunanistan pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Yunanistan pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "cz",
+     "label": "Çekya",
+     "explanation": "Çekya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Çekya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Çekya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "hu",
+     "label": "Macaristan",
+     "explanation": "Macaristan pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Macaristan pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Macaristan pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "jp",
+     "label": "Japonya",
+     "explanation": "Japonya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Japonya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Japonya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "ph",
+     "label": "Filipinler",
+     "explanation": "Filipinler pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Filipinler pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Filipinler pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "sg",
+     "label": "Singapur",
+     "explanation": "Singapur pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Singapur pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Singapur pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "th",
+     "label": "Tayland",
+     "explanation": "Tayland pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Tayland pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Tayland pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "vn",
+     "label": "Vietnam",
+     "explanation": "Vietnam pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Vietnam pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Vietnam pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "id",
+     "label": "Endonezya",
+     "explanation": "Endonezya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Endonezya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Endonezya pazarındaki TikTok Shop mağazasında listelenir."
+    },
+    {
+     "value": "my",
+     "label": "Malezya",
+     "explanation": "Malezya pazarında TikTok Shop satıcı başvurusu yapılır.",
+     "scenario": "Şirketin Malezya pazarında satış ve teslimat yapabildiği durum.",
+     "example": "Ürünler Malezya pazarındaki TikTok Shop mağazasında listelenir."
+    }
+   ]
+  },
+  {
+   "id": "mk_tt_shop_setup",
+   "section": "mk_tt",
+   "after": "mk_tt_shop_markets",
+   "label": "TikTok Shop Kurulumu",
+   "en": "TikTok Shop Setup",
+   "type": "multiselect",
+   "explanation": "TikTok Shop mağazası açılırken yapılacak işleri belirler: satıcı doğrulaması, adres ve ödeme hesabı, ürün listeleme, satış biçimleri ve içerik üretici iş birlikleri. Adımlar TikTok Shop satıcı sayfasındaki kayıt akışına göredir.",
+   "rule": "TikTok Shop kurulumunda yapılacaklar: {labels}.",
+   "scenario": "TikTok Shop yurt dışı pazarında açılacaksa kurulum adımları seçilir.",
+   "example": "Bir marka satıcı doğrulamasını, depo adresi ve banka hesabını, Shopify'dan ürün aktarımını ve alışverişli videoları seçer; canlı yayın satışını ikinci aşamaya bırakır.",
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "tiktok"
+     ]
+    },
+    {
+     "field": "mk_tt_shop",
+     "in": [
+      "abroad"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "verify",
+     "label": "Satıcı hesabı ve işletme doğrulaması",
+     "explanation": "Mağaza işletme adına açılır; kimlik ya da işletme doğrulaması için istenen belgeler yüklenir.",
+     "scenario": "Her TikTok Shop mağazası.",
+     "example": "Ticaret sicili ve vergi belgeleri yüklenir, hesap işletme adına doğrulanır.",
+     "ruleDetail": "Satıcı hesabı kişisel değil işletme adına açılır, doğrulama belgeleri yüklenir; hesap sahipliği ve erişimler Meta / Google hesaplarındaki gibi kurum adına tutulur."
+    },
+    {
+     "value": "address",
+     "label": "Depo / teslim adresi ve ödeme hesabı",
+     "explanation": "Ürünlerin gönderileceği depo ya da teslim adresi ile satış ödemelerinin yatacağı banka hesabı tanımlanır.",
+     "scenario": "Her TikTok Shop mağazası.",
+     "example": "Pazar içindeki depo adresi ve şirket banka hesabı tanımlanır.",
+     "ruleDetail": "Depo ya da teslim adresi ve şirket adına banka hesabı tanımlanır; kişisel hesap kullanılmaz."
+    },
+    {
+     "value": "catalog",
+     "label": "Ürünleri listeleme (elle ya da entegrasyonla)",
+     "explanation": "Ürünler tek tek ya da e-ticaret altyapısı entegrasyonuyla (ör. Shopify bağlantısı) mağazaya eklenir.",
+     "scenario": "Ürün sayısı az olan mağazada elle, çok olanda entegrasyonla.",
+     "example": "Shopify mağazası bağlanır, ürünler ve stok otomatik eşitlenir.",
+     "ruleDetail": "Ürünler elle ya da e-ticaret altyapısının resmî entegrasyonuyla listelenir; ürün adı, açıklama, görsel, fiyat ve stok kendi siteyle ve diğer pazar yerleriyle tutarlı tutulur."
+    },
+    {
+     "value": "fees",
+     "label": "Komisyon ve fiyatlandırma kontrolü",
+     "explanation": "Satış başına komisyon pazara göre değişir (ABD satıcı sayfasında %6); fiyatlar komisyon, kargo ve iade maliyeti hesaba katılarak belirlenir.",
+     "scenario": "Her TikTok Shop mağazası.",
+     "example": "Komisyon ve kargo sonrası kâr marjı her ürün için hesaplanır.",
+     "ruleDetail": "Satış fiyatı o pazardaki komisyon, kargo ve iade maliyeti hesaba katılarak belirlenir; komisyon oranı başvuru sırasında o pazarın satıcı sayfasından doğrulanır."
+    },
+    {
+     "value": "video",
+     "label": "Alışverişli videolar",
+     "explanation": "Ürün etiketli videolarla uygulama içinden satış yapılır.",
+     "scenario": "Ürünü videoda göstermenin kolay olduğu kategoriler.",
+     "example": "Ürün tanıtım videosuna ürün etiketi eklenir; izleyici videodan satın alır.",
+     "ruleDetail": "Ürün içeren paylaşımlarda ürün etiketi kullanılır; video metninde fiyat, kampanya ve teslim süresi mağazadakiyle aynıdır."
+    },
+    {
+     "value": "live",
+     "label": "Canlı yayında satış",
+     "explanation": "Canlı yayın sırasında ürünler gösterilip satılır.",
+     "scenario": "Ürün denemesi, soru-cevap ve kampanyayla satan markalar.",
+     "example": "Haftalık canlı yayında yeni koleksiyon tanıtılır ve satılır.",
+     "ruleDetail": "Canlı yayın satışları planlanır, yayında gösterilen fiyat ve kampanya mağazadakiyle aynıdır; yayın sonrası siparişler ve iade talepleri izlenir."
+    },
+    {
+     "value": "creators",
+     "label": "İçerik üretici (affiliate) iş birlikleri",
+     "explanation": "İçerik üreticiler ürünü kendi videolarında ya da canlı yayınlarında tanıtır, satıştan komisyon alır.",
+     "scenario": "Erişimi içerik üreticilerle büyütmek isteyen markalar.",
+     "example": "Beş içerik üreticiyle komisyonlu iş birliği yapılır.",
+     "ruleDetail": "İçerik üretici iş birliklerinde komisyon, içerik kuralları ve reklam / iş birliği işareti (ör. #işbirliği) yazılı olarak belirlenir; üretici içerikleri yayından önce marka kurallarına göre kontrol edilir."
+    },
+    {
+     "value": "ops",
+     "label": "Sipariş, kargo, iade ve müşteri hizmetleri",
+     "explanation": "Siparişlerin hazırlanma ve kargo süreleri, iade süreci ve müşteri mesajlarına yanıt sorumluları belirlenir.",
+     "scenario": "Her TikTok Shop mağazası.",
+     "example": "Siparişler 24 saat içinde kargoya verilir, müşteri mesajlarına aynı gün yanıt verilir.",
+     "ruleDetail": "Sipariş hazırlama ve kargo süresi, iade süreci ve mesaj yanıt süresi belirlenir ve sorumlusu atanır; o pazarın tüketici hukuku ve TikTok Shop kuralları hukuk birimiyle doğrulanır."
+    }
+   ]
   }
  ],
  "optionAdd": [
