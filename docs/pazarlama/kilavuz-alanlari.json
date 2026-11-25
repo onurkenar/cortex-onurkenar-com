@@ -692,6 +692,47 @@
      }
     ]
    }
+  },
+  {
+   "id": "mk_mpads",
+   "name": "Trendyol ve Hepsiburada Reklamları",
+   "en": "Trendyol & Hepsiburada Ads",
+   "desc": "Trendyol Reklam Yönetimi ve Hepsiburada HepsiAd'de kullanılacak reklam türlerini, bütçe tipini, teklif yöntemini ve reklam bakiyesinin nasıl yükleneceğini belirler",
+   "group": "Reklam",
+   "icon": "⌘",
+   "after": "mk_etsy",
+   "guide": {
+    "purpose": "Bu bölüm, Türkiye'deki iki büyük pazar yerinde, Trendyol ve Hepsiburada'da, satıcı reklamlarının nasıl kullanılacağını belirler. Bu reklamlar ziyaretçiyi kendi siteye değil pazar yerindeki ürün ya da mağaza sayfasına götürür; satışlar pazar yerinin panelinde ölçülür. Trendyol bilgileri ads.trendyol.com'dan doğrulandı; Hepsiburada'nın HepsiAd sayfaları oturumsuz okunamadığı için HepsiAd ayrıntıları satıcı panelinden kontrol edilmelidir.",
+    "criteria": [
+     "Hangi reklam türü hangi hedefe hizmet ediyor? Trendyol'da Ürün Reklamları satış, Mağaza Reklamları mağaza trafiği ve görünürlük, Tanıtım reklamları marka bilinirliği içindir.",
+     "Bütçe günlük harcama limiti mi, toplam bütçe mi olacak? Kampanya dönemlerinde toplam bütçe, sürekli reklamda günlük limit harcamayı kontrol etmeyi kolaylaştırır.",
+     "Teklif otomatik mi verilecek? Trendyol Ürün Reklamları'nda Otomatik TBM her ürün için teklifi sistemin belirlemesini sağlar.",
+     "Pazar yeri reklam satışları nasıl raporlanacak? Gösterim, tıklama ve satış verisi pazar yerinin panelinde görülür; kendi sitedeki ölçüm araçları bu satışları görmez."
+    ],
+    "pitfalls": [
+     "Pazar yeri reklamını sitenin reklam raporlarıyla birleştirmek: satışlar pazar yerinde gerçekleştiği için ayrı raporlanmalıdır.",
+     "Komisyonlu influencer reklamlarında komisyonu fiyat hesabına katmamak: ödeme net satış üzerinden belirlenen komisyon oranıyla yapılır.",
+     "Stoku az ürünü reklama koymak: stok bittiğinde reklam bütçesi boşa harcanır ve ürün reklamdan düşer.",
+     "Doğrulanmamış reklam bilgisiyle bütçe planlamak: HepsiAd reklam türleri, maliyet modeli ve asgari bütçe satıcı panelinden doğrulanmalıdır."
+    ],
+    "resources": [
+     {
+      "title": "Trendyol reklam çözümleri",
+      "url": "https://ads.trendyol.com/",
+      "note": "Ürün, Mağaza, Komisyonlu Influencer ve Meta reklamları; TBM, Otomatik TBM, bütçe ve ödeme yöntemleri."
+     },
+     {
+      "title": "Trendyol ajans başvurusu",
+      "url": "https://partner.trendyol.com/agency-center/agency-application",
+      "note": "Ajansların Trendyol reklam hesaplarını yönetmek için başvurusu."
+     },
+     {
+      "title": "HepsiAd yeni reklam ürünleri (basın haberi)",
+      "url": "https://www.cnbce.com/sirket-haberleri/hepsiburadanin-reklam-platformunda-yapay-zeka-donemi-h39611",
+      "note": "Sponsorlu Ürün modeli ve Dönüşüm Skoru; resmî sayfa değil, satıcı panelinden doğrulanmalı."
+     }
+    ]
+   }
   }
  ],
  "fields": [
@@ -3257,6 +3298,8 @@
       "pinterest",
       "amazon",
       "etsy",
+      "trendyol",
+      "hepsiburada",
       "programmatic"
      ]
     }
@@ -9737,6 +9780,187 @@
      "ruleDetail": "Etsy Ads “Daha düşük tıklama maliyeti” stratejisiyle ve en az 25 $ günlük bütçeyle yayınlanır; dönüşüm oranı haftalık izlenir."
     }
    ]
+  },
+  {
+   "id": "mk_ty_ads",
+   "section": "mk_mpads",
+   "label": "Trendyol Reklam Türleri",
+   "en": "Trendyol Ad Types",
+   "type": "multiselect",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "trendyol"
+     ]
+    }
+   ],
+   "explanation": "Trendyol Reklam Yönetimi'nde kullanılacak reklam türlerini belirler. Türler ve yerleşimleri ads.trendyol.com'a göredir (2026-11-25).",
+   "rule": "Trendyol'da kullanılacak reklam türleri: {labels}. Reklam satışları Trendyol Satıcı ve Marka Paneli'nde gösterim, tıklama ve satış verisiyle izlenir; kendi sitenin reklam raporlarıyla birleştirilmez.",
+   "scenario": "Reklam Kanalları'nda Trendyol Reklamları seçildiyse kullanılacak türler seçilir.",
+   "example": "Bir marka Ürün Reklamları ile başlar; yeni sezonda Mağaza Reklamları ve Komisyonlu Influencer Reklamları ekler.",
+   "options": [
+    {
+     "value": "product",
+     "label": "Ürün Reklamları",
+     "explanation": "Ürünleri ana sayfada, arama sonuçlarında, ürün detay listelerinde ve favori alanlarında öne çıkarır; tıklama başına ödenir (TBM), Otomatik TBM ile teklifi sistem belirleyebilir.",
+     "scenario": "Satışı artırmak isteyen her Trendyol satıcısı.",
+     "example": "Ürün “nevresim takımı” aramasında sponsorlu olarak üstte görünür.",
+     "ruleDetail": "Ürün Reklamları'na yalnız stoğu yeterli ve fiyatı rekabetçi ürünler konur; tıklama başına maliyet ve reklam satışları haftalık izlenir."
+    },
+    {
+     "value": "store",
+     "label": "Mağaza Reklamları",
+     "explanation": "Mağazayı banner ve video formatlarıyla aynı reklam alanında tanıtır; Buybox şartı aranmaz.",
+     "scenario": "Mağaza trafiğini ve görünürlüğünü artırmak isteyen satıcılar.",
+     "example": "Mağaza, banner alanında sezon koleksiyonuyla tanıtılır.",
+     "ruleDetail": "Mağaza Reklamları'nın banner ve video kreatifleri Trendyol'un ölçü kurallarına ve marka görünümüne uygun hazırlanır; reklam mağaza sayfasına yönlendirir."
+    },
+    {
+     "value": "influencer",
+     "label": "Komisyonlu Influencer Reklamları",
+     "explanation": "Ürünler içerik üreticiler tarafından tanıtılır; ödeme yalnız gerçekleşen net satışlar üzerinden belirlenen komisyon oranıyla yapılır.",
+     "scenario": "Erişimi içerik üreticilerle büyütmek isteyen satıcılar.",
+     "example": "Belirlenen komisyonla binlerce içerik üreticiye tek tekliften ulaşılır.",
+     "ruleDetail": "Komisyonlu Influencer Reklamları'nda komisyon oranı fiyat ve marj hesabına katılır; komisyon yalnız net satış üzerinden ödenir."
+    },
+    {
+     "value": "meta",
+     "label": "Meta Reklamları",
+     "explanation": "Trendyol'daki ürünler Meta mecralarında (Facebook, Instagram) tanıtılır; stok adedi 4'ün üzerindeki aktif ürünler Meta reklam kataloğuna otomatik dahil edilir.",
+     "scenario": "Trendyol ürünlerini sosyal medyada tanıtmak isteyen satıcılar.",
+     "example": "Ürünler Instagram akışında Trendyol'a yönlendiren reklamlarla gösterilir.",
+     "ruleDetail": "Meta Reklamları Trendyol paneli üzerinden yönetilir ve ziyaretçiyi Trendyol'a götürür; markanın kendi Meta Ads kampanyalarıyla aynı kitleye çakışan yayın varsa bütçe dağılımı buna göre planlanır."
+    },
+    {
+     "value": "display",
+     "label": "Tanıtım / Display reklamları",
+     "explanation": "Marka bilinirliği için tanıtım ve görüntülü reklam alanları (ör. mobil tepe banner, marka günü).",
+     "scenario": "Marka bilinirliği hedefleyen satıcı ve markalar.",
+     "example": "Marka günü kampanyasında tepe banner alanı kullanılır.",
+     "ruleDetail": "Tanıtım / Display reklam alanlarının koşulları ve bütçesi Trendyol reklam ekibi ya da Satıcı Paneli'nden kontrol edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_ty_budget",
+   "section": "mk_mpads",
+   "after": "mk_ty_ads",
+   "label": "Trendyol Reklam Bütçesi ve Teklif",
+   "en": "Trendyol Ad Budget & Bidding",
+   "type": "multiselect",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "trendyol"
+     ]
+    }
+   ],
+   "explanation": "Trendyol reklamlarında bütçe tipi, teklif yöntemi ve reklam bakiyesinin yükleme yolunu belirler. Bütçe günlük harcama limiti ya da toplam bütçe olarak belirlenebilir; bakiye hak edişten aktarımla ya da kredi kartıyla yüklenir.",
+   "rule": "Trendyol reklam bütçesi ve teklif ayarları: {labels}.",
+   "scenario": "Trendyol reklamı verilecekse seçilir.",
+   "example": "Sürekli ürün reklamı günlük limitle ve Otomatik TBM ile, kampanya dönemi toplam bütçeyle yürütülür; bakiye hak edişten aktarılır.",
+   "options": [
+    {
+     "value": "daily",
+     "label": "Günlük harcama limiti",
+     "explanation": "Her gün en çok belirlenen tutar harcanır.",
+     "scenario": "Sürekli yayındaki reklamlar.",
+     "example": "Günlük 500 TL limit konur.",
+     "ruleDetail": "Sürekli Trendyol reklamlarında günlük harcama limiti kullanılır; limit Reklam Ortak Kuralları'ndaki bütçe dağılımına göre belirlenir."
+    },
+    {
+     "value": "total",
+     "label": "Toplam bütçe",
+     "explanation": "Kampanya için toplam tutar belirlenir.",
+     "scenario": "Belirli tarihli kampanyalar (ör. indirim günleri).",
+     "example": "Kasım kampanyası için toplam 20.000 TL bütçe ayrılır.",
+     "ruleDetail": "Belirli tarihli Trendyol kampanyalarında toplam bütçe kullanılır ve kampanya bitişinde reklam durdurulur."
+    },
+    {
+     "value": "auto_bid",
+     "label": "Otomatik TBM (Otomatik Teklif)",
+     "explanation": "Ürün Reklamları'nda her ürün için tıklama başına teklifi sistem belirler.",
+     "scenario": "Teklif yönetimine zaman ayıramayan ya da yeni başlayan satıcılar.",
+     "example": "Bütün ürünlerde Otomatik TBM açılır.",
+     "ruleDetail": "Ürün Reklamları'nda Otomatik TBM kullanılır; tıklama maliyeti ve satış getirisi haftalık izlenir, beklenen getiriyi sağlamayan ürünler reklamdan çıkarılır."
+    },
+    {
+     "value": "manual_bid",
+     "label": "Manuel TBM teklifi",
+     "explanation": "Tıklama başına ödenecek en yüksek tutar satıcı tarafından belirlenir.",
+     "scenario": "Marjını iyi bilen ve teklifleri yönetebilen satıcılar.",
+     "example": "Yüksek marjlı ürünlerde teklif yükseltilir.",
+     "ruleDetail": "Ürün Reklamları'nda TBM teklifi ürün marjına göre elle belirlenir; teklifler haftalık gözden geçirilir."
+    },
+    {
+     "value": "payout",
+     "label": "Bakiye hak edişten aktarılır",
+     "explanation": "Reklam bakiyesi Satıcı Paneli'ndeki mevcut hak edişlerden aktarılır.",
+     "scenario": "Düzenli satış hak edişi olan satıcılar.",
+     "example": "Aylık hak edişin bir kısmı reklam bakiyesine aktarılır.",
+     "ruleDetail": "Trendyol reklam bakiyesi hak edişten aktarılır; aktarılan tutar muhasebede reklam gideri olarak kaydedilir."
+    },
+    {
+     "value": "card",
+     "label": "Bakiye kredi kartıyla yüklenir",
+     "explanation": "Reklam bakiyesi kredi kartıyla yüklenir.",
+     "scenario": "Hak edişi henüz oluşmamış yeni satıcılar.",
+     "example": "İlk ay reklam bakiyesi şirket kartıyla yüklenir.",
+     "ruleDetail": "Trendyol reklam bakiyesi şirket kredi kartıyla yüklenir; faturalar muhasebeye iletilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_hb_ads",
+   "section": "mk_mpads",
+   "after": "mk_ty_budget",
+   "label": "HepsiAd Reklam Türleri",
+   "en": "HepsiAd Ad Types",
+   "type": "multiselect",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "hepsiburada"
+     ]
+    }
+   ],
+   "explanation": "Hepsiburada'nın reklam platformu HepsiAd'de kullanılacak reklam türlerini belirler. HepsiAd'in resmî sayfaları oturumsuz okunamadığı için bilgiler basın haberlerinden alındı (2026-11-25): satıcılar için temel ürün Sponsorlu Ürün reklamlarıdır; video ve marka reklamları gibi diğer türler, maliyet modeli ve asgari bütçe satıcı panelinden kontrol edilmelidir.",
+   "rule": "HepsiAd'de kullanılacak reklam türleri: {labels}. Reklam türleri, maliyet modeli, asgari bütçe ve raporlama Hepsiburada satıcı panelinden doğrulanır; reklam satışları Hepsiburada panelinde izlenir ve kendi sitenin reklam raporlarıyla birleştirilmez.",
+   "scenario": "Reklam Kanalları'nda HepsiAd seçildiyse kullanılacak türler seçilir.",
+   "example": "Bir satıcı HepsiAd'de en çok satan ürünleri için Sponsorlu Ürün reklamı açar; diğer reklam türlerini panelde inceler.",
+   "options": [
+    {
+     "value": "sponsored",
+     "label": "Sponsorlu Ürün reklamları",
+     "explanation": "Ürünlerin Hepsiburada'da ilgili aramalarda ve sayfalarda öne çıkarıldığı reklamlar.",
+     "scenario": "Hepsiburada'da satış yapan her satıcı.",
+     "example": "Ürün ilgili aramada sponsorlu olarak üstte görünür.",
+     "ruleDetail": "Sponsorlu Ürün reklamlarına yalnız stoğu yeterli ürünler konur; maliyet modeli ve bütçe kuralları satıcı panelinden kontrol edilir, harcama ve satışlar haftalık izlenir."
+    },
+    {
+     "value": "other",
+     "label": "Diğer HepsiAd reklam türleri (panelde incelenecek)",
+     "explanation": "Video, marka ve görüntülü reklam gibi diğer türler satıcı panelinde incelenip uygun olanlar seçilecek.",
+     "scenario": "Sponsorlu Ürün dışında görünürlük isteyen satıcı ve markalar.",
+     "example": "Pazarlama ekibi paneldeki reklam türlerini inceleyip uygun olanı seçer.",
+     "ruleDetail": "HepsiAd'deki diğer reklam türleri satıcı panelinde incelenir; kullanılacak tür, maliyet modeli ve bütçesi seçildikten sonra bu karara yazılır."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -10352,6 +10576,22 @@
      "scenario": "Ürünlerini Etsy'de satan ve Etsy içindeki aramalarda görünürlüğü artırmak isteyen dükkânlar.",
      "example": "El yapımı seramik satan bir dükkân günlük 5 $ bütçeyle Etsy Ads açar; ilanları “handmade mug” aramasında öne çıkar.",
      "ruleDetail": "Etsy Ads yalnız Etsy'de satılan ilanlar için kullanılır; tıklama başına ödenir, günlük bütçe aşılmaz (en az 1 $), reklamlar yalnız kargo gönderilen ülkelerde gösterilir ve dükkân açıldıktan 15 gün sonra başlatılabilir."
+    },
+    {
+     "value": "trendyol",
+     "label": "Trendyol Reklamları",
+     "explanation": "Trendyol Satıcı Paneli'ndeki Reklam Yönetimi'nden verilen reklamlardır: Ürün Reklamları, Mağaza Reklamları, Komisyonlu Influencer Reklamları, Meta Reklamları ve Tanıtım / Display reklamları. Reklamlar Trendyol'daki ürün ve mağaza sayfalarına gider.",
+     "scenario": "Ürünlerini Trendyol'da satan ve Trendyol içindeki görünürlüğü ve satışı artırmak isteyen satıcılar.",
+     "example": "Bir ev tekstili markası Trendyol'da Ürün Reklamları ile arama sonuçlarında öne çıkar, Mağaza Reklamları ile banner alanında mağazasını tanıtır.",
+     "ruleDetail": "Trendyol reklamları Satıcı Paneli › Reklam Yönetimi'nden verilir ve yalnız Trendyol'da satılan ürünler için kullanılır; bütçe günlük harcama limiti ya da toplam bütçe olarak belirlenir, reklam bakiyesi hak edişten aktarımla ya da kredi kartıyla yüklenir; reklam türleri ve kurallar ads.trendyol.com ve Satıcı Paneli'nden kontrol edilir."
+    },
+    {
+     "value": "hepsiburada",
+     "label": "HepsiAd (Hepsiburada Reklamları)",
+     "explanation": "Hepsiburada'nın reklam platformu HepsiAd üzerinden verilen reklamlardır; satıcılar için temel ürün Sponsorlu Ürün reklamlarıdır. Ayrıntılar (reklam türleri, maliyet modeli, asgari bütçe) Hepsiburada satıcı panelinden kontrol edilmelidir — resmî sayfalar oturumsuz okunamadığı için bilgiler basın haberlerinden alınmıştır (2026-11-25).",
+     "scenario": "Ürünlerini Hepsiburada'da satan ve Hepsiburada içindeki görünürlüğü artırmak isteyen satıcılar.",
+     "example": "Bir küçük ev aletleri satıcısı HepsiAd'de Sponsorlu Ürün reklamı açar; ürünü ilgili aramalarda öne çıkar.",
+     "ruleDetail": "HepsiAd reklamları yalnız Hepsiburada'da satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama Hepsiburada satıcı panelinden doğrulanır, doğrulanmamış bilgiyle bütçe planı yapılmaz."
     },
     {
      "value": "programmatic",
@@ -11183,6 +11423,8 @@
        "pinterest",
        "amazon",
        "etsy",
+       "trendyol",
+       "hepsiburada",
        "programmatic"
       ]
      }
@@ -11246,6 +11488,8 @@
        "pinterest",
        "amazon",
        "etsy",
+       "trendyol",
+       "hepsiburada",
        "programmatic"
       ]
      }
@@ -11268,6 +11512,8 @@
        "pinterest",
        "amazon",
        "etsy",
+       "trendyol",
+       "hepsiburada",
        "programmatic"
       ]
      }
