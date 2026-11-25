@@ -695,14 +695,14 @@
   },
   {
    "id": "mk_mpads",
-   "name": "Pazar Yeri Reklamları",
-   "en": "Marketplace Ads",
-   "desc": "Trendyol Reklam Yönetimi, Hepsiburada HepsiAd, N11 Reklam Platformu ve Çiçeksepeti reklamlarında kullanılacak reklam türlerini, bütçe tipini, teklif yöntemini ve reklam bakiyesinin nasıl yükleneceğini belirler",
+   "name": "Pazar Yeri ve İlan Portalı Reklamları",
+   "en": "Marketplace & Classifieds Ads",
+   "desc": "Trendyol Reklam Yönetimi, Hepsiburada HepsiAd, N11 Reklam Platformu, Çiçeksepeti, Pazarama, PttAVM ve İdefix reklamlarında kullanılacak reklam türlerini, bütçe tipini, teklif yöntemini ve reklam bakiyesinin nasıl yükleneceğini belirler",
    "group": "Reklam",
    "icon": "⌘",
    "after": "mk_etsy",
    "guide": {
-    "purpose": "Bu bölüm, Türkiye'deki büyük pazar yerlerinde, Trendyol, Hepsiburada, N11 ve Çiçeksepeti'nde, satıcı reklamlarının nasıl kullanılacağını belirler. Bu reklamlar ziyaretçiyi kendi siteye değil pazar yerindeki ürün ya da mağaza sayfasına götürür; satışlar pazar yerinin panelinde ölçülür. Trendyol bilgileri ads.trendyol.com'dan doğrulandı; Hepsiburada'nın HepsiAd, N11'in Reklam Platformu ve Çiçeksepeti'nin reklam sayfaları oturumsuz okunamadığı için bu üç platformun ayrıntıları satıcı panelinden kontrol edilmelidir.",
+    "purpose": "Bu bölüm, Türkiye'deki büyük pazar yerlerinde, Trendyol, Hepsiburada, N11, Çiçeksepeti, Pazarama, PttAVM ve İdefix'te, satıcı reklamlarının nasıl kullanılacağını belirler. Bu reklamlar ziyaretçiyi kendi siteye değil pazar yerindeki ürün ya da mağaza sayfasına götürür; satışlar pazar yerinin panelinde ölçülür. Trendyol bilgileri ads.trendyol.com'dan doğrulandı; Hepsiburada'nın HepsiAd, N11'in Reklam Platformu ve Çiçeksepeti'nin reklam sayfaları oturumsuz okunamadığı için bu üç platformun ayrıntıları satıcı panelinden kontrol edilmelidir; Pazarama, PttAVM ve İdefix'in resmî sayfalarında satıcı reklamı hakkında bilgi bulunamadı, reklam seçeneğinin varlığı da panelden kontrol edilmelidir. İlan portallarında (sahibinden.com, Hepsiemlak, Emlakjet, arabam.com) ücretli görünürlük kurumsal üyelik, ilan öne çıkarma (sahibinden.com'da Doping) ve portalın reklam ürünleriyle sağlanır; taşınmaz ve taşıt ilanlarında Elektronik İlan Doğrulama Sistemi (EİDS) yetkisi ön koşuldur. sahibinden.com ve Hepsiemlak sayfaları otomatik araçlara kapalı olduğu için ayrıntılar panelden kontrol edilmelidir.",
     "criteria": [
      "Hangi reklam türü hangi hedefe hizmet ediyor? Trendyol'da Ürün Reklamları satış, Mağaza Reklamları mağaza trafiği ve görünürlük, Tanıtım reklamları marka bilinirliği içindir.",
      "Bütçe günlük harcama limiti mi, toplam bütçe mi olacak? Kampanya dönemlerinde toplam bütçe, sürekli reklamda günlük limit harcamayı kontrol etmeyi kolaylaştırır.",
@@ -713,7 +713,8 @@
      "Pazar yeri reklamını sitenin reklam raporlarıyla birleştirmek: satışlar pazar yerinde gerçekleştiği için ayrı raporlanmalıdır.",
      "Komisyonlu influencer reklamlarında komisyonu fiyat hesabına katmamak: ödeme net satış üzerinden belirlenen komisyon oranıyla yapılır.",
      "Stoku az ürünü reklama koymak: stok bittiğinde reklam bütçesi boşa harcanır ve ürün reklamdan düşer.",
-     "Doğrulanmamış reklam bilgisiyle bütçe planlamak: HepsiAd, N11 ve Çiçeksepeti reklam türleri, maliyet modeli ve asgari bütçe satıcı panelinden doğrulanmalıdır."
+     "Doğrulanmamış reklam bilgisiyle bütçe planlamak: HepsiAd, N11, Çiçeksepeti, Pazarama, PttAVM ve İdefix reklam türleri, maliyet modeli ve asgari bütçe satıcı panelinden doğrulanmalıdır.",
+     "İlan portalı paketlerinde otomatik yenilemeyi kaçırmak: kurumsal üyelik sözleşmesinin süresi, yenileme tarihi ve fesih koşulu yazılı alınmalı ve takvime işlenmelidir."
     ],
     "resources": [
      {
@@ -735,6 +736,26 @@
       "title": "Çiçeksepeti Satıcı Akademisi",
       "url": "https://akademi.ciceksepeti.com/",
       "note": "Satıcıların panelden ürün yükleyip reklam vererek öne çıkarabileceği; hak ediş ödemesi ve Pazaryeri Destek Hattı."
+     },
+     {
+      "title": "Emlakjet Üyelik Paketleri",
+      "url": "https://www.emlakjet.com/uyelik-paketleri",
+      "note": "Flex, Pro, Premium ve ofis paketleri; danışman başına aktif ilan hakkı, fiyatlar başvurudan sonra paylaşılır."
+     },
+     {
+      "title": "arabam.com Galeriler",
+      "url": "https://www.arabam.com/galeri",
+      "note": "Galeri sayfaları ve kurumsal üyelik başvurusu bağlantısı."
+     },
+     {
+      "title": "PttAVM'de satıcı ol",
+      "url": "https://www.pttavm.com/satici-ol",
+      "note": "Mağaza açılış ücreti yok, kategori bazlı komisyon; ürün yükleme Satıcı Paneli, XML ya da API ile."
+     },
+     {
+      "title": "İdefix'te satıcı ol",
+      "url": "https://www.idefix.com/saticimiz-olun",
+      "note": "Kayıt ve ürün listeleme ücretsiz."
      }
     ]
    }
@@ -3307,6 +3328,10 @@
       "hepsiburada",
       "n11",
       "ciceksepeti",
+      "pazarama",
+      "pttavm",
+      "idefix",
+      "classifieds",
       "programmatic"
      ]
     }
@@ -8839,6 +8864,81 @@
    ]
   },
   {
+   "id": "oc_classifieds",
+   "section": "oc_accounts",
+   "after": "oc_marketplaces",
+   "label": "İlan Portalı Mağazaları",
+   "en": "Classifieds Portal Stores",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Emlakjet | https://…",
+   "otherLabel": "Diğer ilan portalları",
+   "explanation": "Markanın ilan verdiği portallardaki mağaza, ofis, galeri ya da hizmet veren profil adreslerini ayrı kutulara girersiniz (sahibinden.com, Hepsiemlak, Emlakjet, arabam.com …). Listede olmayan portallar “Diğer ilan portalları” kutusuna “Ad | adres” olarak yazılır. İlan portalında hesap yoksa boş bırakılır. Taşınmaz ve taşıt ilanlarında Ticaret Bakanlığı'nın Elektronik İlan Doğrulama Sistemi (EİDS) ile ilan verenin kimliği ve pazarlama yetkisi doğrulanır (2025–2026'da kiralık, satılık taşınmaz ve taşıt ilanları için zorunlu hâle geldi; tarihler basın haberlerinden, resmî kaynaktan teyit edilmeli).",
+   "rule": "Markanın ilan portalı mağaza ve profilleri: {value}. Sitede “İlanlarımız” bağlantıları ve pazarlama içeriklerindeki portal bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Portaldaki ilanlarla sitedeki aynı ilanın fiyatı, özellikleri, görselleri, iletişim bilgisi ve kampanyası tutarlı tutulur; satılan, kiralanan ya da yayından kalkan ilan portalda ve sitede aynı gün kaldırılır. Taşınmaz ve taşıt ilanlarında Elektronik İlan Doğrulama Sistemi (EİDS) yetkisi alınmadan ilan verilmez, ilanda yetki belgesi numarası gibi zorunlu bilgiler eksik bırakılmaz. Listede olmayan portal hesabı marka adına anılmaz.",
+   "scenario": "Emlak ofisi, oto galeri, ikinci el satıcısı ya da hizmet veren bir işletme ilanlarını kendi sitesinin yanında sahibinden.com, Hepsiemlak, Emlakjet, arabam.com gibi portallarda da yayınlıyorsa doldurulur.",
+   "example": "Bir emlak ofisi sahibinden.com mağaza adresini ve Emlakjet ofis sayfasını yazar; sitenin alt bilgisindeki “İlanlarımız portallarda da” bölümü ve ilan sayfalarındaki portal düğmeleri bu adreslere gider.",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "accounts": [
+    {
+     "k": "sahibinden",
+     "label": "sahibinden.com (mağaza)",
+     "ph": "https://magazaadi.sahibinden.com/",
+     "hosts": [
+      "sahibinden.com"
+     ]
+    },
+    {
+     "k": "hepsiemlak",
+     "label": "Hepsiemlak (emlak ofisi)",
+     "ph": "https://www.hepsiemlak.com/…",
+     "hosts": [
+      "hepsiemlak.com"
+     ]
+    },
+    {
+     "k": "emlakjet",
+     "label": "Emlakjet (ofis / danışman)",
+     "ph": "https://www.emlakjet.com/…",
+     "hosts": [
+      "emlakjet.com"
+     ]
+    },
+    {
+     "k": "arabam",
+     "label": "arabam.com (galeri)",
+     "ph": "https://www.arabam.com/galeri/…",
+     "hosts": [
+      "arabam.com"
+     ]
+    },
+    {
+     "k": "letgo",
+     "label": "letgo",
+     "ph": "https://www.letgo.com/…",
+     "hosts": [
+      "letgo.com"
+     ]
+    },
+    {
+     "k": "dolap",
+     "label": "Dolap",
+     "ph": "https://dolap.com/…",
+     "hosts": [
+      "dolap.com"
+     ]
+    },
+    {
+     "k": "armut",
+     "label": "Armut (hizmet veren profili)",
+     "ph": "https://armut.com/…",
+     "hosts": [
+      "armut.com"
+     ]
+    }
+   ]
+  },
+  {
    "id": "mk_tt_shop",
    "section": "mk_tt",
    "after": "mk_tt_budget",
@@ -10052,6 +10152,108 @@
      "ruleDetail": "Çiçeksepeti'nde önce dört haftalık, sınırlı ürünlü ve küçük bütçeli deneme kampanyası açılır; özel gün dönemlerinden önce tamamlanacak şekilde planlanır, harcama, tıklama ve satış haftalık izlenir, deneme sonunda ölçekleme ya da durdurma kararı verilir."
     }
    ]
+  },
+  {
+   "id": "mk_cls_ads",
+   "section": "mk_mpads",
+   "after": "mk_cs_ads",
+   "label": "İlan Portalı Öne Çıkarma ve Reklamları",
+   "en": "Classifieds Promotion & Ads",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "classifieds"
+     ]
+    }
+   ],
+   "explanation": "İlan portallarında (sahibinden.com, Hepsiemlak, Emlakjet, arabam.com …) hangi ücretli görünürlük araçlarının kullanılacağını belirler. sahibinden.com ve Hepsiemlak sayfaları otomatik araçlara kapalı olduğu için ürün adları, fiyatlar ve kurallar doğrulanamadı (2026-11-25); Emlakjet'in üyelik paketleri (Flex, Pro, Premium; ofisler için Flex Ofis ve Premium Ofis — danışman başına aktif ilan hakkı) ve Reklam Çözümleri sayfası emlakjet.com'dan okundu, fiyatlar başvurudan sonra paylaşılıyor.",
+   "rule": "İlan portalı ücretli görünürlük araçları: {labels}. Portal reklamları yalnız o portaldaki ilanlar için kullanılır; ürün adları, fiyatlar, süreler ve iade koşulları portalın satıcı / kurumsal panelinden doğrulanmadan bütçe planlanmaz. Harcama, görüntülenme, mesaj ve arama (çağrı) sayıları portalın panelinden aylık kaydedilir ve sitenin reklam raporlarından ayrı raporlanır.",
+   "scenario": "Reklam Kanalları'nda “İlan portalları” seçildiyse seçilir.",
+   "example": "Bir oto galeri arabam.com kurumsal üyeliğini sürdürür, sahibinden.com'da yalnız yeni gelen araçlara kısa süreli öne çıkarma alır ve her ay ilan başına mesaj sayısını raporlar.",
+   "options": [
+    {
+     "value": "membership",
+     "label": "Kurumsal mağaza / ofis üyelik paketi",
+     "explanation": "Portalın kurumsal (mağaza, emlak ofisi, galeri) üyeliğidir: ilan hakkı, mağaza sayfası ve yönetim paneli sağlar. Emlakjet'te bireysel danışmanlar için Flex, Pro, Premium; ofisler için Flex Ofis ve Premium Ofis paketleri var; arabam.com'da kurumsal başvuru sayfası bulunuyor.",
+     "scenario": "Sürekli çok sayıda ilan veren emlak ofisleri, galeriler ve ikinci el satıcıları.",
+     "example": "Bir emlak ofisi Emlakjet Premium Ofis paketiyle danışmanlarını tek panelden yönetir.",
+     "ruleDetail": "Kurumsal üyelik paketi seçilmeden önce paket başına aktif ilan hakkı, danışman sayısı, sözleşme süresi ve otomatik yenileme koşulu yazılı olarak alınır; yenileme tarihi takvime işlenir."
+    },
+    {
+     "value": "boost",
+     "label": "İlan öne çıkarma (sahibinden.com Doping vb.)",
+     "explanation": "Tek tek ilanların arama sonuçlarında ya da vitrinde öne çıkarılmasıdır; sahibinden.com bu hizmete Doping adını verir. Seçenekler, süreler ve ücretler portalın panelinden kontrol edilmelidir.",
+     "scenario": "Yeni gelen ya da hızlı satılması gereken ilanlar.",
+     "example": "Yeni gelen beş araç için bir haftalık öne çıkarma alınır.",
+     "ruleDetail": "Öne çıkarma yalnız seçilmiş ilanlara ve belirli süreyle uygulanır; öne çıkarılan ilanın mesaj ve arama sayısı öncesiyle karşılaştırılır, ilan satıldığında ya da kaldırıldığında kalan sürenin iade koşulu panelden kontrol edilir."
+    },
+    {
+     "value": "portal_ads",
+     "label": "Portalın reklam çözümleri (görüntülü reklam, sponsorlu alan)",
+     "explanation": "Portalın sattığı banner, sponsorlu proje ya da marka alanı gibi reklam ürünleridir (ör. Emlakjet Reklam Çözümleri). Ürünler ve fiyatlar portalın satış ekibinden alınır.",
+     "scenario": "Yeni konut projesi, galeri açılışı ya da marka bilinirliği kampanyası yapan işletmeler.",
+     "example": "Bir inşaat şirketi yeni projesi için portalın sponsorlu proje alanını üç ay kiralar.",
+     "ruleDetail": "Portal reklam ürünleri için teklif, gösterim tahmini ve raporlama biçimi yazılı alınır; tıklama ölçümü için açılış adresine UTM parametresi eklenir."
+    },
+    {
+     "value": "review",
+     "label": "Önce panelde incelenecek",
+     "explanation": "Portalın panelindeki ücretli seçenekler, fiyatlar ve raporlar incelenir; bütçe ayrılmadan önce bu karar ayrıntılandırılır.",
+     "scenario": "İlan portalında ilk kez ücretli araç kullanacak işletmeler.",
+     "example": "Seçenekler ve fiyatlar bir sayfalık notta toplanır.",
+     "ruleDetail": "İlan portallarındaki ücretli seçenekler, fiyatlar, süreler ve rapor metrikleri kayda geçirilir ve bu karar güncellenir; inceleme bitmeden portal bütçesi harcanmaz."
+    }
+   ]
+  },
+  {
+   "id": "mk_mpx_ads",
+   "section": "mk_mpads",
+   "after": "mk_cs_ads",
+   "label": "Pazarama, PttAVM ve İdefix Reklam Planı",
+   "en": "Pazarama, PttAVM & İdefix Ad Plan",
+   "type": "select",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "pazarama",
+      "pttavm",
+      "idefix"
+     ]
+    }
+   ],
+   "explanation": "Reklam Kanalları'nda seçilen Pazarama, PttAVM ya da İdefix reklamlarının nasıl ele alınacağını belirler. Bu üç pazar yerinin resmî sayfalarında satıcı reklamı hakkında bilgi bulunamadı (2026-11-25); önce satıcı panelinde reklam seçeneği olup olmadığı ve koşulları incelenir.",
+   "rule": "Pazarama, PttAVM ve İdefix reklam planı: {label}.",
+   "scenario": "Reklam Kanalları'nda bu üç pazar yerinden en az biri seçildiyse seçilir.",
+   "example": "Pazarlama ekibi PttAVM ve İdefix satıcı panellerinde reklam bölümü olup olmadığına bakar; olan pazar yerinde dört haftalık deneme açar.",
+   "options": [
+    {
+     "value": "review",
+     "label": "Önce satıcı panelinde incelenecek (önerilen)",
+     "explanation": "Seçilen pazar yerlerinin satıcı panelinde reklam seçeneği olup olmadığı, varsa türleri, maliyet modeli, asgari bütçe ve raporlaması incelenir.",
+     "scenario": "Bu pazar yerlerinde reklamı ilk kez değerlendiren satıcılar.",
+     "example": "Her pazar yeri için reklam seçenekleri bir notta toplanır.",
+     "ruleDetail": "Seçilen pazar yerlerinin satıcı panelinde reklam bölümü olup olmadığı incelenir; varsa reklam türleri, maliyet modeli, asgari bütçe ve rapor metrikleri kayda geçirilir ve bu karar güncellenir, yoksa ilgili pazar yeri Reklam Kanalları'ndan çıkarılır. İnceleme bitmeden bu pazar yerlerine reklam bütçesi ayrılmaz."
+    },
+    {
+     "value": "pilot",
+     "label": "İncelemeden sonra küçük bütçeli deneme",
+     "explanation": "Reklam seçeneği doğrulanan pazar yerinde sınırlı ürün ve küçük bütçeyle dört haftalık deneme kampanyası açılır.",
+     "scenario": "Reklam seçeneğini doğrulamış ve sonucu ölçmek isteyen satıcılar.",
+     "example": "İdefix'te en çok satan beş ürünle dört haftalık deneme yapılır.",
+     "ruleDetail": "Reklam seçeneği doğrulanan pazar yerinde önce dört haftalık, sınırlı ürünlü ve küçük bütçeli deneme kampanyası açılır; harcama, tıklama ve satış haftalık izlenir, deneme sonunda ölçekleme ya da durdurma kararı verilir."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -10699,6 +10901,38 @@
      "scenario": "Ürünlerini Çiçeksepeti'nde satan ve Çiçeksepeti içindeki görünürlüğü artırmak isteyen satıcılar (özellikle hediye, çiçek, özel gün ürünleri).",
      "example": "Bir hediyelik eşya satıcısı Anneler Günü öncesi Çiçeksepeti panelindeki reklam seçeneklerini inceler ve küçük bir deneme bütçesiyle başlar.",
      "ruleDetail": "Çiçeksepeti reklamları yalnız Çiçeksepeti'nde satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama Çiçeksepeti satıcı panelinden ya da Pazaryeri Destek Hattı'ndan doğrulanır, doğrulanmamış bilgiyle bütçe planı yapılmaz."
+    },
+    {
+     "value": "pazarama",
+     "label": "Pazarama Reklamları",
+     "explanation": "Pazarama'da satılan ürünler için pazar yeri içi reklamlar. Resmî satıcı sayfalarında satıcı reklamı (sponsorlu ürün, mağaza reklamı) hakkında bilgi bulunamadı (2026-11-25); reklam seçeneğinin olup olmadığı, türleri ve ücretleri satıcı panelinden kontrol edilmelidir.",
+     "scenario": "Ürünlerini Pazarama'da satan ve pazar yeri içinde görünürlük isteyen satıcılar.",
+     "example": "Bir satıcı Pazarama satıcı panelinde reklam seçeneği olup olmadığını inceler.",
+     "ruleDetail": "Pazarama reklamı yalnız satıcı panelinde reklam seçeneği bulunduğu doğrulanırsa ve yalnız Pazarama'da satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama panelden doğrulanmadan bütçe planı yapılmaz."
+    },
+    {
+     "value": "pttavm",
+     "label": "PttAVM Reklamları",
+     "explanation": "PttAVM'de satılan ürünler için pazar yeri içi reklamlar. PttAVM'de mağaza açılış ücreti yoktur, satış gerçekleştikçe kategori bazlı komisyon alınır. Resmî satıcı sayfalarında satıcı reklamı (sponsorlu ürün, mağaza reklamı) hakkında bilgi bulunamadı (2026-11-25); reklam seçeneğinin olup olmadığı, türleri ve ücretleri satıcı panelinden kontrol edilmelidir.",
+     "scenario": "Ürünlerini PttAVM'de satan ve pazar yeri içinde görünürlük isteyen satıcılar.",
+     "example": "Bir satıcı PttAVM satıcı panelinde reklam seçeneği olup olmadığını inceler.",
+     "ruleDetail": "PttAVM reklamı yalnız satıcı panelinde reklam seçeneği bulunduğu doğrulanırsa ve yalnız PttAVM'da satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama panelden doğrulanmadan bütçe planı yapılmaz."
+    },
+    {
+     "value": "idefix",
+     "label": "İdefix Reklamları",
+     "explanation": "İdefix'te satılan ürünler için pazar yeri içi reklamlar. İdefix'te kayıt ve ürün listeleme ücretsizdir. Resmî satıcı sayfalarında satıcı reklamı (sponsorlu ürün, mağaza reklamı) hakkında bilgi bulunamadı (2026-11-25); reklam seçeneğinin olup olmadığı, türleri ve ücretleri satıcı panelinden kontrol edilmelidir.",
+     "scenario": "Ürünlerini İdefix'te (kitap, kırtasiye, hobi ve diğer kategoriler) satan ve görünürlük isteyen satıcılar.",
+     "example": "Bir yayınevi İdefix satıcı panelinde reklam seçeneği olup olmadığını inceler.",
+     "ruleDetail": "İdefix reklamı yalnız satıcı panelinde reklam seçeneği bulunduğu doğrulanırsa ve yalnız İdefix'da satılan ürünler için kullanılır; reklam türleri, maliyet modeli, asgari bütçe ve raporlama panelden doğrulanmadan bütçe planı yapılmaz."
+    },
+    {
+     "value": "classifieds",
+     "label": "İlan portalları (sahibinden.com, Hepsiemlak, Emlakjet, arabam.com …)",
+     "explanation": "İlan portallarındaki ücretli görünürlük araçlarıdır: kurumsal mağaza / ofis üyelikleri, ilan öne çıkarma (sahibinden.com'da Doping) ve portalın reklam ürünleri. Ziyaretçi kendi siteye değil portaldaki ilana gider; mesaj ve aramalar portalın panelinde ölçülür.",
+     "scenario": "Emlak ofisleri, oto galeriler, ikinci el satıcıları ve ilanla müşteri bulan hizmet işletmeleri.",
+     "example": "Bir emlak ofisi sahibinden.com ve Emlakjet'teki ilanlarını öne çıkararak arama sayısını artırır.",
+     "ruleDetail": "İlan portalı reklamları yalnız o portaldaki ilanlar için kullanılır; taşınmaz ve taşıt ilanlarında Elektronik İlan Doğrulama Sistemi (EİDS) yetkisi alınmadan ilan verilmez ve öne çıkarılmaz, ücretli seçenekler portalın panelinden doğrulanmadan bütçe planlanmaz."
     },
     {
      "value": "programmatic",
@@ -11534,6 +11768,10 @@
        "hepsiburada",
        "n11",
        "ciceksepeti",
+       "pazarama",
+       "pttavm",
+       "idefix",
+       "classifieds",
        "programmatic"
       ]
      }
@@ -11601,6 +11839,10 @@
        "hepsiburada",
        "n11",
        "ciceksepeti",
+       "pazarama",
+       "pttavm",
+       "idefix",
+       "classifieds",
        "programmatic"
       ]
      }
@@ -11627,6 +11869,10 @@
        "hepsiburada",
        "n11",
        "ciceksepeti",
+       "pazarama",
+       "pttavm",
+       "idefix",
+       "classifieds",
        "programmatic"
       ]
      }
