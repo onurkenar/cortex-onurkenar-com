@@ -8366,6 +8366,293 @@
      "ruleDetail": "StartTrial olayı ücretsiz deneme hesabı açılınca gönderilir."
     }
    ]
+  },
+  {
+   "id": "mk_li_events",
+   "section": "mk_li",
+   "after": "mk_li_insight",
+   "label": "Takip Edilecek LinkedIn Dönüşümleri",
+   "en": "LinkedIn Conversions to Track",
+   "type": "multiselect",
+   "explanation": "Campaign Manager'da hangi LinkedIn dönüşüm türlerinin tanımlanacağını belirler. Her dönüşüm bir dönüşüm kuralıdır; sitede Insight Tag ile (olaya özel dönüşümde conversion_id ile), CRM'den Conversions API ya da CSV ile beslenir. Dönüşüm kimlikleri Ortak Bilgiler › Hesap ve Etiket Kimlikleri'ne yazılır.",
+   "rule": "LinkedIn'de tanımlanacak dönüşümler: {labels}. Her dönüşüm Campaign Manager'da ayrı dönüşüm kuralı olarak açılır; olaya özel dönüşümler sitede yalnız işlem tamamlanınca ve çerez onayı verildiyse conversion_id ile gönderilir, kimlikler Hesap ve Etiket Kimlikleri'ndeki LinkedIn dönüşüm kimlikleri satırından alınır. Aynı olay hem Insight Tag hem Conversions API ile gönderiliyorsa ikisinde aynı eventId kullanılır; LinkedIn yardım sayfası Insight Tag, Conversions API ve CSV dönüşümlerinin ilişkilendirmede tekilleştirilmediğini söylediği için her kaynak için ayrı dönüşüm kuralı açılır ve raporda çift sayım kontrol edilir.",
+   "scenario": "LinkedIn reklamları siteye trafik gönderiyor ve kampanyalar form, demo talebi ya da etkinlik kaydı gibi sitedeki işlemlere göre değerlendirilecekse.",
+   "example": "Bir yazılım firması demo formu için Lead, webinar için Register event, fiyat sayfası için Key page view tanımlar; CRM'de nitelikli bulunan adaylar Qualified lead olarak Conversions API ile gönderilir.",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/web-pazarlama-muduru/dijital-olcumleme-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "linkedin"
+     ]
+    },
+    {
+     "field": "mk_li_insight",
+     "in": [
+      true
+     ]
+    }
+   ],
+   "recommend": [
+    {
+     "field": "mk_conversions",
+     "map": {
+      "form": [
+       "lead"
+      ],
+      "phone": [
+       "contact"
+      ],
+      "whatsapp": [
+       "contact"
+      ],
+      "email": [
+       "contact"
+      ],
+      "download": [
+       "download"
+      ],
+      "purchase": [
+       "purchase"
+      ],
+      "event_register": [
+       "register_event"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "booking": [
+       "book_appointment"
+      ],
+      "crm": [
+       "qualified_lead"
+      ],
+      "ecommerce": [
+       "add_to_cart",
+       "purchase"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "lead",
+     "label": "Lead — form gönderimi",
+     "explanation": "Teklif, iletişim ya da demo formu başarıyla gönderilince.",
+     "scenario": "Form toplayan her B2B site.",
+     "example": "Demo talep formu kaydedilince Lead dönüşümü sayılır.",
+     "ruleDetail": "Lead dönüşümü form sunucuda başarıyla kaydedilince tetiklenir."
+    },
+    {
+     "value": "contact",
+     "label": "Contact — telefon, WhatsApp, e-posta tıklaması",
+     "explanation": "Telefon, WhatsApp ya da e-posta bağlantısına tıklanınca.",
+     "scenario": "Arama ve mesajla iletişim alan işletmeler.",
+     "example": "Satış ekibinin telefon numarasına tıklanınca Contact sayılır.",
+     "ruleDetail": "Contact dönüşümü telefon, WhatsApp ve e-posta bağlantılarına tıklanınca tetiklenir."
+    },
+    {
+     "value": "book_appointment",
+     "label": "Book appointment — randevu / toplantı",
+     "explanation": "Demo ya da danışmanlık görüşmesi için randevu alınınca.",
+     "scenario": "Satış görüşmesiyle ilerleyen B2B hizmetler.",
+     "example": "Takvimden demo saati seçilince Book appointment sayılır.",
+     "ruleDetail": "Book appointment dönüşümü randevu kaydı oluşunca tetiklenir."
+    },
+    {
+     "value": "register_event",
+     "label": "Register event — etkinlik / webinar kaydı",
+     "explanation": "Etkinlik ya da webinar kaydı tamamlanınca.",
+     "scenario": "Webinar ve etkinlikle müşteri kazanan işletmeler.",
+     "example": "Webinar kayıt formu tamamlanınca Register event sayılır.",
+     "ruleDetail": "Register event dönüşümü etkinlik kaydı onaylanınca tetiklenir."
+    },
+    {
+     "value": "sign_up",
+     "label": "Sign up — üyelik / bülten kaydı",
+     "explanation": "Hesap açılınca ya da bültene kaydolununca.",
+     "scenario": "Üyelikli ürünler ve bülten büyütmek isteyen markalar.",
+     "example": "Bülten formu gönderilince Sign up sayılır.",
+     "ruleDetail": "Sign up dönüşümü kayıt tamamlanınca tetiklenir."
+    },
+    {
+     "value": "download",
+     "label": "Download — dosya indirme",
+     "explanation": "Rapor, e-kitap, katalog gibi bir dosya indirilince.",
+     "scenario": "İndirilebilir içerikle (lead magnet) müşteri adayı toplayan siteler.",
+     "example": "Sektör raporu indirilince Download sayılır.",
+     "ruleDetail": "Download dönüşümü dosya indirme bağlantısına tıklanınca tetiklenir."
+    },
+    {
+     "value": "submit_application",
+     "label": "Submit application — başvuru",
+     "explanation": "İş, bayilik, kredi ya da program başvurusu gönderilince.",
+     "scenario": "Başvuru toplayan işletmeler.",
+     "example": "Bayilik başvurusu gönderilince Submit application sayılır.",
+     "ruleDetail": "Submit application dönüşümü başvuru kaydedilince tetiklenir."
+    },
+    {
+     "value": "key_page_view",
+     "label": "Key page view — önemli sayfa görüntüleme",
+     "explanation": "Fiyat, teklif ya da teşekkür sayfası gibi önemli bir sayfa açılınca.",
+     "scenario": "Formu olmayan ya da sayfa ziyaretini ara hedef olarak ölçmek isteyen siteler.",
+     "example": "Fiyatlandırma sayfası açılınca Key page view sayılır.",
+     "ruleDetail": "Key page view dönüşümü belirlenen sayfanın adresiyle tanımlanır; ana hedef değil ara hedef olarak raporlanır."
+    },
+    {
+     "value": "qualified_lead",
+     "label": "Qualified lead — nitelikli müşteri adayı",
+     "explanation": "Satış ekibinin nitelikli bulduğu müşteri adayı (CRM'den gelir).",
+     "scenario": "CRM'i olan ve kampanyayı lead kalitesine göre değerlendirmek isteyen B2B işletmeler.",
+     "example": "CRM'de “nitelikli” işaretlenen kayıt Qualified lead olarak gönderilir.",
+     "ruleDetail": "Qualified lead dönüşümü CRM'den Conversions API ya da CSV ile gönderilir; sitedeki etiketle tetiklenmez."
+    },
+    {
+     "value": "add_to_cart",
+     "label": "Add to cart — sepete ekleme",
+     "explanation": "Ürün sepete eklenince.",
+     "scenario": "LinkedIn'den satış yapan e-ticaret siteleri.",
+     "example": "Ürün sepete eklenince Add to cart sayılır.",
+     "ruleDetail": "Add to cart dönüşümü ürün sepete eklenince değerle tetiklenir."
+    },
+    {
+     "value": "purchase",
+     "label": "Purchase — satın alma",
+     "explanation": "Ödeme onaylanıp sipariş tamamlanınca.",
+     "scenario": "Online satış ya da online ödeme alan siteler.",
+     "example": "Ödeme onaylanınca değerle Purchase sayılır.",
+     "ruleDetail": "Purchase dönüşümü ödeme sunucuda onaylanınca değer ve para birimiyle tetiklenir."
+    }
+   ]
+  },
+  {
+   "id": "oc_marketplaces",
+   "section": "oc_accounts",
+   "after": "mk_ids",
+   "label": "Pazar Yeri Mağazaları",
+   "en": "Marketplace Stores",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Getir Çarşı | https://…",
+   "otherLabel": "Diğer pazar yerleri",
+   "explanation": "Markanın ürün sattığı pazar yerlerindeki resmî mağaza adreslerini ayrı kutulara girersiniz (Trendyol, Hepsiburada, Amazon …). Listede olmayan pazar yerleri “Diğer pazar yerleri” kutusuna “Ad | adres” olarak yazılır. Pazar yerinde satış yoksa boş bırakılır.",
+   "rule": "Markanın pazar yeri mağazaları: {value}. Sitede “Bizi pazar yerlerinde de bulabilirsiniz” bağlantıları, ürün sayfalarındaki pazar yeri düğmeleri ve pazarlama içeriklerindeki mağaza bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Listede olmayan mağaza marka adına anılmaz; aynı ürünün sitedeki ve pazar yerindeki adı, fiyatı ve kampanya bilgisi tutarlı tutulur.",
+   "scenario": "Ürünler kendi sitenin yanında Trendyol, Hepsiburada, Amazon gibi pazar yerlerinde de satılıyorsa; sitede, sosyal medyada ve reklamlarda doğru mağazaya bağlantı verilmesi için doldurulur.",
+   "example": "Bir kozmetik markası Trendyol ve Hepsiburada kutularına mağaza adreslerini yazar; sitenin alt bilgisinde “Pazar yerlerinde de satıştayız” bölümü ve ürün sayfalarındaki pazar yeri düğmeleri bu adreslere gider.",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "accounts": [
+    {
+     "k": "trendyol",
+     "label": "Trendyol",
+     "ph": "https://www.trendyol.com/magaza/…",
+     "hosts": [
+      "trendyol.com"
+     ]
+    },
+    {
+     "k": "hepsiburada",
+     "label": "Hepsiburada",
+     "ph": "https://www.hepsiburada.com/magaza/…",
+     "hosts": [
+      "hepsiburada.com"
+     ]
+    },
+    {
+     "k": "amazon_tr",
+     "label": "Amazon Türkiye",
+     "ph": "https://www.amazon.com.tr/…",
+     "hosts": [
+      "amazon.com.tr"
+     ]
+    },
+    {
+     "k": "n11",
+     "label": "N11",
+     "ph": "https://www.n11.com/magaza/…",
+     "hosts": [
+      "n11.com"
+     ]
+    },
+    {
+     "k": "ciceksepeti",
+     "label": "Çiçeksepeti",
+     "ph": "https://www.ciceksepeti.com/…",
+     "hosts": [
+      "ciceksepeti.com"
+     ]
+    },
+    {
+     "k": "pazarama",
+     "label": "Pazarama",
+     "ph": "https://www.pazarama.com/…",
+     "hosts": [
+      "pazarama.com"
+     ]
+    },
+    {
+     "k": "pttavm",
+     "label": "PttAVM",
+     "ph": "https://www.pttavm.com/…",
+     "hosts": [
+      "pttavm.com"
+     ]
+    },
+    {
+     "k": "idefix",
+     "label": "İdefix",
+     "ph": "https://www.idefix.com/…",
+     "hosts": [
+      "idefix.com"
+     ]
+    },
+    {
+     "k": "amazon_global",
+     "label": "Amazon (yurt dışı)",
+     "ph": "https://www.amazon.com/…",
+     "hosts": [
+      "amazon.com",
+      "amazon.de",
+      "amazon.co.uk",
+      "amazon.fr",
+      "amazon.it",
+      "amazon.es",
+      "amazon.nl",
+      "amazon.pl",
+      "amazon.se",
+      "amazon.ae",
+      "amazon.sa",
+      "amazon.ca",
+      "amazon.com.au",
+      "amazon.co.jp"
+     ]
+    },
+    {
+     "k": "etsy",
+     "label": "Etsy",
+     "ph": "https://www.etsy.com/shop/…",
+     "hosts": [
+      "etsy.com"
+     ]
+    },
+    {
+     "k": "ebay",
+     "label": "eBay",
+     "ph": "https://www.ebay.com/str/…",
+     "hosts": [
+      "ebay.com",
+      "ebay.de",
+      "ebay.co.uk",
+      "ebay.fr",
+      "ebay.it",
+      "ebay.es"
+     ]
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -10077,6 +10364,74 @@
        "field": "gg_services",
        "in": [
         "ads"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "mk_ids",
+   "after": "linkedin_partner",
+   "rows": [
+    {
+     "k": "linkedin_conv",
+     "label": "LinkedIn Ads — dönüşüm kimlikleri",
+     "ph": "Form gönderimi: 12345678; Satın alma: 23456789",
+     "re": "^\\s*(?:[^:;]+:\\s*)?\\d{4,15}\\s*(?:;\\s*(?:[^:;]+:\\s*)?\\d{4,15}\\s*)*;?\\s*$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "linkedin"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "mk_ids",
+   "after": "tiktok_bc",
+   "rows": [
+    {
+     "k": "ms_uet",
+     "label": "Microsoft Ads — UET etiket kimliği",
+     "ph": "12345678",
+     "re": "^\\d{4,15}$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "microsoft"
+       ]
+      }
+     ]
+    },
+    {
+     "k": "x_pixel",
+     "label": "X (Twitter) Pikseli kimliği",
+     "ph": "o1a2b",
+     "re": "^[A-Za-z0-9_-]{3,40}$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "x"
+       ]
+      }
+     ]
+    },
+    {
+     "k": "pinterest_tag",
+     "label": "Pinterest Etiketi kimliği",
+     "ph": "2612345678901",
+     "re": "^[A-Za-z0-9_-]{3,40}$",
+     "when": [
+      {
+       "field": "mk_ads_channels",
+       "in": [
+        "pinterest"
        ]
       }
      ]

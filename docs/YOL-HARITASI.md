@@ -333,7 +333,7 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
 
 ### Faz 4 — Mantık ve veri modeli (§32–§35, §37)
 - [ ] **Aynı karar iki yerde:** `public.responsive` ↔ `design_approach.responsive_strategy`; `stack.language` ↔ `languages.frontend_language` + `backend_language`; `cloudflare.cf_turnstile` ↔ `auth.turnstile_security`; `database.db_backup` + `db_pitr` ↔ `backup_recovery.backup_strategy`; `seo.seo_gate` ↔ `golive.golive_gate`.
-- [ ] `db_engine` değişince `db_provider`/`orm` seçimi sessizce siliniyor (§34) → uyarı + onay.
+- [x] `db_engine` değişince `db_provider`/`orm` seçimi sessizce siliniyordu (§34) → 2026-11-23: yeni motorda geçerli olan seçim korunur, geçersiz kalacaksa önce onay sorulur, aynı seçeneğe tekrar tıklamak silmez (`v26-depends`).
 - [ ] `Other` 21 alanda var; özel değer alanı yalnızca `project_type`'ta (§35).
 - [ ] `number` alan tipi yok (§33). (`showIf` V20'de, `url` V22'de eklendi; `source.repo_url` henüz düz metin.)
 - [ ] Önizleme verisi hâlâ ayrı sözlüklerde (`designExamples`, `approachExamples`, `approachBooleanExamples`, `pptDesignImages`, `pptDesignLabels`, `pptSchematicExamples`) → §37 `examples` modeli.
@@ -384,7 +384,7 @@ Plan: [PAZARLAMA-PLANI.md](PAZARLAMA-PLANI.md) (kullanıcı kararları: A + B ·
 - [ ] WhatsApp grup / topluluk: kampanya içerikli grup ve topluluk mesajlarının 6563 sayılı Kanun kapsamında ticari elektronik ileti onayı gerektirip gerektirmediği hukuk birimiyle doğrulanmalı. Grup ve topluluk üye sınırları (1.024 / topluluk sayıları) kaynaklarda çelişkili, resmî yardım sayfası okunamadı; metinlere sayı yazılmadı.
 - [ ] `mk_b2b_size` açıklamalarındaki KOBİ tutar eşikleri (7297 sayılı karar, orta işletme sınırı 10182 sayılı kararla 1 milyar TL, RG 07.08.2025) değişirse güncellenmeli.
 - [ ] Meta İşletme Yardım Merkezi kaynakları (rehberlerde) yalnız başlıkla doğrulanabildi (sayfa JavaScript ile yükleniyor); tarayıcıda bir kez açıp bakılmalı.
-- [ ] `mk_prefix`, `mk_period_start`, saat ücreti ve bütçe alanlarında yumuşak doğrulama (şu an yalnız dışa aktarım kartında uyarı var).
+- [x] `mk_prefix`, `mk_period_start`, saat ücreti ve bütçe alanlarında yumuşak doğrulama → saat ücreti ve bütçeler para birimi biçimiyle (2026-11-14); önek, dönem başlangıcı, SMS başlığı, telefonlar, WhatsApp ve UTM kampanya adı 2026-11-23'ten beri `v26-textcheck` ile.
 - [ ] İçerik planı şablonunda çelişki: KILAVUZ "İş Gücü'nü kapatmak için `isGucu: false`" diyor, `dogrula.mjs` bunu "nesne olmalı" hatası sayıyor. Şablon projesinde düzeltilirse "Emek takibi: Hayır" sekmeyi kapatarak aktarılabilir.
 - [ ] Şablonun huni alanı yalnız F / D / K; AIDA / TOFU seçiminde eşleme yalnız uyarı olarak veriliyor.
 - [ ] Workland planı (ayrı proje) Google Ads'te günlük bütçeyi iş günü sayısına bölüyor (`ads.butceTakvim`); Google'ın 1 Haziran 2026 bütçe hızı değişikliğiyle aylık hedef ~%38 aşılabilir — o projede gözden geçirilmeli.
