@@ -8,6 +8,7 @@ kilavuz_ekle.py'nin 1. (bölümler), 3. (optionAdd) ve 9. (kodlar) adımlarını
   değeri guideKit.added.options[alan]'a yazılır.
 - --set id1,id2: fieldSet[] içindeki bu alanların yalnız `showIf` değeri DATA'ya yazılır (özgün değer kilavuz_ekle.py'nin
   geri alma kaydında zaten duruyor). Başka betiklerin değiştirdiği anahtarlara dokunmamak için yalnız adı verilen alanlar.
+- --sec id1,id2: var olan bu bölümlerin adı, İngilizce adı, açıklaması ve rehberi kaynaktakiyle eşitlenir.
 - Bölüm kodları sıradan yeniden üretilir (%02d), pazarlama gruplarının ardışık olduğu denetlenir.
 Neden ayrı: kilavuz_ekle.py 2026-11-09'dan beri önceden var olan bir denetimde duruyor (alan_ekle.py ile aynı durum).
 Tekrar çalıştırılabilir; var olana dokunmaz. Yeni bölümün alanları ardından alan_ekle.py ile eklenir."""
@@ -15,6 +16,8 @@ import copy, hashlib, json, sys
 
 hp, sp = sys.argv[1:3]
 SET = set(sys.argv[sys.argv.index('--set') + 1].split(',')) if '--set' in sys.argv else set()
+# --sec id1,id2 (2026-11-25): var olan bu bölümlerin adı, İngilizce adı, açıklaması ve rehberi kaynaktakiyle eşitlenir
+SEC = set(sys.argv[sys.argv.index('--sec') + 1].split(',')) if '--sec' in sys.argv else set()
 h = open(hp, encoding='utf-8').read()
 MARK = 'const DATA='
 if h.count(MARK) != 1:
@@ -27,7 +30,18 @@ secs = D['sections']
 ns = no = nf = 0
 for sec in src.get('sections', []):
     sid = sec['id']
-    if any(x['id'] == sid for x in secs):
+    old = next((x for x in secs if x['id'] == sid), None)
+    if old is not None:
+        if sid in SEC:
+            g = sec.get('guide') or {}
+            for k in ('name', 'en', 'desc'):
+                if old.get(k) != sec[k]:
+                    old[k] = sec[k]
+                    ns += 1
+            ng = {k: g[k] for k in ('purpose', 'criteria', 'pitfalls', 'resources')}
+            if D['sectionGuides'].get(sid) != ng:
+                D['sectionGuides'][sid] = ng
+                ns += 1
         continue
     for k in ('name', 'en', 'desc', 'group', 'icon', 'after'):
         if not str(sec.get(k, '')).strip():
