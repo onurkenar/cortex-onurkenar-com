@@ -560,6 +560,67 @@
      }
     ]
    }
+  },
+  {
+   "id": "mk_amazon",
+   "name": "Amazon: Satış ve Reklam",
+   "en": "Amazon Selling & Ads",
+   "desc": "Amazon'da satış yapılıp yapılmayacağını, satış yapılacak Amazon mağazalarını, satıcı hesabı hazırlığını, gönderim modelini, Amazon Marka Kaydı'nı ve Amazon Ads reklam türlerini belirler",
+   "group": "Reklam",
+   "icon": "◫",
+   "after": "mk_tt",
+   "guide": {
+    "purpose": "Bu bölüm, markanın Amazon'u bir satış kanalı ve reklam kanalı olarak nasıl kullanacağını belirler. Amazon Türkiye'de satış için şirket (şahıs, limited ya da anonim) ve vergi kaydı gerekir; yurt dışı mağazalar ayrı hesap ve vergi yükümlülükleri getirir. Reklamlar ziyaretçiyi kendi siteye değil Amazon'daki ürün ya da marka sayfasına götürür; bu yüzden ürün içeriği, fiyat ve stok Amazon'da da kendi siteyle tutarlı tutulmalıdır.",
+    "criteria": [
+     "Amazon'da hangi mağazalarda satış yapılacak? Amazon Türkiye satıcı hesabı yalnız amazon.com.tr satışları içindir; Avrupa için ayrı Avrupa satıcı hesabı, ABD için ayrı hesap açılır.",
+     "Ürünleri kim gönderecek? Amazon Lojistik (FBA) seçilirse stok Amazon deposunda durur ve depolama ücreti ödenir; Satıcıdan Gönderim seçilirse kargo ve teslim süresi satıcının sorumluluğundadır.",
+     "Marka tescilli mi? Amazon Marka Kaydı için ürün ya da ambalajda kalıcı logo ve tescilli ya da tescil başvurusu yapılmış bir marka gerekir; Sponsorlu Markalar reklamları Marka Kaydı'na bağlıdır.",
+     "Amazon'daki fiyat, kampanya ve ürün metni kendi sitedeki ve diğer pazar yerlerindekiyle tutarlı mı?"
+    ],
+    "pitfalls": [
+     "Ücret ve kampanyaları sabit kabul etmek: aylık üyelik, satış komisyonu ve lojistik ücretleri değişebilir; satıcı sayfasındaki güncel ücret tablosu kayıttan önce yeniden kontrol edilmelidir.",
+     "Avrupa'da Amazon deposunda stok tutup o ülkede KDV kaydı yapmamak: stok tutulan ülkede KDV kaydı gerekir.",
+     "Komisyonu kategori bazında hesaplamadan fiyat belirlemek: komisyon kategoriye göre %6 ile %20 arasında değişir ve KDV'ye tabidir.",
+     "Amazon reklamını site reklamlarıyla aynı ölçmek: Amazon reklamı satışı Amazon içinde ölçer; kendi sitedeki dönüşüm etiketleri bu satışları görmez."
+    ],
+    "resources": [
+     {
+      "title": "Amazon Türkiye'de satış",
+      "url": "https://satis.amazon.com.tr/",
+      "note": "Kayıt şartları, gerekli belgeler, şirket türleri ve sık sorulan sorular."
+     },
+     {
+      "title": "Amazon Türkiye ücretlendirme",
+      "url": "https://satis.amazon.com.tr/ucretlendirme",
+      "note": "Aylık üyelik bedeli, kategori bazında satış komisyonları ve lojistik ücretleri."
+     },
+     {
+      "title": "Amazon Lojistik (FBA)",
+      "url": "https://satis.amazon.com.tr/lojistik/amazon-lojistik",
+      "note": "Amazon deposunda stok, depolama ve hizmet ücretleri; FBA kullanmak zorunlu değildir."
+     },
+     {
+      "title": "Amazon Marka Kaydı",
+      "url": "https://satis.amazon.com.tr/marka-kaydi",
+      "note": "Logo ve ticari marka şartları; tescilli ya da tescil bekleyen marka."
+     },
+     {
+      "title": "Amazon Avrupa'da satış",
+      "url": "https://satis.amazon.com.tr/isinizi-buyutun/amazon-avrupada-satis",
+      "note": "Ayrı Avrupa satıcı hesabı, aylık ücret ve stok tutulan ülkede KDV kaydı."
+     },
+     {
+      "title": "Amazon ABD'de satış",
+      "url": "https://satis.amazon.com.tr/isinizi-buyutun/amazon-global-satis/amazon-amerika-da-satis",
+      "note": "Türkiye'deki şirketle hesap açma, planlar ve ABD doları ile ödeme."
+     },
+     {
+      "title": "Amazon Ads — Sponsorlu Ürünler",
+      "url": "https://advertising.amazon.com/tr-tr/solutions/products/sponsored-products",
+      "note": "Kimlerin kullanabileceği, uygunluk ve tıklama başına ödeme; Türkiye listede."
+     }
+    ]
+   }
   }
  ],
  "fields": [
@@ -3123,6 +3184,7 @@
       "microsoft",
       "x",
       "pinterest",
+      "amazon",
       "programmatic"
      ]
     }
@@ -8999,6 +9061,342 @@
      "ruleDetail": "Sipariş hazırlama ve kargo süresi, iade süreci ve mesaj yanıt süresi belirlenir ve sorumlusu atanır; o pazarın tüketici hukuku ve TikTok Shop kuralları hukuk birimiyle doğrulanır."
     }
    ]
+  },
+  {
+   "id": "mk_amz_sell",
+   "section": "mk_amazon",
+   "label": "Amazon'da Satış",
+   "en": "Selling on Amazon",
+   "type": "select",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "explanation": "Markanın ürünlerini Amazon'da satıcı olarak satıp satmayacağını belirler. Amazon Türkiye'de satış için şahıs, limited ya da anonim şirket ve vergi kaydı gerekir; bireysel kişi olarak kayıt yapılamaz.",
+   "rule": "Amazon'da satış kararı: {label}.",
+   "scenario": "Ürün satan ve Amazon'u ek satış kanalı olarak değerlendiren markalar.",
+   "example": "Bir kozmetik markası amazon.com.tr'de mağaza açar; ürün sayfalarındaki “Amazon'da satın al” düğmesi Pazar Yeri Mağazaları'ndaki adrese gider.",
+   "options": [
+    {
+     "value": "no",
+     "label": "Amazon'da satış yapılmayacak",
+     "explanation": "Ürünler Amazon'da satılmaz.",
+     "scenario": "Hizmet satan ya da yalnız kendi sitesinden satış yapan işletmeler.",
+     "example": "Satış yalnız sitede yapılır.",
+     "ruleDetail": "Amazon'da satıcı hesabı açılmaz; Amazon reklamı verilmez."
+    },
+    {
+     "value": "yes",
+     "label": "Amazon'da satış yapılacak",
+     "explanation": "Amazon satıcı hesabı açılır; mağazalar, gönderim modeli ve Marka Kaydı aşağıdaki kararlarla belirlenir.",
+     "scenario": "Ürün satan ve Amazon'un müşteri trafiğinden yararlanmak isteyen markalar.",
+     "example": "Marka amazon.com.tr'de satıcı hesabı açar ve ürünlerini listeler.",
+     "ruleDetail": "Amazon'da satıcı hesabı şirket adına açılır; hesap sahipliği ve erişimler kurum adına tutulur, kişisel hesap kullanılmaz."
+    },
+    {
+     "value": "later",
+     "label": "İleride değerlendirilecek",
+     "explanation": "Bugün satış yapılmaz; ürün ve operasyon hazır olunca yeniden değerlendirilir.",
+     "scenario": "Satış altyapısı henüz kurulmamış markalar.",
+     "example": "Pazarlama ekibi altı ayda bir Amazon kanalını yeniden değerlendirir.",
+     "ruleDetail": "Amazon'da satış şimdilik yapılmaz; ürün, stok ve operasyon hazır olunca yeniden değerlendirilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_amz_stores",
+   "section": "mk_amazon",
+   "after": "mk_amz_sell",
+   "label": "Satış Yapılacak Amazon Mağazaları",
+   "en": "Amazon Stores to Sell On",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_amz_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Satış yapılacak Amazon mağazalarını belirler. Amazon Türkiye satıcı hesabı yalnız amazon.com.tr satışları içindir; ABD ve Avrupa için ayrı hesap açılır.",
+   "rule": "Satış yapılacak Amazon mağazaları: {labels}. Her mağazanın hesabı, ücretleri, vergi ve iade kuralları ayrı yönetilir.",
+   "scenario": "Amazon'da satış kararı verildiyse, satış ve teslimat yapılabilecek mağazalar seçilir.",
+   "example": "Marka önce amazon.com.tr'de başlar, altı ay sonra Amazon Avrupa'ya açılır.",
+   "options": [
+    {
+     "value": "tr",
+     "label": "Amazon Türkiye (amazon.com.tr)",
+     "explanation": "Türkiye satıcı hesabıyla amazon.com.tr'de satış.",
+     "scenario": "Türkiye'deki müşterilere satış.",
+     "example": "Ürünler amazon.com.tr'de listelenir.",
+     "ruleDetail": "amazon.com.tr satıcı hesabı açılır; satış komisyonu kategoriye göre %6 ile %20 arasındadır ve KDV'ye tabidir, aylık üyelik bedeli ve kampanyalar satıcı sayfasından kontrol edilir."
+    },
+    {
+     "value": "us",
+     "label": "Amazon ABD (amazon.com)",
+     "explanation": "Türkiye'deki şirketle ABD mağazasında satış; ödemeler ABD doları üzerinden yapılır.",
+     "scenario": "ABD'ye ihracat yapabilen markalar.",
+     "example": "Marka Türkiye'deki şirketiyle ABD hesabı açar, ürünleri Amazon Lojistik ile ABD deposuna gönderir.",
+     "ruleDetail": "Amazon ABD hesabı Türkiye'deki şirketle açılır; plan ücretleri (Professional aylık abonelik ya da ürün başı ücret), ABD vergi ve ürün uygunluk kuralları kayıttan önce satıcı sayfasından doğrulanır."
+    },
+    {
+     "value": "eu",
+     "label": "Amazon Avrupa",
+     "explanation": "Ayrı Avrupa satıcı hesabıyla Avrupa mağazalarında satış; tek aylık ücret bütün Avrupa mağazalarını kapsar.",
+     "scenario": "Avrupa'ya satış ve teslimat yapabilen markalar.",
+     "example": "Marka Almanya ve Fransa mağazalarında satış yapar.",
+     "ruleDetail": "Amazon Avrupa için ayrı Avrupa satıcı hesabı açılır (Türkiye hesabı yalnız amazon.com.tr içindir); ürünlerin stoklandığı her ülkede KDV kaydı yapılır, kayıt belgeleri (ticaret sicil gazetesi, imza sirküleri …) satıcı sayfasından kontrol edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_amz_fulfil",
+   "section": "mk_amazon",
+   "after": "mk_amz_stores",
+   "label": "Amazon Gönderim Modeli",
+   "en": "Amazon Fulfilment Model",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_amz_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Amazon siparişlerinin nasıl gönderileceğini belirler. Amazon Lojistik (FBA) kullanmak zorunlu değildir; ürüne göre farklı modeller birlikte kullanılabilir.",
+   "rule": "Amazon gönderim modeli: {labels}.",
+   "scenario": "Amazon'da satış yapılacaksa, stok ve kargo operasyonuna göre seçilir.",
+   "example": "Hızlı satan ürünler Amazon Lojistik ile Amazon deposunda, büyük ve az satan ürünler Satıcıdan Gönderim ile gönderilir.",
+   "options": [
+    {
+     "value": "fba",
+     "label": "Amazon Lojistik (FBA)",
+     "explanation": "Stok Amazon deposunda tutulur; paketleme, gönderim ve iadeleri Amazon yapar. Ürün başına lojistik ücreti ve depolama ücreti ödenir.",
+     "scenario": "Düzenli satan, depoya gönderilebilir ürünler.",
+     "example": "Ürünler Amazon deposuna gönderilir, siparişleri Amazon hazırlar.",
+     "ruleDetail": "Amazon Lojistik kullanılan ürünlerde lojistik, depolama ve uzun süreli depolama ücretleri fiyata katılır; stok seviyesi depolama maliyetine göre planlanır."
+    },
+    {
+     "value": "fbm",
+     "label": "Satıcıdan Gönderim",
+     "explanation": "Siparişi satıcı kendi deposundan hazırlar ve gönderir.",
+     "scenario": "Kendi depo ve kargo altyapısı olan markalar.",
+     "example": "Siparişler markanın deposundan 24 saat içinde kargoya verilir.",
+     "ruleDetail": "Satıcıdan Gönderim'de hazırlama ve teslim süresi Amazon'da söz verilen süreye uyar; kargo takip numarası siparişe girilir."
+    },
+    {
+     "value": "kolay",
+     "label": "Amazon Kolay Gönderi",
+     "explanation": "Satıcı siparişi hazırlar, Amazon'un anlaşmalı kargo firmaları satıcıdan teslim alır.",
+     "scenario": "Kendi kargo anlaşması olmayan satıcılar.",
+     "example": "Siparişler hazırlanır, anlaşmalı kargo firması depodan alır.",
+     "ruleDetail": "Amazon Kolay Gönderi ücretleri ve anlaşmalı kargo firmaları satıcı sayfasındaki güncel tablodan kontrol edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_amz_brand",
+   "section": "mk_amazon",
+   "after": "mk_amz_fulfil",
+   "label": "Amazon Marka Kaydı",
+   "en": "Amazon Brand Registry",
+   "type": "select",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_amz_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Markanın Amazon Marka Kaydı'na başvurup başvurmayacağını belirler. Kayıt için ürün ya da ambalajda kalıcı olarak bulunan, marka adını içeren bir logo ve tescilli ya da tescil başvurusu yapılmış bir ticari marka gerekir; marka sahibi başvurur. Sponsorlu Markalar reklamları Marka Kaydı'na bağlıdır.",
+   "rule": "Amazon Marka Kaydı kararı: {label}.",
+   "scenario": "Kendi markasıyla ürün satan ve markasını Amazon'da korumak, marka reklamları vermek isteyen işletmeler.",
+   "example": "Tescilli markası olan bir tekstil firması Marka Kaydı'na başvurur, ardından Sponsorlu Markalar reklamı açar.",
+   "options": [
+    {
+     "value": "registered",
+     "label": "Başvurulacak — tescilli marka var",
+     "explanation": "Tescilli ticari markayla Marka Kaydı'na başvurulur.",
+     "scenario": "Markası tescilli işletmeler.",
+     "example": "Marka tescil numarasıyla başvuru yapılır.",
+     "ruleDetail": "Amazon Marka Kaydı'na tescilli marka numarasıyla marka sahibi başvurur; logo ürün ya da ambalajda kalıcıdır."
+    },
+    {
+     "value": "pending",
+     "label": "Başvurulacak — tescil başvurusu var",
+     "explanation": "Tescil başvurusu sürerken bazı durumlarda kayıt yapılabilir; uygunluk başvuruda kontrol edilir.",
+     "scenario": "Marka tescil başvurusu yapılmış işletmeler.",
+     "example": "Tescil başvuru numarasıyla Marka Kaydı denenir.",
+     "ruleDetail": "Tescil bekleyen marka ile Marka Kaydı'na başvurulur; kabul edilmezse tescil tamamlanınca yeniden başvurulur."
+    },
+    {
+     "value": "no",
+     "label": "Başvurulmayacak",
+     "explanation": "Marka Kaydı yapılmaz; Sponsorlu Markalar reklamları kullanılamaz.",
+     "scenario": "Başka markaların ürünlerini satan ya da markası tescilli olmayan satıcılar.",
+     "example": "Satıcı yalnız Sponsorlu Ürünler kullanır.",
+     "ruleDetail": "Amazon Marka Kaydı yapılmaz; marka reklamları (Sponsorlu Markalar) kullanılmaz."
+    }
+   ]
+  },
+  {
+   "id": "mk_amz_setup",
+   "section": "mk_amazon",
+   "after": "mk_amz_brand",
+   "label": "Amazon Satıcı Hesabı Hazırlığı",
+   "en": "Amazon Seller Account Preparation",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_amz_sell",
+     "in": [
+      "yes"
+     ]
+    }
+   ],
+   "explanation": "Amazon satıcı hesabını açmadan ve ürünleri listelemeden önce yapılacak hazırlıkları belirler. Belgeler ve ücretler Amazon Türkiye satıcı sayfasına göredir (2026-11-25).",
+   "rule": "Amazon satıcı hesabı hazırlığında yapılacaklar: {labels}.",
+   "scenario": "Amazon'da satış yapılacaksa hesap açmadan önce seçilir.",
+   "example": "Belgeler hazırlanır, kategori komisyonuna göre fiyat hesaplanır, ürün metinleri siteyle eşitlenir.",
+   "options": [
+    {
+     "value": "docs",
+     "label": "Kayıt belgeleri",
+     "explanation": "Kimlik ya da pasaport, vergi levhası veya ticaret sicil gazetesi / oda kayıt belgesi, şirket adına banka hesap ya da kredi kartı ekstresi, telefon ve e-posta hazırlanır.",
+     "scenario": "Her yeni satıcı hesabı.",
+     "example": "Belgeler tek klasörde hazırlanıp hesap açılır.",
+     "ruleDetail": "Kayıt belgeleri (kimlik, vergi levhası ya da ticaret sicil gazetesi / oda kayıt belgesi, şirket adına banka ya da kredi kartı ekstresi) şirket adına hazırlanır; belge listesi kayıttan önce satıcı sayfasından kontrol edilir."
+    },
+    {
+     "value": "fees",
+     "label": "Ücret ve fiyat hesabı",
+     "explanation": "Aylık üyelik bedeli, kategoriye göre satış komisyonu (%6–%20 + KDV) ve gönderim ücretleri fiyata katılır.",
+     "scenario": "Her ürün.",
+     "example": "Her ürünün Amazon satış fiyatı komisyon ve lojistik sonrası marjla hesaplanır.",
+     "ruleDetail": "Amazon satış fiyatı kategori komisyonu, KDV, lojistik ve iade maliyeti hesaba katılarak belirlenir; ücret tablosu kayıttan önce ve yılda bir yeniden kontrol edilir."
+    },
+    {
+     "value": "listing",
+     "label": "Ürün içeriği ve tutarlılık",
+     "explanation": "Ürün adı, açıklama, görseller ve barkod Amazon kurallarına göre hazırlanır; fiyat ve kampanya kendi siteyle tutarlı tutulur.",
+     "scenario": "Her ürün.",
+     "example": "Ürün görselleri beyaz zeminli ana görselle yüklenir, metinler sitedekiyle aynı özellikleri anlatır.",
+     "ruleDetail": "Amazon ürün içeriği Amazon'un kategori ve görsel kurallarına göre hazırlanır; ürün adı, özellikler, fiyat ve kampanya kendi sitedeki ve diğer pazar yerlerindekiyle tutarlı tutulur."
+    },
+    {
+     "value": "service",
+     "label": "Sipariş, iade ve müşteri mesajları",
+     "explanation": "İade süreci, müşteri mesajlarına yanıt süresi ve sorumlular belirlenir.",
+     "scenario": "Her satıcı hesabı.",
+     "example": "Müşteri mesajlarına 24 saat içinde yanıt verilir.",
+     "ruleDetail": "Amazon müşteri mesajları ve iade talepleri için sorumlu ve yanıt süresi belirlenir; Amazon'un satıcı performans ölçütleri düzenli izlenir."
+    },
+    {
+     "value": "tax",
+     "label": "Vergi ve muhasebe",
+     "explanation": "Amazon satışlarının faturalandırması, e-Arşiv / e-Fatura süreci ve yurt dışı mağazalarda KDV yükümlülükleri muhasebe birimiyle planlanır.",
+     "scenario": "Her satıcı hesabı; yurt dışı mağazada zorunlu.",
+     "example": "Amazon satışları muhasebe yazılımına günlük aktarılır.",
+     "ruleDetail": "Amazon satışlarının faturalandırması ve muhasebe kaydı muhasebe birimiyle planlanır; yurt dışında stok tutulan her ülkede KDV kaydı yapılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_amz_ads",
+   "section": "mk_amazon",
+   "after": "mk_amz_setup",
+   "label": "Amazon Ads Reklam Türleri",
+   "en": "Amazon Ads Ad Types",
+   "type": "multiselect",
+   "agents": [
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "amazon"
+     ]
+    }
+   ],
+   "explanation": "Amazon Ads'te kullanılacak reklam türlerini belirler. Sponsorlu Ürünler Türkiye'de kullanılabilir; diğer türlerin hangi mağazada açık olduğu Reklam Konsolu'nda kontrol edilir. Görüntülü reklamlar eski adıyla Sponsorlu Gösterim'dir.",
+   "rule": "Amazon Ads'te kullanılacak reklam türleri: {labels}. Amazon reklamlarının satışları Amazon Reklam Konsolu'nda ölçülür; kendi sitedeki dönüşüm etiketleri bu satışları görmez, raporlarda ayrı tutulur.",
+   "scenario": "Reklam Kanalları'nda Amazon Ads seçildiyse kullanılacak türler seçilir.",
+   "example": "Bir marka önce Sponsorlu Ürünler ile başlar; Marka Kaydı tamamlanınca Sponsorlu Markalar ve Marka Mağazası açar.",
+   "recommend": [
+    {
+     "field": "mk_amz_brand",
+     "map": {
+      "registered": [
+       "sp",
+       "sb",
+       "store"
+      ],
+      "pending": [
+       "sp",
+       "store"
+      ],
+      "no": [
+       "sp"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "sp",
+     "label": "Sponsorlu Ürünler",
+     "explanation": "Tek tek ürünlerin Amazon arama sonuçlarında ve ürün sayfalarında reklamı; tıklama başına ödenir, aylık ücret yoktur.",
+     "scenario": "Amazon'da satılan her ürün için ilk reklam türü.",
+     "example": "“Döküm tencere” aramasında ürün sponsorlu olarak üstte görünür.",
+     "ruleDetail": "Sponsorlu Ürünler kampanyaları yalnız öne çıkan teklife uygun ürünlerle açılır; anahtar kelime ve otomatik hedefleme ayrı kampanyalarda yönetilir, tıklama başına maliyet ve reklam satış oranı haftalık izlenir."
+    },
+    {
+     "value": "sb",
+     "label": "Sponsorlu Markalar",
+     "explanation": "Marka logosu, başlık ve birden çok ürünle arama sonuçlarının üstünde marka reklamı. Amazon Marka Kaydı'na kayıtlı profesyonel satıcılar ve tedarikçiler kullanabilir.",
+     "scenario": "Marka Kaydı olan ve marka bilinirliği isteyen satıcılar.",
+     "example": "Marka logosu ve üç ürün “tencere seti” aramasında üstte görünür.",
+     "ruleDetail": "Sponsorlu Markalar yalnız Amazon Marka Kaydı tamamlandıktan sonra açılır; reklam Marka Mağazası'na ya da ürün listesine yönlendirir."
+    },
+    {
+     "value": "display",
+     "label": "Görüntülü reklamlar (eski Sponsorlu Gösterim)",
+     "explanation": "Amazon içinde ve dışında görüntülü reklamlarla ürün ilgisi olan kitleye ulaşılır.",
+     "scenario": "Ürün sayfasını ziyaret edip almayanlara yeniden ulaşmak isteyen satıcılar.",
+     "example": "Ürünü inceleyip almayan ziyaretçiye görüntülü reklam gösterilir.",
+     "ruleDetail": "Görüntülü reklamların Türkiye mağazasında kullanılabilirliği ve uygunluk şartları Reklam Konsolu'nda kontrol edilir."
+    },
+    {
+     "value": "store",
+     "label": "Marka Mağazası (Brand Store)",
+     "explanation": "Amazon içinde markaya ait çok sayfalı mağaza; ücretsizdir, Marka Kaydı gerektirir.",
+     "scenario": "Marka Kaydı olan satıcılar.",
+     "example": "Marka mağazasında ürün grupları ve marka hikâyesi gösterilir.",
+     "ruleDetail": "Marka Mağazası Marka Kaydı'ndan sonra kurulur; Sponsorlu Markalar reklamları mağazaya yönlendirilir."
+    },
+    {
+     "value": "dsp",
+     "label": "Amazon DSP",
+     "explanation": "Amazon'un programatik reklam satın alma platformu; Amazon'da satış yapmayan işletmeler de kullanabilir.",
+     "scenario": "Büyük bütçeli, Amazon kitle verisiyle görüntülü ve video reklam vermek isteyen markalar.",
+     "example": "Bir marka Amazon DSP ile video reklam kampanyası yürütür.",
+     "ruleDetail": "Amazon DSP'nin Türkiye'de kullanılabilirliği, asgari bütçe ve uygunluk şartları Amazon Ads ile doğrulanır."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -9598,6 +9996,14 @@
      "scenario": "Ev, dekorasyon, moda, yemek, düğün gibi görsel ilhamla karar verilen ürün ve hizmetler için.",
      "example": "Bir mobilya markası 1000×1500 piksellik dikey oturma odası görselleriyle Pinterest'te reklam verir.",
      "ruleDetail": "Pinterest görselleri 2:3 (1000×1500) PNG ya da JPEG hazırlanır; başlık en çok 100 karakterdir ve ilk 40 karakter mesajı taşır; videolar 6–15 saniye önerilir ve üst, alt, sağ, sol bindirme alanlarına metin konmaz."
+    },
+    {
+     "value": "amazon",
+     "label": "Amazon Ads",
+     "explanation": "Amazon mağazasında ürünlerin arama sonuçlarında ve ürün sayfalarında öne çıkarıldığı reklamlardır (Sponsorlu Ürünler, Sponsorlu Markalar, görüntülü reklamlar). Reklam tıklanınca ziyaretçi Amazon'daki ürün ya da marka sayfasına gider. Sponsorlu Ürünler Türkiye'de (amazon.com.tr) kullanılabilir.",
+     "scenario": "Ürünleri Amazon'da (satıcı ya da tedarikçi olarak) satan ve Amazon içindeki aramalarda görünürlüğü artırmak isteyen markalar.",
+     "example": "Bir mutfak gereçleri markası amazon.com.tr'deki ürünleri için Sponsorlu Ürünler kampanyası açar; “döküm tencere” aramasında ürünü üstte görünür.",
+     "ruleDetail": "Amazon Ads yalnız Amazon'da satılan ürünler için kullanılır; Sponsorlu Ürünler'i profesyonel satıcılar, tedarikçiler, kitap tedarikçileri, KDP yazarları ve ajanslar kullanabilir, tıklama başına ödenir. Reklam verilen ürün öne çıkan teklife (Buy Box) uygun olmalıdır; Amazon reklam kuralları ve hangi reklam türünün hangi mağazada açık olduğu Reklam Konsolu'nda kontrol edilir."
     },
     {
      "value": "programmatic",
@@ -10427,6 +10833,7 @@
        "microsoft",
        "x",
        "pinterest",
+       "amazon",
        "programmatic"
       ]
      }
@@ -10447,6 +10854,7 @@
        "microsoft",
        "x",
        "pinterest",
+       "amazon",
        "programmatic"
       ]
      }
@@ -10487,6 +10895,7 @@
        "microsoft",
        "x",
        "pinterest",
+       "amazon",
        "programmatic"
       ]
      }
@@ -10507,6 +10916,7 @@
        "microsoft",
        "x",
        "pinterest",
+       "amazon",
        "programmatic"
       ]
      }

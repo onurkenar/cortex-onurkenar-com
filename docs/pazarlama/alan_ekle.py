@@ -73,8 +73,12 @@ for spec in src.get('fields', []):
         if after not in FI or FI[after]['section'] != f['section']:
             sys.exit('HATA: %s after alanı bu bölümde değil %s' % (fid, after))
         pos = next(k for k, x in enumerate(L) if x['id'] == after) + 1
-    else:
+    elif any(x['section'] == f['section'] for x in L):
         pos = max(k for k, x in enumerate(L) if x['section'] == f['section']) + 1
+    else:  # boş (yeni) bölüm: sol menü sırasında önceki bölümlerin son alanından sonra (2026-11-25)
+        order = [x['id'] for x in D['sections']]
+        before = set(order[:order.index(f['section'])])
+        pos = max([k for k, x in enumerate(L) if x['section'] in before] or [-1]) + 1
     L.insert(pos, f)
     FI[fid] = f
     added.append(fid)
