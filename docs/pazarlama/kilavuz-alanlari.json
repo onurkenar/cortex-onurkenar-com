@@ -7924,6 +7924,168 @@
    ]
   },
   {
+   "id": "mk_fb_listing",
+   "section": "mk_social",
+   "after": "mk_tt_profile_setup",
+   "label": "Facebook'ta Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on Facebook",
+   "type": "multiselect",
+   "explanation": "Markanın ürün ve hizmetlerinin Facebook Sayfası'nda nasıl listeleneceğini belirler. Facebook mağazası (Shops) Instagram mağazasıyla aynı Meta ticaret altyapısını ve aynı desteklenen ülkeler listesini kullanır: tam deneyim ABD'de; Kanada, Brezilya, Meksika, Danimarka, Fransa, Almanya, İtalya, Hollanda, Norveç, İspanya, İsveç, İsviçre, Birleşik Krallık, Avustralya, Hindistan, Japonya, Kore, Singapur, Tayvan ve Tayland'da açık beta; Ukrayna ve Endonezya'da sınırlı. Türkiye bu listede yoktur (2026-11-26) — Türkiye'deki işletme Facebook mağazası açamaz, ürün ve hizmetler Sayfa bilgileri, eylem düğmesi ve gönderilerle tanıtılır. Eylül 2025'ten beri mağazalarda satın alma işletmenin sitesinde tamamlanır. Kaynak: Meta İşletme Yardım Merkezi 2347002662267537, 549256849084694, 1314349509894768, 2343035149322466, 1205792533104321; Facebook Yardım Merkezi 977869848936797, 550954179351183, 1713241952104830 (2026-11-26'da okundu).",
+   "rule": "Facebook'ta ürün ve hizmet listeleme: {labels}. Facebook'ta gösterilen ürün ve hizmet adları, fiyatları ve bağlantıları Ortak Bilgiler › Ürün / Hizmet Listesi ve sitedeki sayfalarla aynı tutulur; bağlantılar sitedeki ilgili sayfaya UTM'li (utm_source=facebook) gider. Sayfa bilgilerini ve eylem düğmesini yalnız Sayfa'ya Facebook erişimi olan yöneticiler değiştirir; yetkiler kişiye özel hesaplarla verilir.",
+   "scenario": "Facebook markanın mecraları arasındaysa ve Sayfa'dan ürün satışı, randevu ya da hizmet talebi bekleniyorsa.",
+   "example": "Bir oto servis Sayfası'nın Hakkında bölümüne hizmetlerini, çalışma saatlerini ve telefonunu yazar; eylem düğmesini randevu sayfasına bağlar, her hafta bir hizmet tanıtım gönderisi paylaşır.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "facebook"
+     ]
+    }
+   ],
+   "recommend": {
+    "field": "modules_extra",
+    "map": {
+     "booking": [
+      "action_button",
+      "page_info"
+     ],
+     "ecommerce": [
+      "page_info"
+     ]
+    }
+   },
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/facebook-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "shop",
+     "label": "Facebook mağazası (Shops) — yalnız desteklenen ülkelerde",
+     "explanation": "Commerce Manager'daki katalogdan Facebook ve Instagram'da ortak bir mağaza açılır; ürünler Akış'ta ve Facebook'un Mağaza sekmesinde görünür, satın alma işletmenin sitesinde tamamlanır. Shops reklamları için mağaza gerekir. Yalnız ticaret hesabı desteklenen ülkelerden birinde olan işletmelere açıktır; Türkiye listede yoktur.",
+     "scenario": "Ticaret hesabı desteklenen bir ülkede (ör. Almanya, Birleşik Krallık) bulunan ve oradan satış yapan işletmeler.",
+     "example": "Birleşik Krallık'ta şirketi olan bir ev tekstili markası Commerce Manager'da mağazasını açar; koleksiyonları hem Facebook Sayfası'nda hem Instagram profilinde görünür.",
+     "ruleDetail": "Facebook mağazası yalnız işletmenin ticaret hesabı Meta'nın desteklediği bir ülkedeyse kurulur; kurulumdan önce güncel desteklenen ülkeler listesi kontrol edilir (2026-11-26'da Türkiye listede yok). Instagram mağazası da açılacaksa ikisi aynı mağaza ve katalogla yönetilir."
+    },
+    {
+     "value": "page_info",
+     "label": "Sayfa bilgileri (Hakkında) ve hizmetler",
+     "explanation": "Sayfanın Hakkında bölümünde kategori, web sitesi, iletişim bilgileri, adres, çalışma saatleri ve sunuluyorsa hizmetler gösterilir; bilgiler Sayfa'ya Facebook erişimi olan yöneticiler tarafından düzenlenir.",
+     "scenario": "Facebook Sayfası olan her işletme; Türkiye'deki işletmelerde ana listeleme yolu.",
+     "example": "Bir hukuk bürosu Sayfası'nın Hakkında bölümüne çalışma alanlarını, adresini, telefonunu ve web sitesini yazar.",
+     "ruleDetail": "Sayfanın Hakkında bölümündeki kategori, web sitesi, telefon, e-posta, adres ve çalışma saatleri Ortak Bilgiler'den aynen alınır; hizmetler alanı varsa Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki hizmetlerle doldurulur. Bilgiler değişince Facebook'ta aynı gün güncellenir."
+    },
+    {
+     "value": "action_button",
+     "label": "Sayfa eylem düğmesi",
+     "explanation": "Sayfa'ya bir eylem düğmesi eklenir (Sayfa › Seçenekler › Eylem düğmesi ekle); düğme türü ekrandaki seçeneklerden seçilir ve yönlendirme ayarlanır.",
+     "scenario": "Ziyaretçiyi randevu, sipariş, iletişim ya da teklif sayfasına yönlendirmek isteyen işletmeler.",
+     "example": "Bir güzellik merkezi eylem düğmesini sitedeki online randevu sayfasına bağlar.",
+     "ruleDetail": "Sayfa eylem düğmesi Ortak Bilgiler › Ana CTA'ya en yakın düğme türüyle eklenir ve Ana CTA'nın sayfasına UTM'li gider; kampanya bitince düğmenin hedefi kontrol edilir."
+    },
+    {
+     "value": "posts",
+     "label": "Ürün ve hizmet tanıtım gönderileri ve albümler",
+     "explanation": "Her ana ürün grubu ya da hizmet için tanıtım gönderileri paylaşılır, görseller ürün / hizmet albümlerinde toplanır.",
+     "scenario": "Facebook mağazası açamayan ya da hizmet satan her işletme.",
+     "example": "Bir mobilya markası “Oturma odası”, “Yatak odası”, “Ofis” albümlerini açar; her gönderide ilgili ürün sayfasının bağlantısı var.",
+     "ruleDetail": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her ana ürün grubu ya da hizmet için tanıtım gönderisi ve albüm hazırlanır; gönderilerde fiyat yazılırsa sitedekiyle aynı olur, kampanya bitince gönderi metni güncellenir."
+    },
+    {
+     "value": "marketplace",
+     "label": "Marketplace ve alım satım grupları",
+     "explanation": "Facebook'ta Marketplace'te, alım satım gruplarında ya da Sayfa üzerinden satış yapılabilir; Marketplace topluluk içinde alım satım içindir ve ilanlar Meta Ticaret İlkeleri'ne uymalıdır.",
+     "scenario": "Yerel olarak tek tek ürün satan işletmeler (ör. ikinci el, outlet, el yapımı ürünler).",
+     "example": "Bir ikinci el mobilya mağazası Marketplace'te tek parça ürünlerini ilan olarak paylaşır.",
+     "ruleDetail": "Marketplace ve alım satım gruplarına yalnız Meta Ticaret İlkeleri'ne uygun ürünler konur; satılan ürünün ilanı aynı gün kaldırılır, ilan fiyatı sitedeki fiyatla aynı tutulur ve alıcıyla yazışmalar Facebook'un güvenli alım satım önerilerine göre yürütülür."
+    },
+    {
+     "value": "none",
+     "label": "Facebook'ta ürün / hizmet listelenmeyecek",
+     "explanation": "Facebook Sayfası yalnız kurumsal duyurular ve içerik için kullanılır; ürün ve hizmet listelenmez.",
+     "scenario": "Facebook'tan satış ya da talep beklenmiyorsa.",
+     "example": "Bir holding Sayfası'nı yalnız kurumsal haberler için kullanır.",
+     "ruleDetail": "Facebook'ta ürün ya da hizmet listelenmez; Sayfa'daki web sitesi bağlantısı yalnız sitenin ana sayfasıdır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_fb_shop_setup",
+   "section": "mk_social",
+   "after": "mk_fb_listing",
+   "label": "Facebook Mağazası Ayarları",
+   "en": "Facebook Shop Settings",
+   "type": "multiselect",
+   "explanation": "Facebook mağazasının kurulum ve kullanım kurallarını belirler. Mağazaya yalnız bir katalog bağlanır ve sonradan değiştirilemez; katalog yalnız fiziksel ürün içerir (otel, uçuş, araç, konut gibi stoklar seçilemez), başka bir mağazaya bağlı olmamalı, en az 1 en çok 10 milyon ürün içermeli; ürün bağlantıları işletmenin kendi alan adındaki ürün sayfasına gitmeli ve Marka Güvenliği › Alan Adları'na eklenen alan adıyla aynı olmalıdır. Mağazayı kuran kişinin kataloğun bulunduğu işletme portföyünde tam yetkisi olmalıdır. Kaynak: Meta İşletme Yardım Merkezi 2347002662267537, 549256849084694, 1314349509894768, 2343035149322466, 1205792533104321; Facebook Yardım Merkezi 977869848936797, 550954179351183, 1713241952104830 (2026-11-26'da okundu).",
+   "rule": "Facebook mağazası ayarları: {labels}. Mağaza Meta'nın ticaret uygunluk şartlarına ve Ticaret İlkeleri'ne göre kurulur; katalog Meta Servisleri › Katalog & Commerce Manager kararlarına göre yönetilir.",
+   "scenario": "Facebook mağazası açılacaksa (işletmenin ticaret hesabı desteklenen bir ülkedeyse).",
+   "example": "Bir oyuncak markası tek kataloğunu mağazaya bağlar, ürün bağlantılarını kendi alan adına çevirir, “Yaş gruplarına göre” koleksiyonlar açar ve Shops reklamlarını başlatır.",
+   "showIf": [
+    {
+     "field": "mk_fb_listing",
+     "in": [
+      "shop"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/facebook-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "catalog",
+     "label": "Tek katalog ve katalog uygunluğu",
+     "explanation": "Mağazaya yalnız bir katalog bağlanır, sonradan değiştirilemez; katalog yalnız fiziksel ürün içerir, başka mağazaya bağlı olmamalı, 1 – 10 milyon ürün içermelidir.",
+     "scenario": "Her mağaza.",
+     "example": "Siteden ürün akışıyla beslenen tek katalog mağazaya bağlanır.",
+     "ruleDetail": "Mağazaya bağlanacak katalog kurulumdan önce seçilir (sonradan değiştirilemez) ve yalnız fiziksel ürünleri içerir; Instagram mağazası da varsa aynı katalog kullanılır."
+    },
+    {
+     "value": "links",
+     "label": "Ürün bağlantıları kendi alan adında",
+     "explanation": "Her ürünün bağlantısı işletmenin kendi alan adındaki o ürünün sayfasına gider, http:// ya da https:// ile başlar ve Marka Güvenliği › Alan Adları'na eklenen alan adıyla aynıdır.",
+     "scenario": "Her mağaza.",
+     "example": "Ürün bağlantıları ornek.com/urun/mavi-gomlek biçiminde.",
+     "ruleDetail": "Katalogdaki her ürün bağlantısı Ortak Bilgiler › Canlı Site Adresi'ndeki alan adında o ürünün sayfasına https ile gider; alan adı Meta İşletme Portföyü › Marka Güvenliği › Alan Adları'na eklenir ve doğrulanır."
+    },
+    {
+     "value": "eligibility",
+     "label": "Ticaret uygunluk şartları kontrolü",
+     "explanation": "Politikalara uyum, alan adı, desteklenen ülke, güvenilirlik, doğru fiyat bilgisi ve görünür iade politikası şartları kontrol edilir; şartlar sonradan karşılanmazsa ticaret özelliklerine erişim kaybedilebilir.",
+     "scenario": "Her mağaza.",
+     "example": "Kurulumdan önce beş şart tek tek işaretlenir.",
+     "ruleDetail": "Facebook mağazası kurulmadan önce Meta'nın beş ticaret uygunluk şartı kontrol edilir ve sonuç kaydedilir; şartlar yılda bir yeniden kontrol edilir."
+    },
+    {
+     "value": "collections",
+     "label": "Koleksiyonlar",
+     "explanation": "Mağazada ürünler koleksiyonlarla gruplanır; Facebook ve Instagram'da ortak mağaza varsa koleksiyonlar iki uygulamada da görünebilir.",
+     "scenario": "Çok ürünlü mağazalar.",
+     "example": "“Yeni gelenler”, “Kampanyalı ürünler”, “Çok satanlar” koleksiyonları.",
+     "ruleDetail": "Mağazada en az bir “Yeni gelenler” ve bir “Çok satanlar” koleksiyonu tutulur; koleksiyonlar ayda bir güncellenir."
+    },
+    {
+     "value": "shops_ads",
+     "label": "Shops reklamları",
+     "explanation": "Shops reklamları için mağaza gerekir; Meta kişiyi dönüşüme en çok yol açacağını düşündüğü yere — sitenize ya da Facebook / Instagram mağazanıza — gönderir.",
+     "scenario": "Mağazası olan ve reklam veren işletmeler.",
+     "example": "Kampanya döneminde Shops reklamlarıyla katalog ürünleri tanıtılır.",
+     "ruleDetail": "Shops reklamları yalnız mağaza yayındayken kullanılır; dönüşüm ölçümü Meta Pikseli ve Conversions API kararlarına göre yapılır."
+    },
+    {
+     "value": "returns",
+     "label": "İade politikası ve doğru fiyat",
+     "explanation": "İade ve değişim politikası sitede ya da Facebook'ta açıkça erişilebilir olmalı; fiyat ve stok bilgisi yanıltıcı olmamalı.",
+     "scenario": "Her mağaza.",
+     "example": "Ürün sayfasında iade koşulları bağlantısı.",
+     "ruleDetail": "İade ve değişim politikası sitenin her ürün sayfasından erişilebilir; kampanya bitince mağazadaki fiyat aynı gün güncellenir."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",
