@@ -9018,6 +9018,200 @@
    ]
   },
   {
+   "id": "oc_freelance",
+   "section": "oc_accounts",
+   "after": "oc_jobboards",
+   "label": "Freelancer Platformu Profilleri",
+   "en": "Freelance Platform Profiles",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Guru | https://…",
+   "otherLabel": "Diğer freelancer platformları",
+   "explanation": "Markanın ya da ekibin hizmet sattığı (ya da serbest çalışan bulduğu) freelancer platformlarındaki profil adreslerini ayrı kutulara girersiniz: Upwork, Fiverr, Freelancer.com, Bionluk, Toptal, Malt, Contra, PeoplePerHour ve portfolyo için Behance, Dribbble. Listede olmayan platformlar “Diğer freelancer platformları” kutusuna “Ad | adres” olarak yazılır. Bazı platformlar müşteriyi platform dışına yönlendirmeyi yasaklar: Upwork'te ilişki başladıktan sonra 24 ay boyunca platform dışı ödeme yapılamaz (dönüşüm ücreti ödenirse serbest), Fiverr'de platform dışı iletişim ve ödeme yönlendirmesi hesabın kapatılmasına yol açabilir (platformların yardım sayfaları, 2026-11-26).",
+   "rule": "Markanın freelancer platformu profilleri: {value}. Sitede ve pazarlama içeriklerinde bu platformlara verilen bağlantılar yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Profillerdeki hizmet adları, kapsamı, fiyat aralığı, teslim süresi ve portfolyo sitedekiyle tutarlı tutulur; portfolyoda müşteri işi yalnız Referanslar'daki izin kaydıyla gösterilir. Platform profilinde, mesajlarında ve teslim dosyalarında platformun kurallarına aykırı biçimde müşteri platform dışı iletişime ya da ödemeye yönlendirilmez (Upwork ve Fiverr bunu yasaklar; kurallar her platformun güncel kullanım koşullarından kontrol edilir). Listede olmayan platform hesabı marka adına anılmaz.",
+   "scenario": "Ajans, stüdyo ya da serbest çalışan ekip Upwork, Fiverr, Bionluk gibi platformlarda hizmet satıyor ya da Behance / Dribbble'da portfolyo yayınlıyorsa doldurulur; sitedeki “Bizi platformlarda da bulabilirsiniz” bağlantıları ve teklif dosyalarındaki profil bağlantıları buradan alınır.",
+   "example": "Bir tasarım stüdyosu Behance portfolyosunu ve Upwork ajans profilini yazar; sitenin portfolyo sayfasındaki “Tüm çalışmalarımız Behance'te” düğmesi ve teklif dosyasındaki “Upwork değerlendirmelerimiz” bağlantısı bu adreslere gider.",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "accounts": [
+    {
+     "k": "upwork",
+     "label": "Upwork",
+     "ph": "https://www.upwork.com/freelancers/…",
+     "hosts": [
+      "upwork.com"
+     ]
+    },
+    {
+     "k": "fiverr",
+     "label": "Fiverr",
+     "ph": "https://www.fiverr.com/…",
+     "hosts": [
+      "fiverr.com"
+     ]
+    },
+    {
+     "k": "freelancer",
+     "label": "Freelancer.com",
+     "ph": "https://www.freelancer.com/u/…",
+     "hosts": [
+      "freelancer.com"
+     ]
+    },
+    {
+     "k": "bionluk",
+     "label": "Bionluk",
+     "ph": "https://bionluk.com/…",
+     "hosts": [
+      "bionluk.com"
+     ]
+    },
+    {
+     "k": "toptal",
+     "label": "Toptal",
+     "ph": "https://www.toptal.com/…",
+     "hosts": [
+      "toptal.com"
+     ]
+    },
+    {
+     "k": "malt",
+     "label": "Malt",
+     "ph": "https://www.malt.com/profile/…",
+     "hosts": [
+      "malt.com",
+      "malt.fr",
+      "malt.de",
+      "malt.es",
+      "malt.nl",
+      "malt.be",
+      "malt.ch",
+      "malt.uk"
+     ]
+    },
+    {
+     "k": "contra",
+     "label": "Contra",
+     "ph": "https://contra.com/…",
+     "hosts": [
+      "contra.com"
+     ]
+    },
+    {
+     "k": "peopleperhour",
+     "label": "PeoplePerHour",
+     "ph": "https://www.peopleperhour.com/freelancer/…",
+     "hosts": [
+      "peopleperhour.com"
+     ]
+    },
+    {
+     "k": "behance",
+     "label": "Behance (portfolyo)",
+     "ph": "https://www.behance.net/…",
+     "hosts": [
+      "behance.net"
+     ]
+    },
+    {
+     "k": "dribbble",
+     "label": "Dribbble (portfolyo)",
+     "ph": "https://dribbble.com/…",
+     "hosts": [
+      "dribbble.com"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oc_eduplatforms",
+   "section": "oc_accounts",
+   "after": "oc_freelance",
+   "label": "Online Eğitim Platformu Hesapları",
+   "en": "Online Course Platform Accounts",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Eğitim platformu | https://…",
+   "otherLabel": "Diğer online eğitim platformları",
+   "explanation": "Kurumun ya da eğitmenlerinin ücretli / ücretsiz online kurs sattığı platformlardaki eğitmen profili, kurs ya da okul adreslerini ayrı kutulara girersiniz. Pazar yerleri (Udemy, Skillshare, Domestika) kursu kendi kataloğunda satar; okul kurma araçlarında (Teachable, Thinkific, Kajabi, Podia) kurs sizin okul adresinizde ya da kendi alan adınızda durur — bu kutulara alan adı uyarısı uygulanmaz. Coursera ve LinkedIn Learning yalnız başvurusu kabul edilen kurum ve eğitmenlerle çalışır. Listede olmayan platformlar “Diğer online eğitim platformları” kutusuna “Ad | adres” olarak yazılır. Kurslar yalnız sitenin kendi eğitim modülünde satılıyorsa alan boş bırakılır.",
+   "rule": "Kurumun online eğitim platformu hesapları: {value}. Sitedeki eğitim, kurs ve eğitmen sayfalarındaki “Kursa git / Satın al” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Aynı kursun platformdaki ve sitedeki tanıtımında kurs adı, eğitmen, süre, ders sayısı, seviye ve içerik başlıkları tutarlı tutulur; platform fiyatları kampanyalarla değiştiği için sitede platform fiyatı sabit yazılmaz, “güncel fiyat platformdadır” denir. Platformun verdiği tamamlama belgesi resmî onaylı ya da akredite sertifika gibi sunulmaz; “onaylı / akredite / MEB onaylı” ifadesi yalnız Sertifikalar ve Belgeler'de kaydı olan belge için kullanılır. Kurs aynı zamanda sitede satılıyorsa ön bilgilendirme, mesafeli satış sözleşmesi ve dijital içerikte cayma hakkı istisnasının koşulları platformdan bağımsız olarak sitede gösterilir (hukuk biriminin teyidiyle). Listede olmayan platform hesabı kurum adına anılmaz.",
+   "scenario": "Kurum ya da eğitmenleri kurslarını Udemy, Skillshare, Domestika gibi pazar yerlerinde ya da Teachable, Thinkific, Kajabi gibi okul kurma araçlarında satıyorsa; sitenin eğitim sayfalarından ve kampanya içeriklerinden doğru kursa bağlantı verilmesi için doldurulur.",
+   "example": "Bir yazılım eğitim şirketi Udemy eğitmen profilini ve Teachable okul adresini (akademi.ornek.com) yazar; sitenin “Eğitimler” sayfasındaki giriş seviyesi kurslar Udemy'ye, sertifika programı Teachable okuluna gider.",
+   "agents": [
+    "poz:musteri-deneyimi:11.07/musteri-egitimleri/egitim-icerik-gelistirme-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "accounts": [
+    {
+     "k": "udemy",
+     "label": "Udemy (eğitmen profili)",
+     "ph": "https://www.udemy.com/user/…",
+     "hosts": [
+      "udemy.com"
+     ]
+    },
+    {
+     "k": "skillshare",
+     "label": "Skillshare (eğitmen profili)",
+     "ph": "https://www.skillshare.com/…",
+     "hosts": [
+      "skillshare.com"
+     ]
+    },
+    {
+     "k": "domestika",
+     "label": "Domestika (eğitmen / kurs sayfası)",
+     "ph": "https://www.domestika.org/tr/…",
+     "hosts": [
+      "domestika.org"
+     ]
+    },
+    {
+     "k": "coursera",
+     "label": "Coursera (kurum ortağı sayfası)",
+     "ph": "https://www.coursera.org/…",
+     "hosts": [
+      "coursera.org"
+     ]
+    },
+    {
+     "k": "linkedinlearning",
+     "label": "LinkedIn Learning (eğitmen sayfası)",
+     "ph": "https://www.linkedin.com/learning/instructors/…",
+     "hosts": [
+      "linkedin.com"
+     ]
+    },
+    {
+     "k": "teachable",
+     "label": "Teachable (okul adresi)",
+     "ph": "https://okul-adi.teachable.com ya da kendi alan adınız"
+    },
+    {
+     "k": "thinkific",
+     "label": "Thinkific (okul adresi)",
+     "ph": "https://okul-adi.thinkific.com ya da kendi alan adınız"
+    },
+    {
+     "k": "kajabi",
+     "label": "Kajabi (site adresi)",
+     "ph": "https://site-adi.mykajabi.com ya da kendi alan adınız"
+    },
+    {
+     "k": "podia",
+     "label": "Podia (mağaza adresi)",
+     "ph": "https://magaza-adi.podia.com ya da kendi alan adınız"
+    },
+    {
+     "k": "gumroad",
+     "label": "Gumroad (satıcı sayfası)",
+     "ph": "https://satici-adi.gumroad.com",
+     "hosts": [
+      "gumroad.com"
+     ]
+    }
+   ]
+  },
+  {
    "id": "mk_tt_shop",
    "section": "mk_tt",
    "after": "mk_tt_budget",
@@ -10271,6 +10465,14 @@
      "scenario": "Yeni gelen ya da hızlı satılması gereken ilanlar.",
      "example": "Yeni gelen beş araç için bir haftalık öne çıkarma alınır.",
      "ruleDetail": "Öne çıkarma yalnız seçilmiş ilanlara ve belirli süreyle uygulanır; öne çıkarılan ilanın mesaj ve arama sayısı öncesiyle karşılaştırılır, ilan satıldığında ya da kaldırıldığında kalan sürenin iade koşulu panelden kontrol edilir."
+    },
+    {
+     "value": "letgo_vitamin",
+     "label": "letgo Vitaminleri (ilan görünürlüğü)",
+     "explanation": "letgo'da ilanın görünürlüğünü artırmak için uygulama içinden satın alınan ücretli “Vitaminler”dir (letgo'nun App Store açıklaması, 2026-11-26). Paketler, süreler ve fiyatlar uygulamada görülür; letgo'nun web sayfaları okunamadığı için kurumsal satıcı hesabı ya da kurumsal paket olup olmadığı doğrulanamadı — letgo ağırlıkla bireysel ikinci el alım-satımı içindir.",
+     "scenario": "letgo'da ilan veren ve ilanının daha çok kişiye görünmesini isteyen satıcılar.",
+     "example": "Hızlı satılması gereken bir ilan için uygulamadan Vitamin satın alınır ve ilanın görüntülenme sayısı öncesiyle karşılaştırılır.",
+     "ruleDetail": "letgo Vitaminleri yalnız seçilmiş ilanlarda kullanılır; paket, süre ve fiyat uygulamada satın almadan önce kontrol edilir, ilan kurum adına değil yetkili kişinin hesabından veriliyorsa hesap sahipliği ve ödeme kayıt altına alınır, Vitamin sonrası görüntülenme ve mesaj sayısı öncesiyle karşılaştırılır."
     },
     {
      "value": "portal_ads",
