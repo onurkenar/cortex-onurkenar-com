@@ -7620,6 +7620,176 @@
    ]
   },
   {
+   "id": "mk_ig_listing",
+   "section": "mk_social",
+   "after": "mk_yt_shop_setup",
+   "label": "Instagram'da Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on Instagram",
+   "type": "multiselect",
+   "explanation": "Markanın ürün ve hizmetlerinin Instagram profilinde nasıl listeleneceğini belirler. Instagram mağazası ve ürün etiketleri yalnız ticaret hesabı Meta'nın desteklediği ülkelerden birinde bulunan işletmelere açıktır: tam deneyim ABD'de; Kanada, Brezilya, Meksika, Danimarka, Fransa, Almanya, İtalya, Hollanda, Norveç, İspanya, İsveç, İsviçre, Birleşik Krallık, Avustralya, Hindistan, Japonya, Kore, Singapur, Tayvan ve Tayland'da açık beta; Ukrayna ve Endonezya'da sınırlı. Türkiye bu listede yoktur (2026-11-26) — Türkiye'deki işletme ürün etiketleyemez, ürün ve hizmetler profil bağlantıları, eylem düğmesi ve içerikle tanıtılır. Eylül 2025'ten beri Instagram ve Facebook mağazalarında satın alma işletmenin sitesinde tamamlanır. Kaynak: Meta İşletme Yardım Merkezi 2347002662267537, 549256849084694, 582645198813984, 1314349509894768, 373467539912975, 2311892912413510; Instagram Yardım Merkezi 122793804938499, 313280685976255, 362497417173378, 3554684091308814 (2026-11-26'da okundu).",
+   "rule": "Instagram'da ürün ve hizmet listeleme: {labels}. Instagram'da gösterilen ürün ve hizmet adları, fiyatları ve bağlantıları Ortak Bilgiler › Ürün / Hizmet Listesi ve sitedeki sayfalarla aynı tutulur; bağlantılar sitedeki ilgili sayfaya UTM'li (utm_source=instagram) gider. Ürün ya da hizmet tanıtan iş birliği gönderilerinde Instagram'ın ücretli ortaklık etiketi kullanılır ve reklam olduğu açıkça belirtilir (Türkiye'deki sosyal medya etkileyicisi reklam kuralları hukuk biriminin teyidiyle uygulanır).",
+   "scenario": "Instagram markanın mecraları arasındaysa ve profilden ürün satışı, randevu ya da hizmet talebi bekleniyorsa.",
+   "example": "Bir güzellik salonu profiline Booksy ile “Hemen rezervasyon yap” düğmesi ekler; profil bağlantılarında hizmet ve fiyat sayfalarını, öne çıkan hikâyelerde her hizmetin önce / sonra görsellerini gösterir.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "instagram"
+     ]
+    }
+   ],
+   "recommend": {
+    "field": "modules_extra",
+    "map": {
+     "booking": [
+      "action_button",
+      "links"
+     ],
+     "ecommerce": [
+      "links"
+     ]
+    }
+   },
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/instagram-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "shop_tags",
+     "label": "Instagram mağazası ve ürün etiketleri (yalnız desteklenen ülkelerde)",
+     "explanation": "Commerce Manager'daki katalogdan Instagram mağazası açılır; gönderilere, Reels'e ve hikâyelere ürün etiketi eklenir, satın alma işletmenin sitesinde tamamlanır. Yalnız ticaret hesabı desteklenen ülkelerden birinde olan işletmelere açıktır; Türkiye listede yoktur.",
+     "scenario": "Ticaret hesabı desteklenen bir ülkede (ör. Almanya, Birleşik Krallık) bulunan ve oradan satış yapan işletmeler.",
+     "example": "Almanya'da şirketi olan bir giyim markası Instagram mağazasını açar, gönderilerinde ürünleri etiketler; ürüne dokunan kullanıcı ürün sayfasından markanın sitesine gider.",
+     "ruleDetail": "Instagram mağazası ve ürün etiketleri yalnız işletmenin ticaret hesabı Meta'nın desteklediği bir ülkedeyse kurulur; kurulumdan önce Meta'nın güncel desteklenen ülkeler listesi kontrol edilir (2026-11-26'da Türkiye listede yok). Desteklenmeyen ülkede ürünler profil bağlantıları ve içerikle tanıtılır."
+    },
+    {
+     "value": "links",
+     "label": "Profil bağlantıları (en çok 5 web sitesi)",
+     "explanation": "Instagram profiline en çok 5 web sitesi bağlantısı eklenir ve sırası değiştirilebilir; bağlantıları Instagram dışındaki herkes de görebilir.",
+     "scenario": "Her işletme; ürün etiketi kullanamayan Türkiye'deki işletmelerde ana listeleme yolu.",
+     "example": "Bir kafe profilinde sırasıyla menü, online sipariş, rezervasyon, etkinlikler ve iletişim sayfası bağlantıları.",
+     "ruleDetail": "Profil bağlantılarında (en çok 5) ilk sıraya Ortak Bilgiler › Ana CTA'nın sayfası konur, ardından en çok satan ürün ve hizmet sayfaları gelir; hikâyelerde bağlantı çıkartması aynı sayfalara gider. Bağlantılar kampanyaya göre güncellenir, kırık bağlantı ayda bir kontrol edilir."
+    },
+    {
+     "value": "action_button",
+     "label": "Eylem düğmesi — Hemen rezervasyon yap, Rezervasyon, Yemek sipariş et",
+     "explanation": "İşletme profiline bir iş ortağı üzerinden eylem düğmesi eklenir; aynı anda yalnız bir düğme gösterilir ve iş ortağında hesap olması gerekir. Randevu için iş ortakları arasında Acuity Scheduling, Appointments by Square, Booksy, Fresha, Setmore, Treatwell ve Vagaro; restoran rezervasyonu için OpenTable, TheFork, Quandoo, SevenRooms ve Yelp vardır. İş ortakları her ülkede olmayabilir.",
+     "scenario": "Randevu ya da rezervasyonla çalışan hizmet işletmeleri: kuaför, güzellik salonu, klinik, restoran, danışmanlık.",
+     "example": "Bir diş kliniği randevu sistemindeki hesabını bağlayıp profiline “Hemen rezervasyon yap” düğmesini ekler.",
+     "ruleDetail": "Profile tek bir eylem düğmesi eklenir; düğme sitedeki randevu / rezervasyon sistemiyle aynı iş ortağına bağlanır, iş ortağı Türkiye'de yoksa düğme yerine ilk profil bağlantısı randevu sayfasına verilir."
+    },
+    {
+     "value": "highlights",
+     "label": "Öne çıkan hikâyelerle ürün ve hizmet vitrini",
+     "explanation": "Her ana ürün grubu ya da hizmet için bir öne çıkan hikâye albümü açılır; fiyat, süreç, örnek işler ve sık sorulan sorular burada tutulur.",
+     "scenario": "Ürün etiketi kullanamayan ya da hizmet satan her işletme.",
+     "example": "Bir mimarlık ofisi “Konut”, “Ofis”, “Süreç”, “SSS” öne çıkan albümlerini açar; her albümün son karesinde ilgili hizmet sayfasına bağlantı çıkartması var.",
+     "ruleDetail": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her ana ürün grubu ya da hizmet için bir öne çıkan hikâye albümü açılır; albüm kapakları marka görünümüne uyar, içerik üç ayda bir güncellenir ve fiyat bilgisi sitedekiyle aynı tutulur."
+    },
+    {
+     "value": "none",
+     "label": "Instagram'da ürün / hizmet listelenmeyecek",
+     "explanation": "Instagram yalnız marka bilinirliği ve içerik için kullanılır; profilde yalnız sitenin ana sayfası bağlantısı durur.",
+     "scenario": "Instagram'dan satış ya da talep beklenmiyorsa.",
+     "example": "Bir sanayi firması Instagram'ı yalnız fuar ve ekip paylaşımları için kullanır.",
+     "ruleDetail": "Instagram'da ürün ya da hizmet listelenmez; profil bağlantısı yalnız sitenin ana sayfasıdır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_ig_shop_setup",
+   "section": "mk_social",
+   "after": "mk_ig_listing",
+   "label": "Instagram Mağazası ve Ürün Etiketi Ayarları",
+   "en": "Instagram Shop and Product Tag Settings",
+   "type": "multiselect",
+   "explanation": "Instagram mağazası ve ürün etiketlerinin kurulum ve kullanım kurallarını belirler. Meta'nın ticaret uygunluk şartları: politikalara uymak; ürünlerin doğrudan sitenizden satın alınabilmesi ve satışın yapıldığı tek, kısaltılmamış alan adının bildirilmesi (alan adı doğrulaması istenebilir); desteklenen bir ülkede bulunmak; yerleşik ve gerçek bir varlıkla güvenilirlik göstermek; fiyat ve stok bilgisinin yanıltıcı olmaması, iade ve değişim politikasının açıkça erişilebilir olması. Fotoğraf gönderisine en çok 20 ürün etiketlenir, karuselde (en çok 10 fotoğraf / video) toplam 20 etiket kullanılır; hikâyeye bir ürün çıkartması (en çok 5 ürün) eklenir; biyografide en çok 5 ürün anılır. Ürünler Meta'nın Ticaret İlkeleri'ne göre incelenir. Kaynak: Meta İşletme Yardım Merkezi 2347002662267537, 549256849084694, 582645198813984, 1314349509894768, 373467539912975, 2311892912413510; Instagram Yardım Merkezi 122793804938499, 313280685976255, 362497417173378, 3554684091308814 (2026-11-26'da okundu).",
+   "rule": "Instagram mağazası ve ürün etiketi ayarları: {labels}. Etiketlenen ürün gönderide gerçekten gösterilen üründür; ürünler Meta Ticaret İlkeleri'ne göre incelenir, reddedilen ürünün sebebi kaydedilip düzeltilir. Katalog Meta Servisleri › Katalog & Commerce Manager kararlarına göre kurulur.",
+   "scenario": "Instagram mağazası ve ürün etiketleri kullanılacaksa (işletmenin ticaret hesabı desteklenen bir ülkedeyse).",
+   "example": "Bir aksesuar markası alan adını doğrular, iade politikasını sitenin alt bilgisine koyar; karusel gönderilerinde ürünleri etiketler, hikâyelerde ürün çıkartması kullanır, biyografisinde en çok satan 3 ürünü anar.",
+   "showIf": [
+    {
+     "field": "mk_ig_listing",
+     "in": [
+      "shop_tags"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/instagram-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "eligibility",
+     "label": "Ticaret uygunluk şartları kontrolü",
+     "explanation": "Politikalara uyum, alan adı, desteklenen ülke, güvenilirlik, doğru bilgi ve iade politikası şartları kurulumdan önce kontrol edilir; şartlar sonradan karşılanmazsa ticaret özelliklerine erişim kaybedilebilir.",
+     "scenario": "Instagram mağazası kuracak her işletme.",
+     "example": "Kurulumdan önce beş şart tek tek işaretlenir.",
+     "ruleDetail": "Instagram mağazası kurulmadan önce Meta'nın beş ticaret uygunluk şartı kontrol edilir ve sonuç kaydedilir; şartlar her yıl yeniden kontrol edilir."
+    },
+    {
+     "value": "domain",
+     "label": "Tek alan adı ve alan adı doğrulaması",
+     "explanation": "Satışın yapıldığı tek, kısaltılmamış alan adı Meta'ya bildirilir; alan adı doğrulaması istenebilir.",
+     "scenario": "Her mağaza.",
+     "example": "magaza.ornek.com alan adı Meta İşletme Portföyü'nde doğrulanır.",
+     "ruleDetail": "Mağazada yalnız Ortak Bilgiler › Canlı Site Adresi'ndeki tek alan adı kullanılır, kısaltılmış adres kullanılmaz; alan adı Meta İşletme Portföyü'nde doğrulanır."
+    },
+    {
+     "value": "catalog",
+     "label": "Katalog ve mağaza Commerce Manager'da",
+     "explanation": "Ürünler Commerce Manager'daki katalogdan gelir; mağaza, koleksiyonlar ve ürün sayfaları buradan yönetilir.",
+     "scenario": "Her mağaza.",
+     "example": "Katalog siteden ürün akışıyla günlük güncellenir.",
+     "ruleDetail": "Mağaza ürünleri Commerce Manager'daki katalogdan gelir; katalog fiyat ve stok bilgisi sitedekiyle aynı tutulur (Meta Servisleri › Katalog Kalite ve Kullanım Ayarları)."
+    },
+    {
+     "value": "post_tags",
+     "label": "Gönderi ve Reels'te ürün etiketi",
+     "explanation": "Fotoğraf gönderisine en çok 20 ürün; karusel gönderide tüm fotoğraf ve videolarda toplam 20 etiket. Reels'e de ürün eklenebilir.",
+     "scenario": "Ürünün gösterildiği gönderiler.",
+     "example": "Kombin karuselinde 6 ürün etiketlenir.",
+     "ruleDetail": "Gönderi ve Reels'te yalnız içerikte gösterilen ürünler etiketlenir (fotoğrafta en çok 20, karuselde toplam 20)."
+    },
+    {
+     "value": "story_sticker",
+     "label": "Hikâyelerde ürün çıkartması",
+     "explanation": "Bir hikâyeye bir ürün çıkartması eklenir, çıkartmada en çok 5 ürün etiketlenir; anket gibi diğer çıkartmalarla birlikte kullanılabilir.",
+     "scenario": "Yeni ürün, kampanya ve tanıtım hikâyeleri.",
+     "example": "Yeni sezon hikâyesinde 3 ürünlü çıkartma ve anket.",
+     "ruleDetail": "Hikâyelerde ürün çıkartması (en çok 5 ürün) kullanılır; kampanya hikâyelerinde çıkartma kampanyadaki ürünleri gösterir."
+    },
+    {
+     "value": "bio_products",
+     "label": "Biyografide ürün anma",
+     "explanation": "Instagram mağazası olan işletmeler biyografide en çok 5 ürün anabilir.",
+     "scenario": "Öne çıkarılacak birkaç ana ürünü olan markalar.",
+     "example": "Biyografide en çok satan 3 ürün anılır.",
+     "ruleDetail": "Biyografide en çok 5 ürün anılır; ürünler en çok satanlara göre üç ayda bir güncellenir."
+    },
+    {
+     "value": "partner_tags",
+     "label": "İş ortaklarına ürün etiketleme izni",
+     "explanation": "İşletme, markalı içerik iş ortağı olarak onayladığı hesapların ürünlerini etiketlemesine izin verebilir.",
+     "scenario": "İçerik üreticisiyle çalışan markalar.",
+     "example": "Anlaşmalı içerik üreticisine ürün etiketleme izni verilir.",
+     "ruleDetail": "Ürün etiketleme izni yalnız sözleşmeli iş ortaklarına verilir; iş birliği bitince izin aynı gün kaldırılır ve iş birliği gönderilerinde ücretli ortaklık etiketi kullanılır."
+    },
+    {
+     "value": "returns",
+     "label": "İade politikası ve doğru fiyat",
+     "explanation": "İade ve değişim politikası sitede ya da Instagram'da açıkça erişilebilir olmalı; fiyat ve stok bilgisi yanıltıcı olmamalı.",
+     "scenario": "Her mağaza.",
+     "example": "Ürün sayfasında iade koşulları bağlantısı.",
+     "ruleDetail": "İade ve değişim politikası sitenin her ürün sayfasından erişilebilir; kampanya bitince Instagram'daki fiyat aynı gün güncellenir."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",
