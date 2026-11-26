@@ -2861,6 +2861,15 @@
      "hesabim"
     ],
     "why": "İlan veren üyelerin ilanlarını yönetmesi için."
+   },
+   {
+    "module": "marketplace",
+    "panel": [
+     "seller_portal",
+     "subdomain",
+     "seller"
+    ],
+    "why": "Ek Modüller’de pazar yeri seçildi; satıcılar ürün, sipariş ve hak edişlerini bu panelden yönetir."
    }
   ],
   "reserved": {

@@ -7455,6 +7455,156 @@
    ]
   },
   {
+   "id": "mk_yt_listing",
+   "section": "mk_social",
+   "after": "mk_li_service_setup",
+   "label": "YouTube'da Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on YouTube",
+   "type": "multiselect",
+   "explanation": "Markanın ürün ve hizmetlerinin YouTube kanalında nasıl listeleneceğini belirler. Fiziksel ürünler YouTube Alışveriş ile kanalın Mağaza sekmesinde, video açıklamasında, videonun altındaki ürün rafında ve canlı yayında gösterilebilir; bunun için kanalın YouTube İş Ortağı Programı'nda (YPP) olması gerekir (500 abone, son 90 günde 3 herkese açık yükleme ve son 12 ayda 3.000 izlenme saati ya da son 90 günde 3 milyon Shorts izlenmesi), kanal çocuklara yönelik olmamalı ve nefret söylemi ihtarı almamış olmalıdır. Türkiye, YouTube Alışveriş'te ürün görüp satın alabilen izleyici ülkeleri ve YPP ülkeleri arasındadır; başka markaların ürünlerini komisyonla etiketleme (YouTube Shopping bağlı ortaklık programı) ise Türkiye'deki içerik üreticilerine açık değildir. YouTube'da hizmetler için ayrı bir listeleme özelliği yoktur; hizmetler kanal bağlantıları, video açıklaması ve hizmet videolarıyla tanıtılır. Kaynak: YouTube Yardım Merkezi 12257682, 12258186, 10191533, 12258288, 12299016, 9162845, 13429240, 13376398, 154235, 2657964 (2026-11-26'da okundu).",
+   "rule": "YouTube'da ürün ve hizmet listeleme: {labels}. YouTube'da gösterilen ürün ve hizmet adları, fiyatları ve bağlantıları Ortak Bilgiler › Ürün / Hizmet Listesi ve sitedeki sayfalarla aynı tutulur; bağlantılar sitedeki ilgili sayfaya UTM'li (utm_source=youtube) gider. Bağlantılar YouTube'un harici bağlantı politikasına uyar; kısaltılmış ya da yönlendirmeli bağlantı yalnız Kısa Bağlantı kararındaki markalı alan adıyla kullanılır.",
+   "scenario": "YouTube markanın mecraları arasındaysa ve kanaldan ürün satışı ya da hizmet talebi bekleniyorsa.",
+   "example": "Bir mutfak gereçleri markası Shopify mağazasını YouTube'a bağlayıp tarif videolarında kullanılan tencereleri etiketler; kurulum hizmetini ise kanal bağlantısı ve video açıklamasındaki hizmet sayfası bağlantısıyla tanıtır.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "youtube"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/youtube-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "shopping",
+     "label": "YouTube Alışveriş — kendi mağazanın ürünleri",
+     "explanation": "Markanın kendi mağazası YouTube Studio'dan bağlanır; onaylanan ürünler kanalın Mağaza sekmesinde, video açıklamasında, ürün rafında ve canlı yayında gösterilir, videolara ve Shorts'a etiketlenir. Kanalın YPP'de olması, çocuklara yönelik olmaması ve nefret söylemi ihtarı almamış olması gerekir.",
+     "scenario": "Fiziksel ürün satan, YPP şartlarını karşılayan ya da karşılamayı hedefleyen kanallar.",
+     "example": "Bir kozmetik markası mağazasını bağlar; ürün inceleme videosunda üç ürünü etiketler, izleyici ürün rafından mağazaya geçer.",
+     "ruleDetail": "Ürünler YouTube Alışveriş ile listelenir; kanal YPP şartlarını karşılamıyorsa önce bu şartlar hedeflenir, o zamana kadar ürünler video açıklaması ve kanal bağlantılarıyla tanıtılır."
+    },
+    {
+     "value": "links",
+     "label": "Kanal bağlantıları ve açıklama bağlantıları",
+     "explanation": "Kanalın Ana Sayfa sekmesinde en çok 14 bağlantı gösterilir; ilk bağlantı abone ol düğmesinin yanındaki profil alanında öne çıkar. Video açıklamalarına ürün ve hizmet sayfalarının bağlantısı eklenir.",
+     "scenario": "YPP şartı aranmadan her kanal; özellikle hizmet satan işletmeler.",
+     "example": "Bir hukuk bürosunun kanalında ilk bağlantı “Ücretsiz ön görüşme”, diğerleri hizmet sayfaları; her videonun açıklamasında konuyla ilgili hizmet sayfası bağlantısı.",
+     "ruleDetail": "Kanal bağlantılarında (en çok 14) ilk sıraya Ortak Bilgiler › Ana CTA'nın sayfası konur, ardından en çok satan ürün ve hizmet sayfaları gelir. Her videonun açıklamasında videoyla ilgili ürün ya da hizmet sayfasının UTM'li bağlantısı ilk iki satırda yer alır."
+    },
+    {
+     "value": "service_videos",
+     "label": "Hizmet tanıtım videoları ve oynatma listeleri",
+     "explanation": "YouTube'da hizmet listeleme özelliği olmadığı için her ana hizmet bir tanıtım videosu ve konuyla ilgili videoları toplayan bir oynatma listesiyle anlatılır.",
+     "scenario": "Danışmanlık, eğitim, sağlık, yazılım hizmeti ve ajans gibi hizmet satan işletmeler.",
+     "example": "Bir dijital ajans “SEO hizmetimiz”, “Web tasarım sürecimiz” videolarını ve her hizmet için bir oynatma listesini kanalın ana sayfasında bölüm olarak gösterir.",
+     "ruleDetail": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her ana hizmet için bir tanıtım videosu ve oynatma listesi hazırlanır; listeler kanal ana sayfasında bölüm olarak gösterilir, video açıklaması hizmet sayfasına bağlanır ve hizmet sayfasına da video gömülür."
+    },
+    {
+     "value": "none",
+     "label": "YouTube'da ürün / hizmet listelenmeyecek",
+     "explanation": "YouTube kanalı yalnız içerik ve marka bilinirliği için kullanılır; Alışveriş bağlanmaz, bağlantılar genel site adresiyle sınırlı kalır.",
+     "scenario": "Kanaldan satış beklenmiyorsa ya da YouTube yalnız video barındırma için kullanılıyorsa.",
+     "example": "Bir kamu kurumu YouTube'u yalnız etkinlik kayıtlarını yayınlamak için kullanır.",
+     "ruleDetail": "YouTube'da ürün ya da hizmet listelenmez; kanal bağlantısı yalnız sitenin ana sayfasıdır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_yt_shop_setup",
+   "section": "mk_social",
+   "after": "mk_yt_listing",
+   "label": "YouTube Alışveriş Ayarları",
+   "en": "YouTube Shopping Settings",
+   "type": "multiselect",
+   "explanation": "YouTube Alışveriş'in kurulum ve kullanım kurallarını belirler. Mağaza YouTube Studio › Para kazanma › Alışveriş › Mağaza bağla adımıyla bağlanır; desteklenen platformlar arasında Shopify, Wix, SHOPLINE, Spreadshop, Spring, Fourthwall ve TeePublic vardır (BASE, Cafe24, Marpple Shop ve Suzuri yalnız Japonya / Güney Kore). Ürünler bağlandıktan sonra YouTube ve Google Merchant Center politikalarına göre incelenir, bu genelde birkaç iş günü sürer; ürün yalnız izleyicinin ülkesine gönderilebiliyorsa gösterilir. Bir video ya da Shorts'a en çok 60, canlı yayına en çok 30 ürün etiketlenir; kanal düzeyinde en çok 30 ürün sıralanır. Kaynak: YouTube Yardım Merkezi 12257682, 12258186, 10191533, 12258288, 12299016, 9162845, 13429240, 13376398, 154235, 2657964 (2026-11-26'da okundu).",
+   "rule": "YouTube Alışveriş ayarları: {labels}. Etiketlenen ürün videoda belirgin biçimde görünür, içerikle ilgilidir ve amacına uygun kullanılır; videoyla ilgisiz ya da toplu etiketleme yapılmaz (YouTube tekrarlayan uygunsuz etiketlemede Alışveriş erişimini kaldırabilir). Çocuklara yönelik işaretlenen, telif iddiası olan ya da para kazanma sınırlı videolarda ürün etiketleri gösterilmez; bu videolarda ürün açıklama bağlantısıyla tanıtılır.",
+   "scenario": "YouTube Alışveriş ile ürün listelenecekse.",
+   "example": "Bir giyim markası Shopify'daki Google & YouTube uygulamasıyla mağazasını bağlar, satış ülkesi olarak Türkiye'yi seçer; yeni sezon videosunda 8 ürünü etiketler ve canlı yayında her ürünü sırayla sabitler.",
+   "showIf": [
+    {
+     "field": "mk_yt_listing",
+     "in": [
+      "shopping"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/youtube-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "connect",
+     "label": "Mağaza bağlantısı",
+     "explanation": "Mağaza YouTube Studio › Para kazanma › Alışveriş › Mağaza bağla adımıyla bağlanır; birden çok mağaza bağlanabilir. Shopify'da YouTube ve Shopify hesabı aynı e-postayla, yönetici yetkisiyle açılır ve Google & YouTube uygulaması kurulur.",
+     "scenario": "YouTube Alışveriş kullanan her kanal.",
+     "example": "Shopify mağazası Google & YouTube uygulamasıyla bağlanır.",
+     "ruleDetail": "Mağaza YouTube Studio › Para kazanma › Alışveriş'ten bağlanır; bağlantıyı mağazanın yönetici hesabı yapar ve hesaplar kişiye değil kurumsal e-postaya açılır. Site desteklenen bir mağaza platformunda değilse bağlantı yolu kurulumdan önce kullanıcıya bildirilir."
+    },
+    {
+     "value": "review",
+     "label": "Ürün incelemesi ve politika uyumu",
+     "explanation": "Ürünler YouTube ve Google Merchant Center politikalarına (yasaklı içerik dahil) göre incelenir; inceleme genelde birkaç iş günü sürer. Politika ihlalinde Alışveriş özellikleri askıya alınabilir ya da hesap kapatılabilir.",
+     "scenario": "Her mağaza.",
+     "example": "Reddedilen ürün Merchant Center'daki sebebe göre düzeltilip yeniden incelemeye gönderilir.",
+     "ruleDetail": "Ürünler bağlanmadan önce Google Alışveriş yasaklı ve kısıtlı içerik politikasına göre kontrol edilir; reddedilen ürünün sebebi kaydedilir ve düzeltilip yeniden gönderilir."
+    },
+    {
+     "value": "countries",
+     "label": "Satış ülkeleri ve gönderim",
+     "explanation": "Ürün bilgileri Google Merchant Center'da mağazanın seçtiği satış ülkelerine göre gösterilir; ürün yalnız izleyicinin ülkesine gönderilebiliyorsa görünür.",
+     "scenario": "Her mağaza; özellikle yurt dışına satış yapanlar.",
+     "example": "Satış ülkesi Türkiye ve Almanya; gönderim yapılmayan ülkelerde ürün görünmez.",
+     "ruleDetail": "Merchant Center'daki satış ülkeleri Ortak Bilgiler › Hizmet Coğrafyası ve sitedeki gönderim bölgeleriyle aynı seçilir."
+    },
+    {
+     "value": "tagging",
+     "label": "Videolarda ve Shorts'ta ürün etiketleme",
+     "explanation": "Bir videoya ya da Shorts'a en çok 60 ürün etiketlenir. En az 1 dakikalık videolarda ürünlere zaman damgası (15–60 saniye) eklenebilir, Shorts'ta zaman damgası yoktur; Shorts'ta ilk etiketli ürün çıkartma olarak görünür.",
+     "scenario": "Ürünün kullanıldığı ya da tanıtıldığı videolar.",
+     "example": "Tarif videosunda kullanılan tencere, ilgili dakikaya zaman damgasıyla etiketlenir.",
+     "ruleDetail": "Videolara yalnız videoda gösterilen ürünler etiketlenir; uzun videolarda ürünün göründüğü dakikaya zaman damgası eklenir, Shorts'ta ana ürün ilk sıraya konur."
+    },
+    {
+     "value": "live",
+     "label": "Canlı yayında ürün etiketleme ve sabitleme",
+     "explanation": "Canlı yayına en çok 30 ürün etiketlenir; bir ürün sabitlenebilir, masaüstünden birden çok ürün 60 saniyede bir dönecek şekilde sabitlenebilir. YouTube ürün düzenlemesinin yayından en az 30 dakika önce bitirilmesini önerir.",
+     "scenario": "Canlı satış ya da ürün tanıtım yayını yapan kanallar.",
+     "example": "Haftalık canlı yayında 12 ürün etiketlenir, konuşulan ürün sabitlenir.",
+     "ruleDetail": "Canlı yayın ürünleri yayından en az 30 dakika önce etiketlenip sıralanır; yayında konuşulan ürün sabitlenir, kampanya fiyatı sitede ve mağazada yayın başlamadan güncellenir."
+    },
+    {
+     "value": "store_tab",
+     "label": "Mağaza sekmesi, ürün rafı ve koleksiyonlar",
+     "explanation": "Onaylı ürünü olan bağlı mağazanın ürünleri kanalın Mağaza sekmesinde ve video açıklamalarında kendiliğinden gösterilir; kanal düzeyinde en çok 30 ürün sıralanabilir, ürünler koleksiyonlarla gruplanabilir. Ürün rafı her kanalda açılamayabilir.",
+     "scenario": "Çok ürünlü mağazalar.",
+     "example": "Mağaza sekmesinde en çok satan 30 ürün sıralanır, “Yeni sezon” koleksiyonu açılır.",
+     "ruleDetail": "Kanal düzeyindeki ürün sıralaması (en çok 30) en çok satan ve kampanyadaki ürünlere göre ayda bir güncellenir; Mağaza sekmesinin bağlantısı topluluk gönderilerinde ve açıklamalarda kullanılır."
+    },
+    {
+     "value": "disclosure",
+     "label": "Ücretli tanıtım bildirimi",
+     "explanation": "Videoda markalı içerik, sponsorluk ya da başka bir ticari ilişki varsa video ayrıntılarında “Ücretli tanıtım” işaretlenir; YouTube videonun başına bildirim etiketi ekler.",
+     "scenario": "İçerik üreticisi iş birliği, sponsorlu video ya da başka markanın ürününü tanıtan videolar.",
+     "example": "İçerik üreticisinin markanın ürününü tanıttığı videoda “Evet, videom markalı içerik içeriyor” seçilir ve açıklamaya da iş birliği yazılır.",
+     "ruleDetail": "Ticari iş birliği içeren her videoda YouTube'daki “Ücretli tanıtım” işaretlenir ve reklam olduğu videoda ve açıklamada açıkça belirtilir (Türkiye'deki sosyal medya etkileyicisi reklam kuralları hukuk biriminin teyidiyle uygulanır)."
+    },
+    {
+     "value": "sync",
+     "label": "Fiyat ve stok eşitliği",
+     "explanation": "YouTube'da gösterilen ürün bilgileri bağlı mağazadan gelir; sitedeki ve mağazadaki fiyat, stok ve kampanya aynı tutulur.",
+     "scenario": "Sitesi ile mağazası ayrı sistemlerde olan işletmeler.",
+     "example": "Kampanya başladığında fiyat mağazada güncellenir, YouTube'daki ürün bilgisi de değişir.",
+     "ruleDetail": "Fiyat, stok ve kampanya bilgisi tek kaynaktan (mağaza ya da site) yönetilir; stoğu biten ürün etiketli videolarda görünmeye devam ediyorsa etiket kaldırılır."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",

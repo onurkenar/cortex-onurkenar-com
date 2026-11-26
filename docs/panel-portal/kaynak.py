@@ -472,6 +472,7 @@ EXTRA = [
     {'module': 'lms', 'panel': ['lms_instructor', 'subdomain', 'instructor'], 'why': 'Ek Modüller’de eğitim (LMS) seçildi.'},
     {'module': 'portal', 'panel': ['customer_portal', 'subdomain', 'portal'], 'why': 'Ek Modüller’de müşteri portalı seçildi.'},
     {'module': 'listings', 'panel': ['member_dashboard', 'subdirectory', 'hesabim'], 'why': 'İlan veren üyelerin ilanlarını yönetmesi için.'},
+    {'module': 'marketplace', 'panel': ['seller_portal', 'subdomain', 'seller'], 'why': 'Ek Modüller’de pazar yeri seçildi; satıcılar ürün, sipariş ve hak edişlerini bu panelden yönetir.'},
 ]
 
 RESERVED_PATHS = ['api', 'auth', 'login', 'logout', 'signin', 'signup', 'register', 'oauth', 'callback', 'sso', '.well-known', 'static', 'assets', 'public', 'cdn',

@@ -14,7 +14,8 @@ GROUP = 'İş Modülleri'
 # (bölüm, bağlandığı var olan bölüm) — aynı zincirde sırayla
 ORDER = [
     ('mobile_app', 'frontend_arch'),          # C1 Teknik Mimari
-    ('biz_crm', 'i18n'),                      # B20 — İş Modülleri grubu buradan başlar
+    ('biz_marketplace', 'i18n'),              # Pazar yeri (2026-11-26, kullanıcı isteği) — İş Modülleri grubu buradan başlar
+    ('biz_crm', 'biz_marketplace'),           # B20
     ('biz_ticket', 'biz_crm'),                # B2
     ('biz_survey', 'biz_ticket'),             # B3
     ('biz_subscription', 'biz_survey'),       # B4
@@ -34,7 +35,7 @@ REC_ADD = {
     'Portal': ['ticket', 'notify'],
     'Community': ['notify'],
     'E-commerce': ['notify', 'mailing', 'einvoice'],
-    'Marketplace': ['ticket', 'notify', 'einvoice'],
+    'Marketplace': ['marketplace', 'ticket', 'notify', 'einvoice'],
     'B2B Platform': ['ticket', 'einvoice'],
     'Booking': ['notify'],
     'LMS': ['certificates', 'notify'],
