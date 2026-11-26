@@ -8939,6 +8939,85 @@
    ]
   },
   {
+   "id": "oc_jobboards",
+   "section": "oc_accounts",
+   "after": "oc_classifieds",
+   "label": "İş İlanı Portalı Hesapları",
+   "en": "Job Board Accounts",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Toptalent | https://…",
+   "otherLabel": "Diğer iş ilanı portalları",
+   "explanation": "Şirketin personel aradığı iş ilanı portallarındaki işveren / firma sayfası adreslerini ayrı kutulara girersiniz (kariyer.net, Yenibiris, Secretcv, Eleman.net, Indeed …). Listede olmayan portallar “Diğer iş ilanı portalları” kutusuna “Ad | adres” olarak yazılır. LinkedIn şirket sayfası Sosyal Hesap Adresleri'nde girilir; işe alım yapılmıyorsa alan boş bırakılır.",
+   "rule": "Şirketin iş ilanı portalı hesapları: {value}. Sitenin kariyer sayfasındaki ve işveren markası içeriklerindeki “Açık pozisyonlar” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Aynı pozisyonun portallardaki ve sitedeki ilanında unvan, lokasyon, çalışma şekli ve aranan nitelikler tutarlı tutulur; dolan pozisyon bütün portallardan ve siteden aynı gün kaldırılır. İlanlarda dil, ırk, renk, cinsiyet, yaş, engellilik, din gibi işle ilgisiz ayrımcı ölçüt kullanılmaz (4857 sayılı İş Kanunu m. 5, 6701 sayılı Kanun m. 6 — ayrıntı hukuk biriminin teyidiyle); adaylardan toplanan kişisel veri için başvuru adımında aday aydınlatma metni gösterilir. Listede olmayan portal hesabı şirket adına anılmaz.",
+   "scenario": "Şirket açık pozisyonlarını kariyer.net, Yenibiris, Secretcv, Eleman.net, Indeed gibi iş ilanı portallarında yayınlıyorsa; sitenin kariyer sayfasından ve işveren markası paylaşımlarından doğru firma sayfasına bağlantı verilmesi için doldurulur.",
+   "example": "Bir lojistik şirketi kariyer.net ve Eleman.net firma sayfalarını yazar; sitenin “Kariyer” sayfasındaki “Tüm açık pozisyonlar” düğmesi kariyer.net firma sayfasına, saha personeli ilanları Eleman.net'e gider.",
+   "agents": [
+    "poz:insan-kaynaklari:ise-alim-ve-yetenek-kazanimi/ise-alim-takim-lideri/ise-alim-uzmani",
+    "poz:insan-kaynaklari:isveren-markasi-ve-ic-iletisim/isveren-markasi-uzmani"
+   ],
+   "accounts": [
+    {
+     "k": "kariyernet",
+     "label": "kariyer.net (firma sayfası)",
+     "ph": "https://www.kariyer.net/…",
+     "hosts": [
+      "kariyer.net"
+     ]
+    },
+    {
+     "k": "yenibiris",
+     "label": "Yenibiris",
+     "ph": "https://www.yenibiris.com/…",
+     "hosts": [
+      "yenibiris.com"
+     ]
+    },
+    {
+     "k": "secretcv",
+     "label": "Secretcv",
+     "ph": "https://www.secretcv.com/…",
+     "hosts": [
+      "secretcv.com"
+     ]
+    },
+    {
+     "k": "elemannet",
+     "label": "Eleman.net",
+     "ph": "https://www.eleman.net/…",
+     "hosts": [
+      "eleman.net"
+     ]
+    },
+    {
+     "k": "indeed",
+     "label": "Indeed (şirket sayfası)",
+     "ph": "https://tr.indeed.com/cmp/…",
+     "hosts": [
+      "indeed.com"
+     ]
+    },
+    {
+     "k": "glassdoor",
+     "label": "Glassdoor (şirket sayfası)",
+     "ph": "https://www.glassdoor.com/Overview/…",
+     "hosts": [
+      "glassdoor.com",
+      "glassdoor.com.tr",
+      "glassdoor.co.uk",
+      "glassdoor.de"
+     ]
+    },
+    {
+     "k": "youthall",
+     "label": "Youthall (staj ve yeni mezun)",
+     "ph": "https://www.youthall.com/tr/…",
+     "hosts": [
+      "youthall.com"
+     ]
+    }
+   ]
+  },
+  {
    "id": "mk_tt_shop",
    "section": "mk_tt",
    "after": "mk_tt_budget",
