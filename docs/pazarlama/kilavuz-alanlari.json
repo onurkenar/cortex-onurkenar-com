@@ -756,6 +756,11 @@
       "title": "İdefix'te satıcı ol",
       "url": "https://www.idefix.com/saticimiz-olun",
       "note": "Kayıt ve ürün listeleme ücretsiz."
+     },
+     {
+      "title": "Dolap yardım merkezi",
+      "url": "https://dolap-help.freshdesk.com/support/solutions",
+      "note": "Komisyon oranları, Ürün Öne Çıkarma (roket), Satılırsa öde, Butik programı, kargo seçimi ve yasaklı ürünler (destek.dolap.com buraya yönlendirir)."
      }
     ]
    }
@@ -3332,6 +3337,7 @@
       "pttavm",
       "idefix",
       "classifieds",
+      "dolap",
       "programmatic"
      ]
     }
@@ -10535,6 +10541,80 @@
      "ruleDetail": "Reklam seçeneği doğrulanan pazar yerinde önce dört haftalık, sınırlı ürünlü ve küçük bütçeli deneme kampanyası açılır; harcama, tıklama ve satış haftalık izlenir, deneme sonunda ölçekleme ya da durdurma kararı verilir."
     }
    ]
+  },
+  {
+   "id": "mk_dolap",
+   "section": "mk_mpads",
+   "after": "mk_cls_ads",
+   "label": "Dolap Satış ve Öne Çıkarma",
+   "en": "Dolap Selling & Promotion",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:digital_demand_generation/performans-pazarlama-muduru/arama-motoru-reklamlari-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "dolap"
+     ]
+    }
+   ],
+   "explanation": "Dolap'ta satış hesabını, komisyonu, öne çıkarma seçeneklerini, kargoyu ve ürün kurallarını belirler. Bilgiler Dolap yardım merkezinden alındı (destek.dolap.com, 2026-11-26); yardım merkezindeki bazı sayfalar birbirinden farklı oran verdiği için güncel koşullar uygulamada kontrol edilmelidir.",
+   "rule": "Dolap'ta satış ve öne çıkarma: {labels}. Dolap satışları ve öne çıkarma harcaması Dolap'ta izlenir ve sitenin reklam raporlarından ayrı raporlanır.",
+   "scenario": "Reklam Kanalları'nda Dolap öne çıkarma seçildiyse seçilir.",
+   "example": "Bir ikinci el moda butiği Dolap Butik Programı'na başvurur, komisyonu fiyata katar ve yeni ürünlerini Standart öne çıkarma ile tanıtır.",
+   "options": [
+    {
+     "value": "butik",
+     "label": "Dolap Butik Programı",
+     "explanation": "Butik açmak ücretsizdir; programa katılmak için şahıs ya da anonim / limited şirket olmak, vergi levhası ve imza sirküleri (şirketlerde ayrıca faaliyet belgesi ve ticaret sicil belgesi) göndermek ve en az 10 ürün listelemek gerekir.",
+     "scenario": "Ürünlerini işletme adına satan butikler ve markalar.",
+     "example": "Belgeler gönderilir, en az 10 ürün listelenir, başvuru değerlendirilir.",
+     "ruleDetail": "Dolap Butik Programı'na işletme adına başvurulur; istenen belgeler (vergi levhası, imza sirküleri, şirkette faaliyet ve ticaret sicil belgesi) ve en az 10 ürün hazırlanır, hesap erişimleri kurum adına tutulur."
+    },
+    {
+     "value": "commission",
+     "label": "Komisyon ve fiyat hesabı",
+     "explanation": "Ürün yüklemek ücretsizdir, yalnız tamamlanan siparişlerden komisyon alınır. Yardım merkezine göre 100–10.000 TL arası satışlarda bireysel satıcıda %15, profesyonel satıcıda %18; düşük fiyatlı ürünlerde sabit 20 TL, 10.000 TL ve üzerinde sabit 2.000 TL. Alıcıdan ayrıca alıcı koruma hizmeti bedeli alınır.",
+     "scenario": "Dolap'ta satış yapan her satıcı.",
+     "example": "Her ürünün Dolap fiyatı komisyon ve kargo sonrası marjla hesaplanır.",
+     "ruleDetail": "Dolap satış fiyatı komisyon (bireysel / profesyonel satıcı oranı) ve kargo farkı hesaba katılarak belirlenir; oranlar yardım merkezinde güncellendiği için satıştan önce ve yılda bir yeniden kontrol edilir."
+    },
+    {
+     "value": "rocket",
+     "label": "Roketle Ürün Öne Çıkarma",
+     "explanation": "Ürün “Öne çıkar” ile roket harcanarak öne çıkarılır: Standart 24 saat, Süper 30 saat (en az 2 kat görüntülenme), Mega 48 saat (en az 4 kat). 2.500 TL ve üstü ürünlerde roket sayısı sabittir; ek görüntülenme olmazsa roket otomatik iade edilir.",
+     "scenario": "Hızlı satılması gereken ya da yeni eklenen ürünler.",
+     "example": "Yeni sezon ürünü 48 saatlik Mega ile öne çıkarılır.",
+     "ruleDetail": "Roketle öne çıkarma yalnız seçilmiş ürünlerde kullanılır; roket bedeli ve seçenek uygulamada kontrol edilir, öne çıkarılan ürünün görüntülenme ve satış sonucu kaydedilir."
+    },
+    {
+     "value": "payifsold",
+     "label": "Satılırsa öde",
+     "explanation": "Peşin roket harcamadan öne çıkarma; ürün belirli süre içinde satılırsa ürün fiyatının bir yüzdesi kazançtan kesilir. Yardım merkezindeki iki sayfa farklı koşul veriyor (48 saatte %5 ve 7 günde %15); yalnız Dolap'ın önerdiği ürünlerde ve ayda sınırlı sayıda kullanılabilir.",
+     "scenario": "Marjı yüksek ve peşin harcama yapmak istemeyen satıcılar.",
+     "example": "Dolap'ın önerdiği bir ürün “Satılırsa öde” ile öne çıkarılır.",
+     "ruleDetail": "“Satılırsa öde” kullanılmadan önce güncel kesinti oranı ve süresi uygulamada kontrol edilir ve fiyat hesabına katılır."
+    },
+    {
+     "value": "shipping",
+     "label": "Kargo ve sipariş",
+     "explanation": "Satıcı sipariş detayında “Kargo kodu al” ile kargo kodu alır; Aras, DHL eCommerce, PTT, Sürat, Trendyol Express ve Yurtiçi arasından seçim yapılır, bazı taşıyıcılar ve 6 desi üstü gönderiler ek ücretlidir.",
+     "scenario": "Dolap'ta satış yapan her satıcı.",
+     "example": "Siparişler aynı gün kargo koduyla gönderilir.",
+     "ruleDetail": "Dolap siparişleri kargo koduyla, belirlenen sürede gönderilir; taşıyıcı ve desi farkı fiyat hesabına katılır."
+    },
+    {
+     "value": "rules",
+     "label": "Ürün kuralları",
+     "explanation": "Yalnız internette satışı yasaklanmamış ürünler satılabilir; replika ürünler, kullanılmış iç çamaşırı, gerçek kürk, ilaçlar, gıda ve evcil hayvan maması gibi ürünler yasaktır.",
+     "scenario": "Dolap'ta ürün listeleyen her satıcı.",
+     "example": "Ürünler listelenmeden önce yasaklı ürün listesiyle karşılaştırılır.",
+     "ruleDetail": "Dolap'a yalnız platform kurallarına uygun ürünler yüklenir; marka ürünlerinde orijinallik belgelenir, yasaklı ürün listesi ilan öncesinde kontrol edilir."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -11214,6 +11294,14 @@
      "scenario": "Emlak ofisleri, oto galeriler, ikinci el satıcıları ve ilanla müşteri bulan hizmet işletmeleri.",
      "example": "Bir emlak ofisi sahibinden.com ve Emlakjet'teki ilanlarını öne çıkararak arama sayısını artırır.",
      "ruleDetail": "İlan portalı reklamları yalnız o portaldaki ilanlar için kullanılır; taşınmaz ve taşıt ilanlarında Elektronik İlan Doğrulama Sistemi (EİDS) yetkisi alınmadan ilan verilmez ve öne çıkarılmaz, ücretli seçenekler portalın panelinden doğrulanmadan bütçe planlanmaz."
+    },
+    {
+     "value": "dolap",
+     "label": "Dolap öne çıkarma",
+     "explanation": "Dolap'ta (ikinci el ve moda alım-satım platformu) ürünlerin “Ürün Öne Çıkarma” ile roket karşılığı ya da “Satılırsa öde” modeliyle öne çıkarılmasıdır. Ziyaretçi kendi siteye değil Dolap'taki ürüne gider; satışlar Dolap'ta ölçülür.",
+     "scenario": "Ürünlerini Dolap'ta (butik ya da bireysel satıcı olarak) satan ve ürünlerinin daha çok görüntülenmesini isteyen satıcılar.",
+     "example": "Bir butik yeni sezon ürünlerini Dolap'ta 48 saatlik Mega öne çıkarma ile tanıtır.",
+     "ruleDetail": "Dolap öne çıkarma yalnız Dolap'ta satılan ürünler için kullanılır; roket fiyatı ve “Satılırsa öde” koşulları uygulamada kontrol edilir, öne çıkarılan ürünün görüntülenme ve satış sonucu öncesiyle karşılaştırılır."
     },
     {
      "value": "programmatic",
@@ -12053,6 +12141,7 @@
        "pttavm",
        "idefix",
        "classifieds",
+       "dolap",
        "programmatic"
       ]
      }
@@ -12124,6 +12213,7 @@
        "pttavm",
        "idefix",
        "classifieds",
+       "dolap",
        "programmatic"
       ]
      }
@@ -12154,6 +12244,7 @@
        "pttavm",
        "idefix",
        "classifieds",
+       "dolap",
        "programmatic"
       ]
      }
