@@ -761,6 +761,11 @@
       "title": "Dolap yardım merkezi",
       "url": "https://dolap-help.freshdesk.com/support/solutions",
       "note": "Komisyon oranları, Ürün Öne Çıkarma (roket), Satılırsa öde, Butik programı, kargo seçimi ve yasaklı ürünler (destek.dolap.com buraya yönlendirir)."
+     },
+     {
+      "title": "Armut (App Store açıklaması)",
+      "url": "https://apps.apple.com/tr/app/armut-hizmet-pi%C5%9F-a%C4%9Fz%C4%B1ma-d%C3%BC%C5%9F/id1028966163",
+      "note": "Müşterinin ücretsiz teklif alması, önceki işler ve yorumlar, teklif seçimiyle yapılan işlerde Armut garantisi; armut.com otomatik erişime kapalı."
      }
     ]
    }
@@ -3338,6 +3343,7 @@
       "idefix",
       "classifieds",
       "dolap",
+      "armut",
       "programmatic"
      ]
     }
@@ -7167,6 +7173,288 @@
    ]
   },
   {
+   "id": "mk_li_listing",
+   "section": "mk_social",
+   "after": "mk_social_rival_li",
+   "label": "LinkedIn'de Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on LinkedIn",
+   "type": "multiselect",
+   "explanation": "Markanın ürünlerinin LinkedIn şirket sayfasındaki Ürünler sekmesinde (Product Pages), hizmetlerinin ise şirket sayfasında ya da bir kişisel profilde hizmet sayfası (Service Page) olarak listelenip listelenmeyeceğini belirler. Ürün sayfaları yalnız B2B yazılım, bilgisayar donanımı, finansal hizmetler, sigorta, eğitim, sağlık ve ilaç sektöründeki sayfalara açıktır ve LinkedIn incelemesinden geçmeden yayına girmez; ürün yerine hizmet anlatan sayfa reddedilir. Hizmetler şirket sayfasında yalnız 500 ve daha az çalışanlı şirketlerde açılabilir, en çok 10 hizmet türü eklenir; hizmetlerin şirket sayfasında mı profilde mi sunulacağı kurulumdan sonra değiştirilemez. İkisi de ücretsizdir. Kaynak: LinkedIn Yardım Merkezi a548627, a547610, a564431, a770272, a553649, a785550, a7436041, a569554 (2026-11-26'da okundu).",
+   "rule": "LinkedIn'de ürün ve hizmet listeleme: {labels}. LinkedIn'deki ürün ve hizmet adları, açıklamaları, fiyat bilgisi ve bağlantıları Ortak Bilgiler › Ürün / Hizmet Listesi ve sitedeki sayfalarla aynı tutulur; sitede kaldırılan ya da adı değişen kalem LinkedIn'de aynı gün güncellenir, bağlantılar sitedeki ilgili ürün / hizmet sayfasına (UTM'li) gider. Ürün sayfası yalnız işletmenin fikrî mülkiyetine sahip olduğu ürün için açılır; hizmetler ürün sayfası olarak açılmaz (LinkedIn bunu reddeder), hizmet sayfasında listelenir. Ürün ve hizmet sayfalarını şirket sayfasının süper ya da içerik yöneticisi yönetir; yönetici yetkisi kişiye özel LinkedIn hesaplarıyla verilir ve işletmeden ayrılan kişinin yetkisi aynı gün kaldırılır.",
+   "scenario": "LinkedIn markanın mecraları arasındaysa ve işletme LinkedIn'de karar vericilere ürün ya da hizmet satıyorsa — özellikle B2B yazılım, danışmanlık, ajans, eğitim ve profesyonel hizmetlerde.",
+   "example": "Bir muhasebe yazılımı firması amiral ürününü şirket sayfasının Ürünler sekmesine ekler, iki ek modülü ayrı ürün sayfası olarak açar; kurulum ve eğitim hizmetini şirket sayfasında hizmet olarak listeler.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "linkedin"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "flagship",
+     "label": "Amiral ürün — şirketle aynı adlı ürün",
+     "explanation": "Şirketle aynı adı taşıyan tek ürün şirket sayfasıyla birleşir ve doğrudan Ürünler sekmesinde görünür; öne çıkan müşteriler sayfanın üst kartında da gösterilir. Yayından sonra amiral ürünün adı, adresi ve logosu değiştirilemez.",
+     "scenario": "Şirket adıyla bilinen tek bir ürünü olan işletmeler (ör. yazılım şirketinin adını taşıyan platform).",
+     "example": "“Defterim Yazılım” şirket sayfası, “Defterim” ürününü amiral ürün olarak ekler; sayfanın üst kartında üç kurumsal müşteri görünür.",
+     "ruleDetail": "Amiral ürün “Ürün eklenir › Evet, ürünüm ve kurumum aynı adı taşıyor” adımıyla açılır; yayından sonra ad, adres ve logo değiştirilemeyeceği için gönderimden önce ad ve logo Ortak Bilgiler'deki marka adı ve logo ile karşılaştırılır."
+    },
+    {
+     "value": "products",
+     "label": "Ayrı ürün sayfaları",
+     "explanation": "Şirketten farklı adı olan her ürün için ayrı ürün sayfası açılır, hepsi Ürünler sekmesinde listelenir. En çok 35 ek ürün sayfası açılabilir; ziyaretçilere yalnız en son açılan 10 tanesi gösterilir. Ürün sayfası silinemez, yalnız yayından kaldırılabilir.",
+     "scenario": "Birden fazla ürünü ya da şirketten farklı adlı ürünü olan işletmeler.",
+     "example": "Bir İK yazılımı firması bordro, izin ve performans modüllerini üç ayrı ürün sayfası olarak açar.",
+     "ruleDetail": "Ayrı ürün sayfaları yalnız satışta olan ürünler için açılır; ziyaretçiye en son açılan 10 sayfa gösterildiği için en önemli ürünlerin sayfası en son açılır, ürün satıştan kalkınca sayfası yayından kaldırılır (ürün sayfası silinemez)."
+    },
+    {
+     "value": "services_page",
+     "label": "Şirket sayfasında hizmetler",
+     "explanation": "Hizmetler şirket sayfasında, sayfaya özel bir hizmet sayfasıyla sunulur; talepleri sayfanın süper ya da içerik yöneticileri karşılar ve sayfada mesajlar kendiliğinden açılır. Yalnız 500 ve daha az çalışanlı şirketler kullanabilir; vitrin (Showcase) ve üniversite sayfasında açılamaz. Şirket sayfası hizmetlerinde değerlendirme (review) şu an yok, yönetim yalnız masaüstünden yapılır.",
+     "scenario": "Hizmeti şirket markasıyla satan ve talepleri birden çok kişinin karşılayacağı KOBİ'ler, ajanslar, danışmanlık firmaları.",
+     "example": "Bir dijital ajans şirket sayfasında “Web tasarımı”, “SEO” ve “Sosyal medya yönetimi” hizmetlerini listeler; gelen teklif talebini satış ekibinden bir yönetici yanıtlar.",
+     "ruleDetail": "Hizmetler şirket sayfasında sunulur (500 ve daha az çalışan şartı kontrol edilir); bu seçim kurulumdan sonra profile taşınamaz. Talepler sayfa mesajlarından gelir ve en geç 1 iş günü içinde yanıtlanır."
+    },
+    {
+     "value": "services_profile",
+     "label": "Kişisel profilde hizmetler",
+     "explanation": "Hizmetler bir kişinin (kurucu, danışman, serbest çalışan) LinkedIn profilinde, kişinin adıyla sunulur; hizmet sayfasını yalnız onu açan kişi yönetir. Profil hizmetlerinde müşteriden değerlendirme istenebilir.",
+     "scenario": "Hizmet kişinin uzmanlığıyla satılıyorsa — tek kişilik danışmanlık, serbest çalışanlar, kurucusu öne çıkan küçük işletmeler.",
+     "example": "Bir mali müşavir profilinde “Vergi danışmanlığı” ve “Şirket kuruluşu” hizmetlerini listeler; iş bittikten sonra müşteriden değerlendirme ister.",
+     "ruleDetail": "Hizmetler kişisel profilde sunulur (profil sahibi Ortak Bilgiler'deki kişiyle aynıdır); bu seçim kurulumdan sonra şirket sayfasına taşınamaz. Profil sahibi işletmeden ayrılırsa hizmet sayfası da onunla gider; bu risk kabul edilmeden profil seçilmez."
+    },
+    {
+     "value": "none",
+     "label": "LinkedIn'de ürün / hizmet listelenmeyecek",
+     "explanation": "LinkedIn şirket sayfası yalnız içerik paylaşımı ve işveren markası için kullanılır; Ürünler sekmesi ve hizmet sayfası açılmaz.",
+     "scenario": "Sektörü ürün sayfasına uygun olmayan ve hizmet sayfasının şartını karşılamayan işletmeler ya da LinkedIn'den satış beklenmiyorsa.",
+     "example": "Bir perakende markası LinkedIn'i yalnız kurumsal haberler ve iş ilanları için kullanır.",
+     "ruleDetail": "LinkedIn'de ürün ya da hizmet sayfası açılmaz; ürün ve hizmet tanıtımı gönderilerle yapılır, gönderilerdeki bağlantılar sitedeki sayfalara gider.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_li_product_setup",
+   "section": "mk_social",
+   "after": "mk_li_listing",
+   "label": "LinkedIn Ürün Sayfası İçeriği",
+   "en": "LinkedIn Product Page Content",
+   "type": "multiselect",
+   "explanation": "LinkedIn ürün sayfasında doldurulacak bölümleri belirler. Kategori zorunludur (her ürün için yalnız bir kategori seçilebilir, boş bırakılan sayfa onaylanmaz); diğer bölümler isteğe bağlıdır. Ürün sayfası “İncelemeye gönder” ile LinkedIn'e gönderilir, onaylanınca Etkinlik sekmesinden “Ürünü yayınla” ile yayına alınır. Yetersiz açıklama, yanlış kategori, fikrî mülkiyeti işletmeye ait olmayan ürün ve hizmet anlatan sayfa reddedilir. Kaynak: LinkedIn Yardım Merkezi a548627, a547610, a564431, a770272, a553649, a785550, a7436041, a569554 (2026-11-26'da okundu).",
+   "rule": "LinkedIn ürün sayfalarında doldurulacak bölümler: {labels}. Her ürün sayfasında kategori seçilir ve açıklama ürünün ne yaptığını, kimin için olduğunu ve temel özelliklerini anlatacak kadar ayrıntılıdır (yetersiz açıklama reddedilir). Sayfa incelemeye gönderilmeden önce alanlar sitedeki ürün sayfasıyla karşılaştırılır; onaydan sonra Etkinlik › Ürünü görüntüle › Ürünü yayınla adımıyla yayına alınır. Ret gelirse sebebi kaydedilir, bilgi düzeltilip yeni ürün sayfası açılarak yeniden gönderilir. Ürün sayfasının varsayılan etiketi #ürünadı'dır, özel etiket kullanılamaz.",
+   "scenario": "LinkedIn'de ürün sayfası açılacaksa (amiral ürün ya da ayrı ürün sayfaları).",
+   "example": "Bir proje yönetimi yazılımı kategori, açıklama, “Ücretsiz deneyin” düğmesi, tanıtım videosu, paket fiyatları ve Slack / Google Drive entegrasyonlarını doldurur; ürünü kullanması muhtemel roller olarak proje yöneticisi ve ekip lideri seçer.",
+   "showIf": [
+    {
+     "field": "mk_li_listing",
+     "in": [
+      "flagship",
+      "products"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi",
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani"
+   ],
+   "options": [
+    {
+     "value": "category",
+     "label": "Ürün kategorisi (zorunlu)",
+     "explanation": "Her ürün sayfası LinkedIn'in ürün kategorilerinden yalnız birini seçebilir; kategorisiz sayfa onaylanmaz, yanlış kategori ret sebebidir.",
+     "scenario": "Her ürün sayfası.",
+     "example": "Muhasebe yazılımı “Muhasebe Yazılımı” kategorisini seçer.",
+     "ruleDetail": "Ürün kategorisi LinkedIn'in kategori listesinden ürüne en yakın olanı seçilir; uygun kategori yoksa sayfa açılmadan önce bu durum kullanıcıya bildirilir."
+    },
+    {
+     "value": "about",
+     "label": "Ürün açıklaması (Hakkında)",
+     "explanation": "Ürünün ne yaptığı, kimin için olduğu ve temel özellikleri. Açıklaması yetersiz sayfa reddedilir.",
+     "scenario": "Her ürün sayfası.",
+     "example": "“Küçük işletmeler için bulut tabanlı ön muhasebe; e-Fatura, stok ve banka entegrasyonu.”",
+     "ruleDetail": "Ürün açıklaması sitedeki ürün sayfasının özetinden ve değer önerisinden yazılır; tanıtım dilindeki iddialar Pazarlama › Reklam Metni İddia Kuralı'na uyar."
+    },
+    {
+     "value": "cta",
+     "label": "Eylem çağrısı düğmesi ve web sitesi",
+     "explanation": "Ürün sayfasında bir eylem çağrısı düğmesi ve web sitesi bağlantısı gösterilir.",
+     "scenario": "Ziyaretçiyi demo, deneme ya da teklif sayfasına yönlendirmek isteyen her ürün.",
+     "example": "Düğme “Demo isteyin”, bağlantı sitedeki demo formu.",
+     "ruleDetail": "Ürün sayfasının düğmesi Ortak Bilgiler › Ana CTA'ya en yakın seçenekten seçilir; bağlantı sitedeki ürün ya da form sayfasına UTM'li (utm_source=linkedin, utm_medium=product_page) gider."
+    },
+    {
+     "value": "media",
+     "label": "Ürün görselleri ve videoları",
+     "explanation": "Ürün ekranları, tanıtım görselleri ve videolar. LinkedIn MP4 biçimini ve kısa videoyu önerir.",
+     "scenario": "Arayüzü ya da kullanımı görsel olarak anlatılabilen ürünler.",
+     "example": "Panel ekran görüntüleri ve 60 saniyelik tanıtım videosu.",
+     "ruleDetail": "Ürün sayfasına ürün görselleri ve kısa MP4 tanıtım videosu eklenir; görseller kişisel veri ya da gerçek müşteri verisi içermez (örnek veriyle hazırlanır)."
+    },
+    {
+     "value": "pricing",
+     "label": "Planlar ve fiyatlandırma",
+     "explanation": "Fiyat kademeleri ve ücretsiz deneme bilgisi.",
+     "scenario": "Fiyatı herkese açık ürünler.",
+     "example": "Başlangıç, Profesyonel, Kurumsal paketleri ve 14 günlük deneme.",
+     "ruleDetail": "Planlar ve fiyatlar sitedeki fiyat sayfasıyla aynı yazılır (KDV dahil / hariç gösterimi dahil); sitede fiyat değişince LinkedIn'deki plan bilgisi aynı gün güncellenir."
+    },
+    {
+     "value": "customers",
+     "label": "Öne çıkan müşteriler",
+     "explanation": "Ürünü kullanan müşterilerin LinkedIn sayfaları gösterilir; gösterilen sayfanın yöneticileri LinkedIn'den kaldırılmayı isteyebilir.",
+     "scenario": "Tanınmış kurumsal müşterisi olan ürünler.",
+     "example": "Üç kurumsal müşterinin sayfası öne çıkan müşteri olarak eklenir.",
+     "ruleDetail": "Öne çıkan müşteri olarak yalnız Ortak Bilgiler › Referanslar'da kullanım izni “Var” olan müşteriler eklenir; izni olmayan ya da işbirliği biten müşteri eklenmez / kaldırılır."
+    },
+    {
+     "value": "integrations",
+     "label": "Öne çıkan entegrasyonlar",
+     "explanation": "Ürünün çalıştığı diğer yazılım ve platformlar.",
+     "scenario": "Başka yazılımlarla entegre çalışan ürünler.",
+     "example": "e-Fatura entegratörü, Slack, Google Drive.",
+     "ruleDetail": "Entegrasyonlar listesine yalnız çalışan ve sitede belgelenen entegrasyonlar yazılır."
+    },
+    {
+     "value": "users",
+     "label": "Ürün kullanıcıları (iş rolleri)",
+     "explanation": "Ürünü kullanması muhtemel iş rolleri ve pozisyonlar önerilir.",
+     "scenario": "Belirli rollere hitap eden ürünler.",
+     "example": "Muhasebe müdürü, mali müşavir, finans uzmanı.",
+     "ruleDetail": "Ürün kullanıcıları Hedef Kitle kararlarındaki karar verici ve kullanıcı rolleriyle aynı seçilir."
+    },
+    {
+     "value": "highlights",
+     "label": "Ürün öne çıkanları (gönderiler)",
+     "explanation": "Şirket sayfasındaki gönderilerden en çok 20'si ürün sayfasında öne çıkarılabilir.",
+     "scenario": "Ürünle ilgili düzenli gönderi paylaşan sayfalar.",
+     "example": "Lansman duyurusu, müşteri vakası ve yeni özellik gönderileri.",
+     "ruleDetail": "Ürün sayfasında öne çıkarılan gönderiler (en çok 20) üç ayda bir gözden geçirilir; eskiyen kampanya ve fiyat gönderileri kaldırılır."
+    },
+    {
+     "value": "skill",
+     "label": "Çalışanlar ürünü yetenek olarak ekler",
+     "explanation": "Üyeler ürünü profillerine yetenek olarak ekleyebilir; ürün sayfasında “bu üründe yetenekli bağlantılar” bölümü bu veriden oluşur.",
+     "scenario": "Ürün ekibi ve destek ekibi LinkedIn'de aktifse.",
+     "example": "Destek ve kurulum ekibi ürünü profiline yetenek olarak ekler.",
+     "ruleDetail": "Ürün sayfası yayına girince ürün, destek ve satış ekibinden ürünü profillerine yetenek olarak eklemeleri istenir (zorunlu tutulmaz)."
+    },
+    {
+     "value": "recommendations",
+     "label": "Ürün önerileri (yorumlar)",
+     "explanation": "Üyelerin ürün hakkında yazdığı öneriler gösterilir ya da gizlenir; sahte ya da saldırgan öneri LinkedIn'e bildirilebilir. Yöneticilerin üyeleri öneri yazmaya davet etme özelliği kaldırılmaktadır.",
+     "scenario": "Memnun kullanıcı tabanı olan ürünler.",
+     "example": "Öneriler açık tutulur, haftalık kontrol edilir.",
+     "ruleDetail": "Ürün önerileri açık tutulur ve haftada bir kontrol edilir; sahte ya da saldırgan öneri bildirilir. Öneri karşılığında indirim, hediye ya da ödül verilmez."
+    },
+    {
+     "value": "languages",
+     "label": "Dil sürümleri",
+     "explanation": "Sayfanın birden çok dil kitlesi varsa ürün sayfası LinkedIn'in desteklediği her dil için ayrıca düzenlenir.",
+     "scenario": "Birden çok dilde hizmet veren markalar.",
+     "example": "Türkçe ve İngilizce ürün açıklaması.",
+     "ruleDetail": "Ürün sayfası Ortak Bilgiler › Diller'deki her dil için ayrı düzenlenir; çeviri sitedeki ilgili dil sürümüyle aynı tutulur."
+    }
+   ]
+  },
+  {
+   "id": "mk_li_service_setup",
+   "section": "mk_social",
+   "after": "mk_li_product_setup",
+   "label": "LinkedIn Hizmet Sayfası Ayarları",
+   "en": "LinkedIn Service Page Settings",
+   "type": "multiselect",
+   "explanation": "LinkedIn hizmet sayfasında (şirket sayfasında ya da kişisel profilde) yapılacak ayarları belirler. Hizmet sayfası ücretsizdir ve talep — teklif modeliyle çalışır; en çok 10 hizmet türü eklenir. Medya, “Hizmet iste” (Request services) düğmesi ve değerlendirmeli hizmet vitrini profilde Premium Business, Sales Navigator ya da Recruiter Lite aboneliği ister; şirket sayfası için isteğe bağlı yükseltme Premium Company Page'dir. Tahmini başlangıç saat ücreti ve “Fiyat için iletişim” seçenekleri LinkedIn'in profil hizmetleri yardım sayfasında anlatılır; şirket sayfasında aynı seçeneklerin bulunup bulunmadığı kurulumda kontrol edilir. Kaynak: LinkedIn Yardım Merkezi a548627, a547610, a564431, a770272, a553649, a785550, a7436041, a569554 (2026-11-26'da okundu).",
+   "rule": "LinkedIn hizmet sayfası ayarları: {labels}. Hizmet türleri Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki hizmetlerden seçilir (en çok 10); listede olmayan hizmet LinkedIn'e eklenmez. Hizmet sayfası açıklaması sitedeki hizmet sayfalarıyla aynı bilgiyi verir.",
+   "scenario": "LinkedIn'de hizmet sayfası açılacaksa (şirket sayfasında ya da kişisel profilde).",
+   "example": "Bir danışmanlık firması şirket sayfasında 5 hizmet türü, kısa bir Hakkında metni, İstanbul + uzaktan çalışma ve “Fiyat için iletişim” seçer; gelen talepler CRM'e işlenir.",
+   "showIf": [
+    {
+     "field": "mk_li_listing",
+     "in": [
+      "services_page",
+      "services_profile"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/linkedin-uzmani"
+   ],
+   "options": [
+    {
+     "value": "types",
+     "label": "Hizmet türleri (en çok 10)",
+     "explanation": "LinkedIn'in hizmet türü listesinden en çok 10 hizmet seçilir.",
+     "scenario": "Her hizmet sayfası.",
+     "example": "Web tasarımı, SEO, Google Ads yönetimi, sosyal medya yönetimi.",
+     "ruleDetail": "Hizmet türleri Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki hizmetlere en yakın LinkedIn hizmet türlerinden seçilir; en çok 10 tür eklenebildiği için önce en çok satan hizmetler seçilir."
+    },
+    {
+     "value": "about",
+     "label": "Hakkında açıklaması",
+     "explanation": "Hizmetleri ve deneyimi anlatan isteğe bağlı açıklama.",
+     "scenario": "Hizmetin kapsamını ve farkını anlatmak isteyen her sayfa.",
+     "example": "“2015'ten beri 120 KOBİ'ye web sitesi ve dijital pazarlama hizmeti veriyoruz.”",
+     "ruleDetail": "Hakkında açıklaması Ortak Bilgiler › Kurum Hakkında metninden kısaltılır; kaynaksız rakam ve üstünlük iddiası yazılmaz (Başarı Metrikleri'ndeki kaynaklı değerler kullanılır)."
+    },
+    {
+     "value": "location",
+     "label": "Çalışma yeri ve uzaktan çalışma",
+     "explanation": "Hizmetin verildiği yer ve uzaktan çalışmaya açık olunup olunmadığı.",
+     "scenario": "Her hizmet sayfası.",
+     "example": "İstanbul, Türkiye · uzaktan çalışmaya açık.",
+     "ruleDetail": "Çalışma yeri Ortak Bilgiler › Hizmet Coğrafyası ve adresle aynı seçilir; uzaktan hizmet veriliyorsa “uzaktan çalışmaya açık” işaretlenir."
+    },
+    {
+     "value": "rate",
+     "label": "Tahmini başlangıç saat ücreti",
+     "explanation": "Tahmini başlangıç saat ücreti gösterilir; LinkedIn bunun nihai fiyatın garantisi olmadığını belirtir. Seçilmezse “Fiyat için iletişim” kullanılır.",
+     "scenario": "Saatlik fiyatlandırma yapan danışman ve serbest çalışanlar.",
+     "example": "Başlangıç saat ücreti 1.500 TL.",
+     "ruleDetail": "Hizmet sayfasında tahmini başlangıç saat ücreti gösterilir; tutar sitedeki ve tekliflerdeki fiyatla tutarlı tutulur, fiyat değişince aynı gün güncellenir."
+    },
+    {
+     "value": "messages",
+     "label": "Herkesten mesaj ve yanıt süresi",
+     "explanation": "Profil hizmetlerinde bağlantı derecesinden bağımsız olarak herkesin mesaj atmasına izin verilebilir; şirket sayfasında hizmet açılınca sayfa mesajları kendiliğinden açılır.",
+     "scenario": "LinkedIn'den yeni müşteri talebi beklenen her sayfa.",
+     "example": "Talep mesajlarına en geç 1 iş günü içinde yanıt verilir.",
+     "ruleDetail": "Hizmet talepleri için mesajlar herkese açık tutulur ve en geç 1 iş günü içinde yanıtlanır; mesajda fiyat ve kapsam Fiyat Teklifi Standardı'na göre verilir."
+    },
+    {
+     "value": "crm",
+     "label": "Talepler CRM'e işlenir",
+     "explanation": "LinkedIn'den gelen hizmet talepleri ve teklifler satış sürecine kaydedilir.",
+     "scenario": "Satış süreci CRM'de takip edilen işletmeler.",
+     "example": "Her talep CRM'de “Kaynak: LinkedIn Hizmet Sayfası” ile açılır.",
+     "ruleDetail": "LinkedIn hizmet sayfasından gelen her talep CRM'e “Kaynak: LinkedIn hizmet sayfası” olarak kaydedilir; kişisel veri yalnız teklif için gereken kadar işlenir ve aydınlatma metnine bağlanır."
+    },
+    {
+     "value": "reviews",
+     "label": "Müşteriden değerlendirme isteme (yalnız profil)",
+     "explanation": "Profil hizmetlerinde iş bitince müşteri değerlendirme yazmaya davet edilebilir; şirket sayfası hizmetlerinde değerlendirme şu an yok.",
+     "scenario": "Kişisel profilde hizmet veren ve memnun müşterisi olanlar.",
+     "example": "Proje teslim edildikten sonra müşteriye değerlendirme daveti gönderilir.",
+     "ruleDetail": "Yalnız kişisel profilde: iş teslim edildikten sonra müşteriye değerlendirme daveti gönderilir; değerlendirme karşılığında indirim, hediye ya da ödül verilmez, değerlendirme metni sitede yalnız müşterinin izniyle kullanılır."
+    },
+    {
+     "value": "premium",
+     "label": "Premium özellikler ayrı bütçe kararı",
+     "explanation": "Medya (belge, fotoğraf, video, web sitesi), “Hizmet iste” düğmesi ve değerlendirmeli hizmet vitrini profilde Premium Business, Sales Navigator ya da Recruiter Lite ister; şirket sayfasında yükseltme Premium Company Page'dir.",
+     "scenario": "Hizmet sayfasından düzenli talep bekleniyor ve abonelik bütçesi değerlendirilecekse.",
+     "example": "Önce ücretsiz sayfayla 3 ay talep sayısı ölçülür, sonra Premium kararı verilir.",
+     "ruleDetail": "Premium aboneliği (medya, “Hizmet iste” düğmesi, hizmet vitrini) ayrı bir bütçe kararı olarak sunulur; önce ücretsiz hizmet sayfasıyla en az 3 ay talep sayısı ölçülür."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",
@@ -9138,10 +9426,10 @@
    "type": "accounts",
    "placeholder": "Satır başına Ad | URL — örn. Eğitim platformu | https://…",
    "otherLabel": "Diğer online eğitim platformları",
-   "explanation": "Kurumun ya da eğitmenlerinin ücretli / ücretsiz online kurs sattığı platformlardaki eğitmen profili, kurs ya da okul adreslerini ayrı kutulara girersiniz. Pazar yerleri (Udemy, Skillshare, Domestika) kursu kendi kataloğunda satar; okul kurma araçlarında (Teachable, Thinkific, Kajabi, Podia) kurs sizin okul adresinizde ya da kendi alan adınızda durur — bu kutulara alan adı uyarısı uygulanmaz. Coursera ve LinkedIn Learning yalnız başvurusu kabul edilen kurum ve eğitmenlerle çalışır. Listede olmayan platformlar “Diğer online eğitim platformları” kutusuna “Ad | adres” olarak yazılır. Kurslar yalnız sitenin kendi eğitim modülünde satılıyorsa alan boş bırakılır.",
-   "rule": "Kurumun online eğitim platformu hesapları: {value}. Sitedeki eğitim, kurs ve eğitmen sayfalarındaki “Kursa git / Satın al” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Aynı kursun platformdaki ve sitedeki tanıtımında kurs adı, eğitmen, süre, ders sayısı, seviye ve içerik başlıkları tutarlı tutulur; platform fiyatları kampanyalarla değiştiği için sitede platform fiyatı sabit yazılmaz, “güncel fiyat platformdadır” denir. Platformun verdiği tamamlama belgesi resmî onaylı ya da akredite sertifika gibi sunulmaz; “onaylı / akredite / MEB onaylı” ifadesi yalnız Sertifikalar ve Belgeler'de kaydı olan belge için kullanılır. Kurs aynı zamanda sitede satılıyorsa ön bilgilendirme, mesafeli satış sözleşmesi ve dijital içerikte cayma hakkı istisnasının koşulları platformdan bağımsız olarak sitede gösterilir (hukuk biriminin teyidiyle). Listede olmayan platform hesabı kurum adına anılmaz.",
-   "scenario": "Kurum ya da eğitmenleri kurslarını Udemy, Skillshare, Domestika gibi pazar yerlerinde ya da Teachable, Thinkific, Kajabi gibi okul kurma araçlarında satıyorsa; sitenin eğitim sayfalarından ve kampanya içeriklerinden doğru kursa bağlantı verilmesi için doldurulur.",
-   "example": "Bir yazılım eğitim şirketi Udemy eğitmen profilini ve Teachable okul adresini (akademi.ornek.com) yazar; sitenin “Eğitimler” sayfasındaki giriş seviyesi kurslar Udemy'ye, sertifika programı Teachable okuluna gider.",
+   "explanation": "Kurumun ya da eğitmenlerinin ücretli / ücretsiz online kurs ya da ders sattığı platformlardaki eğitmen profili, kurs ya da okul adreslerini ayrı kutulara girersiniz. Türkiye'deki platformlar: Boenstitü (Boen Academy — gelir ortaklığı ya da içerik haklarının platforma devredildiği tek seferlik ödeme modeli), Unicourse (üniversite dersleri, satıştan pay), Youthall Akademi ve Techcareer.net (başvurusu kabul edilen eğitmenler), Özel Ders Alanı ve Mentural (birebir özel ders ve mentorluk ilanları). Uluslararası pazar yerleri (Udemy, Skillshare, Domestika) kursu kendi kataloğunda satar; okul kurma araçlarında (Teachable, Thinkific, Kajabi, Podia) kurs sizin okul adresinizde ya da kendi alan adınızda durur — bu kutulara alan adı uyarısı uygulanmaz. Coursera ve LinkedIn Learning yalnız başvurusu kabul edilen kurum ve eğitmenlerle çalışır. Listede olmayan platformlar “Diğer online eğitim platformları” kutusuna “Ad | adres” olarak yazılır. Kurslar yalnız sitenin kendi eğitim modülünde satılıyorsa alan boş bırakılır.",
+   "rule": "Kurumun online eğitim platformu hesapları: {value}. Sitedeki eğitim, kurs ve eğitmen sayfalarındaki “Kursa git / Satın al” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Aynı kursun platformdaki ve sitedeki tanıtımında kurs adı, eğitmen, süre, ders sayısı, seviye ve içerik başlıkları tutarlı tutulur; platform fiyatları kampanyalarla değiştiği için sitede platform fiyatı sabit yazılmaz, “güncel fiyat platformdadır” denir. Platformun verdiği belge, platformun o kurs için tanımladığından farklı sunulmaz: “üniversite onaylı / MEB onaylı / akredite” ifadesi yalnız platform o kurs için bu onayı açıkça belirtiyorsa (onaylayan kurum adıyla) ya da belge Sertifikalar ve Belgeler'de kayıtlıysa kullanılır. İçerik haklarının platforma devredildiği modelle (ör. tek seferlik ödeme) yayınlanan kurs başka platformda ya da sitede satılmaz; kurs yüklemeden önce platformun gelir modeli ve içerik hakları sözleşmesi kontrol edilir. Kurs aynı zamanda sitede satılıyorsa ön bilgilendirme, mesafeli satış sözleşmesi ve dijital içerikte cayma hakkı istisnasının koşulları platformdan bağımsız olarak sitede gösterilir (hukuk biriminin teyidiyle). Listede olmayan platform hesabı kurum adına anılmaz.",
+   "scenario": "Kurum ya da eğitmenleri kurslarını Boenstitü, Unicourse, Youthall Akademi, Techcareer.net gibi Türk platformlarında, Udemy, Skillshare, Domestika gibi uluslararası pazar yerlerinde ya da Teachable, Thinkific, Kajabi gibi okul kurma araçlarında satıyor ya da Özel Ders Alanı, Mentural gibi portallarda birebir ders veriyorsa; sitenin eğitim sayfalarından ve kampanya içeriklerinden doğru sayfaya bağlantı verilmesi için doldurulur.",
+   "example": "Bir yazılım eğitim şirketi Udemy eğitmen profilini, Boenstitü eğitmen sayfasını ve Teachable okul adresini (akademi.ornek.com) yazar; sitenin “Eğitimler” sayfasındaki giriş seviyesi kurslar Udemy'ye, Türkçe sertifikalı eğitimler Boenstitü'ye, kapsamlı program Teachable okuluna gider.",
    "agents": [
     "poz:musteri-deneyimi:11.07/musteri-egitimleri/egitim-icerik-gelistirme-uzmani",
     "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
@@ -9153,6 +9441,54 @@
      "ph": "https://www.udemy.com/user/…",
      "hosts": [
       "udemy.com"
+     ]
+    },
+    {
+     "k": "boenstitu",
+     "label": "Boenstitü — Boen Academy (eğitmen sayfası)",
+     "ph": "https://boenstitu.com/egitmenler/…",
+     "hosts": [
+      "boenstitu.com"
+     ]
+    },
+    {
+     "k": "unicourse",
+     "label": "Unicourse (eğitmen / ders sayfası)",
+     "ph": "https://unicourse.co/…",
+     "hosts": [
+      "unicourse.co"
+     ]
+    },
+    {
+     "k": "youthall_akademi",
+     "label": "Youthall Akademi (eğitim sayfası)",
+     "ph": "https://www.youthall.com/tr/akademi/…",
+     "hosts": [
+      "youthall.com"
+     ]
+    },
+    {
+     "k": "techcareer",
+     "label": "Techcareer.net (eğitmen / eğitim sayfası)",
+     "ph": "https://www.techcareer.net/…",
+     "hosts": [
+      "techcareer.net"
+     ]
+    },
+    {
+     "k": "ozeldersalani",
+     "label": "Özel Ders Alanı (öğretmen profili)",
+     "ph": "https://www.ozeldersalani.com/…",
+     "hosts": [
+      "ozeldersalani.com"
+     ]
+    },
+    {
+     "k": "mentural",
+     "label": "Mentural (mentor / özel ders ilanı)",
+     "ph": "https://www.mentural.com/…",
+     "hosts": [
+      "mentural.com"
      ]
     },
     {
@@ -10615,6 +10951,80 @@
      "ruleDetail": "Dolap'a yalnız platform kurallarına uygun ürünler yüklenir; marka ürünlerinde orijinallik belgelenir, yasaklı ürün listesi ilan öncesinde kontrol edilir."
     }
    ]
+  },
+  {
+   "id": "mk_armut",
+   "section": "mk_mpads",
+   "after": "mk_dolap",
+   "label": "Armut Hizmet Veren Profili ve Teklifler",
+   "en": "Armut Provider Profile & Quotes",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:satis:08.03/hizli-satis-ve-donusum/dijital-satis-temsilcisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "armut"
+     ]
+    }
+   ],
+   "explanation": "Armut'ta hizmet veren olarak profilin, tekliflerin, yorumların ve gelen taleplerin nasıl yönetileceğini belirler. Profil adresi Ortak Bilgiler › İlan Portalı Mağazaları'ndaki Armut satırına yazılır. Hizmet verenin ödediği ücret (kredi, paket, komisyon) doğrulanamadı; uygulamada kontrol edilir.",
+   "rule": "Armut'ta hizmet veren olarak yapılacaklar: {labels}.",
+   "scenario": "Reklam Kanalları'nda Armut seçildiyse seçilir.",
+   "example": "Bir temizlik firması profilini önceki iş fotoğraflarıyla doldurur, talepleri iki saat içinde teklifle yanıtlar, kazanılan işleri CRM'e “Armut” kaynağıyla kaydeder.",
+   "options": [
+    {
+     "value": "profile",
+     "label": "Hizmet veren profili",
+     "explanation": "Hizmet kategorileri, hizmet verilen bölgeler, işletme açıklaması ve önceki işlerin fotoğrafları profilde yer alır; müşteriler teklif seçerken önceki işleri inceler.",
+     "scenario": "Armut'ta hizmet veren her işletme.",
+     "example": "Profilde son on işin önce / sonra fotoğrafları ve hizmet bölgeleri yer alır.",
+     "ruleDetail": "Armut profili işletmenin sitedeki ve Ortak Bilgiler'deki hizmet, bölge ve iletişim bilgileriyle tutarlıdır; önceki iş fotoğrafları müşterinin izniyle ve kişisel veri içermeyecek şekilde paylaşılır."
+    },
+    {
+     "value": "quotes",
+     "label": "Teklif süreci",
+     "explanation": "Gelen hizmet taleplerine hızlı ve eksiksiz teklif verilir: kapsam, fiyat (ya da aralığı), süre ve varsa ek ücretler açıkça yazılır.",
+     "scenario": "Talep yoğunluğu yüksek hizmetler.",
+     "example": "Talepler iş saatlerinde iki saat içinde, standart teklif şablonuyla yanıtlanır.",
+     "ruleDetail": "Armut taleplerine belirlenen sürede yanıt verilir; teklifte kapsam, fiyat, süre ve ek ücretler açıkça yazılır, teklif şablonları sitedeki fiyat ve hizmet bilgileriyle çelişmez."
+    },
+    {
+     "value": "cost",
+     "label": "Teklif maliyeti ve iş kazanma oranı",
+     "explanation": "Hizmet verenin teklif ya da talep başına ödediği ücret uygulamada kontrol edilir; harcama, verilen teklif ve kazanılan iş sayısı izlenir.",
+     "scenario": "Armut'u ücretli kullanan her işletme.",
+     "example": "Aylık harcama, 40 teklif ve 9 kazanılan iş raporlanır; iş başına maliyet hesaplanır.",
+     "ruleDetail": "Armut'ta teklif / talep başına maliyet uygulamada kontrol edilir; aylık harcama, teklif sayısı, kazanılan iş ve iş başına maliyet raporlanır, kârsız kategorilerde teklif verilmez."
+    },
+    {
+     "value": "reviews",
+     "label": "Müşteri yorumları",
+     "explanation": "İş bitince müşteriden yorum istenir, yorumlara yanıt verilir.",
+     "scenario": "Puanı ve yorum sayısı seçimde belirleyici olan hizmetler.",
+     "example": "Her iş sonunda müşteriye Armut'ta yorum bırakması hatırlatılır.",
+     "ruleDetail": "Tamamlanan her iş için müşteriden Armut'ta yorum istenir; olumsuz yorumlara kibar ve çözüm odaklı yanıt verilir, yorum karşılığında indirim ya da hediye verilmez."
+    },
+    {
+     "value": "guarantee",
+     "label": "Armut garantisine uygun çalışma",
+     "explanation": "Teklif seçilerek yapılan işler Armut garantisi kapsamındadır; işin Armut üzerinden anlaşılması ve kayıtların tutulması garantiyi korur.",
+     "scenario": "Armut'tan gelen her iş.",
+     "example": "İş, fiyat ve kapsam Armut üzerinden teklifle anlaşılır.",
+     "ruleDetail": "Armut'tan gelen işlerde anlaşma Armut'taki teklif üzerinden yapılır; garanti koşulları uygulamada kontrol edilir ve müşteriye işin kapsamı yazılı verilir."
+    },
+    {
+     "value": "crm",
+     "label": "Talepleri CRM'e kaydetme",
+     "explanation": "Armut'tan gelen talepler ve kazanılan işler CRM'e “Armut” kaynağıyla girilir.",
+     "scenario": "CRM kullanan işletmeler.",
+     "example": "Her Armut talebi CRM'de “Armut” kaynağıyla açılır, sonucu işlenir.",
+     "ruleDetail": "Armut talepleri ve kazanılan işler CRM'e (elle ya da toplu içe aktarmayla) “Armut” kaynağıyla kaydedilir; müşteri kişisel verisi yalnız iş için ve aydınlatma metnine uygun işlenir."
+    }
+   ]
   }
  ],
  "optionAdd": [
@@ -11302,6 +11712,14 @@
      "scenario": "Ürünlerini Dolap'ta (butik ya da bireysel satıcı olarak) satan ve ürünlerinin daha çok görüntülenmesini isteyen satıcılar.",
      "example": "Bir butik yeni sezon ürünlerini Dolap'ta 48 saatlik Mega öne çıkarma ile tanıtır.",
      "ruleDetail": "Dolap öne çıkarma yalnız Dolap'ta satılan ürünler için kullanılır; roket fiyatı ve “Satılırsa öde” koşulları uygulamada kontrol edilir, öne çıkarılan ürünün görüntülenme ve satış sonucu öncesiyle karşılaştırılır."
+    },
+    {
+     "value": "armut",
+     "label": "Armut (hizmet talepleri ve teklifler)",
+     "explanation": "Armut'ta müşteriler hizmet talebi açar ve hizmet verenlerden ücretsiz teklif alır; önceki işleri ve müşteri yorumlarını inceleyerek seçim yapar, teklif seçilerek yapılan işler Armut garantisi kapsamındadır (Armut'un App Store açıklaması, 2026-11-26). Hizmet verenin teklif ya da talep başına ödediği ücret (kredi, paket, komisyon) armut.com otomatik erişime kapalı olduğu için doğrulanamadı.",
+     "scenario": "Temizlik, nakliyat, tadilat, özel ders, etkinlik gibi yerel hizmet veren ve müşteri talebini Armut'tan da almak isteyen işletmeler.",
+     "example": "Bir boya-badana firması Armut'ta hizmet veren profili açar, gelen taleplere teklif verir ve kazandığı işleri CRM'e kaydeder.",
+     "ruleDetail": "Armut yalnız hizmet veren profili ve teklifler için kullanılır; teklif / talep başına maliyet ve ödeme modeli Armut uygulamasında kontrol edilir, harcama ve kazanılan iş sayısı aylık izlenir."
     },
     {
      "value": "programmatic",
@@ -12142,6 +12560,7 @@
        "idefix",
        "classifieds",
        "dolap",
+       "armut",
        "programmatic"
       ]
      }
@@ -12214,6 +12633,7 @@
        "idefix",
        "classifieds",
        "dolap",
+       "armut",
        "programmatic"
       ]
      }
@@ -12245,6 +12665,7 @@
        "idefix",
        "classifieds",
        "dolap",
+       "armut",
        "programmatic"
       ]
      }
@@ -12851,7 +13272,10 @@
    "oc_cta_url",
    "oc_cta_verbs",
    "oc_cta_primary",
-   "oc_whatsapp"
+   "oc_whatsapp",
+   "oc_services",
+   "oc_proof",
+   "oc_metrics"
   ],
   "mk_creative": [
    "oc_logo",
