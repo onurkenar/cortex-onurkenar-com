@@ -8086,6 +8086,252 @@
    ]
   },
   {
+   "id": "mk_x_listing",
+   "section": "mk_social",
+   "after": "mk_fb_shop_setup",
+   "label": "X'te Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on X",
+   "type": "multiselect",
+   "explanation": "Markanın ürün ve hizmetlerinin X profilinde nasıl gösterileceğini belirler. Profil öne çıkarma alanları (Profile Spotlights) yalnız ücretsiz Profesyonel Hesap'ta açılır. X Shopping (en çok 50 ürünlük X Shop ve profilde en çok 5 ürünlük Shop Spotlight) yalnız ABD'de kurulu olup ABD'ye fiziksel ürün satan satıcılara açıktır (2026-11-26) — Türkiye'deki işletme X'te ürün listeleyemez; satın alma her durumda satıcının sitesinde tamamlanır ve X satıştan pay almaz. Location Spotlight için X'in yardım sayfası hem “US Only” başlığını hem “dünya genelinde profesyonellere açık” cümlesini taşır; uygulamada açılıp açılmadığı kontrol edilir. X'te hizmet listeleme bölümü yoktur: hizmetler bio, web sitesi bağlantısı, Link Spotlight ve sabitlenmiş gönderiyle tanıtılır. Kaynak: X Yardım Merkezi › Professional Accounts; X Business › Shop Spotlight ve Shopping Manager (2026-11-26'da okundu); Link Spotlight için resmî ayrıntı sayfası bulunamadı, bilgiler Ekim 2022 tarihli basın haberlerinden (Social Media Today, TechCrunch).",
+   "rule": "X'te ürün ve hizmet listeleme: {labels}. X profilinde gösterilen ürün ve hizmet adları, fiyatları, adres ve iletişim bilgileri Ortak Bilgiler ve sitedeki sayfalarla aynı tutulur; bağlantılar sitedeki ilgili sayfaya UTM'li (utm_source=x) gider.",
+   "scenario": "X markanın mecraları arasındaysa ve X'ten ürün satışı, randevu ya da hizmet talebi bekleniyorsa.",
+   "example": "Bir kafe profesyonel hesaba geçer; Location Spotlight'ta adresini, saatlerini ve telefonunu gösterir, sabitlenmiş gönderisinde menüsünü ve sipariş sayfasının bağlantısını paylaşır.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "x"
+     ]
+    }
+   ],
+   "recommend": [
+    {
+     "field": "modules_extra",
+     "map": {
+      "booking": [
+       "link",
+       "profile"
+      ],
+      "ecommerce": [
+       "profile"
+      ]
+     }
+    },
+    {
+     "field": "operating_region",
+     "map": {
+      "local": [
+       "location",
+       "profile"
+      ],
+      "city": [
+       "location",
+       "profile"
+      ]
+     }
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/x-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "shopping",
+     "label": "X Shopping (X Shop ve Shop Spotlight) — yalnız ABD",
+     "explanation": "Shopping Manager'da katalog yüklenir, ürün setleri kurulur; profilde en çok 5 ürünlük Shop Spotlight karuseli ve “View shop” düğmesiyle açılan en çok 50 ürünlük X Shop yayınlanır. Ürüne dokunan kişi X içindeki ürün sayfasından satıcının sitesine geçer. Yalnız ABD'de kurulu olup ABD'ye fiziksel ürün satan satıcılara açıktır; Türkiye'deki işletmeye açık değildir.",
+     "scenario": "ABD'de şirketi olan ve ABD'ye fiziksel ürün satan işletmeler.",
+     "example": "ABD'de şirketi olan bir el yapımı seramik markası en çok satan 5 ürününü Shop Spotlight'ta, 40 ürününü X Shop'ta gösterir.",
+     "ruleDetail": "X Shopping yalnız satıcı ABD'de kuruluysa ve ABD'ye fiziksel ürün satıyorsa kurulur; kurulumdan önce X Shopping Politikaları ve güncel uygunluk şartı kontrol edilir (2026-11-26'da yalnız ABD). Satın alma sitede tamamlanır; X'teki fiyat ve stok sitedekiyle aynı tutulur."
+    },
+    {
+     "value": "location",
+     "label": "Location Spotlight (adres, saat, iletişim)",
+     "explanation": "Profilde işletmenin adresi küçük bir haritayla, isteğe bağlı çalışma saatleri ve iletişim düğmesi (telefon, SMS, X mesajı, e-posta) gösterilir; haritaya dokunan kişi yol tarifi alır.",
+     "scenario": "Ziyaretçi kabul eden yerel işletmeler (mağaza, kafe, klinik, ofis).",
+     "example": "Bir diş kliniği adresini, çalışma saatlerini ve telefonunu Location Spotlight'ta gösterir.",
+     "ruleDetail": "Location Spotlight'taki adres, çalışma saatleri, telefon ve e-posta Ortak Bilgiler › İletişim & Adres ve Çalışma Saatleri'nden aynen alınır, değişince X'te aynı gün güncellenir; hesapta açılmıyorsa (bölge sınırı) bilgiler bio ve sabitlenmiş gönderiyle verilir."
+    },
+    {
+     "value": "link",
+     "label": "Link Spotlight (CTA düğmesi)",
+     "explanation": "Profile hazır metinli bir eylem düğmesi eklenir (ör. “Randevu al”, “Rezervasyon yap”, “Menüyü gör”, “Şimdi izle”). Düğme yalnız X'in izin verdiği alan adlarına gidebilir; 2022'de ABD'de açıldı, Türkiye'de ve kendi alan adınızla kullanılabilirliği uygulamada kontrol edilir.",
+     "scenario": "Randevu, rezervasyon, yayın ya da içerik sayfasına trafik isteyen işletmeler.",
+     "example": "Bir restoran Link Spotlight düğmesini rezervasyon sağlayıcısındaki sayfasına bağlar.",
+     "ruleDetail": "Link Spotlight düğmesi Ortak Bilgiler › Ana CTA'ya en yakın hazır metinle eklenir; hedef adres X'in izin verdiği alan adlarındaysa doğrudan, değilse kullanılmaz ve CTA bio bağlantısıyla verilir. Kampanya bitince düğmenin hedefi kontrol edilir."
+    },
+    {
+     "value": "profile",
+     "label": "Bio, web sitesi bağlantısı ve sabitlenmiş tanıtım gönderisi",
+     "explanation": "Profil biyografisinde ürün / hizmet özeti, web sitesi alanında sitenin bağlantısı, profilin en üstünde sabitlenmiş tanıtım gönderisi bulunur.",
+     "scenario": "X hesabı olan her işletme; Türkiye'deki işletmelerde ana listeleme yolu.",
+     "example": "Bir yazılım şirketi bio'suna ürün adını ve değer önerisini yazar, sabitlenmiş gönderisinde ürün tanıtım videosunu ve deneme sayfasının bağlantısını paylaşır.",
+     "ruleDetail": "Bio'da Ortak Bilgiler › Kısa Tanıtım ve ana ürün / hizmet grupları, web sitesi alanında Ana CTA'nın sayfası (UTM'li) yer alır; sabitlenmiş gönderi Ortak Bilgiler › Ürün / Hizmet Listesi'nden güncel bir ürün ya da hizmeti tanıtır ve ayda bir yenilenir."
+    },
+    {
+     "value": "none",
+     "label": "X'te ürün / hizmet listelenmeyecek",
+     "explanation": "X hesabı yalnız duyuru, haber ve sohbet için kullanılır; ürün ve hizmet listelenmez.",
+     "scenario": "X'ten satış ya da talep beklenmiyorsa.",
+     "example": "Bir dernek X'i yalnız duyurular için kullanır.",
+     "ruleDetail": "X'te ürün ya da hizmet listelenmez; profildeki web sitesi bağlantısı yalnız sitenin ana sayfasıdır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_x_shop_setup",
+   "section": "mk_social",
+   "after": "mk_x_listing",
+   "label": "X Shopping Ayarları",
+   "en": "X Shopping Settings",
+   "type": "multiselect",
+   "explanation": "X Shopping'in kurulum ve kullanım kurallarını belirler. Kurulum Shopping Manager'da masaüstü tarayıcıdan, işletme hesabıyla yapılır (reklam engelleyici erişimi engelleyebilir). Katalog elle, toplu yüklemeyle (yalnız .csv / .tsv, en çok 100 MB) ya da zamanlanmış akışla (HTTPS ya da 22 numaralı port üzerinden SFTP, UTF-8) yüklenir ve X'in Ürün Verisi Şartları'na uymalıdır; Shopify kataloğu doğrudan eşitlenebilir. Ürün setinde en çok 50 ürün olur: Shop Spotlight setin ilk 5 ürününü gösterir, X Shop için en az 6 ürün önerilir; X Shop adı en çok 50, açıklaması en çok 90 karakterdir. Canlı yayında satış (Live Shopping) yalnız hesap yöneticisi olan ve asgari harcamayı karşılayan reklamverenlere açıktır. Kaynak: X Yardım Merkezi › Professional Accounts; X Business › Shop Spotlight ve Shopping Manager (2026-11-26'da okundu); Link Spotlight için resmî ayrıntı sayfası bulunamadı, bilgiler Ekim 2022 tarihli basın haberlerinden (Social Media Today, TechCrunch).",
+   "rule": "X Shopping ayarları: {labels}. X Shopping yalnız satıcının ABD'de kurulu olup ABD'ye fiziksel ürün sattığı durumda ve X Shopping Politikaları'na göre kurulur; katalog sitedeki ürün verisinden beslenir.",
+   "scenario": "X Shopping açılacaksa (satıcı ABD'de kuruluysa ve ABD'ye fiziksel ürün satıyorsa).",
+   "example": "ABD'de şirketi olan bir kozmetik markası Shopify kataloğunu eşitler, “Çok satanlar” setini Shop Spotlight'ta, “Tüm ürünler” setini X Shop'ta yayınlar.",
+   "showIf": [
+    {
+     "field": "mk_x_listing",
+     "in": [
+      "shopping"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/x-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "eligibility",
+     "label": "Uygunluk ve X Shopping Politikaları",
+     "explanation": "Satıcının ABD'de kurulu olup ABD'ye fiziksel ürün sattığı ve X Shopping Politikaları'na uyduğu kurulumdan önce kontrol edilir; hesap Profesyonel Hesap'a çevrilir.",
+     "scenario": "Her X Shopping kurulumu.",
+     "example": "Kurulumdan önce ülke, ürün türü ve politika şartları tek tek işaretlenir.",
+     "ruleDetail": "X Shopping kurulmadan önce uygunluk (ABD'de kurulu satıcı, ABD'ye fiziksel ürün) ve X Shopping Politikaları kontrol edilir, sonuç kaydedilir; yılda bir yeniden kontrol edilir."
+    },
+    {
+     "value": "catalog",
+     "label": "Katalog ve ürün akışı",
+     "explanation": "Katalog elle, .csv / .tsv toplu yüklemeyle (en çok 100 MB) ya da zamanlanmış akışla yüklenir; Shopify kataloğu eşitlenebilir. Ürün verisi X'in Ürün Verisi Şartları'na uymalı.",
+     "scenario": "Her X Shopping kurulumu.",
+     "example": "Siteden üretilen ürün akışı her gece HTTPS adresinden zamanlanmış akışla alınır.",
+     "ruleDetail": "Katalog sitedeki ürün verisinden zamanlanmış akışla (HTTPS ya da SFTP, UTF-8) beslenir, şablondaki bütün alanlar doldurulur; hata raporu her yüklemeden sonra kontrol edilir."
+    },
+    {
+     "value": "sets",
+     "label": "Ürün setleri",
+     "explanation": "Ürünler elle ya da süzgeçle (özel etiketler — ör. kampanya, yeni sezon) ürün setlerinde toplanır; set en çok 50 ürün alır ve sıralaması sürükleyerek değiştirilir.",
+     "scenario": "Her X Shopping kurulumu.",
+     "example": "“Çok satanlar” elle, “İndirimdekiler” özel etiketle süzülen set.",
+     "ruleDetail": "Shop Spotlight için 5 ürünlük, X Shop için en az 6 en çok 50 ürünlük set kurulur; setler ayda bir ve her kampanya başında güncellenir."
+    },
+    {
+     "value": "spotlight",
+     "label": "Shop Spotlight",
+     "explanation": "Profilde gönderilerin üstünde en çok 5 ürünlük karusel; setin ilk 5 ürünü gösterilir.",
+     "scenario": "En çok satan ya da sezon ürünlerini öne çıkarmak isteyen satıcılar.",
+     "example": "Sevgililer Günü haftasında hediye setleri karuselde.",
+     "ruleDetail": "Shop Spotlight'ta setin ilk 5 ürünü gösterilir; sıra en çok satanlara ya da dönemin kampanyasına göre belirlenir."
+    },
+    {
+     "value": "shop",
+     "label": "X Shop mağazası",
+     "explanation": "Profildeki “View shop” düğmesiyle açılan, en çok 50 ürünlük mağaza; adı en çok 50, açıklaması en çok 90 karakter.",
+     "scenario": "Çok ürünlü satıcılar.",
+     "example": "“Tüm koleksiyon” adlı 50 ürünlük X Shop.",
+     "ruleDetail": "X Shop adı en çok 50, açıklaması en çok 90 karakterle yazılır ve markanın ses tonuna uyar; ürünler sitedeki kategorilerle aynı gruplanır."
+    },
+    {
+     "value": "price_sync",
+     "label": "Fiyat ve stok eşitliği",
+     "explanation": "X'teki ürün fiyatı ve stok bilgisi sitedekiyle aynı tutulur; satın alma sitede tamamlanır, X satıştan pay almaz.",
+     "scenario": "Her X Shopping kurulumu.",
+     "example": "Kampanya bitince akış aynı gün yeniden çalıştırılır.",
+     "ruleDetail": "X'teki fiyat ve stok sitedekiyle aynı tutulur; kampanya başlayınca ya da bitince akış aynı gün yeniden çalıştırılır."
+    }
+   ]
+  },
+  {
+   "id": "mk_x_profile_setup",
+   "section": "mk_social",
+   "after": "mk_x_shop_setup",
+   "label": "X Profesyonel Hesap Ayarları",
+   "en": "X Professional Account Settings",
+   "type": "multiselect",
+   "explanation": "X profesyonel hesabının ve profilin kurulum kurallarını belirler. Profesyonel Hesap ücretsizdir; var olan bir hesap çevrilir (yeni hesap doğrudan profesyonel açılamaz), istenirse kişisel hesaba geri dönülür. Şartlar: X Kullanıcı Sözleşmesi'ni tekrar tekrar ihlal etmiş olmamak; hesap adı, bio ve profil fotoğrafıyla tam profil; kimliğin açıkça belli olması; başka bir kişi, marka ya da kurumun kimliğini kullanmamak; parodi ve hayran hesabı olmamak. Profesyonel hesapta kategori, Profesyonel Ana Sayfa (son 28 günün analizi) ve öne çıkarma alanları (Spotlight) açılır. Kaynak: X Yardım Merkezi › Professional Accounts; X Business › Shop Spotlight ve Shopping Manager (2026-11-26'da okundu); Link Spotlight için resmî ayrıntı sayfası bulunamadı, bilgiler Ekim 2022 tarihli basın haberlerinden (Social Media Today, TechCrunch).",
+   "rule": "X profesyonel hesap ayarları: {labels}. X hesabı markanın kendi adına, kişiye özel yönetici erişimiyle yönetilir; profil bilgileri Ortak Bilgiler'le aynı tutulur.",
+   "scenario": "X'te ürün ya da hizmet tanıtılacaksa (listelenmeyecek seçilmediyse).",
+   "example": "Bir muhasebe bürosu hesabını profesyonel hesaba çevirir, “Muhasebe” kategorisini seçer, Location Spotlight'ı açar ve her ay sabitlenmiş gönderisini yeniler.",
+   "showIf": [
+    {
+     "field": "mk_x_listing",
+     "in": [
+      "shopping",
+      "location",
+      "link",
+      "profile"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/x-uzmani",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "pro_account",
+     "label": "Profesyonel hesaba geçiş ve kategori",
+     "explanation": "Hesap ayarlardan profesyonel hesaba çevrilir; kategori seçilir, “İşletme” ya da “İçerik üreticisi” türü belirlenir.",
+     "scenario": "Her işletme hesabı.",
+     "example": "Bir kafe “Kafe” kategorisini ve “İşletme” türünü seçer.",
+     "ruleDetail": "X hesabı ücretsiz Profesyonel Hesap'a çevrilir; kategori markanın sektörüne en yakın seçenekten, tür “İşletme” olarak seçilir ve profilde gösterilir."
+    },
+    {
+     "value": "eligibility",
+     "label": "Profesyonel hesap şartları",
+     "explanation": "Tam profil (hesap adı, bio, profil fotoğrafı), açık kimlik, başkasının kimliğini kullanmama, parodi / hayran hesabı olmama ve tekrarlanan ihlal geçmişi olmama şartları.",
+     "scenario": "Her işletme hesabı.",
+     "example": "Profil fotoğrafı logo, hesap adı marka adı, bio kurumu tanıtır.",
+     "ruleDetail": "Profil adı Ortak Bilgiler › Marka Adı, profil fotoğrafı logo, bio Kısa Tanıtım'dan alınır; profesyonel hesap şartları yılda bir kontrol edilir."
+    },
+    {
+     "value": "location_info",
+     "label": "Location Spotlight bilgileri",
+     "explanation": "Adres (harita), isteğe bağlı çalışma saatleri ve iletişim düğmesinin seçenekleri (telefon, SMS, X mesajı, e-posta) doldurulur; uygulamada Profili düzenle › Profesyonel profili düzenle › Profil Spotlight'tan değiştirilir.",
+     "scenario": "Location Spotlight kullanılan hesaplar.",
+     "example": "Telefon ve e-posta iletişim düğmesinde, X mesajı kapalı.",
+     "ruleDetail": "Location Spotlight'taki adres, çalışma saatleri, telefon ve e-posta Ortak Bilgiler'den alınır; iletişim düğmesinde yalnız yanıtlanacak kanallar açılır (X mesajı açıksa en geç 1 iş günü içinde yanıt verilir)."
+    },
+    {
+     "value": "bio_link",
+     "label": "Bio ve web sitesi bağlantısı",
+     "explanation": "Bio'da ürün / hizmet özeti, web sitesi alanında UTM'li bağlantı.",
+     "scenario": "Her işletme hesabı.",
+     "example": "Web sitesi alanı ornek.com/?utm_source=x&utm_medium=social&utm_campaign=profil.",
+     "ruleDetail": "Profildeki web sitesi bağlantısı UTM'li (utm_source=x, utm_medium=social, utm_campaign=profil) Ana CTA sayfasına ya da ana sayfaya gider; bio ürün / hizmet değişince güncellenir."
+    },
+    {
+     "value": "pinned",
+     "label": "Sabitlenmiş tanıtım gönderisi",
+     "explanation": "Profilin en üstüne bir ürün / hizmet tanıtım gönderisi sabitlenir.",
+     "scenario": "Her işletme hesabı.",
+     "example": "Yeni hizmet paketinin tanıtım videosu sabitlenir.",
+     "ruleDetail": "Profilin en üstünde güncel bir ürün ya da hizmet tanıtım gönderisi sabitli durur; ayda bir ve her kampanya başında yenilenir."
+    },
+    {
+     "value": "analytics",
+     "label": "Profesyonel Ana Sayfa analizi",
+     "explanation": "Profesyonel Ana Sayfa'da son 28 günün hesap analizi izlenir; hesabın tamamına henüz açılmamış olabilir.",
+     "scenario": "Profesyonel hesap kullanan işletmeler.",
+     "example": "Aylık raporda profil ziyareti ve bağlantı tıklamaları.",
+     "ruleDetail": "Profesyonel Ana Sayfa'daki 28 günlük analiz ayda bir incelenir; profil bağlantısı tıklamaları sitedeki UTM verisiyle karşılaştırılır."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",
