@@ -7790,6 +7790,140 @@
    ]
   },
   {
+   "id": "mk_tt_listing",
+   "section": "mk_social",
+   "after": "mk_ig_shop_setup",
+   "label": "TikTok'ta Ürün ve Hizmet Listeleme",
+   "en": "Product and Service Listings on TikTok",
+   "type": "multiselect",
+   "explanation": "Markanın ürün ve hizmetlerinin TikTok profilinde nasıl listeleneceğini belirler. TikTok Shop ve profildeki alışveriş çantası (Showcase) yalnız TikTok Shop'un açık olduğu pazarlarda kullanılabilir; TikTok'un reklam yardım sayfası bu pazarları Brezilya, Fransa, Endonezya, İrlanda, İtalya, Japonya, Malezya, Meksika, Filipinler, Singapur, İspanya, Tayland, Birleşik Krallık, ABD ve Vietnam olarak sayar — Türkiye yoktur (satıcı sayfasındaki daha uzun listede de yok; bkz. TikTok Ads › TikTok Shop). Türkiye'deki işletme ürün ve hizmetlerini işletme hesabının İşletme Sayfası, iletişim bilgileri, profil bağlantısı ve videolarla tanıtır. Kaynak: TikTok İşletme Kaynak Merkezi “About TikTok Shop and Showcase” (son güncelleme Haziran 2026) ve TikTok Creator Academy “Level up Your Brand With a TikTok Business Account” (son güncelleme 13 Temmuz 2026), 2026-11-26'da okundu.",
+   "rule": "TikTok'ta ürün ve hizmet listeleme: {labels}. TikTok'ta gösterilen ürün ve hizmet adları, fiyatları ve bağlantıları Ortak Bilgiler › Ürün / Hizmet Listesi ve sitedeki sayfalarla aynı tutulur; bağlantılar sitedeki ilgili sayfaya UTM'li (utm_source=tiktok) gider. Ürün ya da hizmet tanıtan iş birliği videolarında TikTok'un ticari içerik açıklaması ayarı açılır ve reklam olduğu açıkça belirtilir (Türkiye'deki sosyal medya etkileyicisi reklam kuralları hukuk biriminin teyidiyle uygulanır).",
+   "scenario": "TikTok markanın mecraları arasındaysa ve profilden ürün satışı ya da hizmet talebi bekleniyorsa.",
+   "example": "Bir kafe zinciri işletme hesabının İşletme Sayfası'na web sitesi, telefon ve adresi ekler; profil bağlantısını online sipariş sayfasına verir, her yeni ürün için kısa bir tanıtım videosu paylaşır.",
+   "showIf": [
+    {
+     "field": "mk_platforms",
+     "in": [
+      "tiktok"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:pazarlama:product_solution_marketing/urun-pazarlamasi-muduru/urun-pazarlama-yoneticisi"
+   ],
+   "options": [
+    {
+     "value": "shop",
+     "label": "TikTok Shop ve Showcase (yalnız TikTok Shop pazarlarında)",
+     "explanation": "TikTok Shop'ta ürünler videolarda, canlı yayınlarda ve profildeki Showcase sekmesinde satılır. Resmî hesapta Showcase markanın bütün ürünlerini, pazarlama ya da bağlı ortaklık hesabında markanın ürünlerinin bir kısmını ya da tamamını gösterir; TikTok Shop'u olmadan da Showcase açılabilir. Yalnız TikTok Shop pazarlarında kullanılabilir; Türkiye bu pazarlar arasında değildir.",
+     "scenario": "TikTok Shop pazarlarından birinde şirketi ve satışı olan işletmeler.",
+     "example": "Birleşik Krallık'ta şirketi olan bir kozmetik markası TikTok Shop'unu açar; ürünleri profilindeki alışveriş çantasında ve videolarındaki ürün bağlantılarında gösterir.",
+     "ruleDetail": "TikTok Shop ve Showcase yalnız işletmenin şirketi TikTok Shop pazarlarından birindeyse kurulur; kurulumdan önce TikTok'un güncel pazar listesi kontrol edilir (2026-11-26'da Türkiye listede yok) ve kurulum kuralları TikTok Ads › TikTok Shop kararına göre uygulanır."
+    },
+    {
+     "value": "business_page",
+     "label": "İşletme Sayfası ve iletişim bilgileri",
+     "explanation": "İşletme hesabının profilindeki İşletme Sayfası sekmesinde web sitesi, uygulama indirme bağlantısı ve iletişim bilgileri (e-posta, telefon, adres) bir arada gösterilir; bazı bölgelerde ürün ve tanıtım görselleri için fotoğraf galerisi de vardır.",
+     "scenario": "TikTok'ta işletme hesabı olan her işletme.",
+     "example": "Bir klinik İşletme Sayfası'na web sitesi, randevu telefonu ve adresini ekler; fotoğraf galerisinde hizmet görselleri durur.",
+     "ruleDetail": "TikTok işletme hesabının İşletme Sayfası'ndaki web sitesi, e-posta, telefon ve adres Ortak Bilgiler › İletişim & Adres ile aynı yazılır; fotoğraf galerisi bölgede açıksa ana ürün ve hizmetlerin görselleriyle doldurulur."
+    },
+    {
+     "value": "link_bio",
+     "label": "Profil bağlantısı (link-in-bio)",
+     "explanation": "İşletme hesabı profiline bağlantı ekleyebilir; kayıtlı işletme hesapları profil bağlantısı ve uygulama indirme bağlantısı gibi yeni özelliklere öncelikli erişir.",
+     "scenario": "Siteye trafik göndermek isteyen her işletme.",
+     "example": "Bir giyim markası profil bağlantısını yeni sezon sayfasına verir, kampanya bitince ana sayfaya döndürür.",
+     "ruleDetail": "Profil bağlantısı Ortak Bilgiler › Ana CTA'nın sayfasına UTM'li gider; kampanyaya göre güncellenir, kırık bağlantı ayda bir kontrol edilir. Bağlantı alanı görünmüyorsa önce kayıtlı işletme hesabı tamamlanır."
+    },
+    {
+     "value": "service_videos",
+     "label": "Hizmet ve ürün tanıtım videoları, oynatma listeleri",
+     "explanation": "Her ana ürün grubu ya da hizmet için kısa tanıtım videoları hazırlanır ve oynatma listelerinde toplanır.",
+     "scenario": "TikTok Shop kullanamayan ya da hizmet satan her işletme.",
+     "example": "Bir spor salonu “Pilates”, “Kişisel antrenman” ve “Grup dersleri” oynatma listelerini açar; her videonun açıklamasında ilgili hizmet anılır.",
+     "ruleDetail": "Ortak Bilgiler › Ürün / Hizmet Listesi'ndeki her ana ürün grubu ya da hizmet için en az bir tanıtım videosu ve oynatma listesi hazırlanır; videolarda fiyat söylenirse sitedeki fiyatla aynı olur."
+    },
+    {
+     "value": "none",
+     "label": "TikTok'ta ürün / hizmet listelenmeyecek",
+     "explanation": "TikTok yalnız marka bilinirliği ve içerik için kullanılır; profilde yalnız sitenin ana sayfası bağlantısı durur.",
+     "scenario": "TikTok'tan satış ya da talep beklenmiyorsa.",
+     "example": "Bir kamu kurumu TikTok'u yalnız bilgilendirme videoları için kullanır.",
+     "ruleDetail": "TikTok'ta ürün ya da hizmet listelenmez; profil bağlantısı yalnız sitenin ana sayfasıdır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "mk_tt_profile_setup",
+   "section": "mk_social",
+   "after": "mk_tt_listing",
+   "label": "TikTok İşletme Hesabı Ayarları",
+   "en": "TikTok Business Account Settings",
+   "type": "multiselect",
+   "explanation": "TikTok işletme hesabının ürün ve hizmet tanıtımı için kullanılacak özelliklerini belirler. İşletme hesabı kayıtlı ya da kayıtsız açılabilir: kayıtsız hesap ayrıntılı istatistikler, profile bağlantı ekleme ve bazı reklam seçeneklerini verir; kayıtlı hesap ayrıca TikTok Ads Manager, bölgeye göre TikTok Shop, işletme kategorisi ve resmî profil tanımlayıcısı alır, yeni işletme özelliklerine öncelikli erişir. Mavi onay işareti işletme hesabıyla otomatik gelmez. Kaynak: TikTok İşletme Kaynak Merkezi “About TikTok Shop and Showcase” (son güncelleme Haziran 2026) ve TikTok Creator Academy “Level up Your Brand With a TikTok Business Account” (son güncelleme 13 Temmuz 2026), 2026-11-26'da okundu.",
+   "rule": "TikTok işletme hesabı ayarları: {labels}. Hesap kurumsal e-postayla açılır, yönetici yetkileri kişiye özel hesaplarla verilir ve işletmeden ayrılan kişinin yetkisi aynı gün kaldırılır.",
+   "scenario": "TikTok'ta İşletme Sayfası ya da profil bağlantısı kullanılacaksa.",
+   "example": "Bir mobilya markası hesabını kayıtlı işletme hesabına çevirir, kategorisini seçer; İşletme Sayfası'na iletişim bilgilerini ve uygulama indirme bağlantısını ekler.",
+   "showIf": [
+    {
+     "field": "mk_tt_listing",
+     "in": [
+      "business_page",
+      "link_bio"
+     ]
+    }
+   ],
+   "agents": [
+    "poz:pazarlama:social_media_marketing/kanal-yonetimi-yoneticisi/tiktok-uzmani"
+   ],
+   "options": [
+    {
+     "value": "registered",
+     "label": "Kayıtlı işletme hesabı",
+     "explanation": "Kayıtlı işletme hesabı işletme kategorisini ve resmî profil tanımlayıcısını gösterir; Ads Manager, bölgeye göre TikTok Shop ve yeni işletme özelliklerine öncelikli erişim alır.",
+     "scenario": "TikTok'ta reklam verecek ya da profil bağlantısı gibi özellikleri güvenle kullanacak işletmeler.",
+     "example": "Hesap şirket bilgileriyle kayıtlı işletme hesabına çevrilir, kategori “Restoran” seçilir.",
+     "ruleDetail": "TikTok hesabı kayıtlı işletme hesabı olarak açılır; kayıt bilgileri Ortak Bilgiler › Firma Bilgileri ve ticari unvanla aynı girilir."
+    },
+    {
+     "value": "contact",
+     "label": "İletişim bilgileri (e-posta, telefon, adres)",
+     "explanation": "İşletme hesabında e-posta, telefon ve adres profilde gösterilir.",
+     "scenario": "Telefonla, e-postayla ya da mağazada müşteri karşılayan işletmeler.",
+     "example": "Profilde randevu telefonu ve mağaza adresi.",
+     "ruleDetail": "Profildeki e-posta, telefon ve adres Ortak Bilgiler › İletişim & Adres'ten alınır; bilgiler değişince TikTok'ta aynı gün güncellenir."
+    },
+    {
+     "value": "app_link",
+     "label": "Uygulama indirme bağlantısı",
+     "explanation": "İşletme Sayfası'nda ve profilde uygulama indirme bağlantısı gösterilir.",
+     "scenario": "Mobil uygulaması olan işletmeler.",
+     "example": "Profilde App Store / Google Play indirme bağlantısı.",
+     "ruleDetail": "Uygulama indirme bağlantısı yalnız mobil uygulama yayındaysa eklenir ve uygulama mağazası sayfasına gider."
+    },
+    {
+     "value": "gallery",
+     "label": "Fotoğraf galerisi (bazı bölgelerde)",
+     "explanation": "İşletme Sayfası'nda ürün ve tanıtım görsellerinden oluşan fotoğraf galerisi; yalnız bazı bölgelerde açıktır.",
+     "scenario": "Ürün ya da hizmetini görselle anlatan işletmeler.",
+     "example": "Galeride menüdeki en çok satan 8 ürünün görseli.",
+     "ruleDetail": "Fotoğraf galerisi bölgede açıksa ana ürün ve hizmetlerin görselleriyle doldurulur ve üç ayda bir güncellenir."
+    },
+    {
+     "value": "disclosure",
+     "label": "Ticari içerik açıklaması",
+     "explanation": "Markayı ya da ürünü tanıtan videolarda TikTok'un ticari içerik açıklaması ayarı açılır.",
+     "scenario": "İçerik üreticisi iş birliği yapan ya da ürün tanıtan her hesap.",
+     "example": "İş birliği videosunda ticari içerik açıklaması açılır, açıklamaya da iş birliği yazılır.",
+     "ruleDetail": "Ürün ya da hizmet tanıtan her iş birliği videosunda ticari içerik açıklaması açılır ve reklam olduğu videoda ve açıklamada belirtilir."
+    }
+   ]
+  },
+  {
    "id": "mk_comp_ads_log",
    "section": "mk_comp",
    "after": "mk_comp_data",
@@ -11502,6 +11636,88 @@
      "scenario": "Emlak, otomotiv, finans gibi sahibinden.com kitlesine ulaşmak isteyen markalar.",
      "example": "Bir kredi kuruluşu konut ilanlarının yanında görüntülü reklam verir.",
      "ruleDetail": "sahibinden.com'da marka (görüntülü) reklamı yalnız reklam ürünü, yerleşim, fiyat ve ölçüm yöntemi sahibinden.com'dan yazılı olarak alındıktan sonra planlanır; reklam metni Reklam Metni İddia Kuralı'na uyar."
+    }
+   ]
+  },
+  {
+   "id": "mk_hepsiemlak",
+   "section": "mk_mpads",
+   "after": "mk_sahibinden",
+   "label": "Hepsiemlak Kurumsal Kullanım",
+   "en": "Hepsiemlak Business Use",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:satis:08.03/hizli-satis-ve-donusum/dijital-satis-temsilcisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "classifieds"
+     ]
+    }
+   ],
+   "explanation": "Hepsiemlak'ta emlak ofisi hesabının, danışmanların, ilanların, öne çıkarmanın ve gelen taleplerin nasıl yönetileceğini belirler. Ofis sayfası adresi Ortak Bilgiler › İlan Portalı Mağazaları'ndaki Hepsiemlak satırına yazılır. hepsiemlak.com otomatik erişime kapalı olduğu için ofis paketlerinin, danışman hesaplarının ve öne çıkarma ürünlerinin adları ve fiyatları doğrulanamadı (2026-11-26); panelden kontrol edilir. İlanların yasal zorunlulukları (yetki belgesi numarası, yetkilendirme sözleşmesi, ilanın üç gün içinde kaldırılması) Emlak ve Taşıt İlanı Mevzuatı kararındadır.",
+   "rule": "Hepsiemlak'ta yapılacaklar: {labels}.",
+   "scenario": "Reklam Kanalları'nda ilan portalları seçildiyse ve Hepsiemlak kullanılıyorsa seçilir.",
+   "example": "Bir emlak ofisi Hepsiemlak'ta ofis hesabı açar, her danışmana ayrı hesap tanımlar, yeni portföyü bir hafta öne çıkarır ve gelen talepleri CRM'e “Hepsiemlak” kaynağıyla kaydeder.",
+   "options": [
+    {
+     "value": "office",
+     "label": "Emlak ofisi hesabı ve paket",
+     "explanation": "İlanlar kişisel hesap yerine emlak ofisi adına kurumsal hesaptan verilir; paket ve ilan hakkı panelden seçilir. Portal, ofis üyeliğinden önce yetki belgesini Ticaret Bakanlığı sisteminden kontrol eder.",
+     "scenario": "İlan veren emlak ofisleri ve gayrimenkul şirketleri.",
+     "example": "Ofis, yetki belgesiyle Hepsiemlak'ta kurumsal hesap açar.",
+     "ruleDetail": "Hepsiemlak'ta ilanlar emlak ofisi adına kurumsal hesaptan verilir; hesap ve erişimler kurum adına tutulur, paket ve ilan hakkı panelden kontrol edilir, yetki belgesi güncel tutulur."
+    },
+    {
+     "value": "agents",
+     "label": "Danışman hesapları",
+     "explanation": "Ofisin her danışmanı için ayrı kullanıcı ya da profil tanımlanır; ilanlar ilgili danışmanla eşleşir.",
+     "scenario": "Birden çok danışmanı olan ofisler.",
+     "example": "Beş danışmanın her biri kendi portföyünü yönetir, ofis yöneticisi hepsini görür.",
+     "ruleDetail": "Hepsiemlak'ta her danışman kendi hesabıyla çalışır; ayrılan danışmanın erişimi aynı gün kapatılır, portföyü başka danışmana devredilir; danışman bilgileri ilanlarda doğru ve güncel tutulur."
+    },
+    {
+     "value": "verify",
+     "label": "İlan öncesi doğrulamaya hazırlık",
+     "explanation": "Portal ilanı yayımlamadan önce ilan verenin kimliğini ve taşınmazın sahibi ya da yetkilisi olduğunu doğrular; yazılı yetkilendirme sözleşmesi önceden hazırlanır.",
+     "scenario": "Başkasına ait taşınmaz için ilan veren her ofis.",
+     "example": "Daire sahibiyle yetkilendirme sözleşmesi imzalanır, ilan doğrulamadan sonra yayına girer.",
+     "ruleDetail": "Hepsiemlak'ta ilan vermeden önce taşınmaz sahibiyle yazılı yetkilendirme sözleşmesi yapılır; portalın doğrulaması tamamlanmadan ilan yayında sayılmaz ve müşteriye yayında olduğu söylenmez."
+    },
+    {
+     "value": "boost",
+     "label": "İlan öne çıkarma",
+     "explanation": "Seçilmiş ilanlar Hepsiemlak'ın öne çıkarma seçenekleriyle daha görünür yapılır; ürün adları, süreler ve fiyatlar panelde görülür.",
+     "scenario": "Yeni portföy ya da hızlı satılması / kiralanması gereken ilanlar.",
+     "example": "Yeni portföydeki üç daire bir hafta öne çıkarılır.",
+     "ruleDetail": "Öne çıkarma yalnız seçilmiş ilanlarda ve belirli süreyle kullanılır; ürün, süre ve fiyat panelden kontrol edilir, öncesi ve sonrası görüntülenme, mesaj ve arama sayısı karşılaştırılır."
+    },
+    {
+     "value": "response",
+     "label": "Mesaj ve aramalara yanıt",
+     "explanation": "Hepsiemlak üzerinden gelen mesaj ve aramalara yanıt süresi ve sorumlu danışman belirlenir.",
+     "scenario": "Talep yoğunluğu yüksek ofisler.",
+     "example": "Mesajlar iş saatlerinde bir saat içinde ilgili danışmana yönlendirilir.",
+     "ruleDetail": "Hepsiemlak mesaj ve aramalarına belirlenen sürede, ilgili danışman tarafından yanıt verilir; yanıtlarda ilandaki fiyat ve bilgilerle çelişen bilgi verilmez."
+    },
+    {
+     "value": "crm",
+     "label": "Talepleri CRM'e kaydetme",
+     "explanation": "Hepsiemlak'tan gelen talepler ve sonuçlanan işler CRM'e “Hepsiemlak” kaynağıyla girilir.",
+     "scenario": "CRM kullanan ofisler.",
+     "example": "Her talep CRM'de “Hepsiemlak” kaynağıyla açılır ve danışmana atanır.",
+     "ruleDetail": "Hepsiemlak talepleri ve sonuçlanan işler CRM'e “Hepsiemlak” kaynağıyla kaydedilir; kişisel veriler yalnız iş için ve aydınlatma metnine uygun işlenir."
+    },
+    {
+     "value": "close",
+     "label": "Satış ya da kiralamadan sonra ilanı kaldırma",
+     "explanation": "Satılan, kiralanan ya da satıştan vazgeçilen taşınmazın ilanı en geç üç gün içinde kaldırılır.",
+     "scenario": "Her ilan veren ofis.",
+     "example": "Daire kiralanınca ilan aynı gün kapatılır.",
+     "ruleDetail": "Satılan, kiralanan, satıştan vazgeçilen ya da yetkilendirme sözleşmesi biten taşınmazın Hepsiemlak ilanı en geç üç gün içinde kaldırılır; ilan listesi haftalık kontrol edilir."
     }
    ]
   }
