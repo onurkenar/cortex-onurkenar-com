@@ -9576,9 +9576,9 @@
    "type": "accounts",
    "placeholder": "Satır başına Ad | URL — örn. Eğitim platformu | https://…",
    "otherLabel": "Diğer online eğitim platformları",
-   "explanation": "Kurumun ya da eğitmenlerinin ücretli / ücretsiz online kurs ya da ders sattığı platformlardaki eğitmen profili, kurs ya da okul adreslerini ayrı kutulara girersiniz. Türkiye'deki platformlar: Boenstitü (Boen Academy — gelir ortaklığı ya da içerik haklarının platforma devredildiği tek seferlik ödeme modeli), Unicourse (üniversite dersleri, satıştan pay), Youthall Akademi ve Techcareer.net (başvurusu kabul edilen eğitmenler), Özel Ders Alanı ve Mentural (birebir özel ders ve mentorluk ilanları). Uluslararası pazar yerleri (Udemy, Skillshare, Domestika) kursu kendi kataloğunda satar; okul kurma araçlarında (Teachable, Thinkific, Kajabi, Podia) kurs sizin okul adresinizde ya da kendi alan adınızda durur — bu kutulara alan adı uyarısı uygulanmaz. Coursera ve LinkedIn Learning yalnız başvurusu kabul edilen kurum ve eğitmenlerle çalışır. Listede olmayan platformlar “Diğer online eğitim platformları” kutusuna “Ad | adres” olarak yazılır. Kurslar yalnız sitenin kendi eğitim modülünde satılıyorsa alan boş bırakılır.",
+   "explanation": "Kurumun ya da eğitmenlerinin ücretli / ücretsiz online kurs ya da ders sattığı platformlardaki eğitmen profili, kurs ya da okul adreslerini ayrı kutulara girersiniz. Türkiye'deki platformlar: Boenstitü (Boen Academy — gelir ortaklığı ya da içerik haklarının platforma devredildiği tek seferlik ödeme modeli), Unicourse (üniversite dersleri, satıştan pay), Youthall Akademi ve Techcareer.net (başvurusu kabul edilen eğitmenler). Uluslararası pazar yerleri (Udemy, Skillshare, Domestika) kursu kendi kataloğunda satar; okul kurma araçlarında (Teachable, Thinkific, Kajabi, Podia) kurs sizin okul adresinizde ya da kendi alan adınızda durur — bu kutulara alan adı uyarısı uygulanmaz. Coursera ve LinkedIn Learning yalnız başvurusu kabul edilen kurum ve eğitmenlerle çalışır. Listede olmayan platformlar “Diğer online eğitim platformları” kutusuna “Ad | adres” olarak yazılır. Birebir özel ders ve mentorluk portalları (Özel Ders Alanı, Mentural) Özel Ders ve Mentorluk Platformu Profilleri kararında girilir. Kurslar yalnız sitenin kendi eğitim modülünde satılıyorsa alan boş bırakılır.",
    "rule": "Kurumun online eğitim platformu hesapları: {value}. Sitedeki eğitim, kurs ve eğitmen sayfalarındaki “Kursa git / Satın al” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Aynı kursun platformdaki ve sitedeki tanıtımında kurs adı, eğitmen, süre, ders sayısı, seviye ve içerik başlıkları tutarlı tutulur; platform fiyatları kampanyalarla değiştiği için sitede platform fiyatı sabit yazılmaz, “güncel fiyat platformdadır” denir. Platformun verdiği belge, platformun o kurs için tanımladığından farklı sunulmaz: “üniversite onaylı / MEB onaylı / akredite” ifadesi yalnız platform o kurs için bu onayı açıkça belirtiyorsa (onaylayan kurum adıyla) ya da belge Sertifikalar ve Belgeler'de kayıtlıysa kullanılır. İçerik haklarının platforma devredildiği modelle (ör. tek seferlik ödeme) yayınlanan kurs başka platformda ya da sitede satılmaz; kurs yüklemeden önce platformun gelir modeli ve içerik hakları sözleşmesi kontrol edilir. Kurs aynı zamanda sitede satılıyorsa ön bilgilendirme, mesafeli satış sözleşmesi ve dijital içerikte cayma hakkı istisnasının koşulları platformdan bağımsız olarak sitede gösterilir (hukuk biriminin teyidiyle). Listede olmayan platform hesabı kurum adına anılmaz.",
-   "scenario": "Kurum ya da eğitmenleri kurslarını Boenstitü, Unicourse, Youthall Akademi, Techcareer.net gibi Türk platformlarında, Udemy, Skillshare, Domestika gibi uluslararası pazar yerlerinde ya da Teachable, Thinkific, Kajabi gibi okul kurma araçlarında satıyor ya da Özel Ders Alanı, Mentural gibi portallarda birebir ders veriyorsa; sitenin eğitim sayfalarından ve kampanya içeriklerinden doğru sayfaya bağlantı verilmesi için doldurulur.",
+   "scenario": "Kurum ya da eğitmenleri kurslarını Boenstitü, Unicourse, Youthall Akademi, Techcareer.net gibi Türk platformlarında, Udemy, Skillshare, Domestika gibi uluslararası pazar yerlerinde ya da Teachable, Thinkific, Kajabi gibi okul kurma araçlarında satıyor; sitenin eğitim sayfalarından ve kampanya içeriklerinden doğru sayfaya bağlantı verilmesi için doldurulur.",
    "example": "Bir yazılım eğitim şirketi Udemy eğitmen profilini, Boenstitü eğitmen sayfasını ve Teachable okul adresini (akademi.ornek.com) yazar; sitenin “Eğitimler” sayfasındaki giriş seviyesi kurslar Udemy'ye, Türkçe sertifikalı eğitimler Boenstitü'ye, kapsamlı program Teachable okuluna gider.",
    "agents": [
     "poz:musteri-deneyimi:11.07/musteri-egitimleri/egitim-icerik-gelistirme-uzmani",
@@ -9623,22 +9623,6 @@
      "ph": "https://www.techcareer.net/…",
      "hosts": [
       "techcareer.net"
-     ]
-    },
-    {
-     "k": "ozeldersalani",
-     "label": "Özel Ders Alanı (öğretmen profili)",
-     "ph": "https://www.ozeldersalani.com/…",
-     "hosts": [
-      "ozeldersalani.com"
-     ]
-    },
-    {
-     "k": "mentural",
-     "label": "Mentural (mentor / özel ders ilanı)",
-     "ph": "https://www.mentural.com/…",
-     "hosts": [
-      "mentural.com"
      ]
     },
     {
@@ -9699,6 +9683,42 @@
      "ph": "https://satici-adi.gumroad.com",
      "hosts": [
       "gumroad.com"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oc_tutoring",
+   "section": "oc_accounts",
+   "after": "oc_eduplatforms",
+   "label": "Özel Ders ve Mentorluk Platformu Profilleri",
+   "en": "Private Tutoring and Mentoring Profiles",
+   "type": "accounts",
+   "placeholder": "Satır başına Ad | URL — örn. Özel ders platformu | https://…",
+   "otherLabel": "Diğer özel ders ve mentorluk platformları",
+   "explanation": "Kurumun ya da eğitmenlerinin birebir (ya da küçük grup) özel ders, koçluk ve mentorluk verdiği portallardaki öğretmen / mentor profili adreslerini ayrı kutulara girersiniz: Özel Ders Alanı (öğretmen profili; portal ders veren ile alanı doğrudan buluşturur, sitesinde komisyon alınmadığı yazıyor) ve Mentural (mentorluk, koçluk ve özel ders ilanları). Hazır kurs (video eğitim) satılan platformlar Online Eğitim Platformu Hesapları kararında girilir. Listede olmayan platformlar “Diğer özel ders ve mentorluk platformları” kutusuna “Ad | adres” olarak yazılır. Birebir ders verilmiyorsa alan boş bırakılır.",
+   "rule": "Kurumun özel ders ve mentorluk platformu profilleri: {value}. Sitedeki eğitmen, özel ders ve mentorluk sayfalarındaki “Ders al / Randevu al” bağlantıları yalnız bu adresleri kullanır; bağlantılar yeni sekmede ve rel=\"noopener\" ile açılır. Profillerdeki ve sitedeki branş, deneyim, eğitim geçmişi, ders biçimi (online / yüz yüze), bölge ve ders ücreti tutarlı tutulur; ücret değişince bütün profiller ve site aynı gün güncellenir. Platformdaki öğrenci yorumları sitede yalnız kaynağı (platform adı ve bağlantısı) belirtilerek ve değiştirilmeden kullanılır. Öğrenci reşit değilse iletişim, ders kaydı ve kişisel veri işlemede veli bilgilendirmesi ve onayı alınır (ayrıntı hukuk biriminin teyidiyle). Platformun kurallarına aykırı biçimde öğrenci platform dışı iletişime ya da ödemeye yönlendirilmez. Listede olmayan profil kurum adına anılmaz.",
+   "scenario": "Kurum ya da eğitmenleri Özel Ders Alanı, Mentural gibi portallarda birebir özel ders, koçluk ya da mentorluk veriyorsa; sitenin eğitmen ve ders sayfalarından doğru profile bağlantı verilmesi için doldurulur.",
+   "example": "Bir dil kursu, öğretmenlerinin Özel Ders Alanı profillerini ve kurumun Mentural mentorluk ilanını yazar; sitenin “Birebir ders” sayfasındaki “Öğretmeni incele” düğmeleri Özel Ders Alanı profillerine, “Kariyer mentorluğu” düğmesi Mentural ilanına gider.",
+   "agents": [
+    "poz:musteri-deneyimi:11.07/musteri-egitimleri/egitim-icerik-gelistirme-uzmani",
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "accounts": [
+    {
+     "k": "ozeldersalani",
+     "label": "Özel Ders Alanı (öğretmen profili)",
+     "ph": "https://www.ozeldersalani.com/…",
+     "hosts": [
+      "ozeldersalani.com"
+     ]
+    },
+    {
+     "k": "mentural",
+     "label": "Mentural (mentor / özel ders ilanı)",
+     "ph": "https://www.mentural.com/…",
+     "hosts": [
+      "mentural.com"
      ]
     }
    ]
