@@ -766,6 +766,21 @@
       "title": "Armut (App Store açıklaması)",
       "url": "https://apps.apple.com/tr/app/armut-hizmet-pi%C5%9F-a%C4%9Fz%C4%B1ma-d%C3%BC%C5%9F/id1028966163",
       "note": "Müşterinin ücretsiz teklif alması, önceki işler ve yorumlar, teklif seçimiyle yapılan işlerde Armut garantisi; armut.com otomatik erişime kapalı."
+     },
+     {
+      "title": "Taşınmaz Ticareti Hakkında Yönetmelik",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=24645&MevzuatTur=7&MevzuatTertip=5",
+      "note": "İnternet ilanlarında yetki belgesi numarası ve zorunlu bilgiler (m. 14/2-i), ilanın üç gün içinde kaldırılması (m. 14/2-h), platform yükümlülükleri (m. 12)."
+     },
+     {
+      "title": "Motorlu Kara Taşıtlarının Ticareti Hakkında Yönetmelik",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=40940&MevzuatTur=7&MevzuatTertip=5",
+      "note": "Tanıtım kartı (m. 20), işletmenin ilan yükümlülükleri (m. 21), ilan platformunun yükümlülükleri (m. 22), ekspertiz (m. 16)."
+     },
+     {
+      "title": "Elektronik İlan Doğrulama Sistemi (EİDS)",
+      "url": "https://eids.ticaret.gov.tr/",
+      "note": "Ticaret Bakanlığı'nın taşınmaz ve ikinci el taşıt ilanlarında pazarlama yetkisini doğrulayan sistemi."
      }
     ]
    }
@@ -11193,6 +11208,130 @@
      "scenario": "CRM kullanan işletmeler.",
      "example": "Her Armut talebi CRM'de “Armut” kaynağıyla açılır, sonucu işlenir.",
      "ruleDetail": "Armut talepleri ve kazanılan işler CRM'e (elle ya da toplu içe aktarmayla) “Armut” kaynağıyla kaydedilir; müşteri kişisel verisi yalnız iş için ve aydınlatma metnine uygun işlenir."
+    }
+   ]
+  },
+  {
+   "id": "mk_listing_law",
+   "section": "mk_mpads",
+   "after": "mk_cls_ads",
+   "label": "Emlak ve Taşıt İlanı Mevzuatı",
+   "en": "Real Estate & Vehicle Listing Rules",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi"
+   ],
+   "explanation": "İşletme emlak ya da ikinci el taşıt ilanı veriyorsa ilanda bulunması zorunlu bilgileri ve ilan kurallarını belirler. Kurallar kendi sitedeki ilanları da, sahibinden.com, Hepsiemlak, Emlakjet, arabam.com gibi portallardaki ilanları da kapsar. Maddeler mevzuat.gov.tr'deki yönetmelik metinlerinden alındı (2026-11-26); mevzuat değişebilir, yılda bir kontrol edilmelidir. Bu bir hukuki görüş değildir.",
+   "rule": "Emlak ve taşıt ilanı mevzuatı: {labels}. İlan veren kişi, ilana konu taşınmazın ya da taşıtın sahibi değilse sahibinin yetkilendirmesi olmadan ilan verilmez; portallar ilan verenin kimliğini ve yetkisini yayından önce Ticaret Bakanlığı'nın elektronik sistemleri (Elektronik İlan Doğrulama Sistemi — EİDS) üzerinden doğrular, bu yüzden yetki belgeleri ve yetkilendirme kayıtları ilan öncesinde hazır tutulur. Mevzuat yılda bir hukuk birimiyle gözden geçirilir.",
+   "scenario": "Emlak ofisi, inşaat / gayrimenkul şirketi, oto galeri ya da ikinci el taşıt satan işletmeler; ilan portalı kullanmasa da kendi sitesinde ilan yayımlayan işletmeler.",
+   "example": "Bir emlak ofisi her ilanda yetki belgesi numarasını, ada ve parsel bilgisini gösterir; daire satılınca ilanı üç gün içinde kaldırır.",
+   "options": [
+    {
+     "value": "none",
+     "label": "Emlak ya da ikinci el taşıt ilanı verilmiyor",
+     "explanation": "İşletme taşınmaz ya da ikinci el taşıt ilanı vermez; bu kurallar uygulanmaz.",
+     "scenario": "Emlak ve taşıt dışında faaliyet gösteren işletmeler.",
+     "example": "Bir yazılım firması bu seçeneği işaretler.",
+     "ruleDetail": "İşletme taşınmaz ya da ikinci el motorlu taşıt ilanı vermez; bu mevzuat kuralları uygulanmaz.",
+     "exclusive": true
+    },
+    {
+     "value": "realestate",
+     "label": "Taşınmaz (emlak) ilanları",
+     "explanation": "İnternetteki taşınmaz ilanlarında yetki belgesi numarası, işletme adı, il-ilçe-mahalle ve ada-parsel, iletişim ve varsa enerji kimlik bilgisi gösterilir; yalnız yazılı yetkilendirme sözleşmesi olan taşınmaz için ilan verilir; satış ya da kiralamadan sonra ilan üç gün içinde kaldırılır (Taşınmaz Ticareti Hakkında Yönetmelik).",
+     "scenario": "Emlak ofisleri, gayrimenkul ve inşaat şirketleri.",
+     "example": "Her ilanda “Yetki Belgesi No: …” ve ada / parsel bilgisi yer alır.",
+     "ruleDetail": "Taşınmaz ilanlarında yetki belgesi numarası, yetki belgesindeki işletme adı ya da unvanı, açık adres hariç il, ilçe, mahalle, ada ve parsel bilgileri, yetkilendirme sözleşmesindeki asgari bilgiler (imar durumu, tapu bilgileri, büyüklük, yaş, kat, oda sayısı, ipotek / haciz durumu gibi), iletişim bilgisi ve varsa enerji kimlik bilgisi kolay okunur şekilde gösterilir (Taşınmaz Ticareti Hakkında Yönetmelik m. 14/2-i, 15/3); yalnız iş sahibiyle yazılı yetkilendirme sözleşmesi olan taşınmaz için ilan verilir ve ilan sözleşmeye aykırı olamaz (m. 14/2-ı, 14/2-j, 15/1); taşınmaz satılınca ya da kiralanınca, satıştan vazgeçilince ya da sözleşme bitince ilan üç gün içinde kaldırılır (m. 14/2-h); ilanda yanıltıcı bilgi verilmez, genel ekonomik verilerle uyumlu olmayan ve haklı sebebe dayanmayan fiyat artışı yapılmaz (m. 12/1, 12/3); her yetkilendirme sözleşmesinin dosyası en az beş yıl saklanır (m. 14/2-k)."
+    },
+    {
+     "value": "vehicle",
+     "label": "İkinci el motorlu taşıt ilanları",
+     "explanation": "İkinci el taşıt ilanlarında yetki belgesi numarası, işletme adı ve tanıtım kartı bilgileri (marka, model yılı, şasi numarasının son 6 hanesi, plaka, yakıt, kilometre, fiyat, boyalı / değişen parçalar, hasar kaydı, rehin / haciz) güncel olarak gösterilir; taşıt satılınca ilan gecikmeksizin kaldırılır (Motorlu Kara Taşıtlarının Ticareti Hakkında Yönetmelik).",
+     "scenario": "Oto galeriler ve ikinci el taşıt satan işletmeler.",
+     "example": "Her ilanda yetki belgesi numarası, kilometre, hasar kaydı ve boyalı / değişen parça bilgisi yer alır.",
+     "ruleDetail": "İkinci el motorlu taşıt ilanlarında yetki belgesi numarası, yetki belgesindeki işletme adı ya da unvanı ve tanıtım kartı bilgileri güncel olarak yer alır: marka, ticari ad, cins, tip, model yılı, donanım; şasi numarasının son 6 hanesi; plaka; yakıt türü; kilometre; satış fiyatı; boyalı ve değişen parçalar; hasar kaydı; rehin ya da haciz şerhi; varsa kalan garanti süresi ve kilometresi (Motorlu Kara Taşıtlarının Ticareti Hakkında Yönetmelik m. 20/2, 21/1-a); yanıltıcı bilgi verilmez (m. 21/1-b); taşıt satılınca, taşıt teslim belgesinin süresi ya da ilan verme yetkisi bitince ilan gecikmeksizin kaldırılır (m. 21/1-c); yetki belgesi olmadan ticari faaliyet kapsamında ikinci el taşıt pazarlanmaz ve satılmaz, bir takvim yılında üçten fazla satış ticari faaliyet sayılır (m. 5/1); satıştan önceki on gün içinde ekspertiz raporu alınır — model yılına göre sekiz yaşın ya da 160.000 km'nin üzerindeki taşıtlar hariç (m. 16); tavsiye edilen satış fiyatının üzerinde ilanla pazarlamaya ilişkin geçici kısıtlamanın (geçici m. 3) güncel yürürlük durumu Ticaret Bakanlığı'ndan kontrol edilir."
+    }
+   ]
+  },
+  {
+   "id": "mk_sahibinden",
+   "section": "mk_mpads",
+   "after": "mk_listing_law",
+   "label": "sahibinden.com Kurumsal Kullanım",
+   "en": "sahibinden.com Business Use",
+   "type": "multiselect",
+   "agents": [
+    "poz:satis:08.04/kanal-satislari/kanal-satis-yoneticisi",
+    "poz:satis:08.03/hizli-satis-ve-donusum/dijital-satis-temsilcisi"
+   ],
+   "showIf": [
+    {
+     "field": "mk_ads_channels",
+     "in": [
+      "classifieds"
+     ]
+    }
+   ],
+   "explanation": "sahibinden.com'da kurumsal hesabın, ilanların, Doping'in, mesaj ve aramaların ve marka reklamlarının nasıl yönetileceğini belirler. Mağaza adresi Ortak Bilgiler › İlan Portalı Mağazaları'ndaki sahibinden.com satırına yazılır. sahibinden.com otomatik erişime kapalı olduğu için paket, Doping ve reklam ürünlerinin adları ve fiyatları doğrulanamadı (2026-11-26); panelden kontrol edilir. Emlak ve taşıt ilanlarının yasal zorunlulukları Emlak ve Taşıt İlanı Mevzuatı kararındadır.",
+   "rule": "sahibinden.com'da yapılacaklar: {labels}.",
+   "scenario": "Reklam Kanalları'nda ilan portalları seçildiyse ve sahibinden.com kullanılıyorsa seçilir.",
+   "example": "Bir oto galeri kurumsal mağaza hesabı açar, ilanlarını tanıtım kartı bilgileriyle girer, yeni gelen araçlara bir hafta Doping alır ve gelen mesajları CRM'e “sahibinden” kaynağıyla kaydeder.",
+   "options": [
+    {
+     "value": "store",
+     "label": "Kurumsal mağaza / ofis / galeri hesabı",
+     "explanation": "İlanlar kişisel hesap yerine işletme adına kurumsal hesaptan verilir; portal işletme üyeliğinden önce yetki belgesini Ticaret Bakanlığı sisteminden kontrol eder.",
+     "scenario": "Emlak ofisi, galeri ve mağaza olarak ilan veren işletmeler.",
+     "example": "Galeri, yetki belgesiyle kurumsal hesap açar.",
+     "ruleDetail": "sahibinden.com'da ilanlar işletme adına kurumsal hesaptan verilir; hesap ve erişimler kurum adına tutulur, paket ve ilan hakkı panelden kontrol edilir; yetki belgesi gereken faaliyetlerde belge güncel tutulur."
+    },
+    {
+     "value": "verify",
+     "label": "İlan öncesi doğrulamaya hazırlık",
+     "explanation": "Portal ilanı yayımlamadan önce ilan verenin kimliğini ve ilana konu taşınmazın ya da taşıtın sahibi ya da yetkilisi olduğunu doğrular; yetkilendirme kayıtları önceden hazırlanır.",
+     "scenario": "Başkasına ait taşınmaz ya da taşıt için ilan veren işletmeler.",
+     "example": "Daire sahibinden yazılı yetki alınır, ilan doğrulamadan sonra yayına girer.",
+     "ruleDetail": "Başkasına ait taşınmaz ya da taşıt için ilan vermeden önce sahibinden yetki alınır (emlakta yazılı yetkilendirme sözleşmesi); portalın doğrulaması tamamlanmadan ilan yayında sayılmaz ve müşteriye yayında olduğu söylenmez."
+    },
+    {
+     "value": "doping",
+     "label": "Doping (ilan öne çıkarma)",
+     "explanation": "Seçilmiş ilanlar sahibinden.com'un Doping seçenekleriyle öne çıkarılır; türler, süreler ve fiyatlar panelde görülür.",
+     "scenario": "Yeni gelen ya da hızlı satılması gereken ilanlar.",
+     "example": "Yeni gelen beş araç için bir haftalık Doping alınır.",
+     "ruleDetail": "Doping yalnız seçilmiş ilanlarda ve belirli süreyle kullanılır; tür, süre ve fiyat panelden kontrol edilir, Doping öncesi ve sonrası görüntülenme, mesaj ve arama sayısı karşılaştırılır."
+    },
+    {
+     "value": "response",
+     "label": "Mesaj ve aramalara yanıt",
+     "explanation": "sahibinden.com üzerinden gelen mesaj ve aramalara yanıt süresi ve sorumlusu belirlenir.",
+     "scenario": "Talep yoğunluğu yüksek ilanlar.",
+     "example": "Mesajlar iş saatlerinde bir saat içinde yanıtlanır.",
+     "ruleDetail": "sahibinden.com mesaj ve aramalarına belirlenen sürede yanıt verilir; yanıtlarda ilandaki fiyat ve bilgilerle çelişen bilgi verilmez."
+    },
+    {
+     "value": "crm",
+     "label": "Talepleri CRM'e kaydetme",
+     "explanation": "sahibinden.com'dan gelen talepler ve sonuçlanan satışlar CRM'e “sahibinden” kaynağıyla girilir.",
+     "scenario": "CRM kullanan işletmeler.",
+     "example": "Her talep CRM'de “sahibinden” kaynağıyla açılır.",
+     "ruleDetail": "sahibinden.com talepleri ve sonuçlanan işler CRM'e “sahibinden” kaynağıyla kaydedilir; kişisel veriler yalnız iş için ve aydınlatma metnine uygun işlenir."
+    },
+    {
+     "value": "close",
+     "label": "Satıştan sonra ilanı kaldırma",
+     "explanation": "Satılan, kiralanan ya da satıştan vazgeçilen taşınmaz veya taşıtın ilanı hemen kaldırılır; emlakta en geç üç gün içinde.",
+     "scenario": "Her ilan veren işletme.",
+     "example": "Araç satılınca ilan aynı gün kapatılır.",
+     "ruleDetail": "Satılan, kiralanan ya da satıştan vazgeçilen taşınmaz veya taşıtın ilanı hemen, emlakta en geç üç gün içinde kaldırılır; ilan listesi haftalık kontrol edilir."
+    },
+    {
+     "value": "brand_ads",
+     "label": "Marka reklamları (görüntülü reklam)",
+     "explanation": "sahibinden.com'da ilan vermeyen markalar da görüntülü reklam verebilir mi, hangi alanlar ve fiyatlar var — sahibinden.com'un reklam satış ekibinden ya da panelden öğrenilir; bilgiler doğrulanamadı.",
+     "scenario": "Emlak, otomotiv, finans gibi sahibinden.com kitlesine ulaşmak isteyen markalar.",
+     "example": "Bir kredi kuruluşu konut ilanlarının yanında görüntülü reklam verir.",
+     "ruleDetail": "sahibinden.com'da marka (görüntülü) reklamı yalnız reklam ürünü, yerleşim, fiyat ve ölçüm yöntemi sahibinden.com'dan yazılı olarak alındıktan sonra planlanır; reklam metni Reklam Metni İddia Kuralı'na uyar."
     }
    ]
   }
