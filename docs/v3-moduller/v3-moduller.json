@@ -8944,6 +8944,743 @@
      "ruleDetail": "Veri ihlali müdahale planı en az yılda bir tatbikatla denenir; tatbikatta bildirim süreleri ölçülür, bulunan eksikler plana işlenir."
     }
    ]
+  },
+  {
+   "id": "db_table_groups",
+   "section": "db_engineering",
+   "after": "db_conventions",
+   "type": "multiselect",
+   "label": "Tablo Grupları ve Veri Dağılımı",
+   "en": "Table Groups and Data Placement",
+   "explanation": "Projede hangi tür verinin hangi tablo grubunda tutulacağını belirler. Her seçenek o grubun tablolarını ve ana kolonlarını kurala yazar; Claude veri modelini ve migration dosyalarını bu iskeletle kurar.",
+   "scenario": "Kodlamaya başlamadan önce, özellikle birden çok modül (üyelik, sipariş, ödeme, form) aynı veritabanını kullanacaksa. Sonradan tablo bölmek ya da birleştirmek veri taşıma gerektirir.",
+   "example": "\"Kullanıcı ve hesap\" ile \"Sipariş\" seçilirse users, user_profiles, orders ve order_items tabloları ana kolonlarıyla kurallara girer; veri modeli dokümanı bu listeden başlar.",
+   "rule": "Veritabanında şu tablo grupları kurulur: {labels}. Her tablo tek bir varlığı tutar, aynı veri iki tabloda ayrı ayrı güncellenmez; tablo ve kolon listesi migration dosyalarıyla birlikte veri modeli dokümanında güncel tutulur.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+    "poz:veri-analitik:17.03/veri-platformu-mimarisi/kidemli-veri-mimari"
+   ],
+   "recommend": [
+    {
+     "field": "modules_extra",
+     "map": {
+      "ecommerce": [
+       "catalog",
+       "orders",
+       "payments"
+      ],
+      "marketplace": [
+       "org",
+       "catalog",
+       "orders",
+       "payments"
+      ],
+      "booking": [
+       "bookings",
+       "payments"
+      ],
+      "subscription": [
+       "payments"
+      ],
+      "lms": [
+       "content",
+       "media"
+      ],
+      "ticket": [
+       "forms"
+      ],
+      "crm": [
+       "forms"
+      ],
+      "notify": [
+       "notifications"
+      ],
+      "mailing": [
+       "consent",
+       "notifications"
+      ],
+      "automation": [
+       "notifications"
+      ]
+     }
+    },
+    {
+     "field": "member_mode",
+     "map": {
+      "Open": [
+       "users",
+       "roles",
+       "consent"
+      ],
+      "Approval": [
+       "users",
+       "roles",
+       "consent"
+      ],
+      "Invite": [
+       "users",
+       "roles"
+      ]
+     }
+    },
+    {
+     "field": "panel_tenancy",
+     "map": {
+      "multi_org": [
+       "org"
+      ],
+      "multi_tenant": [
+       "org"
+      ]
+     }
+    },
+    {
+     "field": "locales",
+     "map": {
+      "Multi Language": [
+       "i18n"
+      ],
+      "Locale Ready": [
+       "i18n"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "users",
+     "label": "Kullanıcı ve hesap tabloları",
+     "explanation": "Giriş yapan kişilerin hesap bilgileri ile kişisel bilgileri ayrı tablolarda tutulur.",
+     "scenario": "Sitede üye girişi, yönetim paneli kullanıcısı ya da müşteri hesabı varsa.",
+     "example": "users tablosunda e-posta ve parola özeti, user_profiles tablosunda ad ve telefon.",
+     "ruleDetail": "users (id, email benzersiz ve küçük harfe çevrilmiş, password_hash, status, email_verified_at, last_login_at, created_at, updated_at); user_profiles (user_id, ad, soyad, telefon — kişisel veri bu tabloda toplanır); oturum ve parola sıfırlama belirteçleri ayrı tabloda yalnız özet (hash) olarak ve son kullanma tarihiyle tutulur."
+    },
+    {
+     "value": "roles",
+     "label": "Rol ve yetki tabloları",
+     "explanation": "Kimin neyi yapabileceği kodda sabit yazılmaz, tablolarda tutulur.",
+     "scenario": "Panelde birden çok kullanıcı türü (yönetici, editör, müşteri temsilcisi) varsa.",
+     "example": "Panelde \"Editör\" rolüne \"İçerik yayınla\" izni verilir; kod bu tabloyu okur.",
+     "ruleDetail": "roles, permissions, role_permissions (role_id + permission_id birleşik benzersiz anahtar), user_roles (user_id + role_id, kurum varsa organization_id); yetki denetimi her istekte sunucuda bu tablolardan yapılır."
+    },
+    {
+     "value": "org",
+     "label": "Kurum / kiracı tabloları",
+     "explanation": "Birden çok firmanın aynı sistemi kullandığı yapıda her kaydın hangi kuruma ait olduğu tutulur.",
+     "scenario": "B2B platform, pazar yeri, çok firmalı SaaS ya da bayi paneli varsa.",
+     "example": "Firma A'nın kullanıcısı yalnız organization_id = A olan siparişleri görür.",
+     "ruleDetail": "organizations (id, ad, durum, plan), memberships (organization_id, user_id, rol); kuruma ait her tabloda organization_id NOT NULL ve indeksli kolon bulunur, her sorgu bu kolona göre süzülür (destekleyen motorda satır düzeyi güvenlik — RLS — ile de)."
+    },
+    {
+     "value": "content",
+     "label": "İçerik tabloları",
+     "explanation": "Sayfa, yazı, kategori ve etiket gibi yönetilebilir içerikler.",
+     "scenario": "Site içeriği bir yönetim panelinden güncellenecekse.",
+     "example": "Blog yazısı taslak olarak kaydedilir, yayın tarihi gelince yayına girer; eski sürümlerine dönülebilir.",
+     "ruleDetail": "pages, posts (slug dil ile birlikte benzersiz, status, published_at, author_id), categories, tags, post_tags (çoka çok bağlantı tablosu), content_revisions (içerik sürümleri, kim ve ne zaman)."
+    },
+    {
+     "value": "media",
+     "label": "Medya ve dosya tabloları",
+     "explanation": "Yüklenen dosyanın kendisi veritabanına değil nesne depolamaya konur; tabloda yalnız bilgisi tutulur.",
+     "scenario": "Görsel, belge ya da kullanıcı dosyası yükleniyorsa.",
+     "example": "files tablosunda depolama anahtarı, dosya türü, boyut ve sahibi; dosya S3 / R2 benzeri depoda.",
+     "ruleDetail": "files (id, storage_key, original_name, mime_type, size_bytes, checksum, owner_id, created_at); dosya içeriği veritabanına BLOB olarak yazılmaz, erişim süreli imzalı adresle verilir."
+    },
+    {
+     "value": "catalog",
+     "label": "Ürün ve katalog tabloları",
+     "explanation": "Ürünler, varyantları, fiyatları ve stok bilgisi.",
+     "scenario": "E-ticaret, pazar yeri ya da fiyatlı hizmet listesi varsa.",
+     "example": "Bir tişörtün beden ve renk varyantları ayrı satırdır, her birinin SKU'su ve stoku vardır.",
+     "ruleDetail": "products, product_variants (sku benzersiz), prices (tutar DECIMAL ya da kuruş cinsinden tam sayı + para birimi kolonu, geçerlilik tarihleri), inventory (variant_id, depo, miktar), product_categories; tutarlar hiçbir zaman kayan noktalı sayı (float) olarak tutulmaz."
+    },
+    {
+     "value": "orders",
+     "label": "Sipariş tabloları",
+     "explanation": "Sepet ve siparişler; sipariş anındaki ürün adı, fiyat ve adres kopyalanarak saklanır.",
+     "scenario": "Çevrim içi satış, teklif ya da rezervasyon ödemesi varsa.",
+     "example": "Ürünün fiyatı sonradan değişse de eski siparişte satın alındığı fiyat görünür.",
+     "ruleDetail": "carts, cart_items, orders (order_no benzersiz, user_id, status, ara toplam, vergi, indirim, genel toplam, para birimi), order_items (ürün adı, SKU ve birim fiyatın sipariş anındaki kopyası), order_addresses (adres kopyası), order_status_history (durum değişiklikleri, kim ve ne zaman)."
+    },
+    {
+     "value": "payments",
+     "label": "Ödeme tabloları",
+     "explanation": "Ödeme sağlayıcısıyla yapılan işlemlerin kaydı; kart bilgisi tutulmaz.",
+     "scenario": "Sitede ödeme alınıyorsa.",
+     "example": "payments tablosunda iyzico / Stripe işlem numarası ve durumu; kart numarası hiçbir tabloda yok.",
+     "ruleDetail": "payments (provider, provider_ref benzersiz, order_id, amount, currency, status), refunds, payment_events (sağlayıcı bildirimleri, olay kimliği benzersiz — aynı bildirim iki kez işlenmez); kart numarası, son kullanma tarihi ve CVV hiçbir tabloya ve loga yazılmaz, yalnız sağlayıcının verdiği belirteç (token) saklanır."
+    },
+    {
+     "value": "bookings",
+     "label": "Rezervasyon tabloları",
+     "explanation": "Randevu, oda, masa ya da kaynak rezervasyonları.",
+     "scenario": "Randevu veya rezervasyon modülü varsa.",
+     "example": "Aynı hekim için aynı saate iki randevu veritabanı kısıtıyla engellenir.",
+     "ruleDetail": "resources (hekim, oda, masa), availability (çalışma saatleri ve istisnalar), bookings (resource_id, start_at, end_at UTC, status, customer_id); çakışan rezervasyon veritabanı kısıtıyla (PostgreSQL'de exclusion constraint) ya da kilitli işlemle engellenir."
+    },
+    {
+     "value": "forms",
+     "label": "Form ve talep tabloları",
+     "explanation": "İletişim, teklif, başvuru ve destek formlarından gelen kayıtlar.",
+     "scenario": "Form kayıtları panelde saklanacaksa (Form Kayıtlarının Saklanması kararı).",
+     "example": "form_submissions tablosunda formun adı, alanları, durumu ve hangi aydınlatma metni sürümünün gösterildiği.",
+     "ruleDetail": "form_submissions (form_key, payload JSON — yalnız formdaki alanlar, status, assigned_to, consent_id, created_at); saklama süresi dolan kayıtlar periyodik işle silinir ya da anonimleştirilir."
+    },
+    {
+     "value": "consent",
+     "label": "Rıza ve yasal kayıt tabloları",
+     "explanation": "Kim, hangi metne, ne zaman, hangi kanaldan onay verdi ya da geri çekti.",
+     "scenario": "Üyelik, bülten, ticari ileti ya da çerez onayı alınıyorsa.",
+     "example": "Bir kullanıcının bülten iznini 3 ay sonra geri çektiği, eski kayıt silinmeden yeni satırla görünür.",
+     "ruleDetail": "consents (subject_id ya da e-posta özeti, purpose, legal_text_version, channel, granted_at, withdrawn_at), legal_document_versions (metin, sürüm, yürürlük tarihi); bu tablolara yalnız ekleme yapılır, kayıt güncellenmez ve silinmez."
+    },
+    {
+     "value": "notifications",
+     "label": "Bildirim ve kuyruk tabloları",
+     "explanation": "Gönderilecek e-posta, SMS ve uygulama içi bildirimler ile arka plan işleri.",
+     "scenario": "Sipariş, randevu ya da sistem bildirimi gönderiliyorsa.",
+     "example": "Sipariş kaydıyla aynı işlemde outbox tablosuna \"e-posta gönder\" satırı yazılır, gönderici iş onu okur.",
+     "ruleDetail": "notifications (user_id, kanal, şablon, durum, read_at), outbox_events / jobs (olay türü, payload, idempotency anahtarı benzersiz, deneme sayısı, sonraki deneme zamanı); dış gönderim veritabanı işlemi tamamlandıktan sonra yapılır."
+    },
+    {
+     "value": "audit",
+     "label": "Denetim ve olay kaydı tabloları",
+     "explanation": "Panelde kim, hangi kaydı, ne zaman, nasıl değiştirdi.",
+     "scenario": "Yönetim paneli, ödeme, yetki değişikliği ya da KVKK kapsamında hesap verebilirlik gerekiyorsa.",
+     "example": "Bir yöneticinin müşterinin e-postasını değiştirdiği; eski ve yeni değer maskeli olarak görünür.",
+     "ruleDetail": "audit_logs (actor_id, action, entity_type, entity_id, changes JSON — kişisel veri maskeli, ip, user_agent, created_at); yalnız ekleme yapılır, uygulama kullanıcısının bu tabloda UPDATE / DELETE yetkisi yoktur, saklama süresi tanımlıdır."
+    },
+    {
+     "value": "settings",
+     "label": "Ayar ve sözlük tabloları",
+     "explanation": "Site ayarları ve sabit listeler (ülkeler, durumlar, kategoriler) kod yerine tabloda.",
+     "scenario": "Ayarlar panelden değiştirilebilecekse ya da listeler sık güncelleniyorsa.",
+     "example": "Kargo ücretsiz eşiği panelden değişir, kod değişmez.",
+     "ruleDetail": "settings (key benzersiz, value JSON, updated_by, updated_at), sözlük tabloları (countries, order_statuses …); durum kolonları sözlük tablosuna yabancı anahtar ya da CHECK kısıtıyla sınırlanır."
+    },
+    {
+     "value": "i18n",
+     "label": "Çeviri tabloları",
+     "explanation": "Çok dilli içerikte her dilin metni ayrı satırda tutulur.",
+     "scenario": "Site birden çok dilde yayınlanacaksa.",
+     "example": "Bir ürünün Türkçe ve İngilizce adı product_translations tablosunda iki satırdır.",
+     "ruleDetail": "<varlık>_translations (entity_id, locale, çevrilen alanlar; entity_id + locale birleşik benzersiz); dile bağlı olmayan alanlar (fiyat, stok, tarih) ana tabloda kalır."
+    }
+   ]
+  },
+  {
+   "id": "db_table_rules",
+   "section": "db_engineering",
+   "after": "db_table_groups",
+   "type": "multiselect",
+   "label": "Tablo Tasarım İlkeleri",
+   "en": "Table Design Principles",
+   "explanation": "Bütün tablolarda geçerli adlandırma, kolon türü ve yapı kuralları. Veri Modeli Standartları'ndaki ortak alanların (created_at, soft delete …) tamamlayıcısıdır.",
+   "scenario": "Birden çok geliştirici ya da yapay zekâ ajanı aynı veritabanına tablo ekleyecekse tutarlılık için.",
+   "example": "Bütün tablolar snake_case çoğul adlı (order_items), para tutarları DECIMAL(12,2), zamanlar UTC.",
+   "rule": "Tablo tasarımında şu ilkeler uygulanır: {labels}.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+    "poz:veri-analitik:17.03/veri-platformu-mimarisi/kidemli-veri-mimari"
+   ],
+   "options": [
+    {
+     "value": "naming",
+     "label": "Adlandırma standardı (önerilen)",
+     "explanation": "Tablo ve kolon adları tek bir kurala göre yazılır.",
+     "scenario": "Her projede.",
+     "example": "orders, order_items, user_id, created_at.",
+     "ruleDetail": "Tablo adları snake_case ve çoğul (order_items), kolonlar snake_case, yabancı anahtarlar <tekil tablo>_id, boolean kolonlar is_ / has_ ile başlar; Türkçe karakter, boşluk ve ayrılmış sözcük kullanılmaz."
+    },
+    {
+     "value": "dictionary",
+     "label": "Veri sözlüğü ve ilişki şeması",
+     "explanation": "Her tablonun ve kolonun ne tuttuğu, hangi kolonun kişisel veri olduğu yazılı tutulur.",
+     "scenario": "Proje devredilecekse, KVKK veri envanteri hazırlanacaksa ya da birden çok ekip çalışacaksa.",
+     "example": "docs/veri-modeli.md dosyasında tablo listesi, kolon açıklamaları, ilişki şeması (ER diyagramı) ve \"kişisel veri\" etiketleri.",
+     "ruleDetail": "Veri modeli dokümanı (tablo, kolon, tür, açıklama, kişisel veri sınıfı: genel / kişisel / özel nitelikli, saklama süresi) ve ilişki şeması (Mermaid ER diyagramı) tutulur; her migration bu dokümanı aynı değişiklikte günceller."
+    },
+    {
+     "value": "pii_separate",
+     "label": "Kişisel veriyi ayrı ve az tutma",
+     "explanation": "Kişisel veri yalnız gerektiği tablolarda ve en az alanla tutulur; raporlama ve log tablolarına kopyalanmaz.",
+     "scenario": "Üyelik, form ya da sipariş varsa (KVKK veri minimizasyonu).",
+     "example": "Sipariş raporu tablosunda müşteri adı yerine müşteri kimliği.",
+     "ruleDetail": "Kişisel veri kolonları belirli tablolarda toplanır (user_profiles, order_addresses …), başka tablolar kimlikle bağlanır; analiz ve log tablolarına kişisel veri kopyalanmaz, gerekirse maskelenir."
+    },
+    {
+     "value": "junction",
+     "label": "Çoka çok ilişkide bağlantı tablosu",
+     "explanation": "Bir yazının birden çok etiketi gibi ilişkiler virgüllü metin ya da dizi kolonla değil, ayrı tabloyla kurulur.",
+     "scenario": "Etiket, kategori, rol, ürün–kategori gibi ilişkiler varsa.",
+     "example": "post_tags (post_id, tag_id).",
+     "ruleDetail": "Çoka çok ilişkiler iki yabancı anahtarlı bağlantı tablosuyla kurulur (birleşik birincil anahtar ya da benzersiz kısıt); kimlik listeleri metin ya da dizi kolonda tutulmaz."
+    },
+    {
+     "value": "json_limited",
+     "label": "JSON kolonu yalnız esnek veride",
+     "explanation": "Sorgulanan, süzülen ya da ilişki kurulan alanlar normal kolon olur; JSON yalnız yapısı değişken ek bilgiler içindir.",
+     "scenario": "Form yanıtları, ürün öznitelikleri, entegrasyon yanıtları gibi değişken veri varsa.",
+     "example": "Ürünün fiyatı ve stoku kolon, \"kumaş türü\" gibi kategoriye özgü öznitelikler JSON.",
+     "ruleDetail": "JSON / JSONB kolonları yalnız şeması değişken veride kullanılır; üzerinde arama yapılan alan için ayrı kolon ya da ifade indeksi tanımlanır; kimlik, tutar, durum ve tarih JSON içinde tutulmaz."
+    },
+    {
+     "value": "money_time",
+     "label": "Para ve zaman türleri",
+     "explanation": "Tutarlar yuvarlama hatası yapmayan türde, zamanlar saat dilimi bilgisiyle tutulur.",
+     "scenario": "Fiyat, ödeme, rezervasyon ya da zamanlanmış iş varsa.",
+     "example": "Tutar 1499.90 TL olarak DECIMAL(12,2) + currency = TRY; zaman 2026-11-27T07:30:00Z.",
+     "ruleDetail": "Para tutarları DECIMAL / NUMERIC ya da en küçük birim cinsinden tam sayı ve ayrı para birimi kolonuyla tutulur, float kullanılmaz; zaman damgaları UTC olarak saat dilimli türde (timestamptz) saklanır, yerel saate yalnız gösterimde çevrilir."
+    },
+    {
+     "value": "snapshot",
+     "label": "Belgelerde anlık kopya",
+     "explanation": "Sipariş, fatura ve teklif satırlarında o andaki ad, fiyat ve adres kopyalanır.",
+     "scenario": "Sipariş, fatura ya da teklif üretiliyorsa.",
+     "example": "Ürün adı değişse de eski faturada eski ad görünür.",
+     "ruleDetail": "Sipariş, fatura ve teklif satırları ürün ya da müşteri tablosuna yalnız bağlanmaz; ad, birim fiyat, vergi oranı ve adres o anki değerleriyle kopyalanır ve sonradan değişmez."
+    },
+    {
+     "value": "append_only",
+     "label": "Kayıt tablolarında yalnız ekleme",
+     "explanation": "Rıza, denetim, ödeme olayı ve durum geçmişi tablolarında satır güncellenmez ve silinmez.",
+     "scenario": "Hukuki kanıt ya da hesap verebilirlik gereken kayıtlar varsa.",
+     "example": "Rızanın geri çekilmesi eski satırı değiştirmez, yeni satır ekler.",
+     "ruleDetail": "Rıza, denetim, ödeme olayı ve durum geçmişi tabloları yalnız eklemeyle büyür; uygulamanın veritabanı kullanıcısına bu tablolarda UPDATE / DELETE yetkisi verilmez, saklama süresi dolanlar ayrı bir imha işiyle silinir."
+    },
+    {
+     "value": "partition",
+     "label": "Büyüyen tablolarda bölümleme ve arşiv",
+     "explanation": "Log, olay ve bildirim gibi hızla büyüyen tablolar tarihe göre bölünür ya da arşivlenir.",
+     "scenario": "Günde binlerce satır üreten log veya olay tablosu varsa.",
+     "example": "audit_logs aylık bölümlere ayrılır; 2 yıldan eski bölümler arşive taşınır.",
+     "ruleDetail": "Hızla büyüyen log, olay ve bildirim tabloları tarihe göre bölümlenir (partition) ya da periyodik olarak arşive taşınır; saklama süresi dolan bölümler toplu silinir."
+    }
+   ]
+  },
+  {
+   "id": "db_tables_custom",
+   "section": "db_engineering",
+   "after": "db_table_rules",
+   "type": "textarea",
+   "label": "Projeye Özel Tablolar",
+   "en": "Project-specific Tables",
+   "explanation": "Hazır gruplarda olmayan, projenize özgü tabloları satır satır yazın: tablo adı | tuttuğu veri | ana kolonlar. Claude bu tabloları veri modeline ve migration dosyalarına ekler.",
+   "scenario": "Projenizde sektöre özgü kayıtlar varsa (ör. hasta randevu notları, araç ilanları, sertifika başvuruları).",
+   "example": "vehicles | ilandaki araçlar | id, plate_hash, brand, model, year, km, price, dealer_id, status",
+   "placeholder": "Örn. vehicles | ilandaki araçlar | id, brand, model, year, km, price, dealer_id, status\nappointments_notes | hekimin randevu notları (özel nitelikli) | id, appointment_id, note_encrypted, author_id, created_at",
+   "rule": "Projeye özel tablolar (tablo | tuttuğu veri | ana kolonlar): {value}. Bu tablolar da seçilen tasarım ilkelerine ve şifreleme kararlarına uyar; kolon listesi taslaktır, gereken ek kolonlar veri modeli dokümanına yazılarak eklenir.",
+   "agents": [
+    "poz:bilgi-teknolojileri:15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi",
+    "poz:veri-analitik:17.03/veri-platformu-mimarisi/kidemli-veri-mimari"
+   ]
+  },
+  {
+   "id": "db_encryption",
+   "section": "db_engineering",
+   "after": "db_tables_custom",
+   "type": "multiselect",
+   "label": "Veritabanında Şifreleme",
+   "en": "Database Encryption",
+   "explanation": "Tablolara kaydedilen verinin hangi katmanlarda şifreleneceğini belirler. Disk şifrelemesi yalnız diskin çalınmasına karşı korur; veritabanı dökümü ya da yetkisiz sorgu sızarsa veriyi korumak için hassas kolonların uygulama tarafında şifrelenmesi gerekir.",
+   "scenario": "Kimlik numarası, sağlık bilgisi, IBAN, adres gibi hassas kişisel veri ya da entegrasyon anahtarı saklanıyorsa. KVKK Kurulu'nun 2018/10 sayılı kararı özel nitelikli kişisel verinin elektronik ortamda kriptografik yöntemlerle saklanmasını ister.",
+   "example": "Veritabanı dökümü sızsa bile T.C. kimlik numarası kolonunda okunamaz şifreli metin görünür; panelde yetkili kullanıcı maskeli (12******34) değeri görür.",
+   "rule": "Veritabanında şu şifreleme katmanları uygulanır: {labels}. Şifreleme anahtarları veritabanında, kodda, repoda ve loglarda tutulmaz; şifreli kolonların çözülmüş değeri loglara, hata mesajlarına ve analitiğe yazılmaz.",
+   "agents": [
+    "poz:siber-guvenlik:16.07/kriptografi-ve-anahtar-yonetimi/kidemli-kriptografi-uzmani",
+    "poz:siber-guvenlik:16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani",
+    "poz:bilgi-teknolojileri:15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi"
+   ],
+   "recommend": [
+    {
+     "field": "privacy_inventory",
+     "map": {
+      "special_data": [
+       "at_rest",
+       "field_level",
+       "passwords",
+       "backups",
+       "tls"
+      ]
+     }
+    },
+    {
+     "field": "member_signup_fields",
+     "map": {
+      "TCKN": [
+       "field_level",
+       "blind_index"
+      ],
+      "Email": [
+       "passwords",
+       "tls"
+      ]
+     }
+    },
+    {
+     "field": "member_mode",
+     "map": {
+      "Open": [
+       "at_rest",
+       "passwords",
+       "tls"
+      ],
+      "Approval": [
+       "at_rest",
+       "passwords",
+       "tls"
+      ],
+      "Invite": [
+       "at_rest",
+       "passwords",
+       "tls"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "at_rest",
+     "label": "Depolama (disk) şifrelemesi",
+     "explanation": "Veritabanı dosyaları ve diskler şifreli tutulur. Yönetilen veritabanlarında çoğunlukla varsayılan açıktır; doğrulanması gerekir.",
+     "scenario": "Her projede temel katman olarak.",
+     "example": "Sağlayıcı panelinde \"Encryption at rest: Enabled\"; kendi sunucuda tam disk şifrelemesi (LUKS) ya da TDE.",
+     "ruleDetail": "Veritabanı depolaması şifrelidir: yönetilen serviste sağlayıcının depolama şifrelemesinin açık olduğu doğrulanıp kayda geçirilir, kendi sunucuda tam disk ya da TDE kullanılır. Bu katman tek başına yeterli sayılmaz; çalışan veritabanına erişen kişi veriyi açık görür."
+    },
+    {
+     "value": "field_level",
+     "label": "Hassas kolonlarda uygulama düzeyinde şifreleme (önerilen)",
+     "explanation": "Seçilen kolonlar veritabanına yazılmadan önce uygulamada şifrelenir; veritabanı yalnız şifreli metni görür.",
+     "scenario": "T.C. kimlik no, sağlık, finans ya da özel nitelikli veri tutuluyorsa.",
+     "example": "patients.tckn_enc kolonunda base64 şifreli metin ve key_version = 3.",
+     "ruleDetail": "Şifrelenecek veri türlerindeki kolonlar uygulamada AES-256-GCM (kimlik doğrulamalı şifreleme) ile, her değer için yeni rastgele nonce kullanılarak şifrelenir; şifreli metin, nonce ve anahtar sürümü (key_version) birlikte saklanır; çözme yalnız yetkili sunucu kodunda yapılır, şifreli kolon üzerinde LIKE / sıralama yapılmaz."
+    },
+    {
+     "value": "db_native",
+     "label": "Veritabanının kolon şifrelemesi (pgcrypto / Always Encrypted)",
+     "explanation": "Şifreleme veritabanı motorunun kendi işlevleriyle yapılır.",
+     "scenario": "Uygulama kodunu değiştirmek zor ya da birden çok uygulama aynı tabloyu okuyorsa.",
+     "example": "PostgreSQL pgcrypto ile pgp_sym_encrypt; SQL Server Always Encrypted.",
+     "ruleDetail": "Kolon şifrelemesi veritabanının kendi özelliğiyle yapılır (PostgreSQL pgcrypto, SQL Server Always Encrypted …). pgcrypto'da anahtar sorguyla sunucuya gittiği için veri ve anahtar sunucuda kısa süre görünür; anahtar sorgu loglarına düşmeyecek şekilde parametreyle gönderilir, sorgu loglama bu sorgularda kapalıdır."
+    },
+    {
+     "value": "blind_index",
+     "label": "Şifreli alanda arama için karma indeksi (blind index)",
+     "explanation": "Şifreli bir alanda tam eşleşme araması (ör. e-postayla giriş, T.C. kimlik no ile kayıt bulma) için ayrı anahtarla üretilmiş karma kolon tutulur.",
+     "scenario": "Şifreli alana göre kullanıcı bulunacak ya da benzersizlik kontrol edilecekse.",
+     "example": "users.email_bidx kolonunda HMAC değeri; \"bu e-posta kayıtlı mı?\" sorgusu bu kolonla yapılır.",
+     "ruleDetail": "Aranacak şifreli alanlar için değer normalleştirilip (küçük harf, boşluksuz) ayrı bir anahtarla HMAC-SHA-256 alınır ve indeksli kolonda tutulur; yalnız tam eşleşme araması yapılır, benzersizlik kısıtı bu kolona konur, karma anahtarı şifreleme anahtarından farklıdır."
+    },
+    {
+     "value": "passwords",
+     "label": "Parolalar şifrelenmez, yavaş karma ile saklanır",
+     "explanation": "Parola geri çözülebilir biçimde tutulmaz; doğrulama için yavaş karma algoritması kullanılır.",
+     "scenario": "Sitede parola ile giriş varsa.",
+     "example": "users.password_hash kolonunda $argon2id$… ile başlayan değer.",
+     "ruleDetail": "Parolalar Argon2id ile (en az 19 MiB bellek, 2 yineleme, paralellik 1 — OWASP), Argon2id yoksa bcrypt ile (iş faktörü en az 10, 72 bayt sınırı) karma olarak saklanır; parolalar şifrelenmez, loglanmaz, e-postayla gönderilmez; parametreler yükseldiğinde kullanıcının sonraki girişinde yeniden karma alınır."
+    },
+    {
+     "value": "secrets",
+     "label": "Belirteç ve entegrasyon sırları şifreli",
+     "explanation": "OAuth belirteçleri, entegrasyon API anahtarları, iki adımlı doğrulama gizli anahtarları şifreli tutulur.",
+     "scenario": "Sosyal medya, ödeme, muhasebe ya da e-posta servisine kullanıcı adına bağlanılıyorsa.",
+     "example": "integrations.access_token_enc şifreli; oturum belirteci tablosunda yalnız SHA-256 özeti.",
+     "ruleDetail": "Kullanıcı ya da kurum adına saklanan erişim / yenileme belirteçleri, API anahtarları ve TOTP gizli anahtarları uygulama düzeyinde şifrelenir; oturum, e-posta doğrulama ve parola sıfırlama belirteçleri yalnız özet (hash) olarak tutulur, karşılaştırma sabit sürede yapılır."
+    },
+    {
+     "value": "backups",
+     "label": "Yedek, döküm ve test verisi şifreli / maskeli",
+     "explanation": "Veritabanı yedekleri ve dökümleri şifreli saklanır; geliştirme ve test ortamına gerçek kişisel veri açık olarak kopyalanmaz.",
+     "scenario": "Her projede (yedekleme kararıyla birlikte).",
+     "example": "Gece yedeği şifreli olarak ayrı hesapta; test veritabanında isimler sahte.",
+     "ruleDetail": "Yedekler ve dökümler şifreli saklanır, anahtarı yedekle aynı yerde tutulmaz; üretim verisi geliştirme / test ortamına yalnız maskelenmiş ya da anonimleştirilmiş olarak aktarılır."
+    },
+    {
+     "value": "tls",
+     "label": "Uygulama ile veritabanı arası şifreli bağlantı",
+     "explanation": "Uygulama sunucusu ile veritabanı arasındaki trafik TLS ile şifrelenir ve sunucu sertifikası doğrulanır.",
+     "scenario": "Veritabanı uygulamayla aynı makinede değilse (yönetilen veritabanlarında her zaman).",
+     "example": "Bağlantı adresinde sslmode=verify-full.",
+     "ruleDetail": "Veritabanı bağlantıları TLS ile ve sertifika doğrulamasıyla kurulur (PostgreSQL'de sslmode=verify-full ya da sürücünün eşdeğeri); şifresiz bağlantı reddedilir, veritabanı internete açık değildir."
+    },
+    {
+     "value": "none",
+     "label": "Ek şifreleme yok (yalnız sağlayıcı varsayılanı)",
+     "explanation": "Hassas veri tutulmuyorsa yalnız sağlayıcının varsayılan önlemleriyle yetinilir.",
+     "scenario": "Sitede kişisel veri neredeyse yoksa (ör. yalnız kurumsal tanıtım ve form e-postaya gidiyorsa).",
+     "example": "Tablolarda yalnız içerik ve ayarlar var.",
+     "ruleDetail": "Kolon düzeyinde şifreleme uygulanmaz; bu karar yalnız hassas ya da özel nitelikli kişisel veri tutulmadığı sürece geçerlidir, böyle bir veri eklenirse şifreleme kararı yeniden verilir. Parolalar yine karma ile saklanır.",
+     "exclusive": true
+    }
+   ]
+  },
+  {
+   "id": "db_encrypt_data",
+   "section": "db_engineering",
+   "after": "db_encryption",
+   "type": "multiselect",
+   "label": "Şifrelenecek Veri Türleri",
+   "en": "Data Types to Encrypt",
+   "explanation": "Uygulama ya da veritabanı düzeyinde şifrelenecek kolonların hangi veri türlerini kapsadığını belirler. Her şeyi şifrelemek arama ve raporlamayı zorlaştırır; yalnız hassas olanlar seçilir.",
+   "scenario": "Hassas kolonlarda şifreleme seçildiyse.",
+   "example": "T.C. kimlik no ve sağlık notları şifreli; ürün adı ve sipariş tutarı açık.",
+   "rule": "Şu veri türlerini tutan kolonlar şifreli saklanır: {labels}. Hangi kolonun şifreli olduğu veri modeli dokümanında işaretlenir; yeni bir hassas kolon eklenirken şifreleme aynı migration'da yapılır.",
+   "agents": [
+    "poz:siber-guvenlik:16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani",
+    "poz:uyum-risk:06.06/veri-koruma-uyum-programi/kvkk-uyum-uzmani",
+    "poz:bilgi-teknolojileri:15.02/veritabani-yonetimi/kidemli-veritabani-yoneticisi"
+   ],
+   "showIf": [
+    {
+     "field": "db_encryption",
+     "in": [
+      "field_level",
+      "db_native"
+     ]
+    }
+   ],
+   "recommend": [
+    {
+     "field": "member_signup_fields",
+     "map": {
+      "TCKN": [
+       "national_id"
+      ],
+      "Phone": [
+       "contact"
+      ],
+      "Address": [
+       "contact"
+      ],
+      "BirthDate": [
+       "contact"
+      ]
+     }
+    },
+    {
+     "field": "privacy_inventory",
+     "map": {
+      "special_data": [
+       "special"
+      ]
+     }
+    },
+    {
+     "field": "modules_extra",
+     "map": {
+      "ticket": [
+       "free_text"
+      ],
+      "consulting": [
+       "free_text",
+       "special"
+      ],
+      "career": [
+       "files"
+      ],
+      "einvoice": [
+       "national_id"
+      ]
+     }
+    }
+   ],
+   "options": [
+    {
+     "value": "national_id",
+     "label": "Kimlik numaraları",
+     "explanation": "T.C. kimlik no, pasaport no, bireysel vergi no.",
+     "scenario": "Fatura, üyelik ya da başvuru için kimlik numarası alınıyorsa.",
+     "example": "Fatura bilgisinde T.C. kimlik no şifreli, panelde 12******34 olarak görünür.",
+     "ruleDetail": "Kimlik numaraları şifreli saklanır, aranacaksa karma indeksiyle bulunur; panelde maskeli gösterilir, tam değer yalnız yetkili rolde ve erişim loglanarak açılır."
+    },
+    {
+     "value": "contact",
+     "label": "İletişim ve adres bilgileri",
+     "explanation": "Telefon, adres, doğum tarihi; giriş için kullanılan e-posta ancak karma indeksiyle birlikte.",
+     "scenario": "Müşteri, hasta ya da başvuru sahibi bilgileri tutuluyorsa.",
+     "example": "Adres kolonları şifreli; kargo etiketi basılırken sunucuda çözülür.",
+     "ruleDetail": "Telefon, adres ve doğum tarihi şifreli saklanır; giriş ve tekillik için kullanılan e-posta şifreleniyorsa karma indeksi tutulur."
+    },
+    {
+     "value": "special",
+     "label": "Özel nitelikli kişisel veri",
+     "explanation": "Sağlık, biyometrik, genetik, din, ceza mahkûmiyeti gibi KVKK m. 6'daki veriler.",
+     "scenario": "Klinik, sağlık, sigorta, insan kaynakları ya da danışmanlık projesiyse.",
+     "example": "Hekimin muayene notu ayrı tabloda şifreli; anahtar ayrı bir anahtar yönetim servisinde.",
+     "ruleDetail": "Özel nitelikli kişisel veri her zaman uygulama düzeyinde şifreli saklanır ve anahtar veriden farklı ortamda tutulur (KVKK Kurulu 2018/10 sayılı kararı); bu veriye her erişim kim, ne zaman, hangi kayıt olarak loglanır."
+    },
+    {
+     "value": "financial",
+     "label": "Finansal bilgiler",
+     "explanation": "IBAN, banka hesabı, maaş ve gelir bilgisi. Kart numarası hiç saklanmaz.",
+     "scenario": "Satıcı hak edişi, iade, bordro ya da kredi başvurusu varsa.",
+     "example": "Satıcının IBAN'ı şifreli; kart ödemesinde yalnız ödeme sağlayıcısının belirteci.",
+     "ruleDetail": "IBAN, hesap ve gelir bilgileri şifreli saklanır; kart numarası, son kullanma tarihi ve CVV hiçbir koşulda saklanmaz, yalnız ödeme sağlayıcısının belirteci tutulur."
+    },
+    {
+     "value": "free_text",
+     "label": "Serbest metin ve mesajlar",
+     "explanation": "Form mesajları, destek talepleri, danışman notları gibi içinde her türlü kişisel veri geçebilecek metinler.",
+     "scenario": "Kullanıcılar uzun metin yazıyorsa (destek, başvuru, görüşme notu).",
+     "example": "Destek talebi metni şifreli; talep başlığı ve durumu açık.",
+     "ruleDetail": "Kişisel veri içerebilecek serbest metin kolonları şifreli saklanır; arama gerekiyorsa yalnız açık tutulan başlık, kategori ve durum alanlarında yapılır."
+    },
+    {
+     "value": "files",
+     "label": "Yüklenen hassas belgeler",
+     "explanation": "Kimlik fotokopisi, sağlık raporu, özgeçmiş gibi dosyalar.",
+     "scenario": "Başvuru, kariyer ya da sağlık modülünde dosya yükleniyorsa.",
+     "example": "Özgeçmiş dosyası nesne depolamada şifreli; indirme bağlantısı 5 dakika geçerli.",
+     "ruleDetail": "Hassas dosyalar nesne depolamada şifreli saklanır (sağlayıcının sunucu tarafı şifrelemesi ve gerekiyorsa uygulama anahtarıyla), herkese açık klasöre konmaz, kısa süreli imzalı adresle ve yetki kontrolüyle verilir."
+    },
+    {
+     "value": "location",
+     "label": "Konum ve cihaz bilgileri",
+     "explanation": "Hassas konum, cihaz kimliği gibi kişiyi izlemeye yarayabilecek veriler.",
+     "scenario": "Mobil uygulama, kurye ya da saha ekibi takibi varsa.",
+     "example": "Kurye konum geçmişi şifreli ve 30 gün sonra silinir.",
+     "ruleDetail": "Hassas konum ve cihaz kimlikleri şifreli saklanır, saklama süresi kısa tutulur; IP adresi gerekmedikçe kısaltılarak ya da karma olarak tutulur."
+    }
+   ]
+  },
+  {
+   "id": "db_key_mgmt",
+   "section": "db_engineering",
+   "after": "db_encrypt_data",
+   "type": "select",
+   "label": "Şifreleme Anahtarı Yönetimi",
+   "en": "Encryption Key Management",
+   "explanation": "Şifreleme anahtarlarının nerede tutulacağını belirler. Anahtar verinin yanında durursa şifreleme bir işe yaramaz.",
+   "scenario": "Kolon şifrelemesi, karma indeksi ya da sır şifrelemesi seçildiyse.",
+   "example": "Veri anahtarı bulut KMS'teki ana anahtarla şifrelenmiş olarak saklanır; uygulama açılışta KMS'ten çözdürür.",
+   "rule": "Şifreleme anahtarları şu yöntemle yönetilir: {label}.",
+   "agents": [
+    "poz:siber-guvenlik:16.07/kriptografi-ve-anahtar-yonetimi/anahtar-yonetimi-uzmani",
+    "poz:siber-guvenlik:16.07/kriptografi-ve-anahtar-yonetimi/kidemli-kriptografi-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "db_encryption",
+     "in": [
+      "field_level",
+      "db_native",
+      "blind_index",
+      "secrets"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "kms",
+     "label": "Bulut KMS ile zarf şifreleme (önerilen)",
+     "explanation": "Verileri şifreleyen anahtar (DEK), bulut anahtar yönetim servisindeki ana anahtarla (KEK) şifrelenir; ana anahtar servisten hiç çıkmaz.",
+     "scenario": "Anahtar yönetim servisi olan bir bulut sağlayıcısı (AWS, Google Cloud, Azure) kullanılıyorsa.",
+     "example": "AWS KMS / Google Cloud KMS / Azure Key Vault anahtarı; uygulamanın servis hesabının yalnız \"şifre çöz\" izni var.",
+     "ruleDetail": "Zarf şifreleme uygulanır: veri anahtarları (DEK) bulut KMS'teki ana anahtarla (KEK) şifrelenmiş olarak saklanır, ana anahtar KMS dışına çıkmaz; KMS erişimi yalnız uygulamanın servis hesabına ve en az yetkiyle verilir, her kullanım KMS loglarında izlenir."
+    },
+    {
+     "value": "secret_manager",
+     "label": "Gizli değer yöneticisi (Secret Manager / Vault)",
+     "explanation": "Anahtarlar gizli değer yöneticisinde tutulur, uygulama çalışırken okur.",
+     "scenario": "KMS kullanılamıyorsa ya da tek bulut dışında çalışılıyorsa.",
+     "example": "HashiCorp Vault ya da sağlayıcının Secret Manager'ında DATA_KEY_V3.",
+     "ruleDetail": "Anahtarlar gizli değer yöneticisinde sürümlü tutulur, uygulama açılışta okur; kodda, repoda, imajda ve veritabanında bulunmaz, erişim en az yetkiyle ve loglanarak verilir."
+    },
+    {
+     "value": "hsm",
+     "label": "Donanım güvenlik modülü (HSM)",
+     "explanation": "Anahtarlar kurcalamaya dayanıklı donanımda tutulur ve oradan çıkmaz.",
+     "scenario": "Bankacılık, ödeme kuruluşu, kamu ya da sağlık gibi düzenlemenin HSM istediği projelerde.",
+     "example": "Bulut HSM ya da kurum içi HSM; şifreleme işlemleri HSM API'siyle.",
+     "ruleDetail": "Ana anahtarlar HSM'de üretilir ve saklanır, dışarı aktarılamaz; şifreleme işlemleri HSM üzerinden yapılır, yönetici işlemleri iki kişi onayıyla yürütülür."
+    },
+    {
+     "value": "env",
+     "label": "Ortam değişkeni (yalnız küçük projeler)",
+     "explanation": "Anahtar sunucunun ortam değişkeninde tutulur. En basit ama en zayıf yöntemdir.",
+     "scenario": "Küçük, özel nitelikli veri tutmayan projede, KMS imkânı yokken.",
+     "example": ".env dosyasında DATA_KEY; dosya repoda değil, yalnız sunucuda.",
+     "ruleDetail": "Anahtar yalnız uygulama sunucusunun ortam değişkeninde tutulur, veritabanı sunucusunda ve repoda bulunmaz, .env dosyası sürüm kontrolüne girmez; özel nitelikli kişisel veri tutuluyorsa bu yöntem kullanılmaz, KMS ya da gizli değer yöneticisine geçilir."
+    }
+   ]
+  },
+  {
+   "id": "db_key_practices",
+   "section": "db_engineering",
+   "after": "db_key_mgmt",
+   "type": "multiselect",
+   "label": "Anahtar ve Erişim Uygulamaları",
+   "en": "Key and Access Practices",
+   "explanation": "Anahtar değiştirme, şifreli verinin panelde gösterimi ve silmede anahtar imhası gibi işletim kuralları.",
+   "scenario": "Kolon şifrelemesi, karma indeksi ya da sır şifrelemesi seçildiyse.",
+   "example": "Anahtar yılda bir değişir; eski kayıtlar arka planda yeni anahtarla yeniden şifrelenir; panelde T.C. kimlik no maskeli görünür.",
+   "rule": "Şifreleme anahtarı ve şifreli veriye erişimde şu uygulamalar geçerlidir: {labels}.",
+   "agents": [
+    "poz:siber-guvenlik:16.07/kriptografi-ve-anahtar-yonetimi/anahtar-yonetimi-uzmani",
+    "poz:siber-guvenlik:16.07/veri-guvenligi-ve-kayip-onleme/kidemli-veri-guvenligi-uzmani"
+   ],
+   "showIf": [
+    {
+     "field": "db_encryption",
+     "in": [
+      "field_level",
+      "db_native",
+      "blind_index",
+      "secrets"
+     ]
+    }
+   ],
+   "options": [
+    {
+     "value": "rotation",
+     "label": "Anahtar rotasyonu ve sürümleme (önerilen)",
+     "explanation": "Anahtarlar belirli aralıklarla ve sızıntı şüphesinde hemen değiştirilir; eski kayıtlar sürüm bilgisiyle çözülebilir.",
+     "scenario": "Her şifreleme kurulumunda.",
+     "example": "Yeni kayıtlar key_version = 4 ile yazılır; arka plan işi eski kayıtları yeniden şifreler.",
+     "ruleDetail": "Anahtarlar en az yılda bir ve sızıntı şüphesinde hemen döndürülür; her şifreli değer anahtar sürümüyle saklanır, yeni yazımlar yeni anahtarla yapılır, eski kayıtlar arka plan işiyle yeniden şifrelenir, eski anahtar bu iş bitince devre dışı bırakılır."
+    },
+    {
+     "value": "separation",
+     "label": "Anahtar ile veri farklı ortamda",
+     "explanation": "Anahtar, şifreli verinin bulunduğu veritabanı ve yedeklerle aynı yerde tutulmaz.",
+     "scenario": "Her şifreleme kurulumunda; özel nitelikli veride KVKK 2018/10 gereği.",
+     "example": "Veritabanı bir sağlayıcıda, anahtar KMS'te; yedekte anahtar yok.",
+     "ruleDetail": "Şifreleme anahtarları veritabanından, veritabanı yedeklerinden ve uygulama kodundan ayrı bir ortamda tutulur; veritabanı yöneticisi tek başına hem veriye hem anahtara erişemez."
+    },
+    {
+     "value": "masking",
+     "label": "Panelde maskeli gösterim ve gerekçeli açma",
+     "explanation": "Şifreli alanlar panel listelerinde maskeli görünür; tam değeri görmek yetki ve gerekçe ister, loglanır.",
+     "scenario": "Panelde müşteri ya da hasta bilgisi görüntüleniyorsa.",
+     "example": "Listede 0532 *** ** 12; \"Göster\" düğmesi gerekçe sorar ve erişim kaydı tutar.",
+     "ruleDetail": "Şifreli alanlar API yanıtlarında ve panel listelerinde varsayılan olarak maskeli döner; tam değer yalnız izinli rolde, gerekçe girilerek açılır ve erişim denetim kaydına yazılır; dışa aktarımlarda maskeli kalır."
+    },
+    {
+     "value": "crypto_shred",
+     "label": "Silmede anahtar imhası (crypto-shredding)",
+     "explanation": "Kişi başına ayrı veri anahtarı kullanılır; silme talebinde anahtar yok edilince o kişinin yedeklerdeki şifreli verisi de okunamaz hale gelir.",
+     "scenario": "KVKK silme talepleri sık geliyorsa ya da yedeklerden tek tek veri silmek mümkün değilse.",
+     "example": "Kullanıcı hesabını silince user_keys satırı imha edilir; eski yedeklerdeki kayıtları artık çözülemez.",
+     "ruleDetail": "Kişi (ya da kurum) başına ayrı veri anahtarı üretilir; silme / imha talebinde o anahtar yok edilir ve işlem imha kaydına yazılır; anahtar imhasının yedeklerde kalan şifreli kopyaları da okunamaz kıldığı imha politikasında belirtilir (hukuk biriminin teyidiyle)."
+    },
+    {
+     "value": "access_log",
+     "label": "Anahtar kullanımı ve çözme işlemlerinin kaydı",
+     "explanation": "Anahtar servisine yapılan her çağrı ve hassas alanın her çözülmesi kayda geçer, olağandışı kullanımda uyarı verilir.",
+     "scenario": "Özel nitelikli ya da finansal veri tutuluyorsa.",
+     "example": "Bir hesap bir saatte 500 kayıt çözerse güvenlik ekibine uyarı gider.",
+     "ruleDetail": "Anahtar servisi çağrıları ve hassas alan çözme işlemleri kim, ne zaman, hangi kayıt bilgisiyle loglanır (çözülmüş değer loglanmaz); olağandışı hacimde uyarı üretilir."
+    },
+    {
+     "value": "break_glass",
+     "label": "Acil erişim ve anahtar kurtarma prosedürü",
+     "explanation": "Anahtar kaybı ya da acil erişim için yazılı, iki kişili prosedür.",
+     "scenario": "Anahtar kaybı verinin tamamen kaybı anlamına geleceği için her üretim kurulumunda.",
+     "example": "Anahtar yedeği iki ayrı yetkilinin onayıyla açılabilen kasada; yılda bir kurtarma tatbikatı.",
+     "ruleDetail": "Anahtar yedeklemesi ve kurtarma prosedürü yazılıdır; acil erişim en az iki yetkilinin onayıyla yapılır ve kayda geçer; kurtarma yılda en az bir kez test edilir."
+    }
+   ]
   }
  ],
  "option_add": [
@@ -9265,6 +10002,53 @@
     "url": "https://www.kvkk.gov.tr/Icerik/5362/Veri-Ihlali-Bildirimi",
     "note": "İhlalin en geç 72 saat içinde Kurul'a, etkilenenlere makul en kısa sürede bildirimi, bildirim formu ve ihlal müdahale planı."
    }
+  ],
+  "db_engineering": [
+   {
+    "title": "OWASP – Cryptographic Storage Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+    "note": "Saklanan verinin şifrelenmesi: AES-GCM, veri ve ana anahtar (DEK / KEK) ayrımı, anahtarın verinin yanında tutulmaması."
+   },
+   {
+    "title": "OWASP – Password Storage Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+    "note": "Parolaların Argon2id / bcrypt ile karma olarak saklanması ve önerilen en düşük parametreler."
+   },
+   {
+    "title": "OWASP – Key Management Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html",
+    "note": "Anahtar üretme, saklama, rotasyon ve imha için uygulama kuralları."
+   },
+   {
+    "title": "NIST SP 800-57 Part 1 Rev. 5 – Key Management",
+    "url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final",
+    "note": "Anahtar yaşam döngüsü ve anahtar kullanım süreleri için temel standart."
+   },
+   {
+    "title": "PostgreSQL – Encryption Options",
+    "url": "https://www.postgresql.org/docs/current/encryption-options.html",
+    "note": "Kolon (pgcrypto), disk ve bağlantı şifreleme seçenekleri ve pgcrypto'da anahtarın sunucuda görünmesi uyarısı."
+   },
+   {
+    "title": "Microsoft – Always Encrypted",
+    "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine",
+    "note": "SQL Server / Azure SQL'de anahtarın veritabanına hiç gitmediği istemci tarafı kolon şifrelemesi."
+   },
+   {
+    "title": "KVKK – Özel Nitelikli Kişisel Veriler İçin Yeterli Önlemler (Kurul Kararı 2018/10)",
+    "url": "https://www.kvkk.gov.tr/Icerik/4110/2018-10",
+    "note": "Özel nitelikli verinin elektronik ortamda kriptografik yöntemlerle saklanması ve anahtarların farklı ortamda tutulması."
+   },
+   {
+    "title": "PostgreSQL – Data Definition",
+    "url": "https://www.postgresql.org/docs/current/ddl.html",
+    "note": "Tablo, kolon, kısıt, şema ve bölümleme (partitioning) tanımları."
+   },
+   {
+    "title": "PostgreSQL – Numeric Types",
+    "url": "https://www.postgresql.org/docs/current/datatype-numeric.html",
+    "note": "Para tutarlarında neden numeric kullanılıp kayan noktalı sayı kullanılmadığı."
+   }
   ]
  },
  "recommend_add": [
@@ -9322,6 +10106,7 @@
   "parca_is_0.py",
   "parca_is_1.py",
   "parca_is_2.py",
-  "parca_is_3.py"
+  "parca_is_3.py",
+  "parca_veri.py"
  ]
 }

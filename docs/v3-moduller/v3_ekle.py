@@ -12,7 +12,7 @@ MARK = 'const DATA='
 TXT = ('value', 'label', 'explanation', 'scenario', 'example')
 FK = ('id', 'label', 'en', 'type', 'explanation', 'scenario', 'example', 'rule', 'agents')
 OPT_KEYS = set(TXT) | {'ruleDetail', 'exclusive'}
-FIELD_KEYS = set(FK) | {'section', 'after', 'options', 'showIf', 'recommend', 'yes', 'no'}
+FIELD_KEYS = set(FK) | {'section', 'after', 'options', 'showIf', 'recommend', 'yes', 'no', 'placeholder', 'words'}
 SEC_KEYS = {'id', 'after', 'group', 'icon', 'name', 'en', 'desc', 'guide'}
 NEW_GROUP = 'İş Modülleri'
 
@@ -114,6 +114,11 @@ def main():
                     die('exclusive yalnız multiselect: ' + f['id'])
                 vals.append(x['value'])
                 labs.append(x['label'])
+        elif f['type'] == 'textarea':  # 2026-11-27: serbest metin (ör. projeye özel tablolar)
+            if '{value}' not in f['rule']:
+                die('textarea kuralında {value} yok: ' + f['id'])
+            if f.get('options') or not str(f.get('placeholder') or '').strip():
+                die('textarea: seçenek olmaz, placeholder zorunlu: ' + f['id'])
         else:
             die('desteklenmeyen tip: ' + f['id'])
         own[f['id']] = f
@@ -204,7 +209,7 @@ def main():
     def mkf(f, sec):
         x = {k: f[k] for k in FK}
         x['section'] = sec
-        for k in ('options', 'showIf', 'recommend', 'yes', 'no'):
+        for k in ('options', 'showIf', 'recommend', 'yes', 'no', 'placeholder', 'words'):
             if f.get(k) not in (None, []):
                 x[k] = f[k]
         return x
